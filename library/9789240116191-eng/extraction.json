@@ -52,6 +52,13 @@
       "tool": "pdf-footnotes.py",
       "at": "2026-11-14",
       "note": "pdf-footnotes.py called no note; its 8 unlinked marks are numbered citations to the reference list (superscripts 8-17) and its 9 uncalled foot-of-page lines are figure labels and table rows, so the source has no footnotes (reviewed 2026-11-14 in the re-ingest pilot; the tool recorded found 9)"
+    },
+    "summaries": {
+      "state": "partial",
+      "count": 32,
+      "note": "32 of 32 prose blocks have an English draft written after the re-split (2026-11-14); Arabic, Chinese, French, Russian and Spanish are owed again and left to the summary drain. The old per-page summaries in all six languages are kept under each block's 'superseded'",
+      "tool": "summaries",
+      "at": "2026-11-14"
     }
   }
 }
