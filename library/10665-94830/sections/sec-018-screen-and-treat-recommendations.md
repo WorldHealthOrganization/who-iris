@@ -87,8 +87,7 @@ treat with cryotherapy (or LEEP when not
 eligible for cryotherapy) over a strategy of 
 screen with VIA and treat with cryotherapy 
 (or LEEP when not eligible) (conditional 
-recommendation, 
- evidence)
+recommendation, ⊕⊖⊖⊖ evidence)
 In resource-constrained settings, where 
 screening with an HPV test is not feasible, 
 the expert panel suggests a strategy of 
@@ -96,9 +95,7 @@ screen with VIA and treat with cryotherapy
 (or LEEP when not eligible) over a strategy 
 of screen with an HPV test and treat with 
 cryotherapy (or LEEP when not eligible) 
-(conditional recommendation, 
- 
-evidence)
+(conditional recommendation, ⊕⊖⊖⊖ evidence)
 Remarks: The benefits of screen-and-treat 
 with an HPV test or VIA, compared to no 
 screening, outweighed the harms, but the 
@@ -141,8 +138,7 @@ when not eligible for cryotherapy) over a
 strategy of screen with cytology followed 
 by colposcopy (with or without biopsy) 
 and treat with cryotherapy (or LEEP when 
-not eligible) (conditional recommendation, 
- evidence)
+not eligible) (conditional recommendation, ⊕⊖⊖⊖ evidence)
 Remarks: The reductions in cancer and 
 related mortality were slightly greater with an 
 HPV test only compared to cytology followed 
@@ -204,9 +200,7 @@ when not eligible for cryotherapy) over a
 strategy of screen with cytology followed 
 by colposcopy (with or without biopsy) and 
 treat with cryotherapy (or LEEP when not 
-eligible) (strong recommendation, 
- 
-evidence)
+eligible) (strong recommendation, ⊕⊖⊖⊖ evidence)
 Remarks: The benefits and harms of the two 
 screen-and-treat strategies are similar, but 
 there are fewer harms with cytology followed by 
@@ -261,8 +255,7 @@ when not eligible for cryotherapy) over a
 strategy of screen with an HPV test followed 
 by colposcopy (with or without biopsy) 
 and treat with cryotherapy (or LEEP when 
-not eligible) (conditional recommendation, 
- evidence)
+not eligible) (conditional recommendation, ⊕⊖⊖⊖ evidence)
 Remarks: The reductions in cancer and related 
 mortality with either strategy outweigh the 
 harms and costs of no screening, and were 
@@ -317,8 +310,7 @@ cryotherapy (or LEEP when not eligible for
 cryotherapy) or a strategy of screen with 
 an HPV test and treat with cryotherapy 
 (or LEEP when not eligible) (conditional 
-recommendation, 
- evidence)
+recommendation, ⊕⊖⊖⊖ evidence)
 Remarks: The reductions in cancer and related 
 mortality were greater with an HPV test used 
 as a single screening test than with an HPV 
@@ -390,8 +382,7 @@ cryotherapy (or LEEP when not eligible
 for cryotherapy) over a strategy of screen 
 with VIA and treat with cryotherapy (or 
 LEEP when not eligible) (conditional 
-recommendation, 
- evidence)
+recommendation, ⊕⊖⊖⊖ evidence)
 Remarks: The reductions in cancer and related 
 mortality with an HPV test followed by VIA or 
 with VIA alone outweighed the harms. However, 
@@ -438,8 +429,7 @@ cryotherapy) over a strategy of screen with
 cytology followed by colposcopy (with or 
 without biopsy) and treat with cryotherapy 
 (or LEEP when not eligible) (conditional 
-recommendation, 
- evidence)
+recommendation, ⊕⊖⊖⊖ evidence)
 Remarks: The benefits of the two screen-
 and-treat strategies are similar. However, there 
 may be higher resources required in cytology 
@@ -481,8 +471,7 @@ cryotherapy) over a strategy of screen with
 an HPV test followed by colposcopy (with or 
 without biopsy) and treat with cryotherapy 
 (or LEEP when not eligible) (conditional 
-recommendation, 
- evidence)
+recommendation, ⊕⊖⊖⊖ evidence)
 Remarks: The reductions in cancer and related 
 mortality of screen-and-treat with an HPV test 
 followed by colposcopy (with or without biopsy) 

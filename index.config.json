@@ -27,7 +27,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/folio-assistant-core",
-          "ref": "8bd58d757d5ddde5c43d2c62be38d1ed2489246c",
+          "ref": "98e2bc262bb19d9132d504a91d34f2d3196a435e",
           "overrides": {
             "folio-assistant-core": {
               "whole": true
@@ -43,8 +43,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-14",
-              "ref": "8bd58d757d5ddde5c43d2c62be38d1ed2489246c",
-              "evidence": "owner litlfred, 2026-11-14 ~05:50Z and 13 Nov ~20:56Z, in Claude Code session https://claude.ai/code/session_01VQDpPffYARDQ8juksAZScf: 'send to you as merge manager to handle merge AND repin'; 'A. Renew 6h + re-pin' (every layer at main); needed so the merge-guard caller can pin tools >= #2118"
+              "ref": "98e2bc262bb19d9132d504a91d34f2d3196a435e",
+              "evidence": "litlfred, 2026-11-11 03:03Z, card 'How should the errata PR who-iris#230 land?' option 'A. Merge after #1848 + re-pin' (thread cmsg_017WNUkNK8kdDziPK58Pv6G93WQmGmifCFfexR63a3h4wh); owner's rule relayed by the merge manager: a re-pin moves every harness to its current main. Mains after cat-harness-tools#2187 (grade_marks_written, extraction family), for the round-4 re-derive of 10665-94830 (who-iris#279)."
             }
           }
         }
@@ -55,7 +55,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness",
-          "ref": "fa0a7cb0dbc51489575a14bad55e830a47458182",
+          "ref": "38f11e165f8d5c7a38758bb5d365d24d06bd5048",
           "overrides": {
             "cat-harness": {
               "whole": true
@@ -71,8 +71,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-14",
-              "ref": "fa0a7cb0dbc51489575a14bad55e830a47458182",
-              "evidence": "owner litlfred, 2026-11-14 ~05:50Z and 13 Nov ~20:56Z, in Claude Code session https://claude.ai/code/session_01VQDpPffYARDQ8juksAZScf: 'send to you as merge manager to handle merge AND repin'; 'A. Renew 6h + re-pin' (every layer at main); needed so the merge-guard caller can pin tools >= #2118"
+              "ref": "38f11e165f8d5c7a38758bb5d365d24d06bd5048",
+              "evidence": "litlfred, 2026-11-11 03:03Z, card 'How should the errata PR who-iris#230 land?' option 'A. Merge after #1848 + re-pin' (thread cmsg_017WNUkNK8kdDziPK58Pv6G93WQmGmifCFfexR63a3h4wh); owner's rule relayed by the merge manager: a re-pin moves every harness to its current main. Mains after cat-harness-tools#2187 (grade_marks_written, extraction family), for the round-4 re-derive of 10665-94830 (who-iris#279)."
             }
           }
         }
@@ -83,7 +83,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "2bf84dfd9f84b29c35b4827b7e830db0e79254ff",
+          "ref": "c426b7701ca25d82c70fa816fb8bc2505e62d1fe",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -96,8 +96,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-14",
-              "ref": "2bf84dfd9f84b29c35b4827b7e830db0e79254ff",
-              "evidence": "owner litlfred, 2026-11-14 ~05:50Z and 13 Nov ~20:56Z, in Claude Code session https://claude.ai/code/session_01VQDpPffYARDQ8juksAZScf: 'send to you as merge manager to handle merge AND repin'; 'A. Renew 6h + re-pin' (every layer at main); needed so the merge-guard caller can pin tools >= #2118"
+              "ref": "c426b7701ca25d82c70fa816fb8bc2505e62d1fe",
+              "evidence": "litlfred, 2026-11-11 03:03Z, card 'How should the errata PR who-iris#230 land?' option 'A. Merge after #1848 + re-pin' (thread cmsg_017WNUkNK8kdDziPK58Pv6G93WQmGmifCFfexR63a3h4wh); owner's rule relayed by the merge manager: a re-pin moves every harness to its current main. Mains after cat-harness-tools#2187 (grade_marks_written, extraction family), for the round-4 re-derive of 10665-94830 (who-iris#279)."
             }
           }
         }
@@ -108,7 +108,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/bootstrap",
-          "ref": "a3176a0dc77f935465cfaf121c6152b12d03472d",
+          "ref": "7db8457701ebb9b99284d639128f3c82ad4fc6ea",
           "overrides": {
             "bootstrap": {
               "whole": true
@@ -118,8 +118,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-14",
-              "ref": "a3176a0dc77f935465cfaf121c6152b12d03472d",
-              "evidence": "owner litlfred, 2026-11-14 ~05:50Z and 13 Nov ~20:56Z, in Claude Code session https://claude.ai/code/session_01VQDpPffYARDQ8juksAZScf: 'send to you as merge manager to handle merge AND repin'; 'A. Renew 6h + re-pin' (every layer at main); needed so the merge-guard caller can pin tools >= #2118"
+              "ref": "7db8457701ebb9b99284d639128f3c82ad4fc6ea",
+              "evidence": "litlfred, 2026-11-11 03:03Z, card 'How should the errata PR who-iris#230 land?' option 'A. Merge after #1848 + re-pin' (thread cmsg_017WNUkNK8kdDziPK58Pv6G93WQmGmifCFfexR63a3h4wh); owner's rule relayed by the merge manager: a re-pin moves every harness to its current main. Mains after cat-harness-tools#2187 (grade_marks_written, extraction family), for the round-4 re-derive of 10665-94830 (who-iris#279)."
             }
           }
         }
@@ -144,7 +144,7 @@
               "by": "litlfred",
               "on": "2026-11-14",
               "ref": "db808314c98a9b931d08e923d80a8f8dbcdb7d89",
-              "evidence": "owner litlfred, 2026-11-14 ~05:50Z and 13 Nov ~20:56Z, in Claude Code session https://claude.ai/code/session_01VQDpPffYARDQ8juksAZScf: 'send to you as merge manager to handle merge AND repin'; 'A. Renew 6h + re-pin' (every layer at main); needed so the merge-guard caller can pin tools >= #2118"
+              "evidence": "litlfred, 2026-11-11 03:03Z, card 'How should the errata PR who-iris#230 land?' option 'A. Merge after #1848 + re-pin' (thread cmsg_017WNUkNK8kdDziPK58Pv6G93WQmGmifCFfexR63a3h4wh); owner's rule relayed by the merge manager: a re-pin moves every harness to its current main. Mains after cat-harness-tools#2187 (grade_marks_written, extraction family), for the round-4 re-derive of 10665-94830 (who-iris#279)."
             }
           }
         }

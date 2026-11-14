@@ -8,7 +8,7 @@
   "pages": 60,
   "text_source": "embedded",
   "extractor": "pymupdf",
-  "mtime": "2026-11-12T00:49:57Z",
+  "mtime": "2026-11-14T21:45:06Z",
   "mimetype_sniffed": "application/pdf",
   "mimetype_source": "magic-bytes",
   "languages": [
@@ -1456,8 +1456,8 @@
    "level": 2,
    "page_start": 23,
    "page_end": 24,
-   "n_chars": 6195,
-   "n_words": 936,
+   "n_chars": 6211,
+   "n_words": 940,
    "label_start": "5",
    "label_end": "6"
   },
@@ -1528,8 +1528,8 @@
    "level": 2,
    "page_start": 28,
    "page_end": 34,
-   "n_chars": 22688,
-   "n_words": 3472,
+   "n_chars": 22713,
+   "n_words": 3481,
    "label_start": "10",
    "label_end": "16"
   },
@@ -1855,11 +1855,12 @@
    }
   },
   "sections": 43,
-  "chars_total": 126727,
+  "chars_total": 126768,
   "furniture_lines_stripped": 64,
   "pages_read_in_print_order": [
    19,
    28
-  ]
+  ],
+  "grade_marks_written": 14
  }
 }
