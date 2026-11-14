@@ -18,18 +18,18 @@
   "narrative": [
     {
       "text": "Fig 8, 'Alignment of national strategies'. Nested arrow shapes, each ending in VISION. The health strategy contains the health supply chain strategy, which contains the medicines and health product strategy. The digital/IT strategy contains the digital health strategy. The digital health supply chain strategy sits where the two families overlap.",
+      "lang": "en",
       "state": "draft",
       "drafted_by": {
         "kind": "agent",
         "id": "claude",
         "model": "not-disclosed",
-        "session": "https://claude.ai/code/session_01Qmmkt93UXaUMMzi1yFJNqd"
+        "session": "https://claude.ai/code/session_013WbQekVypi9A6YQbLDXMmJ"
       },
-      "drafted_at": "2026-10-31",
-      "lang": "en"
+      "drafted_at": "2026-10-01"
     }
   ],
-  "derivedFrom": "library/9789240101197-eng/sections/page-020",
+  "derivedFrom": "library/9789240101197-eng/sections/sec-004",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/9789240101197-eng",
   "provenance": "ingested"
 }
