@@ -1,6 +1,6 @@
 {
  "$schema": "site-link-report/v1",
- "pages": 5277,
+ "pages": 5316,
  "unresolved": [],
  "selfAddress": [
   {
@@ -862,6 +862,14 @@
   {
    "page": "cat-harness/process/Process_TranslationRefresh/index.html",
    "href": "https://litlfred.github.io/who-iris/assets/img/workflows/translation-refresh.svg"
+  },
+  {
+   "page": "cat-harness/process/Process_TranslationReviewAdjudication.html",
+   "href": "https://litlfred.github.io/who-iris/assets/img/workflows/translation-review-adjudication.svg"
+  },
+  {
+   "page": "cat-harness/process/Process_TranslationReviewAdjudication/index.html",
+   "href": "https://litlfred.github.io/who-iris/assets/img/workflows/translation-review-adjudication.svg"
   },
   {
    "page": "cat-harness/process/Process_TranslationRoundTrip.html",

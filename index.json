@@ -87,7 +87,7 @@
       "subgraph": "https://litlfred.github.io/bootstrap/subgraph/",
       "nodes": 170,
       "bytes": 99173,
-      "sha256": "817640ba921876612d7a2246b1d6babfc1ae5c7f354eaf69c2ee2b34f9d95bba"
+      "sha256": "65825c2c5faffd52a6ae2bf3b4cbe411087627dc592c9f5b7450e2c79db9205c"
     },
     {
       "@id": "https://litlfred.github.io/who-iris/bootstrap-tools/bootstrap-tools.jsonld",
@@ -141,7 +141,7 @@
       "subgraph": "https://litlfred.github.io/bootstrap-tools/subgraph/",
       "nodes": 50,
       "bytes": 66230,
-      "sha256": "ec1a3592c16906fa36a07df292e7d3299f6888a9c8f5d6c50ccdabc54f8409c8"
+      "sha256": "7cc8c9f829c75fdca7a1f3695cae5feb75f2f2c79f3b09f2a444cf3a20017215"
     },
     {
       "@id": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
@@ -491,9 +491,9 @@
         }
       ],
       "subgraph": "https://litlfred.github.io/folio-assistant/subgraph/cat-harness/",
-      "nodes": 3463,
-      "bytes": 3742900,
-      "sha256": "2f4fb98219fa209880ece2402c07ba69142ad4235fbfa9ed45ae05b6bdd182d9"
+      "nodes": 3530,
+      "bytes": 3823747,
+      "sha256": "d41d8d0bc2177e857ef6631292cc12c4fd7403379e458ed0fdcdc4faab5402ff"
     },
     {
       "@id": "https://litlfred.github.io/who-iris/cat-harness-tools.jsonld",
@@ -685,7 +685,7 @@
       "subgraph": "https://litlfred.github.io/folio-assistant/subgraph/cat-harness-tools/",
       "nodes": 237,
       "bytes": 267879,
-      "sha256": "9148b95e4d0655e819c30b960dbdf9e562abc4eea5875439843c7ae57697b848"
+      "sha256": "6b20f5385024d7ef7708e2eed6cc25f619d409e8504a7063fe062387fed301f2"
     },
     {
       "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
@@ -929,8 +929,8 @@
       ],
       "subgraph": "https://litlfred.github.io/folio-assistant/subgraph/folio-assistant-core/",
       "nodes": 1042,
-      "bytes": 1175423,
-      "sha256": "ae760012e0079dff0edd3107b3cf0bdc9eed971d39429e832b52f1fb980160d8"
+      "bytes": 1175730,
+      "sha256": "5055108a62c46f05c0077b5fa23fd5e095804541a7ac04af503c26937736503f"
     },
     {
       "@id": "https://litlfred.github.io/who-iris/who-iris/who-iris.jsonld",
@@ -1089,7 +1089,7 @@
       "subgraph": "https://litlfred.github.io/folio-assistant/subgraph/who-iris/",
       "nodes": 172,
       "bytes": 181463,
-      "sha256": "4e70549404defacce0ca13eecdaf11f3675d444da3abb8667f6142577f3443c1"
+      "sha256": "be349ff1c10f468f40cd10871d1b37bf842e8a3f9c5cc6ba68cddb5e0ff273ee"
     }
   ]
 }

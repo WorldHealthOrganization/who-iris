@@ -266,6 +266,12 @@
       "name": "todo-manager"
     },
     {
+      "name": "translation-adjudication"
+    },
+    {
+      "name": "translation-candidate-source"
+    },
+    {
       "name": "translation-manager"
     },
     {
@@ -6049,6 +6055,75 @@
           "when": "The CDN target is GitHub Pages: this repository's docs site and its review previews, and every layer whose declaration names a GitHub `repository`.",
           "limits": "GitHub only. Pages cannot serve server-side redirects or custom headers, and a full-replace push to the `gh-pages` branch deletes what the build did not produce unless the caller restores it first (`docs-site-publish`). Another CDN is another Tool satisfying `render-kg-to-cdn`.",
           "cost": "Free for a public repository: Pages and the Actions minutes its workflow uses. A deploy takes a minute or two to be served."
+        }
+      }
+    },
+    "/tools/github": {
+      "post": {
+        "operationId": "github",
+        "summary": "GitHub (issues, Actions, pull requests)",
+        "description": "GitHub as a Tool: the forge that carries an adjudication as an issue, runs the workflow that records it on Actions, and holds the record as a pull request for a maintainer to merge. One forge among possible others; the process names the skill, never GitHub.",
+        "tags": [
+          "translation-adjudication"
+        ],
+        "externalDocs": {
+          "description": "The Tool's page",
+          "url": "cat-harness/github/"
+        },
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "repo": {
+                    "$ref": "#/components/schemas/RepoFullName",
+                    "description": "The repository holding the catalogues. Default: the current one."
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The Tool's declared outputs.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "url": {
+                      "$ref": "#/components/schemas/Url",
+                      "description": "The issue, workflow run or pull request."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-tool-iri": "https://litlfred.github.io/folio-assistant/cat-harness/tools/github.jsonld",
+        "x-invoke": {
+          "shell": "gh",
+          "manual": true
+        },
+        "x-install": {
+          "cli": "gh (optional; the web interface needs nothing)",
+          "service": "github.com"
+        },
+        "x-requires": {
+          "network": true
+        },
+        "x-satisfies": [
+          "translation-adjudication"
+        ],
+        "x-selection": {
+          "when": "The layer's repository is on GitHub: the review page files issues there, and its caller workflow runs on Actions.",
+          "limits": "GitHub only. Identity is GitHub's `author_association`, so a reviewer must be an owner, member or collaborator of the repository. A PR opened with the workflow's token starts no other workflows. Another forge carrying the same `translation-adjudication/v1` record would be another Tool satisfying `translation-adjudication`.",
+          "cost": "Free for a public repository: issues, pull requests and the Actions minutes of one short job per adjudication."
         }
       }
     },
@@ -14775,6 +14850,232 @@
         }
       }
     },
+    "/tools/translation-adjudicate": {
+      "post": {
+        "operationId": "translation-adjudicate",
+        "summary": "Record a translation adjudication",
+        "description": "Turn one translation-review issue into the recorded adjudication: read the `issues` event (never the body from a shell variable), refuse an author who is not an owner, member or collaborator, refuse an item whose catalogue hash changed since the page showed it, then write the translation node's sign-off, the fuzzy suggestions and an append-only `translation-qa` attestation, and leave a Markdown summary. Exit 0 recorded, 3 nothing recorded, 2 could not determine.",
+        "tags": [
+          "translation-adjudication"
+        ],
+        "externalDocs": {
+          "description": "The Tool's page",
+          "url": "cat-harness/translation-adjudicate/"
+        },
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "root": {
+                    "$ref": "#/components/schemas/RepoPath",
+                    "description": "The layer root holding the catalogues. Default: the current directory."
+                  },
+                  "event": {
+                    "$ref": "#/components/schemas/FilesystemPath",
+                    "description": "The `issues` event file GitHub wrote. Absent: `$GITHUB_EVENT_PATH`, which is how the workflow passes it."
+                  },
+                  "dry_run": {
+                    "$ref": "#/components/schemas/Flag",
+                    "description": "Plan and report, write nothing."
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The Tool's declared outputs.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "records": {
+                      "$ref": "#/components/schemas/RepoPath",
+                      "description": "The files written: catalogues, translation nodes and attestations under the layer's translations and attestation directories."
+                    },
+                    "summary": {
+                      "$ref": "#/components/schemas/Markdown",
+                      "description": "What was recorded and what was refused, with each reason — the issue comment and the PR body."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-tool-iri": "https://litlfred.github.io/folio-assistant/cat-harness/tools/translation-adjudicate.jsonld",
+        "x-invoke": {
+          "manual": true
+        },
+        "x-install": {
+          "none": true
+        },
+        "x-requires": {
+          "runtime": [
+            "bun"
+          ],
+          "network": false
+        },
+        "x-satisfies": [
+          "translation-adjudication"
+        ]
+      }
+    },
+    "/tools/translation-adjudication-workflow": {
+      "post": {
+        "operationId": "translation-adjudication-workflow",
+        "summary": "Translation adjudication workflow (reusable)",
+        "description": "The tools layer's reusable `layer-translation-adjudication.yml`, called by a layer on `issues` events: runs once per issue labelled `translation-adjudication` or titled `[translation review] …`, mounts the platform's layers, runs `translation:adjudicate` on the event, and either commits the records on `translation-adjudication/issue-<n>` (authored by the issue's author) and opens a ready PR, or comments why nothing was recorded. It never merges.",
+        "tags": [
+          "translation-adjudication"
+        ],
+        "externalDocs": {
+          "description": "The Tool's page",
+          "url": "cat-harness/translation-adjudication-workflow/"
+        },
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "path_in_repo": {
+                    "$ref": "#/components/schemas/RepoPath",
+                    "description": "Where the layer sits in the calling repository; `.` for the root."
+                  },
+                  "index_ref": {
+                    "$ref": "#/components/schemas/Branch",
+                    "description": "The folio-assistant ref whose lock mounts the platform's layers. Default `main`."
+                  },
+                  "tools_ref": {
+                    "$ref": "#/components/schemas/Text",
+                    "description": "`lock` (the caller's lock pin of the tools layer) or a 40-hex commit."
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The Tool's declared outputs.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "pull_request": {
+                      "$ref": "#/components/schemas/Url",
+                      "description": "The ready PR carrying the records, when anything was recorded."
+                    },
+                    "summary": {
+                      "$ref": "#/components/schemas/Markdown",
+                      "description": "The comment on the issue: what was recorded and what was refused."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-tool-iri": "https://litlfred.github.io/folio-assistant/cat-harness/tools/translation-adjudication-workflow.jsonld",
+        "x-invoke": {
+          "manual": true
+        },
+        "x-install": {
+          "none": true
+        },
+        "x-requires": {
+          "network": true
+        },
+        "x-satisfies": [
+          "translation-adjudication"
+        ]
+      }
+    },
+    "/tools/translation-candidates-agent": {
+      "post": {
+        "operationId": "translation-candidates-agent",
+        "summary": "Candidate translations — agent model",
+        "description": "An agent model proposes a translation for each string of a layer's catalogues, with the locale term base and the string's source context in front of it, and appends them to each catalogue's candidates sidecar with `source.kind: agent` and the model's id. Seeds an empty `msgstr` with the first candidate, fuzzy.",
+        "tags": [
+          "translation-candidate-source"
+        ],
+        "externalDocs": {
+          "description": "The Tool's page",
+          "url": "cat-harness/translation-candidates-agent/"
+        },
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "instance": {
+                    "$ref": "#/components/schemas/RepoPath",
+                    "description": "The layer root whose catalogues to propose for. Default: the current layer."
+                  },
+                  "locales": {
+                    "$ref": "#/components/schemas/IdList",
+                    "description": "The target locales. Absent: every locale the layer declares."
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The Tool's declared outputs.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "candidates": {
+                      "$ref": "#/components/schemas/RepoPath",
+                      "description": "`translations/<locale>/<catalogue>.candidates.json` (`translation-candidates/v1`), appended to; each candidate carries `source: {kind: \"agent\", id: <model>}`."
+                    },
+                    "catalogues": {
+                      "$ref": "#/components/schemas/RepoPath",
+                      "description": "The `.po` catalogues whose empty `msgstr` got the first candidate, `#, fuzzy`."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-tool-iri": "https://litlfred.github.io/folio-assistant/cat-harness/tools/translation-candidates-agent.jsonld",
+        "x-invoke": {
+          "manual": true
+        },
+        "x-install": {
+          "none": true
+        },
+        "x-requires": {
+          "network": false
+        },
+        "x-satisfies": [
+          "translation-candidate-source"
+        ],
+        "x-selection": {
+          "when": "Prose that needs the surrounding meaning — paragraphs, diagram labels whose sense depends on the process, terms the locale term base fixes — and an agent session is already running.",
+          "limits": "Not reproducible run to run, and its output is as unreviewed as any engine's. For many short, literal strings an open machine-translation model (OPUS-MT, LibreTranslate / Argos, through `translation:candidates`) is cheaper and repeatable.",
+          "cost": "Model tokens per string, in a session that has a model; nothing to install."
+        }
+      }
+    },
     "/tools/translation-extract": {
       "post": {
         "operationId": "translation-extract",
@@ -15002,6 +15303,71 @@
         },
         "x-satisfies": [
           "translation-manager"
+        ]
+      }
+    },
+    "/tools/translation-review-page": {
+      "post": {
+        "operationId": "translation-review-page",
+        "summary": "Translation review page",
+        "description": "The page a reviewer adjudicates on: `review.html` beside the translation status page, showing every catalogue × locale with its state (machine, flagged, reviewed, stale, official), each string's candidates, and the hash of the catalogue's bytes. Submitting opens GitHub's new-issue form prefilled with a `translation-adjudication/v1` record, or copies the body when it is too long for a URL.",
+        "tags": [
+          "translation-adjudication"
+        ],
+        "externalDocs": {
+          "description": "The Tool's page",
+          "url": "cat-harness/translation-review-page/"
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "page": {
+                    "$ref": "#/components/schemas/Url",
+                    "description": "The review page, `review.html` beside the translation status page of the published site."
+                  }
+                },
+                "required": [
+                  "page"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The Tool's declared outputs.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "issue": {
+                      "$ref": "#/components/schemas/Url",
+                      "description": "The new-issue form, prefilled; filing it is the adjudication."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-tool-iri": "https://litlfred.github.io/folio-assistant/cat-harness/tools/translation-review-page.jsonld",
+        "x-invoke": {
+          "manual": true
+        },
+        "x-install": {
+          "none": true
+        },
+        "x-requires": {
+          "network": true
+        },
+        "x-satisfies": [
+          "translation-adjudication"
         ]
       }
     },
@@ -15233,9 +15599,10 @@
       "post": {
         "operationId": "translation-status-viewer",
         "summary": "Translation status viewer",
-        "description": "Render the translation status of every declared translation-sources directory, per locale, as one page.",
+        "description": "Render the translation status of every declared translation-sources directory, per locale, as one page, and beside it the review page (`review.html`, with `assets/translation-status/review.json`) a reviewer adjudicates on.",
         "tags": [
-          "graph-rendering"
+          "graph-rendering",
+          "translation-adjudication"
         ],
         "externalDocs": {
           "description": "The Tool's page",
@@ -15294,7 +15661,8 @@
           "network": false
         },
         "x-satisfies": [
-          "graph-rendering"
+          "graph-rendering",
+          "translation-adjudication"
         ]
       }
     },

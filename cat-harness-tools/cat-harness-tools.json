@@ -367,10 +367,10 @@
     "registry",
     "packages"
   ],
-  "sourceCommit": "https://github.com/litlfred/who-iris/commit/95068f86dc1eb54191eddac970b7be5e00426c2d",
-  "sourceCommitSha": "95068f86dc1eb54191eddac970b7be5e00426c2d",
-  "sourceTree": "70e573e92dbdddae964e554787580143c2058fc2",
-  "sourceCommitAt": "2026-11-14T16:40:22+01:00",
+  "sourceCommit": "https://github.com/litlfred/who-iris/commit/7b903d4ce7289b71af52887ed8d61e6f84be22af",
+  "sourceCommitSha": "7b903d4ce7289b71af52887ed8d61e6f84be22af",
+  "sourceTree": "7a3251bbbf588b1c30d1fa13f0ca1483906a55eb",
+  "sourceCommitAt": "2026-11-14T19:31:12+01:00",
   "sourceTreeDirty": true,
   "dependsOnUnavailable": "2 dependency edge(s), none expressible as a record — see gaps",
   "counts": {

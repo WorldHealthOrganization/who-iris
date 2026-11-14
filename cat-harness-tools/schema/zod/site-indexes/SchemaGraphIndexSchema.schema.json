@@ -107,6 +107,7 @@
                   "type-alias",
                   "json-schema",
                   "fhir-logical",
+                  "fhir-profile",
                   "undetermined"
                 ]
               },
@@ -137,6 +138,9 @@
                       "type": "string"
                     },
                     "utype": {
+                      "type": "string"
+                    },
+                    "constraint": {
                       "type": "string"
                     },
                     "links": {
@@ -198,6 +202,7 @@
                   "typescript",
                   "json-schema",
                   "fhir",
+                  "fhir:profile",
                   "skill"
                 ]
               },
