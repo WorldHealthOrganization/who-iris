@@ -18,6 +18,66 @@
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
           },
           "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "شكر وتقدير يذكر كارل ليتنر وسواروب جاياپراكاش من إدارة الصحة الرقمية والابتكار في منظمة الصحة العالمية ورامي جرجس من الوكالة الأمريكية للتنمية الدولية (USAID) بوصفهم مؤلفين، ويسرد المراجعين ومنظماتهم بالترتيب الأبجدي، ويشير إلى عدم تحديد أي تضارب في المصالح استنادًا إلى استمارات إقرار المصالح لمنظمة الصحة العالمية، ويذكر أن الوكالة الأمريكية للتنمية الدولية موّلت العمل، وأن جميع مساهمات الولايات المتحدة سبقت 20 يناير 2025.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "致谢部分列出作者——世卫组织数字卫生与创新司的Carl Leitner和Swaroop Jayaprakash以及美国国际开发署的Ramy Guirguis，按字母顺序列出审阅人及其所属组织，说明根据世卫组织利益申报表未发现利益冲突，并指出该工作由美国国际开发署资助，美方的所有投入均在2025年1月20日之前。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Agradecimientos que nombran como autores a Carl Leitner y Swaroop Jayaprakash, del Departamento de Salud Digital e Innovación de la OMS, y a Ramy Guirguis, de USAID; enumeran a los revisores y sus organizaciones por orden alfabético; señalan que no se detectaron conflictos de intereses a partir de los formularios de declaración de intereses de la OMS, e indican que USAID financió el trabajo y que todas las aportaciones de los Estados Unidos son anteriores al 20 de enero de 2025.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Remerciements nommant comme auteurs Carl Leitner et Swaroop Jayaprakash, du Département Santé numérique et innovation de l'OMS, et Ramy Guirguis, de l'USAID, énumérant les relecteurs et leurs organisations par ordre alphabétique, indiquant qu'aucun conflit d'intérêts n'a été relevé dans les formulaires de déclaration d'intérêts de l'OMS et précisant que l'USAID a financé les travaux et que toutes les contributions des États-Unis sont antérieures au 20 janvier 2025.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Слова благодарности с указанием авторов — Карла Лейтнера и Сварупа Джаяпракаша из Департамента цифрового здравоохранения и инноваций ВОЗ и Рами Гиргиса из USAID, — перечнем рецензентов и их организаций в алфавитном порядке, отметкой о том, что по формам декларации интересов ВОЗ конфликтов интересов не выявлено, и указанием на то, что работу финансировало USAID, а весь вклад США был внесен до 20 января 2025 г.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
         }
       ],
       "superseded": [
@@ -181,6 +241,66 @@
             "id": "claude-code",
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "قائمة بالمختصرات المستخدمة في الكتيّب، تشرح مصطلحات مثل AIDC وATC وDAK وDIIG وeLMIS وFHIR وGDSN وGTIN وIDMP وINN وNPC وNRA وPCMT وSCISMM وSMART وSOP وUMC وWHODrug وZAMMSA وZAMRA.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "手册中使用的缩略语列表，给出AIDC、ATC、DAK、DIIG、eLMIS、FHIR、GDSN、GTIN、IDMP、INN、NPC、NRA、PCMT、SCISMM、SMART、SOP、UMC、WHODrug、ZAMMSA和ZAMRA等术语的全称。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Lista de abreviaturas utilizadas en el manual, que desarrolla términos como AIDC, ATC, DAK, DIIG, eLMIS, FHIR, GDSN, GTIN, IDMP, INN, NPC, NRA, PCMT, SCISMM, SMART, SOP, UMC, WHODrug, ZAMMSA y ZAMRA.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Liste des abréviations utilisées dans le manuel, développant des termes tels que AIDC, ATC, DAK, DIIG, eLMIS, FHIR, GDSN, GTIN, IDMP, INN, NPC, NRA, PCMT, SCISMM, SMART, SOP, UMC, WHODrug, ZAMMSA et ZAMRA.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Список сокращений, используемых в руководстве, с расшифровкой таких терминов, как AIDC, ATC, DAK, DIIG, eLMIS, FHIR, GDSN, GTIN, IDMP, INN, NPC, NRA, PCMT, SCISMM, SMART, SOP, UMC, WHODrug, ZAMMSA и ZAMRA.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
           },
           "drafted_at": "2026-11-14"
         }
@@ -420,6 +540,66 @@
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
           },
           "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "مسرد يعرّف مصطلحات مثل عنصر البيانات، والتحويل الرقمي (digitization)، والرقمنة (digitalization)، والتحول الرقمي، والمتطلبات الوظيفية وغير الوظيفية، والمنتج الجنيس، وقابلية التشغيل البيني، والمصدر المفتوح، والمعايير المفتوحة، والهيكل التنظيمي، والسجل، وإرشادات SMART، والصنف التجاري، واختبار قبول المستخدم (UAT).",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "术语表，界定数据元素、数据数字化（digitization）、数字化（digitalization）、数字化转型、功能性和非功能性需求、通用名产品、互操作性、开源、开放标准、组织结构图、登记库、SMART指南、贸易项目和用户验收测试（UAT）等术语。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Glosario que define términos como elemento de datos, digitización (digitization), digitalización (digitalization), transformación digital, requisitos funcionales y no funcionales, producto genérico, interoperabilidad, código abierto, normas abiertas, organigrama, registro, Directrices SMART, artículo comercial y pruebas de aceptación del usuario (UAT).",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Glossaire définissant des termes tels que élément de données, numérisation (digitization), numérisation des processus (digitalization), transformation numérique, exigences fonctionnelles et non fonctionnelles, produit générique, interopérabilité, code source ouvert, normes ouvertes, organigramme, registre, lignes directrices SMART, article commercial et tests d'acceptation par les utilisateurs (UAT).",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Глоссарий с определениями таких терминов, как элемент данных, оцифровка, цифровизация, цифровая трансформация, функциональные и нефункциональные требования, генерический продукт, интероперабельность, открытый исходный код, открытые стандарты, организационная структура, реестр, руководства SMART, торговая единица и приемочное тестирование пользователями (UAT).",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
         }
       ],
       "superseded": [
@@ -655,6 +835,66 @@
             "id": "claude-code",
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "مقدمة تشرح الفرق بين البيانات الرئيسية للمنتجات والبيانات المعاملاتية وأهمية اتساق تحديد هوية المنتجات بين شركاء سلسلة الإمداد، ثم تضع الكتيّب في سياق دليل الاستثمار في التنفيذ الرقمي (DIIG) وإرشادات SMART لمنظمة الصحة العالمية (الطبقات من L1 إلى L5) وسجل المنتجات ضمن هيكلية سلسلة الإمداد الصحية الرقمية؛ كما تعرض فصول الكتيّب وكيفية إعداده والمستخدمين المستهدفين لكل فصل ومتى يُستخدم.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "引言解释产品主数据与交易数据的区别，以及为何在各供应链合作伙伴之间保持一致的产品标识至关重要，随后将手册置于《数字实施投资指南》（DIIG）、世卫组织SMART指南（L1至L5层）和数字卫生供应链架构中的产品登记库框架内；引言还概述各章内容、手册的编写方式、各章的目标用户以及何时使用本手册。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Introducción que explica la diferencia entre los datos maestros de productos y los datos transaccionales y por qué importa una identificación coherente de los productos entre los asociados de la cadena de suministro, y luego sitúa el manual en el marco de la Guía de inversión en la implementación digital (DIIG), las Directrices SMART de la OMS (capas L1 a L5) y el registro de productos de la arquitectura de la cadena de suministro sanitario digital; también resume los capítulos, cómo se elaboró el manual, los usuarios destinatarios de cada capítulo y cuándo utilizarlo.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Introduction expliquant la différence entre les données de référence des produits et les données transactionnelles et l'importance d'une identification cohérente des produits entre les partenaires de la chaîne d'approvisionnement, puis situant le manuel par rapport au Guide d'investissement pour la mise en œuvre du numérique (DIIG), aux lignes directrices SMART de l'OMS (niveaux L1 à L5) et au registre des produits de l'architecture de la chaîne d'approvisionnement sanitaire numérique ; elle présente aussi les chapitres, l'élaboration du manuel, les utilisateurs visés par chaque chapitre et le moment où l'utiliser.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Введение, разъясняющее различие между основными данными о продукции и транзакционными данными и важность единообразной идентификации продукции между партнерами по цепочке поставок, а затем определяющее место руководства в контексте Руководства по инвестициям во внедрение цифровых технологий (DIIG), руководств ВОЗ SMART (уровни L1–L5) и реестра продукции в архитектуре цифровой цепочки поставок в здравоохранении; в нем также кратко изложены главы, порядок подготовки руководства, целевые пользователи каждой главы и случаи его применения.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
           },
           "drafted_at": "2026-11-14"
         }
@@ -1470,6 +1710,66 @@
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
           },
           "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "مستهل الفصل 1 بشأن وضع السياسات التنظيمية، ويذكر أن المصنّعين والموزعين هم المصدر المرجعي للبيانات الرئيسية للمنتجات، وأن على وزارات الصحة والسلطات التنظيمية الوطنية للأدوية وضع سياسات وتشريعات تُلزم بتوحيد البيانات الرئيسية للمنتجات.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "第1章开篇，阐述制定监管政策，指出生产商和分销商是产品主数据的权威来源，卫生部和国家药品监管机构应制定政策和立法，强制要求产品主数据标准化。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Apertura del capítulo 1 sobre el establecimiento de políticas regulatorias, que afirma que los fabricantes y distribuidores son la fuente fidedigna de los datos maestros de productos y que los ministerios de salud y las autoridades nacionales de reglamentación farmacéutica deben establecer políticas y legislación que exijan la normalización de dichos datos.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Ouverture du chapitre 1 sur l'établissement de politiques réglementaires, indiquant que les fabricants et les distributeurs sont la source de référence des données de référence des produits et que les ministères de la santé et les autorités nationales de réglementation pharmaceutique devraient adopter des politiques et une législation imposant la normalisation de ces données.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Начало главы 1 о разработке регуляторной политики, где указано, что производители и дистрибьюторы являются достоверным источником основных данных о продукции, а министерства здравоохранения и национальные регуляторные органы в сфере лекарственных средств должны принять политику и законодательство, обязывающие стандартизировать основные данные о продукции.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
         }
       ],
       "superseded": [
@@ -1633,6 +1933,66 @@
             "id": "claude-code",
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "الخطوة 1 من الفصل 1 بشأن تحليل اللوائح القائمة المتعلقة بتوحيد البيانات الرئيسية للمنتجات وتبادلها، والتحقق من آليات الامتثال، وحصر السياسات الجديدة أو المعدّلة اللازمة، مع موارد مثل نموذج لمبادئ توجيهية بشأن البيانات الرئيسية، إضافة إلى تدابير للتخفيف من ضعف القدرات التنظيمية وتنافس الأولويات وعدم وضوح الولايات (إشراك الشركاء ومصفوفة RACI للمسؤوليات).",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "第1章步骤1，涉及分析有关产品主数据标准化和共享的现有法规、核查合规机制，并列出所需的新政策或修订政策，提供主数据指南模板等资源，以及应对监管能力薄弱、优先事项相互竞争和职责不明确的缓解措施（伙伴参与和RACI责任矩阵）。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Paso 1 del capítulo 1 sobre el análisis de la reglamentación vigente en materia de normalización e intercambio de datos maestros de productos, la verificación de los mecanismos de cumplimiento y la enumeración de las políticas nuevas o modificadas necesarias, con recursos como una plantilla de directrices sobre datos maestros, además de medidas de mitigación ante una capacidad regulatoria escasa, prioridades contrapuestas y mandatos poco claros (participación de los asociados y una matriz de responsabilidades RACI).",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Étape 1 du chapitre 1 consacrée à l'analyse de la réglementation existante en matière de normalisation et de partage des données de référence des produits, à la vérification des mécanismes de conformité et au recensement des politiques nouvelles ou modifiées nécessaires, avec des ressources telles qu'un modèle de lignes directrices sur les données de référence, ainsi que des mesures d'atténuation face à une faible capacité réglementaire, à des priorités concurrentes et à des mandats flous (mobilisation des partenaires et matrice de responsabilités RACI).",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Шаг 1 главы 1 об анализе действующих нормативных актов о стандартизации основных данных о продукции и обмене ими, проверке механизмов обеспечения соблюдения и составлении перечня необходимых новых или измененных политик, с такими ресурсами, как шаблон руководства по основным данным, а также меры по снижению рисков слабого регуляторного потенциала, конкурирующих приоритетов и нечетких полномочий (вовлечение партнеров и матрица ответственности RACI).",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
           },
           "drafted_at": "2026-11-14"
         }
@@ -1800,6 +2160,66 @@
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
           },
           "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "الخطوة 2 من الفصل 1 بشأن صياغة السياسات واللوائح المحددة، مثل مبادئ توجيهية للبيانات الرئيسية تتسق مع قواعد توحيد البيانات والتعرّف الآلي وجمع البيانات (AIDC)، مع جداول زمنية للتطبيق التدريجي على المصنّعين، وتدابير للتخفيف من طول عملية الصياغة ونقص تمويلها عبر إشراك قادة الحكومة والشركاء المموّلين والمصنّعين والموزعين من القطاع الخاص في وقت مبكر.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "第1章步骤2，涉及起草已确定的政策和法规，例如符合数据标准化和自动识别与数据采集（AIDC）规则的主数据指南，并为生产商制定分阶段推行时间表，以及通过及早动员政府领导人、资助伙伴和私营部门生产商及分销商来应对起草过程冗长且资金不足的缓解措施。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Paso 2 del capítulo 1 sobre la redacción de las políticas y normas identificadas, como directrices sobre datos maestros coherentes con las normas de normalización de datos y de AIDC, con calendarios de implantación gradual para los fabricantes, y medidas de mitigación ante una redacción larga e infrafinanciada mediante la participación temprana de dirigentes gubernamentales, asociados financiadores y fabricantes y distribuidores del sector privado.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Étape 2 du chapitre 1 consacrée à la rédaction des politiques et réglementations identifiées, telles que des lignes directrices sur les données de référence conformes aux règles de normalisation des données et d'AIDC, avec des calendriers de déploiement progressif pour les fabricants, et des mesures d'atténuation face à une rédaction longue et sous-financée grâce à la mobilisation précoce des dirigeants gouvernementaux, des partenaires financiers et des fabricants et distributeurs du secteur privé.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Шаг 2 главы 1 о подготовке проектов выявленных политик и нормативных актов, например руководства по основным данным, согласованного с правилами стандартизации данных и AIDC, с графиками поэтапного внедрения для производителей, и меры по снижению риска длительной и недостаточно финансируемой подготовки за счет раннего привлечения руководителей правительства, партнеров по финансированию и частных производителей и дистрибьюторов.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
         }
       ],
       "superseded": [
@@ -1891,6 +2311,66 @@
             "id": "claude-code",
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "الخطوة 3 من الفصل 1 بشأن تنسيق مراجعة مسودات سياسات وتشريعات البيانات الرئيسية بقيادة السلطة التنظيمية الوطنية مع وزارة الصحة والمستودعات وجهات الشراء والمصنّعين والموزعين والقادة التشغيليين، وإدماج الملاحظات، والحصول على الموافقة على النشر.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "第1章步骤3，涉及协调由国家监管机构牵头、与卫生部、仓库、采购实体、生产商、分销商和业务负责人共同开展的主数据政策和立法草案审查，吸纳反馈意见并获得发布批准。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Paso 3 del capítulo 1 sobre la coordinación de la revisión, dirigida por la autoridad nacional de reglamentación, de los proyectos de políticas y legislación sobre datos maestros con el ministerio de salud, los almacenes, las entidades de adquisición, los fabricantes, los distribuidores y los responsables operativos, la incorporación de observaciones y la obtención de la aprobación para su publicación.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Étape 3 du chapitre 1 consacrée à la coordination de l'examen, dirigé par l'autorité nationale de réglementation, des projets de politiques et de législation sur les données de référence avec le ministère de la santé, les entrepôts, les entités d'achat, les fabricants, les distributeurs et les responsables opérationnels, à l'intégration des commentaires et à l'obtention de l'approbation en vue de la publication.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Шаг 3 главы 1 о координации проводимого под руководством национального регуляторного органа рассмотрения проектов политик и законодательства об основных данных с министерством здравоохранения, складами, закупочными организациями, производителями, дистрибьюторами и руководителями операционной деятельности, учете замечаний и получении одобрения на публикацию.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
           },
           "drafted_at": "2026-11-14"
         }
@@ -2058,6 +2538,66 @@
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
           },
           "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "الخطوة 4 من الفصل 1 بشأن نشر السياسات التنظيمية المعتمدة وإنفاذها، وتحديد آليات رصد الامتثال، وتدابير التخفيف من ضعف التزام المصنّعين (تقييم الوضع، والنهج التدريجي، والجداول الزمنية الواضحة للانتقال، وأدلة التدريب والندوات الإلكترونية، وشبكة مجتمعية للمعايير العالمية)، ونقطة المراجعة في نهاية الفصل 1.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "第1章步骤4，涉及发布并执行已批准的监管政策、确定合规监测机制，应对生产商遵守情况不佳的缓解措施（形势评估、分阶段方法、明确的过渡时间表、培训手册和网络研讨会以及全球标准社区网络），以及第1章章末检查点。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Paso 4 del capítulo 1 sobre la publicación y aplicación de las políticas regulatorias aprobadas, la definición de mecanismos de seguimiento del cumplimiento, medidas de mitigación ante un escaso cumplimiento por parte de los fabricantes (evaluación de la situación, enfoque gradual, plazos de transición claros, manuales de formación y seminarios web, y una red comunitaria de normas mundiales) y el punto de control al final del capítulo 1.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Étape 4 du chapitre 1 consacrée à la publication et à l'application des politiques réglementaires approuvées, à la définition des mécanismes de suivi de la conformité, aux mesures d'atténuation face au faible respect par les fabricants (évaluation de la situation, approche progressive, calendriers de transition clairs, manuels de formation et webinaires, et réseau communautaire des normes mondiales) et au point de contrôle de fin du chapitre 1.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Шаг 4 главы 1 о публикации и обеспечении соблюдения утвержденной регуляторной политики, определении механизмов мониторинга соблюдения, мерах по снижению риска слабого соблюдения производителями (оценка ситуации, поэтапный подход, четкие сроки переходного периода, учебные пособия и вебинары, сеть сообщества глобальных стандартов) и контрольной точке в конце главы 1.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
         }
       ],
       "superseded": [
@@ -2223,6 +2763,66 @@
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
           },
           "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "مستهل الفصل 2 بشأن سياسات إدارة البيانات وحوكمتها، ويؤكد أن هياكل البيانات الرئيسية وتعاريفها وإجراءاتها التشغيلية يجب أن تحافظ على سلامة البيانات وجودتها مع احترام الخصوصية والأمن والاستخدام الأخلاقي للبيانات، ويشير إلى أن الخطوات قد تُنفّذ بالتزامن.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "第2章开篇，阐述数据管理和治理政策，强调主数据结构、定义和操作程序必须在尊重隐私、安全和合乎伦理的数据使用的同时维护数据完整性和质量，并指出各步骤可以同时进行。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Apertura del capítulo 2 sobre las políticas de gestión y gobernanza de datos, que subraya que las estructuras, definiciones y procedimientos operativos de los datos maestros deben mantener la integridad y la calidad de los datos respetando la privacidad, la seguridad y el uso ético de los datos, y señala que los pasos pueden llevarse a cabo de forma simultánea.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Ouverture du chapitre 2 sur les politiques de gestion et de gouvernance des données, soulignant que les structures, définitions et procédures opérationnelles des données de référence doivent préserver l'intégrité et la qualité des données tout en respectant la confidentialité, la sécurité et l'utilisation éthique des données, et indiquant que les étapes peuvent être menées simultanément.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Начало главы 2 о политике управления данными и руководства ими, где подчеркивается, что структуры, определения и операционные процедуры для основных данных должны обеспечивать целостность и качество данных при соблюдении конфиденциальности, безопасности и этичного использования данных, и отмечается, что шаги могут выполняться одновременно.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
         }
       ],
       "superseded": [
@@ -2386,6 +2986,66 @@
             "id": "claude-code",
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "الخطوة 1 من الفصل 2 بشأن تحديد إجراءات إدارة البيانات الرئيسية للمنتجات: مراجعة نظم الترميز ومجموعات البيانات المكررة واحتياجات المواءمة، وإعداد خطة لمواءمة البيانات وإجراءات واختصاصات لفريق الحوكمة؛ وتفصّل العناصر الرئيسية ومنها إطار لحوكمة البيانات يتضمن أدوار مالك البيانات وأمينها والقيّم عليها، وجودة البيانات، والأمن، وقابلية التشغيل البيني، ودورة الحياة، وإدارة التغيير، والرصد.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "第2章步骤1，涉及确定产品主数据管理程序：审查编码方案、重复数据集和统一需求，制定数据统一计划、程序和治理小组职责范围；详细介绍关键要素，包括设有数据所有者、数据保管人和数据管理员角色的数据治理框架，以及数据质量、安全、互操作性、生命周期、变更管理和监测。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Paso 1 del capítulo 2 sobre la definición de procedimientos de gestión de datos maestros de productos: revisar los esquemas de codificación, los conjuntos de datos duplicados y las necesidades de armonización, y elaborar un plan de armonización de datos, procedimientos y el mandato del grupo de gobernanza; detalla elementos clave como un marco de gobernanza de datos con las funciones de propietario, custodio y administrador de datos, la calidad de los datos, la seguridad, la interoperabilidad, el ciclo de vida, la gestión del cambio y el seguimiento.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Étape 1 du chapitre 2 consacrée à la définition des procédures de gestion des données de référence des produits : examen des systèmes de codification, des ensembles de données en double et des besoins d'harmonisation, et élaboration d'un plan d'harmonisation des données, de procédures et du mandat du groupe de gouvernance ; elle détaille les éléments clés, dont un cadre de gouvernance des données avec les rôles de propriétaire, de dépositaire et de gestionnaire des données, la qualité des données, la sécurité, l'interopérabilité, le cycle de vie, la gestion du changement et le suivi.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Шаг 1 главы 2 об определении процедур управления основными данными о продукции: анализ систем кодирования, дублирующих наборов данных и потребностей в гармонизации, подготовка плана гармонизации данных, процедур и круга ведения группы по управлению; подробно описаны ключевые элементы, включая рамочную систему управления данными с ролями владельца, хранителя и распорядителя данных, качество данных, безопасность, интероперабельность, жизненный цикл, управление изменениями и мониторинг.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
           },
           "drafted_at": "2026-11-14"
         }
@@ -2623,6 +3283,66 @@
             "id": "claude-code",
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "الخطوة 2 من الفصل 2 بشأن تحديد نظم الترميز وتعاريف البيانات وهياكلها، وربط المعرّفات القُطرية بمعايير HL7 FHIR وIDMP وأرقام GTIN الخاصة بـ GS1، والتمييز بين التصنيفات (ATC/DDD والتصنيف الدولي للأمراض ICD) والمنتجات الجنيسة والأصناف التجارية والأصناف التجارية الخاضعة للتنظيم، مع ممارسات فضلى للترميز، وقاموس WHODrug، وأشكال التسلسل الهرمي للتعبئة (الأشكال 8 إلى 12)؛ كما تتضمن جدول الخطوة 3 بشأن مصادر البيانات وآليات تبادلها وسياسات استخدامها.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "第2章步骤2，涉及确定编码方案、数据定义和结构，将国家标识符映射到HL7 FHIR、IDMP和GS1全球贸易项目代码（GTIN），区分分类（ATC/DDD、国际疾病分类ICD）、通用名产品、贸易项目和受监管贸易项目，并介绍编码最佳做法、WHODrug词典和包装层级图（图8至图12）；该部分还包含步骤3中关于数据来源、共享机制和数据使用政策的表格。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Paso 2 del capítulo 2 sobre la definición de esquemas de codificación, definiciones y estructuras de datos, la correspondencia de los identificadores nacionales con HL7 FHIR, IDMP y los GTIN de GS1, y la distinción entre clasificaciones (ATC/DDD, CIE), productos genéricos, artículos comerciales y artículos comerciales regulados, con buenas prácticas de codificación, el diccionario WHODrug y figuras sobre la jerarquía de embalaje (figuras 8 a 12); también incluye el cuadro del paso 3 sobre fuentes de datos, mecanismos de intercambio y políticas de uso de los datos.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Étape 2 du chapitre 2 consacrée à la définition des systèmes de codification, des définitions et des structures de données, à la mise en correspondance des identifiants nationaux avec HL7 FHIR, IDMP et les GTIN de GS1, et à la distinction entre classifications (ATC/DDD, CIM), produits génériques, articles commerciaux et articles commerciaux réglementés, avec des bonnes pratiques de codification, le dictionnaire WHODrug et des figures sur la hiérarchie des conditionnements (figures 8 à 12) ; elle contient aussi le tableau de l'étape 3 sur les sources de données, les mécanismes de partage et les politiques d'utilisation des données.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Шаг 2 главы 2 об определении систем кодирования, определений и структур данных, сопоставлении национальных идентификаторов с HL7 FHIR, IDMP и кодами GTIN GS1 и разграничении классификаций (ATC/DDD, МКБ), генерических продуктов, торговых единиц и регулируемых торговых единиц, с передовой практикой кодирования, словарем WHODrug и рисунками иерархии упаковки (рис. 8–12); здесь же приведена таблица шага 3 об источниках данных, механизмах обмена ими и политике использования данных.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
           },
           "drafted_at": "2026-11-14"
         }
@@ -3006,6 +3726,66 @@
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
           },
           "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "جزء من مثال الشكل 12 ضمن الخطوة 3 من الفصل 2، يُظهر منتجًا جنيسًا (المعرّف MR001) مربوطًا بأصناف تجارية من مصنّعَين اثنين عبر مستويات التعبئة: المنصّة النقالة والصندوق والعبوة الداخلية، مع معرّفات على نمط GTIN وكميات قدرها 100 و50.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "第2章步骤3下图12示例的片段，显示一个通用名产品（标识符MR001）映射到两家生产商的贸易项目，涵盖托盘、箱和内包装等包装层级，并附有GTIN格式的标识符以及100和50的数量。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Fragmento del ejemplo de la figura 12 del paso 3 del capítulo 2, que muestra un producto genérico (identificador MR001) vinculado a artículos comerciales de dos fabricantes en los niveles de embalaje de palé, caja y envase interior, con identificadores de tipo GTIN y cantidades de 100 y 50.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Fragment de l'exemple de la figure 12 de l'étape 3 du chapitre 2, montrant un produit générique (identifiant MR001) mis en correspondance avec des articles commerciaux de deux fabricants aux niveaux de conditionnement palette, carton et emballage intérieur, avec des identifiants de type GTIN et des quantités de 100 et 50.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Фрагмент примера с рисунка 12 к шагу 3 главы 2, показывающий генерический продукт (идентификатор MR001), сопоставленный с торговыми единицами двух производителей на уровнях упаковки «паллета», «коробка» и «внутренняя упаковка», с идентификаторами в формате GTIN и количествами 100 и 50.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
         }
       ],
       "superseded": [
@@ -3169,6 +3949,66 @@
             "id": "claude-code",
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "الخطوة 4 من الفصل 2 بشأن ترسيخ حوكمة البيانات الرئيسية للمنتجات من خلال إنشاء فريق لحوكمة البيانات الرئيسية، ربما ضمن اللجان التوجيهية القائمة، وتعزيز الاستخدام المتسق للإجراءات ونظم الترميز والسياسات في جميع نظم سلسلة الإمداد؛ وتبدأ بتدبير للتخفيف من المخاوف المتعلقة بحساسية البيانات من خلال ضوابط وصول قائمة على درجة الحساسية.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "第2章步骤4，涉及通过设立主数据治理小组（可设在现有指导委员会内）将产品主数据治理制度化，并在各供应链系统中推动一致地使用程序、编码方案和政策；开头提出通过基于敏感程度的访问控制来缓解对数据敏感性的担忧。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Paso 4 del capítulo 2 sobre la institucionalización de la gobernanza de los datos maestros de productos mediante la creación de un grupo de gobernanza de datos maestros, posiblemente dentro de los comités directivos existentes, y la promoción del uso coherente de procedimientos, esquemas de codificación y políticas en todos los sistemas de la cadena de suministro; comienza con una medida de mitigación de las preocupaciones sobre la sensibilidad de los datos mediante controles de acceso basados en el grado de sensibilidad.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Étape 4 du chapitre 2 consacrée à l'institutionnalisation de la gouvernance des données de référence des produits par la création d'un groupe de gouvernance des données de référence, éventuellement au sein des comités de pilotage existants, et par la promotion d'une utilisation cohérente des procédures, des systèmes de codification et des politiques dans tous les systèmes de la chaîne d'approvisionnement ; elle s'ouvre sur une mesure d'atténuation des préoccupations liées à la sensibilité des données au moyen de contrôles d'accès fondés sur le niveau de sensibilité.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Шаг 4 главы 2 об институционализации управления основными данными о продукции путем создания группы по управлению основными данными, возможно, в рамках существующих руководящих комитетов, и содействия единообразному применению процедур, систем кодирования и политик во всех системах цепочки поставок; он открывается мерой по снижению опасений относительно чувствительности данных за счет контроля доступа с учетом степени чувствительности.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
           },
           "drafted_at": "2026-11-14"
         }
@@ -3336,6 +4176,66 @@
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
           },
           "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "الخطوة 5 من الفصل 2 بشأن استراتيجيات قصيرة وطويلة الأجل للحصول على بيانات رئيسية موحدة للمنتجات، مثل جمع البيانات من وكالات الشراء والجهات المانحة ومن العبوات، ثم إضفاء الطابع الرسمي على تقديمها أثناء التسجيل التنظيمي للمنتجات، مع تدابير تخفيف تشمل ندوات إلكترونية للتوعية ونشرات من صفحة واحدة ومجموعة دنيا من السمات (الاسم الدولي غير المسجل الملكية، والمصنّع، والشكل الصيدلاني، والتركيز، وبلد المنشأ)، ونقطة المراجعة في الفصل 2.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "第2章步骤5，涉及获取标准化产品主数据的短期和长期战略，例如从采购机构、捐助方和包装上收集数据，再将数据提交正式纳入监管产品注册环节，缓解措施包括提高认识的网络研讨会、单页简介和最低属性集（国际非专利名称、生产商、剂型、规格和原产国），以及第2章检查点。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Paso 5 del capítulo 2 sobre estrategias a corto y largo plazo para obtener datos maestros de productos normalizados, como recopilar datos de organismos de adquisición, donantes y embalajes, y luego formalizar su presentación durante el registro regulatorio de productos, con medidas de mitigación como seminarios web de sensibilización, resúmenes de una página y un conjunto mínimo de atributos (DCI, fabricante, forma farmacéutica, concentración y país de origen), y el punto de control del capítulo 2.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Étape 5 du chapitre 2 consacrée aux stratégies à court et à long terme pour obtenir des données de référence normalisées sur les produits, comme la collecte de données auprès des organismes d'achat, des donateurs et sur les conditionnements, puis la formalisation de leur soumission lors de l'enregistrement réglementaire des produits, avec des mesures d'atténuation telles que des webinaires de sensibilisation, des fiches d'une page et un ensemble minimal d'attributs (DCI, fabricant, forme pharmaceutique, dosage et pays d'origine), et le point de contrôle du chapitre 2.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Шаг 5 главы 2 о краткосрочных и долгосрочных стратегиях получения стандартизированных основных данных о продукции, например сбора данных у закупочных агентств, доноров и с упаковки с последующей формализацией их представления при регуляторной регистрации продукции, с мерами по снижению рисков, включая информационные вебинары, одностраничные материалы и минимальный набор атрибутов (МНН, производитель, лекарственная форма, дозировка и страна происхождения), а также контрольная точка главы 2.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
         }
       ],
       "superseded": [
@@ -3499,6 +4399,66 @@
             "id": "claude-code",
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "كتلة تقتصر على عنوان الفصل 3، «نشر التكنولوجيا المناسبة لإدارة البيانات الرئيسية للمنتجات»؛ ولا يتضمن النص المستخرج سوى عنوان الفصل، بينما يرد النص التمهيدي للفصل وخطواته في الكتل التالية.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "仅含标题的第3章区块，标题为“部署适当技术以管理产品主数据”；提取文本仅包含章标题，本章的引言文字和各步骤见后续区块。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Bloque que solo contiene el encabezado del capítulo 3, «Despliegue de la tecnología adecuada para gestionar los datos maestros de productos»; el texto extraído recoge únicamente el título del capítulo, y el texto introductorio y los pasos del capítulo figuran en los bloques siguientes.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Bloc ne contenant que l'intitulé du chapitre 3, « Déployer la technologie appropriée pour gérer les données de référence des produits » ; le texte extrait ne comporte que le titre du chapitre, le texte introductif et les étapes du chapitre figurant dans les blocs suivants.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Блок, содержащий только заголовок главы 3 «Внедрение надлежащих технологий для управления основными данными о продукции»; извлеченный текст включает лишь название главы, а вводный текст и шаги главы приведены в последующих блоках.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
           },
           "drafted_at": "2026-11-14"
         }
@@ -3666,6 +4626,66 @@
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
           },
           "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "مقدمة الفصل 3 والخطوة 1، وتوضح أن أداة الكتالوج الوطني للمنتجات (NPC) تدير البيانات الرئيسية للمنتجات على نحو متسق، وتبيّن كيفية تحديد المتطلبات الوظيفية وغير الوظيفية لنظام الكتالوج الوطني للمنتجات واعتمادها باستخدام موارد مثل معايير البرمجيات المستهدفة (Target Software Standards) الإصدار 2، ومعايير ISO IDMP، وأدلة تنفيذ HL7 FHIR.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "第3章引言和步骤1，说明国家产品目录（NPC）工具可一致地管理产品主数据，并阐述如何利用《目标软件标准》第2版、ISO IDMP标准和HL7 FHIR实施指南等资源确定并批准国家产品目录系统的功能性和非功能性需求。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Introducción y paso 1 del capítulo 3, que explican que una herramienta de catálogo nacional de productos (NPC) gestiona los datos maestros de productos de forma coherente y exponen cómo definir y aprobar los requisitos funcionales y no funcionales del sistema NPC con recursos como las Target Software Standards v2, las normas ISO IDMP y las guías de implementación de HL7 FHIR.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Introduction et étape 1 du chapitre 3, expliquant qu'un outil de catalogue national des produits (NPC) gère les données de référence des produits de manière cohérente et indiquant comment définir et approuver les exigences fonctionnelles et non fonctionnelles du système NPC à l'aide de ressources telles que les Target Software Standards v2, les normes ISO IDMP et les guides de mise en œuvre HL7 FHIR.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Введение и шаг 1 главы 3, где поясняется, что инструмент национального каталога продукции (NPC) обеспечивает единообразное управление основными данными о продукции, и излагается, как определить и утвердить функциональные и нефункциональные требования к системе NPC с использованием таких ресурсов, как Target Software Standards v2, стандарты ISO IDMP и руководства по внедрению HL7 FHIR.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
         }
       ],
       "superseded": [
@@ -3831,6 +4851,66 @@
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
           },
           "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "الخطوة 2 من الفصل 3 بشأن تحديد الخيارات التكنولوجية للكتالوج الوطني للمنتجات من خلال بحوث السوق مثل طلب المعلومات، وتقييم الأدوات القائمة مثل تطبيقات تخطيط موارد المؤسسة، والنظر في أداة PCMT المفتوحة المصدر والنسخة التي تستضيفها منظمة الصحة العالمية، وإجراء عمليات طلب عروض الأسعار أو طلب تقديم العروض لاختيار الأداة.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "第3章步骤2，涉及通过信息征询书等市场调研确定国家产品目录的技术方案，评估企业资源规划应用等现有工具，考虑开源PCMT及世卫组织托管的实例，并通过询价书或征求建议书程序遴选工具。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Paso 2 del capítulo 3 sobre la identificación de opciones tecnológicas para el NPC mediante estudios de mercado como una solicitud de información, la evaluación de herramientas existentes como las aplicaciones de planificación de recursos empresariales, la consideración de la herramienta de código abierto PCMT y la instancia alojada por la OMS, y la realización de procesos de solicitud de cotizaciones o de propuestas para seleccionar la herramienta.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Étape 2 du chapitre 3 consacrée à l'identification des options technologiques pour le NPC au moyen d'études de marché telles qu'une demande d'informations, à l'évaluation d'outils existants comme les progiciels de gestion intégrée, à l'examen de l'outil libre PCMT et de l'instance hébergée par l'OMS, et à la conduite de procédures de demande de devis ou d'appel d'offres pour sélectionner l'outil.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Шаг 2 главы 3 о выявлении технологических вариантов для NPC путем изучения рынка, например запроса информации, оценки существующих инструментов, таких как приложения для планирования ресурсов предприятия, рассмотрения PCMT с открытым исходным кодом и экземпляра, размещенного ВОЗ, и проведения процедур запроса ценовых предложений или запроса предложений для выбора инструмента.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
         }
       ],
       "superseded": [
@@ -3922,6 +5002,66 @@
             "id": "claude-code",
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "الخطوة 3 من الفصل 3 بشأن إعداد خطة تنفيذ مفصلة لتصميم أداة الكتالوج الوطني للمنتجات المختارة وتهيئتها ونشرها، ومراجعتها مع أصحاب المصلحة المعنيين، وإطلاق مشروع التنفيذ، مع نموذج لخطة تنفيذ الكتالوج الوطني للمنتجات بوصفه موردًا.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "第3章步骤3，涉及制定详细的实施计划，以设计、配置和部署所选的国家产品目录工具，与相关利益攸关方共同审查该计划并启动实施项目，并提供国家产品目录实施计划模板作为资源。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Paso 3 del capítulo 3 sobre la elaboración de un plan de implementación detallado para diseñar, configurar y desplegar la herramienta NPC elegida, su revisión con las partes interesadas pertinentes y el inicio del proyecto de implementación, con una plantilla de plan de implementación del NPC como recurso.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Étape 3 du chapitre 3 consacrée à l'élaboration d'un plan de mise en œuvre détaillé pour concevoir, configurer et déployer l'outil NPC retenu, à son examen avec les parties prenantes concernées et au lancement du projet de mise en œuvre, avec un modèle de plan de mise en œuvre du NPC comme ressource.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Шаг 3 главы 3 о разработке подробного плана внедрения для проектирования, настройки и развертывания выбранного инструмента NPC, его обсуждении с соответствующими заинтересованными сторонами и запуске проекта внедрения, с шаблоном плана внедрения NPC в качестве ресурса.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
           },
           "drafted_at": "2026-11-14"
         }
@@ -4087,6 +5227,66 @@
             "id": "claude-code",
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "الخطوة 4 من الفصل 3 بشأن تصميم أداة الكتالوج الوطني للمنتجات وتطويرها والتحقق منها (اختبار النظام والتكامل والأداء واختبار قبول المستخدم) ونشرها مع دعم نظم الترميز والتسلسلات الهرمية للتعبئة، وتدابير للتخفيف من محدودية القدرات التقنية تشمل استخدام أداة PCMT التي تستضيفها منظمة الصحة العالمية، ونقطة المراجعة في الفصل 3، ومقدمة الفصل 4 بشأن إدارة التغيير.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "第3章步骤4，涉及设计、开发、验证（系统测试、集成测试、性能测试和用户验收测试）和部署支持编码方案和包装层级的国家产品目录工具，应对技术能力有限的缓解措施（包括使用世卫组织托管的PCMT），第3章检查点，以及第4章关于变革管理的引言。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Paso 4 del capítulo 3 sobre el diseño, desarrollo, validación (pruebas del sistema, de integración, de rendimiento y de aceptación del usuario) y despliegue de la herramienta NPC con compatibilidad para esquemas de codificación y jerarquías de embalaje, medidas de mitigación ante una capacidad técnica limitada, incluido el uso de la PCMT alojada por la OMS, el punto de control del capítulo 3 y la introducción al capítulo 4 sobre la gestión del cambio.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Étape 4 du chapitre 3 consacrée à la conception, au développement, à la validation (tests du système, d'intégration, de performance et d'acceptation par les utilisateurs) et au déploiement de l'outil NPC prenant en charge les systèmes de codification et les hiérarchies de conditionnement, aux mesures d'atténuation face à une capacité technique limitée, dont l'utilisation de la PCMT hébergée par l'OMS, au point de contrôle du chapitre 3 et à l'introduction du chapitre 4 sur la gestion du changement.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Шаг 4 главы 3 о проектировании, разработке, валидации (системное, интеграционное и нагрузочное тестирование и приемочное тестирование пользователями) и развертывании инструмента NPC с поддержкой систем кодирования и иерархий упаковки, меры по снижению рисков ограниченного технического потенциала, включая использование PCMT, размещенной ВОЗ, контрольная точка главы 3 и введение к главе 4 об управлении изменениями.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
           },
           "drafted_at": "2026-11-14"
         }
@@ -4326,6 +5526,66 @@
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
           },
           "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "الخطوة 1 من الفصل 4 بشأن خطة لإدارة التغيير من أجل ترسيخ استخدام الكتالوج الوطني للمنتجات، وتحديد التغييرات اللازمة في العمليات وتحسينات النظم وهياكل البيانات ومحفزات تبادل البيانات في مجالات التنبؤ والشراء والمخزون والشحن والصرف، مع ممارسة فضلى تتمثل في استخدام معرّفات الأصناف التجارية المحلية المربوطة بأرقام GTIN عند توافرها عبر سمة «معرّف الصنف التجاري القُطري».",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "第4章步骤1，涉及制定变革管理计划以将国家产品目录的使用制度化，确定预测、采购、库存、运输和调剂等环节在流程、系统改进、数据结构和数据交换触发条件方面所需的变更，并提出一项最佳做法，即在有GTIN时通过“国家贸易项目标识符”属性使用映射到GTIN的本地贸易项目标识符。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Paso 1 del capítulo 4 sobre un plan de gestión del cambio para institucionalizar el uso del NPC, que identifica los cambios necesarios en los procesos, las mejoras de los sistemas, las estructuras de datos y los desencadenantes del intercambio de datos en la previsión, la adquisición, el inventario, el envío y la dispensación, con la buena práctica de utilizar identificadores locales de artículos comerciales vinculados a los GTIN, cuando estén disponibles, mediante un atributo Country Trade Item Identifier.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Étape 1 du chapitre 4 consacrée à un plan de gestion du changement visant à institutionnaliser l'utilisation du NPC, recensant les changements nécessaires dans les processus, les améliorations des systèmes, les structures de données et les déclencheurs d'échange de données pour la prévision, l'achat, les stocks, l'expédition et la dispensation, avec la bonne pratique consistant à utiliser des identifiants locaux d'articles commerciaux mis en correspondance avec les GTIN lorsqu'ils existent, au moyen d'un attribut Country Trade Item Identifier.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Шаг 1 главы 4 о плане управления изменениями для институционализации использования NPC: определение необходимых изменений процессов, доработок систем, структур данных и триггеров обмена данными в прогнозировании, закупках, управлении запасами, отгрузке и отпуске, с передовой практикой использования местных идентификаторов торговых единиц, сопоставленных с GTIN при их наличии, через атрибут Country Trade Item Identifier.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
         }
       ],
       "superseded": [
@@ -4489,6 +5749,66 @@
             "id": "claude-code",
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "الخطوة 2 من الفصل 4 بشأن تحديد إجراءات التشغيل الموحدة والتحقق منها واعتمادها لجمع البيانات الرئيسية للمنتجات وتنظيمها وإضافتها وتحديثها في الكتالوج الوطني للمنتجات، إضافة إلى خطة مستمرة للتدريب والمناصرة؛ وتبدأ بجدول مثال لأصناف تجارية من اللاميفودين مع أرقام GTIN ومعرّفات محلية، وتسرد مخاطر مثل جودة البيانات وتحويلات كميات التعبئة، وتنتهي بنقطة المراجعة في الفصل 4.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "第4章步骤2，涉及确定、验证和批准在国家产品目录中收集、整理、添加和更新产品主数据的标准操作程序，以及持续的培训和宣传计划；开头为拉米夫定贸易项目及其GTIN和本地标识符的示例表，列出数据质量和包装数量换算等风险，最后是第4章检查点。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Paso 2 del capítulo 4 sobre la definición, validación y aprobación de procedimientos operativos normalizados para recopilar, organizar, añadir y actualizar los datos maestros de productos en el NPC, además de un plan continuo de formación y promoción; comienza con un cuadro de ejemplo de artículos comerciales de lamivudina con sus GTIN e identificadores locales, enumera riesgos como la calidad de los datos y las conversiones de cantidades de embalaje, y termina con el punto de control del capítulo 4.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Étape 2 du chapitre 4 consacrée à la définition, à la validation et à l'approbation de modes opératoires normalisés pour collecter, organiser, ajouter et mettre à jour les données de référence des produits dans le NPC, ainsi qu'à un plan continu de formation et de plaidoyer ; elle s'ouvre sur un tableau d'exemple d'articles commerciaux de lamivudine avec leurs GTIN et identifiants locaux, énumère des risques tels que la qualité des données et les conversions de quantités de conditionnement, et se termine par le point de contrôle du chapitre 4.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Шаг 2 главы 4 об определении, валидации и утверждении стандартных операционных процедур сбора, упорядочения, добавления и обновления основных данных о продукции в NPC, а также о плане непрерывного обучения и информационно-разъяснительной работы; он начинается с таблицы-примера торговых единиц ламивудина с кодами GTIN и местными идентификаторами, перечисляет риски, такие как качество данных и пересчет количеств в упаковке, и завершается контрольной точкой главы 4.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
           },
           "drafted_at": "2026-11-14"
         }
@@ -4728,6 +6048,66 @@
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
           },
           "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "كتلة تقتصر على عنوان الفصل 5، «بناء القدرات لإدارة الكتالوج الوطني للمنتجات على نحو مستدام»؛ ولا يتضمن النص المستخرج سوى عنوان الفصل، بينما ترد مقدمة الفصل وخطواته في الكتل التالية.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "仅含标题的第5章区块，标题为“建设可持续管理国家产品目录的能力”；提取文本仅包含章标题，本章的引言和各步骤见后续区块。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Bloque que solo contiene el encabezado del capítulo 5, «Creación de capacidad para gestionar el NPC de forma sostenible»; el texto extraído recoge únicamente el título del capítulo, y la introducción y los pasos del capítulo figuran en los bloques siguientes.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Bloc ne contenant que l'intitulé du chapitre 5, « Renforcer les capacités pour gérer durablement le NPC » ; le texte extrait ne comporte que le titre du chapitre, l'introduction et les étapes du chapitre figurant dans les blocs suivants.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Блок, содержащий только заголовок главы 5 «Наращивание потенциала для устойчивого управления NPC»; извлеченный текст включает лишь название главы, а введение и шаги главы приведены в последующих блоках.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
         }
       ],
       "superseded": [
@@ -4891,6 +6271,66 @@
             "id": "claude-code",
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "مقدمة الفصل 5 والخطوة 1، وتؤكد أهمية قدرات الموارد البشرية لإدارة البيانات الرئيسية القائمة على المعايير العالمية، وتبيّن كيفية تحديد الأدوار المطلوبة مثل مدير الكتالوج ومدير نظام الكتالوج الوطني للمنتجات، ووضع الأوصاف الوظيفية، وإعداد خطة للموارد البشرية تتناول دوران الموظفين وتعدد المهارات وإدارة المعارف واحتياجات التوظيف.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "第5章引言和步骤1，强调基于全球标准的主数据管理所需的人力资源能力，并阐述如何确定目录经理和国家产品目录系统管理员等所需岗位、制定职位说明，以及编制涵盖人员流动、交叉技能培养、知识管理和招聘需求的人力资源计划。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Introducción y paso 1 del capítulo 5, que destacan la capacidad de recursos humanos para la gestión de datos maestros basada en normas mundiales y exponen cómo determinar las funciones necesarias, como Catalogue Manager y administrador del sistema NPC, definir las descripciones de puestos y elaborar un plan de recursos humanos que aborde la rotación del personal, la formación polivalente, la gestión del conocimiento y las necesidades de contratación.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Introduction et étape 1 du chapitre 5, soulignant l'importance des capacités en ressources humaines pour une gestion des données de référence fondée sur les normes mondiales et indiquant comment déterminer les rôles nécessaires, tels que Catalogue Manager et administrateur du système NPC, définir les descriptions de poste et élaborer un plan de ressources humaines couvrant la rotation du personnel, la polyvalence, la gestion des connaissances et les besoins de recrutement.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Введение и шаг 1 главы 5, где подчеркивается значение кадрового потенциала для управления основными данными на основе глобальных стандартов и излагается, как определить необходимые роли, например Catalogue Manager и системного администратора NPC, разработать должностные инструкции и подготовить кадровый план с учетом текучести кадров, освоения смежных навыков, управления знаниями и потребностей в найме.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
           },
           "drafted_at": "2026-11-14"
         }
@@ -5058,6 +6498,66 @@
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
           },
           "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "الخطوة 2 من الفصل 5 بشأن إلحاق الموظفين بأدوار الكتالوج الوطني للمنتجات المحددة من خلال إعداد الميزانيات وتحديد مصادر التمويل لاحتياجات الموارد البشرية الحالية والمستقبلية، ثم توظيف أشخاص يملكون المهارات المطلوبة وتدريبهم بعد تأمين التمويل.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "第5章步骤2，涉及为已确定的国家产品目录岗位配置人员，为当前和未来的人力资源需求编制预算并确定资金来源，在资金落实后招聘并培训具备所需技能的人员。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Paso 2 del capítulo 5 sobre la incorporación de personal a las funciones del NPC identificadas, mediante la elaboración de presupuestos y la determinación de fuentes de financiación para las necesidades actuales y futuras de recursos humanos, y la posterior contratación y formación de personas con las competencias necesarias una vez asegurada la financiación.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Étape 2 du chapitre 5 consacrée à l'intégration du personnel dans les rôles NPC identifiés, par l'élaboration de budgets et la recherche de sources de financement pour les besoins actuels et futurs en ressources humaines, puis par le recrutement et la formation de personnes possédant les compétences requises une fois le financement obtenu.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Шаг 2 главы 5 о привлечении сотрудников на определенные роли NPC путем составления бюджетов и определения источников финансирования текущих и будущих кадровых потребностей, а затем найма и обучения людей с необходимыми навыками после обеспечения финансирования.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
         }
       ],
       "superseded": [
@@ -5149,6 +6649,66 @@
             "id": "claude-code",
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "الخطوة 3 من الفصل 5 بشأن خطة لإدارة المعارف، تشمل الميزنة والتوظيف للأدوار واستراتيجيات توسيع القدرات من خلال إشراك الموردين المحليين وشركاء التنفيذ، مع مخرجات مثل هيكل تنظيمي واستراتيجية حكومية لبناء القدرات التقنية المحلية، ونقطة المراجعة في نهاية الفصل 5.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "第5章步骤3，涉及知识管理计划，包括为各岗位编制预算和招聘，以及通过动员本地供应商和实施伙伴扩大能力的战略，产出包括组织结构图和政府关于本地技术能力的战略，以及第5章章末检查点。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Paso 3 del capítulo 5 sobre un plan de gestión del conocimiento, que incluye la presupuestación y contratación para las funciones y estrategias para ampliar la capacidad mediante la participación de proveedores locales y asociados en la implementación, con productos como un organigrama y una estrategia gubernamental de capacidad técnica local, y el punto de control al final del capítulo 5.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Étape 3 du chapitre 5 consacrée à un plan de gestion des connaissances, comprenant la budgétisation et le recrutement pour les rôles et des stratégies de renforcement des capacités par la mobilisation de fournisseurs locaux et de partenaires de mise en œuvre, avec des résultats tels qu'un organigramme et une stratégie gouvernementale en matière de capacités techniques locales, et le point de contrôle de fin du chapitre 5.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Шаг 3 главы 5 о плане управления знаниями, включающем бюджетирование и наем на роли, а также стратегии расширения потенциала за счет привлечения местных поставщиков и партнеров по внедрению, с такими результатами, как организационная структура и государственная стратегия развития местного технического потенциала, и контрольная точка в конце главы 5.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
           },
           "drafted_at": "2026-11-14"
         }
@@ -5314,6 +6874,66 @@
             "id": "claude-code",
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "الفصل 6 بشأن أداة PCMT التي تستضيفها منظمة الصحة العالمية، المقرر إتاحتها في عام 2026، بوصفها خيارًا أوليًا أو مستمرًا للبلدان لإدارة كتالوجاتها الوطنية للمنتجات، مع توضيح لكتالوج عالمي يضم كتالوجات قُطرية منفصلة ونموذج مثال للوصول تُسند فيه مجموعات المستخدمين إلى فئات بصلاحيات العرض أو التعديل أو الملكية، إضافة إلى الارتباطات بين الكتالوجات وقواعد النسخ.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "第6章，介绍将于2026年推出的世卫组织托管PCMT，作为各国管理国家产品目录的初始或长期选项，展示一个包含各国独立目录的全球目录，以及一个将用户组分配到具有查看、编辑或拥有权限的类别的示例访问模式，并介绍跨目录关联和复制规则。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Capítulo 6, sobre la PCMT alojada por la OMS, que estará disponible en 2026, como opción inicial o continua para que los países gestionen sus catálogos nacionales de productos, con la ilustración de un catálogo mundial con catálogos nacionales separados y un modelo de acceso de ejemplo en el que los grupos de usuarios se asignan a categorías con permisos de visualización, edición o propiedad, además de asociaciones entre catálogos y reglas de copia.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Chapitre 6 consacré à la PCMT hébergée par l'OMS, qui sera disponible en 2026, en tant qu'option initiale ou durable pour permettre aux pays de gérer leurs catalogues nationaux de produits, illustrant un catalogue mondial avec des catalogues nationaux distincts et un exemple de modèle d'accès où les groupes d'utilisateurs sont affectés à des catégories avec des droits de consultation, de modification ou de propriété, ainsi que des associations entre catalogues et des règles de copie.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Глава 6 о PCMT, размещенной ВОЗ и ожидаемой в 2026 г., как начальном или постоянном варианте для ведения странами национальных каталогов продукции, с иллюстрацией глобального каталога с отдельными страновыми каталогами и примером модели доступа, в которой группам пользователей назначаются категории с правами просмотра, редактирования или владения, а также межкаталожными связями и правилами копирования.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
           },
           "drafted_at": "2026-11-14"
         }
@@ -5625,6 +7245,66 @@
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
           },
           "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "الفصل 7 بشأن تبادل البيانات الرئيسية للمنتجات مع مستودع عالمي مثل كتالوج المنتجات العالمي لمنظمة الصحة العالمية، ويسرد الفوائد (دقة المعلومات، والتوحيد القياسي، والحد من التكرار، وإدارة الأزمات، والمساواة في الوصول، وبناء القدرات)، ويُظهر كيف يمكن للبلدان التي تستخدم أداة PCMT التي تستضيفها المنظمة أو أدوات داخل البلد أن تتبادل البيانات الرئيسية على الصعيد العالمي (الشكل 15).",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "第7章，介绍与世卫组织全球产品目录等全球存储库共享产品主数据，列出其益处（信息准确、标准化、减少冗余、危机管理、平等获取和能力建设），并展示使用世卫组织托管PCMT或国内工具的国家如何在全球共享主数据（图15）。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Capítulo 7, sobre el intercambio de datos maestros de productos con un repositorio mundial como el Catálogo Mundial de Productos de la OMS, que enumera los beneficios (información exacta, normalización, menor redundancia, gestión de crisis, igualdad de acceso y creación de capacidad) y muestra cómo los países que usan la PCMT alojada por la OMS o herramientas nacionales pueden compartir datos maestros a escala mundial (figura 15).",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Chapitre 7 consacré au partage des données de référence des produits avec un référentiel mondial tel que le Catalogue mondial des produits de l'OMS, énumérant les avantages (exactitude des informations, normalisation, réduction des redondances, gestion des crises, égalité d'accès et renforcement des capacités) et montrant comment les pays utilisant la PCMT hébergée par l'OMS ou des outils nationaux peuvent partager leurs données de référence à l'échelle mondiale (figure 15).",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Глава 7 об обмене основными данными о продукции с глобальным репозиторием, таким как Глобальный каталог продукции ВОЗ, с перечнем преимуществ (точность информации, стандартизация, сокращение дублирования, управление кризисами, равный доступ и наращивание потенциала) и демонстрацией того, как страны, использующие PCMT, размещенную ВОЗ, или собственные инструменты, могут обмениваться основными данными на глобальном уровне (рис. 15).",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
         }
       ],
       "superseded": [
@@ -5932,6 +7612,66 @@
             "id": "claude-code",
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "الفصل 8 الذي يعرض تجارب التنفيذ في رواندا وزامبيا ونيجيريا، مرتبة حسب الأبعاد التنظيمية والمتعلقة بالبيانات والتكنولوجيا والأفراد وإدارة التغيير، ويتناول الوضع الراهن (مثل 7134 منتجًا في رواندا رُبط منها 2611 بأرقام GTIN، و6517 منتجًا في نيجيريا رُبط منها 794)، والعمليات، والتحديات، والنُّهج المعتمدة، والدروس المستفادة، مثل الكتالوجات الوطنية القائمة على PCMT ومديري الكتالوجات وربط أرقام GTIN.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "第8章，介绍卢旺达、赞比亚和尼日利亚的实施经验，按监管、数据、技术、人员和变革管理等维度展开，涵盖现状（例如卢旺达有7134种产品，其中2611种已映射到GTIN；尼日利亚有6517种产品，其中794种已映射）、流程、挑战、所采取的方法以及经验教训，如基于PCMT的国家产品目录、目录经理和GTIN映射。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Capítulo 8, con experiencias de implementación de Rwanda, Zambia y Nigeria, organizadas por las dimensiones regulatoria, de datos, de tecnología, de personas y de gestión del cambio, que abarcan la situación (p. ej., 7134 productos en Rwanda, de los que 2611 están vinculados a GTIN, y 6517 productos en Nigeria, de los que 794 están vinculados), los procesos, los retos, los enfoques adoptados y las lecciones aprendidas, como los NPC basados en PCMT, los gestores de catálogo y la vinculación con GTIN.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Chapitre 8 présentant les expériences de mise en œuvre du Rwanda, de la Zambie et du Nigéria, organisées selon les dimensions réglementaire, données, technologie, personnes et gestion du changement, couvrant la situation (par exemple 7134 produits au Rwanda dont 2611 mis en correspondance avec des GTIN, et 6517 produits au Nigéria dont 794 mis en correspondance), les processus, les difficultés, les approches adoptées et les enseignements tirés, tels que des NPC fondés sur la PCMT, des gestionnaires de catalogue et la mise en correspondance avec les GTIN.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Глава 8 с опытом внедрения в Руанде, Замбии и Нигерии, изложенным по регуляторному измерению, данным, технологиям, людям и управлению изменениями и охватывающим текущее состояние (например, 7134 продукта в Руанде, из которых 2611 сопоставлены с GTIN, и 6517 продуктов в Нигерии, из которых сопоставлены 794), процессы, проблемы, принятые подходы и извлеченные уроки, такие как NPC на основе PCMT, менеджеры каталогов и сопоставление с GTIN.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
           },
           "drafted_at": "2026-11-14"
         }
@@ -6315,6 +8055,66 @@
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
           },
           "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "قائمة مراجع تضم 17 مصدرًا مستشهدًا به، منها تعاريف Yokogawa وGartner للتحويل الرقمي والرقمنة والتحول الرقمي، ومنظمة الأمم المتحدة للتنمية الصناعية (اليونيدو)، وصفحات إرشادات SMART لمنظمة الصحة العالمية، ومجلة The Lancet Digital Health، ومبادرة المصدر المفتوح، والمعايير المفتوحة للاتحاد الدولي للاتصالات، والأصناف التجارية لـ GS1، ودليل لاختبار قبول المستخدم، وكتيّب منظمة الصحة العالمية بشأن هيكلية سلسلة الإمداد، ومبادئ التنمية الرقمية.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "参考文献列表，收录17个引用来源，包括Yokogawa和Gartner对数据数字化、数字化和数字化转型的定义、联合国工业发展组织、世卫组织SMART指南网页、《柳叶刀-数字健康》、开放源代码促进会、国际电联开放标准、GS1贸易项目、一份用户验收测试指南、世卫组织供应链架构手册以及《数字发展原则》。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Lista de referencias con 17 fuentes citadas, entre ellas las definiciones de Yokogawa y Gartner de digitización, digitalización y transformación digital, la ONUDI, páginas de las Directrices SMART de la OMS, The Lancet Digital Health, la Open Source Initiative, las normas abiertas de la UIT, los artículos comerciales de GS1, una guía de pruebas de aceptación del usuario, el manual de la OMS sobre la arquitectura de la cadena de suministro y los Principios para el Desarrollo Digital.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Liste de 17 références citées, dont les définitions de Yokogawa et de Gartner de la numérisation, de la numérisation des processus et de la transformation numérique, l'ONUDI, des pages des lignes directrices SMART de l'OMS, The Lancet Digital Health, l'Open Source Initiative, les normes ouvertes de l'UIT, les articles commerciaux de GS1, un guide sur les tests d'acceptation par les utilisateurs, le manuel de l'OMS sur l'architecture de la chaîne d'approvisionnement et les Principes pour le développement numérique.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Список литературы из 17 цитируемых источников, включая определения оцифровки, цифровизации и цифровой трансформации от Yokogawa и Gartner, ЮНИДО, страницы руководств ВОЗ SMART, The Lancet Digital Health, Open Source Initiative, открытые стандарты МСЭ, торговые единицы GS1, руководство по приемочному тестированию пользователями, руководство ВОЗ по архитектуре цепочки поставок и Принципы цифрового развития.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
         }
       ],
       "superseded": [
@@ -6478,6 +8278,66 @@
             "id": "claude-code",
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "الملاحق التي تسرد مبادئ التنمية الرقمية (الملحق 1)، وفي الملحق 2 أدوارًا تقنية وقيادية إضافية لتنفيذ الكتالوج الوطني للمنتجات، مثل مدير المشروع، ومهندس الحلول، ومحلل الأعمال، والمطوّر، وأخصائي التكامل، ومدير قواعد البيانات، وأخصائي البنية التحتية، ومدير ضمان الجودة/الاختبار، ومحلل الاختبار، ومدير النظم، ومهندس الدعم، والمستخدم المتمرس/المدرّب، مع مراحلها وأنواع وظائفها ومجموعات مهاراتها ومسؤولياتها.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "附件部分，列出《数字发展原则》（附件1），并在附件2中列出国家产品目录实施所需的其他技术和领导岗位，如项目经理、解决方案架构师、业务分析师、开发人员、集成专家、数据库管理员、基础设施专家、质量保证/测试经理、测试分析师、系统管理员、支持工程师和超级用户/培训师，并列明其阶段、职位类型、技能组合和职责。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Anexos que enumeran los Principios para el Desarrollo Digital (anexo 1) y, en el anexo 2, funciones técnicas y de liderazgo adicionales para la implementación del NPC, como gerente de proyecto, arquitecto de soluciones, analista de negocio, desarrollador, especialista en integración, administrador de bases de datos, especialista en infraestructura, gerente de control de calidad y pruebas, analista de pruebas, administrador de sistemas, ingeniero de soporte y superusuario/formador, con sus fases, tipos de puesto, competencias y responsabilidades.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Annexes énumérant les Principes pour le développement numérique (annexe 1) et, à l'annexe 2, des rôles techniques et de direction supplémentaires pour la mise en œuvre du NPC, tels que chef de projet, architecte de solutions, analyste métier, développeur, spécialiste de l'intégration, administrateur de bases de données, spécialiste des infrastructures, responsable assurance qualité/tests, analyste de tests, administrateur système, ingénieur de support et super-utilisateur/formateur, avec leurs phases, types de poste, compétences et responsabilités.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Приложения с перечнем Принципов цифрового развития (приложение 1) и, в приложении 2, дополнительных технических и руководящих ролей для внедрения NPC, таких как руководитель проекта, архитектор решений, бизнес-аналитик, разработчик, специалист по интеграции, администратор баз данных, специалист по инфраструктуре, руководитель по контролю качества и тестированию, аналитик по тестированию, системный администратор, инженер поддержки и опытный пользователь/инструктор, с указанием этапов, типов должностей, требуемых навыков и обязанностей.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
           },
           "drafted_at": "2026-11-14"
         }
@@ -7003,6 +8863,66 @@
             "id": "claude-code",
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "الصفحات التمهيدية لكتيّب التحول الرقمي لكتالوج المنتجات الصحية (منظمة الصحة العالمية، 2025)، وتتضمن أرقام الترقيم الدولي (ISBN) للنسختين الإلكترونية والمطبوعة، وشروط ترخيص CC BY-NC-SA 3.0 IGO، والاقتباس المقترح، وإخلاءات المسؤولية لمنظمة الصحة العالمية، وجهة التصميم، وجدول محتويات يسرد الشكر والتقدير والمختصرات والمسرد والمقدمة وثمانية فصول والمراجع والملاحق.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "《卫生产品目录数字化转型手册》（世卫组织，2025年）的前置部分，包括电子版和印刷版国际标准书号、CC BY-NC-SA 3.0 IGO许可条款、建议引用格式、世卫组织免责声明、设计署名，以及列出致谢、缩略语、术语表、引言、八章、参考文献和附件的目录。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Páginas preliminares del Manual de transformación digital para el catálogo de productos sanitarios (OMS, 2025), con los ISBN de las versiones electrónica e impresa, las condiciones de la licencia CC BY-NC-SA 3.0 IGO, la cita sugerida, las exenciones de responsabilidad de la OMS, los créditos de diseño y un índice que enumera los agradecimientos, las abreviaturas, el glosario, la introducción, ocho capítulos, las referencias y los anexos.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Pages liminaires du Manuel de transformation numérique pour le catalogue des produits de santé (OMS, 2025), indiquant les ISBN des versions électronique et imprimée, les conditions de la licence CC BY-NC-SA 3.0 IGO, la citation suggérée, les clauses de non-responsabilité de l'OMS, la mention de conception graphique et une table des matières énumérant les remerciements, les abréviations, le glossaire, l'introduction, huit chapitres, les références et les annexes.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Вводная часть Руководства по цифровой трансформации каталога медицинской продукции (ВОЗ, 2025 г.): номера ISBN электронной и печатной версий, условия лицензии CC BY-NC-SA 3.0 IGO, рекомендуемая форма ссылки, оговорки ВОЗ, сведения о дизайне и оглавление с перечнем слов благодарности, сокращений, глоссария, введения, восьми глав, списка литературы и приложений.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
           },
           "drafted_at": "2026-11-14"
         }

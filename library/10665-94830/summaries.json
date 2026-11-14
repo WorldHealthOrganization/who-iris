@@ -1101,8 +1101,82 @@
     {
       "block": "library/10665-94830/blocks/prose-sec-012",
       "source": "sections/sec-012-synthesis-of-the-evidence-and-preparation-of-evi.md",
-      "source_hash": "cb1ef918c729a8494b6d66816208b3a252be060a6a7c8afdb322403579202bee",
+      "source_hash": "a42132701e2916bd799d6fda6a31a6d17d09ec894130de5421dcdf4a724c494a",
       "narrative": [
+        {
+          "text": "Explains that, since few randomized trials link screening tests to treatment of cervical intraepithelial neoplasia (CIN) and report outcomes for all screened women, the WHO screen-and-treat recommendations for cervical pre-cancer rest instead on modelling built from reviews of screening test accuracy and of treatment effects. It describes searches of MEDLINE, EMBASE and an updated Cochrane review, inclusion criteria for diagnostic accuracy studies at low risk of bias, and independent screening and data abstraction by methodologists, with quality assessed through QUADAS and data pooled in Stata. A mathematical model then estimated the benefits and harms of each strategy for women who are HIV-positive or of unknown HIV status, with evidence quality graded by the GRADE approach and evidence-to-recommendation tables prepared for each recommendation.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "يوضح أنه نظراً لقلة التجارب المعشاة التي تربط اختبارات التحري بعلاج الأورام داخل الظهارة العنقية وتبلغ عن النتائج لجميع النساء اللواتي خضعن للتحري، فإن توصيات المنظمة بشأن استراتيجية التحري والعلاج للآفات السابقة للتسرطن في عنق الرحم تستند بدلاً من ذلك إلى نمذجة مبنية على استعراضات لدقة اختبارات التحري ولآثار العلاجات. ويصف عمليات البحث في قاعدتي MEDLINE وEMBASE وتحديث أحد استعراضات كوكرين، ومعايير إدراج دراسات الدقة التشخيصية المنخفضة الخطر من حيث التحيز، والفرز واستخلاص البيانات بشكل مستقل من قبل فريق المنهجية، مع تقييم الجودة بأداة QUADAS وتجميع البيانات ببرنامج Stata. ثم قدّر نموذج رياضي فوائد كل استراتيجية وأضرارها للنساء المصابات بفيروس العوز المناعي البشري أو غير المعروفة حالتهن، مع تصنيف جودة البيِّنات وفق نهج GRADE وإعداد جداول للانتقال من البيِّنات إلى التوصيات لكل توصية.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "说明由于很少有随机对照试验将筛查检测与宫颈上皮内瘤变（CIN）治疗联系起来并报告所有受筛查妇女的结局，世卫组织关于宫颈癌前病变“筛查与治疗”的建议转而依据基于筛查检测准确性综述和治疗效果综述构建的模型。该节介绍了在MEDLINE和EMBASE中的检索及对一项Cochrane综述的更新、低偏倚风险诊断准确性研究的纳入标准，以及方法学小组独立筛选和提取数据，并用QUADAS评估质量、用Stata合并数据。随后，一个数学模型估算了每种策略对艾滋病毒阳性或艾滋病毒感染状况不明妇女的益处和危害，采用GRADE方法对证据质量分级，并为每项建议编制了从证据到建议的表格。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Explica que, como pocos ensayos aleatorizados vinculan las pruebas de tamizaje con el tratamiento de la neoplasia intraepitelial cervical (NIC) e informan de los resultados de todas las mujeres tamizadas, las recomendaciones de la OMS de tamizaje y tratamiento de las lesiones precancerosas del cuello uterino se basan en cambio en modelos construidos a partir de revisiones sobre la exactitud de las pruebas de tamizaje y los efectos de los tratamientos. Describe las búsquedas en MEDLINE, EMBASE y la actualización de una revisión Cochrane, los criterios de inclusión de estudios de exactitud diagnóstica con bajo riesgo de sesgo y la selección y extracción de datos independientes por el grupo de metodología, con evaluación de la calidad mediante QUADAS y combinación de datos en Stata. Después, un modelo matemático estimó los beneficios y daños de cada estrategia para mujeres VIH-positivas o con estado serológico desconocido, la calidad de la evidencia se calificó con el método GRADE y se elaboraron tablas de la evidencia a la recomendación para cada recomendación.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Explique que, peu d'essais randomisés reliant les tests de dépistage au traitement de la néoplasie cervicale intraépithéliale (CIN) et rapportant les résultats pour toutes les femmes dépistées, les recommandations de l'OMS sur le dépistage et le traitement des lésions précancéreuses du col utérin reposent plutôt sur une modélisation fondée sur des revues de l'exactitude des tests de dépistage et des effets des traitements. Elle décrit les recherches dans MEDLINE et EMBASE et la mise à jour d'une revue Cochrane, les critères d'inclusion des études d'exactitude diagnostique à faible risque de biais, ainsi que la sélection et l'extraction indépendantes des données par le groupe méthodologique, la qualité étant évaluée avec QUADAS et les données regroupées sous Stata. Un modèle mathématique a ensuite estimé les avantages et les inconvénients de chaque stratégie pour les femmes séropositives pour le VIH ou de statut inconnu, la qualité des données probantes étant cotée selon l'approche GRADE et des tableaux de passage des données aux recommandations étant établis pour chaque recommandation.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Поясняется, что, поскольку лишь немногие рандомизированные исследования связывают скрининговые тесты с лечением цервикальной интраэпителиальной неоплазии (CIN) и сообщают об исходах для всех обследованных женщин, рекомендации ВОЗ по стратегии «скрининг и лечение» предраковых поражений шейки матки опираются на моделирование на основе обзоров точности скрининговых тестов и эффектов лечения. Описываются поиск в базах MEDLINE и EMBASE и обновление одного из Кокрановских обзоров, критерии включения исследований диагностической точности с низким риском систематической ошибки, а также независимый отбор и извлечение данных методологической группой с оценкой качества по QUADAS и объединением данных в Stata. Затем математическая модель позволила оценить пользу и вред каждой стратегии для ВИЧ-положительных женщин и женщин с неизвестным ВИЧ-статусом; качество доказательств оценивалось по методологии GRADE, а для каждой рекомендации были подготовлены таблицы перехода от доказательств к рекомендациям.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        }
+      ],
+      "superseded": [
         {
           "text": "Explains that few randomized trials link screening strategies to treatment and patient outcomes, so the evidence came mostly from separate studies of test accuracy and of outcomes after treatment. It describes the systematic reviews, pooling of data and use of GRADE to rate evidence quality. It adds that evidence-to-recommendation tables were prepared summarising benefits, harms, values, resource use and feasibility.",
           "lang": "en",
@@ -1649,10 +1723,10 @@
     {
       "block": "library/10665-94830/blocks/prose-sec-018",
       "source": "sections/sec-018-screen-and-treat-recommendations.md",
-      "source_hash": "5a16d68a2ed73469ea4ec959ba3738cf187f7df8fb9210eb3fed69a1e58f5893",
+      "source_hash": "cad31519787bd1cd26fb7d75a503d18d59fef61f03d10514060ec0a74430fca4",
       "narrative": [
         {
-          "text": "Sets out the first screen-and-treat recommendations of the WHO cervical precancer guideline, each with remarks and a summary of evidence: a strong recommendation against cold knife conization because harms such as major bleeding and premature delivery outweigh similar benefits, and a conditional preference for an HPV test over VIA where resources permit, with VIA where HPV testing is not feasible. It goes on to prefer an HPV test over cytology followed by colposcopy, while allowing either where a high-quality cytology programme already exists, citing lower resource needs and fewer visits. It explains how the HPV-test and HPV-test-then-VIA strategies decide who is treated and gives rescreening intervals: three to five years after a negative VIA or cytology, at least five years after a negative HPV test, within three years for women living with HIV, and follow-up one year after treatment. The section ends with the comparison of an HPV test followed by colposcopy versus an HPV test followed by VIA, weighing fewer missed CIN2+ cases against more overtreatment, resource demands and acceptability; the evidence-quality ratings are missing from the extracted text.",
+          "text": "Presents the screen-and-treat recommendations of the WHO guidelines on cervical pre-cancer, beginning with a strong recommendation against cold knife conization (CKC), which brings more major bleeding and premature delivery than cryotherapy or LEEP without a meaningful gain in cancer prevention. It sets screening intervals of three to five years after a negative VIA or cytology result, at least five years after a negative HPV test, within three years for women who are HIV-positive or of unknown status in high-HIV areas, and follow-up one year after treatment. Conditional recommendations favour screening with an HPV test over VIA where resources allow, and over cytology followed by colposcopy, then treating with cryotherapy or LEEP, each backed by remarks and low- or very-low-quality evidence on recurrences, cancers, deaths and overtreatment. The closing part compares an HPV test followed by colposcopy with an HPV test followed by VIA, finding fewer missed CIN2+ cases but possibly more overtreatment with colposcopy, and noting its greater resource demands and acceptability concerns.",
           "lang": "en",
           "state": "draft",
           "drafted_by": {
@@ -1661,10 +1735,10 @@
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
           },
-          "drafted_at": "2026-11-12"
+          "drafted_at": "2026-11-14"
         },
         {
-          "text": "يعرض أولى توصيات الفحص والعلاج في المبادئ التوجيهية لمنظمة الصحة العالمية بشأن الآفات السابقة لسرطان عنق الرحم، مع ملاحظات وملخص للبيِّنات لكل منها: توصية قوية بعدم استخدام الاستئصال المخروطي بالمشرط البارد لأن أضراره مثل النزف الشديد والولادة المبتسرة تفوق فوائده المماثلة، وتفضيل مشروط لاختبار فيروس الورم الحليمي البشري على الفحص البصري بحمض الخليك حيثما سمحت الموارد، مع اللجوء إلى الفحص البصري حين يتعذر اختبار الفيروس. ثم يفضّل اختبار الفيروس على الفحص الخلوي المتبوع بالتنظير المهبلي، مع السماح بأي منهما حيث يوجد برنامج فحص خلوي عالي الجودة، مستنداً إلى انخفاض الاحتياجات من الموارد وقلة الزيارات. ويشرح كيف تحدد استراتيجيتا اختبار الفيروس وحده واختبار الفيروس المتبوع بالفحص البصري من يتلقى العلاج، ويحدد فترات إعادة الفحص: من ثلاث إلى خمس سنوات بعد نتيجة سلبية للفحص البصري أو الخلوي، وخمس سنوات على الأقل بعد اختبار فيروس سلبي، وخلال ثلاث سنوات للمتعايشات مع فيروس العوز المناعي البشري، والمتابعة بعد سنة من العلاج. ويُختتم القسم بمقارنة اختبار الفيروس المتبوع بالتنظير المهبلي مع اختبار الفيروس المتبوع بالفحص البصري، موازناً بين تقليل الحالات الفائتة من الدرجة الثانية فما فوق وزيادة العلاج المفرط ومتطلبات الموارد والمقبولية؛ وتغيب تقديرات جودة البيِّنات عن النص المستخرج.",
+          "text": "يعرض توصيات التحري والعلاج الواردة في المبادئ التوجيهية للمنظمة بشأن الآفات السابقة للتسرطن في عنق الرحم، بدءاً بتوصية قوية بعدم استخدام الاستئصال المخروطي بالمشرط البارد لأنه يسبب نزفاً كبيراً وولادة مبتسرة أكثر من المعالجة بالتبريد أو الاستئصال بالعروة الكهربائية دون مكسب يُعتد به في الوقاية من السرطان. ويحدد فترات التحري بثلاث إلى خمس سنوات بعد نتيجة سلبية للفحص بالعين المجردة بعد وضع حمض الخل أو للفحص الخلوي، وخمس سنوات على الأقل بعد نتيجة سلبية لاختبار فيروس الورم الحليمي البشري، وفي غضون ثلاث سنوات للنساء المصابات بفيروس العوز المناعي البشري أو غير المعروفة حالتهن في المناطق المرتفعة الانتشار، مع متابعة بعد سنة من العلاج. وتفضّل توصيات مشروطة التحري باختبار فيروس الورم الحليمي البشري على الفحص بالعين المجردة حيثما سمحت الموارد، وعلى الفحص الخلوي المتبوع بتنظير المهبل، ثم العلاج بالتبريد أو بالعروة الكهربائية، وتدعم كلاً منها ملاحظات وبيِّنات منخفضة أو منخفضة جداً الجودة بشأن معاودة الآفات والسرطانات والوفيات والإفراط في العلاج. ويقارن الجزء الختامي بين اختبار فيروس الورم الحليمي البشري المتبوع بتنظير المهبل والاختبار نفسه المتبوع بالفحص بالعين المجردة، فيجد أن التنظير يقلل الحالات الفائتة من CIN2+ لكنه قد يزيد الإفراط في العلاج، مشيراً إلى ما يتطلبه من موارد أكبر وإلى شواغل تتعلق بمدى تقبله.",
           "lang": "ar",
           "state": "draft",
           "drafted_by": {
@@ -1673,10 +1747,10 @@
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
           },
-          "drafted_at": "2026-11-12"
+          "drafted_at": "2026-11-14"
         },
         {
-          "text": "列出世卫组织宫颈癌前病变指南中最早几项\"筛查与治疗\"建议，每项均附有说明和证据摘要：强烈建议不采用冷刀锥切术，因为其大出血和早产等危害超过了相近的获益；在资源允许时有条件地倾向于人乳头瘤病毒检测而非醋酸目视检查，无法开展该检测时则采用醋酸目视检查。随后倾向于人乳头瘤病毒检测而非细胞学加阴道镜检查，但在已有高质量细胞学项目的地方两者均可，理由是资源需求较低、就诊次数较少。说明了单独人乳头瘤病毒检测策略和检测后再行醋酸目视检查策略如何确定治疗对象，并给出复筛间隔：醋酸目视检查或细胞学阴性后三至五年，人乳头瘤病毒检测阴性后至少五年，艾滋病毒感染妇女三年内，治疗后一年随访。本节最后比较了人乳头瘤病毒检测后行阴道镜与检测后行醋酸目视检查，权衡漏诊CIN2+较少与过度治疗较多、资源需求及可接受性；提取文本中缺少证据质量评级。",
+          "text": "介绍世卫组织宫颈癌前病变指南中的“筛查与治疗”建议，首先是一项强烈建议，反对使用冷刀锥切术（CKC），因为与冷冻治疗或环形电切术（LEEP）相比，它会导致更多大出血和早产，而在预防癌症方面并无实质性益处。该节规定了筛查间隔：醋酸肉眼观察（VIA）或细胞学检查结果阴性后间隔三至五年，HPV检测阴性后至少五年，艾滋病毒阳性或在艾滋病毒高流行地区感染状况不明的妇女在三年内复查，治疗后一年随访。有条件建议在资源允许时优先采用HPV检测而非VIA进行筛查，并优先于细胞学检查后行阴道镜检查，随后采用冷冻治疗或LEEP，每项建议都附有说明以及关于复发、癌症、死亡和过度治疗的低质量或极低质量证据。结尾部分比较了HPV检测后行阴道镜检查与HPV检测后行VIA，发现阴道镜检查漏诊的CIN2+病例更少，但可能导致更多过度治疗，并指出其所需资源更多且存在可接受性方面的顾虑。",
           "lang": "zh",
           "state": "draft",
           "drafted_by": {
@@ -1685,10 +1759,10 @@
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
           },
-          "drafted_at": "2026-11-12"
+          "drafted_at": "2026-11-14"
         },
         {
-          "text": "Expone las primeras recomendaciones de cribado y tratamiento de la directriz de la OMS sobre lesiones precancerosas del cuello uterino, cada una con observaciones y un resumen de la evidencia: una recomendación firme contra la conización con bisturí frío porque daños como las hemorragias graves y el parto prematuro superan beneficios similares, y una preferencia condicional por la prueba del VPH frente a la IVAA cuando los recursos lo permiten, con IVAA donde la prueba del VPH no es viable. A continuación prefiere la prueba del VPH frente a la citología seguida de colposcopia, aunque admite cualquiera de las dos donde ya existe un programa de citología de alta calidad, aduciendo menores necesidades de recursos y menos visitas. Explica cómo las estrategias de prueba del VPH sola y de prueba del VPH seguida de IVAA determinan a quién se trata, y fija los intervalos de repetición del cribado: de tres a cinco años tras una IVAA o citología negativa, al menos cinco años tras una prueba del VPH negativa, en un plazo de tres años para las mujeres con VIH, y seguimiento al año del tratamiento. La sección termina con la comparación entre la prueba del VPH seguida de colposcopia y la seguida de IVAA, sopesando menos casos de NIC2+ no detectados frente a más sobretratamiento, exigencias de recursos y aceptabilidad; las calificaciones de la calidad de la evidencia faltan en el texto extraído.",
+          "text": "Presenta las recomendaciones de tamizaje y tratamiento de las directrices de la OMS sobre lesiones precancerosas del cuello uterino, comenzando por una recomendación firme en contra de la conización con bisturí frío (CBF), que conlleva más hemorragias graves y partos prematuros que la crioterapia o la escisión electroquirúrgica con asa (LEEP) sin un beneficio significativo en la prevención del cáncer. Establece intervalos de tamizaje de tres a cinco años tras un resultado negativo de inspección visual con ácido acético (IVAA) o citología, de al menos cinco años tras una prueba del VPH negativa, de tres años como máximo para las mujeres VIH-positivas o con estado desconocido en zonas de alta prevalencia del VIH, y un seguimiento al año del tratamiento. Las recomendaciones condicionales favorecen el tamizaje con una prueba del VPH frente a la IVAA cuando los recursos lo permiten, y frente a la citología seguida de colposcopia, con tratamiento posterior mediante crioterapia o LEEP, cada una respaldada por observaciones y evidencia de calidad baja o muy baja sobre recurrencias, cánceres, defunciones y sobretratamiento. La parte final compara una prueba del VPH seguida de colposcopia con una prueba del VPH seguida de IVAA, y concluye que con la colposcopia se pasan por alto menos casos de NIC2+ pero puede haber más sobretratamiento, señalando además sus mayores exigencias de recursos y dudas sobre su aceptabilidad.",
           "lang": "es",
           "state": "draft",
           "drafted_by": {
@@ -1697,10 +1771,10 @@
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
           },
-          "drafted_at": "2026-11-12"
+          "drafted_at": "2026-11-14"
         },
         {
-          "text": "Énonce les premières recommandations de dépistage et traitement de la ligne directrice de l'OMS sur les lésions précancéreuses du col, chacune accompagnée de remarques et d'un résumé des données : une recommandation forte contre la conisation au bistouri froid, ses inconvénients comme les hémorragies graves et l'accouchement prématuré l'emportant sur des bénéfices comparables, et une préférence conditionnelle pour le test VPH plutôt que l'IVA lorsque les ressources le permettent, l'IVA étant retenue là où le test VPH n'est pas faisable. Elle préfère ensuite le test VPH à la cytologie suivie de colposcopie, tout en admettant l'une ou l'autre là où un programme de cytologie de qualité existe déjà, en invoquant des besoins en ressources moindres et moins de consultations. Elle explique comment les stratégies « test VPH » et « test VPH suivi d'IVA » déterminent qui est traité et fixe les intervalles de redépistage : trois à cinq ans après une IVA ou une cytologie négative, au moins cinq ans après un test VPH négatif, dans les trois ans pour les femmes vivant avec le VIH, et un suivi un an après le traitement. La section se termine par la comparaison entre le test VPH suivi de colposcopie et le test VPH suivi d'IVA, mettant en balance moins de CIN2+ manquées et davantage de surtraitement, les besoins en ressources et l'acceptabilité ; les cotes de qualité des données manquent dans le texte extrait.",
+          "text": "Présente les recommandations de dépistage et de traitement des lignes directrices de l'OMS sur les lésions précancéreuses du col utérin, en commençant par une recommandation forte contre la conisation au bistouri à froid, qui entraîne davantage d'hémorragies graves et d'accouchements prématurés que la cryothérapie ou la RAD (résection à l'anse diathermique) sans gain notable pour la prévention du cancer. Elle fixe des intervalles de dépistage de trois à cinq ans après un résultat négatif à l'IVA ou à la cytologie, d'au moins cinq ans après un test HPV négatif, de trois ans au plus pour les femmes séropositives pour le VIH ou de statut inconnu dans les zones à forte prévalence du VIH, et un suivi un an après le traitement. Des recommandations conditionnelles privilégient le dépistage par test HPV plutôt que par IVA lorsque les ressources le permettent, et plutôt que par cytologie suivie de colposcopie, avec traitement par cryothérapie ou RAD, chacune étant étayée par des remarques et des données de qualité faible ou très faible sur les récidives, les cancers, les décès et le surtraitement. La dernière partie compare un test HPV suivi d'une colposcopie à un test HPV suivi d'une IVA, constatant que la colposcopie laisse échapper moins de cas de CIN2+ mais peut entraîner davantage de surtraitement, et relevant ses besoins accrus en ressources et des réserves quant à son acceptabilité.",
           "lang": "fr",
           "state": "draft",
           "drafted_by": {
@@ -1709,10 +1783,10 @@
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
           },
-          "drafted_at": "2026-11-12"
+          "drafted_at": "2026-11-14"
         },
         {
-          "text": "Излагаются первые рекомендации «скрининг и лечение» руководства ВОЗ по предраковым поражениям шейки матки, каждая с примечаниями и кратким обзором данных: строгая рекомендация против холодноножевой конизации, поскольку такой вред, как сильные кровотечения и преждевременные роды, перевешивает сопоставимую пользу, и условное предпочтение теста на ВПЧ визуальному осмотру с уксусной кислотой при наличии ресурсов, а при невозможности тестирования на ВПЧ — визуальному осмотру. Далее тест на ВПЧ предпочитается цитологии с последующей кольпоскопией, хотя там, где уже есть качественная цитологическая программа, допускается любой из вариантов, с учётом меньших потребностей в ресурсах и меньшего числа визитов. Объясняется, как стратегии «тест на ВПЧ» и «тест на ВПЧ с последующим визуальным осмотром» определяют, кого лечить, и приводятся интервалы повторного скрининга: три–пять лет после отрицательного визуального осмотра или цитологии, не менее пяти лет после отрицательного теста на ВПЧ, в течение трёх лет для женщин с ВИЧ и контроль через год после лечения. Раздел завершается сравнением теста на ВПЧ с последующей кольпоскопией и теста на ВПЧ с последующим визуальным осмотром, в котором меньшее число пропущенных случаев CIN2+ соотносится с большим избыточным лечением, потребностями в ресурсах и приемлемостью; оценки качества данных в извлечённом тексте отсутствуют.",
+          "text": "Излагаются рекомендации по стратегии «скрининг и лечение» из руководства ВОЗ по предраковым поражениям шейки матки, начиная с настоятельной рекомендации не применять холодноножевую конизацию, которая по сравнению с криотерапией или петлевой электроэксцизией (LEEP) чаще вызывает сильные кровотечения и преждевременные роды без существенного выигрыша в профилактике рака. Устанавливаются интервалы скрининга: три–пять лет после отрицательного результата визуального осмотра с уксусной кислотой (VIA) или цитологии, не менее пяти лет после отрицательного теста на ВПЧ, не более трёх лет для ВИЧ-положительных женщин и женщин с неизвестным статусом в районах с высокой распространённостью ВИЧ, а также контрольное обследование через год после лечения. Условные рекомендации отдают предпочтение скринингу с помощью теста на ВПЧ перед VIA, если позволяют ресурсы, и перед цитологией с последующей кольпоскопией, с последующим лечением криотерапией или LEEP; каждая сопровождается примечаниями и доказательствами низкого или очень низкого качества о рецидивах, случаях рака, смертях и избыточном лечении. В заключительной части тест на ВПЧ с последующей кольпоскопией сравнивается с тестом на ВПЧ с последующим VIA: при кольпоскопии пропускается меньше случаев CIN2+, но возможно больше избыточного лечения; отмечаются также её более высокие ресурсные потребности и сомнения в её приемлемости.",
           "lang": "ru",
           "state": "draft",
           "drafted_by": {
@@ -1721,7 +1795,7 @@
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
           },
-          "drafted_at": "2026-11-12"
+          "drafted_at": "2026-11-14"
         }
       ],
       "superseded": [
@@ -1796,6 +1870,78 @@
             "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
           },
           "drafted_at": "2026-11-11"
+        },
+        {
+          "text": "Sets out the first screen-and-treat recommendations of the WHO cervical precancer guideline, each with remarks and a summary of evidence: a strong recommendation against cold knife conization because harms such as major bleeding and premature delivery outweigh similar benefits, and a conditional preference for an HPV test over VIA where resources permit, with VIA where HPV testing is not feasible. It goes on to prefer an HPV test over cytology followed by colposcopy, while allowing either where a high-quality cytology programme already exists, citing lower resource needs and fewer visits. It explains how the HPV-test and HPV-test-then-VIA strategies decide who is treated and gives rescreening intervals: three to five years after a negative VIA or cytology, at least five years after a negative HPV test, within three years for women living with HIV, and follow-up one year after treatment. The section ends with the comparison of an HPV test followed by colposcopy versus an HPV test followed by VIA, weighing fewer missed CIN2+ cases against more overtreatment, resource demands and acceptability; the evidence-quality ratings are missing from the extracted text.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-12"
+        },
+        {
+          "text": "يعرض أولى توصيات الفحص والعلاج في المبادئ التوجيهية لمنظمة الصحة العالمية بشأن الآفات السابقة لسرطان عنق الرحم، مع ملاحظات وملخص للبيِّنات لكل منها: توصية قوية بعدم استخدام الاستئصال المخروطي بالمشرط البارد لأن أضراره مثل النزف الشديد والولادة المبتسرة تفوق فوائده المماثلة، وتفضيل مشروط لاختبار فيروس الورم الحليمي البشري على الفحص البصري بحمض الخليك حيثما سمحت الموارد، مع اللجوء إلى الفحص البصري حين يتعذر اختبار الفيروس. ثم يفضّل اختبار الفيروس على الفحص الخلوي المتبوع بالتنظير المهبلي، مع السماح بأي منهما حيث يوجد برنامج فحص خلوي عالي الجودة، مستنداً إلى انخفاض الاحتياجات من الموارد وقلة الزيارات. ويشرح كيف تحدد استراتيجيتا اختبار الفيروس وحده واختبار الفيروس المتبوع بالفحص البصري من يتلقى العلاج، ويحدد فترات إعادة الفحص: من ثلاث إلى خمس سنوات بعد نتيجة سلبية للفحص البصري أو الخلوي، وخمس سنوات على الأقل بعد اختبار فيروس سلبي، وخلال ثلاث سنوات للمتعايشات مع فيروس العوز المناعي البشري، والمتابعة بعد سنة من العلاج. ويُختتم القسم بمقارنة اختبار الفيروس المتبوع بالتنظير المهبلي مع اختبار الفيروس المتبوع بالفحص البصري، موازناً بين تقليل الحالات الفائتة من الدرجة الثانية فما فوق وزيادة العلاج المفرط ومتطلبات الموارد والمقبولية؛ وتغيب تقديرات جودة البيِّنات عن النص المستخرج.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-12"
+        },
+        {
+          "text": "列出世卫组织宫颈癌前病变指南中最早几项\"筛查与治疗\"建议，每项均附有说明和证据摘要：强烈建议不采用冷刀锥切术，因为其大出血和早产等危害超过了相近的获益；在资源允许时有条件地倾向于人乳头瘤病毒检测而非醋酸目视检查，无法开展该检测时则采用醋酸目视检查。随后倾向于人乳头瘤病毒检测而非细胞学加阴道镜检查，但在已有高质量细胞学项目的地方两者均可，理由是资源需求较低、就诊次数较少。说明了单独人乳头瘤病毒检测策略和检测后再行醋酸目视检查策略如何确定治疗对象，并给出复筛间隔：醋酸目视检查或细胞学阴性后三至五年，人乳头瘤病毒检测阴性后至少五年，艾滋病毒感染妇女三年内，治疗后一年随访。本节最后比较了人乳头瘤病毒检测后行阴道镜与检测后行醋酸目视检查，权衡漏诊CIN2+较少与过度治疗较多、资源需求及可接受性；提取文本中缺少证据质量评级。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-12"
+        },
+        {
+          "text": "Expone las primeras recomendaciones de cribado y tratamiento de la directriz de la OMS sobre lesiones precancerosas del cuello uterino, cada una con observaciones y un resumen de la evidencia: una recomendación firme contra la conización con bisturí frío porque daños como las hemorragias graves y el parto prematuro superan beneficios similares, y una preferencia condicional por la prueba del VPH frente a la IVAA cuando los recursos lo permiten, con IVAA donde la prueba del VPH no es viable. A continuación prefiere la prueba del VPH frente a la citología seguida de colposcopia, aunque admite cualquiera de las dos donde ya existe un programa de citología de alta calidad, aduciendo menores necesidades de recursos y menos visitas. Explica cómo las estrategias de prueba del VPH sola y de prueba del VPH seguida de IVAA determinan a quién se trata, y fija los intervalos de repetición del cribado: de tres a cinco años tras una IVAA o citología negativa, al menos cinco años tras una prueba del VPH negativa, en un plazo de tres años para las mujeres con VIH, y seguimiento al año del tratamiento. La sección termina con la comparación entre la prueba del VPH seguida de colposcopia y la seguida de IVAA, sopesando menos casos de NIC2+ no detectados frente a más sobretratamiento, exigencias de recursos y aceptabilidad; las calificaciones de la calidad de la evidencia faltan en el texto extraído.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-12"
+        },
+        {
+          "text": "Énonce les premières recommandations de dépistage et traitement de la ligne directrice de l'OMS sur les lésions précancéreuses du col, chacune accompagnée de remarques et d'un résumé des données : une recommandation forte contre la conisation au bistouri froid, ses inconvénients comme les hémorragies graves et l'accouchement prématuré l'emportant sur des bénéfices comparables, et une préférence conditionnelle pour le test VPH plutôt que l'IVA lorsque les ressources le permettent, l'IVA étant retenue là où le test VPH n'est pas faisable. Elle préfère ensuite le test VPH à la cytologie suivie de colposcopie, tout en admettant l'une ou l'autre là où un programme de cytologie de qualité existe déjà, en invoquant des besoins en ressources moindres et moins de consultations. Elle explique comment les stratégies « test VPH » et « test VPH suivi d'IVA » déterminent qui est traité et fixe les intervalles de redépistage : trois à cinq ans après une IVA ou une cytologie négative, au moins cinq ans après un test VPH négatif, dans les trois ans pour les femmes vivant avec le VIH, et un suivi un an après le traitement. La section se termine par la comparaison entre le test VPH suivi de colposcopie et le test VPH suivi d'IVA, mettant en balance moins de CIN2+ manquées et davantage de surtraitement, les besoins en ressources et l'acceptabilité ; les cotes de qualité des données manquent dans le texte extrait.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-12"
+        },
+        {
+          "text": "Излагаются первые рекомендации «скрининг и лечение» руководства ВОЗ по предраковым поражениям шейки матки, каждая с примечаниями и кратким обзором данных: строгая рекомендация против холодноножевой конизации, поскольку такой вред, как сильные кровотечения и преждевременные роды, перевешивает сопоставимую пользу, и условное предпочтение теста на ВПЧ визуальному осмотру с уксусной кислотой при наличии ресурсов, а при невозможности тестирования на ВПЧ — визуальному осмотру. Далее тест на ВПЧ предпочитается цитологии с последующей кольпоскопией, хотя там, где уже есть качественная цитологическая программа, допускается любой из вариантов, с учётом меньших потребностей в ресурсах и меньшего числа визитов. Объясняется, как стратегии «тест на ВПЧ» и «тест на ВПЧ с последующим визуальным осмотром» определяют, кого лечить, и приводятся интервалы повторного скрининга: три–пять лет после отрицательного визуального осмотра или цитологии, не менее пяти лет после отрицательного теста на ВПЧ, в течение трёх лет для женщин с ВИЧ и контроль через год после лечения. Раздел завершается сравнением теста на ВПЧ с последующей кольпоскопией и теста на ВПЧ с последующим визуальным осмотром, в котором меньшее число пропущенных случаев CIN2+ соотносится с большим избыточным лечением, потребностями в ресурсах и приемлемостью; оценки качества данных в извлечённом тексте отсутствуют.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-12"
         }
       ]
     },
