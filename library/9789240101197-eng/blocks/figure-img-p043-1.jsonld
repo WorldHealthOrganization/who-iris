@@ -18,6 +18,7 @@
   "narrative": [
     {
       "text": "A small thumbnail of a target health supply chain architecture diagram, shown in the 'Year 3 and 4 – Target architecture maturity to next level' cell of Fig. 21, 'Example of outputs from this chapter', in the Defining the DHSC architecture chapter. The diagram is arranged in labelled boxes: Shared services with foundational components such as Facility Registry and Product Registry; Data services with Analytics (BI reports, Data warehouse) and Traceability (Track and Trace, Product Verification); an Interoperability layer of enabling components such as Authentication, Encryption, Orchestration, Transformation, Translation and Validation; and Health supply chain systems including Forecasting and Planning, Order Management, Warehouse Management, Cost Management, Procurement, Supplier and Contract Management, Transportation Management and Dispensing. To the right, Digital ecosystem and External systems boxes list items such as Quality systems, Health management information systems, Regulatory systems, Finance and insurance systems, Global platform, Manufacturer systems and Data repositories. At this size the labels are only partly legible.",
+      "lang": "en",
       "state": "draft",
       "drafted_by": {
         "kind": "agent",
@@ -25,8 +26,7 @@
         "model": "not-disclosed",
         "session": "https://claude.ai/code/session_013WbQekVypi9A6YQbLDXMmJ"
       },
-      "drafted_at": "2026-10-01",
-      "lang": "en"
+      "drafted_at": "2026-10-01"
     },
     {
       "text": "Petite vignette d'un diagramme d'architecture cible de chaîne d'approvisionnement sanitaire, présentée dans la cellule « Années 3 et 4 – Faire progresser la maturité de l'architecture cible au niveau supérieur » (Year 3 and 4 – Target architecture maturity to next level) de la Fig. 21, « Exemple de résultats issus de ce chapitre » (Example of outputs from this chapter), au chapitre consacré à la définition de l'architecture de la chaîne d'approvisionnement sanitaire numérique (DHSC). Le diagramme est organisé en boîtes intitulées : Services partagés (Shared services) avec des composants fondamentaux tels que le Registre des établissements (Facility Registry) et le Registre des produits (Product Registry) ; Services de données (Data services) avec l'Analytique (Analytics : rapports décisionnels BI, entrepôt de données) et la Traçabilité (Traceability : suivi et traçabilité, vérification des produits) ; une couche d'Interopérabilité (Interoperability layer) regroupant des composants habilitants tels que l'Authentification, le Chiffrement, l'Orchestration, la Transformation, la Traduction et la Validation ; et les Systèmes de chaîne d'approvisionnement sanitaire (Health supply chain systems) comprenant la Prévision et la planification, la Gestion des commandes, la Gestion d'entrepôt, la Gestion des coûts, les Achats, la Gestion des fournisseurs et des contrats, la Gestion des transports et la Dispensation. À droite, les boîtes Écosystème numérique (Digital ecosystem) et Systèmes externes (External systems) énumèrent notamment les systèmes de qualité, les systèmes d'information de gestion sanitaire, les systèmes réglementaires, les systèmes financiers et d'assurance, la plateforme mondiale, les systèmes des fabricants et les référentiels de données. À cette échelle, les libellés ne sont que partiellement lisibles.",
@@ -89,7 +89,7 @@
       "lang": "zh"
     }
   ],
-  "derivedFrom": "library/9789240101197-eng/sections/page-043",
+  "derivedFrom": "library/9789240101197-eng/sections/sec-017",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/9789240101197-eng",
   "provenance": "ingested"
 }

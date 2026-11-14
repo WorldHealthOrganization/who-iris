@@ -368,6 +368,219 @@
         ],
         "saw": "Fig 9, five supply chain actors, each system holding a different product code for the same product, with broken links between them",
         "draft": "Fig 9, 'Inconsistent use of standardized product nomenclature across the supply chain'. A dashed arrow marks the physical flow of health products from manufacturers through the central warehouse, health facilities and community health workers to patients. Below, each holds the same product under a different code: product code 123123 at the manufacturer, A1232 in mSupply, P44545 in eLMIS and AM545 on paper forms, joined by broken chain-link icons."
+      },
+      "vfig-p026": {
+        "role": "figure",
+        "shows": [
+          "10"
+        ],
+        "saw": "Fig 10, a table of example chapter outputs under a 'Progress check' box",
+        "draft": "Fig 10, 'Example of outputs from this chapter'. A table whose rows are the DHSC vision (consistent and timely access to quality medicines through a seamless, technology-enabled supply chain), three strategic goals (system-driven processes, interoperability, traceability of all health products), six strategic objectives with targets such as automating 80% of central warehouse operations, and a four-year strategic roadmap from digitalizing the central warehouse in year 1 to batch traceability in year 4.",
+        "inspected_by": {
+          "kind": "agent",
+          "id": "claude",
+          "model": "not-disclosed",
+          "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+        },
+        "inspected_at": "2026-11-14"
+      },
+      "vfig-p029": {
+        "role": "figure",
+        "shows": [
+          "11"
+        ],
+        "saw": "Fig 11, a supply chain flow from manufacturing to individuals with country and global visibility arcs",
+        "draft": "Fig 11, 'Health supply chain end-to-end visibility and traceability'. Product flows from manufacturing and shipping through customs, central warehouse receiving and inventory management, distribution, regional warehouse replenishment and health facility dispensing to individuals, with forecasting and planning, supplier and contract management, procurement and order management above. Arcs mark end-to-end visibility at country and global level, and arrows below mark track and trace at national and global level.",
+        "inspected_by": {
+          "kind": "agent",
+          "id": "claude",
+          "model": "not-disclosed",
+          "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+        },
+        "inspected_at": "2026-11-14"
+      },
+      "vfig-p031": {
+        "role": "figure",
+        "shows": [
+          "12"
+        ],
+        "saw": "Fig 12, a five-column maturity table, levels 1 to 5 of SCISMM",
+        "draft": "Fig 12, 'SCISMM maturity levels for HSCISs'. Five levels of the supply chain information system maturity model, each with its characteristics and an example: level 1 reporting-based (manual, paper or stand-alone tools), level 2 transactional (siloed), level 3 advanced digitalization (integrated), level 4 end-to-end visibility (exchanged) and level 5 digital ecosystem (collaborated). Reproduced by permission from Digital Square.",
+        "inspected_by": {
+          "kind": "agent",
+          "id": "claude",
+          "model": "not-disclosed",
+          "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+        },
+        "inspected_at": "2026-11-14"
+      },
+      "vfig-p033": {
+        "role": "figure",
+        "shows": [
+          "13"
+        ],
+        "saw": "Fig 13, the DIIG enterprise architecture: shared services, data sources, data services, interoperability layer, applications",
+        "draft": "Fig 13, 'DIIG digital health enterprise architecture framework'. Within the enterprise, a digital health platform holds shared services (business domain and registry services such as terminology, client, facility, product and health worker registries), data sources (institution-based and population-based) and data services (analytics, dashboards, repositories), joined by an interoperability layer of enabling components. Point-of-service applications below are reused across programmes or used for one use case only; external non-health systems sit to the right; a legend marks investment types. Adapted from the 2020 WHO Digital Implementation Investment Guide.",
+        "inspected_by": {
+          "kind": "agent",
+          "id": "claude",
+          "model": "not-disclosed",
+          "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+        },
+        "inspected_at": "2026-11-14"
+      },
+      "vfig-p036": {
+        "role": "figure",
+        "shows": [
+          "15"
+        ],
+        "saw": "Fig 15, a layered architecture block diagram for SCISMM level 3 to 4",
+        "draft": "Fig 15, 'Maturity-based architecture: moving from SCISMM Level 3 to Level 4'. The digital health supply chain enterprise has shared services (facility, product and supplier registries) and data services (supply chain reports, data warehouse, track and trace, product verification) above an interoperability layer (authentication, encryption, transformation, orchestration, validation, translation), which connects eight health supply chain information systems: forecasting and planning, order, warehouse and cold chain management, procurement, supplier and contract management, transportation management and dispensing.",
+        "inspected_by": {
+          "kind": "agent",
+          "id": "claude",
+          "model": "not-disclosed",
+          "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+        },
+        "inspected_at": "2026-11-14"
+      },
+      "vfig-p037": {
+        "role": "figure",
+        "shows": [
+          "16"
+        ],
+        "saw": "Fig 16, the same layered diagram for level 4 to 5, adding digital ecosystems and external systems",
+        "draft": "Fig 16, 'Maturity-based architecture: moving from SCISMM Level 4 to Level 5'. The level-4 architecture of Fig 15 with analytics and traceability data services, plus a digital ecosystem (quality, health management information, regulatory and finance systems) and external systems (global platforms, manufacturer systems, data repositories) joined through the interoperability layer.",
+        "inspected_by": {
+          "kind": "agent",
+          "id": "claude",
+          "model": "not-disclosed",
+          "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+        },
+        "inspected_at": "2026-11-14"
+      },
+      "vfig-p038": {
+        "role": "figure",
+        "shows": [
+          "17"
+        ],
+        "saw": "Fig 17, the layered architecture with one block of supply chain systems",
+        "draft": "Fig 17, 'Architecture based on supply chain design: centralized management'. Shared and data services, a digital ecosystem and external systems around an interoperability layer that serves a single set of eight health supply chain information systems managed centrally.",
+        "inspected_by": {
+          "kind": "agent",
+          "id": "claude",
+          "model": "not-disclosed",
+          "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+        },
+        "inspected_at": "2026-11-14"
+      },
+      "vfig-p039": {
+        "role": "figure",
+        "shows": [
+          "18"
+        ],
+        "saw": "Fig 18, the layered architecture with the supply chain systems split into national and facility blocks",
+        "draft": "Fig 18, 'Architecture based on supply chain design: decentralized management (option A)'. The same services and interoperability layer, with the health supply chain information systems split in two: at national level forecasting and planning, procurement, supplier and contract, transportation, warehouse and cold chain management; at facility level order management, dispensing, inventory and cold chain management.",
+        "inspected_by": {
+          "kind": "agent",
+          "id": "claude",
+          "model": "not-disclosed",
+          "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+        },
+        "inspected_at": "2026-11-14"
+      },
+      "vfig-p043": {
+        "role": "figure",
+        "shows": [
+          "21"
+        ],
+        "saw": "Fig 21, an outputs table extending Fig 10 with architecture, implementation roadmap and outcomes rows",
+        "draft": "Fig 21, 'Example of outputs from this chapter'. The vision, goals, objectives and roadmap of Fig 10 (greyed), with three new rows: the DHSC target architecture for years 1–2 and years 3–4, an implementation roadmap (enhance the warehouse management system and integrate it with the national product catalogue, barcode scanning, an interoperability mediator, integration of HSCISs, data models and a data warehouse, aggregated analytics), and outcomes such as WMS rolled out to 40% of facilities and the mediator deployed with 30% of integrations done.",
+        "inspected_by": {
+          "kind": "agent",
+          "id": "claude",
+          "model": "not-disclosed",
+          "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+        },
+        "inspected_at": "2026-11-14"
+      },
+      "vfig-p045": {
+        "role": "figure",
+        "shows": [
+          "22"
+        ],
+        "saw": "Fig 22, a block of seven coloured building-block labels",
+        "draft": "Fig 22, 'Building blocks of digital health and DHSC implementation'. Leadership and governance spans the top; below it strategy and investment; services and applications; standards and interoperability; infrastructure; legislation, policy and compliance; and workforce. Adapted from the 2012 WHO–ITU National eHealth Strategy Toolkit.",
+        "inspected_by": {
+          "kind": "agent",
+          "id": "claude",
+          "model": "not-disclosed",
+          "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+        },
+        "inspected_at": "2026-11-14"
+      },
+      "vfig-p059": {
+        "role": "figure",
+        "shows": [
+          "26",
+          "27"
+        ],
+        "saw": "Figs 26 and 27, Ethiopia's current and future-state supply chain systems as architecture diagrams with named software",
+        "draft": "Figs 26 and 27, current-state (March 2024) and future-state supply chain systems in Ethiopia. Current state: an OpenHIM interoperability layer, a master health facility registry, a national product catalogue under development and terminology services, DHIS2 and EMR, and supply chain systems including VITAS, FANOS, DAGU, eLMIS, eAPTs and eRIS, with eTrade and eCustom as external systems; a legend colours each by its state. Future state: the layered architecture with an ERP at national level, DAGU, eAPTs and mBrana at facility level, a product directory service, track and trace and product verification, and GFPVAN, manufacturers, eTrade and eCustom as external systems.",
+        "inspected_by": {
+          "kind": "agent",
+          "id": "claude",
+          "model": "not-disclosed",
+          "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+        },
+        "inspected_at": "2026-11-14"
+      },
+      "vfig-p061": {
+        "role": "figure",
+        "shows": [
+          "28",
+          "29"
+        ],
+        "saw": "Figs 28 and 29, Malawi's current and future-state supply chain systems",
+        "draft": "Figs 28 and 29, current-state (December 2023) and future-state supply chain systems in Malawi. Current state: OpenHIM, a master health facility registry, national product catalogue and terminology services, DHIS2, QAT and QuanTB for forecasting, OpenLMIS for orders, Navision for warehouse and procurement, eHIN for dispensing, cStock for inventory, GFPVAN outside. Future state: a supplier registry, supply chain reports, a data warehouse, track and trace and product verification are added; E-GP for procurement and contracts, a new transportation system, OpenLMIS and cStock at facility level, and parallel supply chains among external systems.",
+        "inspected_by": {
+          "kind": "agent",
+          "id": "claude",
+          "model": "not-disclosed",
+          "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+        },
+        "inspected_at": "2026-11-14"
+      },
+      "vfig-p062": {
+        "role": "figure",
+        "shows": [
+          "30"
+        ],
+        "saw": "Fig 30, a 3-D layered diagram of Malawi's future-state architecture",
+        "draft": "Fig 30, 'Visualization of future-state architecture from Malawi's SCSA'. Layers from top: analytics and business intelligence (data warehouse, dashboards, reports, traceability, returns and recalls, verification); an OpenHIM interoperability layer; national supply chain information systems (procurement, forecasting and planning, supplier and contract, warehouse and transportation management) beside facility systems (OpenLMIS, cStock, eHIN); a second interoperability layer; and regulatory and foundational components (product item registration, product registry, facility registry, supplier registry, terminology). A global GFPVAN and manufacturers link from the left. Adapted from Malawi's 2022 Supply Chain Systems Architecture.",
+        "inspected_by": {
+          "kind": "agent",
+          "id": "claude",
+          "model": "not-disclosed",
+          "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+        },
+        "inspected_at": "2026-11-14"
+      },
+      "vfig-p064": {
+        "role": "figure",
+        "shows": [
+          "31",
+          "32"
+        ],
+        "saw": "Figs 31 and 32, Rwanda's current and future-state supply chain systems",
+        "draft": "Figs 31 and 32, current-state (February 2022) and future-state supply chain systems in Rwanda. Current state: OpenHIM, a master health facility registry, national product catalogue and terminology services, DHIS2, QAT for forecasting, eLMIS for orders and inventory, SAGE for warehouse and procurement, EMR for dispensing. Future state: an ERP for supplier and contract, order, warehouse, inventory and procurement management, a new transportation system, QAT, EMR, a supplier registry, supply chain reports, a data warehouse, track and trace and product verification, with GPFVAN, manufacturers and BUFMAR among external systems.",
+        "inspected_by": {
+          "kind": "agent",
+          "id": "claude",
+          "model": "not-disclosed",
+          "session": "https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR"
+        },
+        "inspected_at": "2026-11-14"
       }
     },
     "9789240116191-eng": {
