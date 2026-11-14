@@ -21,6 +21,7 @@
       "narrative": [
         {
           "text": "A small icon made of coloured squares (orange, green, blue, red) placed at the corner of the Guiding principles box on chapter opening pages; it carries no text of its own.",
+          "lang": "en",
           "state": "draft",
           "drafted_by": {
             "kind": "agent",
@@ -28,8 +29,7 @@
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_013WbQekVypi9A6YQbLDXMmJ"
           },
-          "drafted_at": "2026-10-01",
-          "lang": "en"
+          "drafted_at": "2026-10-01"
         },
         {
           "text": "Petite icône composée de carrés colorés (orange, vert, bleu, rouge) placée au coin de l'encadré « Principes directeurs » (Guiding principles) sur les pages d'ouverture de chapitre ; elle ne comporte aucun texte propre.",
@@ -129,6 +129,7 @@
       "narrative": [
         {
           "text": "A small thumbnail of a target health supply chain architecture diagram, shown in the 'Year 3 and 4 – Target architecture maturity to next level' cell of Fig. 21, 'Example of outputs from this chapter', in the Defining the DHSC architecture chapter. The diagram is arranged in labelled boxes: Shared services with foundational components such as Facility Registry and Product Registry; Data services with Analytics (BI reports, Data warehouse) and Traceability (Track and Trace, Product Verification); an Interoperability layer of enabling components such as Authentication, Encryption, Orchestration, Transformation, Translation and Validation; and Health supply chain systems including Forecasting and Planning, Order Management, Warehouse Management, Cost Management, Procurement, Supplier and Contract Management, Transportation Management and Dispensing. To the right, Digital ecosystem and External systems boxes list items such as Quality systems, Health management information systems, Regulatory systems, Finance and insurance systems, Global platform, Manufacturer systems and Data repositories. At this size the labels are only partly legible.",
+          "lang": "en",
           "state": "draft",
           "drafted_by": {
             "kind": "agent",
@@ -136,8 +137,7 @@
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_013WbQekVypi9A6YQbLDXMmJ"
           },
-          "drafted_at": "2026-10-01",
-          "lang": "en"
+          "drafted_at": "2026-10-01"
         },
         {
           "text": "Petite vignette d'un diagramme d'architecture cible de chaîne d'approvisionnement sanitaire, présentée dans la cellule « Années 3 et 4 – Faire progresser la maturité de l'architecture cible au niveau supérieur » (Year 3 and 4 – Target architecture maturity to next level) de la Fig. 21, « Exemple de résultats issus de ce chapitre » (Example of outputs from this chapter), au chapitre consacré à la définition de l'architecture de la chaîne d'approvisionnement sanitaire numérique (DHSC). Le diagramme est organisé en boîtes intitulées : Services partagés (Shared services) avec des composants fondamentaux tels que le Registre des établissements (Facility Registry) et le Registre des produits (Product Registry) ; Services de données (Data services) avec l'Analytique (Analytics : rapports décisionnels BI, entrepôt de données) et la Traçabilité (Traceability : suivi et traçabilité, vérification des produits) ; une couche d'Interopérabilité (Interoperability layer) regroupant des composants habilitants tels que l'Authentification, le Chiffrement, l'Orchestration, la Transformation, la Traduction et la Validation ; et les Systèmes de chaîne d'approvisionnement sanitaire (Health supply chain systems) comprenant la Prévision et la planification, la Gestion des commandes, la Gestion d'entrepôt, la Gestion des coûts, les Achats, la Gestion des fournisseurs et des contrats, la Gestion des transports et la Dispensation. À droite, les boîtes Écosystème numérique (Digital ecosystem) et Systèmes externes (External systems) énumèrent notamment les systèmes de qualité, les systèmes d'information de gestion sanitaire, les systèmes réglementaires, les systèmes financiers et d'assurance, la plateforme mondiale, les systèmes des fabricants et les référentiels de données. À cette échelle, les libellés ne sont que partiellement lisibles.",
@@ -220,6 +220,7 @@
       "narrative": [
         {
           "text": "A dark blue database icon (three stacked disks) labelling the Data Warehouse component in Fig. 30, Malawi's future-state architecture; the adjacent text label carries the meaning.",
+          "lang": "en",
           "state": "draft",
           "drafted_by": {
             "kind": "agent",
@@ -227,8 +228,7 @@
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_013WbQekVypi9A6YQbLDXMmJ"
           },
-          "drafted_at": "2026-10-01",
-          "lang": "en"
+          "drafted_at": "2026-10-01"
         },
         {
           "text": "Icône de base de données bleu foncé (trois disques empilés) désignant le composant Entrepôt de données (Data Warehouse) dans la Fig. 30, architecture cible du Malawi ; le libellé textuel adjacent en porte la signification.",
@@ -311,6 +311,7 @@
       "narrative": [
         {
           "text": "A light blue gauge icon used beside the Dashboards label in Fig. 30, Malawi's future-state architecture.",
+          "lang": "en",
           "state": "draft",
           "drafted_by": {
             "kind": "agent",
@@ -318,8 +319,7 @@
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_013WbQekVypi9A6YQbLDXMmJ"
           },
-          "drafted_at": "2026-10-01",
-          "lang": "en"
+          "drafted_at": "2026-10-01"
         },
         {
           "text": "Icône de cadran bleu clair placée à côté du libellé Tableaux de bord (Dashboards) dans la Fig. 30, architecture cible du Malawi.",
@@ -402,6 +402,7 @@
       "narrative": [
         {
           "text": "A blurred grey shadow of the word 'Manufacturers', a drop-shadow effect behind that label in Fig. 30; it adds no content.",
+          "lang": "en",
           "state": "draft",
           "drafted_by": {
             "kind": "agent",
@@ -409,8 +410,7 @@
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_013WbQekVypi9A6YQbLDXMmJ"
           },
-          "drafted_at": "2026-10-01",
-          "lang": "en"
+          "drafted_at": "2026-10-01"
         },
         {
           "text": "Ombre grise floue du mot « Manufacturers » (Fabricants), effet d'ombre portée derrière ce libellé dans la Fig. 30 ; elle n'ajoute aucun contenu.",
@@ -493,6 +493,7 @@
       "narrative": [
         {
           "text": "A light blue icon of a bar chart on a presentation board, used beside the Reports label in Fig. 30, Malawi's future-state architecture.",
+          "lang": "en",
           "state": "draft",
           "drafted_by": {
             "kind": "agent",
@@ -500,8 +501,7 @@
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_013WbQekVypi9A6YQbLDXMmJ"
           },
-          "drafted_at": "2026-10-01",
-          "lang": "en"
+          "drafted_at": "2026-10-01"
         },
         {
           "text": "Icône bleu clair représentant un graphique à barres sur un tableau de présentation, placée à côté du libellé Rapports (Reports) dans la Fig. 30, architecture cible du Malawi.",
@@ -584,6 +584,7 @@
       "narrative": [
         {
           "text": "A light blue magnifying-glass icon used beside the Traceability label in Fig. 30, Malawi's future-state architecture.",
+          "lang": "en",
           "state": "draft",
           "drafted_by": {
             "kind": "agent",
@@ -591,8 +592,7 @@
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_013WbQekVypi9A6YQbLDXMmJ"
           },
-          "drafted_at": "2026-10-01",
-          "lang": "en"
+          "drafted_at": "2026-10-01"
         },
         {
           "text": "Icône de loupe bleu clair placée à côté du libellé Traçabilité (Traceability) dans la Fig. 30, architecture cible du Malawi.",
@@ -675,6 +675,7 @@
       "narrative": [
         {
           "text": "A small light blue check mark that sits inside the magnifying-glass Traceability icon in Fig. 30.",
+          "lang": "en",
           "state": "draft",
           "drafted_by": {
             "kind": "agent",
@@ -682,8 +683,7 @@
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_013WbQekVypi9A6YQbLDXMmJ"
           },
-          "drafted_at": "2026-10-01",
-          "lang": "en"
+          "drafted_at": "2026-10-01"
         },
         {
           "text": "Petite coche bleu clair située à l'intérieur de l'icône de loupe Traçabilité (Traceability) dans la Fig. 30.",
@@ -766,6 +766,7 @@
       "narrative": [
         {
           "text": "A white U-turn return arrow icon used beside the Returns and Recalls label in Fig. 30, Malawi's future-state architecture.",
+          "lang": "en",
           "state": "draft",
           "drafted_by": {
             "kind": "agent",
@@ -773,8 +774,7 @@
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_013WbQekVypi9A6YQbLDXMmJ"
           },
-          "drafted_at": "2026-10-01",
-          "lang": "en"
+          "drafted_at": "2026-10-01"
         },
         {
           "text": "Icône blanche de flèche de retour en U placée à côté du libellé Retours et rappels (Returns and Recalls) dans la Fig. 30, architecture cible du Malawi.",
@@ -857,6 +857,7 @@
       "narrative": [
         {
           "text": "A white seal icon with a check mark, used beside the Verification label in Fig. 30, Malawi's future-state architecture.",
+          "lang": "en",
           "state": "draft",
           "drafted_by": {
             "kind": "agent",
@@ -864,8 +865,7 @@
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_013WbQekVypi9A6YQbLDXMmJ"
           },
-          "drafted_at": "2026-10-01",
-          "lang": "en"
+          "drafted_at": "2026-10-01"
         },
         {
           "text": "Icône blanche de sceau avec une coche, placée à côté du libellé Vérification (Verification) dans la Fig. 30, architecture cible du Malawi.",
@@ -948,6 +948,7 @@
       "narrative": [
         {
           "text": "A plain grey blurred rectangle, a drop-shadow effect behind a box in Fig. 30; it carries no content.",
+          "lang": "en",
           "state": "draft",
           "drafted_by": {
             "kind": "agent",
@@ -955,8 +956,7 @@
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_013WbQekVypi9A6YQbLDXMmJ"
           },
-          "drafted_at": "2026-10-01",
-          "lang": "en"
+          "drafted_at": "2026-10-01"
         },
         {
           "text": "Rectangle gris uni flou constituant un effet d'ombre portée derrière un encadré de la Fig. 30 ; il ne comporte aucun contenu.",
@@ -1039,6 +1039,7 @@
       "narrative": [
         {
           "text": "The Global FP VAN logo, shown in the Global box of Fig. 30, Malawi's future-state architecture.",
+          "lang": "en",
           "state": "draft",
           "drafted_by": {
             "kind": "agent",
@@ -1046,8 +1047,7 @@
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_013WbQekVypi9A6YQbLDXMmJ"
           },
-          "drafted_at": "2026-10-01",
-          "lang": "en"
+          "drafted_at": "2026-10-01"
         },
         {
           "text": "Logo du Global FP VAN (Global Family Planning Visibility and Analytics Network), présenté dans l'encadré Mondial (Global) de la Fig. 30, architecture cible du Malawi.",
@@ -1130,6 +1130,7 @@
       "narrative": [
         {
           "text": "A plain grey blurred rectangle, a drop-shadow effect behind a box in Fig. 30; it carries no content.",
+          "lang": "en",
           "state": "draft",
           "drafted_by": {
             "kind": "agent",
@@ -1137,8 +1138,7 @@
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_013WbQekVypi9A6YQbLDXMmJ"
           },
-          "drafted_at": "2026-10-01",
-          "lang": "en"
+          "drafted_at": "2026-10-01"
         },
         {
           "text": "Rectangle gris uni flou constituant un effet d'ombre portée derrière un encadré de la Fig. 30 ; il ne comporte aucun contenu.",
@@ -1221,6 +1221,7 @@
       "narrative": [
         {
           "text": "The back-cover ISBN barcode for 9789240101197.",
+          "lang": "en",
           "state": "draft",
           "drafted_by": {
             "kind": "agent",
@@ -1228,8 +1229,7 @@
             "model": "not-disclosed",
             "session": "https://claude.ai/code/session_013WbQekVypi9A6YQbLDXMmJ"
           },
-          "drafted_at": "2026-10-01",
-          "lang": "en"
+          "drafted_at": "2026-10-01"
         },
         {
           "text": "Code-barres ISBN de quatrième de couverture pour 9789240101197.",

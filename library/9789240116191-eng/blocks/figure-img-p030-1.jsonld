@@ -18,6 +18,7 @@
   "narrative": [
     {
       "text": "Fig. 10, 'Product packaging hierarchy' (source: GS1.org), in the section on instituting data management and governance policies. It is drawn as a staircase of four grey steps, each holding packaging illustrations. The top step, labelled PRIMARY, shows individual items such as vials, a bottle, syringes in blister packs, a blister strip and a sterile-packed instrument. The next step, SECONDARY, shows boxes and cartons holding those items; the third, SECONDARY OR TERTIARY, shows open cartons and a row of boxed packs; and the bottom step, TERTIARY, shows shipping cases and a shrink-wrapped pallet of boxes.",
+      "lang": "en",
       "state": "draft",
       "drafted_by": {
         "kind": "agent",
@@ -25,8 +26,7 @@
         "model": "not-disclosed",
         "session": "https://claude.ai/code/session_013WbQekVypi9A6YQbLDXMmJ"
       },
-      "drafted_at": "2026-10-01",
-      "lang": "en"
+      "drafted_at": "2026-10-01"
     },
     {
       "text": "Fig. 10, « Hiérarchie des emballages de produits » (Product packaging hierarchy, source : GS1.org), dans la section consacrée à l'instauration de politiques de gestion et de gouvernance des données. Elle est représentée sous la forme d'un escalier à quatre marches grises portant chacune des illustrations d'emballages. La marche supérieure, intitulée PRIMAIRE (PRIMARY), montre des articles individuels tels que des flacons, une bouteille, des seringues sous blister, une plaquette thermoformée et un instrument sous emballage stérile. La marche suivante, SECONDAIRE (SECONDARY), montre des boîtes et des cartons contenant ces articles ; la troisième, SECONDAIRE OU TERTIAIRE (SECONDARY OR TERTIARY), montre des cartons ouverts et une rangée de boîtes conditionnées ; et la marche inférieure, TERTIAIRE (TERTIARY), montre des caisses d'expédition et une palette de boîtes filmée.",
@@ -89,7 +89,7 @@
       "lang": "zh"
     }
   ],
-  "derivedFrom": "library/9789240116191-eng/sections/page-030",
+  "derivedFrom": "library/9789240116191-eng/sections/sec-011",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/9789240116191-eng",
   "provenance": "ingested"
 }

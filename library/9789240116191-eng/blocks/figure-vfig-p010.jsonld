@@ -18,6 +18,7 @@
   "narrative": [
     {
       "text": "Fig. 1, 'Product master data'. A health product, drawn as a boxed medicine package, is linked to PRODUCT MASTER DATA, shown as four categories with examples. General Information: product identifier, name, description, unit of measure. Classification: ICD, ATC, product characteristics/specifications. Pharmaceutical Information: dosage, strength, route of administration, doses per vial. Logistical Information: packaging, volumetrics, shelf life, storage temperature.",
+      "lang": "en",
       "state": "draft",
       "drafted_by": {
         "kind": "agent",
@@ -25,11 +26,10 @@
         "model": "not-disclosed",
         "session": "https://claude.ai/code/session_012vJhm2nLrDMYghqFftZCQZ"
       },
-      "drafted_at": "2026-10-03",
-      "lang": "en"
+      "drafted_at": "2026-10-03"
     }
   ],
-  "derivedFrom": "library/9789240116191-eng/sections/page-010",
+  "derivedFrom": "library/9789240116191-eng/sections/sec-002",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/9789240116191-eng",
   "provenance": "ingested"
 }

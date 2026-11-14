@@ -18,18 +18,18 @@
   "narrative": [
     {
       "text": "Fig 2, 'Information flow across supply chain processes'. Eight rounded boxes: forecasting and planning, sourcing and contract management, order management, traceability, procurement, warehouse management, transportation and dispensing. Two-headed arrows join them, showing that information flows both ways between the processes; warehouse management is the most connected box.",
+      "lang": "en",
       "state": "draft",
       "drafted_by": {
         "kind": "agent",
         "id": "claude",
         "model": "not-disclosed",
-        "session": "https://claude.ai/code/session_01Qmmkt93UXaUMMzi1yFJNqd"
+        "session": "https://claude.ai/code/session_013WbQekVypi9A6YQbLDXMmJ"
       },
-      "drafted_at": "2026-10-31",
-      "lang": "en"
+      "drafted_at": "2026-10-01"
     }
   ],
-  "derivedFrom": "library/9789240101197-eng/sections/page-012",
+  "derivedFrom": "library/9789240101197-eng/sections/sec-003",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/9789240101197-eng",
   "provenance": "ingested"
 }

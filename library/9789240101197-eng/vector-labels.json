@@ -19650,9 +19650,9 @@
           "text": "➢ \t E.g. - Real time capture of",
           "bbox": [
             157.35,
-            328.21,
+            328.75,
             234.46,
-            337.22
+            336.96
           ],
           "intersectsDrawing": true,
           "fonts": [
@@ -19668,27 +19668,9 @@
           "text": "➢ \t E.g. - Planning based on real-",
           "bbox": [
             348.59,
-            328.93,
+            329.48,
             433.52,
-            337.94
-          ],
-          "intersectsDrawing": true,
-          "fonts": [
-            "SourceSansPro-Regular",
-            "ZapfDingbatsITC"
-          ],
-          "sizes": [
-            6.28,
-            7.29
-          ]
-        },
-        {
-          "text": "➢ \t E.g. - Manual order data",
-          "bbox": [
-            61.34,
-            330.69,
-            133.91,
-            339.7
+            337.69
           ],
           "intersectsDrawing": true,
           "fonts": [
@@ -19717,12 +19699,30 @@
           ]
         },
         {
+          "text": "➢ \t E.g. - Manual order data",
+          "bbox": [
+            61.34,
+            331.23,
+            133.91,
+            339.45
+          ],
+          "intersectsDrawing": true,
+          "fonts": [
+            "SourceSansPro-Regular",
+            "ZapfDingbatsITC"
+          ],
+          "sizes": [
+            6.28,
+            7.29
+          ]
+        },
+        {
           "text": "➢ \t E.g. - Country systems",
           "bbox": [
             444.21,
-            333.21,
+            333.75,
             512.46,
-            342.22
+            341.96
           ],
           "intersectsDrawing": true,
           "fonts": [
@@ -19786,9 +19786,9 @@
           "text": "➢ \t E.g. - Automated inventory",
           "bbox": [
             252.97,
-            339.5,
+            340.04,
             333.22,
-            348.5
+            348.25
           ],
           "intersectsDrawing": true,
           "fonts": [
