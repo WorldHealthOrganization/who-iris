@@ -1,0 +1,137 @@
+From 8b44b0caadc75fb860eb7da7d572a78e76913c63 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Sat, 14 Nov 2026 19:38:41 +0000
+Subject: [PATCH] Library viewer: an inferred contents shows the sections it
+ does not list
+
+The Contents tab drew an entry's contents entries and nothing else. On
+10665-75211 the inferred contents are Part 1's contents pages (70
+entries); the 30 chapters and annexes of Parts 2 and 3, cut inside its
+last entry by the oversized split, and the front matter were named by no
+entry and appeared nowhere in the tree, so the tab read as flat and one
+book of three.
+
+With INFERRED contents, each section no entry names is placed among the
+entries by its first page, at its own level, and says it is not listed;
+the note counts them. 10665-75211 now shows 70 entries and 31 such
+sections, two levels deep. An outline is the PDF's own and is shown as
+before (its test is unchanged).
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR
+---
+ scripts/lib/library-document.ts               | 29 +++++++++++++++++--
+ .../library/features/library-document.feature |  5 ++++
+ .../tests/library/library-document.test.ts    | 22 ++++++++++++++
+ 3 files changed, 53 insertions(+), 3 deletions(-)
+
+diff --git a/scripts/lib/library-document.ts b/scripts/lib/library-document.ts
+index bb27c49e..e776ae01 100644
+--- a/scripts/lib/library-document.ts
++++ b/scripts/lib/library-document.ts
+@@ -744,11 +744,32 @@ function docTreeBuild(details){
+   ul.setAttribute("data-built", "1");
+   ul.innerHTML = docTreeKids(Number(ul.getAttribute("data-kids")));
+ }
++/* An INFERRED contents lists what the contents pages print. A section the
++   rung cut that no entry names -- the front matter, or the 30 chapters of
++   Parts 2 and 3 that 10665-75211's oversized split cut by running heads --
++   was not in the tree at all. Each is placed among the entries by its first
++   page, at its own level, and says it is not listed. An outline is the
++   PDF's own and is shown as it is. */
++function docTocWithSections(d){
++  if (d.tocSource === "outline") return d.toc;
++  var named = {};
++  d.toc.forEach(function(e){ if (e.section) named[e.section] = true; });
++  var extra = d.sections.filter(function(s){ return !named[s.id] && s.pageStart != null; }).map(function(s){
++    return { level: s.level || 1, title: s.title, number: s.number, page: s.pageStart, pageLabel: s.labelStart, section: s.id, unlisted: true };
++  });
++  if (!extra.length) return d.toc;
++  var out = [], j = 0;
++  d.toc.forEach(function(e){
++    while (j < extra.length && e.page != null && extra[j].page < e.page) out.push(extra[j++]);
++    out.push(e);
++  });
++  return out.concat(extra.slice(j));
++}
+ function docContents(d){
+   var bySec = {};
+   d.sections.forEach(function(s){ bySec[s.id] = s; });
+   var blocksOf = docBlocksBySection(d);
+-  var useToc = d.toc.length > 0, items = useToc ? d.toc : d.sections;
++  var useToc = d.toc.length > 0, items = useToc ? docTocWithSections(d) : d.sections;
+   if (!items.length) return d.variant && d.variant !== "pdf"
+     ? '<p class="empty">No sections: the source has no headings.</p>'
+     : '<p class="empty">No table of contents: the PDF carries no outline and none could be inferred.</p>';
+@@ -756,7 +777,8 @@ function docContents(d){
+     var sid = useToc ? e.section : e.id, s = sid && bySec[sid];
+     var t = (e.number ? esc(e.number) + ' ' : '') + esc(e.title);
+     var link = sid ? '<a href="#sec-' + esc(sid) + '" data-sec="' + esc(sid) + '">' + t + '</a>' : t;
+-    var where = useToc ? ' <span class="note">' + pageText(e.page, e.pageLabel) + '</span> ' + confPill(e.confidence, e.evidence)
++    var where = useToc && e.unlisted ? ' <span class="note">' + pageText(e.page, e.pageLabel) + ' · a section the contents do not list</span>'
++      : useToc ? ' <span class="note">' + pageText(e.page, e.pageLabel) + '</span> ' + confPill(e.confidence, e.evidence)
+       : e.pageStart != null ? ' <span class="note">' + pageText(e.pageStart, e.labelStart) + '</span>' : '';
+     return link + where + (s && s.edit && d.links ? ' ' + editHost(s) : '');
+   }
+@@ -769,7 +791,8 @@ function docContents(d){
+     ? (d.variant && d.variant !== "pdf" ? "Contents: the source’s own headings."
+       : "No outline: the PDF carries none and none could be inferred, so its sections are listed.") + ' ' + d.sections.length + ' sections.'
+     : 'Source: ' + (d.tocSource === "outline" ? "the PDF’s own outline"
+-      : "inferred (" + esc(d.tocMethod || "unknown") + "); each entry’s confidence and the evidence behind it are shown") + '. ' + d.toc.length + ' entries.';
++      : "inferred (" + esc(d.tocMethod || "unknown") + "); each entry’s confidence and the evidence behind it are shown") + '. ' + d.toc.length + ' entries.' +
++      (items.length > d.toc.length ? ' ' + (items.length - d.toc.length) + ' section(s) the contents do not list are shown at their place.' : '');
+   return '<p class="note">' + how + (DOC_BLOCKS ? '' : ' Blocks are listed once the block graph has loaded.') + '</p>' +
+     '<p><button type="button" data-toc="open">Expand all</button> <button type="button" data-toc="close">Collapse all</button></p>' +
+     '<ul class="toc">' + docTreeItems(t.top) + '</ul>';
+diff --git a/scripts/tests/library/features/library-document.feature b/scripts/tests/library/features/library-document.feature
+index b30ad07b..74536a86 100644
+--- a/scripts/tests/library/features/library-document.feature
++++ b/scripts/tests/library/features/library-document.feature
+@@ -126,6 +126,11 @@ Feature: The document view of a library entry
+     And "Not in the outline" does not appear
+     And opening the first node shows "1.1 One A"
+ 
++  @test:scripts/tests/library/library-document.test.ts::the_Contents_tree::an_inferred_contents_gains_the_sections_it_does_not_list,_at_their_place
++  Scenario: Sections an inferred contents does not list are still in the tree
++    When the contents were inferred and some sections are named by no entry
++    Then each is placed by its first page at its own level, marked as not listed, and the note counts them
++
+   @test:scripts/tests/library/library-document.test.ts::the_Contents_tree::toc_absent:_the_tree_is_built_from_the_sections,_nested_by_level
+   Scenario: Without a table of contents, the Contents tree is built from the sections, nested by level
+     Given a document view with no outline and two level-1 sections "Page 1" and "Page 2"
+diff --git a/scripts/tests/library/library-document.test.ts b/scripts/tests/library/library-document.test.ts
+index fc62db1f..d74bf5f4 100644
+--- a/scripts/tests/library/library-document.test.ts
++++ b/scripts/tests/library/library-document.test.ts
+@@ -313,6 +313,28 @@ describe("the Contents tree", () => {
+     expect(T.docTreeKids(0)).toContain("1.1 One A");
+   });
+ 
++  test("an inferred contents gains the sections it does not list, at their place", () => {
++    // 10665-75211: Part 1's contents pages name 70 entries; the chapters of Parts 2 and 3 were cut
++    // inside the last one by the oversized split and appeared nowhere in the tree.
++    T.setBlocks([]);
++    const d = view({
++      tocSource: "inferred",
++      tocMethod: "contents",
++      toc: [
++        { level: 1, title: "Vision", number: "1", page: 3, pageLabel: null, confidence: 0.9, evidence: ["contents"], source: "inferred", section: "s1" },
++        { level: 1, title: "Definitions of terms", number: null, page: 10, pageLabel: null, confidence: 0.8, evidence: ["contents"], source: "inferred", section: "s2" },
++      ],
++      sections: [sec("s0", "Front matter", 1, 1), sec("s1", "Vision", 1, 3), sec("s2", "Definitions of terms", 1, 10), sec("s3", "Part 2: Action plan", 2, 12), sec("s4", "Chapter 1. Framework", 2, 14)],
++    });
++    const h = T.docContents(d);
++    expect(h).toContain("2 entries. 3 section(s) the contents do not list are shown at their place.");
++    expect(h.indexOf("Front matter")).toBeLessThan(h.indexOf("Vision"));
++    expect(h).toContain("a section the contents do not list");
++    const kids = T.docTreeKids(2);
++    expect(kids).toContain('data-sec="s3">Part 2: Action plan</a>');
++    expect(kids).toContain('data-sec="s4">Chapter 1. Framework</a>');
++  });
++
+   test("toc absent: the tree is built from the sections, nested by level", () => {
+     T.setBlocks([]);
+     const h = T.docContents(pages);
+-- 
+2.43.0
+

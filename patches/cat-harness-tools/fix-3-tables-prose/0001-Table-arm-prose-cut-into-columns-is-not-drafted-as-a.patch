@@ -1,0 +1,159 @@
+From a8dc58c25835d165ce7129c3877d35b707a8b28a Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Sat, 14 Nov 2026 19:33:52 +0000
+Subject: [PATCH] Table arm: prose cut into columns is not drafted as a table
+
+pdfplumber's text strategy lays a column grid over running prose and
+returns it as a table: 17 of 23 drafts on 9789240116191-eng and 23 of 45
+on 9789240101197-eng were pages of prose with words cut at the cell
+boundaries ('relat' | 'ionship'). A candidate whose boundaries cut a word
+at a quarter or more of at least five side-by-side cell pairs is no
+longer drafted, and the extraction note counts it apart from the other
+dropped candidates.
+
+Measured on the re-ingest pilot (2026-11-14, 109 candidates): every
+grid a reader would call a table scored 0.12 or less, every page of
+prose 0.42 or more. Kept on the two handbooks: 6 and 22 tables, the same
+as a reading by hand.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR
+---
+ scripts/pdf-tables-csvw.ts                    | 47 +++++++++++++++++--
+ .../features/reingest-extraction.feature      |  5 ++
+ .../tests/library/reingest-extraction.test.ts | 24 +++++++++-
+ 3 files changed, 72 insertions(+), 4 deletions(-)
+
+diff --git a/scripts/pdf-tables-csvw.ts b/scripts/pdf-tables-csvw.ts
+index 4b3b0861..e32996c0 100644
+--- a/scripts/pdf-tables-csvw.ts
++++ b/scripts/pdf-tables-csvw.ts
+@@ -121,6 +121,41 @@ export function isGrid(t: PdfTable): boolean {
+   return Array.isArray(t.rows) && t.rows.length >= 2 && (t.rows[0]?.length ?? 0) >= 2;
+ }
+ 
++/**
++ * How often a cell boundary cuts a word: of the side-by-side pairs of
++ * non-empty cells, the share where the left cell ends in a lower-case
++ * letter and the right one opens with one ("relat" | "ionship"). A table's
++ * cells hold whole words; a column split laid over running prose cuts them.
++ */
++export function wordSplitShare(rows: readonly (readonly (string | null)[])[]): { share: number; pairs: number } {
++  let pairs = 0;
++  let cut = 0;
++  for (const r of rows) {
++    for (let j = 0; j + 1 < r.length; j++) {
++      const a = r[j] ?? "";
++      const b = r[j + 1] ?? "";
++      if (!a.trim() || !b.trim()) continue;
++      pairs++;
++      if (/\p{Ll}$/u.test(a) && /^\p{Ll}/u.test(b)) cut++;
++    }
++  }
++  return { share: pairs ? cut / pairs : 0, pairs };
++}
++
++/**
++ * Prose cut into columns, not a table: a word is cut at a quarter or more of
++ * at least five cell boundaries. Measured on the who-iris re-ingest pilot
++ * (2026-11-14, two WHO handbooks, 109 candidates): every grid a reader would
++ * call a table scored 0.12 or less, every page of prose read as one 0.42 or
++ * more, so the line sits in an empty stretch and moving it within it changes
++ * nothing there. Below five boundaries there is too little to judge, and the
++ * table is kept.
++ */
++export function isProseCut(t: PdfTable): boolean {
++  const { share, pairs } = wordSplitShare(Array.isArray(t.rows) ? t.rows : []);
++  return pairs >= 5 && share >= 0.25;
++}
++
+ /**
+  * The CSVW record and the CSV files for `pdf-tables/v1` tables. Pure: the
+  * caller writes the files. `source` is the entry's own source block (the
+@@ -135,7 +170,7 @@ export function csvwFromPdfTables(
+ ): { record: Record<string, unknown>; files: Array<{ path: string; content: string }> } {
+   const files: Array<{ path: string; content: string }> = [];
+   const tables = (artefact.tables ?? [])
+-    .filter(isGrid)
++    .filter((t) => isGrid(t) && !isProseCut(t))
+     .map((t, i) => {
+       const url = `${TABULAR_TABLES_DIR}/table-${i + 1}.csv`;
+       const [head, ...body] = t.rows;
+@@ -234,8 +269,14 @@ export function runTableArm(staging: string, pdf: string, library?: string): { s
+   const { record, files } = csvwFromPdfTables(structure?.doc_id ?? slug, artefact, structure?.source ?? {}, at, version);
+   const n = (record.tables as unknown[]).length;
+   const backend = artefact.producer?.backend ? `${artefact.producer.backend} ${artefact.producer.backend_version ?? ""}`.trim() : undefined;
+-  const dropped = (artefact.tables ?? []).length - n;
+-  const extra = [backend ? `backend ${backend}` : "", dropped > 0 ? `${dropped} candidate(s) dropped: under two columns or no row under the header` : ""]
++  const candidates = artefact.tables ?? [];
++  const prose = candidates.filter((t) => isGrid(t) && isProseCut(t)).length;
++  const dropped = candidates.length - n - prose;
++  const extra = [
++    backend ? `backend ${backend}` : "",
++    dropped > 0 ? `${dropped} candidate(s) dropped: under two columns or no row under the header` : "",
++    prose > 0 ? `${prose} dropped as prose cut into columns (a word cut at a quarter or more of the cell boundaries)` : "",
++  ]
+     .filter(Boolean)
+     .join("; ");
+   if (n === 0) {
+diff --git a/scripts/tests/library/features/reingest-extraction.feature b/scripts/tests/library/features/reingest-extraction.feature
+index a1ab2ce5..f65c4775 100644
+--- a/scripts/tests/library/features/reingest-extraction.feature
++++ b/scripts/tests/library/features/reingest-extraction.feature
+@@ -63,6 +63,11 @@ Feature: Re-ingestion extraction coverage
+     When the arm writes it
+     Then tabular.csvw.json validates and readEntryTables reads its label, columns, rows and pages
+ 
++  @test:scripts/tests/library/reingest-extraction.test.ts::the_table_arm_writes_CSVW_drafts,_guarded::prose_cut_into_columns_is_no_table,_and_is_counted_apart
++  Scenario: Prose a column split cut through is not drafted as a table
++    When a candidate's cell boundaries cut a word at a quarter or more of at least five boundaries
++    Then it is not drafted, and the record's note counts it apart from the other dropped candidates
++
+   @test:scripts/tests/library/reingest-extraction.test.ts::the_table_arm_writes_CSVW_drafts,_guarded::a_failure_is_recorded_as_not_extracted_and_the_arm_does_not_throw
+   Scenario: A table step that fails records not extracted
+     Given a PDF the table step cannot read
+diff --git a/scripts/tests/library/reingest-extraction.test.ts b/scripts/tests/library/reingest-extraction.test.ts
+index f7b514e9..6fe57a45 100644
+--- a/scripts/tests/library/reingest-extraction.test.ts
++++ b/scripts/tests/library/reingest-extraction.test.ts
+@@ -22,7 +22,7 @@ import {
+ } from "../../entry-extraction.ts";
+ import { ExtractionStepSchema } from "../../../schemas/library/entry-extraction.ts";
+ import { advisoryLine, checkEntry, sidecarDocument } from "../../check-l1-complete.ts";
+-import { csvwFromPdfTables, captionLabel, isGrid, runTableArm, toCsv } from "../../pdf-tables-csvw.ts";
++import { csvwFromPdfTables, captionLabel, isGrid, isProseCut, runTableArm, toCsv, wordSplitShare } from "../../pdf-tables-csvw.ts";
+ import { TabularCsvwSchema } from "../../../schemas/library/tabular-csvw.ts";
+ import { readEntryTables } from "../../lib/library-document.ts";
+ import { OPTIONAL_PIPELINE_PLUGIN_KINDS, PIPELINE_PLUGIN_KINDS } from "../../../pipeline/pipeline-plugins.ts";
+@@ -216,6 +216,28 @@ describe("the table arm writes CSVW drafts, guarded", () => {
+     expect(isGrid({ id: "t", pages: [1], rows: [["A", "B"]] })).toBe(false);
+   });
+ 
++  test("prose cut into columns is no table, and is counted apart", () => {
++    // Page 26 of 9789240116191-eng as pdfplumber's text strategy cut it, and a real grid (Annex 2's roles).
++    const prose = [
++      ["ollowi", "n", "g key elements", "t", "o contin", "uously and"],
++      ["securely", "m", "anage the", "p", "roduct m", "aster data"],
++      ["and ensure", "t", "hat it is", "u", "pdated and", "a"],
++    ];
++    const grid = [
++      ["ROLE CATEGORY", "ROLES", "DEPLOYMENT", "OPERATION"],
++      ["Technical", "Solution architect", "Yes", "No"],
++      ["Leadership", "Project manager", "Yes", "Yes"],
++    ];
++    expect(wordSplitShare(prose).share).toBeGreaterThanOrEqual(0.5);
++    expect(wordSplitShare(grid)).toEqual({ share: 0, pairs: 9 });
++    expect(isProseCut({ id: "p", pages: [26], rows: prose })).toBe(true);
++    expect(isProseCut({ id: "g", pages: [57], rows: grid })).toBe(false);
++    // Too few boundaries to judge: kept.
++    expect(isProseCut({ id: "s", pages: [1], rows: [["Pr", "oduct co"], ["12", "de"]] })).toBe(false);
++    const { record } = csvwFromPdfTables("d", { status: "ok", tables: [{ id: "p", pages: [26], rows: prose }, { id: "g", pages: [57], rows: grid }] }, {}, "2026-11-14", undefined);
++    expect((record.tables as unknown[]).length).toBe(1);
++  });
++
+   test("a failure is recorded as not extracted and the arm does not throw", () => {
+     const staging = join(tmp("arm-"), "e1");
+     mkdirSync(staging, { recursive: true });
+-- 
+2.43.0
+

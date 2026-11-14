@@ -1,0 +1,84 @@
+From 3d1db599f1792d3b5df0e71b5cec7a1ca8af2869 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Sat, 14 Nov 2026 19:28:15 +0000
+Subject: [PATCH] references-extract: a whole References section read after its
+ heading, past a stray footnote
+
+An inferred contents split can put the last line of the page before (a
+footnote: '2 All linked references were accessed on 15 October 2024')
+above a References section's own heading. The list was then read from
+that line, the heading ended it at once, and 9789240101197-eng kept 1
+reference of 26. A heading among a whole section's first lines now
+starts the list after it. Over who-iris's 211 entries only that entry
+changes (4 -> 29: 26 in sec-031, 3 in sec-038).
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR
+---
+ scripts/references-extract.feature |  5 +++++
+ scripts/references-extract.test.ts | 10 ++++++++++
+ scripts/references-extract.ts      | 11 +++++++++--
+ 3 files changed, 24 insertions(+), 2 deletions(-)
+
+diff --git a/scripts/references-extract.feature b/scripts/references-extract.feature
+index 67f6ef1a..84d29f0c 100644
+--- a/scripts/references-extract.feature
++++ b/scripts/references-extract.feature
+@@ -56,6 +56,11 @@ Feature: a document's reference lists split into its own bibliography
+     When an entry is read one page per section and a list runs onto the next page
+     Then it is one list, read once
+ 
++  @test:scripts/references-extract.test.ts::listsOf::a_whole_References_section_that_opens_with_the_previous_page's_footnote_reads_the_list_after_its_heading
++  Scenario: a References section that opens with a stray footnote
++    When an inferred split puts the page before's footnote above the References heading
++    Then the list is read from after the heading, every entry of it
++
+   @test:scripts/references-extract.test.ts::listsOf::headings_in_the_six_UN_languages
+   Scenario: headings in other languages
+     When the heading is Références, Referencias, Литература, المراجع or 参考文献
+diff --git a/scripts/references-extract.test.ts b/scripts/references-extract.test.ts
+index 5f76e0cb..6155f33d 100644
+--- a/scripts/references-extract.test.ts
++++ b/scripts/references-extract.test.ts
+@@ -85,6 +85,16 @@ describe("listsOf", () => {
+     expect(lists).toHaveLength(1);
+     expect(lists[0]!.entries.map((e) => e.n)).toEqual([1, 2, 3]);
+   });
++  test("a whole References section that opens with the previous page's footnote reads the list after its heading", () => {
++    // 9789240101197-eng, sec-031: the inferred split puts footnote 2 of the page before above the heading,
++    // and the list was read as that one line.
++    const { root, dir, w } = entry();
++    w("sec-031-references.md", section("References", "2\t All linked references were accessed on 15 October 2024.\nReferences\n1.\t\nDigital implementation investment guide (DIIG). Geneva: World Health Organization; 2020 (https://iris.who.int/handle/10665/334306).\n2.\t\nDigital Health & Interoperability Working Group [website]. Digital Square; 2024 (https://wiki.digitalsquare.io/).\n3. \t\nDigitization [website]. Gartner; 2024 (https://www.gartner.com/en/glossary/digitization)."));
++    const lists = listsOf(root, dir);
++    expect(lists).toHaveLength(1);
++    expect(lists[0]!.entries.map((e) => e.n)).toEqual([1, 2, 3]);
++    expect(lists[0]!.entries[0]!.text).toStartWith("Digital implementation investment guide");
++  });
+   test("headings in the six UN languages", () => {
+     const { root, dir, w } = entry();
+     for (const [i, h] of ["Références", "Referencias", "Литература", "المراجع", "参考文献"].entries())
+diff --git a/scripts/references-extract.ts b/scripts/references-extract.ts
+index 752929cc..1a62c1f3 100644
+--- a/scripts/references-extract.ts
++++ b/scripts/references-extract.ts
+@@ -280,8 +280,15 @@ export function listsOf(instanceRoot: string, entryDir: string): ExtractedList[]
+     const skipTo = taken.get(k) ?? 0;
+     const starts = whole ? [0] : own.flatMap((l, i) => (i >= skipTo && REFERENCE_HEADING.test(l) ? [i + 1] : []));
+     for (const at of starts) {
+-      // A whole section may repeat its own heading on its first lines.
+-      const from = whole ? Math.max(own.findIndex((l) => l.trim() && !REFERENCE_HEADING.test(l)), 0) : at;
++      // A whole section may repeat its own heading on its first lines. When an
++      // inferred split put a line of the page before above that heading (a
++      // footnote: "2 All linked references were accessed on ..."), the list
++      // starts after the heading: reading from the stray line, the heading
++      // ended the list at its first line (9789240101197-eng kept 1 of 26).
++      const heading = own.findIndex((l, i) => i < 6 && REFERENCE_HEADING.test(l));
++      const from = whole
++        ? Math.max(own.findIndex((l, i) => i > heading && l.trim() && !REFERENCE_HEADING.test(l)), 0)
++        : at;
+       // Read on into the next pages only when the list starts with citations
+       // (on this page, or on the next page's first lines): a heading at a
+       // page's foot over a page of prose is not a list.
+-- 
+2.43.0
+
