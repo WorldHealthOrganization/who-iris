@@ -27,9 +27,7 @@
     "tables": {
       "state": "found",
       "count": 6,
-      "note": "drafts; backend pdfplumber 0.11.10; 41 candidate(s) dropped: under two columns or no row under the header; 17 dropped as prose cut into columns (a word cut at a quarter or more of the cell boundaries)",
-      "tool": "pdf-tables.py",
-      "version": "b3b9e4012c21",
+      "tool": "tabular.csvw.json",
       "at": "2026-11-15"
     },
     "references": {
@@ -51,6 +49,12 @@
       "state": "partial",
       "note": "no footnote linked to a mark; 9 foot-of-page line(s) no mark calls, 8 mark(s) with no note found, kept for a reader to judge",
       "tool": "pdf-footnotes.py",
+      "at": "2026-11-15"
+    },
+    "summaries": {
+      "state": "found",
+      "count": 32,
+      "tool": "summaries",
       "at": "2026-11-15"
     }
   }
