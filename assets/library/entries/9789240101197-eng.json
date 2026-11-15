@@ -30,40 +30,6 @@
       }
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-001",
-      "types": [
-        "folio-assistant-core:Table",
-        "doco:Table"
-      ],
-      "kind": "table",
-      "title": "",
-      "pageStart": 4,
-      "pageEnd": 4,
-      "target": "../tables/table-1.csv",
-      "narrative": null,
-      "content": null,
-      "truncated": false,
-      "provenance": "ingested",
-      "summary": null
-    },
-    {
-      "id": "library/9789240101197-eng/blocks/table-002",
-      "types": [
-        "folio-assistant-core:Table",
-        "doco:Table"
-      ],
-      "kind": "table",
-      "title": "",
-      "pageStart": 5,
-      "pageEnd": 5,
-      "target": "../tables/table-2.csv",
-      "narrative": null,
-      "content": null,
-      "truncated": false,
-      "provenance": "ingested",
-      "summary": null
-    },
-    {
       "id": "library/9789240101197-eng/blocks/prose-sec-000",
       "types": [
         "folio-assistant-core:Prose",
@@ -89,23 +55,6 @@
         },
         "draftedAt": "2026-11-14"
       }
-    },
-    {
-      "id": "library/9789240101197-eng/blocks/table-003",
-      "types": [
-        "folio-assistant-core:Table",
-        "doco:Table"
-      ],
-      "kind": "table",
-      "title": "",
-      "pageStart": 6,
-      "pageEnd": 6,
-      "target": "../tables/table-3.csv",
-      "narrative": null,
-      "content": null,
-      "truncated": false,
-      "provenance": "ingested",
-      "summary": null
     },
     {
       "id": "library/9789240101197-eng/blocks/prose-sec-001",
@@ -135,7 +84,7 @@
       }
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-004",
+      "id": "library/9789240101197-eng/blocks/table-001",
       "types": [
         "folio-assistant-core:Table",
         "doco:Table"
@@ -144,7 +93,7 @@
       "title": "",
       "pageStart": 7,
       "pageEnd": 7,
-      "target": "../tables/table-4.csv",
+      "target": "../tables/table-1.csv",
       "narrative": null,
       "content": null,
       "truncated": false,
@@ -177,40 +126,6 @@
         },
         "draftedAt": "2026-11-14"
       }
-    },
-    {
-      "id": "library/9789240101197-eng/blocks/table-005",
-      "types": [
-        "folio-assistant-core:Table",
-        "doco:Table"
-      ],
-      "kind": "table",
-      "title": "",
-      "pageStart": 8,
-      "pageEnd": 8,
-      "target": "../tables/table-5.csv",
-      "narrative": null,
-      "content": null,
-      "truncated": false,
-      "provenance": "ingested",
-      "summary": null
-    },
-    {
-      "id": "library/9789240101197-eng/blocks/table-006",
-      "types": [
-        "folio-assistant-core:Table",
-        "doco:Table"
-      ],
-      "kind": "table",
-      "title": "",
-      "pageStart": 9,
-      "pageEnd": 9,
-      "target": "../tables/table-6.csv",
-      "narrative": null,
-      "content": null,
-      "truncated": false,
-      "provenance": "ingested",
-      "summary": null
     },
     {
       "id": "library/9789240101197-eng/blocks/figure-vfig-p011",
@@ -257,23 +172,6 @@
       }
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-007",
-      "types": [
-        "folio-assistant-core:Table",
-        "doco:Table"
-      ],
-      "kind": "table",
-      "title": "",
-      "pageStart": 11,
-      "pageEnd": 11,
-      "target": "../tables/table-7.csv",
-      "narrative": null,
-      "content": null,
-      "truncated": false,
-      "provenance": "ingested",
-      "summary": null
-    },
-    {
       "id": "library/9789240101197-eng/blocks/figure-vfig-p012",
       "types": [
         "folio-assistant-core:Figure",
@@ -303,23 +201,6 @@
       "target": "../figures/vfig-p013.png",
       "narrative": "draft",
       "content": "Fig 3, 'Digital health supply chain'. Six purple hexagons surround an icon labelled Individuals: digital ecosystem, end-to-end visibility, data and analytics, transactional systems, advanced digitization and collaborative processes. A dashed ring around them carries eleven partners as dots: Ministry of health, community health, health facilities, regional warehouses, private sector, central warehouse, regulators, logistics providers, procurers and manufacturers/distributors.",
-      "truncated": false,
-      "provenance": "ingested",
-      "summary": null
-    },
-    {
-      "id": "library/9789240101197-eng/blocks/table-008",
-      "types": [
-        "folio-assistant-core:Table",
-        "doco:Table"
-      ],
-      "kind": "table",
-      "title": "Fig.",
-      "pageStart": 13,
-      "pageEnd": 13,
-      "target": "../tables/table-8.csv",
-      "narrative": null,
-      "content": null,
       "truncated": false,
       "provenance": "ingested",
       "summary": null
@@ -393,7 +274,7 @@
       "summary": null
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-009",
+      "id": "library/9789240101197-eng/blocks/table-002",
       "types": [
         "folio-assistant-core:Table",
         "doco:Table"
@@ -402,7 +283,7 @@
       "title": "Fig 7. Sample workflow for an antenatal care business, with connections to the supply chain",
       "pageStart": 17,
       "pageEnd": 17,
-      "target": "../tables/table-9.csv",
+      "target": "../tables/table-2.csv",
       "narrative": null,
       "content": null,
       "truncated": false,
@@ -435,23 +316,6 @@
         },
         "draftedAt": "2026-11-14"
       }
-    },
-    {
-      "id": "library/9789240101197-eng/blocks/table-010",
-      "types": [
-        "folio-assistant-core:Table",
-        "doco:Table"
-      ],
-      "kind": "table",
-      "title": "",
-      "pageStart": 19,
-      "pageEnd": 19,
-      "target": "../tables/table-10.csv",
-      "narrative": null,
-      "content": null,
-      "truncated": false,
-      "provenance": "ingested",
-      "summary": null
     },
     {
       "id": "library/9789240101197-eng/blocks/figure-vfig-p020",
@@ -498,23 +362,6 @@
       }
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-011",
-      "types": [
-        "folio-assistant-core:Table",
-        "doco:Table"
-      ],
-      "kind": "table",
-      "title": "",
-      "pageStart": 20,
-      "pageEnd": 20,
-      "target": "../tables/table-11.csv",
-      "narrative": null,
-      "content": null,
-      "truncated": false,
-      "provenance": "ingested",
-      "summary": null
-    },
-    {
       "id": "library/9789240101197-eng/blocks/figure-vfig-p021",
       "types": [
         "folio-assistant-core:Figure",
@@ -559,7 +406,7 @@
       }
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-012",
+      "id": "library/9789240101197-eng/blocks/table-003",
       "types": [
         "folio-assistant-core:Table",
         "doco:Table"
@@ -568,7 +415,7 @@
       "title": "",
       "pageStart": 22,
       "pageEnd": 22,
-      "target": "../tables/table-12.csv",
+      "target": "../tables/table-3.csv",
       "narrative": null,
       "content": null,
       "truncated": false,
@@ -603,7 +450,7 @@
       }
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-013",
+      "id": "library/9789240101197-eng/blocks/table-004",
       "types": [
         "folio-assistant-core:Table",
         "doco:Table"
@@ -612,7 +459,7 @@
       "title": "",
       "pageStart": 23,
       "pageEnd": 23,
-      "target": "../tables/table-13.csv",
+      "target": "../tables/table-4.csv",
       "narrative": null,
       "content": null,
       "truncated": false,
@@ -647,7 +494,7 @@
       }
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-014",
+      "id": "library/9789240101197-eng/blocks/table-005",
       "types": [
         "folio-assistant-core:Table",
         "doco:Table"
@@ -656,7 +503,7 @@
       "title": "",
       "pageStart": 24,
       "pageEnd": 24,
-      "target": "../tables/table-14.csv",
+      "target": "../tables/table-5.csv",
       "narrative": null,
       "content": null,
       "truncated": false,
@@ -691,7 +538,7 @@
       }
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-015",
+      "id": "library/9789240101197-eng/blocks/table-006",
       "types": [
         "folio-assistant-core:Table",
         "doco:Table"
@@ -700,7 +547,7 @@
       "title": "",
       "pageStart": 25,
       "pageEnd": 25,
-      "target": "../tables/table-15.csv",
+      "target": "../tables/table-6.csv",
       "narrative": null,
       "content": null,
       "truncated": false,
@@ -725,7 +572,7 @@
       "summary": null
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-016",
+      "id": "library/9789240101197-eng/blocks/table-007",
       "types": [
         "folio-assistant-core:Table",
         "doco:Table"
@@ -734,7 +581,7 @@
       "title": "Fig 10. Example of outputs from this chapter",
       "pageStart": 26,
       "pageEnd": 26,
-      "target": "../tables/table-16.csv",
+      "target": "../tables/table-7.csv",
       "narrative": null,
       "content": null,
       "truncated": false,
@@ -823,23 +670,6 @@
       }
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-017",
-      "types": [
-        "folio-assistant-core:Table",
-        "doco:Table"
-      ],
-      "kind": "table",
-      "title": "",
-      "pageStart": 28,
-      "pageEnd": 28,
-      "target": "../tables/table-17.csv",
-      "narrative": null,
-      "content": null,
-      "truncated": false,
-      "provenance": "ingested",
-      "summary": null
-    },
-    {
       "id": "library/9789240101197-eng/blocks/figure-vfig-p029",
       "types": [
         "folio-assistant-core:Figure",
@@ -884,7 +714,7 @@
       }
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-018",
+      "id": "library/9789240101197-eng/blocks/table-008",
       "types": [
         "folio-assistant-core:Table",
         "doco:Table"
@@ -893,7 +723,7 @@
       "title": "",
       "pageStart": 30,
       "pageEnd": 30,
-      "target": "../tables/table-18.csv",
+      "target": "../tables/table-8.csv",
       "narrative": null,
       "content": null,
       "truncated": false,
@@ -918,7 +748,7 @@
       "summary": null
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-019",
+      "id": "library/9789240101197-eng/blocks/table-009",
       "types": [
         "folio-assistant-core:Table",
         "doco:Table"
@@ -927,7 +757,7 @@
       "title": "Fig 12. SCISMM maturity levels for HSCISs",
       "pageStart": 31,
       "pageEnd": 31,
-      "target": "../tables/table-19.csv",
+      "target": "../tables/table-9.csv",
       "narrative": null,
       "content": null,
       "truncated": false,
@@ -989,7 +819,7 @@
       }
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-020",
+      "id": "library/9789240101197-eng/blocks/table-010",
       "types": [
         "folio-assistant-core:Table",
         "doco:Table"
@@ -998,7 +828,7 @@
       "title": "",
       "pageStart": 32,
       "pageEnd": 32,
-      "target": "../tables/table-20.csv",
+      "target": "../tables/table-10.csv",
       "narrative": null,
       "content": null,
       "truncated": false,
@@ -1018,40 +848,6 @@
       "target": "../figures/vfig-p033.png",
       "narrative": "draft",
       "content": "Fig 13, 'DIIG digital health enterprise architecture framework'. Within the enterprise, a digital health platform holds shared services (business domain and registry services such as terminology, client, facility, product and health worker registries), data sources (institution-based and population-based) and data services (analytics, dashboards, repositories), joined by an interoperability layer of enabling components. Point-of-service applications below are reused across programmes or used for one use case only; external non-health systems sit to the right; a legend marks investment types. Adapted from the 2020 WHO Digital Implementation Investment Guide.",
-      "truncated": false,
-      "provenance": "ingested",
-      "summary": null
-    },
-    {
-      "id": "library/9789240101197-eng/blocks/table-021",
-      "types": [
-        "folio-assistant-core:Table",
-        "doco:Table"
-      ],
-      "kind": "table",
-      "title": "",
-      "pageStart": 33,
-      "pageEnd": 33,
-      "target": "../tables/table-21.csv",
-      "narrative": null,
-      "content": null,
-      "truncated": false,
-      "provenance": "ingested",
-      "summary": null
-    },
-    {
-      "id": "library/9789240101197-eng/blocks/table-022",
-      "types": [
-        "folio-assistant-core:Table",
-        "doco:Table"
-      ],
-      "kind": "table",
-      "title": "",
-      "pageStart": 33,
-      "pageEnd": 33,
-      "target": "../tables/table-22.csv",
-      "narrative": null,
-      "content": null,
       "truncated": false,
       "provenance": "ingested",
       "summary": null
@@ -1101,23 +897,6 @@
       }
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-023",
-      "types": [
-        "folio-assistant-core:Table",
-        "doco:Table"
-      ],
-      "kind": "table",
-      "title": "",
-      "pageStart": 35,
-      "pageEnd": 35,
-      "target": "../tables/table-23.csv",
-      "narrative": null,
-      "content": null,
-      "truncated": false,
-      "provenance": "ingested",
-      "summary": null
-    },
-    {
       "id": "library/9789240101197-eng/blocks/figure-vfig-p036",
       "types": [
         "folio-assistant-core:Figure",
@@ -1130,23 +909,6 @@
       "target": "../figures/vfig-p036.png",
       "narrative": "draft",
       "content": "Fig 15, 'Maturity-based architecture: moving from SCISMM Level 3 to Level 4'. The digital health supply chain enterprise has shared services (facility, product and supplier registries) and data services (supply chain reports, data warehouse, track and trace, product verification) above an interoperability layer (authentication, encryption, transformation, orchestration, validation, translation), which connects eight health supply chain information systems: forecasting and planning, order, warehouse and cold chain management, procurement, supplier and contract management, transportation management and dispensing.",
-      "truncated": false,
-      "provenance": "ingested",
-      "summary": null
-    },
-    {
-      "id": "library/9789240101197-eng/blocks/table-024",
-      "types": [
-        "folio-assistant-core:Table",
-        "doco:Table"
-      ],
-      "kind": "table",
-      "title": "",
-      "pageStart": 36,
-      "pageEnd": 36,
-      "target": "../tables/table-24.csv",
-      "narrative": null,
-      "content": null,
       "truncated": false,
       "provenance": "ingested",
       "summary": null
@@ -1169,23 +931,6 @@
       "summary": null
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-025",
-      "types": [
-        "folio-assistant-core:Table",
-        "doco:Table"
-      ],
-      "kind": "table",
-      "title": "",
-      "pageStart": 37,
-      "pageEnd": 37,
-      "target": "../tables/table-25.csv",
-      "narrative": null,
-      "content": null,
-      "truncated": false,
-      "provenance": "ingested",
-      "summary": null
-    },
-    {
       "id": "library/9789240101197-eng/blocks/figure-vfig-p038",
       "types": [
         "folio-assistant-core:Figure",
@@ -1203,23 +948,6 @@
       "summary": null
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-026",
-      "types": [
-        "folio-assistant-core:Table",
-        "doco:Table"
-      ],
-      "kind": "table",
-      "title": "",
-      "pageStart": 38,
-      "pageEnd": 38,
-      "target": "../tables/table-26.csv",
-      "narrative": null,
-      "content": null,
-      "truncated": false,
-      "provenance": "ingested",
-      "summary": null
-    },
-    {
       "id": "library/9789240101197-eng/blocks/figure-vfig-p039",
       "types": [
         "folio-assistant-core:Figure",
@@ -1232,23 +960,6 @@
       "target": "../figures/vfig-p039.png",
       "narrative": "draft",
       "content": "Fig 18, 'Architecture based on supply chain design: decentralized management (option A)'. The same services and interoperability layer, with the health supply chain information systems split in two: at national level forecasting and planning, procurement, supplier and contract, transportation, warehouse and cold chain management; at facility level order management, dispensing, inventory and cold chain management.",
-      "truncated": false,
-      "provenance": "ingested",
-      "summary": null
-    },
-    {
-      "id": "library/9789240101197-eng/blocks/table-027",
-      "types": [
-        "folio-assistant-core:Table",
-        "doco:Table"
-      ],
-      "kind": "table",
-      "title": "",
-      "pageStart": 39,
-      "pageEnd": 39,
-      "target": "../tables/table-27.csv",
-      "narrative": null,
-      "content": null,
       "truncated": false,
       "provenance": "ingested",
       "summary": null
@@ -1315,7 +1026,7 @@
       }
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-028",
+      "id": "library/9789240101197-eng/blocks/table-011",
       "types": [
         "folio-assistant-core:Table",
         "doco:Table"
@@ -1324,7 +1035,7 @@
       "title": "",
       "pageStart": 42,
       "pageEnd": 42,
-      "target": "../tables/table-28.csv",
+      "target": "../tables/table-11.csv",
       "narrative": null,
       "content": null,
       "truncated": false,
@@ -1366,7 +1077,7 @@
       "summary": null
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-029",
+      "id": "library/9789240101197-eng/blocks/table-012",
       "types": [
         "folio-assistant-core:Table",
         "doco:Table"
@@ -1375,7 +1086,7 @@
       "title": "",
       "pageStart": 43,
       "pageEnd": 43,
-      "target": "../tables/table-29.csv",
+      "target": "../tables/table-12.csv",
       "narrative": null,
       "content": null,
       "truncated": false,
@@ -1410,23 +1121,6 @@
       }
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-030",
-      "types": [
-        "folio-assistant-core:Table",
-        "doco:Table"
-      ],
-      "kind": "table",
-      "title": "",
-      "pageStart": 44,
-      "pageEnd": 44,
-      "target": "../tables/table-30.csv",
-      "narrative": null,
-      "content": null,
-      "truncated": false,
-      "provenance": "ingested",
-      "summary": null
-    },
-    {
       "id": "library/9789240101197-eng/blocks/figure-vfig-p045",
       "types": [
         "folio-assistant-core:Figure",
@@ -1444,7 +1138,7 @@
       "summary": null
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-031",
+      "id": "library/9789240101197-eng/blocks/table-013",
       "types": [
         "folio-assistant-core:Table",
         "doco:Table"
@@ -1453,7 +1147,7 @@
       "title": "Table 2 provides illustrative considerations for each building block to help ensure successful DHSC implementation.",
       "pageStart": 45,
       "pageEnd": 45,
-      "target": "../tables/table-31.csv",
+      "target": "../tables/table-13.csv",
       "narrative": null,
       "content": null,
       "truncated": false,
@@ -1461,7 +1155,7 @@
       "summary": null
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-032",
+      "id": "library/9789240101197-eng/blocks/table-014",
       "types": [
         "folio-assistant-core:Table",
         "doco:Table"
@@ -1470,7 +1164,7 @@
       "title": "Table 2. Illustrative implementation considerations for the DHSC",
       "pageStart": 46,
       "pageEnd": 46,
-      "target": "../tables/table-32.csv",
+      "target": "../tables/table-14.csv",
       "narrative": null,
       "content": null,
       "truncated": false,
@@ -1576,7 +1270,7 @@
       }
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-033",
+      "id": "library/9789240101197-eng/blocks/table-015",
       "types": [
         "folio-assistant-core:Table",
         "doco:Table"
@@ -1585,7 +1279,7 @@
       "title": "Table 3. Illustrative cost drivers of DHSC implementation",
       "pageStart": 50,
       "pageEnd": 50,
-      "target": "../tables/table-33.csv",
+      "target": "../tables/table-15.csv",
       "narrative": null,
       "content": null,
       "truncated": false,
@@ -1620,7 +1314,7 @@
       }
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-034",
+      "id": "library/9789240101197-eng/blocks/table-016",
       "types": [
         "folio-assistant-core:Table",
         "doco:Table"
@@ -1629,7 +1323,7 @@
       "title": "",
       "pageStart": 51,
       "pageEnd": 52,
-      "target": "../tables/table-34.csv",
+      "target": "../tables/table-16.csv",
       "narrative": null,
       "content": null,
       "truncated": false,
@@ -1745,23 +1439,6 @@
       }
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-035",
-      "types": [
-        "folio-assistant-core:Table",
-        "doco:Table"
-      ],
-      "kind": "table",
-      "title": "",
-      "pageStart": 54,
-      "pageEnd": 54,
-      "target": "../tables/table-35.csv",
-      "narrative": null,
-      "content": null,
-      "truncated": false,
-      "provenance": "ingested",
-      "summary": null
-    },
-    {
       "id": "library/9789240101197-eng/blocks/figure-vfig-p055",
       "types": [
         "folio-assistant-core:Figure",
@@ -1867,23 +1544,6 @@
       "summary": null
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-036",
-      "types": [
-        "folio-assistant-core:Table",
-        "doco:Table"
-      ],
-      "kind": "table",
-      "title": "",
-      "pageStart": 59,
-      "pageEnd": 59,
-      "target": "../tables/table-36.csv",
-      "narrative": null,
-      "content": null,
-      "truncated": false,
-      "provenance": "ingested",
-      "summary": null
-    },
-    {
       "id": "library/9789240101197-eng/blocks/prose-sec-029",
       "types": [
         "folio-assistant-core:Prose",
@@ -1928,23 +1588,6 @@
       "summary": null
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-037",
-      "types": [
-        "folio-assistant-core:Table",
-        "doco:Table"
-      ],
-      "kind": "table",
-      "title": "",
-      "pageStart": 61,
-      "pageEnd": 61,
-      "target": "../tables/table-37.csv",
-      "narrative": null,
-      "content": null,
-      "truncated": false,
-      "provenance": "ingested",
-      "summary": null
-    },
-    {
       "id": "library/9789240101197-eng/blocks/figure-vfig-p062",
       "types": [
         "folio-assistant-core:Figure",
@@ -1962,7 +1605,7 @@
       "summary": null
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-038",
+      "id": "library/9789240101197-eng/blocks/table-017",
       "types": [
         "folio-assistant-core:Table",
         "doco:Table"
@@ -1971,7 +1614,7 @@
       "title": "",
       "pageStart": 62,
       "pageEnd": 62,
-      "target": "../tables/table-38.csv",
+      "target": "../tables/table-17.csv",
       "narrative": null,
       "content": null,
       "truncated": false,
@@ -2023,23 +1666,6 @@
       "summary": null
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-039",
-      "types": [
-        "folio-assistant-core:Table",
-        "doco:Table"
-      ],
-      "kind": "table",
-      "title": "",
-      "pageStart": 64,
-      "pageEnd": 64,
-      "target": "../tables/table-39.csv",
-      "narrative": null,
-      "content": null,
-      "truncated": false,
-      "provenance": "ingested",
-      "summary": null
-    },
-    {
       "id": "library/9789240101197-eng/blocks/prose-sec-031",
       "types": [
         "folio-assistant-core:Prose",
@@ -2067,7 +1693,7 @@
       }
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-040",
+      "id": "library/9789240101197-eng/blocks/table-018",
       "types": [
         "folio-assistant-core:Table",
         "doco:Table"
@@ -2076,7 +1702,7 @@
       "title": "",
       "pageStart": 65,
       "pageEnd": 65,
-      "target": "../tables/table-40.csv",
+      "target": "../tables/table-18.csv",
       "narrative": null,
       "content": null,
       "truncated": false,
@@ -2109,23 +1735,6 @@
         },
         "draftedAt": "2026-11-14"
       }
-    },
-    {
-      "id": "library/9789240101197-eng/blocks/table-041",
-      "types": [
-        "folio-assistant-core:Table",
-        "doco:Table"
-      ],
-      "kind": "table",
-      "title": "",
-      "pageStart": 66,
-      "pageEnd": 66,
-      "target": "../tables/table-41.csv",
-      "narrative": null,
-      "content": null,
-      "truncated": false,
-      "provenance": "ingested",
-      "summary": null
     },
     {
       "id": "library/9789240101197-eng/blocks/prose-sec-033",
@@ -2182,7 +1791,7 @@
       }
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-042",
+      "id": "library/9789240101197-eng/blocks/table-019",
       "types": [
         "folio-assistant-core:Table",
         "doco:Table"
@@ -2191,7 +1800,7 @@
       "title": "",
       "pageStart": 68,
       "pageEnd": 68,
-      "target": "../tables/table-42.csv",
+      "target": "../tables/table-19.csv",
       "narrative": null,
       "content": null,
       "truncated": false,
@@ -2253,7 +1862,7 @@
       }
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-043",
+      "id": "library/9789240101197-eng/blocks/table-020",
       "types": [
         "folio-assistant-core:Table",
         "doco:Table"
@@ -2262,7 +1871,7 @@
       "title": "",
       "pageStart": 70,
       "pageEnd": 70,
-      "target": "../tables/table-43.csv",
+      "target": "../tables/table-20.csv",
       "narrative": null,
       "content": null,
       "truncated": false,
@@ -2297,7 +1906,7 @@
       }
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-044",
+      "id": "library/9789240101197-eng/blocks/table-021",
       "types": [
         "folio-assistant-core:Table",
         "doco:Table"
@@ -2306,7 +1915,7 @@
       "title": "",
       "pageStart": 71,
       "pageEnd": 71,
-      "target": "../tables/table-44.csv",
+      "target": "../tables/table-21.csv",
       "narrative": null,
       "content": null,
       "truncated": false,
@@ -2341,7 +1950,7 @@
       }
     },
     {
-      "id": "library/9789240101197-eng/blocks/table-045",
+      "id": "library/9789240101197-eng/blocks/table-022",
       "types": [
         "folio-assistant-core:Table",
         "doco:Table"
@@ -2350,7 +1959,7 @@
       "title": "",
       "pageStart": 72,
       "pageEnd": 76,
-      "target": "../tables/table-45.csv",
+      "target": "../tables/table-22.csv",
       "narrative": null,
       "content": null,
       "truncated": false,

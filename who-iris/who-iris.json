@@ -371,10 +371,10 @@
     "registry",
     "packages"
   ],
-  "sourceCommit": "https://github.com/litlfred/who-iris/commit/9bcbb5380390ae7408b013a334c3c5ef866d50d3",
-  "sourceCommitSha": "9bcbb5380390ae7408b013a334c3c5ef866d50d3",
-  "sourceTree": "5081d32b0f2e150ec194d2a0e27d7483788fb56a",
-  "sourceCommitAt": "2026-11-15T02:13:32+01:00",
+  "sourceCommit": "https://github.com/litlfred/who-iris/commit/94a15b9d29b817c9d59fd4d0cc2baff7f0286112",
+  "sourceCommitSha": "94a15b9d29b817c9d59fd4d0cc2baff7f0286112",
+  "sourceTree": "7a96d647430aefb71d618a00f745eb3e97b61166",
+  "sourceCommitAt": "2026-11-15T02:42:20+01:00",
   "sourceTreeDirty": true,
   "dependsOnUnavailable": "this instance declares no `canonicalUrl`, and §3.4's record is `{packageId, version, uri}` — `canonicalUrl` is what plays `uri`, so the record cannot be expressed rather than being withheld on purpose",
   "counts": {
@@ -2533,7 +2533,7 @@
       ],
       "description": "The IRIS items this instance holds rather than merely names. The three worked examples are `wpr-rdo-2020-003-eng` (the WPRO publication style guide, and the worked example whose full DSpace item record drives the `iris-dspace` skill), `who-pub-tps-931` and `9789241548960-eng`. On 2026-10-30 (who-iris#107, the owner's \"pre-CDN preview\") every IRIS library the harness layers had ingested moved in beside them: twelve from the DAK layer (https://github.com/litlfred/smart-base; digital health guidance such as DIIG, the two classifications of digital interventions and the digital transformation handbooks) and three from the immunizations IG (the IMMZ DAK, 9789240016514 and DDCC:VS). Those layers now cite them as `{instance: \"who-iris\"}`. They are the `materialized` end of the catalogue -- every other node under `catalogue/nodes/` is `referenced`, and the entries here are what a materialization actually looks like. `milnorlink` is NOT here and never was an IRIS item; it went to folio-assistant-sci (bean r1lz). The id is `library`, the CONVENTIONAL one, so this entry OVERRIDES the default rather than joining it: overrides match on id and never on path, so a distinct id at the same path yields two entries for one directory and every fan-out consumer scans it twice. Measured while doing exactly that.",
       "readmePath": "library/README.md",
-      "fileCount": 35384,
+      "fileCount": 35304,
       "inSubgraph": "https://litlfred.github.io/who-iris/who-iris/directory/library",
       "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/directory/library"
     },
@@ -2605,7 +2605,7 @@
       ],
       "description": "The WHO glossary: folio-glossary/v1 schemes of terms the WHO publications use under more than one name -- a HOUSE rule about wording, like the style-guide voices under skills/voices/ (bean ftu0). An alternative label is recorded only where a publication STATES the equivalence, and each term cites that sentence in this instance's own library; a count or a latent-semantic cosine is never the evidence. The scheme's source is the who-guideline-development voice, so its terms are minted in this instance's namespace. Rendered on the glossary/ page and checked by check:glossary, both of which read every instance's declared glossary directory.",
       "readmePath": "glossary/README.md",
-      "fileCount": 7,
+      "fileCount": 10,
       "inSubgraph": "https://litlfred.github.io/who-iris/who-iris/directory/glossary",
       "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/directory/glossary"
     },
@@ -2711,7 +2711,7 @@
       ],
       "description": "The reference lists of the held IRIS documents, one `folio-reference/v1` node per cited work. Owner, 2026-11-11: \"i want all who-iris docs that have references put into their own biblio\". Written by the Tool `references-extract` (step `Task_References` of folio-assistant-core's `ingest-build-l1-kg.bpmn`) from each library entry's L1 sections: keyed `<doc-id>.<section>.<n>`, `provenance: extracted`, `derivedFrom` the section file, `printed` the entry verbatim. The bibliography page lists them under the document they came from (`bibliography/library/<doc-id>/`). Regenerated, not hand-edited: re-run the tool after a section is re-derived.",
       "readmePath": "references/README.md",
-      "fileCount": 7082,
+      "fileCount": 7107,
       "inSubgraph": "https://litlfred.github.io/who-iris/who-iris/directory/who-iris-references",
       "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/directory/who-iris-references"
     },
