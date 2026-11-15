@@ -27,7 +27,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/folio-assistant-core",
-          "ref": "b90a5b9f59dc487109ec50c4e97a620e3e669e9d",
+          "ref": "aceae1937c9af784c8c0af6a60a1d7192cdd5e2a",
           "overrides": {
             "folio-assistant-core": {
               "whole": true
@@ -42,9 +42,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-14",
-              "ref": "b90a5b9f59dc487109ec50c4e97a620e3e669e9d",
-              "evidence": "owner litlfred, 2026-11-14 ~05:50Z and 13 Nov ~20:56Z, in Claude Code session https://claude.ai/code/session_01VQDpPffYARDQ8juksAZScf: 'send to you as merge manager to handle merge AND repin'; 'A. Renew 6h + re-pin' (every layer at main); needed so the merge-guard caller can pin tools >= #2118"
+              "on": "2026-11-15",
+              "ref": "aceae1937c9af784c8c0af6a60a1d7192cdd5e2a",
+              "evidence": "Re-pin core to aceae1937c9af784c8c0af6a60a1d7192cdd5e2a (core#808 summaries + core#812 search index, owner cards Q-BIBSCALE-1/2 = A)"
             }
           }
         }
@@ -55,7 +55,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness",
-          "ref": "78f1f0291e8b2a1aae4fde2cfee80b97848b9538",
+          "ref": "2e959408e5a8167460fb9566933be299a17f0d8d",
           "overrides": {
             "cat-harness": {
               "whole": true
@@ -70,9 +70,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-14",
-              "ref": "78f1f0291e8b2a1aae4fde2cfee80b97848b9538",
-              "evidence": "owner litlfred, 2026-11-14 ~05:50Z and 13 Nov ~20:56Z, in Claude Code session https://claude.ai/code/session_01VQDpPffYARDQ8juksAZScf: 'send to you as merge manager to handle merge AND repin'; 'A. Renew 6h + re-pin' (every layer at main); needed so the merge-guard caller can pin tools >= #2118"
+              "on": "2026-11-15",
+              "ref": "2e959408e5a8167460fb9566933be299a17f0d8d",
+              "evidence": "Re-pin harnesses to current mains with core aceae193 (freshness rule)"
             }
           }
         }
@@ -83,7 +83,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "6cfc8ed0f7826d9e723e206218a16d689673a97f",
+          "ref": "4a327002b281634e80312ee18af6c501cd47f95b",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -95,9 +95,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-14",
-              "ref": "6cfc8ed0f7826d9e723e206218a16d689673a97f",
-              "evidence": "owner litlfred, 2026-11-14 ~05:50Z and 13 Nov ~20:56Z, in Claude Code session https://claude.ai/code/session_01VQDpPffYARDQ8juksAZScf: 'send to you as merge manager to handle merge AND repin'; 'A. Renew 6h + re-pin' (every layer at main); needed so the merge-guard caller can pin tools >= #2118"
+              "on": "2026-11-15",
+              "ref": "4a327002b281634e80312ee18af6c501cd47f95b",
+              "evidence": "Re-pin harnesses to current mains with core aceae193 (freshness rule)"
             }
           }
         }
