@@ -136,12 +136,8 @@ strategy) is also presented in evidence profiles
 generally in sections 2.2 and 2.3 for each 
 recommendation, according to age). The quality 
 of the evidence or confidence in the effect 
-estimates was assessed as high 
-, 
-moderate 
-, low 
-, or very low 
-, according to the GRADE criteria. 
+estimates was assessed as high ⊕⊕⊕⊕ , 
+moderate ⊕⊕⊕⊖ , low ⊕⊕⊖⊖ , or very low ⊕⊖⊖⊖ , according to the GRADE criteria. 
 Tables to facilitate decision-making for 
 recommendations (evidence-to-recommendations 
 tables) were produced for each recommendation. 
