@@ -27,7 +27,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/folio-assistant-core",
-          "ref": "7d175a59dcfc25e755fdc5e47327b82fd5f4a40d",
+          "ref": "6e996c79aa9e36991cd46106383a237ca68b75d8",
           "overrides": {
             "folio-assistant-core": {
               "whole": true
@@ -43,8 +43,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-15",
-              "ref": "7d175a59dcfc25e755fdc5e47327b82fd5f4a40d",
-              "evidence": "owner litlfred, 2026-11-15 17:50Z, decision card 'Re-pin who-iris to current mains, merge on green and publish?' option A 'Re-pin, merge on green, publish' (project thread cmsg_017WNUkNK8kdDziPK58Pv6G92pvwMqVLKEkd1j4fMabEkn); brings cat-harness-tools#2301/#2314 and core#814 (bibliography on the who-iris site, generic reference pages off)"
+              "ref": "6e996c79aa9e36991cd46106383a237ca68b75d8",
+              "evidence": "owner litlfred, 2026-11-15 17:50Z, decision card 'Re-pin who-iris to current mains, merge on green and publish?' option A 'Re-pin, merge on green, publish' (project thread cmsg_017WNUkNK8kdDziPK58Pv6G92pvwMqVLKEkd1j4fMabEkn); brings cat-harness-tools#2301/#2314 and core#814 (bibliography on the who-iris site, generic reference pages off); after the transfer to WorldHealthOrganization/who-iris, owner litlfred 2026-11-15 19:34Z decision card 'Merge who-iris#298 on the WHO repo once fully green?' option A 'Yes, merge on green, publish' (project thread cmsg_017WNUkNK8kdDziPK58Pv6G91VwoCHQoCrzUShiRb2CFC5); re-seeded to mains at push time (core#818)"
             }
           }
         }
@@ -83,7 +83,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "372d6ae6d78ae628adc18bfe57e37baf3e4cc01a",
+          "ref": "2d30ca6540e2587768323620735f4cfe90b57efc",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -96,8 +96,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-15",
-              "ref": "372d6ae6d78ae628adc18bfe57e37baf3e4cc01a",
-              "evidence": "owner litlfred, 2026-11-15 17:50Z, decision card 'Re-pin who-iris to current mains, merge on green and publish?' option A 'Re-pin, merge on green, publish' (project thread cmsg_017WNUkNK8kdDziPK58Pv6G92pvwMqVLKEkd1j4fMabEkn); brings cat-harness-tools#2301/#2314 and core#814 (bibliography on the who-iris site, generic reference pages off)"
+              "ref": "2d30ca6540e2587768323620735f4cfe90b57efc",
+              "evidence": "owner litlfred, 2026-11-15 17:50Z, decision card 'Re-pin who-iris to current mains, merge on green and publish?' option A 'Re-pin, merge on green, publish' (project thread cmsg_017WNUkNK8kdDziPK58Pv6G92pvwMqVLKEkd1j4fMabEkn); brings cat-harness-tools#2301/#2314 and core#814 (bibliography on the who-iris site, generic reference pages off); after the transfer to WorldHealthOrganization/who-iris, owner litlfred 2026-11-15 19:34Z decision card 'Merge who-iris#298 on the WHO repo once fully green?' option A 'Yes, merge on green, publish' (project thread cmsg_017WNUkNK8kdDziPK58Pv6G91VwoCHQoCrzUShiRb2CFC5); re-seeded to mains at push time (core#818)"
             }
           }
         }
