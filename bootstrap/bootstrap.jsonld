@@ -87,8 +87,8 @@
   "title": "Bootstrap",
   "description": "The graph an agent reads before it knows what this repository is.",
   "versionInfo": "0.1.1",
-  "generatedAtTime": "2026-11-15T11:40:39.533Z",
-  "wasDerivedFrom": "git:6ae868df1e15b9be6d3721bda5c9d071bb9ea000",
+  "generatedAtTime": "2026-11-15T11:51:27.504Z",
+  "wasDerivedFrom": "git:914723bc595a5786b4340549819658c5c0af1bbb",
   "@graph": [
     {
       "@id": "https://litlfred.github.io/who-iris/bootstrap/asset/agent-instructions",
