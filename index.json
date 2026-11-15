@@ -87,7 +87,7 @@
       "subgraph": "https://litlfred.github.io/bootstrap/subgraph/",
       "nodes": 170,
       "bytes": 107858,
-      "sha256": "1dcf97c614856e70ecba69732c47cf862752e15655cd366c2106ee9f75d6577a"
+      "sha256": "635b665d0911bb885871178c5f55448cb4c81390e58c92118df9555abcbb32b3"
     },
     {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/bootstrap-tools/bootstrap-tools.jsonld",
@@ -141,7 +141,7 @@
       "subgraph": "https://litlfred.github.io/bootstrap-tools/subgraph/",
       "nodes": 50,
       "bytes": 69680,
-      "sha256": "d699a5f858beb2e2de225974e85c991d252030f12018df6b23df8a8e23059317"
+      "sha256": "c35cdba0b76ce64617bd02630e87630a2702ce3829da4a3f956c205e0217676d"
     },
     {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
@@ -493,7 +493,7 @@
       "subgraph": "https://litlfred.github.io/folio-assistant/subgraph/cat-harness/",
       "nodes": 3558,
       "bytes": 4155678,
-      "sha256": "78a7e73ee8193fa3da247bc94b7a237530b3f933baf4bb12b935799e40958268"
+      "sha256": "4bd3de1bfff64f6f12783655dcf8a8743431f7ec774c30a700634d395d89b968"
     },
     {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness-tools.jsonld",
@@ -685,7 +685,7 @@
       "subgraph": "https://litlfred.github.io/folio-assistant/subgraph/cat-harness-tools/",
       "nodes": 238,
       "bytes": 269358,
-      "sha256": "e9a14a7c188a65b05452a613f9980a46b4d6089919bf74b6e055ac85f96475dc"
+      "sha256": "bb38ff5f594910b24aaef17f80cb822af744b4bfe5f867f72c93ef9be8425403"
     },
     {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
@@ -930,7 +930,7 @@
       "subgraph": "https://litlfred.github.io/folio-assistant/subgraph/folio-assistant-core/",
       "nodes": 1042,
       "bytes": 1255918,
-      "sha256": "f160f8e4ea04115cf9ab6355be0a3ec8a0af6222c6ea73f3ea19f1cb520c9e61"
+      "sha256": "d5620cf47a2a843653adb3b8edd5788849d289cc87dc1780453072dc4036c495"
     },
     {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/who-iris/who-iris.jsonld",
@@ -1089,7 +1089,7 @@
       "subgraph": "https://litlfred.github.io/folio-assistant/subgraph/who-iris/",
       "nodes": 174,
       "bytes": 197009,
-      "sha256": "9be6d15767862c72b8081274d508600ffb6b9196e93c85c1a6c49bcee86fb1f1"
+      "sha256": "b40f2315aad1dd6e4d5fa2b2ffe676c2e859dcffa04b18a6ef2ab3c3b1ce2ea8"
     }
   ]
 }
