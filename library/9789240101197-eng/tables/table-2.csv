@@ -1,81 +1,12 @@
-I,NTRODUCTION,,STRATEGY,ARCHITECTURE IMPLEMENTATION TRACEABILITY COUNTRY EXAMPLES ANN,EXE
-,,,,,
-C,onten,ts,,,
-,,,,,
-A,cknowledge,men,ts,,iv
-,,,,,
-A,bbreviation,s and,acronyms,,v
-,,,,,
-G,lossary,,,,vi
-,,,,,
-In,troduction,,,,1
-,,,,,
-C,hapter 1. De,finin,g a holistic DH,SC strategy,9
-,,,,,
-,Why is a strate,gy ne,cessary?,,10
-,,,,,
-,Step 1. Identif,y and e,ngage all relevant,stakeholders,12
-,,,,,
-,Step 2. Analys,e the c,urrent state of HSC,ISs,13
-,,,,,
-,Step 3. Define,the DH,SC vision and stra,tegic goals and objectives,14
-,,,,,
-,Step 4. Define,a strat,egic roadmap and,performance indicators,15
-,,,,,
-C,hapter 2. De,finin,g the DHSC ar,chitecture,17
-,,,,,
-,Is a DHSC arch,itectu,re necessary?,,18
-,,,,,
-,What are the r,isks of,forgoing a DHSC,architecture?,18
-,,,,,
-,Step 1. Assess,the cu,rrent state of HSCI,Ss,20
-,,,,,
-,Step 2. Define,a targe,t DHSC architectu,re,22
-,,,,,
-,DHSC architec,ture fr,amework,,22
-,,,,,
-,Illustrative arc,hitect,ural approaches a,nd governance options,25
-,,,,,
-,Step 3. Identif,y impl,ementation activit,ies and map them to strategic goals,32
-,,,,,
-C,hapter 3. Pl,annin,g for scalable,implementation and sustainable operations,34
-,,,,,
-,Step 1. Plan th,e impl,ementation of eac,h DHSC intervention,37
-,,,,,
-,Step 2. Develo,p an o,perational plan for,each DHSC intervention,38
-,,,,,
-,Step 3. Develo,p a bu,dget for each DHS,C intervention,39
-,,,,,
-,Step 4. Implem,ent e,ach DHSC interven,tion,41
-,,,,,
-C,hapter 4. Us,ing t,he DHSC to im,plement traceability,43
-,,,,,
-,What is tracea,bility?,,,44
-,,,,,
-,Why is traceab,ility i,mportant?,,44
-,,,,,
-,Traceability m,odels,,,44
-,,,,,
-C,hapter 5. Co,untr,y examples,,47
-,,,,,
-,Ethiopia’s DH,SC init,iative,,48
-,,,,,
-,Malawi’s DHS,C initia,tive,,50
-,,,,,
-,Rwanda’s DHS,C initi,ative,,53
-,,,,,
-R,eferences,,,,55
-,,,,,
-A,nnex 1. Prin,ciple,s for digital de,velopment,56
-,,,,,
-A,nnex 2. Stee,ring,committee exa,mple structure,57
-,,,,,
-A,nnex 3. Tem,plate,for prioritizin,g DHSC challenges to address,58
-,,,,,
-A,nnex 4. Illus,trati,ve template th,at maps today’s challenges to future outcomes,59
-,,,,,
-A,nnex 5. Tem,plate,for listing hea,lth supply chain information systems,60
-,,,,,
-A,nnex 6. Risk,regi,ster template,,61
-,,,,,
-A,nnex 7. Res,ource,matrix for DH,SC implementation,62
+,,,,,tneilC,Yes Start A f r a r c iv il e it y at t S c h o e e m l f h - 1 m c o 3 a m u . r n e e i t i o y n r r W et o 1 u m 4 rn . a s n ? No End,,,,,,,,,,
+,,,,,,,,,,,,,13. Self-care in the home or community,,,
+tneilC Arrive at facility Start 3. Confirm Not pregnant pregnancy ytilicaf No Refer to other sexu Pregnant htlaeH 1.Rapid 2.Danger assessment A. signs 4. and 5.Quic rekrow Registration needing First management check referral? contact? (RAM) htlaeH Yes N C.Antenatal care (ANC) referral,,,,,,,,,,,,,,,,Yes 13. 14. Self-care in Woman No the home or returns? community End
+,,,,ytilicaf htlaeH,rekrow,A Regis,"3. Confirm Not pregnant No pregnancy Refer to other sexual and reproductive health services tr . ation m as a 1 s ( n . e R a a R s A g n s a e M d m p m i ) e d e n n t t 2 r n . e e s D fe i e g a r d n n r i a s n g l g e ? r Pregnant co F n 4 i t r a . s c t t? 5 c . h Q e u c i k ck First contact w p C h r o o i o m s 6 f l t i l o l a . e e r n c y a ’ t s nd 1 1 0 0 c . . o 1 C u B n o e s u h e n a l s li v e n i l o g li u n r g, in-fa P c s h il y y it m s y 1 i o p 0 m l t . o o 2 a g m n i a c s a g l ement a c n 1 o d 0 u . n t 3 r s e e D a l t i l m e in t g ent Sche 1 N d 2 o u . ling",,,,,,,,,
+,,al,htlaeH and reproductive First contac,,htlaeH,,counselling ANC assessment 10.6 Risk Yes C.Antenatal care (ANC) referral Not first contact an s d 7 y . m fo C p l h l t o o e w m c - k s up C ph e o y x n 8 s a d . i m u ca ct l 9 l t a . e im b C s o t a o s r g n a a i d t n o n u g r d c y t 1 a 0 n . d 4 t D re ia a g tm no e s n i t s su 1 p 0 p .5 le N m u e t n ri t t a io ti n on r c e o g d u e u n n c s t e e io r l a l n in l a g nd Immu 1 n 0 iz .7 ations pa 1 c r 0 t o n .8 u e n r In s v t e i i o m ll l i e n a n g te ce 1 c 0 o p a . u 9 r n n o d D s p e e m h l w y l a i l n o a la g r x m r i a i s a i n n d g,10.4 Diagnosis and treatment 10.7 Immunizations,,counselling 10.6 Risk 10.5 Nutrition reduction and supplementation general counselling,,11. Referral Yes needed? C.ANC referral,,,,
+,,,,,,,,,10.7 Immunizations,10.8 Intimate partner violence counselling,10.9 Deworming and malaria counselling and prophylaxis,,,,,
+,,,,,,,health services,,,,,,,,,
+,,,,,,,"10.Counselling, in-facility management and treatment 6. Collect 10.2 t woman’s 10.1 Behaviour Physiological 10.3 Diet profile and counselling symptoms counselling history counselling ANC assessment 10.6 Risk 8. 9.Conduct 10.4 Diagnosis 10.5 Nutrition reduction and 7.Check Conduct laboratory and treatment supplementation general symptoms physical tests and counselling and follow-up exam imaging 10.8 Intimate 10.9 Deworming 10.7 partner violence and malaria Immunizations counselling counselling and prophylaxis",,,,,,,,ch,
+,,k,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,R ne,
+,,,,,,,,,,,,,,,,
+,,ot,,,,,,,,,,,,,,

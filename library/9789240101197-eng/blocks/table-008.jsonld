@@ -13,22 +13,14 @@
   ],
   "kind": "table",
   "label": "Table 8",
-  "title": "Fig.",
   "file": "../tables/table-8.csv",
   "headers": [
-    "Fig 3. Digital heal",
-    "th supp",
-    "ly chain",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
+    "Potential risks",
+    "Mitigation strategies"
   ],
-  "pageStart": 13,
-  "pageEnd": 13,
-  "derivedFrom": "library/9789240101197-eng/sections/sec-003",
+  "pageStart": 30,
+  "pageEnd": 30,
+  "derivedFrom": "library/9789240101197-eng/sections/sec-012",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/9789240101197-eng",
   "provenance": "ingested"
 }

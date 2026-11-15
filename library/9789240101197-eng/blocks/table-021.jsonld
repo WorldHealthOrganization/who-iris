@@ -15,16 +15,22 @@
   "label": "Table 21",
   "file": "../tables/table-21.csv",
   "headers": [
-    "Digital and nondigital data sets sourced fro processes that systematically record informat within health institutions and facilities (e.g., Service Availabi and Readiness Assessment)",
-    "m io li",
-    "t",
-    "n y",
-    "",
-    "Data tools that are used to facilitate decision- making"
+    "#",
+    "Risk title",
+    "Description",
+    "Priority",
+    "Impact",
+    "Prob- ability",
+    "Status",
+    "Mitigation steps",
+    "Owner",
+    "Raised",
+    "Reviewed",
+    "Closed"
   ],
-  "pageStart": 33,
-  "pageEnd": 33,
-  "derivedFrom": "library/9789240101197-eng/sections/sec-015",
+  "pageStart": 71,
+  "pageEnd": 71,
+  "derivedFrom": "library/9789240101197-eng/sections/sec-036",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/9789240101197-eng",
   "provenance": "ingested"
 }
