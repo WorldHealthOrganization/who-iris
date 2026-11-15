@@ -108,6 +108,11 @@
                   "json-schema",
                   "fhir-logical",
                   "fhir-profile",
+                  "owl-class",
+                  "rdfs-class",
+                  "rdf-property-set",
+                  "moddle-class",
+                  "moddle-enum",
                   "undetermined"
                 ]
               },
@@ -203,7 +208,11 @@
                   "json-schema",
                   "fhir",
                   "fhir:profile",
-                  "skill"
+                  "skill",
+                  "owl",
+                  "rdfs",
+                  "rdf",
+                  "moddle"
                 ]
               },
               "canonical": {

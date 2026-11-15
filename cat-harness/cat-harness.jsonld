@@ -367,10 +367,10 @@
   ],
   "canonicalDocument": "https://litlfred.github.io/folio-assistant/cat-harness/cat-harness.jsonld",
   "repository": "cat-harness",
-  "sourceCommit": "https://github.com/litlfred/who-iris/commit/da02cdfd0156b084043e98aa46589a90ea279067",
-  "sourceCommitSha": "da02cdfd0156b084043e98aa46589a90ea279067",
-  "sourceTree": "9f6218980651b9f08688409247b57152872179d5",
-  "sourceCommitAt": "2026-11-15T15:05:16+01:00",
+  "sourceCommit": "https://github.com/litlfred/who-iris/commit/6daa42c482bcabda42ee590d5db115f6f4e7e64f",
+  "sourceCommitSha": "6daa42c482bcabda42ee590d5db115f6f4e7e64f",
+  "sourceTree": "6dcc7f0d0253000eea32c866aa363401a2507824",
+  "sourceCommitAt": "2026-11-15T15:59:07+01:00",
   "sourceTreeDirty": true,
   "dependsOnUnavailable": "1 dependency edge(s), none expressible as a record — see gaps",
   "counts": {
@@ -3452,7 +3452,7 @@
         "https://litlfred.github.io/who-iris/cat-harness/package/sdlc-core"
       ],
       "instructionsPath": "sdlc/skills/sdlc-core/prepare-merge.md",
-      "instructionLines": 557,
+      "instructionLines": 623,
       "hasInstructions": true,
       "hasIOContract": false,
       "ambiguous": false,
@@ -3469,7 +3469,7 @@
         "https://litlfred.github.io/who-iris/cat-harness/package/sdlc-core"
       ],
       "instructionsPath": "sdlc/skills/sdlc-core/pr-description.md",
-      "instructionLines": 156,
+      "instructionLines": 157,
       "hasInstructions": true,
       "hasIOContract": false,
       "ambiguous": false,
@@ -3503,7 +3503,7 @@
         "https://litlfred.github.io/who-iris/cat-harness/package/sdlc-core"
       ],
       "instructionsPath": "sdlc/skills/sdlc-core/merge-manager-watcher.md",
-      "instructionLines": 560,
+      "instructionLines": 694,
       "hasInstructions": true,
       "hasIOContract": false,
       "ambiguous": false,
@@ -3554,7 +3554,7 @@
         "https://litlfred.github.io/who-iris/cat-harness/package/sdlc-core"
       ],
       "instructionsPath": "sdlc/skills/sdlc-core/merge-queue.md",
-      "instructionLines": 1031,
+      "instructionLines": 1104,
       "hasInstructions": true,
       "hasIOContract": false,
       "ambiguous": false,
@@ -4432,12 +4432,13 @@
       "@id": "https://litlfred.github.io/who-iris/cat-harness/skill/html-rendering-qc",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Skill",
       "name": "html-rendering-qc",
-      "title": "HTML Rendering QC",
+      "title": "HTML rendering QC",
+      "description": "Check that a folio's content blocks render correctly as HTML on its published site, and report each defect with its source file and line. The generic half: what the HTML path is, which patterns break it, and how to look at the result. A content type adds its own rows through a refinement skill.",
       "inPackage": [
         "https://litlfred.github.io/who-iris/cat-harness/package/platform-ui"
       ],
       "instructionsPath": "platform-ui/skills/platform-ui/html-rendering-qc.md",
-      "instructionLines": 86,
+      "instructionLines": 63,
       "hasInstructions": true,
       "hasIOContract": false,
       "ambiguous": false,
@@ -33164,7 +33165,7 @@
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Process",
       "name": "Merge manager watch: wake, read the queue live, route",
       "summary": "The loop run by the session that holds the merge-steward lane (actor merge-manager, skill merge-manager-watcher): elected, appointed, or holding it for its own PRs only.",
-      "description": "The loop run by the session that holds the merge-steward lane (actor merge-manager, skill merge-manager-watcher): elected, appointed, or holding it for its own PRs only. Each wake reads the open PRs, the runner queue, main's verdict and the PR owners live, acknowledges merge requests within the heartbeat, and routes to the train, a direct merge, runner relief, a saturation meta-merge, a stalled-agent takeover, or a fixer for a red main in any harness repository (owner, 2026-11-10: \"That should be a part of merge manager (dispatch an agent to fix them)\", \"Add to process\"). Every merge waits for the owner's own OK, given in the merge manager's session as one card per batch (owner ruling, 2026-11-07, card Approvals, B). How a sibling finds or elects the merge manager and sends it a request is Process_MergeRequest.",
+      "description": "The loop run by the session that holds the merge-steward lane (actor merge-manager, skill merge-manager-watcher): elected, appointed, or holding it for its own PRs only. Each wake reads the open PRs, the runner queue, main's verdict and the PR owners live, acknowledges merge requests within the heartbeat, and routes to the train, a direct merge, runner relief, a saturation meta-merge, a stalled-agent takeover, or a fixer for a red main in any harness repository (owner, 2026-11-10: \"That should be a part of merge manager (dispatch an agent to fix them)\", \"Add to process\"). Every merge waits for the owner's own OK, given in the merge manager's session as one card per batch (owner ruling, 2026-11-07, card Approvals, B). How a sibling finds or elects the merge manager and sends it a request is Process_MergeRequest. Across dependent repositories the loop follows merge-manager-watcher §\"Merging across dependent repositories\" (owner, 2026-11-15): lowest dependency first, queued CI re-ordered the same way, batches per repository, a checkable stable point, content PRs (label content) kept out of the queue and the reports, one merge manager, full green for re-pins, reports at a fixed interval, a draft register, no idle agents, one card per owner question, approvals recorded durably, ignored repositories left out, and no state-branch commit from a sparse checkout. A lower repository never waits on a higher one, and a ready PR (merge-queue §\"What 'ready to merge' means\": the generic list, out of draft, no conflicts, CI green against its own dependencies with reds that also fail on main and are not its own excused, description complete, approvals given; then the cat-harness additions, content rule, hand-over label, merge:guard success, issue link, and pins with full tier for re-pins) merges in the same sweep, lowest dependency first.",
       "enforcement": "strict",
       "sourcePath": "sdlc/processes/merge-manager-watch.bpmn",
       "sourceUrl": "https://github.com/litlfred/cat-harness/blob/main/sdlc/processes/merge-manager-watch.bpmn",
@@ -42055,7 +42056,7 @@
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Process",
       "name": "Merge request: find or elect the merge manager",
       "summary": "The sibling's side of merging.",
-      "description": "The sibling's side of merging. A coding agent whose work depends on an unmerged PR stacks on it rather than waiting, and retargets when it lands. With a PR ready to merge it does not know whether a merge manager exists, so it checks: if one is active and live, it sends the six-line merge request; if none is, it elects one with its siblings by the fixed rule (a lone session is elected alone), the winner announcing itself to all and taking the lane. Only the merge manager merges and re-pins (owner rulings, 2026-11-13): no other session merges, and a PR green except for a re-pin is sent as repin+merge. Any agent may stall, the merge manager included: a request not acknowledged within the stall window sends the sibling to stalled-agent triage and a re-election without the stalled session. The merge manager's own loop is Process_MergeManagerWatch. Source: owner rulings, 2026-11-07 and 2026-11-13.",
+      "description": "The sibling's side of merging. A coding agent whose work depends on an unmerged PR stacks on it rather than waiting, and retargets when it lands. With a PR ready to merge it does not know whether a merge manager exists, so it checks: if one is active and live, it sends the six-line merge request; if none is, it elects one with its siblings by the fixed rule (a lone session is elected alone), the winner announcing itself to all and taking the lane. Only the merge manager merges and re-pins (owner rulings, 2026-11-13): no other session merges, and a PR green except for a re-pin is sent as repin+merge. Any agent may stall, the merge manager included: a request not acknowledged within the stall window sends the sibling to stalled-agent triage and a re-election without the stalled session. The merge manager's own loop is Process_MergeManagerWatch. Source: owner rulings, 2026-11-07 and 2026-11-13. Ready to merge is defined in merge-queue §\"What 'ready to merge' means\"; a ready PR merges at once, lowest dependency first, and a lower repository never waits on a higher one (owner, 2026-11-15).",
       "enforcement": "strict",
       "sourcePath": "sdlc/processes/merge-request.bpmn",
       "sourceUrl": "https://github.com/litlfred/cat-harness/blob/main/sdlc/processes/merge-request.bpmn",
@@ -60443,16 +60444,6 @@
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/attestation/folio-assistant-core/kg-qa/dsa/skills/dsa/dsa-catalogue-status"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/attestation/folio-assistant-core/kg-qa/dsa/skills/dsa/dsa-checksum",
-      "@type": "https://litlfred.github.io/cat-harness/v0/ns/QaAttestation",
-      "title": "kg-qa attestation: skill dsa-checksum",
-      "description": "The kg-qa judgements recorded for skill dsa-checksum (dsa/skills/dsa/dsa-checksum.md), each pinned to the hash it attested.",
-      "sourceKind": "kg-qa",
-      "sourcePath": "test/attestations/folio-assistant-core/kg-qa/dsa/skills/dsa/dsa-checksum.attestations.json",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/attestations",
-      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/attestation/folio-assistant-core/kg-qa/dsa/skills/dsa/dsa-checksum"
-    },
-    {
       "@id": "https://litlfred.github.io/who-iris/cat-harness/attestation/folio-assistant-core/kg-qa/dsa/skills/dsa/dsa-dcat-record",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/QaAttestation",
       "title": "kg-qa attestation: skill dsa-dcat-record",
@@ -60471,6 +60462,16 @@
       "sourcePath": "test/attestations/folio-assistant-core/kg-qa/dsa/skills/dsa/dsa-odrl-source.attestations.json",
       "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/attestations",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/attestation/folio-assistant-core/kg-qa/dsa/skills/dsa/dsa-odrl-source"
+    },
+    {
+      "@id": "https://litlfred.github.io/who-iris/cat-harness/attestation/folio-assistant-core/kg-qa/skills/content/folio-document-adapter/dsa-checksum",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/QaAttestation",
+      "title": "kg-qa attestation: skill dsa-checksum",
+      "description": "The kg-qa judgements recorded for skill dsa-checksum (skills/content/folio-document-adapter/dsa-checksum.md), each pinned to the hash it attested.",
+      "sourceKind": "kg-qa",
+      "sourcePath": "test/attestations/folio-assistant-core/kg-qa/skills/content/folio-document-adapter/dsa-checksum.attestations.json",
+      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/attestations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/attestation/folio-assistant-core/kg-qa/skills/content/folio-document-adapter/dsa-checksum"
     },
     {
       "@id": "https://litlfred.github.io/who-iris/cat-harness/attestation/folio-assistant-core/kg-qa/skills/library/cataloguing/ontologist",

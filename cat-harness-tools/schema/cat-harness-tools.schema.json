@@ -750,6 +750,9 @@
     "zod/index-config/IndexInstanceSchema": {
       "$ref": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/index-config/IndexInstanceSchema.schema.json"
     },
+    "zod/index-config/IndexLayerSchema": {
+      "$ref": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/index-config/IndexLayerSchema.schema.json"
+    },
     "zod/index-config/IndexSiteSchema": {
       "$ref": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/index-config/IndexSiteSchema.schema.json"
     },
