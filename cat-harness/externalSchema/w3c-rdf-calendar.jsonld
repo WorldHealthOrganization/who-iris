@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/externalSchema/w3c-rdf-calendar.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/externalSchema/w3c-rdf-calendar.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/externalSchema/w3c-rdf-calendar",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/externalSchema/w3c-rdf-calendar",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/ExternalSchema",
       "name": "w3c-rdf-calendar",
       "title": "RDF Calendar — an application of the Resource Description Framework to iCalendar Data",

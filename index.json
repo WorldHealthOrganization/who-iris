@@ -35,15 +35,15 @@
       "@container": "@set"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/index.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/index.jsonld",
   "@type": "https://litlfred.github.io/bootstrap/v0/ns/KnowledgeGraph",
   "hasHarness": [
     {
-      "@id": "https://litlfred.github.io/who-iris/bootstrap/bootstrap.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/bootstrap/bootstrap.jsonld",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Harness",
       "name": "bootstrap",
       "stub": "bootstrap",
-      "url": "https://litlfred.github.io/who-iris/bootstrap/bootstrap.jsonld",
+      "url": "https://WorldHealthOrganization.github.io/who-iris/bootstrap/bootstrap.jsonld",
       "title": "Bootstrap",
       "description": "The graph an agent reads before it knows what this repository is.",
       "version": "0.1.1",
@@ -86,20 +86,20 @@
       ],
       "subgraph": "https://litlfred.github.io/bootstrap/subgraph/",
       "nodes": 170,
-      "bytes": 99173,
-      "sha256": "c8412c8aa9e042d387fd45771febfc7141310897de95233ced946ef7905e2d71"
+      "bytes": 107858,
+      "sha256": "1dcf97c614856e70ecba69732c47cf862752e15655cd366c2106ee9f75d6577a"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/bootstrap-tools/bootstrap-tools.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/bootstrap-tools/bootstrap-tools.jsonld",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Harness",
       "name": "bootstrap-tools",
       "stub": "bootstrap-tools",
-      "url": "https://litlfred.github.io/who-iris/bootstrap-tools/bootstrap-tools.jsonld",
+      "url": "https://WorldHealthOrganization.github.io/who-iris/bootstrap-tools/bootstrap-tools.jsonld",
       "title": "Bootstrap tools",
       "description": "The Zod source of bootstrap's schemas, the generators that write bootstrap's JSON Schemas, schema page and READMEs, and the checks bootstrap's content must pass — runnable by an agent, with zod, liquidjs, Playwright and bpmn-js as its dependencies.",
       "version": "0.1.0",
       "dependsOn": [
-        "https://litlfred.github.io/who-iris/bootstrap/bootstrap.jsonld"
+        "https://WorldHealthOrganization.github.io/who-iris/bootstrap/bootstrap.jsonld"
       ],
       "directory": [
         {
@@ -140,20 +140,20 @@
       ],
       "subgraph": "https://litlfred.github.io/bootstrap-tools/subgraph/",
       "nodes": 50,
-      "bytes": 66230,
-      "sha256": "0b818ba13de1e16629758faa27af5760ccaf3da68e2b9c13315a03bb03ccd40c"
+      "bytes": 69680,
+      "sha256": "d699a5f858beb2e2de225974e85c991d252030f12018df6b23df8a8e23059317"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Harness",
       "name": "cat-harness",
       "stub": "cat-harness",
-      "url": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+      "url": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
       "title": "C@T Harness",
       "description": "computable adjudication and agentic test harness\n\ncaaat-harness\n\nca&at-harness\n\n.c&at-harness\n\n c@t-harness",
       "version": "0.1.0",
       "dependsOn": [
-        "https://litlfred.github.io/who-iris/bootstrap/bootstrap.jsonld"
+        "https://WorldHealthOrganization.github.io/who-iris/bootstrap/bootstrap.jsonld"
       ],
       "directory": [
         {
@@ -491,22 +491,22 @@
         }
       ],
       "subgraph": "https://litlfred.github.io/folio-assistant/subgraph/cat-harness/",
-      "nodes": 3557,
-      "bytes": 3856242,
-      "sha256": "c2470ed98a6a6d046837a61705143e2f2de1234e71d9256fe05e20d1015f77ed"
+      "nodes": 3558,
+      "bytes": 4155678,
+      "sha256": "78a7e73ee8193fa3da247bc94b7a237530b3f933baf4bb12b935799e40958268"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness-tools.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness-tools.jsonld",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Harness",
       "name": "cat-harness-tools",
       "stub": "cat-harness-tools",
-      "url": "https://litlfred.github.io/who-iris/cat-harness-tools/cat-harness-tools.jsonld",
+      "url": "https://WorldHealthOrganization.github.io/who-iris/cat-harness-tools/cat-harness-tools.jsonld",
       "title": "C@T Harness Tools",
       "description": "What implements the harness's Tool definitions: the MCP servers, their tool registrars and routes. Definitions stay in cat-harness; this layer runs them.",
       "version": "0.1.0",
       "dependsOn": [
-        "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
-        "https://litlfred.github.io/who-iris/bootstrap-tools/bootstrap-tools.jsonld"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
+        "https://WorldHealthOrganization.github.io/who-iris/bootstrap-tools/bootstrap-tools.jsonld"
       ],
       "directory": [
         {
@@ -684,21 +684,21 @@
       ],
       "subgraph": "https://litlfred.github.io/folio-assistant/subgraph/cat-harness-tools/",
       "nodes": 238,
-      "bytes": 269343,
-      "sha256": "15adc41c02161b22dd6aa4f3f3eca342bb874a7106706994192dbe3784977d83"
+      "bytes": 269358,
+      "sha256": "e9a14a7c188a65b05452a613f9980a46b4d6089919bf74b6e055ac85f96475dc"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Harness",
       "name": "folio-assistant-core",
       "stub": "folio-assistant-core",
-      "url": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+      "url": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
       "title": "Folio Assistant Core",
       "description": "What a folio IS — the content-object model, the block kinds, the adapters, and the `folio` graph typology itself.",
       "version": "0.1.0",
       "dependsOn": [
-        "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
-        "https://litlfred.github.io/who-iris/cat-harness-tools.jsonld"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness-tools.jsonld"
       ],
       "directory": [
         {
@@ -929,20 +929,20 @@
       ],
       "subgraph": "https://litlfred.github.io/folio-assistant/subgraph/folio-assistant-core/",
       "nodes": 1042,
-      "bytes": 1175848,
-      "sha256": "20f89d2e77a0aa6dd040bfce05dc4f1f33789c57d72f779e57a7e096e5213eed"
+      "bytes": 1255918,
+      "sha256": "f160f8e4ea04115cf9ab6355be0a3ec8a0af6222c6ea73f3ea19f1cb520c9e61"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/who-iris/who-iris.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/who-iris/who-iris.jsonld",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Harness",
       "name": "who-iris",
       "stub": "who-iris",
-      "url": "https://litlfred.github.io/who-iris/who-iris/who-iris.jsonld",
+      "url": "https://WorldHealthOrganization.github.io/who-iris/who-iris/who-iris.jsonld",
       "title": "WHO IRIS",
       "description": "The WHO Institutional Repository for Information Sharing, catalogued by reference — 1,057,223 files known, a handful materialized as the pre-CDN preview.",
       "version": "0.1.0",
       "dependsOn": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld"
       ],
       "directory": [
         {
@@ -1088,8 +1088,8 @@
       ],
       "subgraph": "https://litlfred.github.io/folio-assistant/subgraph/who-iris/",
       "nodes": 174,
-      "bytes": 185504,
-      "sha256": "001bd0d0d520a194cd6415d054fcc86f93450777e17f9ca1d70b356aaacd98fa"
+      "bytes": 197009,
+      "sha256": "9be6d15767862c72b8081274d508600ffb6b9196e93c85c1a6c49bcee86fb1f1"
     }
   ]
 }

@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/tools/glossary-from-source.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/tools/glossary-from-source.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/tools/glossary-from-source.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/tools/glossary-from-source.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "glossary-from-source",
       "title": "Glossary candidates from a source",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "out",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The scheme file to write or merge into: `glossary/<scheme>.glossary.json`.",
             "required": true,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "id",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
             "description": "The scheme id, for a new file.",
             "required": false,
             "arg": {
@@ -396,7 +396,7 @@
           },
           {
             "name": "title",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "The scheme title, for a new file: free text, so it goes on stdin.",
             "required": false,
             "arg": {
@@ -405,7 +405,7 @@
           },
           {
             "name": "from",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "A directory whose glossary and abbreviations sections are read: an L1 entry's `sections/`.",
             "required": false,
             "arg": {
@@ -414,7 +414,7 @@
           },
           {
             "name": "terms",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "A Markdown file read as term and definition rows.",
             "required": false,
             "arg": {
@@ -423,7 +423,7 @@
           },
           {
             "name": "abbreviations",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "A Markdown file read as acronym and expansion rows.",
             "required": false,
             "arg": {
@@ -432,7 +432,7 @@
           },
           {
             "name": "check",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Fail if the scheme is stale, instead of writing.",
             "required": false,
             "arg": {
@@ -443,7 +443,7 @@
         "outputs": [
           {
             "name": "scheme",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The merged folio-glossary/v1 scheme."
           }
         ]
@@ -455,7 +455,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/skill/glossary-terms"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/skill/glossary-terms"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/tools/glossary-from-source.jsonld"
     }

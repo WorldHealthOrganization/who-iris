@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/directory/core-templates.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/directory/core-templates.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/directory/core-templates",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/directory/core-templates",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Subgraph",
       "name": "core-templates",
       "path": "templates/",
@@ -18,7 +18,7 @@
       "description": "Files this layer's tools WRITE INTO a folio that opts in, kept as real files rather than strings inside a script. `public-comment/github/` holds the issue forms and the two workflows that `scripts/public-comment-changesets.ts install` copies into a folio's `.github/` (`TEMPLATE_DIR`). They live here because this layer is the only one that installs them.",
       "readmePath": "templates/README.md",
       "fileCount": 0,
-      "inSubgraph": "https://litlfred.github.io/who-iris/folio-assistant-core/directory/core-templates",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/directory/core-templates",
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/directory/core-templates"
     }
   ]

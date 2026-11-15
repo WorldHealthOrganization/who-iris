@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/transcribe-whisper-cpp.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/transcribe-whisper-cpp.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/transcribe-whisper-cpp.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/transcribe-whisper-cpp.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "transcribe-whisper-cpp",
       "title": "Transcribe audio — whisper.cpp (option, not installed)",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "file",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The recording, under the declared `uploads` graph.",
             "required": true,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "language",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Locale",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Locale",
             "required": false,
             "arg": {
               "flag": "-l"
@@ -397,7 +397,7 @@
         "outputs": [
           {
             "name": "transcript",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "Timed transcript under the entry's `transcript/`."
           }
         ]
@@ -409,7 +409,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/library-ingestion"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/library-ingestion"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/transcribe-whisper-cpp.jsonld"
     }

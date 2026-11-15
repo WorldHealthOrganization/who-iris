@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/role/translation-adjudicator.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/translation-adjudicator.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/role/translation-adjudicator",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/translation-adjudicator",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
       "prefLabel": "Translation adjudicator",
       "title": "Translation adjudicator",
@@ -15,8 +15,8 @@
         "person"
       ],
       "hasSkill": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/translation-manager",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/translation-adjudication"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/translation-manager",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/translation-adjudication"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/role/translation-adjudicator"
     }

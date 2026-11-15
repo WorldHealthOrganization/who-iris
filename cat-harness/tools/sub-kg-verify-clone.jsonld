@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/sub-kg-verify-clone.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/sub-kg-verify-clone.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/sub-kg-verify-clone.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/sub-kg-verify-clone.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "sub-kg-verify-clone",
       "title": "Verify a separated repository from a fresh clone",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "repo",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoFullName",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoFullName",
             "description": "The separated repository, `owner/name`. (The script also takes a git URL or a local path, for tests.)",
             "required": true,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "ref",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
             "description": "The branch or tag to clone, e.g. the seeding PR's branch.",
             "required": false,
             "arg": {
@@ -396,7 +396,7 @@
           },
           {
             "name": "sibling",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoFullName",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoFullName",
             "description": "A repository to clone beside it, for a platform linked as a sibling checkout. Repeatable.",
             "required": false,
             "arg": {
@@ -405,7 +405,7 @@
           },
           {
             "name": "work",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "Scratch directory, kept afterwards. Absent: a temporary directory, removed afterwards.",
             "required": false,
             "arg": {
@@ -414,7 +414,7 @@
           },
           {
             "name": "text",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "A report for a person instead of JSON.",
             "required": false,
             "arg": {
@@ -425,7 +425,7 @@
         "outputs": [
           {
             "name": "report",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "`sub-kg-verify-clone/v1`: the commit cloned, each step with its status and output tail, and the verdict. Exit 0 green, 1 red, 2 unknown."
           }
         ]
@@ -438,7 +438,7 @@
         "network": true
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/sub-kg-lifecycle"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/sub-kg-lifecycle"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/sub-kg-verify-clone.jsonld"
     }

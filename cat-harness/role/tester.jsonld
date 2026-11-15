@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/role/tester.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/tester.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/role/tester",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/tester",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
       "prefLabel": "Tester",
       "title": "Tester",
@@ -17,10 +17,10 @@
         "system"
       ],
       "hasSkill": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/test-plan-execution",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/test-data-sets",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/test-engineer",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/content-test"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/test-plan-execution",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/test-data-sets",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/test-engineer",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/content-test"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/role/tester"
     }

@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/vocab-map.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/vocab-map.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/vocab-map.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/vocab-map.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "vocab-map",
       "title": "Apply a vocabulary mapping table",
@@ -381,13 +381,13 @@
         "inputs": [
           {
             "name": "table",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
             "description": "The table's id, resolved from this layer's declared `vocab-mapping` directories. An unknown id is an error naming the directories searched, never an empty result.",
             "required": true
           },
           {
             "name": "record",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "The source record, as a JSON object whose keys are the table's element codes. An absent, null, empty-string or empty-array value writes nothing.",
             "required": true
           }
@@ -395,7 +395,7 @@
         "outputs": [
           {
             "name": "properties",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "The mapped properties as a JSON object, keyed by each target's JSON term. Two rows writing one key is refused, not resolved."
           }
         ]
@@ -404,7 +404,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/vocabulary-authority"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/vocabulary-authority"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/vocab-map.jsonld"
     }

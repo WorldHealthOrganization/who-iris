@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/sibling-sessions.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/sibling-sessions.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/sibling-sessions.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/sibling-sessions.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "sibling-sessions",
       "title": "Sibling sessions in a window",
@@ -381,7 +381,7 @@
         "inputs": [
           {
             "name": "since",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/TimeWindow",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/TimeWindow",
             "description": "The window: `4h`, `2d`, `1w`, or an ISO date. Defaults to one day.",
             "required": false,
             "arg": {
@@ -390,7 +390,7 @@
           },
           {
             "name": "json",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Emit the sweep as JSON rather than the report.",
             "required": false,
             "arg": {
@@ -401,12 +401,12 @@
         "outputs": [
           {
             "name": "report",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
             "description": "One entry per session, most recently active first, plus the number of commits examined and how many carried no trailer. A window with NO commits exits non-zero rather than reporting 'no siblings' — a sweep over nothing has not found anything."
           },
           {
             "name": "result",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/SessionSweep",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/SessionSweep",
             "description": "With --json, the sweep as one `SessionSweep` record: the sessions, the commits examined and how many carried no trailer. Programs read this; people read `report`."
           }
         ]
@@ -415,7 +415,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/bean-coordination"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/bean-coordination"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/sibling-sessions.jsonld"
     }

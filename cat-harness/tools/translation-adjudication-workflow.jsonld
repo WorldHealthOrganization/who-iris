@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/translation-adjudication-workflow.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/translation-adjudication-workflow.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/translation-adjudication-workflow.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/translation-adjudication-workflow.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "translation-adjudication-workflow",
       "title": "Translation adjudication workflow (reusable)",
@@ -378,19 +378,19 @@
         "inputs": [
           {
             "name": "path_in_repo",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "Where the layer sits in the calling repository; `.` for the root.",
             "required": false
           },
           {
             "name": "index_ref",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
             "description": "The folio-assistant ref whose lock mounts the platform's layers. Default `main`.",
             "required": false
           },
           {
             "name": "tools_ref",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "`lock` (the caller's lock pin of the tools layer) or a 40-hex commit.",
             "required": false
           }
@@ -398,12 +398,12 @@
         "outputs": [
           {
             "name": "pull_request",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Url",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Url",
             "description": "The ready PR carrying the records, when anything was recorded."
           },
           {
             "name": "summary",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
             "description": "The comment on the issue: what was recorded and what was refused."
           }
         ]
@@ -412,7 +412,7 @@
         "network": true
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/translation-adjudication"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/translation-adjudication"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/translation-adjudication-workflow.jsonld"
     }

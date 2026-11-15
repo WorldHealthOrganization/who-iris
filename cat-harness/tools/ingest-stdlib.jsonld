@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/ingest-stdlib.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/ingest-stdlib.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/ingest-stdlib.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/ingest-stdlib.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "ingest-stdlib",
       "title": "Ingest, standard library only",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "file",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The upload to ingest, under the declared `uploads` graph.",
             "required": true,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "outdir",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "Library root; defaults to the declared `library` graph.",
             "required": false,
             "arg": {
@@ -396,7 +396,7 @@
           },
           {
             "name": "dryRun",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Report the chosen rung and stop.",
             "required": false,
             "arg": {
@@ -407,7 +407,7 @@
         "outputs": [
           {
             "name": "slug",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
             "description": "The library entry written."
           }
         ]
@@ -419,7 +419,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/library-ingestion"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/library-ingestion"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/ingest-stdlib.jsonld"
     }

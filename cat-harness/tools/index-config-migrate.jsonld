@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/index-config-migrate.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/index-config-migrate.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/index-config-migrate.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/index-config-migrate.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "index-config-migrate",
       "title": "Convert a checkout to a root index.config.json",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "root",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The checkout to convert; omitted, this one.",
             "required": false,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "write",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Write the index, move the mounts, write the ignore block and rename the lock.",
             "required": false,
             "arg": {
@@ -396,7 +396,7 @@
           },
           {
             "name": "check",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Exit 1 when --write would change anything; write nothing.",
             "required": false,
             "arg": {
@@ -407,7 +407,7 @@
         "outputs": [
           {
             "name": "findings",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Count",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Count",
             "description": "The index it would write or wrote, and each finding (`unmatched-config`, `unreadable-config`, `landing-undetermined`). Exit 0 written, up to date or planned; 1 stale under --check; 2 could not convert."
           }
         ]
@@ -419,8 +419,8 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/index-config",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/remote-mount"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/index-config",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/remote-mount"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/index-config-migrate.jsonld"
     }

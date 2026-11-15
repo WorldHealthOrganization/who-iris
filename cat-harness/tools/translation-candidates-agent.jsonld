@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/translation-candidates-agent.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/translation-candidates-agent.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/translation-candidates-agent.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/translation-candidates-agent.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "translation-candidates-agent",
       "title": "Candidate translations — agent model",
@@ -378,13 +378,13 @@
         "inputs": [
           {
             "name": "instance",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The layer root whose catalogues to propose for. Default: the current layer.",
             "required": false
           },
           {
             "name": "locales",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/IdList",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/IdList",
             "description": "The target locales. Absent: every locale the layer declares.",
             "required": false
           }
@@ -392,12 +392,12 @@
         "outputs": [
           {
             "name": "candidates",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "`translations/<locale>/<catalogue>.candidates.json` (`translation-candidates/v1`), appended to; each candidate carries `source: {kind: \"agent\", id: <model>}`."
           },
           {
             "name": "catalogues",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The `.po` catalogues whose empty `msgstr` got the first candidate, `#, fuzzy`."
           }
         ]
@@ -406,7 +406,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/translation-candidate-source"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/translation-candidate-source"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/translation-candidates-agent.jsonld"
     }

@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/tools/l1-coverage.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/tools/l1-coverage.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/tools/l1-coverage.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/tools/l1-coverage.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "l1-coverage",
       "title": "L1 extraction coverage",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "text",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The publication's body text, page-tagged: `{\"pages\":[{\"page\":n,\"text\":\"…\"}]}` JSON, or plain text with a form feed between pages (what `pdftotext` writes). Headers, references and tables of contents are stripped by the caller.",
             "required": true,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "captured",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "JSON `[{\"id\",\"text\"}]`: every statement the extraction captured, verbatim.",
             "required": true,
             "arg": {
@@ -396,7 +396,7 @@
           },
           {
             "name": "exclusions",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "JSON `[{location|text, reason, signedOffBy?, signedOffAt?}]`. An exclusion without `signedOffBy` is a proposal and leaves its sentence unaccounted.",
             "required": false,
             "arg": {
@@ -405,7 +405,7 @@
           },
           {
             "name": "out",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "Where to write the report; stdout when absent.",
             "required": false,
             "arg": {
@@ -416,7 +416,7 @@
         "outputs": [
           {
             "name": "report",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "An `l1-coverage-report/v1` JSON report: definitionVersion, matchMethod, source and graph sha256, totals, pages[] and sentences[]. A per-page table goes to stderr."
           }
         ]
@@ -428,7 +428,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/skill/l1-coverage"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/skill/l1-coverage"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/tools/l1-coverage.jsonld"
     }

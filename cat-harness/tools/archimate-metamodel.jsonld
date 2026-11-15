@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/archimate-metamodel.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/archimate-metamodel.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/archimate-metamodel.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/archimate-metamodel.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "archimate-metamodel",
       "title": "Derive the metamodel an ArchiMate model uses, and check it against ArchiMate's relationship table",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "instance",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The layer root whose ArchiMate models are read.",
             "required": true,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "model",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/ArchimateModelId",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/ArchimateModelId",
             "description": "One model's id from the config; absent, every model. Required for `--format dot` and `mmd`.",
             "required": false,
             "arg": {
@@ -396,7 +396,7 @@
           },
           {
             "name": "format",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/ArchimateMetamodelFormat",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/ArchimateMetamodelFormat",
             "description": "`text` (default), `json`, `dot` or `mmd`.",
             "required": false,
             "arg": {
@@ -405,7 +405,7 @@
           },
           {
             "name": "check",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Exit 1 when any relationship follows a pattern ArchiMate does not allow. Placeholders are reported, never fatal.",
             "required": false,
             "arg": {
@@ -416,7 +416,7 @@
         "outputs": [
           {
             "name": "metamodel",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "The report, or the metamodel as `archimate-metamodel/v1` JSON, DOT or Mermaid, on stdout."
           }
         ]
@@ -428,7 +428,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/archimate-models"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/archimate-models"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/archimate-metamodel.jsonld"
     }

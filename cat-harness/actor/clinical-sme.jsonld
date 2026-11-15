@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/actor/clinical-sme.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/actor/clinical-sme.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/actor/clinical-sme",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/actor/clinical-sme",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Actor",
       "localId": "clinical-sme",
       "actorKind": "person",
@@ -20,7 +20,7 @@
       },
       "hasCapability": [],
       "mayTakeRole": [
-        "https://litlfred.github.io/who-iris/cat-harness/role/clinical-sme"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/clinical-sme"
       ],
       "permissionName": [
         "clinical-validation"

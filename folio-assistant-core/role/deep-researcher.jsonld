@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/role/deep-researcher.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/role/deep-researcher.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/role/deep-researcher",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/role/deep-researcher",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
       "prefLabel": "Deep researcher",
       "title": "Deep researcher",
@@ -16,7 +16,7 @@
         "agent"
       ],
       "hasSkill": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/skill/deep-document-research"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/skill/deep-document-research"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/role/deep-researcher"
     }

@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://litlfred.github.io/who-iris/folio-assistant-core/schema/skills/content-plan/output.schema.json",
+  "$id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/schema/skills/content-plan/output.schema.json",
   "title": "Content Plan Output",
   "description": "Output schema for content planning.",
   "type": "object",

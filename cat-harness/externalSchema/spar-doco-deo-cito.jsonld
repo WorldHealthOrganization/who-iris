@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/externalSchema/spar-doco-deo-cito.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/externalSchema/spar-doco-deo-cito.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/externalSchema/spar-doco-deo-cito",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/externalSchema/spar-doco-deo-cito",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/ExternalSchema",
       "name": "spar-doco-deo-cito",
       "title": "SPAR Ontologies: DoCO, DEO and CiTO",

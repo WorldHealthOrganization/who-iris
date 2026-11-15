@@ -59,7 +59,7 @@
       "additionalProperties": false
     }
   },
-  "$id": "https://litlfred.github.io/who-iris/folio-assistant-core/schema/zod/extracted-statement/ExtractedStatementSchema.schema.json",
+  "$id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/schema/zod/extracted-statement/ExtractedStatementSchema.schema.json",
   "title": "ExtractedStatementSchema",
   "description": "Generated from `ExtractedStatementSchema` in schemas/extracted-statement.ts, which is authoritative. Published because it is an exported Zod `*Schema` (owner ruling 2026-10-05) — which says it is reachable, not that it is stable."
 }

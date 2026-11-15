@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/translation-platforms.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/translation-platforms.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/translation-platforms.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/translation-platforms.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "translation-platforms",
       "title": "Exchange catalogues with a translation platform",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "action",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
             "description": "`export` or `import`.",
             "required": true,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "platform",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
             "description": "`weblate`, `crowdin` or `transifex`.",
             "required": true,
             "arg": {
@@ -396,7 +396,7 @@
           },
           {
             "name": "root",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The layer root. Default: the current directory.",
             "required": false,
             "arg": {
@@ -405,7 +405,7 @@
           },
           {
             "name": "base",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
             "description": "import: the git ref the platform's changes are compared against.",
             "required": false,
             "arg": {
@@ -414,7 +414,7 @@
           },
           {
             "name": "write",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "export: write the platform's file rather than print it.",
             "required": false,
             "arg": {
@@ -423,7 +423,7 @@
           },
           {
             "name": "check",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "export: fail when the committed file differs from what would be written.",
             "required": false,
             "arg": {
@@ -432,7 +432,7 @@
           },
           {
             "name": "dry_run",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "import: plan and report, write nothing.",
             "required": false,
             "arg": {
@@ -443,7 +443,7 @@
         "outputs": [
           {
             "name": "summary",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
             "description": "The file written or the candidates recorded."
           }
         ]
@@ -455,8 +455,8 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/translation-candidate-source",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/translation-manager"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/translation-candidate-source",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/translation-manager"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/translation-platforms.jsonld"
     }

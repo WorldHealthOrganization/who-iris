@@ -1,30 +1,30 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_MergeToMain/node/GW_Authorised.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MergeToMain/node/GW_Authorised.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_MergeToMain/node/GW_Authorised",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MergeToMain/node/GW_Authorised",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "Authorised?",
       "nodeKind": "exclusive",
       "bpmnType": "bpmn:ExclusiveGateway",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_MergeToMain",
-      "performedBy": "https://litlfred.github.io/who-iris/cat-harness/role/merge-steward",
-      "inLane": "https://litlfred.github.io/who-iris/cat-harness/process/Process_MergeToMain/lane/Lane_Merger",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MergeToMain",
+      "performedBy": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/merge-steward",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MergeToMain/lane/Lane_Merger",
       "requires": [],
       "touchesWorkPlan": false,
       "relaxable": true,
       "decisionRef": "decisions/merge-authorisation.dmn#Decision_MergeAuthorisation",
-      "decidedBy": "https://litlfred.github.io/who-iris/cat-harness/decision/merge-authorisation/Decision_MergeAuthorisation",
+      "decidedBy": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/decision/merge-authorisation/Decision_MergeAuthorisation",
       "incoming": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_MergeToMain#flow/m11"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MergeToMain#flow/m11"
       ],
       "outgoing": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_MergeToMain#flow/m12",
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_MergeToMain#flow/m13"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MergeToMain#flow/m12",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MergeToMain#flow/m13"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/sdlc",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/sdlc",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_MergeToMain/node/GW_Authorised"
     }
   ]

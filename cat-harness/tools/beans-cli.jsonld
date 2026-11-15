@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/beans-cli.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/beans-cli.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/beans-cli.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/beans-cli.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "beans-cli",
       "title": "beans CLI",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "id",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/BeanId",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/BeanId",
             "description": "The bean to act on; absent for list/create.",
             "required": false,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "status",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/BeanStatus",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/BeanStatus",
             "required": false,
             "arg": {
               "flag": "--status"
@@ -395,7 +395,7 @@
           },
           {
             "name": "body",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
             "required": false,
             "arg": {
               "stdin": true
@@ -405,7 +405,7 @@
         "outputs": [
           {
             "name": "bean",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/BeanId",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/BeanId",
             "description": "The bean created or updated."
           }
         ]
@@ -417,12 +417,12 @@
         "network": true
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/bean-coordination",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/todo-manager",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/pending-show",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/session-intent",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/continual-progress",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/idle-backlog"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/bean-coordination",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/todo-manager",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/pending-show",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/session-intent",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/continual-progress",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/idle-backlog"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/beans-cli.jsonld"
     }

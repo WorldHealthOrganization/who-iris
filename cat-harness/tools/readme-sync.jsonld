@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/readme-sync.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/readme-sync.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/readme-sync.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/readme-sync.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "readme-sync",
       "title": "Sync generated README sections",
@@ -384,7 +384,7 @@
         "inputs": [
           {
             "name": "check",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Fail if any section is stale; write nothing.",
             "required": false,
             "arg": {
@@ -393,7 +393,7 @@
           },
           {
             "name": "only",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/ReadmeSection",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/ReadmeSection",
             "description": "Restrict to these sections. Repeated: the flag is emitted once per section.",
             "required": false,
             "repeated": true,
@@ -403,7 +403,7 @@
           },
           {
             "name": "link_style",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/LinkStyle",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/LinkStyle",
             "required": false,
             "arg": {
               "flag": "--link-style"
@@ -411,7 +411,7 @@
           },
           {
             "name": "fetch",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "required": false,
             "arg": {
               "flag": "--fetch"
@@ -419,14 +419,14 @@
           },
           {
             "name": "dir",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/FilesystemPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/FilesystemPath",
             "required": false
           }
         ],
         "outputs": [
           {
             "name": "report",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
             "description": "Per section: written, unchanged, or skipped because it could not be determined."
           }
         ]
@@ -435,7 +435,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/docs-generation"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/docs-generation"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/readme-sync.jsonld"
     }

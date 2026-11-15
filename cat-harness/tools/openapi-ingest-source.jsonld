@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/openapi-ingest-source.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/openapi-ingest-source.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/openapi-ingest-source.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/openapi-ingest-source.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "openapi-ingest-source",
       "title": "OpenAPI ingest from source",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "instance",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The layer root holding `cat-openapi.config.json` and the declared `openapi` directory.",
             "required": true,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "source",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "A local checkout of the documents' repository.",
             "required": true,
             "arg": {
@@ -396,7 +396,7 @@
           },
           {
             "name": "ref",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
             "description": "The branch, tag or commit to read each document at. Default: the checkout's HEAD.",
             "required": false,
             "arg": {
@@ -407,7 +407,7 @@
         "outputs": [
           {
             "name": "documents",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "`<id>.openapi.json` and `<id>.source.json` per document, in the declared `openapi` directory."
           }
         ]
@@ -420,7 +420,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/library-ingestion"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/library-ingestion"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/openapi-ingest-source.jsonld"
     }

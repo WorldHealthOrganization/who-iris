@@ -1,29 +1,29 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_PublicComment/node/Task_RerouteChangeSet.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_PublicComment/node/Task_RerouteChangeSet.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_PublicComment/node/Task_RerouteChangeSet",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_PublicComment/node/Task_RerouteChangeSet",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "Re-route to another committee",
       "nodeKind": "activity",
       "bpmnType": "bpmn:UserTask",
-      "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_PublicComment",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_PublicComment",
       "performedBy": "https://litlfred.github.io/folio-assistant/cat-harness/role/reviewer",
-      "inLane": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_PublicComment/lane/Lane_Committee",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_PublicComment/lane/Lane_Committee",
       "requires": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/skill/public-comment"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/skill/public-comment"
       ],
       "touchesWorkPlan": false,
       "relaxable": true,
       "incoming": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_PublicComment#flow/Flow_ToReroute"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_PublicComment#flow/Flow_ToReroute"
       ],
       "outgoing": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_PublicComment#flow/Flow_GroupedToAssign"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_PublicComment#flow/Flow_GroupedToAssign"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/folio-assistant-core/directory/collab",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/directory/collab",
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/process/Process_PublicComment/node/Task_RerouteChangeSet"
     }
   ]

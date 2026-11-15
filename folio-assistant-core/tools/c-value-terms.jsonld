@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/tools/c-value-terms.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/tools/c-value-terms.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/tools/c-value-terms.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/tools/c-value-terms.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "c-value-terms",
       "title": "Rank candidate glossary terms in prose by C-value",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "files",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "One or more Markdown or text files whose prose is read.",
             "required": true,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "maxLength",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Count",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Count",
             "description": "Longest n-gram, in words; 1 or more. Default 5.",
             "required": false,
             "arg": {
@@ -396,7 +396,7 @@
           },
           {
             "name": "minFreq",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Count",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Count",
             "description": "Fewest occurrences an n-gram needs to be scored. Default 3, the paper's cut-off; 1 or more.",
             "required": false,
             "arg": {
@@ -405,7 +405,7 @@
           },
           {
             "name": "top",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Count",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Count",
             "description": "How many candidates to print; 1 or more. Default 50.",
             "required": false,
             "arg": {
@@ -414,7 +414,7 @@
           },
           {
             "name": "edgeStopwords",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Drop n-grams that begin or end with a common English function word. Off by default, because the 1996 method has no such filter.",
             "required": false,
             "arg": {
@@ -423,7 +423,7 @@
           },
           {
             "name": "json",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Print the candidates as JSON, each with its frequency, nesting counts and C-value.",
             "required": false,
             "arg": {
@@ -434,7 +434,7 @@
         "outputs": [
           {
             "name": "candidates",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "A ranked table, or JSON with `status: candidate`, of n-grams with a C-value above 0."
           }
         ]
@@ -446,8 +446,8 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/skill/glossary-terms",
-        "https://litlfred.github.io/who-iris/folio-assistant-core/skill/ontologist"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/skill/glossary-terms",
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/skill/ontologist"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/tools/c-value-terms.jsonld"
     }

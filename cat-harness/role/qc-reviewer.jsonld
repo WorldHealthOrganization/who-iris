@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/role/qc-reviewer.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/qc-reviewer.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/role/qc-reviewer",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/qc-reviewer",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
       "prefLabel": "QC reviewer",
       "title": "QC reviewer",
@@ -15,8 +15,8 @@
         "person"
       ],
       "hasSkill": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/evidence-review",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/untainted-verification"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/evidence-review",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/untainted-verification"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/role/qc-reviewer"
     }

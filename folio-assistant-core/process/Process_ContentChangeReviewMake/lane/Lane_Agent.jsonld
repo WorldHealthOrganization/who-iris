@@ -1,15 +1,15 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReviewMake/lane/Lane_Agent.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReviewMake/lane/Lane_Agent.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReviewMake/lane/Lane_Agent",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReviewMake/lane/Lane_Agent",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Lane",
       "name": "Folio-Assistant Agent",
-      "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReviewMake",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReviewMake",
       "bindsRole": "https://litlfred.github.io/folio-assistant/cat-harness/role/authoring-agent",
-      "inSubgraph": "https://litlfred.github.io/who-iris/folio-assistant-core/directory/collab",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/directory/collab",
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/process/Process_ContentChangeReviewMake/lane/Lane_Agent"
     }
   ]

@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/stakeholder-map.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/stakeholder-map.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/stakeholder-map.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/stakeholder-map.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "stakeholder-map",
       "title": "Stakeholder map",
@@ -384,7 +384,7 @@
         "inputs": [
           {
             "name": "paths",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The changed paths. A repeated positional, so it is last on the command line.",
             "required": true,
             "repeated": true,
@@ -396,7 +396,7 @@
         "outputs": [
           {
             "name": "stakeholders",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
             "description": "Skills, roles and the people each role names."
           }
         ]
@@ -405,7 +405,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/role-model"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/role-model"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/stakeholder-map.jsonld"
     }

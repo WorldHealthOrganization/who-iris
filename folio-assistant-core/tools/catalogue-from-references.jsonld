@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/tools/catalogue-from-references.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/tools/catalogue-from-references.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/tools/catalogue-from-references.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/tools/catalogue-from-references.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "catalogue-from-references",
       "title": "Catalogue a library from its bibliography",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "instance",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The folio instance's root. It must declare a `catalogue` and a `library` directory.",
             "required": true,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "apply",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Write the records and nodes, and remove this tool's stale ones. Without it the run is a dry run.",
             "required": false,
             "arg": {
@@ -396,7 +396,7 @@
           },
           {
             "name": "check",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Write nothing. Exit 1 if any record or node on disk differs from what the bibliography gives.",
             "required": false,
             "arg": {
@@ -405,7 +405,7 @@
           },
           {
             "name": "json",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Print the plan as JSON.",
             "required": false,
             "arg": {
@@ -414,7 +414,7 @@
           },
           {
             "name": "baseUrl",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Url",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Url",
             "description": "Where the bibliography is published. With `--apply`, writes `catalogue.json` when the catalogue directory has none; without it such a run is refused.",
             "required": false,
             "arg": {
@@ -425,7 +425,7 @@
         "outputs": [
           {
             "name": "catalogue",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "`<catalogue>/records/<slug>.dc.json` and `<catalogue>/nodes/item-<slug>.json` per joined entry; `catalogue.json` when absent and `--base-url` is given. A summary of joined and left-alone entries goes to stdout."
           }
         ]
@@ -437,7 +437,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/skill/filing-dublin-core"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/skill/filing-dublin-core"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/tools/catalogue-from-references.jsonld"
     }

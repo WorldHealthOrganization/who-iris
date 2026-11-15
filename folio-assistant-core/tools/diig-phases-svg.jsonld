@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/tools/diig-phases-svg.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/tools/diig-phases-svg.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/tools/diig-phases-svg.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/tools/diig-phases-svg.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "diig-phases-svg",
       "title": "DIIG phases, steps and resources chart",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "figure-or-adaptation",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "A diig-phases-figure/v1 file, or a diig-phases-adaptation/v1 file whose `adapts` is a repository-root path to one.",
             "required": true,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "out",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "Where to write the SVG; stdout when absent.",
             "required": false,
             "arg": {
@@ -398,7 +398,7 @@
         "outputs": [
           {
             "name": "svg",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The chart, with text as SVG text, one `<g id=\"tile-<resource>\">` per tile."
           }
         ]
@@ -410,7 +410,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/skill/figure-rebuild"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/skill/figure-rebuild"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/tools/diig-phases-svg.jsonld"
     }

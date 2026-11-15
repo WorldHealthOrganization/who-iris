@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/themes-css.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/themes-css.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/themes-css.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/themes-css.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "themes-css",
       "title": "Theme stylesheet",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "check",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Compare against the committed copy and fail if stale, instead of writing.",
             "required": false,
             "arg": {
@@ -389,7 +389,7 @@
         "outputs": [
           {
             "name": "stylesheet",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The generated stylesheet. Build output that happens to be committed, so it is readable on the forge — never hand-edited."
           }
         ]
@@ -401,10 +401,10 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/site-presentation-assets"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/site-presentation-assets"
       ],
       "maintains": [
-        "https://litlfred.github.io/who-iris/assets/css/themes.css"
+        "https://WorldHealthOrganization.github.io/who-iris/assets/css/themes.css"
       ],
       "maintainsFrom": [
         "schemas/ui/themes.ts"

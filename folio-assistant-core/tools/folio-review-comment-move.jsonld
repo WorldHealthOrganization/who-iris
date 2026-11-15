@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/tools/folio-review-comment-move.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/tools/folio-review-comment-move.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/tools/folio-review-comment-move.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/tools/folio-review-comment-move.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "folio-review-comment-move",
       "title": "Move a review comment's status",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "id",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/NodeId",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/NodeId",
             "description": "The review comment's id, `review-pr<N>-c<commentId>`.",
             "required": true,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "to",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/NodeId",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/NodeId",
             "description": "The status to move it to: open, addressed, resolved, adjudicated or withdrawn, checked by the script against that closed list.",
             "required": true,
             "arg": {
@@ -396,7 +396,7 @@
           },
           {
             "name": "process",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/ProcessId",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/ProcessId",
             "description": "The BPMN process whose task is making the move.",
             "required": true,
             "arg": {
@@ -405,7 +405,7 @@
           },
           {
             "name": "task",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/NodeId",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/NodeId",
             "description": "The task, in that process, making the move.",
             "required": true,
             "arg": {
@@ -414,7 +414,7 @@
           },
           {
             "name": "decision",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/NodeId",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/NodeId",
             "description": "The Decision that closes it. Required to resolve or adjudicate.",
             "required": false,
             "arg": {
@@ -423,7 +423,7 @@
           },
           {
             "name": "todos",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The folio's todos graph root. Default `todos`.",
             "required": false,
             "arg": {
@@ -432,7 +432,7 @@
           },
           {
             "name": "published",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The published `review-comments.json`, for a comment not committed yet.",
             "required": false,
             "arg": {
@@ -441,7 +441,7 @@
           },
           {
             "name": "commit",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Commit the file to the current feature branch.",
             "required": false,
             "arg": {
@@ -450,7 +450,7 @@
           },
           {
             "name": "base",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
             "description": "The base branch a status may NOT be committed to. Default `main`.",
             "required": false,
             "arg": {
@@ -461,7 +461,7 @@
         "outputs": [
           {
             "name": "comment",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "`<todo-feedback dir>/<id>.json`, the moved node."
           }
         ]
@@ -474,7 +474,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/skill/review-comments"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/skill/review-comments"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/tools/folio-review-comment-move.jsonld"
     }

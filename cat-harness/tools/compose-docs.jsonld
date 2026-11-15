@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/compose-docs.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/compose-docs.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/compose-docs.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/compose-docs.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "compose-docs",
       "title": "Compose the site's documentation tree from its declared docs layers",
@@ -378,13 +378,13 @@
         "inputs": [
           {
             "name": "out",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The Jekyll source to write (replaced).",
             "required": true
           },
           {
             "name": "staging",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "A local build or a staging preview: staging-only visualisations are included.",
             "required": false,
             "arg": {
@@ -393,13 +393,13 @@
           },
           {
             "name": "changed-files",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The branch's changed paths, one per line: layers it does not reach are stubbed.",
             "required": false
           },
           {
             "name": "shell",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "The chrome only: Jekyll machinery and assets, no page and no composed layer; generated includes written empty.",
             "required": false,
             "arg": {
@@ -410,7 +410,7 @@
         "outputs": [
           {
             "name": "files",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Count",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Count",
             "description": "Files composed, with every override, merge, withheld file and carried or stubbed layer named."
           }
         ]
@@ -422,7 +422,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/harness-tiles"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/harness-tiles"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/compose-docs.jsonld"
     }

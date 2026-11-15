@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/who-iris/tools/iris-pages.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/who-iris/who-iris.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/who-iris/tools/iris-pages.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/who-iris/who-iris.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/who-iris/tools/iris-pages.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/who-iris/tools/iris-pages.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "iris-pages",
       "title": "who-iris catalogue and docs pages",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "check",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Fail if a page is stale, instead of writing.",
             "required": false,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "site",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "A site being built (the tree `compose-docs --shell` wrote): write only the catalogue page into it, at its route in who-iris's own site, plus a forwarding page at the declared route. A site build passes it (`visualiser-writers.ts`).",
             "required": false,
             "arg": {
@@ -398,7 +398,7 @@
         "outputs": [
           {
             "name": "pages",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The replica's home page at `site/index.html` (and its translations), the docs under `docs/`, and the catalogue page under the published site directory."
           }
         ]

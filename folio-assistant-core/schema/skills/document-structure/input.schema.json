@@ -42,5 +42,5 @@
       "description": "The complete new order, for the reorder-* operations. Must be a permutation of the existing entries."
     }
   },
-  "$id": "https://litlfred.github.io/who-iris/folio-assistant-core/schema/skills/document-structure/input.schema.json"
+  "$id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/schema/skills/document-structure/input.schema.json"
 }

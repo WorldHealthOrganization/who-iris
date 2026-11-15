@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/bean-claim-check.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/bean-claim-check.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/bean-claim-check.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/bean-claim-check.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "bean-claim-check",
       "title": "Check a bean is free, then claim it on every copy",
@@ -381,7 +381,7 @@
         "inputs": [
           {
             "name": "id",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/BeanId",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/BeanId",
             "description": "The bean, full or short id.",
             "required": true,
             "arg": {
@@ -390,7 +390,7 @@
           },
           {
             "name": "copy",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "A local checkout of a bean copy. Repeat once per copy. Defaults to the current checkout.",
             "required": false,
             "repeated": true,
@@ -400,7 +400,7 @@
           },
           {
             "name": "repo",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoFullName",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoFullName",
             "description": "A repository whose open PRs are searched for the id. Repeat. Defaults to the copies' repositories.",
             "required": false,
             "repeated": true,
@@ -410,7 +410,7 @@
           },
           {
             "name": "minePr",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Url",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Url",
             "description": "The link of an open PR that is the caller's own, when resuming a bean it already holds. Every cloud thread's PR has the same author, so without this any open PR naming the bean is a skip.",
             "required": false,
             "repeated": true,
@@ -420,7 +420,7 @@
           },
           {
             "name": "as",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
             "description": "Which agent is asking, by its name in the agents table. Defaults to `cloud`.",
             "required": false,
             "arg": {
@@ -429,7 +429,7 @@
           },
           {
             "name": "session",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Url",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Url",
             "description": "The caller's session link, matched against the `Claude-Session:` trailer so a sibling thread of the same agent is told apart. Defaults to $CLAUDE_SESSION_URL.",
             "required": false,
             "arg": {
@@ -438,7 +438,7 @@
           },
           {
             "name": "agents",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "A JSON file of agents and their commit authors, as in the skill's input schema.",
             "required": false,
             "arg": {
@@ -447,7 +447,7 @@
           },
           {
             "name": "window",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/TimeWindow",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/TimeWindow",
             "description": "Defaults to 24h.",
             "required": false,
             "arg": {
@@ -456,7 +456,7 @@
           },
           {
             "name": "dryRun",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Check only; report `would-claim` and write nothing.",
             "required": false,
             "arg": {
@@ -465,7 +465,7 @@
           },
           {
             "name": "json",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Emit `definitions.claimCheck` as JSON.",
             "required": false,
             "arg": {
@@ -476,12 +476,12 @@
         "outputs": [
           {
             "name": "check",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
             "description": "One of claimed, would-claim, skip-recent-commit, skip-claim-note, skip-open-pr, skip-closed or unknown, with the evidence per copy and the open PRs found. Exit 0 for claimed or would-claim, 1 for a skip, 2 for unknown. Unknown is never reported as free. With --json, `definitions.claimCheck` of schemas/skills/bean-drain/output.schema.json."
           },
           {
             "name": "result",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/BeanClaimCheck",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/BeanClaimCheck",
             "description": "With --json, the check as one `BeanClaimCheck` record: the state, the evidence per copy and the open PRs found. Programs and BPMN gateways read this; people read `check`."
           }
         ]
@@ -493,7 +493,7 @@
         "network": true
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/bean-coordination"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/bean-coordination"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/bean-claim-check.jsonld"
     }

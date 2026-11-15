@@ -367,10 +367,10 @@
     "registry",
     "packages"
   ],
-  "sourceCommit": "https://github.com/litlfred/who-iris/commit/6daa42c482bcabda42ee590d5db115f6f4e7e64f",
-  "sourceCommitSha": "6daa42c482bcabda42ee590d5db115f6f4e7e64f",
-  "sourceTree": "6dcc7f0d0253000eea32c866aa363401a2507824",
-  "sourceCommitAt": "2026-11-15T15:59:07+01:00",
+  "sourceCommit": "https://github.com/WorldHealthOrganization/who-iris/commit/1ae63149a4389ccaaeefd0d981a05d408163e04e",
+  "sourceCommitSha": "1ae63149a4389ccaaeefd0d981a05d408163e04e",
+  "sourceTree": "cf9661950e86c800d7cc9df72e2799ba6e9e61a7",
+  "sourceCommitAt": "2026-11-15T22:23:17+01:00",
   "sourceTreeDirty": true,
   "dependsOnUnavailable": "2 dependency edge(s), none expressible as a record — see gaps",
   "counts": {

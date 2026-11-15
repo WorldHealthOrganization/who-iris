@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/bootstrap-tools/bootstrap-tools.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/bootstrap-tools/skill/bootstrap-contract-semver.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/bootstrap-tools/bootstrap-tools.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/bootstrap-tools/bootstrap-tools.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/bootstrap-tools/skill/bootstrap-contract-semver.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/bootstrap-tools/bootstrap-tools.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/bootstrap-tools/skill/bootstrap-contract-semver",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/bootstrap-tools/skill/bootstrap-contract-semver",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Skill",
       "name": "bootstrap-contract-semver",
       "title": "Bootstrap contract semver",
@@ -14,7 +14,7 @@
       "hasInstructions": true,
       "hasIOContract": false,
       "ambiguous": false,
-      "inSubgraph": "https://litlfred.github.io/who-iris/bootstrap-tools/directory/bootstrap-tools-skills",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/bootstrap-tools/directory/bootstrap-tools-skills",
       "alternateOf": "https://litlfred.github.io/folio-assistant/bootstrap-tools/skill/bootstrap-contract-semver"
     }
   ]

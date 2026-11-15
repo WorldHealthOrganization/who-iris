@@ -1,16 +1,16 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/schema/depends-on.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/schema/depends-on.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/schema/depends-on",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/schema/depends-on",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Schema",
       "name": "depends-on",
       "title": "depends-on",
       "summary": "depends-on.ts — `instance-versioning.md` §3.4's record, and the gaps it",
       "module": "schemas/kg/depends-on.ts",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/schemas",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/schemas",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/schema/depends-on"
     }
   ]

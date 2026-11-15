@@ -159,7 +159,7 @@
       "additionalProperties": false
     }
   },
-  "$id": "https://litlfred.github.io/who-iris/folio-assistant-core/schema/zod/kg-materialization/KgNodesRecordSchema.schema.json",
+  "$id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/schema/zod/kg-materialization/KgNodesRecordSchema.schema.json",
   "title": "KgNodesRecordSchema",
   "description": "Generated from `KgNodesRecordSchema` in schemas/kg-materialization.ts, which is authoritative. Published because it is an exported Zod `*Schema` (owner ruling 2026-10-05) — which says it is reachable, not that it is stable."
 }

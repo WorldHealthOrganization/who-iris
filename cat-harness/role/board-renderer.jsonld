@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/role/board-renderer.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/board-renderer.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/role/board-renderer",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/board-renderer",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
       "prefLabel": "Board renderer",
       "title": "Board renderer",
@@ -15,14 +15,14 @@
         "system"
       ],
       "hasSkill": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/board-windows",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/board-diagram-interchange",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/harness-tiles",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/deletion-requires-confirmation",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/visualizer-loading",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/pdf-inline-viewer",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/liquid-templates",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/incremental-render"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/board-windows",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/board-diagram-interchange",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/harness-tiles",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/deletion-requires-confirmation",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/visualizer-loading",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/pdf-inline-viewer",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/liquid-templates",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/incremental-render"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/role/board-renderer"
     }

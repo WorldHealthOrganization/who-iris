@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/archimate-detangle.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/archimate-detangle.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/archimate-detangle.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/archimate-detangle.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "archimate-detangle",
       "title": "Lower the tangles in ArchiMate views: re-route lines and swap same-size boxes in a row",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "model",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The `.archimate` file (plain XML or Archi's zipped archive).",
             "required": true,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "view",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
             "description": "One view, by its Archi id (`id-<hex>`) or its page slug (e.g. `1-central-health-workforce-registry`). A slug, not free text, so no shell payload can ride on it. Absent: every view in the model.",
             "required": false,
             "arg": {
@@ -396,7 +396,7 @@
           },
           {
             "name": "routes-only",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Never move a box; only re-route lines.",
             "required": false,
             "arg": {
@@ -405,7 +405,7 @@
           },
           {
             "name": "apply",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Write the model back in place.",
             "required": false,
             "arg": {
@@ -414,7 +414,7 @@
           },
           {
             "name": "json",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Print JSON instead of one line per view.",
             "required": false,
             "arg": {
@@ -425,7 +425,7 @@
         "outputs": [
           {
             "name": "report",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "Per view: tangles before and after, and the swaps and routes made."
           }
         ]
@@ -437,7 +437,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/archimate-models"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/archimate-models"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/archimate-detangle.jsonld"
     }

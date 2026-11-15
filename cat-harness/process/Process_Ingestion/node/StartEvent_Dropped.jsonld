@@ -1,25 +1,25 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_Ingestion/node/StartEvent_Dropped.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_Ingestion/node/StartEvent_Dropped.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_Ingestion/node/StartEvent_Dropped",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_Ingestion/node/StartEvent_Dropped",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "A contributor has a file for the folio",
       "nodeKind": "start",
       "bpmnType": "bpmn:StartEvent",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_Ingestion",
-      "performedBy": "https://litlfred.github.io/who-iris/cat-harness/role/user",
-      "inLane": "https://litlfred.github.io/who-iris/cat-harness/process/Process_Ingestion/lane/Lane_0",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_Ingestion",
+      "performedBy": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/user",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_Ingestion/lane/Lane_0",
       "requires": [],
       "touchesWorkPlan": false,
       "relaxable": true,
       "incoming": [],
       "outgoing": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_Ingestion#flow/Flow_i1"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_Ingestion#flow/Flow_i1"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/library-graph",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/library-graph",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_Ingestion/node/StartEvent_Dropped"
     }
   ]

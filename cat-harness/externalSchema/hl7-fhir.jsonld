@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/externalSchema/hl7-fhir.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/externalSchema/hl7-fhir.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/externalSchema/hl7-fhir",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/externalSchema/hl7-fhir",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/ExternalSchema",
       "name": "hl7-fhir",
       "title": "HL7 FHIR",

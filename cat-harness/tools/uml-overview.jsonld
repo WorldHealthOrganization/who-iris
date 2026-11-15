@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/uml-overview.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/uml-overview.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/uml-overview.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/uml-overview.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "uml-overview",
       "title": "UML overview per named sub-graph",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "check",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Fail if any diagram, SVG or page is stale or orphaned, instead of writing.",
             "required": false,
             "arg": {
@@ -389,7 +389,7 @@
         "outputs": [
           {
             "name": "diagrams",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "uml/overview/ (.puml and .mmd), their SVG renderings and Graphviz DOT beside them, and the docs/uml/overview/ pages that show them."
           }
         ]
@@ -401,8 +401,8 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/uml-overview",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/kg-subgraph-layout"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/uml-overview",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/kg-subgraph-layout"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/uml-overview.jsonld"
     }

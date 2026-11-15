@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Process",
       "name": "Check a generated file still matches its source",
       "summary": "Check that a committed generated file still matches the source it is generated from.",
@@ -12,56 +12,56 @@
       "enforcement": "strict",
       "sourcePath": "sdlc/processes/generated-file-drift.bpmn",
       "sourceUrl": "https://github.com/litlfred/cat-harness/blob/main/sdlc/processes/generated-file-drift.bpmn",
-      "depiction": "https://litlfred.github.io/who-iris/assets/img/workflows/generated-file-drift.svg",
+      "depiction": "https://WorldHealthOrganization.github.io/who-iris/assets/img/workflows/generated-file-drift.svg",
       "startNode": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift/node/Start_Change"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift/node/Start_Change"
       ],
       "nodeCount": 5,
       "flowCount": 4,
       "conformsTo": [
-        "https://litlfred.github.io/who-iris/cat-harness/externalSchema/omg-bpmn-2.0",
-        "https://litlfred.github.io/who-iris/cat-harness/externalSchema/omg-dd-1.0",
-        "https://litlfred.github.io/who-iris/cat-harness/externalSchema/w3c-xsd11-structures"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/externalSchema/omg-bpmn-2.0",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/externalSchema/omg-dd-1.0",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/externalSchema/w3c-xsd11-structures"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/sdlc",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/sdlc",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_GeneratedFileDrift"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift#flow/Flow_GD_1",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift#flow/Flow_GD_1",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift/node/Start_Change",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift/node/Task_Check",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/sdlc",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift/node/Start_Change",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift/node/Task_Check",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/sdlc",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_GeneratedFileDrift#flow/Flow_GD_1"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift#flow/Flow_GD_2",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift#flow/Flow_GD_2",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift/node/Task_Check",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift/node/GW_Drift",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/sdlc",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift/node/Task_Check",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift/node/GW_Drift",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/sdlc",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_GeneratedFileDrift#flow/Flow_GD_2"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift#flow/Flow_GD_3",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift#flow/Flow_GD_3",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
       "name": "no",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift/node/GW_Drift",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift/node/End_Clean",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/sdlc",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift/node/GW_Drift",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift/node/End_Clean",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/sdlc",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_GeneratedFileDrift#flow/Flow_GD_3"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift#flow/Flow_GD_4",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift#flow/Flow_GD_4",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
       "name": "yes",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift/node/GW_Drift",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift/node/End_Drift",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/sdlc",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift/node/GW_Drift",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_GeneratedFileDrift/node/End_Drift",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/sdlc",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_GeneratedFileDrift#flow/Flow_GD_4"
     }
   ]

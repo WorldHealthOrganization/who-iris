@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/render-log.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/render-log.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/render-log.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/render-log.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "render-log",
       "title": "Record what the publish branch served",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "dir",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "A checkout of the publish branch, or a publish directory about to become one. This tool NEVER fetches, commits or pushes: the calling workflows hold the checkout with their own retry and concurrency handling, and a second pusher racing them could lose a deploy.",
             "required": true,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "event",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RenderEvent",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RenderEvent",
             "description": "`rendered`, `removed`, `restored` or `retained`. `retained` records a removal CONSIDERED and refused, which would otherwise leave no trace.",
             "required": true,
             "arg": {
@@ -396,7 +396,7 @@
           },
           {
             "name": "kind",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
             "description": "What was rendered — `staging-preview`, `site`, `export`. Open, not an enum: the publish branch carries more than previews, and an enum would make logging a new kind wait on a schema change.",
             "required": true,
             "arg": {
@@ -405,7 +405,7 @@
           },
           {
             "name": "path",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The path on the publish branch. Checked as a VALUE, never trusted by provenance: the slug sanitiser can emit `..`, which is only safe for a slug taken from a git ref, and a dispatch input is not one.",
             "required": true,
             "arg": {
@@ -414,7 +414,7 @@
           },
           {
             "name": "slug",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
             "description": "The staging slug, where the subject has one.",
             "required": false,
             "arg": {
@@ -423,7 +423,7 @@
           },
           {
             "name": "branch",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
             "description": "The branch the render came from.",
             "required": false,
             "arg": {
@@ -432,7 +432,7 @@
           },
           {
             "name": "commit",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/CommitSha",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/CommitSha",
             "description": "The commit the artefact was built from.",
             "required": false,
             "arg": {
@@ -441,7 +441,7 @@
           },
           {
             "name": "run",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Url",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Url",
             "description": "The workflow run that wrote this, so a reader can open the log.",
             "required": false,
             "arg": {
@@ -450,7 +450,7 @@
           },
           {
             "name": "prose",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
             "description": "One JSON object on STDIN: `{summary, reason?, detail?, format?}`. `summary` is required and one line. `reason` is required by the SCRIPT for `removed` and `retained`, because an entry saying an artefact went and not why is the ambiguity the log exists to prevent. `format` declares how the prose reads (absent means plain text, never sniffed). Build it with `jq -n --arg`, never by concatenation.",
             "required": true,
             "arg": {
@@ -461,7 +461,7 @@
         "outputs": [
           {
             "name": "entry",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The day's JSONL the entry was APPENDED to. Append is the only verb: there is no `--remove`, no `--edit` and no `--id`, so a takedown is a `removed` ENTRY rather than the erasure of the `rendered` one before it, and the never-delete rule is structural rather than a guard every cleanup path must remember."
           }
         ]
@@ -474,7 +474,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/render-logging"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/render-logging"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/render-log.jsonld"
     }

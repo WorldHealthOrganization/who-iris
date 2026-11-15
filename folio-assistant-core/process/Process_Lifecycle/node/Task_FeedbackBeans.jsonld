@@ -1,17 +1,17 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_Lifecycle/node/Task_FeedbackBeans.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_Lifecycle/node/Task_FeedbackBeans.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_Lifecycle/node/Task_FeedbackBeans",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_Lifecycle/node/Task_FeedbackBeans",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "File feedback as beans",
       "nodeKind": "activity",
       "bpmnType": "bpmn:Task",
-      "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_Lifecycle",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_Lifecycle",
       "performedBy": "https://litlfred.github.io/folio-assistant/cat-harness/role/editor",
-      "inLane": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_Lifecycle/lane/Lane_Editors",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_Lifecycle/lane/Lane_Editors",
       "requires": [
         "https://litlfred.github.io/folio-assistant/cat-harness/skill/todo-manager",
         "https://litlfred.github.io/folio-assistant/cat-harness/skill/content-feedback"
@@ -20,12 +20,12 @@
       "workPlanOp": "note",
       "relaxable": true,
       "incoming": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_Lifecycle#flow/H07"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_Lifecycle#flow/H07"
       ],
       "outgoing": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_Lifecycle#flow/H08"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_Lifecycle#flow/H08"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/folio-assistant-core/directory/collab",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/directory/collab",
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/process/Process_Lifecycle/node/Task_FeedbackBeans"
     }
   ]

@@ -1,28 +1,28 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ActivityLog/node/Gateway_EmptyScope.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ActivityLog/node/Gateway_EmptyScope.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ActivityLog/node/Gateway_EmptyScope",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ActivityLog/node/Gateway_EmptyScope",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "One entry or all?",
       "nodeKind": "exclusive",
       "bpmnType": "bpmn:ExclusiveGateway",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ActivityLog",
-      "performedBy": "https://litlfred.github.io/who-iris/cat-harness/role/user",
-      "inLane": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ActivityLog/lane/Lane_Operator",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ActivityLog",
+      "performedBy": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/user",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ActivityLog/lane/Lane_Operator",
       "requires": [],
       "touchesWorkPlan": false,
       "relaxable": true,
       "incoming": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_ActivityLog#flow/F_E1"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ActivityLog#flow/F_E1"
       ],
       "outgoing": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_ActivityLog#flow/F_E_One",
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_ActivityLog#flow/F_E_All"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ActivityLog#flow/F_E_One",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ActivityLog#flow/F_E_All"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/sdlc",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/sdlc",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_ActivityLog/node/Gateway_EmptyScope"
     }
   ]

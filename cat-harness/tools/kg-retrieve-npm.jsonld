@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/kg-retrieve-npm.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/kg-retrieve-npm.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/kg-retrieve-npm.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/kg-retrieve-npm.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "kg-retrieve-npm",
       "title": "Retrieve a remote Knowledge Graph via npm package or tarball",
@@ -378,13 +378,13 @@
         "inputs": [
           {
             "name": "package",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "Package name, npm tarball (.tgz) path, or URL.",
             "required": true
           },
           {
             "name": "destination",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "Directory to unpack or install into.",
             "required": false,
             "arg": {
@@ -393,7 +393,7 @@
           },
           {
             "name": "view",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
             "description": "Graph view to inspect/retrieve: 'unhydrated' (source graph), 'hydrated' (materialized JSON-LD/indexes), or 'both'.",
             "required": false,
             "arg": {
@@ -402,7 +402,7 @@
           },
           {
             "name": "release",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "Optional `folio-binary-release/v1` record to verify digest and size against.",
             "required": false,
             "arg": {
@@ -413,12 +413,12 @@
         "outputs": [
           {
             "name": "status",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "Retrieval status: 'retrieved', 'verified', or 'could-not-determine'."
           },
           {
             "name": "summary",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "Summary of retrieved graphs, nodes, and assets."
           }
         ]
@@ -430,8 +430,8 @@
         "network": true
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/npm-kg-distribution",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/remote-mount"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/npm-kg-distribution",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/remote-mount"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/kg-retrieve-npm.jsonld"
     }

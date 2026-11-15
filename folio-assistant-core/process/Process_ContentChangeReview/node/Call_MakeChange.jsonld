@@ -1,30 +1,30 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReview/node/Call_MakeChange.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReview/node/Call_MakeChange.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReview/node/Call_MakeChange",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReview/node/Call_MakeChange",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "Make the change",
       "nodeKind": "activity",
       "bpmnType": "bpmn:CallActivity",
-      "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReview",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReview",
       "performedBy": "https://litlfred.github.io/folio-assistant/cat-harness/role/authoring-agent",
-      "inLane": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReview/lane/Lane_Agent",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReview/lane/Lane_Agent",
       "requires": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/skill/content-author"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/skill/content-author"
       ],
       "touchesWorkPlan": false,
       "relaxable": true,
-      "calledElement": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReviewMake",
+      "calledElement": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReviewMake",
       "incoming": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReview#flow/SF_Bean_1"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReview#flow/SF_Bean_1"
       ],
       "outgoing": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReview#flow/a7"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReview#flow/a7"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/folio-assistant-core/directory/collab",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/directory/collab",
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/process/Process_ContentChangeReview/node/Call_MakeChange"
     }
   ]

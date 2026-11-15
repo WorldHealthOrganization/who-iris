@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/globalTask/GT_SeedWorkPlan.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/globalTask/GT_SeedWorkPlan.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/globalTask/GT_SeedWorkPlan",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/globalTask/GT_SeedWorkPlan",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Task",
       "name": "Seed the work plan",
       "summary": "The plan becomes beans, so a resumed session or a sibling agent can pick it up.",
@@ -15,7 +15,7 @@
       ],
       "sourcePath": "collab/processes/global-tasks.bpmn",
       "sourceUrl": "https://github.com/litlfred/folio-assistant-core/blob/main/collab/processes/global-tasks.bpmn",
-      "inSubgraph": "https://litlfred.github.io/who-iris/folio-assistant-core/directory/collab",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/directory/collab",
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/globalTask/GT_SeedWorkPlan"
     }
   ]

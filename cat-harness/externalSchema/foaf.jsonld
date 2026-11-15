@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/externalSchema/foaf.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/externalSchema/foaf.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/externalSchema/foaf",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/externalSchema/foaf",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/ExternalSchema",
       "name": "foaf",
       "title": "FOAF Vocabulary Specification",

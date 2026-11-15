@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/directory/core-tools.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/directory/core-tools.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/directory/core-tools",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/directory/core-tools",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Subgraph",
       "name": "core-tools",
       "path": "tools/",
@@ -18,7 +18,7 @@
       "description": "The content layer's Tool nodes, such as `folio-changeset`, which exposes `schemas/changeset.ts`. Reached by the harness through tool auto-discovery, never by an import: the harness may not import core, and a Tool node is a declaration loaded by path.",
       "readmePath": "tools/README.md",
       "fileCount": 0,
-      "inSubgraph": "https://litlfred.github.io/who-iris/folio-assistant-core/directory/core-tools",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/directory/core-tools",
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/directory/core-tools"
     }
   ]

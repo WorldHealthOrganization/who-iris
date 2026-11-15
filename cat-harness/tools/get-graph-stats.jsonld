@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/get-graph-stats.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/get-graph-stats.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/get-graph-stats.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/get-graph-stats.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "get-graph-stats",
       "title": "Content graph counts",
@@ -383,7 +383,7 @@
         "inputs": [
           {
             "name": "refresh",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Rebuild the index from disk first.",
             "required": false
           }
@@ -391,7 +391,7 @@
         "outputs": [
           {
             "name": "stats",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
             "description": "JSON: node and edge counts, by provenance and kind, per root."
           }
         ]
@@ -400,7 +400,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/corpus-grep"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/corpus-grep"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/get-graph-stats.jsonld"
     }

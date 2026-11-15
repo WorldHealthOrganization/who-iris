@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/skill-fetch.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/skill-fetch.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/skill-fetch.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/skill-fetch.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "skill-fetch",
       "title": "Fetch a skill",
@@ -383,7 +383,7 @@
         "inputs": [
           {
             "name": "skill",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/SkillName",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/SkillName",
             "required": true,
             "arg": {
               "positional": 0
@@ -391,7 +391,7 @@
           },
           {
             "name": "package_name",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/PackageName",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/PackageName",
             "required": false,
             "arg": {
               "flag": "--package"
@@ -401,7 +401,7 @@
         "outputs": [
           {
             "name": "instructions",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
             "description": "The skill's instruction body."
           }
         ]
@@ -410,7 +410,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/skills-and-tools"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/skills-and-tools"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/skill-fetch.jsonld"
     }

@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/bootstrap-tools/bootstrap-tools.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/bootstrap-tools/role/github-pages.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/bootstrap-tools/bootstrap-tools.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/bootstrap-tools/bootstrap-tools.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/bootstrap-tools/role/github-pages.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/bootstrap-tools/bootstrap-tools.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/bootstrap-tools/role/github-pages",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/bootstrap-tools/role/github-pages",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
       "prefLabel": "GitHub Pages",
       "title": "GitHub Pages",
@@ -15,7 +15,7 @@
         "system"
       ],
       "hasSkill": [
-        "https://litlfred.github.io/who-iris/bootstrap-tools/skill/github-pages"
+        "https://WorldHealthOrganization.github.io/who-iris/bootstrap-tools/skill/github-pages"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/bootstrap-tools/role/github-pages"
     }

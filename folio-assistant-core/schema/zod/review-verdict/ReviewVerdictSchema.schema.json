@@ -93,7 +93,7 @@
       ]
     }
   },
-  "$id": "https://litlfred.github.io/who-iris/folio-assistant-core/schema/zod/review-verdict/ReviewVerdictSchema.schema.json",
+  "$id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/schema/zod/review-verdict/ReviewVerdictSchema.schema.json",
   "title": "ReviewVerdictSchema",
   "description": "Generated from `ReviewVerdictSchema` in schemas/review-verdict.ts, which is authoritative. Published because it is an exported Zod `*Schema` (owner ruling 2026-10-05) — which says it is reachable, not that it is stable."
 }

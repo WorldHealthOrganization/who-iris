@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/subgraph-readmes.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/subgraph-readmes.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/subgraph-readmes.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/subgraph-readmes.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "subgraph-readmes",
       "title": "Directory READMEs from the Knowledge Graph",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "check",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Fail if any directory README or the QA record is stale; write nothing.",
             "required": false,
             "arg": {
@@ -389,7 +389,7 @@
         "outputs": [
           {
             "name": "readmes",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "`<directory>/README.md` for each declared directory, and the QA record."
           }
         ]
@@ -401,8 +401,8 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/docs-generation",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/upload-routes"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/docs-generation",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/upload-routes"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/subgraph-readmes.jsonld"
     }

@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/pages-index.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/pages-index.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/pages-index.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/pages-index.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "pages-index",
       "title": "Published-paper index page",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "outputHtml",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "Where to write index.html.",
             "required": true,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "paperEmbed",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The file the Paper tab embeds, typically the PDF.",
             "required": true,
             "arg": {
@@ -396,7 +396,7 @@
           },
           {
             "name": "pdf",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The PDF filename used in download links.",
             "required": true,
             "arg": {
@@ -405,7 +405,7 @@
           },
           {
             "name": "md",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "A Markdown rendering to link, when there is one.",
             "required": false,
             "arg": {
@@ -414,7 +414,7 @@
           },
           {
             "name": "visualizer",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The visualizer page for the second tab.",
             "required": false,
             "arg": {
@@ -423,7 +423,7 @@
           },
           {
             "name": "branch",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
             "description": "The branch the build is from.",
             "required": false,
             "arg": {
@@ -432,7 +432,7 @@
           },
           {
             "name": "repo",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoFullName",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoFullName",
             "description": "owner/repo, for links back to the source.",
             "required": false,
             "arg": {
@@ -441,7 +441,7 @@
           },
           {
             "name": "sha",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/CommitSha",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/CommitSha",
             "description": "The commit the build is from.",
             "required": false,
             "arg": {
@@ -452,7 +452,7 @@
         "outputs": [
           {
             "name": "index",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The written index.html."
           }
         ]
@@ -464,7 +464,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/docs-generation"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/docs-generation"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/pages-index.jsonld"
     }

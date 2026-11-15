@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/capability/docling.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/capability/docling.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/capability/docling",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/capability/docling",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Capability",
       "localId": "docling",
       "name": "Docling (layout-aware PDF parsing)",
@@ -14,7 +14,7 @@
         "command": "python3 -c 'import docling' && { [ -d \"$HOME/.cache/docling/models\" ] || curl -sf --max-time 5 -o /dev/null https://huggingface.co; }"
       },
       "requiresCapability": [
-        "https://litlfred.github.io/who-iris/cat-harness/capability/python3"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/capability/python3"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/capability/docling"
     }

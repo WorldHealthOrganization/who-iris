@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_JsonLdDrift.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_JsonLdDrift.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_JsonLdDrift",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_JsonLdDrift",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Process",
       "name": "Are the .jsonld siblings still in sync with their .ts manifests?",
       "summary": "Check that the committed `.jsonld` siblings are still in sync with the `.ts` manifests they are generated from.",
@@ -12,36 +12,36 @@
       "enforcement": "strict",
       "sourcePath": "sdlc/processes/jsonld-drift-check.bpmn",
       "sourceUrl": "https://github.com/litlfred/cat-harness/blob/main/sdlc/processes/jsonld-drift-check.bpmn",
-      "depiction": "https://litlfred.github.io/who-iris/assets/img/workflows/jsonld-drift-check.svg",
+      "depiction": "https://WorldHealthOrganization.github.io/who-iris/assets/img/workflows/jsonld-drift-check.svg",
       "startNode": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_JsonLdDrift/node/Start_Change"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_JsonLdDrift/node/Start_Change"
       ],
       "nodeCount": 3,
       "flowCount": 2,
       "conformsTo": [
-        "https://litlfred.github.io/who-iris/cat-harness/externalSchema/omg-bpmn-2.0",
-        "https://litlfred.github.io/who-iris/cat-harness/externalSchema/omg-dd-1.0",
-        "https://litlfred.github.io/who-iris/cat-harness/externalSchema/w3c-xsd11-structures"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/externalSchema/omg-bpmn-2.0",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/externalSchema/omg-dd-1.0",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/externalSchema/w3c-xsd11-structures"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/sdlc",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/sdlc",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_JsonLdDrift"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_JsonLdDrift#flow/Flow_0",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_JsonLdDrift#flow/Flow_0",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_JsonLdDrift",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_JsonLdDrift/node/Start_Change",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_JsonLdDrift/node/Call_Drift",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/sdlc",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_JsonLdDrift",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_JsonLdDrift/node/Start_Change",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_JsonLdDrift/node/Call_Drift",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/sdlc",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_JsonLdDrift#flow/Flow_0"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_JsonLdDrift#flow/Flow_1",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_JsonLdDrift#flow/Flow_1",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_JsonLdDrift",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_JsonLdDrift/node/Call_Drift",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_JsonLdDrift/node/End_Checked",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/sdlc",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_JsonLdDrift",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_JsonLdDrift/node/Call_Drift",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_JsonLdDrift/node/End_Checked",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/sdlc",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_JsonLdDrift#flow/Flow_1"
     }
   ]

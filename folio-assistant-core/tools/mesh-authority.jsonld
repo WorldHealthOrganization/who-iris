@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/tools/mesh-authority.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/tools/mesh-authority.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/tools/mesh-authority.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/tools/mesh-authority.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "mesh-authority",
       "title": "Validate draft MeSH headings against NLM's authority",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "draft",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "A JSON file: `{ \"candidates\": [{ \"label\"?, \"descriptor\"?, \"qualifier\"?, \"why\"? }] }`, in the order stage two ranked them.",
             "required": true,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "json",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Print the full report as JSON instead of the review table.",
             "required": false,
             "arg": {
@@ -398,7 +398,7 @@
         "outputs": [
           {
             "name": "report",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "A review table with one row per candidate, or with `--json` the report: `results` per candidate and `validated`, the headings a reviewer sees."
           }
         ]
@@ -410,7 +410,7 @@
         "network": true
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/skill/mesh-subject-indexing"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/skill/mesh-subject-indexing"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/tools/mesh-authority.jsonld"
     }

@@ -1,15 +1,15 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_FolioReviewPublish/lane/Lane_Committee.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_FolioReviewPublish/lane/Lane_Committee.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_FolioReviewPublish/lane/Lane_Committee",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_FolioReviewPublish/lane/Lane_Committee",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Lane",
       "name": "Authoring Committee",
-      "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_FolioReviewPublish",
-      "bindsRole": "https://litlfred.github.io/who-iris/folio-assistant-core/role/authoring-committee",
-      "inSubgraph": "https://litlfred.github.io/who-iris/folio-assistant-core/directory/core-processes",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_FolioReviewPublish",
+      "bindsRole": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/role/authoring-committee",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/directory/core-processes",
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/process/Process_FolioReviewPublish/lane/Lane_Committee"
     }
   ]

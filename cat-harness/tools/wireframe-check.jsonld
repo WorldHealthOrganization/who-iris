@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/wireframe-check.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/wireframe-check.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/wireframe-check.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/wireframe-check.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "wireframe-check",
       "title": "Wireframe check at web and mobile viewports",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "use",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/WireframeUse",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/WireframeUse",
             "description": "`design` or `as-is`. Design needs at least two candidates, compared blind; as-is candidates are drawings of what renders on main, each marked `as-is` in its file name. Anything else exits 2.",
             "required": true,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "topic",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
             "description": "Which wireframe is checked: its asset directory, docs/wireframes/<topic>/ for as-is use and docs/proposals/<topic>/wireframes/ for design use (docs/wireframes/<topic>/ is also accepted there). With no candidates, every .html in it is checked; a candidate outside it is refused.",
             "required": true,
             "arg": {
@@ -396,7 +396,7 @@
           },
           {
             "name": "surface",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/SurfaceRef",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/SurfaceRef",
             "description": "What is drawn: a visualiser route key or a chrome name. Recorded in report.json; for as-is use it must be the topic itself or a ref docs/wireframes/index.json says the topic covers.",
             "required": true,
             "arg": {
@@ -405,7 +405,7 @@
           },
           {
             "name": "candidates",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "Wireframe HTML files, all in the topic's directory. Absent: every .html there. Each must carry both a web and a mobile layout (responsive CSS or two layouts).",
             "required": false,
             "repeated": true,
@@ -415,7 +415,7 @@
           },
           {
             "name": "out",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "Where screenshots and report.json go; default <the topic's directory>/checks.",
             "required": false,
             "arg": {
@@ -426,7 +426,7 @@
         "outputs": [
           {
             "name": "report",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "report.json: per candidate, per viewport, per criterion. The screenshots are beside it."
           }
         ]
@@ -439,7 +439,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/wireframe-viewport-check"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/wireframe-viewport-check"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/wireframe-check.jsonld"
     }

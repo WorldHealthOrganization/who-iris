@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/workflow-gate.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/workflow-gate.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/workflow-gate.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/workflow-gate.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "workflow-gate",
       "title": "May this step be performed?",
@@ -383,7 +383,7 @@
         "inputs": [
           {
             "name": "instance",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/InstanceId",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/InstanceId",
             "required": true,
             "arg": {
               "positional": 0
@@ -391,7 +391,7 @@
           },
           {
             "name": "activity",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/NodeId",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/NodeId",
             "required": true,
             "arg": {
               "positional": 1
@@ -399,13 +399,13 @@
           },
           {
             "name": "actor",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "Who you say would perform it. Recorded only: strict mode authorizes the principal GitHub vouches for (issue #1207).",
             "required": false
           },
           {
             "name": "target",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "The content it would act on, for the access check.",
             "required": false
           }
@@ -413,7 +413,7 @@
         "outputs": [
           {
             "name": "verdict",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
             "description": "Permitted, refused with the reason, or advisory — and the task-authorization verdict."
           }
         ]
@@ -422,7 +422,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/process-state"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/process-state"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/workflow-gate.jsonld"
     }

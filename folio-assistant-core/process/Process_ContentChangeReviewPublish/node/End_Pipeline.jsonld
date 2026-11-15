@@ -1,25 +1,25 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReviewPublish/node/End_Pipeline.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReviewPublish/node/End_Pipeline.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReviewPublish/node/End_Pipeline",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReviewPublish/node/End_Pipeline",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "Deployment complete",
       "nodeKind": "end",
       "bpmnType": "bpmn:EndEvent",
-      "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReviewPublish",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReviewPublish",
       "performedBy": "https://litlfred.github.io/folio-assistant/cat-harness/role/build-pipeline",
-      "inLane": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReviewPublish/lane/Lane_Pipeline",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReviewPublish/lane/Lane_Pipeline",
       "requires": [],
       "touchesWorkPlan": false,
       "relaxable": true,
       "incoming": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReviewPublish#flow/p7b"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_ContentChangeReviewPublish#flow/p7b"
       ],
       "outgoing": [],
-      "inSubgraph": "https://litlfred.github.io/who-iris/folio-assistant-core/directory/collab",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/directory/collab",
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/process/Process_ContentChangeReviewPublish/node/End_Pipeline"
     }
   ]

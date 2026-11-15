@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/work-plan-prime.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/work-plan-prime.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/work-plan-prime.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/work-plan-prime.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "work-plan-prime",
       "title": "Prime the work plan",
@@ -385,7 +385,7 @@
         "outputs": [
           {
             "name": "priming",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
             "description": "Open items, the roadmap, and what each is waiting on."
           }
         ]
@@ -394,10 +394,10 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/todo-manager",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/bean-coordination",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/session-intent",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/pending-show"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/todo-manager",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/bean-coordination",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/session-intent",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/pending-show"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/work-plan-prime.jsonld"
     }

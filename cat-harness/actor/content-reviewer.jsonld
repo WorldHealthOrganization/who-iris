@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/actor/content-reviewer.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/actor/content-reviewer.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/actor/content-reviewer",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/actor/content-reviewer",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Actor",
       "localId": "content-reviewer",
       "actorKind": "person",
@@ -18,10 +18,10 @@
       },
       "hasCapability": [],
       "mayTakeRole": [
-        "https://litlfred.github.io/who-iris/cat-harness/role/reviewer",
-        "https://litlfred.github.io/who-iris/cat-harness/role/translation-adjudicator",
-        "https://litlfred.github.io/who-iris/cat-harness/role/narrative-reviewer",
-        "https://litlfred.github.io/who-iris/cat-harness/role/adjudicator"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/reviewer",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/translation-adjudicator",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/narrative-reviewer",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/adjudicator"
       ],
       "permissionName": [
         "approval-authority",

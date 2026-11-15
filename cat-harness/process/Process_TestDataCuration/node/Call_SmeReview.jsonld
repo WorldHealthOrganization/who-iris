@@ -1,31 +1,31 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_TestDataCuration/node/Call_SmeReview.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_TestDataCuration/node/Call_SmeReview.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_TestDataCuration/node/Call_SmeReview",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_TestDataCuration/node/Call_SmeReview",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "SME review of cases or cohorts",
       "nodeKind": "activity",
       "bpmnType": "bpmn:CallActivity",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_TestDataCuration",
-      "performedBy": "https://litlfred.github.io/who-iris/cat-harness/role/authoring-agent",
-      "inLane": "https://litlfred.github.io/who-iris/cat-harness/process/Process_TestDataCuration/lane/Lane_Author",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_TestDataCuration",
+      "performedBy": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/authoring-agent",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_TestDataCuration/lane/Lane_Author",
       "requires": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/test-data-sets"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/test-data-sets"
       ],
       "touchesWorkPlan": true,
       "workPlanOp": "note",
       "relaxable": true,
-      "calledElement": "https://litlfred.github.io/who-iris/cat-harness/process/Process_SmeTestDataReview",
+      "calledElement": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_SmeTestDataReview",
       "incoming": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_TestDataCuration#flow/Flow_SmeYes"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_TestDataCuration#flow/Flow_SmeYes"
       ],
       "outgoing": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_TestDataCuration#flow/Flow_4"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_TestDataCuration#flow/Flow_4"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/sdlc",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/sdlc",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TestDataCuration/node/Call_SmeReview"
     }
   ]

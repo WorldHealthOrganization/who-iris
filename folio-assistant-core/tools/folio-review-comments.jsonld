@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/tools/folio-review-comments.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/tools/folio-review-comments.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/tools/folio-review-comments.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/tools/folio-review-comments.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "folio-review-comments",
       "title": "Folio review comments",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "repo",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoFullName",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoFullName",
             "description": "`owner/name` of the repository the pull request is in.",
             "required": true,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "pr",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/ChangeProposalNumber",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/ChangeProposalNumber",
             "description": "The edit-set's pull request.",
             "required": true,
             "arg": {
@@ -396,7 +396,7 @@
           },
           {
             "name": "out",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "Where to write `review-comments.json`.",
             "required": true,
             "arg": {
@@ -405,7 +405,7 @@
           },
           {
             "name": "folio",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "Read the head's blocks from the folio's manifests (as text; nothing is executed). Give this OR `blocks`.",
             "required": false,
             "arg": {
@@ -414,7 +414,7 @@
           },
           {
             "name": "blocks-out",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "With `folio`: also write `blocks.json`, so a later run can anchor without checking the folio out.",
             "required": false,
             "arg": {
@@ -423,7 +423,7 @@
           },
           {
             "name": "blocks",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "A published `blocks.json`. The comment-triggered refresh uses this, so it never checks out the pull request's code.",
             "required": false,
             "arg": {
@@ -432,7 +432,7 @@
           },
           {
             "name": "existing",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The previous `review-comments.json`. Every comment in it is kept, with its status.",
             "required": false,
             "arg": {
@@ -441,7 +441,7 @@
           },
           {
             "name": "commit",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/CommitSha",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/CommitSha",
             "description": "The head commit. Default `GITHUB_SHA`, else `git rev-parse HEAD`.",
             "required": false,
             "arg": {
@@ -450,7 +450,7 @@
           },
           {
             "name": "todos",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The folio's todos graph root. Review comments committed under its `todo-feedback` directory, on the feature branch, win over the previously published copy.",
             "required": false,
             "arg": {
@@ -459,7 +459,7 @@
           },
           {
             "name": "comments",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "Read comments from this JSON file instead of GitHub: offline runs and tests.",
             "required": false,
             "arg": {
@@ -470,7 +470,7 @@
         "outputs": [
           {
             "name": "review-comments",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "A `folio-review-comments/v1` file whose `comments` are `review-comment/1.0.0` todos. Its one-line summary goes to stderr."
           }
         ]
@@ -482,7 +482,7 @@
         "network": true
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/skill/review-comments"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/skill/review-comments"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/tools/folio-review-comments.jsonld"
     }

@@ -1,16 +1,16 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/schema/qa-record-shapes.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/schema/qa-record-shapes.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/schema/qa-record-shapes",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/schema/qa-record-shapes",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Schema",
       "name": "qa-record-shapes",
       "title": "qa-record-shapes",
       "summary": "The SHAPES of the record families the harness's `qa` and `lsi` graphs hold —",
       "module": "schemas/kg/qa-record-shapes.ts",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/schemas",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/schemas",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/schema/qa-record-shapes"
     }
   ]

@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/role/work-plan.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/work-plan.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/role/work-plan",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/work-plan",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
       "prefLabel": "Work plan (beans)",
       "title": "Work plan (beans)",
@@ -15,9 +15,9 @@
         "system"
       ],
       "hasSkill": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/todo-manager",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/content-feedback",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/work-plan-store"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/todo-manager",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/content-feedback",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/work-plan-store"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/role/work-plan"
     }

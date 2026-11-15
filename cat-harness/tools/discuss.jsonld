@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/discuss.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/discuss.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/discuss.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/discuss.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "discuss",
       "title": "discussion",
@@ -378,13 +378,13 @@
         "inputs": [
           {
             "name": "question",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "The question as put, with its candidates named. One question where one will do.",
             "required": true
           },
           {
             "name": "askedOf",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "`person` or `agent` — symmetric participants, recorded because the answers are evidence of different weight.",
             "required": true
           }
@@ -392,14 +392,14 @@
         "outputs": [
           {
             "name": "answer",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "The reply as received. Absent is a real result: it routes to `outcome: unsettled`, never to a guess."
           }
         ]
       },
       "requirements": {},
       "satisfies": [
-        "https://litlfred.github.io/who-iris/bootstrap/skill/discussion"
+        "https://WorldHealthOrganization.github.io/who-iris/bootstrap/skill/discussion"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/discuss.jsonld"
     }

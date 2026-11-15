@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/who-iris/who-iris.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/who-iris/role/cloudflare-r2-cdn.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/who-iris/who-iris.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/who-iris/who-iris.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/who-iris/role/cloudflare-r2-cdn.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/who-iris/who-iris.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/who-iris/role/cloudflare-r2-cdn",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/who-iris/role/cloudflare-r2-cdn",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
       "prefLabel": "Cloudflare R2 and CDN",
       "title": "Cloudflare R2 and CDN",
@@ -15,7 +15,7 @@
         "system"
       ],
       "hasSkill": [
-        "https://litlfred.github.io/who-iris/who-iris/skill/iris-cdn-exporter"
+        "https://WorldHealthOrganization.github.io/who-iris/who-iris/skill/iris-cdn-exporter"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/role/cloudflare-r2-cdn"
     }

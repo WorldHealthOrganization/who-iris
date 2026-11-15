@@ -1,29 +1,29 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_Editing/node/Task_AgentReview.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_Editing/node/Task_AgentReview.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_Editing/node/Task_AgentReview",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_Editing/node/Task_AgentReview",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "Agent review of the change",
       "nodeKind": "activity",
       "bpmnType": "bpmn:ServiceTask",
-      "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_Editing",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_Editing",
       "performedBy": "https://litlfred.github.io/folio-assistant/cat-harness/role/reviewer",
-      "inLane": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_Editing/lane/Lane_NonMechanical",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_Editing/lane/Lane_NonMechanical",
       "requires": [
         "https://litlfred.github.io/folio-assistant/cat-harness/skill/content-review"
       ],
       "touchesWorkPlan": false,
       "relaxable": true,
       "incoming": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_Editing#flow/Flow_10"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_Editing#flow/Flow_10"
       ],
       "outgoing": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_Editing#flow/Flow_12"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_Editing#flow/Flow_12"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/folio-assistant-core/directory/collab",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/directory/collab",
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/process/Process_Editing/node/Task_AgentReview"
     }
   ]

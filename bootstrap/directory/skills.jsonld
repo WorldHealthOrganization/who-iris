@@ -1,17 +1,17 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/bootstrap/bootstrap.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/bootstrap/directory/skills.jsonld",
-  "isPartOf": "https://litlfred.github.io/who-iris/bootstrap/bootstrap.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/bootstrap/bootstrap.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/bootstrap/directory/skills.jsonld",
+  "isPartOf": "https://WorldHealthOrganization.github.io/who-iris/bootstrap/bootstrap.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/bootstrap/directory/skills",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/bootstrap/directory/skills",
       "@type": "bootstrap:Subgraph",
       "label": "skills",
       "type": [
         "bootstrap:graphTypology/skills"
       ],
-      "source": "https://litlfred.github.io/who-iris/bootstrap/skills/",
-      "isPartOf": "https://litlfred.github.io/who-iris/bootstrap/bootstrap.jsonld"
+      "source": "https://WorldHealthOrganization.github.io/who-iris/bootstrap/skills/",
+      "isPartOf": "https://WorldHealthOrganization.github.io/who-iris/bootstrap/bootstrap.jsonld"
     }
   ]
 }

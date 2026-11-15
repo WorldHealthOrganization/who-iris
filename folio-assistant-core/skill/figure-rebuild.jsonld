@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/skill/figure-rebuild.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/skill/figure-rebuild.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/skill/figure-rebuild",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/skill/figure-rebuild",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Skill",
       "name": "figure-rebuild",
       "title": "Figure rebuild: a figure is data, not a picture",
@@ -14,7 +14,7 @@
       "hasInstructions": true,
       "hasIOContract": false,
       "ambiguous": false,
-      "inSubgraph": "https://litlfred.github.io/who-iris/folio-assistant-core/directory/core-skills",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/directory/core-skills",
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/skill/figure-rebuild"
     }
   ]

@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/capability/camelot.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/capability/camelot.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/capability/camelot",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/capability/camelot",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Capability",
       "localId": "camelot",
       "name": "camelot-py (table extraction with a confidence score)",
@@ -14,7 +14,7 @@
         "command": "python3 -c 'import camelot'"
       },
       "requiresCapability": [
-        "https://litlfred.github.io/who-iris/cat-harness/capability/python3"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/capability/python3"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/capability/camelot"
     }

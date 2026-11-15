@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/role/programme-manager.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/programme-manager.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/role/programme-manager",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/programme-manager",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
       "prefLabel": "Programme manager",
       "title": "Programme manager",
@@ -15,11 +15,11 @@
         "person"
       ],
       "hasSkill": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/decision-audit",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/methodology-adoption",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/release-epic-planning",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/release-lifecycle",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/decision-methodology-selector"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/decision-audit",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/methodology-adoption",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/release-epic-planning",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/release-lifecycle",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/decision-methodology-selector"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/role/programme-manager"
     }

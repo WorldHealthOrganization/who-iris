@@ -1,15 +1,15 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_PublicCommentChange/lane/Lane_QaReviewer.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_PublicCommentChange/lane/Lane_QaReviewer.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_PublicCommentChange/lane/Lane_QaReviewer",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_PublicCommentChange/lane/Lane_QaReviewer",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Lane",
       "name": "QA reviewer (independent)",
-      "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_PublicCommentChange",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_PublicCommentChange",
       "bindsRole": "https://litlfred.github.io/folio-assistant/cat-harness/role/qc-reviewer",
-      "inSubgraph": "https://litlfred.github.io/who-iris/folio-assistant-core/directory/collab",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/directory/collab",
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/process/Process_PublicCommentChange/lane/Lane_QaReviewer"
     }
   ]

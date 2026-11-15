@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Process",
       "name": "Stalled-agent triage: collect handovers, consolidate themes, recommend, re-route",
       "summary": "When agents stall (context exhausted, container lost, session timed out) their work is spread over PRs, branches, beans and process runs.",
@@ -12,80 +12,80 @@
       "enforcement": "strict",
       "sourcePath": "sdlc/processes/stalled-agent-triage.bpmn",
       "sourceUrl": "https://github.com/litlfred/cat-harness/blob/main/sdlc/processes/stalled-agent-triage.bpmn",
-      "depiction": "https://litlfred.github.io/who-iris/assets/img/workflows/stalled-agent-triage.svg",
+      "depiction": "https://WorldHealthOrganization.github.io/who-iris/assets/img/workflows/stalled-agent-triage.svg",
       "startNode": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/Start_SAT"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/Start_SAT"
       ],
       "nodeCount": 8,
       "flowCount": 7,
       "conformsTo": [
-        "https://litlfred.github.io/who-iris/cat-harness/externalSchema/omg-bpmn-2.0",
-        "https://litlfred.github.io/who-iris/cat-harness/externalSchema/omg-dd-1.0"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/externalSchema/omg-bpmn-2.0",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/externalSchema/omg-dd-1.0"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/sdlc",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/sdlc",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_StalledAgentTriage"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage#flow/SF_Process_StalledAgentTriage_1",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage#flow/SF_Process_StalledAgentTriage_1",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/Start_SAT",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/A_Footprint",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/sdlc",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/Start_SAT",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/A_Footprint",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/sdlc",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_StalledAgentTriage#flow/SF_Process_StalledAgentTriage_1"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage#flow/SF_Process_StalledAgentTriage_2",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage#flow/SF_Process_StalledAgentTriage_2",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/A_Footprint",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/A_Collect",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/sdlc",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/A_Footprint",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/A_Collect",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/sdlc",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_StalledAgentTriage#flow/SF_Process_StalledAgentTriage_2"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage#flow/SF_Process_StalledAgentTriage_3",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage#flow/SF_Process_StalledAgentTriage_3",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/A_Collect",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/A_Consolidate",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/sdlc",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/A_Collect",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/A_Consolidate",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/sdlc",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_StalledAgentTriage#flow/SF_Process_StalledAgentTriage_3"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage#flow/SF_Process_StalledAgentTriage_4",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage#flow/SF_Process_StalledAgentTriage_4",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/A_Consolidate",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/U_Decide",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/sdlc",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/A_Consolidate",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/U_Decide",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/sdlc",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_StalledAgentTriage#flow/SF_Process_StalledAgentTriage_4"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage#flow/SF_Process_StalledAgentTriage_5",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage#flow/SF_Process_StalledAgentTriage_5",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/U_Decide",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/A_Record",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/sdlc",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/U_Decide",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/A_Record",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/sdlc",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_StalledAgentTriage#flow/SF_Process_StalledAgentTriage_5"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage#flow/SF_Process_StalledAgentTriage_6",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage#flow/SF_Process_StalledAgentTriage_6",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/A_Record",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/S_Reroute",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/sdlc",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/A_Record",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/S_Reroute",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/sdlc",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_StalledAgentTriage#flow/SF_Process_StalledAgentTriage_6"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage#flow/SF_Process_StalledAgentTriage_7",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage#flow/SF_Process_StalledAgentTriage_7",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/S_Reroute",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/End_SAT",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/sdlc",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/S_Reroute",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_StalledAgentTriage/node/End_SAT",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/sdlc",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_StalledAgentTriage#flow/SF_Process_StalledAgentTriage_7"
     }
   ]

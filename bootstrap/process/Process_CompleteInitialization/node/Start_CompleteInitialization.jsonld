@@ -1,14 +1,14 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/bootstrap/bootstrap.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/bootstrap/process/Process_CompleteInitialization/node/Start_CompleteInitialization.jsonld",
-  "isPartOf": "https://litlfred.github.io/who-iris/bootstrap/bootstrap.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/bootstrap/bootstrap.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/bootstrap/process/Process_CompleteInitialization/node/Start_CompleteInitialization.jsonld",
+  "isPartOf": "https://WorldHealthOrganization.github.io/who-iris/bootstrap/bootstrap.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/bootstrap/process/Process_CompleteInitialization/node/Start_CompleteInitialization",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/bootstrap/process/Process_CompleteInitialization/node/Start_CompleteInitialization",
       "@type": "bootstrap:ProcessNode",
       "label": "A harness is installed here",
       "type": "bpmn:startEvent",
-      "isPartOf": "https://litlfred.github.io/who-iris/bootstrap/process/Process_CompleteInitialization"
+      "isPartOf": "https://WorldHealthOrganization.github.io/who-iris/bootstrap/process/Process_CompleteInitialization"
     }
   ]
 }

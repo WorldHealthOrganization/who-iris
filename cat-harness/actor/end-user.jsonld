@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/actor/end-user.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/actor/end-user.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/actor/end-user",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/actor/end-user",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Actor",
       "localId": "end-user",
       "actorKind": "person",
@@ -12,7 +12,7 @@
       "description": "The person the assistant is working for — the one who states intent and answers what the agent cannot decide from the filesystem.",
       "hasCapability": [],
       "mayTakeRole": [
-        "https://litlfred.github.io/who-iris/cat-harness/role/user"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/user"
       ],
       "permissionName": [
         "adjudication"

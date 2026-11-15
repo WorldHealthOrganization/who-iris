@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/lsi-query.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/lsi-query.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/lsi-query.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/lsi-query.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "lsi-query",
       "title": "Latent Semantic Indexing over a prose graph",
@@ -384,7 +384,7 @@
         "inputs": [
           {
             "name": "text",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "The query, in any words, on STDIN — free text never goes on a command line.",
             "required": true,
             "arg": {
@@ -393,7 +393,7 @@
           },
           {
             "name": "instance",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
             "description": "Layer declaring the graph, e.g. `cat-harness`.",
             "required": false,
             "arg": {
@@ -402,7 +402,7 @@
           },
           {
             "name": "graph",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
             "description": "Graph id within the layer, e.g. `library`.",
             "required": false,
             "arg": {
@@ -413,7 +413,7 @@
         "outputs": [
           {
             "name": "report",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
             "description": "Per graph: the top hits by cosine, each marked lexical+latent or latent only."
           }
         ]
@@ -422,7 +422,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/lsi-indexing"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/lsi-indexing"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/lsi-query.jsonld"
     }

@@ -1,30 +1,30 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_PublicComment/node/Task_Ingest.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_PublicComment/node/Task_Ingest.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_PublicComment/node/Task_Ingest",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_PublicComment/node/Task_Ingest",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "Ingest and place each comment",
       "nodeKind": "activity",
       "bpmnType": "bpmn:Task",
-      "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_PublicComment",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_PublicComment",
       "performedBy": "https://litlfred.github.io/folio-assistant/cat-harness/role/ingestion-agent",
-      "inLane": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_PublicComment/lane/Lane_Intake",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_PublicComment/lane/Lane_Intake",
       "requires": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/skill/public-comment"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/skill/public-comment"
       ],
       "touchesWorkPlan": false,
       "relaxable": true,
       "incoming": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_PublicComment#flow/Flow_ToIngest",
-        "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_PublicComment#flow/Flow_BlockFeedbackToIngest"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_PublicComment#flow/Flow_ToIngest",
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_PublicComment#flow/Flow_BlockFeedbackToIngest"
       ],
       "outgoing": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_PublicComment#flow/Flow_ToTriage"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_PublicComment#flow/Flow_ToTriage"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/folio-assistant-core/directory/collab",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/directory/collab",
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/process/Process_PublicComment/node/Task_Ingest"
     }
   ]

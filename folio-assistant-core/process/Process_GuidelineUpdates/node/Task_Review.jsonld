@@ -1,29 +1,29 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_GuidelineUpdates/node/Task_Review.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_GuidelineUpdates/node/Task_Review.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_GuidelineUpdates/node/Task_Review",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_GuidelineUpdates/node/Task_Review",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "Review the impact with stakeholders",
       "nodeKind": "activity",
       "bpmnType": "bpmn:Task",
-      "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_GuidelineUpdates",
-      "performedBy": "https://litlfred.github.io/who-iris/folio-assistant-core/role/authoring-committee",
-      "inLane": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_GuidelineUpdates/lane/Lane_Committee",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_GuidelineUpdates",
+      "performedBy": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/role/authoring-committee",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_GuidelineUpdates/lane/Lane_Committee",
       "requires": [
         "https://litlfred.github.io/folio-assistant/cat-harness/skill/content-review"
       ],
       "touchesWorkPlan": false,
       "relaxable": true,
       "incoming": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_GuidelineUpdates#flow/Flow_7"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_GuidelineUpdates#flow/Flow_7"
       ],
       "outgoing": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_GuidelineUpdates#flow/Flow_9"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_GuidelineUpdates#flow/Flow_9"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/folio-assistant-core/directory/collab",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/directory/collab",
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/process/Process_GuidelineUpdates/node/Task_Review"
     }
   ]

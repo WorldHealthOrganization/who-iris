@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/corpus-search.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/corpus-search.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/corpus-search.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/corpus-search.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "corpus-search",
       "title": "Search the corpus and follow the graph",
@@ -383,37 +383,37 @@
         "inputs": [
           {
             "name": "query",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "Words to seed on. Seeding is lexical, so a short phrase works; a long query no node contains seeds nothing.",
             "required": true
           },
           {
             "name": "hops",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Count",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Count",
             "description": "Expansion depth, 0-4 (default 1). 0 is a plain lexical search.",
             "required": false
           },
           {
             "name": "direction",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
             "description": "`out`, `in` or `both` (default).",
             "required": false
           },
           {
             "name": "provenance",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
             "description": "`authored` or `ingested`: restricts the seeds, not the expansion.",
             "required": false
           },
           {
             "name": "searchText",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Also seed on companion Markdown bodies.",
             "required": false
           },
           {
             "name": "limit",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Count",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Count",
             "description": "Seed cap before expansion (default 20).",
             "required": false
           }
@@ -421,7 +421,7 @@
         "outputs": [
           {
             "name": "result",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
             "description": "JSON: summary, emptyRoots, dangling, and hits each carrying a `why`."
           }
         ]
@@ -430,7 +430,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/corpus-grep"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/corpus-grep"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/corpus-search.jsonld"
     }

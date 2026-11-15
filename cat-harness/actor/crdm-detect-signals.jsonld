@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/actor/crdm-detect-signals.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/actor/crdm-detect-signals.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/actor/crdm-detect-signals",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/actor/crdm-detect-signals",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Actor",
       "localId": "crdm-detect-signals",
       "actorKind": "system",

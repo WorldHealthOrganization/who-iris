@@ -1,16 +1,16 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/schema/block-qa.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/schema/block-qa.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/schema/block-qa",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/schema/block-qa",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Schema",
       "name": "block-qa",
       "title": "block-qa",
       "summary": "Per-content-block QA report schema.",
       "module": "schemas/sdlc/block-qa.ts",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/schemas",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/schemas",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/schema/block-qa"
     }
   ]

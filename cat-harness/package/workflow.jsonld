@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/package/workflow.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/package/workflow.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/package/workflow",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/package/workflow",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/SkillPackage",
       "name": "workflow",
       "version": "0.1.0",
@@ -12,21 +12,21 @@
       "path": "skills/process/workflow",
       "hasManifest": true,
       "declaresSkill": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/bpmn-authoring",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/bpmn-detangle",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/bpmn-processes",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/deterministic-and-agentic",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/dmn-authoring",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/process-state",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/render-kg-to-cdn",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/session-context",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/session-state-machine",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/specification-compiled-agents",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/workflow-state"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/bpmn-authoring",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/bpmn-detangle",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/bpmn-processes",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/deterministic-and-agentic",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/dmn-authoring",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/process-state",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/render-kg-to-cdn",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/session-context",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/session-state-machine",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/specification-compiled-agents",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/workflow-state"
       ],
       "providesCapability": [],
       "requiresCapability": [],
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/skills",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/skills",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/package/workflow"
     }
   ]

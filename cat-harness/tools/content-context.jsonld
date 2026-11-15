@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/content-context.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/content-context.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/content-context.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/content-context.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "content-context",
       "title": "Content JSON-LD context",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "check",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Compare against the committed copy and fail if stale, instead of writing.",
             "required": false,
             "arg": {
@@ -389,7 +389,7 @@
         "outputs": [
           {
             "name": "context",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "`ns/content/v1.jsonld`, the document served at CONTENT_CONTEXT_URL."
           }
         ]
@@ -401,10 +401,10 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/kg-export"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/kg-export"
       ],
       "maintains": [
-        "https://litlfred.github.io/who-iris/ns/content/v1.jsonld"
+        "https://WorldHealthOrganization.github.io/who-iris/ns/content/v1.jsonld"
       ],
       "maintainsFrom": [
         "schemas/kg/jsonld.ts"

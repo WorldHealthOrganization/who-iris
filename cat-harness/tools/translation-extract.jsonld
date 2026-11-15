@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/translation-extract.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/translation-extract.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/translation-extract.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/translation-extract.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "translation-extract",
       "title": "Extract translatable strings",
@@ -383,7 +383,7 @@
         "inputs": [
           {
             "name": "path",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "A markdown file or a directory of them.",
             "required": true,
             "arg": {
@@ -392,7 +392,7 @@
           },
           {
             "name": "locale",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Locale",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Locale",
             "required": false,
             "arg": {
               "flag": "--locale"
@@ -400,7 +400,7 @@
           },
           {
             "name": "project_name",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "Recorded in the .pot header.",
             "required": false
           }
@@ -408,7 +408,7 @@
         "outputs": [
           {
             "name": "pot",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The template written."
           }
         ]
@@ -417,7 +417,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/translation-manager"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/translation-manager"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/translation-extract.jsonld"
     }

@@ -5,7 +5,7 @@
   "description": "The schemas instance `cat-harness-tools` publishes: its declaration, which is a CatHarness declaration and is validated by the shared schema this `$ref`s, and its skills' I/O contracts and its public Zod schemas — every exported Zod `*Schema` const (owner ruling 2026-10-05) — listed in `$defs` by `$id`.",
   "allOf": [
     {
-      "$ref": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.schema.json"
+      "$ref": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.schema.json"
     }
   ],
   "$defs": {

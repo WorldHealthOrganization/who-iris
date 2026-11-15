@@ -1,30 +1,30 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_MountDependency/node/Task_DeclareMount.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MountDependency/node/Task_DeclareMount.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_MountDependency/node/Task_DeclareMount",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MountDependency/node/Task_DeclareMount",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "Declare the mount: harness, repository, pin",
       "nodeKind": "activity",
       "bpmnType": "bpmn:Task",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_MountDependency",
-      "performedBy": "https://litlfred.github.io/who-iris/cat-harness/role/author",
-      "inLane": "https://litlfred.github.io/who-iris/cat-harness/process/Process_MountDependency/lane/Lane_Author",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MountDependency",
+      "performedBy": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/author",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MountDependency/lane/Lane_Author",
       "requires": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/remote-mount",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/index-config"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/remote-mount",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/index-config"
       ],
       "touchesWorkPlan": false,
       "relaxable": true,
       "incoming": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_MountDependency#flow/F_D1"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MountDependency#flow/F_D1"
       ],
       "outgoing": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_MountDependency#flow/F_D2"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MountDependency#flow/F_D2"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/processes",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/processes",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_MountDependency/node/Task_DeclareMount"
     }
   ]

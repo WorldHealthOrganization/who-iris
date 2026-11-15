@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/kg-graph-export.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/kg-graph-export.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/kg-graph-export.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/kg-graph-export.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "kg-graph-export",
       "title": "Knowledge-graph export",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "baseUrl",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Url",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Url",
             "description": "Publication base the node IRIs are minted against; a preview passes its own.",
             "required": false,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "out",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "Where to write; defaults to `_kg/<stub>.jsonld`, which is build output and gitignored.",
             "required": false,
             "arg": {
@@ -398,12 +398,12 @@
         "outputs": [
           {
             "name": "graph",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The written JSON-LD document."
           },
           {
             "name": "problems",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "Sources that could not be read, counted rather than silently omitted."
           }
         ]
@@ -415,9 +415,9 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/kg-export",
-        "https://litlfred.github.io/who-iris/bootstrap/skill/bootstrap-graph-emission",
-        "https://litlfred.github.io/who-iris/bootstrap/skill/bootstrap-graph-publication"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/kg-export",
+        "https://WorldHealthOrganization.github.io/who-iris/bootstrap/skill/bootstrap-graph-emission",
+        "https://WorldHealthOrganization.github.io/who-iris/bootstrap/skill/bootstrap-graph-publication"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/kg-graph-export.jsonld"
     }

@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/harness-state.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/harness-state.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/harness-state.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/harness-state.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "harness-state",
       "title": "Per-harness setup position and health",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "out",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "Where `<harness>.json` and `index.json` go. The deploy passes `./_site/assets/harnesses`. Absent: print the states and write nothing.",
             "required": false,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "json",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Print the states as JSON and write nothing.",
             "required": false,
             "arg": {
@@ -398,17 +398,17 @@
         "outputs": [
           {
             "name": "states",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "One `<harness>.json` per harness and an `index.json` listing them with their positions."
           },
           {
             "name": "report",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "One line per harness: its position, the next step, and its badges."
           },
           {
             "name": "result",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/HarnessStates",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/HarnessStates",
             "description": "With --json, or with no --out, every harness's state as one `HarnessStates` record, in name order. Programs read this; people read `report`."
           }
         ]
@@ -420,7 +420,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/bootstrap/skill/initialization-steps"
+        "https://WorldHealthOrganization.github.io/who-iris/bootstrap/skill/initialization-steps"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/harness-state.jsonld"
     }

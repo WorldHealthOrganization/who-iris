@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/translation-status.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/translation-status.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/translation-status.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/translation-status.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "translation-status",
       "title": "Translation coverage",
@@ -383,7 +383,7 @@
         "inputs": [
           {
             "name": "locale",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Locale",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Locale",
             "description": "Absent means every locale.",
             "required": false,
             "arg": {
@@ -394,7 +394,7 @@
         "outputs": [
           {
             "name": "coverage",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
             "description": "Translated, fuzzy and untranslated counts per locale."
           }
         ]
@@ -403,7 +403,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/translation-manager"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/translation-manager"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/translation-status.jsonld"
     }

@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/skill/l1-document-ingestion.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/skill/l1-document-ingestion.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/skill/l1-document-ingestion",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/skill/l1-document-ingestion",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Skill",
       "name": "l1-document-ingestion",
       "title": "L1 document ingestion",
@@ -14,7 +14,7 @@
       "hasInstructions": true,
       "hasIOContract": false,
       "ambiguous": false,
-      "inSubgraph": "https://litlfred.github.io/who-iris/folio-assistant-core/directory/core-skills",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/directory/core-skills",
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/skill/l1-document-ingestion"
     }
   ]

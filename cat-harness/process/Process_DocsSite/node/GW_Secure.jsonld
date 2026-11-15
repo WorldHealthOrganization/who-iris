@@ -1,28 +1,28 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_DocsSite/node/GW_Secure.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_DocsSite/node/GW_Secure.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_DocsSite/node/GW_Secure",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_DocsSite/node/GW_Secure",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "Security gate passed?",
       "nodeKind": "exclusive",
       "bpmnType": "bpmn:ExclusiveGateway",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_DocsSite",
-      "performedBy": "https://litlfred.github.io/who-iris/cat-harness/role/build-pipeline",
-      "inLane": "https://litlfred.github.io/who-iris/cat-harness/process/Process_DocsSite/lane/Lane_Ci",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_DocsSite",
+      "performedBy": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/build-pipeline",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_DocsSite/lane/Lane_Ci",
       "requires": [],
       "touchesWorkPlan": false,
       "relaxable": true,
       "incoming": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_DocsSite#flow/Flow_S1"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_DocsSite#flow/Flow_S1"
       ],
       "outgoing": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_DocsSite#flow/Flow_S2",
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_DocsSite#flow/Flow_S3"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_DocsSite#flow/Flow_S2",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_DocsSite#flow/Flow_S3"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/sdlc",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/sdlc",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_DocsSite/node/GW_Secure"
     }
   ]

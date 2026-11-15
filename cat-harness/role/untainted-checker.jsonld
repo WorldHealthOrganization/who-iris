@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/role/untainted-checker.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/untainted-checker.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/role/untainted-checker",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/untainted-checker",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
       "prefLabel": "Untainted checker",
       "title": "Untainted checker",
@@ -16,8 +16,8 @@
         "agent"
       ],
       "hasSkill": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/untainted-verification",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/test-plan-execution"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/untainted-verification",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/test-plan-execution"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/role/untainted-checker"
     }

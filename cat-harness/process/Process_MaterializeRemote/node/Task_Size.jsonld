@@ -1,29 +1,29 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_MaterializeRemote/node/Task_Size.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MaterializeRemote/node/Task_Size.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_MaterializeRemote/node/Task_Size",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MaterializeRemote/node/Task_Size",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "Size the take and the whole",
       "nodeKind": "activity",
       "bpmnType": "bpmn:ServiceTask",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_MaterializeRemote",
-      "performedBy": "https://litlfred.github.io/who-iris/cat-harness/role/ingestion-agent",
-      "inLane": "https://litlfred.github.io/who-iris/cat-harness/process/Process_MaterializeRemote/lane/Lane_1",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MaterializeRemote",
+      "performedBy": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/ingestion-agent",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MaterializeRemote/lane/Lane_1",
       "requires": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/materialize-remote"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/materialize-remote"
       ],
       "touchesWorkPlan": false,
       "relaxable": true,
       "incoming": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_MaterializeRemote#flow/Flow_3"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MaterializeRemote#flow/Flow_3"
       ],
       "outgoing": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_MaterializeRemote#flow/Flow_4"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MaterializeRemote#flow/Flow_4"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/library-graph",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/library-graph",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_MaterializeRemote/node/Task_Size"
     }
   ]

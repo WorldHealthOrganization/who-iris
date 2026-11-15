@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/role/administrator.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/administrator.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/role/administrator",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/administrator",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
       "prefLabel": "Administrator",
       "title": "Administrator",
@@ -15,15 +15,15 @@
         "person"
       ],
       "hasSkill": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/role-model",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/task-authorization",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/deletion-requires-confirmation",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/confirmation-waiver",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/kg-separation",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/sub-kg-lifecycle",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/swimlane-glossary",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/bpmn-authoring",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/dmn-authoring"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/role-model",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/task-authorization",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/deletion-requires-confirmation",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/confirmation-waiver",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/kg-separation",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/sub-kg-lifecycle",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/swimlane-glossary",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/bpmn-authoring",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/dmn-authoring"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/role/administrator"
     }

@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/mount-from-lock.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/mount-from-lock.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/mount-from-lock.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/mount-from-lock.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "mount-from-lock",
       "title": "Replay a committed mount lock with nothing but Node",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "root",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The layer root whose lock is replayed. Default: the working directory.",
             "required": false,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "check",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "No network: is every locked mount on disk and intact?",
             "required": false,
             "arg": {
@@ -398,7 +398,7 @@
         "outputs": [
           {
             "name": "outcomes",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Count",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Count",
             "description": "Per layer: mounted, current, missing or could-not-determine."
           }
         ]
@@ -411,8 +411,8 @@
         "network": true
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/remote-mount",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/kg-separation"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/remote-mount",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/kg-separation"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/mount-from-lock.jsonld"
     }

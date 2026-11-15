@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/content-graph-analysis.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/content-graph-analysis.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/content-graph-analysis.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/content-graph-analysis.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "content-graph-analysis",
       "title": "Editorial content-graph analysis",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "paper",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
             "description": "The paper: a directory name under the folio directory, or a path to it. When omitted, the folio's only paper; required when the folio holds several.",
             "required": false,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "chapter",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
             "description": "Restrict the analysis to one chapter directory.",
             "required": false,
             "arg": {
@@ -396,7 +396,7 @@
           },
           {
             "name": "json",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Emit the whole graph as JSON on stdout and exit.",
             "required": false,
             "arg": {
@@ -405,7 +405,7 @@
           },
           {
             "name": "md",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Write the report to /tmp/content-graph-report.md.",
             "required": false,
             "arg": {
@@ -414,7 +414,7 @@
           },
           {
             "name": "visualise",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Render the Graphviz SVGs (needs graphviz).",
             "required": false,
             "arg": {
@@ -423,7 +423,7 @@
           },
           {
             "name": "proposals",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Write concrete reorganisation proposals to /tmp/content-graph-proposals.md.",
             "required": false,
             "arg": {
@@ -434,7 +434,7 @@
         "outputs": [
           {
             "name": "report",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "The ranked findings, or the graph as JSON with `--json`."
           }
         ]
@@ -446,7 +446,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/content-graph"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/content-graph"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/content-graph-analysis.jsonld"
     }

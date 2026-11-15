@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/judge-tree.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/judge-tree.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/judge-tree.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/judge-tree.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "judge-tree",
       "title": "Judge a tree and record the verdict by digest",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "lock",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The index.lock.json whose fixity digests name every layer but the caller.",
             "required": true,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "caller",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoFullName",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoFullName",
             "description": "The caller as owner/name (or its lock layer): the entry replaced by its PR tree. Every runner must name it the same way.",
             "required": true,
             "arg": {
@@ -396,7 +396,7 @@
           },
           {
             "name": "caller-dir",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The caller's git checkout; its HEAD^{tree} (or --sha's) is the PR tree.",
             "required": false,
             "arg": {
@@ -405,7 +405,7 @@
           },
           {
             "name": "sha",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/CommitSha",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/CommitSha",
             "description": "The head commit: whose tree is read from --caller-dir, and where the status is published.",
             "required": false,
             "arg": {
@@ -414,7 +414,7 @@
           },
           {
             "name": "root",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The mounted index with the caller swapped in, where run-gates.py runs.",
             "required": false,
             "arg": {
@@ -423,7 +423,7 @@
           },
           {
             "name": "instance",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/InstanceId",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/InstanceId",
             "description": "The own layer(s) run-gates.py judges; repeatable.",
             "required": false,
             "arg": {
@@ -432,7 +432,7 @@
           },
           {
             "name": "base-verdict",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "A stored verdict record standing in for the base run; refused unless its treeDigest is the base tree's (--base-tree).",
             "required": false,
             "arg": {
@@ -441,7 +441,7 @@
           },
           {
             "name": "base-root",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "A mounted base tree to run the gates on instead.",
             "required": false,
             "arg": {
@@ -450,7 +450,7 @@
           },
           {
             "name": "test-path",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "What `bun test` runs on each side; none means no tests.",
             "required": false,
             "arg": {
@@ -459,7 +459,7 @@
           },
           {
             "name": "publish",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Post the commit status `judge-tree` when GITHUB_TOKEN/GH_TOKEN is set; without one, the record file is the verdict.",
             "required": false,
             "arg": {
@@ -470,7 +470,7 @@
         "outputs": [
           {
             "name": "record",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The verdict record, `<records-dir>/<treeDigest>.json` unless --out names it; valid against the tools layer's `schemas/verdict-record.schema.json`. Three exit codes: 0 green, 1 red, 2 COULD NOT DETERMINE (no judging scripts, a stored base verdict for another tree, a compare script that crashed, or no gate ran). 2 is never green, and neither is a verdict for another digest."
           }
         ]
@@ -484,8 +484,8 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/platform-gates",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/prepare-merge"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/platform-gates",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/prepare-merge"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/judge-tree.jsonld"
     }

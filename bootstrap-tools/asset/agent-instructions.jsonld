@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/bootstrap-tools/bootstrap-tools.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/bootstrap-tools/asset/agent-instructions.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/bootstrap-tools/bootstrap-tools.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/bootstrap-tools/bootstrap-tools.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/bootstrap-tools/asset/agent-instructions.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/bootstrap-tools/bootstrap-tools.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/bootstrap-tools/asset/agent-instructions",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/bootstrap-tools/asset/agent-instructions",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Asset",
       "name": "agent-instructions",
       "path": "AGENTS.md",

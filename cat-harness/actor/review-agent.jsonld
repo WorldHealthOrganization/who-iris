@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/actor/review-agent.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/actor/review-agent.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/actor/review-agent",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/actor/review-agent",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Actor",
       "localId": "review-agent",
       "actorKind": "agent",
@@ -19,9 +19,9 @@
       },
       "hasCapability": [],
       "mayTakeRole": [
-        "https://litlfred.github.io/who-iris/cat-harness/role/reviewer",
-        "https://litlfred.github.io/who-iris/cat-harness/role/integration-watcher",
-        "https://litlfred.github.io/who-iris/cat-harness/role/feedback-provider"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/reviewer",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/integration-watcher",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/feedback-provider"
       ],
       "permissionName": [
         "review-comments"

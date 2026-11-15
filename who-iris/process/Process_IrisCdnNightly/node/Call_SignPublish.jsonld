@@ -1,30 +1,30 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/who-iris/who-iris.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/who-iris/process/Process_IrisCdnNightly/node/Call_SignPublish.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/who-iris/who-iris.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/who-iris/who-iris.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/who-iris/process/Process_IrisCdnNightly/node/Call_SignPublish.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/who-iris/who-iris.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/who-iris/process/Process_IrisCdnNightly/node/Call_SignPublish",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/who-iris/process/Process_IrisCdnNightly/node/Call_SignPublish",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "Sign and publish the release",
       "nodeKind": "activity",
       "bpmnType": "bpmn:CallActivity",
-      "partOf": "https://litlfred.github.io/who-iris/who-iris/process/Process_IrisCdnNightly",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/who-iris/process/Process_IrisCdnNightly",
       "performedBy": "https://litlfred.github.io/folio-assistant/cat-harness/role/build-pipeline",
-      "inLane": "https://litlfred.github.io/who-iris/who-iris/process/Process_IrisCdnNightly/lane/Lane_Pipeline",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/who-iris/process/Process_IrisCdnNightly/lane/Lane_Pipeline",
       "requires": [
-        "https://litlfred.github.io/who-iris/who-iris/skill/iris-cdn-signing"
+        "https://WorldHealthOrganization.github.io/who-iris/who-iris/skill/iris-cdn-signing"
       ],
       "touchesWorkPlan": false,
       "relaxable": true,
-      "calledElement": "https://litlfred.github.io/who-iris/who-iris/process/Process_IrisCdnSignPublish",
+      "calledElement": "https://WorldHealthOrganization.github.io/who-iris/who-iris/process/Process_IrisCdnSignPublish",
       "incoming": [
-        "https://litlfred.github.io/who-iris/who-iris/process/Process_IrisCdnNightly#flow/N9"
+        "https://WorldHealthOrganization.github.io/who-iris/who-iris/process/Process_IrisCdnNightly#flow/N9"
       ],
       "outgoing": [
-        "https://litlfred.github.io/who-iris/who-iris/process/Process_IrisCdnNightly#flow/N10"
+        "https://WorldHealthOrganization.github.io/who-iris/who-iris/process/Process_IrisCdnNightly#flow/N10"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/who-iris/directory/who-iris-processes",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/who-iris/directory/who-iris-processes",
       "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/process/Process_IrisCdnNightly/node/Call_SignPublish"
     }
   ]

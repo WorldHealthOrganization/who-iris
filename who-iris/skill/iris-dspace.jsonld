@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/who-iris/who-iris.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/who-iris/skill/iris-dspace.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/who-iris/who-iris.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/who-iris/who-iris.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/who-iris/skill/iris-dspace.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/who-iris/who-iris.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/who-iris/skill/iris-dspace",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/who-iris/skill/iris-dspace",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Skill",
       "name": "iris-dspace",
       "title": "IRIS, DSpace and Dublin Core",
@@ -14,7 +14,7 @@
       "hasInstructions": true,
       "hasIOContract": false,
       "ambiguous": false,
-      "inSubgraph": "https://litlfred.github.io/who-iris/who-iris/directory/who-iris-skills",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/who-iris/directory/who-iris-skills",
       "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/skill/iris-dspace"
     }
   ]

@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/role/terminologist.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/terminologist.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/role/terminologist",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/terminologist",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
       "prefLabel": "Terminologist",
       "title": "Terminologist",
@@ -15,8 +15,8 @@
         "person"
       ],
       "hasSkill": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/code-lists",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/vocabulary-authority"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/code-lists",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/vocabulary-authority"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/role/terminologist"
     }

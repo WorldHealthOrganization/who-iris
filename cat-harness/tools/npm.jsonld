@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/npm.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/npm.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/npm.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/npm.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "npm",
       "title": "Package manager and registry client for npm and GitHub Packages",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "args",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "Arguments passed to npm (e.g. 'pack', 'publish', 'view').",
             "required": false
           }
@@ -386,7 +386,7 @@
         "outputs": [
           {
             "name": "stdout",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "Standard output from npm invocation."
           }
         ]
@@ -398,8 +398,8 @@
         "network": true
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/npm-kg-distribution",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/remote-mount"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/npm-kg-distribution",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/remote-mount"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/npm.jsonld"
     }

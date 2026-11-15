@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/separation-cutover-check.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/separation-cutover-check.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/separation-cutover-check.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/separation-cutover-check.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "separation-cutover-check",
       "title": "Is this repository's cutover from the monorepo complete? Measured, condition by condition",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "root",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The separated checkout. Default: the working directory.",
             "required": false,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "site",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Build the site from the mounts on disk (minutes); without it the `site` condition is not run and the verdict cannot be complete.",
             "required": false,
             "arg": {
@@ -396,7 +396,7 @@
           },
           {
             "name": "monorepo",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoFullName",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoFullName",
             "description": "The repository the separation left, `<owner>/<repo>`. Default: litlfred/folio-assistant.",
             "required": false,
             "arg": {
@@ -405,7 +405,7 @@
           },
           {
             "name": "monorepoDir",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
             "description": "Its old checkout directory name, as paths spell it. Default: the repository's name.",
             "required": false,
             "arg": {
@@ -414,7 +414,7 @@
           },
           {
             "name": "json",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Print the report as JSON, mounted-layer findings included.",
             "required": false,
             "arg": {
@@ -425,7 +425,7 @@
         "outputs": [
           {
             "name": "conditions",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Count",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Count",
             "description": "Per condition: pass, fail, could-not-determine or not-run, the gate that decided it, and its findings."
           }
         ]
@@ -438,7 +438,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/kg-separation"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/kg-separation"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/separation-cutover-check.jsonld"
     }

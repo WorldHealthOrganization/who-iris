@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/subgraph-resolve.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/subgraph-resolve.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/subgraph-resolve.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/subgraph-resolve.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "subgraph-resolve",
       "title": "Resolve a declared subgraph's content source",
@@ -378,13 +378,13 @@
         "inputs": [
           {
             "name": "id",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
             "description": "A declared directory id. Repeatable; absent with `--all`.",
             "required": false
           },
           {
             "name": "all",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Every subgraph the checkout declares.",
             "required": false,
             "arg": {
@@ -393,7 +393,7 @@
           },
           {
             "name": "json",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Machine-readable output.",
             "required": false,
             "arg": {
@@ -404,7 +404,7 @@
         "outputs": [
           {
             "name": "source",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "One line per subgraph: its source kind and location, its declarer, and `declaredIn`. Exit 1 when no layer declares the id, 2 when the declaration contradicts itself or names an undeclared branch."
           }
         ]
@@ -416,7 +416,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/directory-conventions"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/directory-conventions"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/subgraph-resolve.jsonld"
     }

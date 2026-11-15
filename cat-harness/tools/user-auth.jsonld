@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/user-auth.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/user-auth.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/user-auth.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/user-auth.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "user-auth",
       "title": "Who is asking, and what may they do",
@@ -383,37 +383,37 @@
         "inputs": [
           {
             "name": "actor",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "A declared actor the caller is acting as.",
             "required": false
           },
           {
             "name": "action",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "An ODRL action to ask about, e.g. content-authoring.",
             "required": false
           },
           {
             "name": "process",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "Process id, to scope the question or check a task.",
             "required": false
           },
           {
             "name": "task",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "Node id; with process, runs the task-authorization check.",
             "required": false
           },
           {
             "name": "role",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "The role the lane binds.",
             "required": false
           },
           {
             "name": "target",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "The content acted on.",
             "required": false
           }
@@ -421,7 +421,7 @@
         "outputs": [
           {
             "name": "answer",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
             "description": "Identity, GitHub role, ODRL grants and decisions, and what GitHub's grain cannot express."
           }
         ]
@@ -430,8 +430,8 @@
         "network": true
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/task-authorization",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/deployment-auth"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/task-authorization",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/deployment-auth"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/user-auth.jsonld"
     }

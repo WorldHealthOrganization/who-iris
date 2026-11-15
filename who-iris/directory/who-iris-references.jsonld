@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/who-iris/who-iris.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/who-iris/directory/who-iris-references.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/who-iris/who-iris.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/who-iris/who-iris.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/who-iris/directory/who-iris-references.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/who-iris/who-iris.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/who-iris/directory/who-iris-references",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/who-iris/directory/who-iris-references",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Subgraph",
       "name": "who-iris-references",
       "path": "references/",
@@ -18,7 +18,7 @@
       "description": "The reference lists of the held IRIS documents, one `folio-reference/v1` node per cited work. Owner, 2026-11-11: \"i want all who-iris docs that have references put into their own biblio\". Written by the Tool `references-extract` (step `Task_References` of folio-assistant-core's `ingest-build-l1-kg.bpmn`) from each library entry's L1 sections: keyed `<doc-id>.<section>.<n>`, `provenance: extracted`, `derivedFrom` the section file, `printed` the entry verbatim. The bibliography page lists them under the document they came from (`bibliography/library/<doc-id>/`). Regenerated, not hand-edited: re-run the tool after a section is re-derived.",
       "readmePath": "references/README.md",
       "fileCount": 7109,
-      "inSubgraph": "https://litlfred.github.io/who-iris/who-iris/directory/who-iris-references",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/who-iris/directory/who-iris-references",
       "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/directory/who-iris-references"
     }
   ]

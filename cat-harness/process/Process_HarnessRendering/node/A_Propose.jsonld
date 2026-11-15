@@ -1,29 +1,29 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_HarnessRendering/node/A_Propose.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_HarnessRendering/node/A_Propose.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_HarnessRendering/node/A_Propose",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_HarnessRendering/node/A_Propose",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "Propose the change",
       "nodeKind": "activity",
       "bpmnType": "bpmn:UserTask",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_HarnessRendering",
-      "performedBy": "https://litlfred.github.io/who-iris/cat-harness/role/reviewer",
-      "inLane": "https://litlfred.github.io/who-iris/cat-harness/process/Process_HarnessRendering/lane/Lane_Reviewer",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_HarnessRendering",
+      "performedBy": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/reviewer",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_HarnessRendering/lane/Lane_Reviewer",
       "requires": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/kg-affordances"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/kg-affordances"
       ],
       "touchesWorkPlan": false,
       "relaxable": true,
       "incoming": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_HarnessRendering#flow/SF_HR_7"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_HarnessRendering#flow/SF_HR_7"
       ],
       "outgoing": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_HarnessRendering#flow/SF_HR_9"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_HarnessRendering#flow/SF_HR_9"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/processes",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/processes",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_HarnessRendering/node/A_Propose"
     }
   ]

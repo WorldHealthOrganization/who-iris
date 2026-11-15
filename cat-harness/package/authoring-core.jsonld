@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/package/authoring-core.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/package/authoring-core.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/package/authoring-core",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/package/authoring-core",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/SkillPackage",
       "name": "authoring-core",
       "version": "0.1.0",
@@ -12,24 +12,24 @@
       "path": "skills/authoring/authoring-core",
       "hasManifest": true,
       "declaresSkill": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/canonical-watcher",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/content-graph",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/content-profiles",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/editor",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/evidence-review",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/md-authoring",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/one-voice-style-guide",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/review-heatmap",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/scientific-accuracy",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/technical-documentation",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/todo-review",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/uses-editorial-review",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/voice-editorial-review",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/voice-overlay-review"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/canonical-watcher",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/content-graph",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/content-profiles",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/editor",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/evidence-review",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/md-authoring",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/one-voice-style-guide",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/review-heatmap",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/scientific-accuracy",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/technical-documentation",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/todo-review",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/uses-editorial-review",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/voice-editorial-review",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/voice-overlay-review"
       ],
       "providesCapability": [],
       "requiresCapability": [],
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/skills",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/skills",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/package/authoring-core"
     }
   ]

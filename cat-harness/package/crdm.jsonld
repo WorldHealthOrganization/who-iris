@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/package/crdm.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/package/crdm.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/package/crdm",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/package/crdm",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/SkillPackage",
       "name": "crdm",
       "version": "0.1.0",
@@ -12,17 +12,17 @@
       "path": "skills/process/crdm",
       "hasManifest": true,
       "declaresSkill": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/crdm-data-model",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/crdm-detect",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/crdm-impact-analysis",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/crdm-needs-assessment",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/crdm-recorded-walkthrough",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/crdm-requirements-template",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/crdm-requirements-workflow"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/crdm-data-model",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/crdm-detect",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/crdm-impact-analysis",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/crdm-needs-assessment",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/crdm-recorded-walkthrough",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/crdm-requirements-template",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/crdm-requirements-workflow"
       ],
       "providesCapability": [],
       "requiresCapability": [],
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/skills",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/skills",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/package/crdm"
     }
   ]

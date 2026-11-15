@@ -158,7 +158,7 @@
       ]
     }
   },
-  "$id": "https://litlfred.github.io/who-iris/bootstrap-tools/schema/zod/requirement-set/RequirementSetSchema.schema.json",
+  "$id": "https://WorldHealthOrganization.github.io/who-iris/bootstrap-tools/schema/zod/requirement-set/RequirementSetSchema.schema.json",
   "title": "RequirementSetSchema",
   "description": "Generated from `RequirementSetSchema` in schemas/requirement-set.ts, which is authoritative. Published because it is an exported Zod `*Schema` (owner ruling 2026-10-05) — which says it is reachable, not that it is stable."
 }

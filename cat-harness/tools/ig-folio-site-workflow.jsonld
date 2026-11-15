@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/ig-folio-site-workflow.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/ig-folio-site-workflow.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/ig-folio-site-workflow.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/ig-folio-site-workflow.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "ig-folio-site-workflow",
       "title": "Build and publish an IG repository's own site with its folio-site.yml workflow",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "repo",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoFullName",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoFullName",
             "description": "The IG repository whose workflow to dispatch. Default: the current repository.",
             "required": false,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "ref",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
             "description": "The branch to build. Only the default branch deploys; any other builds and reports.",
             "required": false,
             "arg": {
@@ -398,7 +398,7 @@
         "outputs": [
           {
             "name": "status",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "The dispatch, and the run it starts; the site is served once that run and GitHub's Pages deploy have finished."
           }
         ]
@@ -410,8 +410,8 @@
         "network": true
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/feature-staging",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/harness-tiles"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/feature-staging",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/harness-tiles"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/ig-folio-site-workflow.jsonld"
     }

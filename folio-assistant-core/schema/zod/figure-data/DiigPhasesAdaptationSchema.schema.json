@@ -184,7 +184,7 @@
       "additionalProperties": false
     }
   },
-  "$id": "https://litlfred.github.io/who-iris/folio-assistant-core/schema/zod/figure-data/DiigPhasesAdaptationSchema.schema.json",
+  "$id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/schema/zod/figure-data/DiigPhasesAdaptationSchema.schema.json",
   "title": "DiigPhasesAdaptationSchema",
   "description": "Generated from `DiigPhasesAdaptationSchema` in schemas/figure-data.ts, which is authoritative. Published because it is an exported Zod `*Schema` (owner ruling 2026-10-05) — which says it is reachable, not that it is stable."
 }

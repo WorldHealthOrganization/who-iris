@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/bean-query.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/bean-query.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/bean-query.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/bean-query.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "bean-query",
       "title": "Query the beans knowledge graph",
@@ -383,19 +383,19 @@
         "inputs": [
           {
             "name": "named",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "Pre-defined named query (e.g. safe_drain_candidates, actionable_leaves).",
             "required": false
           },
           {
             "name": "sparql",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "Arbitrary SPARQL 1.1 SELECT query over the bean store.",
             "required": false
           },
           {
             "name": "format",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "Output format: table, json, or ids.",
             "required": false
           }
@@ -403,12 +403,12 @@
         "outputs": [
           {
             "name": "report",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
             "description": "Query results formatted as a table, JSON or IDs, for people to read."
           },
           {
             "name": "result",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/BeanQueryRows",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/BeanQueryRows",
             "description": "The rows as one `BeanQueryRows` record, each variable to its value with bean IRIs shortened to ids: `structuredContent.rows` over MCP in every format, and the text itself with format json. Programs and BPMN gateways read this; people read `report`."
           }
         ]
@@ -417,8 +417,8 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/todo-manager",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/bean-coordination"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/todo-manager",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/bean-coordination"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/bean-query.jsonld"
     }

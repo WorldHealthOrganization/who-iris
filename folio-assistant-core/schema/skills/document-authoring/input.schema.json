@@ -57,5 +57,5 @@
       "description": "GitHub-flavoured Markdown for the block's .md file."
     }
   },
-  "$id": "https://litlfred.github.io/who-iris/folio-assistant-core/schema/skills/document-authoring/input.schema.json"
+  "$id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/schema/skills/document-authoring/input.schema.json"
 }

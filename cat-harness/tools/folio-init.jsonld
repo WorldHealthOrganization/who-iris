@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/folio-init.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/folio-init.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/folio-init.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/folio-init.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "folio-init",
       "title": "Scaffold a folio",
@@ -384,20 +384,20 @@
         "inputs": [
           {
             "name": "title",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "The folio's human title.",
             "required": true
           },
           {
             "name": "authors",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "One entry per author. Repeated rather than a joined string: a name may contain the separator.",
             "required": true,
             "repeated": true
           },
           {
             "name": "content_type",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/ContentType",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/ContentType",
             "required": false,
             "arg": {
               "flag": "--content-type"
@@ -405,7 +405,7 @@
           },
           {
             "name": "slug",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Slug",
             "required": false,
             "arg": {
               "flag": "--slug"
@@ -413,13 +413,13 @@
           },
           {
             "name": "dir",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/FilesystemPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/FilesystemPath",
             "description": "Where to create the folio.",
             "required": false
           },
           {
             "name": "link",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/LinkMode",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/LinkMode",
             "required": false,
             "arg": {
               "flag": "--link"
@@ -427,13 +427,13 @@
           },
           {
             "name": "assistant_path",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/FilesystemPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/FilesystemPath",
             "description": "Path to the platform checkout, for a sibling link.",
             "required": false
           },
           {
             "name": "force",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "required": false,
             "arg": {
               "flag": "--force"
@@ -441,7 +441,7 @@
           },
           {
             "name": "dry_run",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "required": false,
             "arg": {
               "flag": "--dry-run"
@@ -451,7 +451,7 @@
         "outputs": [
           {
             "name": "report",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
             "description": "What was written, or what would have been under --dry-run."
           }
         ]
@@ -460,9 +460,9 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/repo-conversion",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/getting-started",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/folio-init"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/repo-conversion",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/getting-started",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/folio-init"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/folio-init.jsonld"
     }

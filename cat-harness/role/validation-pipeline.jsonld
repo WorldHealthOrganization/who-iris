@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/role/validation-pipeline.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/validation-pipeline.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/role/validation-pipeline",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/validation-pipeline",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
       "prefLabel": "Validation pipeline",
       "title": "Validation pipeline",
@@ -15,10 +15,10 @@
         "system"
       ],
       "hasSkill": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/content-test",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/content-validate",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/kg-affordances",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/qa-reports"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/content-test",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/content-validate",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/kg-affordances",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/qa-reports"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/role/validation-pipeline"
     }

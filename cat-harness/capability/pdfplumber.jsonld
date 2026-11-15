@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/capability/pdfplumber.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/capability/pdfplumber.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/capability/pdfplumber",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/capability/pdfplumber",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Capability",
       "localId": "pdfplumber",
       "name": "pdfplumber (deterministic table extraction)",
@@ -14,7 +14,7 @@
         "command": "python3 -c 'import pdfplumber'"
       },
       "requiresCapability": [
-        "https://litlfred.github.io/who-iris/cat-harness/capability/python3"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/capability/python3"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/capability/pdfplumber"
     }

@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/memory-note.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/memory-note.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/memory-note.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/memory-note.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "memory-note",
       "title": "Keep a note on the work",
@@ -383,7 +383,7 @@
         "inputs": [
           {
             "name": "note",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
             "description": "The note, in plain words. One paragraph is plenty.",
             "required": true,
             "arg": {
@@ -392,7 +392,7 @@
           },
           {
             "name": "shared",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "true: the memory you share with the other agents working with you. Default: your own memory of this work.",
             "required": false,
             "arg": {
@@ -403,7 +403,7 @@
         "outputs": [
           {
             "name": "kept",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "Whether it was kept."
           }
         ]
@@ -412,7 +412,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/work-context"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/work-context"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/memory-note.jsonld"
     }

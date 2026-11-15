@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/remote-mount.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/remote-mount.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/remote-mount.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/remote-mount.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "remote-mount",
       "title": "Mount remote harnesses at a pinned commit, only when trusted",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "instance",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The downstream layer root; omitted, every declaring layer in the checkout.",
             "required": false,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "staging",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Mount for a staging preview: no signature or consent required.",
             "required": false,
             "arg": {
@@ -396,7 +396,7 @@
           },
           {
             "name": "check",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Compare the disk against the lock; fetch nothing.",
             "required": false,
             "arg": {
@@ -405,7 +405,7 @@
           },
           {
             "name": "noAgentSurface",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Do not re-render `.claude/commands/` and the agent memory after a mount that changed the lock.",
             "required": false,
             "arg": {
@@ -414,7 +414,7 @@
           },
           {
             "name": "noInstall",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Lay the pinned bytes down without `bun install` in each mounted layer that carries a `package.json`. By default the install runs (`--production`; `--install-all` keeps devDependencies), so the mounted tools run; it writes only `node_modules/`, which no mount digest covers, so `--check` still passes.",
             "required": false,
             "arg": {
@@ -423,7 +423,7 @@
           },
           {
             "name": "seed",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/MountSeed",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/MountSeed",
             "description": "`<name>=<owner/repo>@<40-char sha>`: create or re-pin that remote layer in `index.config.json` instead of mounting, writing its `trust.consent` for that pin in the same write (needs `consentBy` and `evidence`; repeatable; `--whole` mounts every tracked file). Refused while a mount it moves has edits the lock does not hold, since the next mount would leave that mount at the old commit; `fresh` lets it through.",
             "required": false,
             "arg": {
@@ -432,7 +432,7 @@
           },
           {
             "name": "fresh",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Replace a mount whose bytes no longer hash to the lock instead of leaving it untouched; with `seed`, re-pin over such edits. The edits are discarded.",
             "required": false,
             "arg": {
@@ -441,7 +441,7 @@
           },
           {
             "name": "choose",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/MountChoice",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/MountChoice",
             "description": "`<harness>[:<instance>]`: write a review's choice (`directories` and/or `tools`) into that mount entry's `overrides.<instance>` instead of mounting, so a fresh clone replays it. The pin and its consent are untouched; the next mount resolves the choice and the lock records what it resolved to.",
             "required": false,
             "arg": {
@@ -450,7 +450,7 @@
           },
           {
             "name": "directories",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/IdList",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/IdList",
             "description": "With `choose`: comma-separated directory ids, nested ids or concern names.",
             "required": false,
             "arg": {
@@ -459,7 +459,7 @@
           },
           {
             "name": "tools",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/IdList",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/IdList",
             "description": "With `choose`: comma-separated Tool ids, each mounted runnable.",
             "required": false,
             "arg": {
@@ -468,7 +468,7 @@
           },
           {
             "name": "consentBy",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Login",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Login",
             "description": "With `seed`: who consented, as `consent.by`.",
             "required": false,
             "arg": {
@@ -477,7 +477,7 @@
           },
           {
             "name": "evidence",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "With `seed`: where the consent was given, readable (a session, an issue comment), as `consent.evidence`. On stdin because it is free prose: it quotes what was said.",
             "required": false,
             "arg": {
@@ -488,7 +488,7 @@
         "outputs": [
           {
             "name": "outcomes",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Count",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Count",
             "description": "Per layer: mounted, local, skipped, missing (including refused by the trust gate) or could-not-determine."
           }
         ]
@@ -503,8 +503,8 @@
         "network": true
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/security",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/agent-memory"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/security",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/agent-memory"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/remote-mount.jsonld"
     }

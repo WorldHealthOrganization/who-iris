@@ -1,31 +1,31 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_DocumentAuthoring/node/Task_SeedPlan.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_DocumentAuthoring/node/Task_SeedPlan.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_DocumentAuthoring/node/Task_SeedPlan",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_DocumentAuthoring/node/Task_SeedPlan",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "Seed the work plan",
       "nodeKind": "activity",
       "bpmnType": "bpmn:Task",
-      "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_DocumentAuthoring",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_DocumentAuthoring",
       "performedBy": "https://litlfred.github.io/folio-assistant/cat-harness/role/work-plan",
-      "inLane": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_DocumentAuthoring/lane/Lane_WorkPlan",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_DocumentAuthoring/lane/Lane_WorkPlan",
       "requires": [
         "https://litlfred.github.io/folio-assistant/cat-harness/skill/todo-manager"
       ],
       "touchesWorkPlan": true,
       "workPlanOp": "note",
       "relaxable": true,
-      "calledElement": "https://litlfred.github.io/who-iris/folio-assistant-core/globalTask/GT_SeedWorkPlan",
+      "calledElement": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/globalTask/GT_SeedWorkPlan",
       "incoming": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_DocumentAuthoring#flow/A04"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_DocumentAuthoring#flow/A04"
       ],
       "outgoing": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_DocumentAuthoring#flow/A06"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_DocumentAuthoring#flow/A06"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/folio-assistant-core/directory/collab",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/directory/collab",
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/process/Process_DocumentAuthoring/node/Task_SeedPlan"
     }
   ]

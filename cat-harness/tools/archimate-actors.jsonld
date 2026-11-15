@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/archimate-actors.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/archimate-actors.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/archimate-actors.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/archimate-actors.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "archimate-actors",
       "title": "Check that an ArchiMate model's fhir-actor tags point at the IG's FHIR ActorDefinitions",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "instance",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The layer root whose ArchiMate model is read.",
             "required": true,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "model",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/ArchimateModelId",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/ArchimateModelId",
             "description": "The model's id from the config.",
             "required": true,
             "arg": {
@@ -396,7 +396,7 @@
           },
           {
             "name": "ig",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The IG directory holding `sushi-config.yaml` and `input/fsh/`; absent, the layer root.",
             "required": false,
             "arg": {
@@ -405,7 +405,7 @@
           },
           {
             "name": "strict",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Fail, not only warn, when an ActorDefinition is realized by no element of the model.",
             "required": false,
             "arg": {
@@ -414,7 +414,7 @@
           },
           {
             "name": "json",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Print the back-links as JSON (element → actors, actor → elements, problems, unrealized) instead of the report.",
             "required": false,
             "arg": {
@@ -425,7 +425,7 @@
         "outputs": [
           {
             "name": "report",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "The problems, the unrealized ActorDefinitions and a summary line; with `--json`, the back-links as JSON. Exit 1 on any problem, or on an unrealized actor under `--strict`."
           }
         ]
@@ -437,7 +437,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/archimate-models"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/archimate-models"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/archimate-actors.jsonld"
     }

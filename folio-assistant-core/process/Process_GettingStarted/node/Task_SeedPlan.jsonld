@@ -1,17 +1,17 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_GettingStarted/node/Task_SeedPlan.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_GettingStarted/node/Task_SeedPlan.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_GettingStarted/node/Task_SeedPlan",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_GettingStarted/node/Task_SeedPlan",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "Seed the work plan",
       "nodeKind": "activity",
       "bpmnType": "bpmn:ServiceTask",
-      "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_GettingStarted",
-      "performedBy": "https://litlfred.github.io/who-iris/folio-assistant-core/role/onboarding-agent",
-      "inLane": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_GettingStarted/lane/Lane_Agent",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_GettingStarted",
+      "performedBy": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/role/onboarding-agent",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_GettingStarted/lane/Lane_Agent",
       "requires": [
         "https://litlfred.github.io/folio-assistant/cat-harness/skill/todo-manager"
       ],
@@ -19,12 +19,12 @@
       "workPlanOp": "note",
       "relaxable": true,
       "incoming": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_GettingStarted#flow/SF_Bean_1"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_GettingStarted#flow/SF_Bean_1"
       ],
       "outgoing": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_GettingStarted#flow/Flow_provision"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_GettingStarted#flow/Flow_provision"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/folio-assistant-core/directory/collab",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/directory/collab",
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/process/Process_GettingStarted/node/Task_SeedPlan"
     }
   ]

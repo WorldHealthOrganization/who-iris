@@ -1,30 +1,30 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_MergeToMain/node/Task_ConfirmBase.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MergeToMain/node/Task_ConfirmBase.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_MergeToMain/node/Task_ConfirmBase",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MergeToMain/node/Task_ConfirmBase",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "Confirm main's CI on the merge commit",
       "nodeKind": "activity",
       "bpmnType": "bpmn:Task",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_MergeToMain",
-      "performedBy": "https://litlfred.github.io/who-iris/cat-harness/role/merge-steward",
-      "inLane": "https://litlfred.github.io/who-iris/cat-harness/process/Process_MergeToMain/lane/Lane_Merger",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MergeToMain",
+      "performedBy": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/merge-steward",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MergeToMain/lane/Lane_Merger",
       "requires": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/merge-to-main"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/merge-to-main"
       ],
       "touchesWorkPlan": true,
       "workPlanOp": "note",
       "relaxable": true,
       "incoming": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_MergeToMain#flow/m20"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MergeToMain#flow/m20"
       ],
       "outgoing": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_MergeToMain#flow/m21"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MergeToMain#flow/m21"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/sdlc",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/sdlc",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_MergeToMain/node/Task_ConfirmBase"
     }
   ]

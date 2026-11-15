@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/who-iris/who-iris.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/who-iris/asset/readme.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/who-iris/who-iris.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/who-iris/who-iris.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/who-iris/asset/readme.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/who-iris/who-iris.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/who-iris/asset/readme",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/who-iris/asset/readme",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Asset",
       "name": "readme",
       "path": "README.md",

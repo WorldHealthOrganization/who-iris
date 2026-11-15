@@ -1,30 +1,30 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_TestPlanExecution/node/A_FileCertification.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_TestPlanExecution/node/A_FileCertification.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_TestPlanExecution/node/A_FileCertification",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_TestPlanExecution/node/A_FileCertification",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "File the signed certification",
       "nodeKind": "activity",
       "bpmnType": "bpmn:ServiceTask",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_TestPlanExecution",
-      "performedBy": "https://litlfred.github.io/who-iris/cat-harness/role/attestation-service",
-      "inLane": "https://litlfred.github.io/who-iris/cat-harness/process/Process_TestPlanExecution/lane/Lane_Attestation",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_TestPlanExecution",
+      "performedBy": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/attestation-service",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_TestPlanExecution/lane/Lane_Attestation",
       "requires": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/test-plan-execution"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/test-plan-execution"
       ],
       "touchesWorkPlan": true,
       "workPlanOp": "note",
       "relaxable": true,
       "incoming": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_TestPlanExecution#flow/F11"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_TestPlanExecution#flow/F11"
       ],
       "outgoing": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_TestPlanExecution#flow/F12"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_TestPlanExecution#flow/F12"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/sdlc",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/sdlc",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TestPlanExecution/node/A_FileCertification"
     }
   ]

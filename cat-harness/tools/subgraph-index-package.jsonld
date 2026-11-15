@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/subgraph-index-package.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/subgraph-index-package.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/subgraph-index-package.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/subgraph-index-package.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "subgraph-index-package",
       "title": "Package one pin's subgraph index files for a hydrated mount",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "root",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The layer root whose `<docs>/subgraph/<name>/` is packed.",
             "required": true,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "repository",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoFullName",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoFullName",
             "description": "owner/name of the repository the pin is a commit of.",
             "required": true,
             "arg": {
@@ -396,7 +396,7 @@
           },
           {
             "name": "ref",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/CommitSha",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/CommitSha",
             "description": "The pin: the full 40-character commit the files were built from.",
             "required": true,
             "arg": {
@@ -405,7 +405,7 @@
           },
           {
             "name": "outDir",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "Where the tarball and its release record are written.",
             "required": true,
             "arg": {
@@ -414,7 +414,7 @@
           },
           {
             "name": "builtIn",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/PinnedRepo",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/PinnedRepo",
             "description": "`<owner/name>@<40-char sha>` of the checkout the files were built in, recorded as provenance.",
             "required": false,
             "arg": {
@@ -425,12 +425,12 @@
         "outputs": [
           {
             "name": "tarball",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The package `.tgz`."
           },
           {
             "name": "release",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "Its `folio-binary-release/v1` record."
           }
         ]
@@ -442,8 +442,8 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/npm-kg-distribution",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/remote-mount"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/npm-kg-distribution",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/remote-mount"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/subgraph-index-package.jsonld"
     }

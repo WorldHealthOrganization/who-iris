@@ -1,30 +1,30 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_MountSubgraph/node/GW_Join.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MountSubgraph/node/GW_Join.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_MountSubgraph/node/GW_Join",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MountSubgraph/node/GW_Join",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "GW_Join",
       "nodeKind": "exclusive",
       "bpmnType": "bpmn:ExclusiveGateway",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_MountSubgraph",
-      "performedBy": "https://litlfred.github.io/who-iris/cat-harness/role/build-pipeline",
-      "inLane": "https://litlfred.github.io/who-iris/cat-harness/process/Process_MountSubgraph/lane/Lane_MountPipeline",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MountSubgraph",
+      "performedBy": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/build-pipeline",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MountSubgraph/lane/Lane_MountPipeline",
       "requires": [],
       "touchesWorkPlan": false,
       "relaxable": true,
       "incoming": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_MountSubgraph#flow/F_M6",
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_MountSubgraph#flow/F_M7",
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_MountSubgraph#flow/F_M11",
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_MountSubgraph#flow/F_M13"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MountSubgraph#flow/F_M6",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MountSubgraph#flow/F_M7",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MountSubgraph#flow/F_M11",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MountSubgraph#flow/F_M13"
       ],
       "outgoing": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_MountSubgraph#flow/F_M8"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_MountSubgraph#flow/F_M8"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/processes",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/processes",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_MountSubgraph/node/GW_Join"
     }
   ]

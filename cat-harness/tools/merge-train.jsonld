@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/merge-train.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/merge-train.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/merge-train.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/merge-train.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "merge-train",
       "title": "Merge train",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "base",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/CommitSha",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/CommitSha",
             "description": "The commit the train branch starts from.",
             "required": true,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "branch",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
             "description": "The train branch to create; default `merge-train/<base>-<time>`.",
             "required": false,
             "arg": {
@@ -396,7 +396,7 @@
           },
           {
             "name": "dry-run",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Simulate with `git merge-tree`: classify each member's conflicts against the simulated train and change nothing.",
             "required": false,
             "arg": {
@@ -405,7 +405,7 @@
           },
           {
             "name": "no-main",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Skip merging `origin/main` into the train.",
             "required": false,
             "arg": {
@@ -414,7 +414,7 @@
           },
           {
             "name": "members",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
             "description": "PR numbers or branches, in train order. On the command line a PR may be pinned to the head CI saw as `N:<sha>`.",
             "required": true,
             "repeated": true,
@@ -426,7 +426,7 @@
         "outputs": [
           {
             "name": "report",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "`merge-train-report/v1` on stdout: members merged, refused with reasons and conflicted paths, the checks run, main's merge, and the head. Exit 0 built, 1 needs a person, 2 could not start."
           }
         ]
@@ -438,8 +438,8 @@
         "network": true
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/merge-conflict-patterns",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/prepare-merge"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/merge-conflict-patterns",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/prepare-merge"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/merge-train.jsonld"
     }

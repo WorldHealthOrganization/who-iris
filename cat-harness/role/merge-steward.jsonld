@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/role/merge-steward.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/merge-steward.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/role/merge-steward",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/merge-steward",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
       "prefLabel": "Merge steward",
       "title": "Merge steward",
@@ -15,13 +15,13 @@
         "agent"
       ],
       "hasSkill": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/merge-conflict-patterns",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/merge-queue",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/prepare-merge",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/ref-stewardship",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/merge-to-main",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/saturation-meta-merge",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/merge-manager-watcher"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/merge-conflict-patterns",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/merge-queue",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/prepare-merge",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/ref-stewardship",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/merge-to-main",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/saturation-meta-merge",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/merge-manager-watcher"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/role/merge-steward"
     }

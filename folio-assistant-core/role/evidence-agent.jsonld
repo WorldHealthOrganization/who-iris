@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/role/evidence-agent.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/role/evidence-agent.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/role/evidence-agent",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/role/evidence-agent",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
       "prefLabel": "Evidence agent",
       "title": "Evidence agent",
@@ -15,7 +15,7 @@
         "agent"
       ],
       "hasSkill": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/skill/document-intake"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/skill/document-intake"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/role/evidence-agent"
     }

@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/cat-harness-schema.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/cat-harness-schema.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/cat-harness-schema.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/cat-harness-schema.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "cat-harness-schema",
       "title": "Layer declaration schema",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "baseUrl",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Url",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Url",
             "description": "Publication base; a preview passes its own.",
             "required": false,
             "arg": {
@@ -389,16 +389,16 @@
         "outputs": [
           {
             "name": "schema",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The written JSON Schema."
           }
         ]
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/kg-export"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/kg-export"
       ],
       "maintains": [
-        "https://litlfred.github.io/who-iris/cat-harness/cat-harness.schema.json"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.schema.json"
       ],
       "maintainsFrom": [
         "schemas/kg/cat-harness.ts"

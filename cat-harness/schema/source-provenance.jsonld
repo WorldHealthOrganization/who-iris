@@ -1,16 +1,16 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/schema/source-provenance.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/schema/source-provenance.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/schema/source-provenance",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/schema/source-provenance",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Schema",
       "name": "source-provenance",
       "title": "source-provenance",
       "summary": "WHERE BYTES CAME FROM — the source-side provenance pair, and a signature.",
       "module": "schemas/library/source-provenance.ts",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/schemas",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/schemas",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/schema/source-provenance"
     }
   ]

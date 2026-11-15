@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/role/authoring-committee.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/role/authoring-committee.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/role/authoring-committee",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/role/authoring-committee",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
       "prefLabel": "Authoring Committee",
       "title": "Authoring Committee",
@@ -15,7 +15,7 @@
         "person"
       ],
       "hasSkill": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/skill/review-sheet-script"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/skill/review-sheet-script"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/role/authoring-committee"
     }

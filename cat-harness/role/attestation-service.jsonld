@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/role/attestation-service.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/attestation-service.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/role/attestation-service",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/attestation-service",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
       "prefLabel": "Attestation service",
       "title": "Attestation service",
@@ -15,8 +15,8 @@
         "system"
       ],
       "hasSkill": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/qa-report-signing",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/test-plan-execution"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/qa-report-signing",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/test-plan-execution"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/role/attestation-service"
     }

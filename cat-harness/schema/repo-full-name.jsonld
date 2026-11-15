@@ -1,16 +1,16 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/schema/repo-full-name.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/schema/repo-full-name.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/schema/repo-full-name",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/schema/repo-full-name",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Schema",
       "name": "repo-full-name",
       "title": "repo-full-name",
       "summary": "`owner/name` — a forge repository's full name, in its own module so a",
       "module": "schemas/kg/repo-full-name.ts",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/schemas",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/schemas",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/schema/repo-full-name"
     }
   ]

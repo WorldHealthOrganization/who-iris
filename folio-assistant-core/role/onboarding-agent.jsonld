@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/role/onboarding-agent.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/role/onboarding-agent.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/role/onboarding-agent",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/role/onboarding-agent",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
       "prefLabel": "Onboarding agent",
       "title": "Onboarding agent",
@@ -15,12 +15,12 @@
         "agent"
       ],
       "hasSkill": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/skill/getting-started",
-        "https://litlfred.github.io/who-iris/folio-assistant-core/skill/interaction-modality",
-        "https://litlfred.github.io/who-iris/folio-assistant-core/skill/repo-conversion",
-        "https://litlfred.github.io/who-iris/folio-assistant-core/skill/document-intake",
-        "https://litlfred.github.io/who-iris/folio-assistant-core/skill/folio-getting-started",
-        "https://litlfred.github.io/who-iris/folio-assistant-core/skill/folio-repo-conversion"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/skill/getting-started",
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/skill/interaction-modality",
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/skill/repo-conversion",
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/skill/document-intake",
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/skill/folio-getting-started",
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/skill/folio-repo-conversion"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/role/onboarding-agent"
     }

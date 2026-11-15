@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/package/security.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/package/security.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/package/security",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/package/security",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/SkillPackage",
       "name": "security",
       "version": "0.1.0",
@@ -12,14 +12,14 @@
       "path": "skills/conduct/security",
       "hasManifest": true,
       "declaresSkill": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/injection-boundaries",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/path-containment",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/security",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/zero-trust-handover"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/injection-boundaries",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/path-containment",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/security",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/zero-trust-handover"
       ],
       "providesCapability": [],
       "requiresCapability": [],
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/skills",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/skills",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/package/security"
     }
   ]

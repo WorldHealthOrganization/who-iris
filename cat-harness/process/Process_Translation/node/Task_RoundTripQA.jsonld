@@ -1,30 +1,30 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_Translation/node/Task_RoundTripQA.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_Translation/node/Task_RoundTripQA.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_Translation/node/Task_RoundTripQA",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_Translation/node/Task_RoundTripQA",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "Round-trip translation QA (back-translate)",
       "nodeKind": "activity",
       "bpmnType": "bpmn:Task",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_Translation",
-      "performedBy": "https://litlfred.github.io/who-iris/cat-harness/role/authoring-agent",
-      "inLane": "https://litlfred.github.io/who-iris/cat-harness/process/Process_Translation/lane/Lane_Platform",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_Translation",
+      "performedBy": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/authoring-agent",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_Translation/lane/Lane_Platform",
       "requires": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/translation-manager"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/translation-manager"
       ],
       "touchesWorkPlan": false,
       "relaxable": true,
-      "calledElement": "https://litlfred.github.io/who-iris/cat-harness/globalTask/GT_RoundTripQa",
+      "calledElement": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/globalTask/GT_RoundTripQa",
       "incoming": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_Translation#flow/Flow_Inject"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_Translation#flow/Flow_Inject"
       ],
       "outgoing": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_Translation#flow/Flow_QA"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_Translation#flow/Flow_QA"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/library-graph",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/library-graph",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_Translation/node/Task_RoundTripQA"
     }
   ]

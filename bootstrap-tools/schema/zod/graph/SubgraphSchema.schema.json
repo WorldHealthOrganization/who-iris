@@ -73,7 +73,7 @@
       "description": "A directory entry of a Declaration: an id, a directory, and the Graph Typologies its Node Instances' kinds belong to."
     }
   },
-  "$id": "https://litlfred.github.io/who-iris/bootstrap-tools/schema/zod/graph/SubgraphSchema.schema.json",
+  "$id": "https://WorldHealthOrganization.github.io/who-iris/bootstrap-tools/schema/zod/graph/SubgraphSchema.schema.json",
   "title": "SubgraphSchema",
   "description": "Generated from `SubgraphSchema` in schemas/graph.ts, which is authoritative. Published because it is an exported Zod `*Schema` (owner ruling 2026-10-05) — which says it is reachable, not that it is stable."
 }

@@ -1,13 +1,13 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/bootstrap/bootstrap.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/bootstrap/process/Process_CompleteInitialization/node/GW_NextStep_Join.jsonld",
-  "isPartOf": "https://litlfred.github.io/who-iris/bootstrap/bootstrap.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/bootstrap/bootstrap.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/bootstrap/process/Process_CompleteInitialization/node/GW_NextStep_Join.jsonld",
+  "isPartOf": "https://WorldHealthOrganization.github.io/who-iris/bootstrap/bootstrap.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/bootstrap/process/Process_CompleteInitialization/node/GW_NextStep_Join",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/bootstrap/process/Process_CompleteInitialization/node/GW_NextStep_Join",
       "@type": "bootstrap:ProcessNode",
       "type": "bpmn:exclusiveGateway",
-      "isPartOf": "https://litlfred.github.io/who-iris/bootstrap/process/Process_CompleteInitialization"
+      "isPartOf": "https://WorldHealthOrganization.github.io/who-iris/bootstrap/process/Process_CompleteInitialization"
     }
   ]
 }

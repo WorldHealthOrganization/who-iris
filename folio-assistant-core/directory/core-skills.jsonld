@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/directory/core-skills.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/directory/core-skills.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/directory/core-skills",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/directory/core-skills",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Subgraph",
       "name": "core-skills",
       "path": "skills/",
@@ -18,7 +18,7 @@
       "description": "The skills core owns, including `skills/voices/`: a voice partitions how prose READS and is a different graph from an instruction body.",
       "readmePath": "skills/README.md",
       "fileCount": 0,
-      "inSubgraph": "https://litlfred.github.io/who-iris/folio-assistant-core/directory/core-skills",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/directory/core-skills",
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/directory/core-skills"
     }
   ]

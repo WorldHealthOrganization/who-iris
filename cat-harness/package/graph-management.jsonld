@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/package/graph-management.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/package/graph-management.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/package/graph-management",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/package/graph-management",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/SkillPackage",
       "name": "graph-management",
       "version": "0.1.0",
@@ -12,17 +12,17 @@
       "path": "skills/kg/graph-management",
       "hasManifest": true,
       "declaresSkill": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/graph-detanglement",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/graph-rendering",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/kg-separation",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/kg-subgraph-layout",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/lsi-indexing",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/nquads-distribution",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/sub-kg-lifecycle"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/graph-detanglement",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/graph-rendering",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/kg-separation",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/kg-subgraph-layout",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/lsi-indexing",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/nquads-distribution",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/sub-kg-lifecycle"
       ],
       "providesCapability": [],
       "requiresCapability": [],
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/skills",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/skills",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/package/graph-management"
     }
   ]

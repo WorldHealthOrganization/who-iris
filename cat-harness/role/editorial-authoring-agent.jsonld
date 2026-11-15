@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/role/editorial-authoring-agent.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/editorial-authoring-agent.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/role/editorial-authoring-agent",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/editorial-authoring-agent",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
       "prefLabel": "Editorial authoring agent",
       "title": "Editorial authoring agent",
@@ -15,16 +15,16 @@
         "agent"
       ],
       "hasSkill": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/block-density",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/chapter-complexity-review",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/readability-editing",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/scientific-accuracy",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/one-voice-audit",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/md-authoring",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/html-rendering-qc",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/markdown-render-check",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/exposition-swarm-drain",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/todo-review"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/block-density",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/chapter-complexity-review",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/readability-editing",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/scientific-accuracy",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/one-voice-audit",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/md-authoring",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/html-rendering-qc",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/markdown-render-check",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/exposition-swarm-drain",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/todo-review"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/role/editorial-authoring-agent"
     }

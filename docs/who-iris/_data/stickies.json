@@ -57,8 +57,8 @@
         "scale": 0.74
       },
       "scrim": "rgba(251, 249, 239, 0.82)",
-      "viewHref": "https://github.com/litlfred/who-iris/blob/main/cat-harness.json",
-      "editHref": "https://github.com/litlfred/who-iris/edit/main/cat-harness.json"
+      "viewHref": "https://github.com/WorldHealthOrganization/who-iris/blob/main/cat-harness.json",
+      "editHref": "https://github.com/WorldHealthOrganization/who-iris/edit/main/cat-harness.json"
     },
     {
       "id": "folio-assist-core",
@@ -116,8 +116,8 @@
         "scale": 0.74
       },
       "scrim": "rgba(237, 234, 228, 0.82)",
-      "viewHref": "https://github.com/litlfred/who-iris/blob/main/folio-assistant-core.json",
-      "editHref": "https://github.com/litlfred/who-iris/edit/main/folio-assistant-core.json"
+      "viewHref": "https://github.com/WorldHealthOrganization/who-iris/blob/main/folio-assistant-core.json",
+      "editHref": "https://github.com/WorldHealthOrganization/who-iris/edit/main/folio-assistant-core.json"
     },
     {
       "id": "who-iris",
@@ -137,8 +137,8 @@
       "shape": "card",
       "text": null,
       "scrim": null,
-      "viewHref": "https://github.com/litlfred/who-iris/blob/main/who-iris.json",
-      "editHref": "https://github.com/litlfred/who-iris/edit/main/who-iris.json"
+      "viewHref": "https://github.com/WorldHealthOrganization/who-iris/blob/main/who-iris.json",
+      "editHref": "https://github.com/WorldHealthOrganization/who-iris/edit/main/who-iris.json"
     }
   ]
 }

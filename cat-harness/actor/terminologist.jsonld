@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/actor/terminologist.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/actor/terminologist.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/actor/terminologist",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/actor/terminologist",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Actor",
       "localId": "terminologist",
       "actorKind": "person",
@@ -18,11 +18,11 @@
         ]
       },
       "hasCapability": [
-        "https://litlfred.github.io/who-iris/cat-harness/capability/git-push"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/capability/git-push"
       ],
       "mayTakeRole": [
-        "https://litlfred.github.io/who-iris/cat-harness/role/terminologist",
-        "https://litlfred.github.io/who-iris/cat-harness/role/author"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/terminologist",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/author"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/actor/terminologist"
     }

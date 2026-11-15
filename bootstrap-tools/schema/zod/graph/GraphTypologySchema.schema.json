@@ -37,7 +37,7 @@
       "description": "A named set of Node Kinds."
     }
   },
-  "$id": "https://litlfred.github.io/who-iris/bootstrap-tools/schema/zod/graph/GraphTypologySchema.schema.json",
+  "$id": "https://WorldHealthOrganization.github.io/who-iris/bootstrap-tools/schema/zod/graph/GraphTypologySchema.schema.json",
   "title": "GraphTypologySchema",
   "description": "Generated from `GraphTypologySchema` in schemas/graph.ts, which is authoritative. Published because it is an exported Zod `*Schema` (owner ruling 2026-10-05) — which says it is reachable, not that it is stable."
 }

@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/role/corpus.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/corpus.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/role/corpus",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/corpus",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
       "prefLabel": "Corpus",
       "title": "Corpus",
@@ -15,9 +15,9 @@
         "system"
       ],
       "hasSkill": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/kg-affordances",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/kg-subscription",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/materialize-remote"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/kg-affordances",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/kg-subscription",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/materialize-remote"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/role/corpus"
     }

@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/role/narrative-reviewer.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/narrative-reviewer.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/role/narrative-reviewer",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/narrative-reviewer",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
       "prefLabel": "Narrative reviewer",
       "title": "Narrative reviewer",
@@ -15,13 +15,13 @@
         "person"
       ],
       "hasSkill": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/adjudication",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/content-feedback",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/content-review",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/translation-manager",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/uses-editorial-review",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/voice-editorial-review",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/voice-overlay-review"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/adjudication",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/content-feedback",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/content-review",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/translation-manager",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/uses-editorial-review",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/voice-editorial-review",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/voice-overlay-review"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/role/narrative-reviewer"
     }

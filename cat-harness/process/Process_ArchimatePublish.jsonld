@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Process",
       "name": "Publish an ArchiMate model — every picture derived from it",
       "summary": "An ArchiMate model is authored in Archi and committed; everything a reader sees is derived from it by three mechanical Tools, in order, in the pipeline lane: `archimate-check` (it parses and resolves), `archimate-metamodel` (the element types and relationship…",
@@ -12,82 +12,82 @@
       "enforcement": "strict",
       "sourcePath": "processes/ui/archimate-publish.bpmn",
       "sourceUrl": "https://github.com/litlfred/cat-harness/blob/main/processes/ui/archimate-publish.bpmn",
-      "depiction": "https://litlfred.github.io/who-iris/assets/img/workflows/archimate-publish.svg",
+      "depiction": "https://WorldHealthOrganization.github.io/who-iris/assets/img/workflows/archimate-publish.svg",
       "startNode": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/Start_Process_ArchimatePublish"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/Start_Process_ArchimatePublish"
       ],
       "nodeCount": 7,
       "flowCount": 7,
       "conformsTo": [
-        "https://litlfred.github.io/who-iris/cat-harness/externalSchema/omg-bpmn-2.0",
-        "https://litlfred.github.io/who-iris/cat-harness/externalSchema/omg-dd-1.0"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/externalSchema/omg-bpmn-2.0",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/externalSchema/omg-dd-1.0"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/processes",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/processes",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_ArchimatePublish"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish#flow/SF_Process_ArchimatePublish_1",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish#flow/SF_Process_ArchimatePublish_1",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/Start_Process_ArchimatePublish",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/A_Check",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/processes",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/Start_Process_ArchimatePublish",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/A_Check",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/processes",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_ArchimatePublish#flow/SF_Process_ArchimatePublish_1"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish#flow/SF_Process_ArchimatePublish_2",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish#flow/SF_Process_ArchimatePublish_2",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/A_Check",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/A_Metamodel",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/processes",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/A_Check",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/A_Metamodel",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/processes",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_ArchimatePublish#flow/SF_Process_ArchimatePublish_2"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish#flow/SF_Process_ArchimatePublish_3",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish#flow/SF_Process_ArchimatePublish_3",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/A_Metamodel",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/GW_Allowed",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/processes",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/A_Metamodel",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/GW_Allowed",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/processes",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_ArchimatePublish#flow/SF_Process_ArchimatePublish_3"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish#flow/SF_Process_ArchimatePublish_4",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish#flow/SF_Process_ArchimatePublish_4",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
       "name": "yes",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/GW_Allowed",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/A_Pages",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/processes",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/GW_Allowed",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/A_Pages",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/processes",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_ArchimatePublish#flow/SF_Process_ArchimatePublish_4"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish#flow/SF_Process_ArchimatePublish_5",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish#flow/SF_Process_ArchimatePublish_5",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
       "name": "no",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/GW_Allowed",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/A_FixModel",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/processes",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/GW_Allowed",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/A_FixModel",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/processes",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_ArchimatePublish#flow/SF_Process_ArchimatePublish_5"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish#flow/SF_Process_ArchimatePublish_6",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish#flow/SF_Process_ArchimatePublish_6",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/A_FixModel",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/A_Check",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/processes",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/A_FixModel",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/A_Check",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/processes",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_ArchimatePublish#flow/SF_Process_ArchimatePublish_6"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish#flow/SF_Process_ArchimatePublish_7",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish#flow/SF_Process_ArchimatePublish_7",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/A_Pages",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/End_Process_ArchimatePublish",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/processes",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/A_Pages",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_ArchimatePublish/node/End_Process_ArchimatePublish",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/processes",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_ArchimatePublish#flow/SF_Process_ArchimatePublish_7"
     }
   ]

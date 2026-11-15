@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/ns-vocabulary.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/ns-vocabulary.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/ns-vocabulary.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/ns-vocabulary.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "ns-vocabulary",
       "title": "Namespace vocabulary",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "layer",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/NamespaceLayer",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/NamespaceLayer",
             "description": "Emit one namespace layer — `bootstrap` for the layer that must resolve before anything else does.",
             "required": false,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "out",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "Where to write; defaults under `_kg/`, which is build output.",
             "required": false,
             "arg": {
@@ -398,7 +398,7 @@
         "outputs": [
           {
             "name": "vocabulary",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The written namespace document."
           }
         ]
@@ -410,10 +410,10 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/kg-export"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/kg-export"
       ],
       "maintains": [
-        "https://litlfred.github.io/who-iris/cat-harness/ns.jsonld"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/ns.jsonld"
       ],
       "maintainsFrom": [
         "schemas/content/vocabulary.ts"

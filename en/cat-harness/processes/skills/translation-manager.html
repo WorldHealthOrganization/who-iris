@@ -32,14 +32,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="The WHO Institutional Repository for Information Sharing, catalogued by reference — 1,057,223 files known, a handful materialized as the pre-CDN preview." />
 <meta name="twitter:description" property="og:description" content="The WHO Institutional Repository for Information Sharing, catalogued by reference — 1,057,223 files known, a handful materialized as the pre-CDN preview." />
-<link rel="canonical" href="https://litlfred.github.io/who-iris/en/cat-harness/processes/skills/translation-manager.html" />
-<meta property="og:url" content="https://litlfred.github.io/who-iris/en/cat-harness/processes/skills/translation-manager.html" />
+<link rel="canonical" href="https://worldhealthorganization.github.io/who-iris/en/cat-harness/processes/skills/translation-manager.html" />
+<meta property="og:url" content="https://worldhealthorganization.github.io/who-iris/en/cat-harness/processes/skills/translation-manager.html" />
 <meta property="og:site_name" content="WHO IRIS" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="translation-manager (skill)" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"The WHO Institutional Repository for Information Sharing, catalogued by reference — 1,057,223 files known, a handful materialized as the pre-CDN preview.","headline":"translation-manager (skill)","url":"https://litlfred.github.io/who-iris/en/cat-harness/processes/skills/translation-manager.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"The WHO Institutional Repository for Information Sharing, catalogued by reference — 1,057,223 files known, a handful materialized as the pre-CDN preview.","headline":"translation-manager (skill)","url":"https://worldhealthorganization.github.io/who-iris/en/cat-harness/processes/skills/translation-manager.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -88,7 +88,7 @@
   },
   "statusSrc":"../../../../assets/translation-status/index.json",
   "reviewSrc":"../../../../assets/translation-status/review.json"
-}</script><script type="application/json" id="fa-navbar-row" data-fa-row-src="harness-data"></script><script type="application/json" id="fa-site-links">{"kg":"https://litlfred.github.io/folio-assistant/who-iris/","jsonld":"https://litlfred.github.io/folio-assistant/who-iris/who-iris.jsonld","source":"https://github.com/litlfred/who-iris"}</script><meta name="fa-site-index-src" content="../../../../assets/harness/site.json">
+}</script><script type="application/json" id="fa-navbar-row" data-fa-row-src="harness-data"></script><script type="application/json" id="fa-site-links">{"kg":"https://litlfred.github.io/folio-assistant/who-iris/","jsonld":"https://litlfred.github.io/folio-assistant/who-iris/who-iris.jsonld","source":"https://github.com/WorldHealthOrganization/who-iris"}</script><meta name="fa-site-index-src" content="../../../../assets/harness/site.json">
 <meta name="fa-todo-src" content="../../../../assets/todos/index.json"><meta name="fa-todo-graph" content="../../../../todos.jsonld"><meta name="fa-zoom-src" content="../../../../assets/semantic-zoom.json"><meta name="fa-tiles" content="" data-fa-src="harness-data">
 <meta name="fa-glass-strip" content="[&quot;glass-todos&quot;,&quot;glass-settings&quot;]"><meta name="fa-baseurl" content="../../../.."><meta name="fa-staging" content=""><meta name="fa-search-index" content="">
 
@@ -536,12 +536,38 @@ you make once, here, not again in every block.</p>
 <ol>
   <li><strong>Existing <code class="language-plaintext highlighter-rouge">.po</code> from SMART Base</strong> — if the DAK already has translations
 from Weblate/Crowdin, use them.</li>
-  <li><strong>FHIR/translation-utils</strong> — the <code class="language-plaintext highlighter-rouge">po-translate</code> CLI for batch machine
-translation via DeepL/Google Translate. Tags results <code class="language-plaintext highlighter-rouge"># fuzzy</code>.</li>
+  <li><strong>Open machine translation, as candidates</strong> — <code class="language-plaintext highlighter-rouge">bun run cat
+translation:candidates --instance &lt;root&gt; --engine opus-mt</code> (OPUS-MT,
+Helsinki-NLP Marian models, CC-BY 4.0, run locally), or
+<code class="language-plaintext highlighter-rouge">--engine opus-mt,libretranslate --url &lt;yours&gt;</code> to add a self-hosted
+LibreTranslate as a second source. The Tool is
+<a href="https://github.com/litlfred/cat-harness/blob/main/tools/translation-candidates/translation-candidates.json"><code class="language-plaintext highlighter-rouge">translation-candidates</code></a>.
+Each source’s text for each empty or fuzzy string is a CANDIDATE, appended
+to <code class="language-plaintext highlighter-rouge">&lt;locale&gt;/&lt;catalogue&gt;.candidates.json</code> (<code class="language-plaintext highlighter-rouge">translation-candidates/v1</code>). A
+candidate whose placeholders or markup do not round-trip is not recorded.
+Candidates are never a barrier to having a translation: an EMPTY <code class="language-plaintext highlighter-rouge">msgstr</code>
+gets the first good candidate, <code class="language-plaintext highlighter-rouge">#, fuzzy</code>. A non-empty <code class="language-plaintext highlighter-rouge">msgstr</code> is never
+overwritten, and <code class="language-plaintext highlighter-rouge">official</code> is never set. <code class="language-plaintext highlighter-rouge">--init</code> starts a <code class="language-plaintext highlighter-rouge">.po</code> from a
+template that has none.
+No hosted freemium API is used. The DeepL / Google Translate route through
+<code class="language-plaintext highlighter-rouge">po-translate</code> is no longer recommended, because it needs a quota and sends
+the text to a third party. Paid services (DeepL, Google Cloud Translation,
+Azure Translator, Amazon Translate) are deliberately not candidate sources
+here.</li>
   <li><strong>Agent translation</strong> — LLM translation of <code class="language-plaintext highlighter-rouge">.pot</code> → <code class="language-plaintext highlighter-rouge">.po</code>. Also tagged
-unofficial.</li>
+unofficial. An agent’s text can be recorded as a candidate with
+<code class="language-plaintext highlighter-rouge">source.kind: "agent"</code> through the same writer.</li>
   <li><strong>Human translation</strong> — the gold standard.</li>
 </ol>
+
+<p>A candidate is a draft, never a verdict. Candidates reach a person through
+the translation review page (<code class="language-plaintext highlighter-rouge">review.html</code>, beside the status page). There a
+reviewer picks one candidate per string, accepts the fuzzy default, or types
+their own text. The resulting issue becomes the recorded adjudication, and it
+names the source of the picked candidate. A catalogue whose author wrote
+<code class="language-plaintext highlighter-rouge">DO NOT MACHINE-FILL</code> in its header (the viewer’s <code class="language-plaintext highlighter-rouge">kg-viewer.po</code>) still gets
+candidates for a reviewer. Its <code class="language-plaintext highlighter-rouge">.po</code> is never machine-filled: the tool
+refuses that, and so does an agent.</p>
 <h4 id="modal-strength-a-recommendation-stays-a-recommendation">
   
   

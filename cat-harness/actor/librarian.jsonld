@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/actor/librarian.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/actor/librarian.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/actor/librarian",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/actor/librarian",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Actor",
       "localId": "librarian",
       "actorKind": "person",
@@ -15,7 +15,7 @@
       },
       "hasCapability": [],
       "mayTakeRole": [
-        "https://litlfred.github.io/who-iris/cat-harness/role/librarian"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/librarian"
       ],
       "permissionName": [
         "content-authoring"

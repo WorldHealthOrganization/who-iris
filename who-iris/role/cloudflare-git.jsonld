@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/who-iris/who-iris.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/who-iris/role/cloudflare-git.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/who-iris/who-iris.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/who-iris/who-iris.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/who-iris/role/cloudflare-git.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/who-iris/who-iris.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/who-iris/role/cloudflare-git",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/who-iris/role/cloudflare-git",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
       "prefLabel": "Cloudflare git (Artifacts)",
       "title": "Cloudflare git (Artifacts)",
@@ -15,8 +15,8 @@
         "system"
       ],
       "hasSkill": [
-        "https://litlfred.github.io/who-iris/who-iris/skill/iris-cdn-exporter",
-        "https://litlfred.github.io/who-iris/who-iris/skill/iris-rest-feed"
+        "https://WorldHealthOrganization.github.io/who-iris/who-iris/skill/iris-cdn-exporter",
+        "https://WorldHealthOrganization.github.io/who-iris/who-iris/skill/iris-rest-feed"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/role/cloudflare-git"
     }

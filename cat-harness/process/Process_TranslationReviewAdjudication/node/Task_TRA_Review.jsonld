@@ -1,29 +1,29 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_Review.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_Review.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_Review",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_Review",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "Read the catalogue on the review page",
       "nodeKind": "activity",
       "bpmnType": "bpmn:UserTask",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_TranslationReviewAdjudication",
-      "performedBy": "https://litlfred.github.io/who-iris/cat-harness/role/translation-adjudicator",
-      "inLane": "https://litlfred.github.io/who-iris/cat-harness/process/Process_TranslationReviewAdjudication/lane/Lane_TRA_Reviewer",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_TranslationReviewAdjudication",
+      "performedBy": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/translation-adjudicator",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_TranslationReviewAdjudication/lane/Lane_TRA_Reviewer",
       "requires": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/translation-adjudication"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/translation-adjudication"
       ],
       "touchesWorkPlan": false,
       "relaxable": true,
       "incoming": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_5"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_5"
       ],
       "outgoing": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_6"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_6"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/library-graph",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/library-graph",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_Review"
     }
   ]

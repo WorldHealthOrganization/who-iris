@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/tool-schema.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/tool-schema.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/tool-schema.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/tool-schema.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "tool-schema",
       "title": "Tool node schema",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "baseUrl",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Url",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Url",
             "required": false,
             "arg": {
               "flag": "--base-url"
@@ -388,15 +388,15 @@
         "outputs": [
           {
             "name": "schema",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath"
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath"
           }
         ]
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/kg-export"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/kg-export"
       ],
       "maintains": [
-        "https://litlfred.github.io/who-iris/cat-harness/tool.schema.json"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool.schema.json"
       ],
       "maintainsFrom": [
         "schemas/tools/tool.ts"

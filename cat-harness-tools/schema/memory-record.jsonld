@@ -1,7 +1,7 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness-tools/cat-harness-tools.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness-tools/schema/memory-record.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness-tools/cat-harness-tools.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness-tools/cat-harness-tools.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness-tools/schema/memory-record.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness-tools/cat-harness-tools.jsonld",
   "sameAs": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/memory-record.jsonld",
   "@graph": [
     {

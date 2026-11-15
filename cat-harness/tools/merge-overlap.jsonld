@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/merge-overlap.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/merge-overlap.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/merge-overlap.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/merge-overlap.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "merge-overlap",
       "title": "Merge overlap (conflict prediction)",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "base",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
             "description": "The base each PR is diffed against from its fork point; default `origin/main`.",
             "required": false,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "branches",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
             "description": "Branches to compare instead of the open PRs; with none, the open PRs come from `gh`.",
             "required": false,
             "repeated": true,
@@ -399,7 +399,7 @@
         "outputs": [
           {
             "name": "report",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "`merge-overlap/v1` on stdout: per member `authored_paths`, `region_paths`, `touches_shared`, the two harness flags; every pair that is not independent, with why."
           }
         ]
@@ -411,8 +411,8 @@
         "network": true
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/merge-conflict-patterns",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/coordinate"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/merge-conflict-patterns",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/coordinate"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/merge-overlap.jsonld"
     }

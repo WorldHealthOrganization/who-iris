@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/translation-signoff.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/translation-signoff.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/translation-signoff.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/translation-signoff.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "translation-signoff",
       "title": "Sign off a translation",
@@ -383,7 +383,7 @@
         "inputs": [
           {
             "name": "locale",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Locale",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Locale",
             "required": true,
             "arg": {
               "flag": "--locale"
@@ -391,7 +391,7 @@
           },
           {
             "name": "source",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "required": true,
             "arg": {
               "positional": 0
@@ -399,13 +399,13 @@
           },
           {
             "name": "signed_off_by",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "Who is signing off.",
             "required": true
           },
           {
             "name": "level",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/TranslationLevel",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/TranslationLevel",
             "required": false,
             "arg": {
               "flag": "--level"
@@ -415,7 +415,7 @@
         "outputs": [
           {
             "name": "record",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
             "description": "The sign-off recorded, including the source hash."
           }
         ]
@@ -424,8 +424,8 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/translation-manager",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/decision-audit"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/translation-manager",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/decision-audit"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/translation-signoff.jsonld"
     }

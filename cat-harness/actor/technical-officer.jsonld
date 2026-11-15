@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/actor/technical-officer.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/actor/technical-officer.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/actor/technical-officer",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/actor/technical-officer",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Actor",
       "localId": "technical-officer",
       "actorKind": "person",
@@ -18,14 +18,14 @@
         ]
       },
       "hasCapability": [
-        "https://litlfred.github.io/who-iris/cat-harness/capability/git-push"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/capability/git-push"
       ],
       "mayTakeRole": [
-        "https://litlfred.github.io/who-iris/cat-harness/role/reviewer",
-        "https://litlfred.github.io/who-iris/cat-harness/role/programme-manager",
-        "https://litlfred.github.io/who-iris/cat-harness/role/translation-coordinator",
-        "https://litlfred.github.io/who-iris/cat-harness/role/code-reviewer",
-        "https://litlfred.github.io/who-iris/cat-harness/role/review-coordinator"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/reviewer",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/programme-manager",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/translation-coordinator",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/code-reviewer",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/review-coordinator"
       ],
       "permissionName": [
         "first-pass-review",

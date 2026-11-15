@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/handover-screen.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/handover-screen.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/handover-screen.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/handover-screen.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "handover-screen",
       "title": "Screen a hand-over for injected instructions, field by field",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "schema",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "JSON `{ fields: { name: \"control\" | \"data\" }, strict?: boolean }`.",
             "required": false,
             "arg": {
@@ -387,13 +387,13 @@
           },
           {
             "name": "payload",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The hand-over, as a JSON object.",
             "required": false
           },
           {
             "name": "text",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "A single free-text input, screened as one DATA field.",
             "required": false,
             "arg": {
@@ -404,7 +404,7 @@
         "outputs": [
           {
             "name": "verdict",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "`clean`, `quarantined` or `refused`, with every finding's path, field role and kind; also the exit status."
           }
         ]
@@ -416,7 +416,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/security"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/security"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/handover-screen.jsonld"
     }

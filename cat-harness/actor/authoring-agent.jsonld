@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/actor/authoring-agent.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/actor/authoring-agent.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/actor/authoring-agent",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/actor/authoring-agent",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Actor",
       "localId": "authoring-agent",
       "actorKind": "agent",
@@ -18,13 +18,13 @@
       },
       "hasCapability": [],
       "mayTakeRole": [
-        "https://litlfred.github.io/who-iris/cat-harness/role/authoring-agent",
-        "https://litlfred.github.io/who-iris/cat-harness/role/sibling-session",
-        "https://litlfred.github.io/who-iris/cat-harness/role/docs-authoring-agent",
-        "https://litlfred.github.io/who-iris/cat-harness/role/editorial-authoring-agent",
-        "https://litlfred.github.io/who-iris/cat-harness/role/platform-authoring-agent",
-        "https://litlfred.github.io/who-iris/cat-harness/role/session-coordinator",
-        "https://litlfred.github.io/who-iris/cat-harness/role/merge-steward"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/authoring-agent",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/sibling-session",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/docs-authoring-agent",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/editorial-authoring-agent",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/platform-authoring-agent",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/session-coordinator",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/merge-steward"
       ],
       "permissionName": [
         "content-authoring"

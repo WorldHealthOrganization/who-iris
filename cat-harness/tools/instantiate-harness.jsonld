@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/instantiate-harness.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/instantiate-harness.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/instantiate-harness.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/instantiate-harness.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "instantiate-harness",
       "title": "Instantiate a harness over a repository that has none: pin, mount, open the setup-only PR, render the preview",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "repo",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The checkout to harness: clean, with a GitHub origin. Default: the working directory.",
             "required": false,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "harness",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoFullName",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoFullName",
             "description": "The harness, OWNER/REPO, pinned at its default branch's tip (pin it otherwise with --pin <name>=<sha>).",
             "required": true,
             "arg": {
@@ -396,7 +396,7 @@
           },
           {
             "name": "consentBy",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Login",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Login",
             "description": "Who consented to mounting the closure; also recorded as the one mountApprover. The evidence (where they consented, readable) is read from stdin.",
             "required": true,
             "arg": {
@@ -405,7 +405,7 @@
           },
           {
             "name": "evidence",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "Where the consent was given, readable (a session, an issue comment). On stdin because it is free prose: it quotes what was said.",
             "required": false,
             "arg": {
@@ -414,7 +414,7 @@
           },
           {
             "name": "branch",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
             "description": "The setup branch. Default: harness/<harness>. Never the default branch.",
             "required": false,
             "arg": {
@@ -423,7 +423,7 @@
           },
           {
             "name": "plan",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Resolve the closure, print every step, and stop.",
             "required": false,
             "arg": {
@@ -432,7 +432,7 @@
           },
           {
             "name": "local",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Commit on the branch, push nothing; the site is built and composed (stage-local --dry-run).",
             "required": false,
             "arg": {
@@ -441,7 +441,7 @@
           },
           {
             "name": "noPr",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Push the branch and the preview, open no PR.",
             "required": false,
             "arg": {
@@ -452,7 +452,7 @@
         "outputs": [
           {
             "name": "url",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Url",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Url",
             "description": "The branch's preview, gh-pages branches/<branch>/, once GitHub's Pages deploy has run.",
             "render": {
               "as": "url",
@@ -469,8 +469,8 @@
         "network": true
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/repo-conversion",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/remote-mount"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/repo-conversion",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/remote-mount"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/instantiate-harness.jsonld"
     }

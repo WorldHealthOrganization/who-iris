@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/bootstrap-tools/bootstrap-tools.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/bootstrap-tools/directory/bootstrap-tools-schemas.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/bootstrap-tools/bootstrap-tools.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/bootstrap-tools/bootstrap-tools.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/bootstrap-tools/directory/bootstrap-tools-schemas.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/bootstrap-tools/bootstrap-tools.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/bootstrap-tools/directory/bootstrap-tools-schemas",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/bootstrap-tools/directory/bootstrap-tools-schemas",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Subgraph",
       "name": "bootstrap-tools-schemas",
       "path": "schemas/",
@@ -19,7 +19,7 @@
       "description": "The Zod source of every schema bootstrap publishes, bootstrap's defined terms and graph typologies, and the small readers the tools share: a declaration reader over bootstrap's own shape, release addresses, and the declared-order check.",
       "readmePath": "schemas/README.md",
       "fileCount": 0,
-      "inSubgraph": "https://litlfred.github.io/who-iris/bootstrap-tools/directory/bootstrap-tools-schemas",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/bootstrap-tools/directory/bootstrap-tools-schemas",
       "alternateOf": "https://litlfred.github.io/folio-assistant/bootstrap-tools/directory/bootstrap-tools-schemas"
     }
   ]

@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://litlfred.github.io/who-iris/folio-assistant-core/schema/skills/content-plan/input.schema.json",
+  "$id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/schema/skills/content-plan/input.schema.json",
   "title": "Content Plan Input",
   "description": "Input schema for content planning — scope, team, timeline, governance.",
   "type": "object",

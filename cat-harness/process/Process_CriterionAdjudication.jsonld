@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Process",
       "name": "Criterion adjudication",
       "summary": "Two reviewer entries for ONE QA criterion disagree: ask the adjudication, then do the one of three things that a criterion disagreement admits.",
@@ -12,92 +12,92 @@
       "enforcement": "advisory",
       "sourcePath": "processes/process/criterion-adjudication.bpmn",
       "sourceUrl": "https://github.com/litlfred/cat-harness/blob/main/processes/process/criterion-adjudication.bpmn",
-      "depiction": "https://litlfred.github.io/who-iris/assets/img/workflows/criterion-adjudication.svg",
+      "depiction": "https://WorldHealthOrganization.github.io/who-iris/assets/img/workflows/criterion-adjudication.svg",
       "startNode": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/Start_CriterionDisagreement"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/Start_CriterionDisagreement"
       ],
       "nodeCount": 7,
       "flowCount": 8,
       "conformsTo": [
-        "https://litlfred.github.io/who-iris/cat-harness/externalSchema/omg-bpmn-2.0",
-        "https://litlfred.github.io/who-iris/cat-harness/externalSchema/omg-dd-1.0"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/externalSchema/omg-bpmn-2.0",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/externalSchema/omg-dd-1.0"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/processes",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/processes",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CriterionAdjudication"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication#flow/F_C1",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication#flow/F_C1",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/Start_CriterionDisagreement",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/Call_Adjudicate",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/processes",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/Start_CriterionDisagreement",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/Call_Adjudicate",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/processes",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CriterionAdjudication#flow/F_C1"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication#flow/F_C2",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication#flow/F_C2",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/Call_Adjudicate",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/GW_Outcome",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/processes",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/Call_Adjudicate",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/GW_Outcome",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/processes",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CriterionAdjudication#flow/F_C2"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication#flow/F_Stands",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication#flow/F_Stands",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
       "name": "the finding stands",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/GW_Outcome",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/A_RecordEntry",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/processes",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/GW_Outcome",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/A_RecordEntry",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/processes",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CriterionAdjudication#flow/F_Stands"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication#flow/F_Scope",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication#flow/F_Scope",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
       "name": "the criterion does not apply here",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/GW_Outcome",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/A_ScopeCriterion",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/processes",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/GW_Outcome",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/A_ScopeCriterion",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/processes",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CriterionAdjudication#flow/F_Scope"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication#flow/F_Exception",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication#flow/F_Exception",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
       "name": "it applies; this is an exception",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/GW_Outcome",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/A_Dispensation",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/processes",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/GW_Outcome",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/A_Dispensation",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/processes",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CriterionAdjudication#flow/F_Exception"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication#flow/F_C5",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication#flow/F_C5",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/A_ScopeCriterion",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/A_RecordEntry",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/processes",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/A_ScopeCriterion",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/A_RecordEntry",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/processes",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CriterionAdjudication#flow/F_C5"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication#flow/F_C6",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication#flow/F_C6",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/A_Dispensation",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/A_RecordEntry",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/processes",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/A_Dispensation",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/A_RecordEntry",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/processes",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CriterionAdjudication#flow/F_C6"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication#flow/F_C7",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication#flow/F_C7",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/A_RecordEntry",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/End_Settled",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/processes",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/A_RecordEntry",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_CriterionAdjudication/node/End_Settled",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/processes",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_CriterionAdjudication#flow/F_C7"
     }
   ]

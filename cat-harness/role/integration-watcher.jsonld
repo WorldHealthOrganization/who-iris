@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/role/integration-watcher.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/integration-watcher.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/role/integration-watcher",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/integration-watcher",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
       "prefLabel": "Integration watcher",
       "title": "Integration watcher",
@@ -15,12 +15,12 @@
         "agent"
       ],
       "hasSkill": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/canonical-watcher",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/devils-advocate-watcher",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/one-voice-integration-watcher",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/integration-watch",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/integration-audit",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/integration-backlog"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/canonical-watcher",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/devils-advocate-watcher",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/one-voice-integration-watcher",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/integration-watch",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/integration-audit",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/integration-backlog"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/role/integration-watcher"
     }

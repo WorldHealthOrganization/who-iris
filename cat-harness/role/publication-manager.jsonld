@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/role/publication-manager.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/publication-manager.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/role/publication-manager",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/publication-manager",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
       "prefLabel": "Publication manager",
       "title": "Publication manager",
@@ -15,14 +15,14 @@
         "person"
       ],
       "hasSkill": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/content-review",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/decision-audit",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/qa-report-signing",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/publish-verification",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/instance-publication",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/package-release",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/render-kg-to-cdn",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/staging-review"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/content-review",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/decision-audit",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/qa-report-signing",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/publish-verification",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/instance-publication",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/package-release",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/render-kg-to-cdn",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/staging-review"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/role/publication-manager"
     }

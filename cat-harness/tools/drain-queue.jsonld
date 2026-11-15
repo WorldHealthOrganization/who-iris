@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/drain-queue.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/drain-queue.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/drain-queue.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/drain-queue.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "drain-queue",
       "title": "Build a bean drain queue",
@@ -381,7 +381,7 @@
         "inputs": [
           {
             "name": "copy",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "A local checkout of a bean copy, fetched by the tool to its bean ref. Repeat once per copy. Defaults to the current checkout.",
             "required": false,
             "repeated": true,
@@ -391,7 +391,7 @@
           },
           {
             "name": "holdings",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "A JSON file mapping each owner to the bean ids it holds (`holdings` in the skill's input schema).",
             "required": false,
             "arg": {
@@ -400,7 +400,7 @@
           },
           {
             "name": "agents",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "A JSON file of the agents and their commit authors (`agents` in the skill's input schema). Defaults to the table in the bean-drain skill.",
             "required": false,
             "arg": {
@@ -409,7 +409,7 @@
           },
           {
             "name": "window",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/TimeWindow",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/TimeWindow",
             "description": "Another agent's commit within this window marks a bean skip. Defaults to 24h.",
             "required": false,
             "arg": {
@@ -418,7 +418,7 @@
           },
           {
             "name": "json",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Emit the queue as JSON matching `definitions.queue`, instead of Markdown.",
             "required": false,
             "arg": {
@@ -429,12 +429,12 @@
         "outputs": [
           {
             "name": "queue",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
             "description": "The queue: sources with the tip each was read at, one section per owner in priority order, the spare pool, the excluded beans with reasons, and the copies that disagree. With --json, the same as `definitions.queue` of schemas/skills/bean-drain/output.schema.json. A copy that cannot be fetched is an error, never an empty queue."
           },
           {
             "name": "result",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/DrainQueue",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/DrainQueue",
             "description": "With --json, the queue as one `DrainQueue` record: sources, owner sections in priority order, the spare pool, exclusions and disagreeing copies. Programs read this; people read `queue`."
           }
         ]
@@ -446,8 +446,8 @@
         "network": true
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/bean-coordination",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/idle-backlog"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/bean-coordination",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/idle-backlog"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/drain-queue.jsonld"
     }

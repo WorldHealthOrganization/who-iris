@@ -1,15 +1,15 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_DocumentAuthoring/lane/Lane_WorkPlan.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_DocumentAuthoring/lane/Lane_WorkPlan.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_DocumentAuthoring/lane/Lane_WorkPlan",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_DocumentAuthoring/lane/Lane_WorkPlan",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Lane",
       "name": "Work plan (beans)",
-      "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_DocumentAuthoring",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_DocumentAuthoring",
       "bindsRole": "https://litlfred.github.io/folio-assistant/cat-harness/role/work-plan",
-      "inSubgraph": "https://litlfred.github.io/who-iris/folio-assistant-core/directory/collab",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/directory/collab",
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/process/Process_DocumentAuthoring/lane/Lane_WorkPlan"
     }
   ]

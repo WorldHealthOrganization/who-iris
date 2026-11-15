@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/skill-update.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/skill-update.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/skill-update.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/skill-update.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "skill-update",
       "title": "Edit a skill",
@@ -383,17 +383,17 @@
         "inputs": [
           {
             "name": "skill",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/SkillName",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/SkillName",
             "required": true
           },
           {
             "name": "package_name",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/PackageName",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/PackageName",
             "required": false
           },
           {
             "name": "new_content",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
             "description": "The whole new file: front matter and body.",
             "required": true,
             "arg": {
@@ -402,37 +402,37 @@
           },
           {
             "name": "base_sha256",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "SHA-256 hex of the file as the caller read it.",
             "required": true
           },
           {
             "name": "reason",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "Why the skill changes.",
             "required": true
           },
           {
             "name": "actor",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "The declared actor making the write; a policy must grant it skill-update.",
             "required": false
           },
           {
             "name": "process",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/ProcessId",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/ProcessId",
             "description": "The BPMN process the write is a step of, for the PROV-O activity.",
             "required": false
           },
           {
             "name": "task",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/NodeId",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/NodeId",
             "description": "The task in that process.",
             "required": false
           },
           {
             "name": "role",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "The role the lane binds.",
             "required": false
           }
@@ -440,12 +440,12 @@
         "outputs": [
           {
             "name": "verdict",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Markdown",
             "description": "Written or not, every gate's verdict with its reason, findings, and the PROV-O activity of an accepted write when a step was named."
           },
           {
             "name": "activity",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/ProvActivity",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/ProvActivity",
             "description": "The PROV-O activity of an accepted write that named its process, task and role; absent otherwise. Pass it to workflow_complete's `activities` for that step."
           }
         ]
@@ -454,7 +454,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/skills-and-tools"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/skills-and-tools"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/skill-update.jsonld"
     }

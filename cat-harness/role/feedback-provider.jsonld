@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/role/feedback-provider.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/feedback-provider.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/role/feedback-provider",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/feedback-provider",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
       "prefLabel": "Feedback provider",
       "title": "Feedback provider",
@@ -17,9 +17,9 @@
         "system"
       ],
       "hasSkill": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/content-feedback",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/todo-review",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/wireframe-design-review"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/content-feedback",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/todo-review",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/wireframe-design-review"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/role/feedback-provider"
     }

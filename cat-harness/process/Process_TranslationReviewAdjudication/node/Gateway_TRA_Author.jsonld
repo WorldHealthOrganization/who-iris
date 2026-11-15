@@ -1,28 +1,28 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_Author.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_Author.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_Author",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_Author",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "Author an owner, member or collaborator?",
       "nodeKind": "exclusive",
       "bpmnType": "bpmn:ExclusiveGateway",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_TranslationReviewAdjudication",
-      "performedBy": "https://litlfred.github.io/who-iris/cat-harness/role/build-pipeline",
-      "inLane": "https://litlfred.github.io/who-iris/cat-harness/process/Process_TranslationReviewAdjudication/lane/Lane_TRA_Pipeline",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_TranslationReviewAdjudication",
+      "performedBy": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/build-pipeline",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_TranslationReviewAdjudication/lane/Lane_TRA_Pipeline",
       "requires": [],
       "touchesWorkPlan": false,
       "relaxable": true,
       "incoming": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_DetYes"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_DetYes"
       ],
       "outgoing": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_AuthorNo",
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_AuthorYes"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_AuthorNo",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_AuthorYes"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/library-graph",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/library-graph",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_Author"
     }
   ]

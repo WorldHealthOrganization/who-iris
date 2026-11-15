@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/asset/unkinded-baseline.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/asset/unkinded-baseline.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/asset/unkinded-baseline",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/asset/unkinded-baseline",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Asset",
       "name": "unkinded-baseline",
       "path": "node-kinds.baseline.json",

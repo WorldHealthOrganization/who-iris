@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/actor/qc-reviewer.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/actor/qc-reviewer.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/actor/qc-reviewer",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/actor/qc-reviewer",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Actor",
       "localId": "qc-reviewer",
       "actorKind": "person",
@@ -19,7 +19,7 @@
       },
       "hasCapability": [],
       "mayTakeRole": [
-        "https://litlfred.github.io/who-iris/cat-harness/role/qc-reviewer"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/qc-reviewer"
       ],
       "permissionName": [
         "qa-reporting"

@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/content-graph-uml.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/content-graph-uml.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/content-graph-uml.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/content-graph-uml.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "content-graph-uml",
       "title": "A paper's block graph as UML",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "root",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The folio's content directory, where the block manifests are.",
             "required": true,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "out",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "Where to write the .puml files and their SVGs.",
             "required": true,
             "arg": {
@@ -396,7 +396,7 @@
           },
           {
             "name": "status",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "proof-objects.json, for status fills. Without it every block is drawn unfilled.",
             "required": false,
             "arg": {
@@ -405,7 +405,7 @@
           },
           {
             "name": "check",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Fail if a diagram or SVG is stale or orphaned, instead of writing. Needs no Java.",
             "required": false,
             "arg": {
@@ -416,7 +416,7 @@
         "outputs": [
           {
             "name": "diagrams",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "content-graph.puml and content-graph/<chapter>.puml, with portrait and landscape SVGs beside them."
           }
         ]
@@ -428,8 +428,8 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/graph-rendering",
-        "https://litlfred.github.io/who-iris/cat-harness/skill/content-graph"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/graph-rendering",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/content-graph"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/content-graph-uml.jsonld"
     }

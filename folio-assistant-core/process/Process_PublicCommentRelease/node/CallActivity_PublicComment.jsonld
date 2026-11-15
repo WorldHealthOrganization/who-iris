@@ -1,30 +1,30 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_PublicCommentRelease/node/CallActivity_PublicComment.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_PublicCommentRelease/node/CallActivity_PublicComment.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_PublicCommentRelease/node/CallActivity_PublicComment",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_PublicCommentRelease/node/CallActivity_PublicComment",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "Public comment on the release",
       "nodeKind": "activity",
       "bpmnType": "bpmn:CallActivity",
-      "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_PublicCommentRelease",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_PublicCommentRelease",
       "performedBy": "https://litlfred.github.io/folio-assistant/cat-harness/role/editor",
-      "inLane": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_PublicCommentRelease/lane/Lane_Editor",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_PublicCommentRelease/lane/Lane_Editor",
       "requires": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/skill/public-comment"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/skill/public-comment"
       ],
       "touchesWorkPlan": false,
       "relaxable": true,
-      "calledElement": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_PublicComment",
+      "calledElement": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_PublicComment",
       "incoming": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_PublicCommentRelease#flow/Flow_Distribute_To_PublicComment"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_PublicCommentRelease#flow/Flow_Distribute_To_PublicComment"
       ],
       "outgoing": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_PublicCommentRelease#flow/Flow_PublicComment_To_ArchiveRelease"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_PublicCommentRelease#flow/Flow_PublicComment_To_ArchiveRelease"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/folio-assistant-core/directory/collab",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/directory/collab",
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/process/Process_PublicCommentRelease/node/CallActivity_PublicComment"
     }
   ]

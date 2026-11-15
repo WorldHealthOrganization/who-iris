@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/asset/unkinded-baseline.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/asset/unkinded-baseline.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/asset/unkinded-baseline",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/asset/unkinded-baseline",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Asset",
       "name": "unkinded-baseline",
       "path": "node-kinds.baseline.json",

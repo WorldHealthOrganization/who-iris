@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/actor/publication-manager.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/actor/publication-manager.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/actor/publication-manager",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/actor/publication-manager",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Actor",
       "localId": "publication-manager",
       "actorKind": "person",
@@ -17,12 +17,12 @@
         ]
       },
       "hasCapability": [
-        "https://litlfred.github.io/who-iris/cat-harness/capability/git-push",
-        "https://litlfred.github.io/who-iris/cat-harness/capability/jekyll"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/capability/git-push",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/capability/jekyll"
       ],
       "mayTakeRole": [
-        "https://litlfred.github.io/who-iris/cat-harness/role/publication-manager",
-        "https://litlfred.github.io/who-iris/cat-harness/role/author"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/publication-manager",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/author"
       ],
       "permissionName": [
         "release-management"

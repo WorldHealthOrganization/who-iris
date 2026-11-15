@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/role/external-registry.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/external-registry.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/role/external-registry",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/role/external-registry",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
       "prefLabel": "External registry",
       "title": "External registry",
@@ -15,7 +15,7 @@
         "external"
       ],
       "hasSkill": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/external-registry-contract"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/external-registry-contract"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/role/external-registry"
     }

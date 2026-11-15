@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/package-release-manual.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/package-release-manual.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/package-release-manual.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/package-release-manual.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "package-release-manual",
       "title": "Package release by hand",
@@ -378,13 +378,13 @@
         "inputs": [
           {
             "name": "package",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/PackageName",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/PackageName",
             "description": "The package being released.",
             "required": true
           },
           {
             "name": "repo",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoFullName",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoFullName",
             "description": "owner/name of the repository the release is made in; the current one when absent.",
             "required": false
           }
@@ -392,14 +392,14 @@
         "outputs": [
           {
             "name": "tag",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "The tag created, `<package>-v<version>`."
           }
         ]
       },
       "requirements": {},
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/npm-kg-distribution"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/npm-kg-distribution"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/package-release-manual.jsonld"
     }

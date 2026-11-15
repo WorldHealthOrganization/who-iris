@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/pin-spdx-license-list.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/pin-spdx-license-list.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/pin-spdx-license-list.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/pin-spdx-license-list.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "pin-spdx-license-list",
       "title": "Snapshot the SPDX License List at its pinned version",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "licenseListCheckout",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/FilesystemPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/FilesystemPath",
             "description": "A copy of github.com/spdx/license-list-data at tag `v<version>`, passed as `--from`. Named for what it is rather than `from`: with the same name it would share `pin-ig-terminology`'s signature and be DERIVED as its substitute, which it is not — an IG clone and a licence list are different inputs (`deriveAlternatives`). Refused unless both files declare the pin's `licenseListVersion`.",
             "required": true
           }
@@ -386,7 +386,7 @@
         "outputs": [
           {
             "name": "snapshot",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "`folio-pinned-terminology/v1`: the version, the source, and every `spdx-license#<id>` / `spdx-exception#<id>` with its name, sorted; `deprecated: true` where the List marks it."
           }
         ]
@@ -398,7 +398,7 @@
         "network": false
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/vocabulary-authority"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/vocabulary-authority"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/pin-spdx-license-list.jsonld"
     }

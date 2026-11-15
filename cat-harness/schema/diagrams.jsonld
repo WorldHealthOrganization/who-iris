@@ -1,16 +1,16 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/schema/diagrams.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/schema/diagrams.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/schema/diagrams",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/schema/diagrams",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Schema",
       "name": "diagrams",
       "title": "diagrams",
       "summary": "Derived UML data class diagrams and sequence diagrams from an ArchiMate model",
       "module": "archimate/schemas/diagrams.ts",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/archimate",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/archimate",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/schema/diagrams"
     }
   ]

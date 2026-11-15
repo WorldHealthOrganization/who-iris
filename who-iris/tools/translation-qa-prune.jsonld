@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/who-iris/tools/translation-qa-prune.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/who-iris/who-iris.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/who-iris/tools/translation-qa-prune.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/who-iris/who-iris.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/who-iris/tools/translation-qa-prune.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/who-iris/tools/translation-qa-prune.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "translation-qa-prune",
       "title": "Prune round-trip rulings of removed strings",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "write",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Flag",
             "description": "Apply the change to test/attestations/translation-qa/. Absent, it is a dry run that prints each dropped ruling and the renumbered spans.",
             "required": false,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "ref",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
             "description": "Whose catalogues decide what was removed. Default origin/main: the state branch serves main and every branch, so a ruling goes only once main no longer holds its string.",
             "required": false,
             "arg": {
@@ -398,7 +398,7 @@
         "outputs": [
           {
             "name": "attestations",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "With --write, the rewritten `test/attestations/translation-qa/<catalogue>.<locale>.attestations.json`, to be pushed to `cat/who-iris/attestations`."
           }
         ]

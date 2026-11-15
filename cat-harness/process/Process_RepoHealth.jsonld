@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_RepoHealth.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_RepoHealth.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_RepoHealth",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_RepoHealth",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Process",
       "name": "Is the repository itself healthy?",
       "summary": "Is the repository itself healthy — what the review previews cost the publish branch, what a clone costs, whether the work plan holds duplicates or unhonoured claims — reported in one tracking issue and never acted on.",
@@ -12,45 +12,45 @@
       "enforcement": "strict",
       "sourcePath": "sdlc/processes/repository-health-watch.bpmn",
       "sourceUrl": "https://github.com/litlfred/cat-harness/blob/main/sdlc/processes/repository-health-watch.bpmn",
-      "depiction": "https://litlfred.github.io/who-iris/assets/img/workflows/repository-health-watch.svg",
+      "depiction": "https://WorldHealthOrganization.github.io/who-iris/assets/img/workflows/repository-health-watch.svg",
       "startNode": [
-        "https://litlfred.github.io/who-iris/cat-harness/process/Process_RepoHealth/node/Start_Sweep"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_RepoHealth/node/Start_Sweep"
       ],
       "nodeCount": 4,
       "flowCount": 3,
       "conformsTo": [
-        "https://litlfred.github.io/who-iris/cat-harness/externalSchema/omg-bpmn-2.0",
-        "https://litlfred.github.io/who-iris/cat-harness/externalSchema/omg-dd-1.0",
-        "https://litlfred.github.io/who-iris/cat-harness/externalSchema/w3c-xsd11-structures"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/externalSchema/omg-bpmn-2.0",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/externalSchema/omg-dd-1.0",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/externalSchema/w3c-xsd11-structures"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/sdlc",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/sdlc",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_RepoHealth"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_RepoHealth#flow/Flow_0",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_RepoHealth#flow/Flow_0",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_RepoHealth",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_RepoHealth/node/Start_Sweep",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_RepoHealth/node/Task_Check",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/sdlc",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_RepoHealth",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_RepoHealth/node/Start_Sweep",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_RepoHealth/node/Task_Check",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/sdlc",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_RepoHealth#flow/Flow_0"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_RepoHealth#flow/Flow_1",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_RepoHealth#flow/Flow_1",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_RepoHealth",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_RepoHealth/node/Task_Check",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_RepoHealth/node/Call_Watch",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/sdlc",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_RepoHealth",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_RepoHealth/node/Task_Check",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_RepoHealth/node/Call_Watch",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/sdlc",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_RepoHealth#flow/Flow_1"
     },
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/process/Process_RepoHealth#flow/Flow_2",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_RepoHealth#flow/Flow_2",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
-      "partOf": "https://litlfred.github.io/who-iris/cat-harness/process/Process_RepoHealth",
-      "from": "https://litlfred.github.io/who-iris/cat-harness/process/Process_RepoHealth/node/Call_Watch",
-      "to": "https://litlfred.github.io/who-iris/cat-harness/process/Process_RepoHealth/node/End_Reported",
-      "inSubgraph": "https://litlfred.github.io/who-iris/cat-harness/directory/sdlc",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_RepoHealth",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_RepoHealth/node/Call_Watch",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/process/Process_RepoHealth/node/End_Reported",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/directory/sdlc",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_RepoHealth#flow/Flow_2"
     }
   ]

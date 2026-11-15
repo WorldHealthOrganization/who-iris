@@ -359,11 +359,11 @@
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/sourceLanguage"
     }
   },
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/publish-gh-pages.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/publish-gh-pages.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/tools/publish-gh-pages.jsonld",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tools/publish-gh-pages.jsonld",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "publish-gh-pages",
       "title": "Publish a built site to gh-pages as a full replace",
@@ -378,7 +378,7 @@
         "inputs": [
           {
             "name": "site",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "The built site to publish (env SITE).",
             "required": true,
             "arg": {
@@ -387,7 +387,7 @@
           },
           {
             "name": "state",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "restore-staging's record file; keep-shared-payloads keeps its directory at `<state>.keep` (env STATE).",
             "required": true,
             "arg": {
@@ -396,7 +396,7 @@
           },
           {
             "name": "commit",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/CommitSha",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/CommitSha",
             "description": "The commit the site was built from, named in the pages commit message (env COMMIT_SHA).",
             "required": true,
             "arg": {
@@ -405,7 +405,7 @@
           },
           {
             "name": "pagesDir",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoPath",
             "description": "A git checkout whose `origin` holds the `gh-pages` branch (env PAGES_DIR).",
             "required": true,
             "arg": {
@@ -416,7 +416,7 @@
         "outputs": [
           {
             "name": "result",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
             "description": "`published on attempt <n>`, or `nothing to publish`; any other exit is a publish that did not happen."
           }
         ]
@@ -430,7 +430,7 @@
         "network": true
       },
       "satisfies": [
-        "https://litlfred.github.io/who-iris/cat-harness/skill/render-kg-to-cdn"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/skill/render-kg-to-cdn"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/tools/publish-gh-pages.jsonld"
     }

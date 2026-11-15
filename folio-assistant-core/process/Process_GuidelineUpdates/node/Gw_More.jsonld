@@ -1,28 +1,28 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_GuidelineUpdates/node/Gw_More.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_GuidelineUpdates/node/Gw_More.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/folio-assistant-core.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_GuidelineUpdates/node/Gw_More",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_GuidelineUpdates/node/Gw_More",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "More layers left to re-pin?",
       "nodeKind": "exclusive",
       "bpmnType": "bpmn:ExclusiveGateway",
-      "partOf": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_GuidelineUpdates",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_GuidelineUpdates",
       "performedBy": "https://litlfred.github.io/folio-assistant/cat-harness/role/merge-steward",
-      "inLane": "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_GuidelineUpdates/lane/Lane_Steward",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_GuidelineUpdates/lane/Lane_Steward",
       "requires": [],
       "touchesWorkPlan": false,
       "relaxable": true,
       "incoming": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_GuidelineUpdates#flow/Flow_15"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_GuidelineUpdates#flow/Flow_15"
       ],
       "outgoing": [
-        "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_GuidelineUpdates#flow/Flow_16",
-        "https://litlfred.github.io/who-iris/folio-assistant-core/process/Process_GuidelineUpdates#flow/Flow_17"
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_GuidelineUpdates#flow/Flow_16",
+        "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/process/Process_GuidelineUpdates#flow/Flow_17"
       ],
-      "inSubgraph": "https://litlfred.github.io/who-iris/folio-assistant-core/directory/collab",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/folio-assistant-core/directory/collab",
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/process/Process_GuidelineUpdates/node/Gw_More"
     }
   ]

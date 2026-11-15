@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/cat-harness/capability/plantuml.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/cat-harness/cat-harness.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/capability/plantuml.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/cat-harness.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/cat-harness/capability/plantuml",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/cat-harness/capability/plantuml",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Capability",
       "localId": "plantuml",
       "name": "PlantUML",
@@ -14,8 +14,8 @@
         "command": "plantuml -version"
       },
       "requiresCapability": [
-        "https://litlfred.github.io/who-iris/cat-harness/capability/java-runtime",
-        "https://litlfred.github.io/who-iris/cat-harness/capability/graphviz"
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/capability/java-runtime",
+        "https://WorldHealthOrganization.github.io/who-iris/cat-harness/capability/graphviz"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/capability/plantuml"
     }

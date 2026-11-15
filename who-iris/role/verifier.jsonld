@@ -1,10 +1,10 @@
 {
-  "@context": "https://litlfred.github.io/who-iris/who-iris/who-iris.context.jsonld",
-  "@id": "https://litlfred.github.io/who-iris/who-iris/role/verifier.jsonld",
-  "partOf": "https://litlfred.github.io/who-iris/who-iris/who-iris.jsonld",
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/who-iris/who-iris.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/who-iris/role/verifier.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/who-iris/who-iris.jsonld",
   "@graph": [
     {
-      "@id": "https://litlfred.github.io/who-iris/who-iris/role/verifier",
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/who-iris/role/verifier",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
       "prefLabel": "IRIS CDN verifier",
       "title": "IRIS CDN verifier",
@@ -17,7 +17,7 @@
         "system"
       ],
       "hasSkill": [
-        "https://litlfred.github.io/who-iris/who-iris/skill/iris-cdn-signing"
+        "https://WorldHealthOrganization.github.io/who-iris/who-iris/skill/iris-cdn-signing"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/role/verifier"
     }
