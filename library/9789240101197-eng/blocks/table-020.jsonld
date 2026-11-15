@@ -15,12 +15,18 @@
   "label": "Table 20",
   "file": "../tables/table-20.csv",
   "headers": [
-    "Potential risks",
-    "Mitigation strategies"
+    "",
+    "MOH",
+    "Regulatory authority",
+    "Central warehouse",
+    "Branch warehouse",
+    "Service delivery point",
+    "Community health worker",
+    "Individuals"
   ],
-  "pageStart": 32,
-  "pageEnd": 32,
-  "derivedFrom": "library/9789240101197-eng/sections/sec-013",
+  "pageStart": 70,
+  "pageEnd": 70,
+  "derivedFrom": "library/9789240101197-eng/sections/sec-035",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/9789240101197-eng",
   "provenance": "ingested"
 }

@@ -13,19 +13,14 @@
   ],
   "kind": "table",
   "label": "Table 16",
-  "title": "Fig 10. Example of outputs from this chapter",
   "file": "../tables/table-16.csv",
   "headers": [
-    "Consistent and timely access to quality medicines and medical products for the population, through seamless supply chain enabled by technologies that provide efficient tools for providers",
-    "",
-    "",
-    "",
-    "",
-    ""
+    "Potential risks",
+    "Mitigation strategies"
   ],
-  "pageStart": 26,
-  "pageEnd": 26,
-  "derivedFrom": "library/9789240101197-eng/sections/sec-009",
+  "pageStart": 51,
+  "pageEnd": 52,
+  "derivedFrom": "library/9789240101197-eng/sections/sec-021",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/9789240101197-eng",
   "provenance": "ingested"
 }

@@ -15,10 +15,7 @@
   "contains": [
     "library/9789240101197-eng/blocks/prose-sec-015",
     "library/9789240101197-eng/blocks/figure-vfig-p033",
-    "library/9789240101197-eng/blocks/figure-vfig-p034",
-    "library/9789240101197-eng/blocks/table-021",
-    "library/9789240101197-eng/blocks/table-022",
-    "library/9789240101197-eng/blocks/table-023"
+    "library/9789240101197-eng/blocks/figure-vfig-p034"
   ],
   "derivedFrom": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/9789240101197-eng",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/9789240101197-eng",

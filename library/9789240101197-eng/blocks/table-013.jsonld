@@ -12,15 +12,18 @@
     "doco:Table"
   ],
   "kind": "table",
-  "label": "Table 13",
+  "label": "Table 2",
+  "title": "Table 2 provides illustrative considerations for each building block to help ensure successful DHSC implementation.",
   "file": "../tables/table-13.csv",
   "headers": [
-    "Potential risks",
-    "Mitigation strategies"
+    "LEADERSHIP AND GOVERNANCE",
+    "",
+    "",
+    ""
   ],
-  "pageStart": 23,
-  "pageEnd": 23,
-  "derivedFrom": "library/9789240101197-eng/sections/sec-006",
+  "pageStart": 45,
+  "pageEnd": 45,
+  "derivedFrom": "library/9789240101197-eng/sections/sec-018",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/9789240101197-eng",
   "provenance": "ingested"
 }

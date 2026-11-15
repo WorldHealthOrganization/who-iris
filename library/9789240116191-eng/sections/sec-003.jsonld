@@ -20,11 +20,8 @@
     "library/9789240116191-eng/blocks/figure-vfig-p014",
     "library/9789240116191-eng/blocks/figure-vfig-p015",
     "library/9789240116191-eng/blocks/figure-vfig-p016",
-    "library/9789240116191-eng/blocks/table-009",
-    "library/9789240116191-eng/blocks/table-010",
-    "library/9789240116191-eng/blocks/table-011",
-    "library/9789240116191-eng/blocks/table-012",
-    "library/9789240116191-eng/blocks/table-013"
+    "library/9789240116191-eng/blocks/table-002",
+    "library/9789240116191-eng/blocks/table-003"
   ],
   "derivedFrom": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/9789240116191-eng",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/9789240116191-eng",

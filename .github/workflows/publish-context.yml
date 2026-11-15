@@ -15,4 +15,4 @@ permissions:
   contents: write
 jobs:
   publish:
-    uses: litlfred/cat-harness-tools/.github/workflows/layer-publish-context.yml@2bf84dfd9f84b29c35b4827b7e830db0e79254ff # index.lock.json
+    uses: litlfred/cat-harness-tools/.github/workflows/layer-publish-context.yml@6cfc8ed0f7826d9e723e206218a16d689673a97f # index.lock.json

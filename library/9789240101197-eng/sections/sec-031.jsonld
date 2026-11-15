@@ -13,8 +13,7 @@
   "pageStart": 65,
   "pageEnd": 66,
   "contains": [
-    "library/9789240101197-eng/blocks/prose-sec-031",
-    "library/9789240101197-eng/blocks/table-041"
+    "library/9789240101197-eng/blocks/prose-sec-031"
   ],
   "derivedFrom": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/9789240101197-eng",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/9789240101197-eng",

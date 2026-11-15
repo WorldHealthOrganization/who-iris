@@ -15,19 +15,12 @@
   "label": "Table 6",
   "file": "../tables/table-6.csv",
   "headers": [
-    "INTRODUCTION STRA",
-    "TEGY ARCHITECTU",
-    "RE",
-    "IMPLEMENTATION",
-    "TRA",
-    "CEABILITY",
-    "COUNTRY",
-    "EXAMPLES",
-    "ANNE"
+    "Potential risks",
+    "Mitigation strategies"
   ],
-  "pageStart": 9,
-  "pageEnd": 9,
-  "derivedFrom": "library/9789240101197-eng/sections/sec-002",
+  "pageStart": 25,
+  "pageEnd": 25,
+  "derivedFrom": "library/9789240101197-eng/sections/sec-008",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/9789240101197-eng",
   "provenance": "ingested"
 }
