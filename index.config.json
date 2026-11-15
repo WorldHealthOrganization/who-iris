@@ -55,7 +55,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness",
-          "ref": "2e959408e5a8167460fb9566933be299a17f0d8d",
+          "ref": "94df89570cf938dfee7b3b8f6d956f911c68af4a",
           "overrides": {
             "cat-harness": {
               "whole": true
@@ -71,8 +71,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-15",
-              "ref": "2e959408e5a8167460fb9566933be299a17f0d8d",
-              "evidence": "Re-pin harnesses to current mains with core aceae193 (freshness rule)"
+              "ref": "94df89570cf938dfee7b3b8f6d956f911c68af4a",
+              "evidence": "owner litlfred 2026-11-15 06:31Z: \"repin+merge all green and ready that is not content for next 12 hts\"; moves cat-harness and tools to main so publish-qa takes tools#2308 (kg-audit sidecars under build/layers/)"
             }
           }
         }
@@ -83,7 +83,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "4a327002b281634e80312ee18af6c501cd47f95b",
+          "ref": "389fda7eb30b0105fd4f94fe5b7bd2cd5ed7b4d3",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -96,8 +96,8 @@
             "consent": {
               "by": "litlfred",
               "on": "2026-11-15",
-              "ref": "4a327002b281634e80312ee18af6c501cd47f95b",
-              "evidence": "Re-pin harnesses to current mains with core aceae193 (freshness rule)"
+              "ref": "389fda7eb30b0105fd4f94fe5b7bd2cd5ed7b4d3",
+              "evidence": "owner litlfred 2026-11-15 06:31Z: \"repin+merge all green and ready that is not content for next 12 hts\"; moves cat-harness and tools to main so publish-qa takes tools#2308 (kg-audit sidecars under build/layers/)"
             }
           }
         }
