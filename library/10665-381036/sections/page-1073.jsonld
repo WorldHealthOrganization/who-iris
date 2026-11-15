@@ -13,7 +13,8 @@
   "pageStart": 1073,
   "pageEnd": 1073,
   "contains": [
-    "library/10665-381036/blocks/prose-page-1073"
+    "library/10665-381036/blocks/prose-page-1073",
+    "library/10665-381036/blocks/table-055"
   ],
   "derivedFrom": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/10665-381036",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/10665-381036",
