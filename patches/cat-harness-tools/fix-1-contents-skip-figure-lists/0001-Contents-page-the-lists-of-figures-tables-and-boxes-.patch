@@ -1,0 +1,126 @@
+From ad13dea787f545f79c569a166f7acd3fb696ba59 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Sun, 15 Nov 2026 06:09:53 +0000
+Subject: [PATCH] Contents page: the lists of figures, tables and boxes are not
+ contents
+
+A contents page often carries, after the chapters, a 'Figures', 'Boxes'
+or 'Tables' list in the same 'title ..... page' form, and every caption
+in it was read as a section. On 10665-75211 (National eHealth Strategy
+Toolkit) 52 of the 71 entries read off its contents pages were captions,
+and each cut a section: 97 sections where the book has 19 chapters and
+annexes plus the 30 an oversized split cuts.
+
+Entries under a list heading (Figures, Tables, Boxes, List of figures,
+in the six UN languages) are skipped until a contents group heading
+(Contents, Chapters, Annexes, Parts, 'Part N ...') opens the contents
+again. Over the 15 PDFs in who-iris uploads/ and 10665-75211, two
+change, both as intended: 10665-75211 71 -> 19 entries (pdf-structure:
+19 contents entries, 49 sections, mean confidence 0.947) and
+9789241549226-eng 46 -> 33 (its 'Table N.' captions).
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR
+---
+ scripts/_pdf_headings.py             | 29 ++++++++++++++++++++++++++++
+ scripts/tests/pdf-toc-layout.test.py | 28 +++++++++++++++++++++++++++
+ 2 files changed, 57 insertions(+)
+
+diff --git a/scripts/_pdf_headings.py b/scripts/_pdf_headings.py
+index 050d2f6d..b765d6da 100644
+--- a/scripts/_pdf_headings.py
++++ b/scripts/_pdf_headings.py
+@@ -576,6 +576,26 @@ def tree_levels(heads: list[Heading]) -> list[Heading]:
+ RE_LEADER = re.compile(r"^(?P<title>.*?\S)\s*(?:[.…·_]\s*){3,}\s*(?P<page>\d{1,4}|[ivxlc]{1,6})\s*$", re.I)
+ RE_TRAIL = re.compile(r"^(?P<title>.*?[^\d\s.])\s{1,}(?P<page>\d{1,4}|[ivxl]{1,5})\s*$")
+ RE_CONTENTS_TITLE = re.compile(r"^\s*(?:table of )?contents\s*$|^\s*sommaire\s*$|^\s*índice\s*$", re.I)
++# The heading of a LIST that a contents page may carry beside the contents
++# proper: figures, tables, boxes. Its entries are captions, not sections. The
++# National eHealth Strategy Toolkit (10665-75211) prints "Figures", "Boxes" and
++# "Tables" on the pages after its chapters, and 48 of the 70 entries its
++# inferred contents gave were their captions.
++RE_LIST_TITLE = re.compile(
++    r"^\s*(?:(?:list|index) of\s+)?(?:figures?|tables?|boxes|illustrations|charts|maps|exhibits|graphs)\s*$"
++    r"|^\s*liste des (?:figures|tableaux|encadrés|illustrations)\s*$|^\s*(?:tableaux|encadrés)\s*$"
++    r"|^\s*(?:lista|índice) de (?:figuras|cuadros|tablas|recuadros|ilustraciones)\s*$|^\s*(?:figuras|cuadros|tablas|recuadros)\s*$"
++    r"|^\s*(?:список\s+)?(?:рисунков|таблиц|рисунки|таблицы|вставок)\s*$"
++    r"|^\s*(?:قائمة\s+)?(?:الأشكال|الجداول|الإطارات)\s*$|^\s*(?:图|表|插图|图表|方框)(?:目录|清单)?\s*$",
++    re.I,
++)
++# A heading that opens a run of contents entries again after such a list.
++RE_CONTENTS_GROUP = re.compile(
++    r"^\s*(?:(?:table of )?contents|sommaire|índice|содержание|المحتويات|目录|chapters?|chapitres?|cap[ií]tulos|главы"
++    r"|annex(?:es)?|annexes|anexos|приложения|appendi(?:x|ces)|parts?|sections?)\s*$"
++    r"|^\s*(?:part|partie|parte|часть)\s+[\w.]+",
++    re.I,
++)
+ RE_MONTH_YEAR = re.compile(
+     r"\b(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|"
+     r"jul(?:y)?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)"
+@@ -666,6 +686,7 @@ def contents_headings(lines: list[Line], with_labels: bool = False) -> list:
+     n_pages = max(by_page)
+     furniture = furniture_keys(lines, n_pages)
+     raw: list[tuple[str, str, float, Line]] = []    # title, label, x0, row
++    in_list = False         # under a "Figures" / "Tables" / "Boxes" heading
+     for p in pages:
+         pending: Line | None = None
+         page_lines = [
+@@ -673,9 +694,17 @@ def contents_headings(lines: list[Line], with_labels: bool = False) -> list:
+             if not (l.y1 < 0.06 * l.page_height or l.y0 > 0.94 * l.page_height)
+         ]
+         for r in _rows(page_lines):
++            text = r.text.strip()
++            if RE_LIST_TITLE.match(text):
++                in_list, pending = True, None
++                continue
++            if RE_CONTENTS_GROUP.match(text) and not _parse_entry(text):
++                in_list = False
+             if RE_CONTENTS_TITLE.match(r.text) or _furniture_key(r) in furniture:
+                 continue
+             parsed = _parse_entry(r.text)
++            if parsed and in_list:
++                continue        # a caption of the list, not a section
+             if parsed:
+                 title, label = parsed
+                 x0 = r.x0
+diff --git a/scripts/tests/pdf-toc-layout.test.py b/scripts/tests/pdf-toc-layout.test.py
+index 6d472dae..1667b4fe 100644
+--- a/scripts/tests/pdf-toc-layout.test.py
++++ b/scripts/tests/pdf-toc-layout.test.py
+@@ -511,5 +511,33 @@ def main() -> int:
+     return 1 if failed else 0
+ 
+ 
++def test_lists_of_figures_tables_and_boxes_are_not_contents():
++    # 10665-75211 (re-ingest pilot, 2026-11-15): its Part 1 contents pages
++    # carry "Chapters", "Annexes", then "Figures", "Boxes" and "Tables", and
++    # their captions were read as sections. Only the chapters and annexes are.
++    contents = [ln(2, 40, "Contents", size=14, bold=True), ln(2, 60, "Chapters", bold=True)]
++    entries = [("1. National context for eHealth", 1), ("2. Framework for a national eHealth vision", 4)]
++    for i, (t, pg) in enumerate(entries):
++        contents.append(ln(2, 80 + 20 * i, f"{t} {'.' * 20} {pg}"))
++    contents.append(ln(2, 140, "Annexes", bold=True))
++    contents.append(ln(2, 160, f"A. Examples of eHealth {'.' * 20} 6"))
++    contents.append(ln(2, 200, "Figures", bold=True))
++    for i, (t, pg) in enumerate([("1. National context for eHealth development", 2), ("2. eHealth components", 5)]):
++        contents.append(ln(2, 220 + 20 * i, f"{t} {'.' * 20} {pg}"))
++    contents.append(ln(2, 280, "Boxes", bold=True))
++    contents.append(ln(2, 300, f"1. Examples of eHealth outcomes {'.' * 20} 3"))
++    page3 = [ln(3, 60, "Tables", bold=True)] + [
++        ln(3, 80 + 20 * i, f"{t} {'.' * 20} {pg}")
++        for i, (t, pg) in enumerate([("1. Examples of the impact of eHealth", 2), ("2. Context and focus", 5), ("3. Role of components", 5),
++                                     ("4. Governance functions", 6), ("5. Stakeholder roles", 6)])]
++    lines = [ln(1, 100, "A Toolkit", size=20)] + contents + page3
++    for t, pg in entries + [("A. Examples of eHealth", 6)]:
++        lines += [ln(pg + 3, 80, t, size=14, bold=True)] + body(pg + 3, 120, 3)
++    titles = [h.title for h in H.contents_headings(lines)]
++    assert titles == ["National context for eHealth", "Framework for a national eHealth vision", "Examples of eHealth"], titles
++    assert H.RE_LIST_TITLE.match("List of tables") and H.RE_LIST_TITLE.match("Liste des figures")
++    assert not H.RE_LIST_TITLE.match("Tables and figures in the annex 12")
++
++
+ if __name__ == "__main__":
+     sys.exit(main())
+-- 
+2.43.0
+

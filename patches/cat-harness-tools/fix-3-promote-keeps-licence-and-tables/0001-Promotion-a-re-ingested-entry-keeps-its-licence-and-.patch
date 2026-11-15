@@ -1,0 +1,143 @@
+From 86848264ab2903feaefd607261dd495429c177dc Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Sun, 15 Nov 2026 06:11:04 +0000
+Subject: [PATCH] Promotion: a re-ingested entry keeps its licence and its kept
+ table transcription
+
+The promotion builds an entry's JSON-LD nodes from the staged tree. On
+a re-ingest that tree lacks what no rung writes: the entry's
+licence.json, and a table transcription the table arm kept rather than
+draft over. So a re-ingested entry's manifest lost its licence, and its
+table blocks named drafts it did not keep (re-ingest pilot,
+2026-11-15: two handbooks without their CC BY-NC-SA licence; 10665-75211
+with 81 draft-table blocks over its 27 transcribed tables).
+
+carryAuthored copies them from the filed entry into staging when staging
+lacks them, before the nodes are built; a staged file is never replaced.
+Summaries and errata stay out: they name blocks, and the gate would judge
+them against a re-split entry's new ones.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR
+---
+ scripts/ingest-document.ts                    | 30 +++++++++++++++++++
+ .../features/reingest-extraction.feature      |  5 ++++
+ .../tests/library/reingest-extraction.test.ts | 27 +++++++++++++++++
+ 3 files changed, 62 insertions(+)
+
+diff --git a/scripts/ingest-document.ts b/scripts/ingest-document.ts
+index ee544684..b6a23a35 100644
+--- a/scripts/ingest-document.ts
++++ b/scripts/ingest-document.ts
+@@ -68,6 +68,7 @@ import { readDeclaration } from "../schemas/kg/cat-harness.ts";
+ import { resolveWorkingInstanceRoot } from "./lib/roots.ts";
+ import { COVER_FILENAME } from "./library-graph.ts";
+ import { runEntryArms } from "./entry-extraction.ts";
++import { TABULAR_CSVW_FILENAME, TABULAR_TABLES_DIR } from "../schemas/library/tabular-csvw.ts";
+ import { optionalPipelinePlugin } from "../pipeline/pipeline-plugins.ts";
+ 
+ /**
+@@ -1303,6 +1304,31 @@ export function refreshMeta(pdf: string, libRoot = libraryRoot()): string {
+   return `${slug}: ${new TextDecoder().decode(r.stdout).trim()}`;
+ }
+ 
++/**
++ * The files of a filed entry that no ingest rung writes and the staged tree
++ * lacks: its licence, and a table transcription the table arm kept rather
++ * than draft over. Copied into `staging`, so the promotion's nodes carry
++ * them: built from staging alone, a re-ingested entry's manifest lost its
++ * licence, and its table blocks named drafts it did not keep (re-ingest
++ * pilot, 2026-11-15). Summaries and errata are not carried: they name
++ * blocks, and the gate would judge them against a re-split entry's new ones.
++ * Returns what was copied.
++ */
++export function carryAuthored(filed: string, staging: string): string[] {
++  const out: string[] = [];
++  if (!existsSync(filed)) return out;
++  if (existsSync(join(filed, LICENCE_FILENAME)) && !existsSync(join(staging, LICENCE_FILENAME))) {
++    cpSync(join(filed, LICENCE_FILENAME), join(staging, LICENCE_FILENAME));
++    out.push(LICENCE_FILENAME);
++  }
++  if (existsSync(join(filed, TABULAR_CSVW_FILENAME)) && !existsSync(join(staging, TABULAR_CSVW_FILENAME))) {
++    cpSync(join(filed, TABULAR_CSVW_FILENAME), join(staging, TABULAR_CSVW_FILENAME));
++    if (existsSync(join(filed, TABULAR_TABLES_DIR))) cpSync(join(filed, TABULAR_TABLES_DIR), join(staging, TABULAR_TABLES_DIR), { recursive: true });
++    out.push(TABULAR_CSVW_FILENAME);
++  }
++  return out;
++}
++
+ /**
+  * `--refresh-title`: re-resolve an existing entry's title from its PDF (bean
+  * `w6fu`, owner's ruling 2026-10-02 on #1838).
+@@ -1634,6 +1660,10 @@ if (import.meta.main) {
+   // could sit in a SIBLING layer the path gained a `../` and the same line
+   // started escaping the repository altogether.
+   const out = join(resolve(INSTANCE_ROOT, destination), slug);
++  // A re-ingest: what the entry as filed holds that no rung writes (its
++  // licence, a table transcription the table arm kept) comes into the staged
++  // tree, so the nodes built from it below describe them.
++  for (const f of carryAuthored(out, staging)) console.log(`  · kept from the filed entry: ${f}`);
+   // The entry's JSON-LD nodes, minted for where it is GOING (bean `apui`).
+   //
+   // The arms wrote a manifest in staging, and staging belongs to whichever
+diff --git a/scripts/tests/library/features/reingest-extraction.feature b/scripts/tests/library/features/reingest-extraction.feature
+index 99c7a6af..a33e7d49 100644
+--- a/scripts/tests/library/features/reingest-extraction.feature
++++ b/scripts/tests/library/features/reingest-extraction.feature
+@@ -111,3 +111,8 @@ Feature: Re-ingestion extraction coverage
+     Given the library kind's family folio-library-extraction/v1 and its validator node
+     When a record is judged by the node kind the validator names
+     Then a record the writer's schema accepts passes, and one with an unknown key or a found step with no count fails
++
++  @test:scripts/tests/library/reingest-extraction.test.ts::promotion_keeps_what_the_filed_entry_holds_(re-ingest_pilot,_2026-11-15)::the_licence_and_a_kept_table_transcription_come_into_staging;_staging's_own_files_win
++  Scenario: A re-ingest keeps the filed entry's licence and table transcription in its nodes
++    When an entry is promoted over one that holds a licence and a table transcription the staged tree lacks
++    Then both are copied into staging before its nodes are built, a staged file is never replaced, and summaries and errata stay out
+diff --git a/scripts/tests/library/reingest-extraction.test.ts b/scripts/tests/library/reingest-extraction.test.ts
+index 852a9c15..2306da9d 100644
+--- a/scripts/tests/library/reingest-extraction.test.ts
++++ b/scripts/tests/library/reingest-extraction.test.ts
+@@ -24,6 +24,7 @@ import { ENTRY_EXTRACTION_SCHEMA_ID, EntryExtractionKind, ExtractionStepSchema }
+ import { advisoryLine, checkEntry, sidecarDocument } from "../../check-l1-complete.ts";
+ import { csvwFromPdfTables, captionLabel, isGrid, isProseCut, runTableArm, toCsv, wordSplitShare } from "../../pdf-tables-csvw.ts";
+ import { TabularCsvwSchema } from "../../../schemas/library/tabular-csvw.ts";
++import { carryAuthored } from "../../ingest-document.ts";
+ import { readEntryTables } from "../../lib/library-document.ts";
+ import { OPTIONAL_PIPELINE_PLUGIN_KINDS, PIPELINE_PLUGIN_KINDS } from "../../../pipeline/pipeline-plugins.ts";
+ 
+@@ -191,6 +192,32 @@ describe("counts that say what the source holds (re-ingest pilot, 2026-11-14)",
+   });
+ });
+ 
++describe("promotion keeps what the filed entry holds (re-ingest pilot, 2026-11-15)", () => {
++  test("the licence and a kept table transcription come into staging; staging's own files win", () => {
++    const root = tmp("carry-");
++    const filed = join(root, "lib", "e1");
++    const staging = join(root, "stage", "e1");
++    put(filed, "licence.json", { status: "stated", id: "CC-BY-NC-SA-3.0-IGO", basis: "imprint page" });
++    put(filed, "tabular.csvw.json", { tables: [{ url: "tables/table-1.csv" }] });
++    mkdirSync(join(filed, "tables"), { recursive: true });
++    writeFileSync(join(filed, "tables", "table-1.csv"), "a,b\n1,2\n");
++    put(filed, "summaries.json", { summaries: [] });
++    mkdirSync(staging, { recursive: true });
++    expect(carryAuthored(filed, staging)).toEqual(["licence.json", "tabular.csvw.json"]);
++    expect(JSON.parse(readFileSync(join(staging, "licence.json"), "utf-8")).id).toBe("CC-BY-NC-SA-3.0-IGO");
++    expect(existsSync(join(staging, "tables", "table-1.csv"))).toBe(true);
++    // Block-naming sidecars stay out: the gate would judge them against a re-split entry's blocks.
++    expect(existsSync(join(staging, "summaries.json"))).toBe(false);
++    // A staged file is never replaced, and a first ingest has nothing to carry.
++    put(staging, "licence.json", { status: "unknown" });
++    rmSync(join(staging, "tabular.csvw.json"));
++    put(staging, "tabular.csvw.json", { tables: [] });
++    expect(carryAuthored(filed, staging)).toEqual([]);
++    expect(JSON.parse(readFileSync(join(staging, "licence.json"), "utf-8")).status).toBe("unknown");
++    expect(carryAuthored(join(root, "lib", "absent"), staging)).toEqual([]);
++  });
++});
++
+ describe("L1 completeness reports extraction as advice, never as a failure", () => {
+   test("a paged entry carries one advisory per kind and the requirements and verdict are unchanged", () => {
+     const dir = join(tmp("adv-"), "e1");
+-- 
+2.43.0
+

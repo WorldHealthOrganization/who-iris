@@ -1,0 +1,690 @@
+From f5af7de7f8f44a1aa1b2de8d29ebdff1f34f5cca Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Sun, 15 Nov 2026 06:15:54 +0000
+Subject: [PATCH] Library entry section map: where a re-split entry's old pages
+ and sentences are now
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Owner, 2026-11-15 (card: 'Keep page→section map'). A page-split entry
+re-split by its headings renames its sections and their prose blocks, so
+a citation made against the old split (library/<slug>/blocks/
+prose-page-012, or an L1 coverage location p12:s3) named nothing.
+
+- schemas/library/entry-section-map.ts: section-map.json
+  (folio-library-section-map/v1), a derived file beside extraction.json,
+  registered as a library node family with its validator, and declared
+  as an entry sidecar for check:l1-complete.
+- scripts/section-map.ts: buildSectionMap maps each old page-NNN to the
+  new sections covering that PDF page (and their prose blocks), and each
+  old pN:sM to the new (section, sentence) whose text is the same once
+  normalised, or, marked 'part', holds it or is held by it (a running
+  head before a page's first sentence, a sentence a page break cut).
+  Nothing is placed by position; unmatched counts the rest. Sentences
+  are split as folio-assistant-core's l1-coverage splits them (a copy:
+  this layer may not import that one; core should import this).
+  resolveCitation answers pN:sM, page-NNN, pN or an old prose-page block.
+  A CLI builds the map from the filed entry or from a git ref, and
+  resolves a citation.
+- ingest --promote writes the map into the staged entry when the filed
+  entry is a page split and the staged one is not.
+
+On who-iris's two handbooks re-split by the pilot, read from the old
+page files at 8d000b963^1: 409 of 464 and 749 of 872 old sentences
+resolve (56 and 67 of them as part matches); every old page resolves to
+its sections.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR
+---
+ libraries/zod.library.json                    |   1 +
+ schemas/kg/graph-typology-registry.ts         |   4 +
+ schemas/library/entry-section-map.ts          | 106 +++++++
+ scripts/check-l1-complete.ts                  |   4 +
+ scripts/ingest-document.ts                    |   5 +
+ scripts/section-map.ts                        | 280 ++++++++++++++++++
+ .../library/features/section-map.feature      |  32 ++
+ scripts/tests/library/section-map.test.ts     | 102 +++++++
+ validators/library-section-map.json           |   9 +
+ 9 files changed, 543 insertions(+)
+ create mode 100644 schemas/library/entry-section-map.ts
+ create mode 100644 scripts/section-map.ts
+ create mode 100644 scripts/tests/library/features/section-map.feature
+ create mode 100644 scripts/tests/library/section-map.test.ts
+ create mode 100644 validators/library-section-map.json
+
+diff --git a/libraries/zod.library.json b/libraries/zod.library.json
+index 3f0ce68c..ffeb477b 100644
+--- a/libraries/zod.library.json
++++ b/libraries/zod.library.json
+@@ -96,6 +96,7 @@
+     "schemas/library/archive-contents.ts",
+     "schemas/library/code-list.ts",
+     "schemas/library/entry-extraction.ts",
++    "schemas/library/entry-section-map.ts",
+     "schemas/library/glossary-ledger.ts",
+     "schemas/library/ingest-candidates.ts",
+     "schemas/library/intake.ts",
+diff --git a/schemas/kg/graph-typology-registry.ts b/schemas/kg/graph-typology-registry.ts
+index 31dbd2a8..0c806e6c 100644
+--- a/schemas/kg/graph-typology-registry.ts
++++ b/schemas/kg/graph-typology-registry.ts
+@@ -2417,6 +2417,10 @@ export const BASE_GRAPH_TYPOLOGIES: Readonly<Record<string, GraphTypologyDef>> =
+       // (`extraction.json`, schemas/library/entry-extraction.ts), written by
+       // every re-derive since the reingest record (issue #2186).
+       "folio-library-extraction/v1": {},
++      // Where a re-split entry's old page sections and page sentences are now
++      // (`section-map.json`, schemas/library/entry-section-map.ts), written at
++      // promotion so old citations still resolve (owner, 2026-11-15).
++      "folio-library-section-map/v1": {},
+       // A recorded meeting or talk, and one transcript per language
+       // (bean `folio-assistant-1r0p`, `schemas/library/recording.ts`).
+       "folio-recording/v1": {},
+diff --git a/schemas/library/entry-section-map.ts b/schemas/library/entry-section-map.ts
+new file mode 100644
+index 00000000..27da5b03
+--- /dev/null
++++ b/schemas/library/entry-section-map.ts
+@@ -0,0 +1,106 @@
++/**
++ * `<library>/<slug>/section-map.json` — where an entry's OLD page sections are
++ * now, after a re-ingest re-split it.
++ *
++ * ## Why
++ *
++ * An entry split one section per page (`page-012`, "Page 12") is re-split by
++ * its headings when the structure rung can trust its contents. Its sections,
++ * and the prose blocks named after them, are renamed. A citation made against
++ * the old split (a folio quoting `library/<slug>/blocks/prose-page-012`, or an
++ * L1 coverage location `p12:s3`, page 12 sentence 3) would then name nothing.
++ * Owner, 2026-11-15 (card: "Keep page→section map"): the ingest writes this
++ * map and readers resolve old citations through it.
++ *
++ * ## What it holds
++ *
++ * - `pages`: for each old page section, the new sections that cover that PDF
++ *   page (by their `page_start`..`page_end`) and their prose blocks. A page a
++ *   section boundary falls on maps to both sections.
++ * - `sentences`: for each old sentence `pN:sM`, numbered as
++ *   `l1-coverage`'s `sentencesOf` numbers them, the new `(section, sentence)`
++ *   whose text is the same sentence once normalised, or, marked `part`,
++ *   whose text holds it or is held by it. Only where the text matches: no
++ *   sentence is placed by position, and `unmatched` counts those not found.
++ *
++ * Derived, never authored: rebuilt by `scripts/section-map.ts` from the old
++ * split (the filed entry at promotion, or a git ref) and the new one.
++ *
++ * @graphNode schema
++ * @module schemas/library/entry-section-map
++ */
++import { z } from "zod";
++
++import { nodeKind } from "../kg/node-kind.js";
++
++export const SECTION_MAP_SCHEMA_ID = "folio-library-section-map/v1" as const;
++
++/** The file a re-split entry carries, beside `extraction.json`. */
++export const SECTION_MAP_FILE = "section-map.json";
++
++/** An old page section's id, `page-012`. */
++export const OLD_PAGE_ID = /^page-\d{3,}$/;
++/** An L1 coverage location, `p12:s3` (page 12, sentence 3). */
++export const SENTENCE_LOCATION = /^p(\d+):s(\d+)$/;
++
++export const SectionMapPageSchema = z
++  .object({
++    /** The PDF page, 1-based. */
++    page: z.number().int().positive(),
++    /** The new sections covering the page, in reading order. Empty when none does (a page no section holds). */
++    sections: z.array(z.string().min(1)),
++    /** Their prose blocks, `library/<slug>/blocks/prose-…`, in the same order. */
++    blocks: z.array(z.string().min(1)),
++  })
++  .strict();
++
++export const SectionMapSentenceSchema = z
++  .object({
++    section: z.string().min(1),
++    /** 1-based, as `sentencesOf` numbers the section's text. */
++    sentence: z.number().int().positive(),
++    /**
++     * Absent: the same sentence. `part`: one holds the other, at least 20
++     * characters of it: an old page's first sentence with the running head
++     * and folio printed before it, or a sentence the page break cut, of
++     * which each old page held a piece.
++     */
++    match: z.literal("part").optional(),
++  })
++  .strict();
++
++export const SectionMapSchema = z
++  .object({
++    $schema: z.literal(SECTION_MAP_SCHEMA_ID),
++    doc_id: z.string().min(1),
++    /** ISO date the map was built. */
++    at: z.string().regex(/^\d{4}-\d{2}-\d{2}/),
++    /** The split the old citations were made against. */
++    from: z
++      .object({
++        granularity: z.literal("page"),
++        /** Old page sections read. */
++        sections: z.number().int().nonnegative(),
++        /** The git ref the old split was read at, when it was not the filed entry. */
++        ref: z.string().min(1).optional(),
++      })
++      .strict(),
++    /** Keyed by the old section id (`page-012`). */
++    pages: z.record(z.string().regex(OLD_PAGE_ID), SectionMapPageSchema),
++    /** Keyed by the old location (`p12:s3`). */
++    sentences: z.record(z.string().regex(SENTENCE_LOCATION), SectionMapSentenceSchema),
++    /** Old sentences with no matching new sentence. */
++    unmatched: z.number().int().nonnegative(),
++  })
++  .strict();
++export type SectionMap = z.infer<typeof SectionMapSchema>;
++
++/**
++ * `folio-library-section-map/v1` as a node kind, the validator of the library
++ * kind's family of that name (`validators/library-section-map.json`).
++ */
++export const SectionMapKind = nodeKind(SECTION_MAP_SCHEMA_ID, [], SectionMapSchema.shape, {
++  strict: true,
++  term: "Library section map",
++  summary: "Where a re-split library entry's old page sections and page sentences are now: each old page-NNN to the new sections covering that PDF page, and each old pN:sM to the new section and sentence with the same text.",
++});
+diff --git a/scripts/check-l1-complete.ts b/scripts/check-l1-complete.ts
+index db70d55e..b14bf05b 100644
+--- a/scripts/check-l1-complete.ts
++++ b/scripts/check-l1-complete.ts
+@@ -82,6 +82,7 @@ import { DocumentErrataSchema, ERRATA_FILE } from "../schemas/content/document-e
+ import { DocumentFootnotesSchema, FOOTNOTES_FILE } from "../schemas/content/document-footnotes.ts";
+ import { KEYWORDS_FILE } from "../schemas/library/library-keywords.ts";
+ import { ENTRY_EXTRACTION_FILE } from "../schemas/library/entry-extraction.ts";
++import { SECTION_MAP_FILE } from "../schemas/library/entry-section-map.ts";
+ import { extractionAdvisories, type ExtractionAdvisory } from "./entry-extraction.ts";
+ import { entryDirs, entryItems, sidecarDefects, summaryLangs, tally } from "./summaries.ts";
+ import { againstOrUsage, buildQaResult, qaResultPath, qaResultState, writeQaResult, type QaResultState } from "./qa-results.ts";
+@@ -288,6 +289,9 @@ export const ENTRY_SIDECARS: readonly string[] = [
+   // Which extractors ran over the entry and what each found, per kind
+   // (`scripts/entry-extraction.ts`, the last ingest arm). Advisory only.
+   ENTRY_EXTRACTION_FILE,
++  // Where a re-split entry's old page sections and sentences are now
++  // (`scripts/section-map.ts`, written at promotion). Derived.
++  SECTION_MAP_FILE,
+ ];
+ 
+ /**
+diff --git a/scripts/ingest-document.ts b/scripts/ingest-document.ts
+index c9910fcb..53fb602f 100644
+--- a/scripts/ingest-document.ts
++++ b/scripts/ingest-document.ts
+@@ -69,6 +69,7 @@ import { resolveWorkingInstanceRoot } from "./lib/roots.ts";
+ import { COVER_FILENAME } from "./library-graph.ts";
+ import { observeExtraction, recordExtraction, runEntryArms } from "./entry-extraction.ts";
+ import { TABULAR_CSVW_FILENAME, TABULAR_TABLES_DIR } from "../schemas/library/tabular-csvw.ts";
++import { writeMapAtPromotion } from "./section-map.ts";
+ import { optionalPipelinePlugin } from "../pipeline/pipeline-plugins.ts";
+ 
+ /**
+@@ -1677,6 +1678,10 @@ if (import.meta.main) {
+   // licence, a table transcription the table arm kept) comes into the staged
+   // tree, so the nodes built from it below describe them.
+   for (const f of carryAuthored(out, staging)) console.log(`  · kept from the filed entry: ${f}`);
++  // A page-split entry re-split by its headings: where its old page sections
++  // and sentences are now, so old citations still resolve (owner, 2026-11-15).
++  const remap = writeMapAtPromotion(out, staging, slug);
++  if (remap) console.log(`  · section-map.json: ${Object.keys(remap.pages).length} old page(s) mapped, ${Object.keys(remap.sentences).length} sentence(s) matched, ${remap.unmatched} not`);
+   // The entry's JSON-LD nodes, minted for where it is GOING (bean `apui`).
+   //
+   // The arms wrote a manifest in staging, and staging belongs to whichever
+diff --git a/scripts/section-map.ts b/scripts/section-map.ts
+new file mode 100644
+index 00000000..9ea3f850
+--- /dev/null
++++ b/scripts/section-map.ts
+@@ -0,0 +1,280 @@
++#!/usr/bin/env bun
++/**
++ * The page → section map of a re-split library entry
++ * (`schemas/library/entry-section-map.ts`): build it, write it, resolve a
++ * citation through it.
++ *
++ * ```sh
++ * # from the filed entry's old split (what `cat ingest --promote` does before it files the new one)
++ * bun run cat-harness-tools/scripts/section-map.ts --entry <old entry dir> --new <staged entry dir>
++ * # from an old split held only in git history, into the entry as it is now
++ * bun run cat-harness-tools/scripts/section-map.ts --entry library/<slug> --from-ref <git ref>
++ * # resolve an old citation
++ * bun run cat-harness-tools/scripts/section-map.ts --entry library/<slug> --resolve p12:s3
++ * ```
++ *
++ * A citation is resolved as precisely as the map allows: a sentence location
++ * to its new section and sentence when the text matched, else to the sections
++ * covering its page; a page section or its prose block to the sections
++ * covering that page. An id the map does not know resolves to nothing, never
++ * to a guess.
++ *
++ * @module scripts/section-map
++ */
++import { execFileSync } from "node:child_process";
++import { existsSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
++import { basename, join, relative, resolve } from "node:path";
++
++import {
++  OLD_PAGE_ID,
++  SECTION_MAP_FILE,
++  SECTION_MAP_SCHEMA_ID,
++  SENTENCE_LOCATION,
++  SectionMapSchema,
++  type SectionMap,
++} from "../schemas/library/entry-section-map.ts";
++import { STRUCTURE_FILENAME } from "../schemas/content/document-structure.ts";
++
++/** One section of a split, with the text its Markdown file holds. */
++export interface SplitSection {
++  id: string;
++  pageStart: number | null;
++  pageEnd: number | null;
++  text: string;
++}
++
++/**
++ * Sentences of a text, as `l1-coverage` (folio-assistant-core
++ * `scripts/l1-coverage.ts`) numbers them in its `pN:sM` locations. A copy,
++ * because this layer may not import that one; the two must split alike, or a
++ * location means a different sentence here. Core should import this one.
++ */
++export function sentencesOf(text: string): string[] {
++  const flat = text.replace(/-\n(?=[a-z])/g, "").replace(/\s+/g, " ").trim();
++  if (!flat) return [];
++  return flat
++    .split(/(?<=[.!?])\s+(?=[A-Z0-9(“"'‘])/)
++    .map((s) => s.trim())
++    .filter((s) => s.length > 0);
++}
++
++/** A sentence compared as `l1-coverage`'s `normalise` compares it (same copy rule as {@link sentencesOf}). */
++export function normalise(s: string): string {
++  return s
++    .toLowerCase()
++    .replace(/[‘’‛]/g, "'")
++    .replace(/[“”‟]/g, '"')
++    .replace(/[‐-―−]/g, "-")
++    .replace(/-\s*\n\s*/g, "")
++    .replace(/[•▪◦●]/g, " ")
++    .replace(/\s*-\s*/g, "-")
++    .replace(/\s*\/\s*/g, "/")
++    .replace(/(\w)-(?=\w)/g, "$1")
++    .replace(/\s+/g, " ")
++    .replace(/\s*([.;:,])\s*$/, "")
++    .trim();
++}
++
++/** The shortest text a part match may rest on: shorter, a heading or a stray word would match anywhere. */
++const PART_MIN = 20;
++/** One normalised sentence holds the other, which is at least {@link PART_MIN} characters long. */
++const holdsPart = (a: string, b: string): boolean =>
++  (b.length >= PART_MIN && a.includes(b)) || (a.length >= PART_MIN && b.includes(a));
++
++/** A section file's body: everything after its front matter. */
++export function bodyOf(md: string): string {
++  if (!md.startsWith("---")) return md;
++  const end = md.indexOf("\n---", 3);
++  return end < 0 ? md : md.slice(end + 4).replace(/^\n/, "");
++}
++
++const today = () => new Date().toISOString().slice(0, 10);
++
++/** A new section's prose block, as `gen-library-jsonld` names it (`prose-` + the stable part of the id). */
++export function proseBlock(slug: string, sectionId: string): string {
++  const key = sectionId.match(/^(sec-\d+)/)?.[1] ?? sectionId;
++  return `library/${slug}/blocks/prose-${key}`;
++}
++
++/** The page number of an old page section id, `page-012` → 12. */
++const pageOf = (id: string): number | undefined => (OLD_PAGE_ID.test(id) ? Number(id.slice(5)) : undefined);
++
++/**
++ * The map from an old page split to a new split. Pure. `old` holds the old
++ * page sections (any other old section is ignored: only a page split is
++ * re-anchored); `fresh` the new sections with their page ranges and text.
++ */
++export function buildSectionMap(
++  slug: string,
++  docId: string,
++  old: readonly SplitSection[],
++  fresh: readonly SplitSection[],
++  opts: { at?: string; ref?: string } = {},
++): SectionMap {
++  const pages: SectionMap["pages"] = {};
++  const sentences: SectionMap["sentences"] = {};
++  let unmatched = 0;
++  // The new sentences, normalised, per section: each section's list once.
++  const freshSentences = new Map(fresh.map((s) => [s.id, sentencesOf(s.text).map(normalise)]));
++  const oldPages = old.filter((s) => pageOf(s.id) !== undefined).sort((a, b) => pageOf(a.id)! - pageOf(b.id)!);
++  for (const o of oldPages) {
++    const page = pageOf(o.id)!;
++    const covering = fresh.filter((s) => s.pageStart != null && s.pageEnd != null && s.pageStart <= page && page <= s.pageEnd);
++    pages[o.id] = { page, sections: covering.map((s) => s.id), blocks: covering.map((s) => proseBlock(slug, s.id)) };
++    // Each old sentence to the first covering section that holds the same
++    // text, the earliest unused occurrence there, so a repeated sentence on
++    // one page maps to successive positions rather than all to the first.
++    const used = new Map<string, Set<number>>();
++    sentencesOf(o.text).forEach((text, i) => {
++      const n = normalise(text);
++      // Exact first, in every covering section; then a part match.
++      for (const part of [false, true]) {
++        for (const s of covering) {
++          const list = freshSentences.get(s.id) ?? [];
++          const taken = used.get(s.id) ?? new Set<number>();
++          const at = list.findIndex((x, j) => !taken.has(j) && (part ? holdsPart(n, x) : x === n));
++          if (at >= 0) {
++            taken.add(at);
++            used.set(s.id, taken);
++            sentences[`p${page}:s${i + 1}`] = { section: s.id, sentence: at + 1, ...(part ? { match: "part" as const } : {}) };
++            return;
++          }
++        }
++      }
++      unmatched++;
++    });
++  }
++  return SectionMapSchema.parse({
++    $schema: SECTION_MAP_SCHEMA_ID,
++    doc_id: docId,
++    at: opts.at ?? today(),
++    from: { granularity: "page", sections: oldPages.length, ...(opts.ref ? { ref: opts.ref } : {}) },
++    pages,
++    sentences,
++    unmatched,
++  });
++}
++
++/** What an old citation names now. */
++export type Resolved =
++  | { kind: "sentence"; section: string; block: string; sentence: number; match?: "part" }
++  | { kind: "page"; page: number; sections: string[]; blocks: string[] };
++
++/**
++ * Resolve an old citation: `p12:s3`, `page-012`, `p12`, or the old prose block
++ * `library/<slug>/blocks/prose-page-012`. A sentence whose text did not match
++ * resolves to its page's sections. `undefined` when the map does not know it.
++ */
++export function resolveCitation(map: SectionMap, cite: string): Resolved | undefined {
++  const slugOf = (block: string) => block.split("/blocks/")[0];
++  const pageEntry = (page: number): Resolved | undefined => {
++    const e = map.pages[`page-${String(page).padStart(3, "0")}`];
++    return e ? { kind: "page", page: e.page, sections: e.sections, blocks: e.blocks } : undefined;
++  };
++  const c = cite.trim();
++  const loc = SENTENCE_LOCATION.exec(c);
++  if (loc) {
++    const hit = map.sentences[c];
++    const page = pageEntry(Number(loc[1]));
++    if (hit) {
++      const prefix = page?.kind === "page" && page.blocks[0] ? slugOf(page.blocks[0]) : undefined;
++      const block = prefix ? `${prefix}/blocks/prose-${hit.section.match(/^(sec-\d+)/)?.[1] ?? hit.section}` : hit.section;
++      return { kind: "sentence", section: hit.section, block, sentence: hit.sentence, ...(hit.match ? { match: hit.match } : {}) };
++    }
++    return page;
++  }
++  const m = /(?:^|blocks\/prose-)page-(\d{3,})$/.exec(c) ?? /^p(\d+)$/.exec(c);
++  return m ? pageEntry(Number(m[1])) : undefined;
++}
++
++/** The sections of a split held on disk: `structure.json` plus each `sections/<id>.md`. */
++export function readSplit(entry: string): SplitSection[] {
++  const st = JSON.parse(readFileSync(join(entry, STRUCTURE_FILENAME), "utf-8")) as {
++    sections?: { id: string; page_start?: number | null; page_end?: number | null }[];
++  };
++  return (st.sections ?? []).map((s) => {
++    const f = join(entry, "sections", `${s.id}.md`);
++    return { id: s.id, pageStart: s.page_start ?? null, pageEnd: s.page_end ?? null, text: existsSync(f) ? bodyOf(readFileSync(f, "utf-8")) : "" };
++  });
++}
++
++/** The old page sections of an entry as a git ref holds them (`git show <ref>:<entry>/sections/page-NNN.md`). */
++export function readPagesAtRef(repo: string, ref: string, entryRel: string): SplitSection[] {
++  const git = (...a: string[]) => execFileSync("git", ["-C", repo, ...a], { encoding: "utf-8", maxBuffer: 1 << 28 });
++  const names = git("ls-tree", "--name-only", `${ref}:${entryRel}/sections`).split("\n").filter((n) => /^page-\d{3,}\.md$/.test(n));
++  return names.map((n) => {
++    const id = n.slice(0, -3);
++    const page = pageOf(id)!;
++    return { id, pageStart: page, pageEnd: page, text: bodyOf(git("show", `${ref}:${entryRel}/sections/${n}`)) };
++  });
++}
++
++/** Whether a split is one section per page, the only split this map re-anchors. */
++export function isPageSplit(entry: string): boolean {
++  try {
++    const st = JSON.parse(readFileSync(join(entry, STRUCTURE_FILENAME), "utf-8")) as { granularity?: string; sections?: { id: string }[] };
++    return st.granularity === "page" || ((st.sections ?? []).length > 0 && (st.sections ?? []).every((s) => OLD_PAGE_ID.test(s.id)));
++  } catch {
++    return false;
++  }
++}
++
++/**
++ * At promotion: when the filed entry is a page split and the staged one is
++ * not, write the map into the staged entry (it is filed with it). Returns the
++ * map, or `undefined` when there is nothing to re-anchor.
++ */
++export function writeMapAtPromotion(filed: string, staging: string, slug: string): SectionMap | undefined {
++  if (!existsSync(join(filed, STRUCTURE_FILENAME)) || !existsSync(join(staging, STRUCTURE_FILENAME))) return undefined;
++  if (!isPageSplit(filed) || isPageSplit(staging)) return undefined;
++  const docId = (JSON.parse(readFileSync(join(staging, STRUCTURE_FILENAME), "utf-8")) as { doc_id?: string }).doc_id ?? slug;
++  const map = buildSectionMap(slug, docId, readSplit(filed), readSplit(staging));
++  writeFileSync(join(staging, SECTION_MAP_FILE), JSON.stringify(map, null, 2) + "\n");
++  return map;
++}
++
++/** An entry's map, or `undefined` when it has none. */
++export function readSectionMap(entry: string): SectionMap | undefined {
++  const f = join(entry, SECTION_MAP_FILE);
++  return existsSync(f) ? SectionMapSchema.parse(JSON.parse(readFileSync(f, "utf-8"))) : undefined;
++}
++
++if (import.meta.main) {
++  const argv = process.argv.slice(2);
++  const arg = (n: string) => (argv.includes(n) ? argv[argv.indexOf(n) + 1] : undefined);
++  const entry = arg("--entry");
++  if (!entry) {
++    console.error("usage: section-map.ts --entry <entry> (--new <staged entry> | --from-ref <git ref> | --resolve <citation>)");
++    process.exit(1);
++  }
++  const slug = basename(resolve(entry));
++  const cite = arg("--resolve");
++  if (cite) {
++    const map = readSectionMap(entry);
++    if (!map) {
++      console.error(`${entry} has no ${SECTION_MAP_FILE}`);
++      process.exit(2);
++    }
++    const r = resolveCitation(map, cite);
++    console.log(JSON.stringify(r ?? null));
++    process.exit(r ? 0 : 2);
++  }
++  const ref = arg("--from-ref");
++  const fresh = arg("--new");
++  let map: SectionMap | undefined;
++  if (ref) {
++    const repo = execFileSync("git", ["-C", resolve(entry), "rev-parse", "--show-toplevel"], { encoding: "utf-8" }).trim();
++    const docId = (JSON.parse(readFileSync(join(entry, STRUCTURE_FILENAME), "utf-8")) as { doc_id?: string }).doc_id ?? slug;
++    map = buildSectionMap(slug, docId, readPagesAtRef(repo, ref, relative(repo, resolve(entry))), readSplit(entry), { ref });
++    writeFileSync(join(entry, SECTION_MAP_FILE), JSON.stringify(map, null, 2) + "\n");
++  } else if (fresh) {
++    map = writeMapAtPromotion(entry, fresh, slug);
++  }
++  if (!map) {
++    console.log("no map written: the old split is not one section per page, or the new one still is");
++    process.exit(0);
++  }
++  const s = Object.keys(map.sentences).length;
++  const part = Object.values(map.sentences).filter((x) => x.match === "part").length;
++  console.log(`${SECTION_MAP_FILE}: ${Object.keys(map.pages).length} page(s), ${s} sentence(s) matched (${part} as part), ${map.unmatched} not matched`);
++}
+diff --git a/scripts/tests/library/features/section-map.feature b/scripts/tests/library/features/section-map.feature
+new file mode 100644
+index 00000000..c7d05b42
+--- /dev/null
++++ b/scripts/tests/library/features/section-map.feature
+@@ -0,0 +1,32 @@
++Feature: The page → section map of a re-split library entry
++  # Owner, 2026-11-15 (card: "Keep page→section map"). Each Scenario names the test that executes it.
++
++  @test:scripts/tests/library/section-map.test.ts::the_page_→_section_map::each_old_page_maps_to_the_new_sections_covering_it,_a_boundary_page_to_both
++  Scenario: Old pages map to the sections that cover them
++    When a page-split entry is re-split by its headings
++    Then each old page section maps to every new section whose page range covers it, with its prose block
++
++  @test:scripts/tests/library/section-map.test.ts::the_page_→_section_map::old_sentences_map_to_the_new_sentence_with_the_same_text;_a_running_head_or_a_page_break_gives_a_part_match
++  Scenario: Old sentences map by their text
++    When an old page sentence has the same normalised text as a sentence of a covering section
++    Then its pN:sM maps to that section and sentence; a sentence holding or held by one maps as a part match
++
++  @test:scripts/tests/library/section-map.test.ts::the_page_→_section_map::a_sentence_with_no_matching_text_is_counted,_never_placed_by_position
++  Scenario: An unmatched sentence is counted, not guessed
++    When no covering section holds an old sentence's text
++    Then it is counted as unmatched and given no position
++
++  @test:scripts/tests/library/section-map.test.ts::the_page_→_section_map::the_resolver_answers_a_sentence,_a_page,_an_old_block,_and_nothing_for_what_it_does_not_know
++  Scenario: Resolving an old citation
++    When a reader resolves pN:sM, page-NNN, pN or an old prose-page block
++    Then it gets the new section and sentence, or the sections covering the page, and nothing for an id the map does not know
++
++  @test:scripts/tests/library/section-map.test.ts::the_page_→_section_map::sentences_are_split_as_l1-coverage_splits_them,_so_pN:sM_names_the_same_sentence
++  Scenario: Sentence numbering is l1-coverage's
++    When a page's text is split into sentences
++    Then the boundaries are the ones l1-coverage uses for its pN:sM locations
++
++  @test:scripts/tests/library/section-map.test.ts::the_page_→_section_map::promotion_writes_the_map_only_when_a_page_split_becomes_a_heading_split
++  Scenario: Promotion writes the map
++    When an entry filed as a page split is promoted with a heading split
++    Then section-map.json is written into the staged entry, and nothing is written when either split is otherwise
+diff --git a/scripts/tests/library/section-map.test.ts b/scripts/tests/library/section-map.test.ts
+new file mode 100644
+index 00000000..28ade00f
+--- /dev/null
++++ b/scripts/tests/library/section-map.test.ts
+@@ -0,0 +1,102 @@
++/**
++ * The page → section map of a re-split library entry (owner, 2026-11-15:
++ * "Keep page→section map"). Synthetic splits; no PDF.
++ */
++import { afterEach, describe, expect, test } from "bun:test";
++import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
++import { tmpdir } from "node:os";
++import { join } from "node:path";
++
++import { buildSectionMap, readSectionMap, resolveCitation, sentencesOf, writeMapAtPromotion, type SplitSection } from "../../section-map.ts";
++import { SectionMapSchema } from "../../../schemas/library/entry-section-map.ts";
++
++const made: string[] = [];
++afterEach(() => {
++  for (const d of made.splice(0)) rmSync(d, { recursive: true, force: true });
++});
++const page = (n: number, text: string): SplitSection => ({ id: `page-${String(n).padStart(3, "0")}`, pageStart: n, pageEnd: n, text });
++const sec = (id: string, a: number, b: number, text: string): SplitSection => ({ id, pageStart: a, pageEnd: b, text });
++
++const old = [
++  page(1, "Report title. Front matter here."),
++  page(2, "Introduction 2 Introduction Health products pass through many hands. They reach patients."),
++  page(3, "Step 1. Identify the policies. Step 2. Draft the policies and review them with the regulator"),
++  page(4, "before they are published. Annex text follows."),
++];
++const fresh = [
++  sec("sec-front-matter", 1, 1, "Report title. Front matter here."),
++  sec("sec-000-introduction", 2, 2, "Health products pass through many hands. They reach patients."),
++  sec("sec-001-step-1", 3, 3, "Step 1. Identify the policies."),
++  sec("sec-002-step-2", 3, 4, "Step 2. Draft the policies and review them with the regulator before they are published."),
++  sec("sec-003-annex", 4, 4, "Annex text follows."),
++];
++
++describe("the page → section map", () => {
++  test("each old page maps to the new sections covering it, a boundary page to both", () => {
++    const m = buildSectionMap("e1", "e1", old, fresh, { at: "2026-11-15" });
++    expect(SectionMapSchema.safeParse(m).success).toBe(true);
++    expect(m.pages["page-003"]).toEqual({
++      page: 3,
++      sections: ["sec-001-step-1", "sec-002-step-2"],
++      blocks: ["library/e1/blocks/prose-sec-001", "library/e1/blocks/prose-sec-002"],
++    });
++    expect(m.from).toEqual({ granularity: "page", sections: 4 });
++  });
++
++  test("old sentences map to the new sentence with the same text; a running head or a page break gives a part match", () => {
++    const m = buildSectionMap("e1", "e1", old, fresh);
++    expect(m.sentences["p2:s2"]).toEqual({ section: "sec-000-introduction", sentence: 2 });
++    // "Introduction 2 Introduction Health products ..." holds the new first sentence.
++    expect(m.sentences["p2:s1"]).toEqual({ section: "sec-000-introduction", sentence: 1, match: "part" });
++    // The sentence the page break cut: each old page's piece is part of the joined one.
++    // ("Step 1." and "Step 2." are sentences of their own, as l1-coverage splits them.)
++    expect(m.sentences["p3:s4"]).toEqual({ section: "sec-002-step-2", sentence: 2, match: "part" });
++    expect(m.sentences["p4:s1"]).toEqual({ section: "sec-002-step-2", sentence: 2, match: "part" });
++    expect(m.unmatched).toBe(0);
++  });
++
++  test("a sentence with no matching text is counted, never placed by position", () => {
++    const m = buildSectionMap("e1", "e1", [page(5, "A sentence the new split does not hold anywhere at all.")], [sec("sec-009-x", 5, 5, "Different words entirely, nothing in common here.")]);
++    expect(m.sentences).toEqual({});
++    expect(m.unmatched).toBe(1);
++    expect(m.pages["page-005"]!.sections).toEqual(["sec-009-x"]);
++  });
++
++  test("the resolver answers a sentence, a page, an old block, and nothing for what it does not know", () => {
++    const m = buildSectionMap("e1", "e1", old, fresh);
++    expect(resolveCitation(m, "p2:s2")).toEqual({ kind: "sentence", section: "sec-000-introduction", block: "library/e1/blocks/prose-sec-000", sentence: 2 });
++    expect(resolveCitation(m, "page-003")?.kind).toBe("page");
++    expect(resolveCitation(m, "library/e1/blocks/prose-page-004")).toEqual({
++      kind: "page", page: 4, sections: ["sec-002-step-2", "sec-003-annex"], blocks: ["library/e1/blocks/prose-sec-002", "library/e1/blocks/prose-sec-003"],
++    });
++    expect(resolveCitation(m, "p3")?.kind).toBe("page");
++    expect(resolveCitation(m, "p99:s1")).toBeUndefined();
++    expect(resolveCitation(m, "sec-001")).toBeUndefined();
++  });
++
++  test("sentences are split as l1-coverage splits them, so pN:sM names the same sentence", () => {
++    expect(sentencesOf("One here. Two there!\nthree-\nfold? (Four) end.")).toEqual(["One here.", "Two there! threefold?", "(Four) end."]);
++  });
++
++  test("promotion writes the map only when a page split becomes a heading split", () => {
++    const root = mkdtempSync(join(tmpdir(), "smap-"));
++    made.push(root);
++    const write = (dir: string, sections: SplitSection[], granularity?: string) => {
++      mkdirSync(join(dir, "sections"), { recursive: true });
++      writeFileSync(join(dir, "structure.json"), JSON.stringify({ doc_id: "e1", ...(granularity ? { granularity } : {}), sections: sections.map((s) => ({ id: s.id, page_start: s.pageStart, page_end: s.pageEnd })) }));
++      for (const s of sections) writeFileSync(join(dir, "sections", `${s.id}.md`), `---\nsection_id: ${s.id}\n---\n${s.text}\n`);
++    };
++    const filed = join(root, "lib", "e1"), staging = join(root, "stage", "e1");
++    write(filed, old, "page");
++    write(staging, fresh);
++    const m = writeMapAtPromotion(filed, staging, "e1")!;
++    expect(readSectionMap(staging)).toEqual(m);
++    expect(Object.keys(m.pages)).toHaveLength(4);
++    // Page split again: nothing to re-anchor.
++    write(staging, old, "page");
++    expect(writeMapAtPromotion(filed, join(root, "nowhere"), "e1")).toBeUndefined();
++    const again = join(root, "stage2", "e1");
++    write(again, old, "page");
++    expect(writeMapAtPromotion(filed, again, "e1")).toBeUndefined();
++  });
++});
+diff --git a/validators/library-section-map.json b/validators/library-section-map.json
+new file mode 100644
+index 00000000..72c97f12
+--- /dev/null
++++ b/validators/library-section-map.json
+@@ -0,0 +1,9 @@
++{
++  "$schema": "folio-validator/v1",
++  "id": "library-section-map",
++  "validates": {
++    "kind": "library",
++    "family": "folio-library-section-map/v1"
++  },
++  "schema": "cat-harness-tools:schemas/library/entry-section-map.ts#SectionMapKind"
++}
+-- 
+2.43.0
+

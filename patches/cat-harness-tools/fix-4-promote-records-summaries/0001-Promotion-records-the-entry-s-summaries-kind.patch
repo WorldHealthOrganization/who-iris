@@ -1,0 +1,118 @@
+From 012080cf308ef849c81831f0d8d188068a310b5d Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Sun, 15 Nov 2026 06:11:28 +0000
+Subject: [PATCH] Promotion records the entry's summaries kind
+
+The extraction record is written in staging, and the ingest stages no
+block summaries: they are the entry's own, drafted after it is filed. So
+the record had no summaries kind, and a re-ingested entry lost the one
+it had until the record was rebuilt in place (re-ingest pilot,
+2026-11-15: both handbooks). After promotion the kind is now recorded
+from the entry's summaries.json; with none, nothing is claimed.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01VQDpPfb62Puokdy7SvkiNR
+---
+ scripts/ingest-document.ts                    | 23 ++++++++++++++++++-
+ .../features/reingest-extraction.feature      |  5 ++++
+ .../tests/library/reingest-extraction.test.ts | 16 ++++++++++++-
+ 3 files changed, 42 insertions(+), 2 deletions(-)
+
+diff --git a/scripts/ingest-document.ts b/scripts/ingest-document.ts
+index b6a23a35..c9910fcb 100644
+--- a/scripts/ingest-document.ts
++++ b/scripts/ingest-document.ts
+@@ -67,7 +67,7 @@ import { corpusDirectoriesForGraph } from "../schemas/kg/harness-config.js";
+ import { readDeclaration } from "../schemas/kg/cat-harness.ts";
+ import { resolveWorkingInstanceRoot } from "./lib/roots.ts";
+ import { COVER_FILENAME } from "./library-graph.ts";
+-import { runEntryArms } from "./entry-extraction.ts";
++import { observeExtraction, recordExtraction, runEntryArms } from "./entry-extraction.ts";
+ import { TABULAR_CSVW_FILENAME, TABULAR_TABLES_DIR } from "../schemas/library/tabular-csvw.ts";
+ import { optionalPipelinePlugin } from "../pipeline/pipeline-plugins.ts";
+ 
+@@ -1329,6 +1329,19 @@ export function carryAuthored(filed: string, staging: string): string[] {
+   return out;
+ }
+ 
++/**
++ * Record the `summaries` kind of a promoted entry from its own summaries.json.
++ * The ingest stages no summaries (they are the entry's, drafted later), so the
++ * record written in staging had no summaries kind, and a re-ingested entry
++ * lost the one it had (re-ingest pilot, 2026-11-15). Returns the step, or
++ * `undefined` when the entry holds no summaries.json.
++ */
++export function recordSummariesKind(entry: string) {
++  const step = observeExtraction(entry).summaries;
++  if (step) recordExtraction(entry, "summaries", step);
++  return step;
++}
++
+ /**
+  * `--refresh-title`: re-resolve an existing entry's title from its PDF (bean
+  * `w6fu`, owner's ruling 2026-10-02 on #1838).
+@@ -1720,6 +1733,14 @@ if (import.meta.main) {
+   } catch (e) {
+     console.log(`  · extraction arms not run: ${e instanceof Error ? e.message : String(e)}`);
+   }
++  // The block summaries are the entry's own (never staged), so their kind is
++  // recorded from the entry as filed now, not left to a later rebuild.
++  try {
++    const sums = recordSummariesKind(resolve(INSTANCE_ROOT, destination, slug));
++    if (sums) console.log(`  · summaries: ${sums.state}${sums.count !== undefined ? ` (${sums.count})` : ""}`);
++  } catch (e) {
++    console.log(`  · summaries not recorded: ${e instanceof Error ? e.message : String(e)}`);
++  }
+   // The library changed, so its LSI index is stale by construction. Advisory:
+   // an index is not part of L1 (skill `lsi-indexing`, option B of bean `ansc`).
+   for (const line of refreshLibraryIndex(resolve(INSTANCE_ROOT, destination), slug)) console.log(line);
+diff --git a/scripts/tests/library/features/reingest-extraction.feature b/scripts/tests/library/features/reingest-extraction.feature
+index a33e7d49..e3e0b2e0 100644
+--- a/scripts/tests/library/features/reingest-extraction.feature
++++ b/scripts/tests/library/features/reingest-extraction.feature
+@@ -116,3 +116,8 @@ Feature: Re-ingestion extraction coverage
+   Scenario: A re-ingest keeps the filed entry's licence and table transcription in its nodes
+     When an entry is promoted over one that holds a licence and a table transcription the staged tree lacks
+     Then both are copied into staging before its nodes are built, a staged file is never replaced, and summaries and errata stay out
++
++  @test:scripts/tests/library/reingest-extraction.test.ts::promotion_records_the_summaries_kind_(re-ingest_pilot,_2026-11-15)::a_promoted_entry's_summaries_are_recorded_from_its_own_sidecar;_with_none,_nothing_is_claimed
++  Scenario: Promotion records the summaries kind
++    When an entry is promoted and holds a summaries sidecar
++    Then the record's summaries kind is set from it, the other kinds are kept, and with no sidecar nothing is claimed
+diff --git a/scripts/tests/library/reingest-extraction.test.ts b/scripts/tests/library/reingest-extraction.test.ts
+index 2306da9d..eb1704b4 100644
+--- a/scripts/tests/library/reingest-extraction.test.ts
++++ b/scripts/tests/library/reingest-extraction.test.ts
+@@ -24,7 +24,7 @@ import { ENTRY_EXTRACTION_SCHEMA_ID, EntryExtractionKind, ExtractionStepSchema }
+ import { advisoryLine, checkEntry, sidecarDocument } from "../../check-l1-complete.ts";
+ import { csvwFromPdfTables, captionLabel, isGrid, isProseCut, runTableArm, toCsv, wordSplitShare } from "../../pdf-tables-csvw.ts";
+ import { TabularCsvwSchema } from "../../../schemas/library/tabular-csvw.ts";
+-import { carryAuthored } from "../../ingest-document.ts";
++import { carryAuthored, recordSummariesKind } from "../../ingest-document.ts";
+ import { readEntryTables } from "../../lib/library-document.ts";
+ import { OPTIONAL_PIPELINE_PLUGIN_KINDS, PIPELINE_PLUGIN_KINDS } from "../../../pipeline/pipeline-plugins.ts";
+ 
+@@ -218,6 +218,20 @@ describe("promotion keeps what the filed entry holds (re-ingest pilot, 2026-11-1
+   });
+ });
+ 
++describe("promotion records the summaries kind (re-ingest pilot, 2026-11-15)", () => {
++  test("a promoted entry's summaries are recorded from its own sidecar; with none, nothing is claimed", () => {
++    const dir = join(tmp("sum-"), "e1");
++    put(dir, "structure.json", { _schema: "pdf-structure/v1", sections: [{ id: "s1" }, { id: "s2" }] });
++    recordExtraction(dir, "references", { state: "found", count: 3, tool: "references-extract", at: "2026-11-15" });
++    expect(recordSummariesKind(dir)).toBeUndefined();
++    expect(readExtraction(dir)?.kinds.summaries).toBeUndefined();
++    put(dir, "summaries.json", { summaries: [{ block: "b1", narrative: [{ text: "One.", lang: "en", state: "draft" }] }, { block: "b2", narrative: [{ text: "Two.", lang: "en", state: "draft" }] }] });
++    expect(recordSummariesKind(dir)).toMatchObject({ state: "found", count: 2 });
++    const k = readExtraction(dir)!.kinds;
++    expect([k.summaries?.state, k.summaries?.count, k.references?.count]).toEqual(["found", 2, 3]);
++  });
++});
++
+ describe("L1 completeness reports extraction as advice, never as a failure", () => {
+   test("a paged entry carries one advisory per kind and the requirements and verdict are unchanged", () => {
+     const dir = join(tmp("adv-"), "e1");
+-- 
+2.43.0
+
