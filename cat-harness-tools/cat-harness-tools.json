@@ -367,10 +367,10 @@
     "registry",
     "packages"
   ],
-  "sourceCommit": "https://github.com/litlfred/who-iris/commit/f8fbb5d5663075721cf5aa27afaa495d62176eeb",
-  "sourceCommitSha": "f8fbb5d5663075721cf5aa27afaa495d62176eeb",
-  "sourceTree": "2d76b31a542adad51cf4ed9a64d4ac29f6968183",
-  "sourceCommitAt": "2026-11-14T22:19:01+01:00",
+  "sourceCommit": "https://github.com/litlfred/who-iris/commit/9bcbb5380390ae7408b013a334c3c5ef866d50d3",
+  "sourceCommitSha": "9bcbb5380390ae7408b013a334c3c5ef866d50d3",
+  "sourceTree": "5081d32b0f2e150ec194d2a0e27d7483788fb56a",
+  "sourceCommitAt": "2026-11-15T02:13:32+01:00",
   "sourceTreeDirty": true,
   "dependsOnUnavailable": "2 dependency edge(s), none expressible as a record — see gaps",
   "counts": {
@@ -378,7 +378,7 @@
     "Subgraph": 24,
     "Asset": 3,
     "Tool": 1,
-    "Schema": 197
+    "Schema": 198
   },
   "@graph": [
     {
@@ -3027,6 +3027,23 @@
         "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/merge-review/WouldHaveBlockedFindingSchema.schema.json",
         "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/merge-review/WouldHaveBlockedMetricsSchema.schema.json",
         "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/merge-review/WouldHaveBlockedRecordSchema.schema.json"
+      ]
+    },
+    {
+      "@id": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/node-view-coverage",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/Schema",
+      "name": "node-view-coverage",
+      "title": "node-view-coverage",
+      "summary": "The node-view coverage report: for each node a declared directory holds,",
+      "module": "schemas/sdlc/node-view-coverage.ts",
+      "inSubgraph": "https://litlfred.github.io/folio-assistant/cat-harness-tools/directory/cat-harness-tools-schemas",
+      "jsonSchema": [
+        "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/node-view-coverage/CountSchema.schema.json",
+        "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/node-view-coverage/CoverageRowSchema.schema.json",
+        "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/node-view-coverage/NodeLackSchema.schema.json",
+        "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/node-view-coverage/NodeRowSchema.schema.json",
+        "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/node-view-coverage/NodeViewCoverageSchema.schema.json",
+        "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/node-view-coverage/ViewerStateSchema.schema.json"
       ]
     },
     {

@@ -371,10 +371,10 @@
     "registry",
     "packages"
   ],
-  "sourceCommit": "https://github.com/litlfred/who-iris/commit/f8fbb5d5663075721cf5aa27afaa495d62176eeb",
-  "sourceCommitSha": "f8fbb5d5663075721cf5aa27afaa495d62176eeb",
-  "sourceTree": "2d76b31a542adad51cf4ed9a64d4ac29f6968183",
-  "sourceCommitAt": "2026-11-14T22:19:01+01:00",
+  "sourceCommit": "https://github.com/litlfred/who-iris/commit/9bcbb5380390ae7408b013a334c3c5ef866d50d3",
+  "sourceCommitSha": "9bcbb5380390ae7408b013a334c3c5ef866d50d3",
+  "sourceTree": "5081d32b0f2e150ec194d2a0e27d7483788fb56a",
+  "sourceCommitAt": "2026-11-15T02:13:32+01:00",
   "sourceTreeDirty": true,
   "dependsOnUnavailable": "this instance declares no `canonicalUrl`, and §3.4's record is `{packageId, version, uri}` — `canonicalUrl` is what plays `uri`, so the record cannot be expressed rather than being withheld on purpose",
   "counts": {

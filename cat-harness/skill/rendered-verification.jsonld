@@ -13,7 +13,7 @@
         "https://litlfred.github.io/who-iris/cat-harness/package/ui-core"
       ],
       "instructionsPath": "skills/ui/ui-core/rendered-verification.md",
-      "instructionLines": 311,
+      "instructionLines": 316,
       "hasInstructions": true,
       "hasIOContract": false,
       "ambiguous": false,
