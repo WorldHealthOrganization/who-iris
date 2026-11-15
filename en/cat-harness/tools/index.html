@@ -324,9 +324,9 @@ is <code class="language-plaintext highlighter-rouge">satisfies</code>, and it r
 to do that</em>, never <em>this skill is a tool</em>.</p>
 
 <div class="tg-grid">
-<a class="tg-stat" href="#every-tool"><b>216</b><span>Tool nodes</span></a>
-<a class="tg-stat" href="#does-every-satisfies-name-a-skill-that-exists"><b>97</b><span>skills satisfied</span></a>
-<a class="tg-stat" href="#how-they-are-invoked-and-installed"><b>185</b><span>invoked as a shell command</span></a>
+<a class="tg-stat" href="#every-tool"><b>218</b><span>Tool nodes</span></a>
+<a class="tg-stat" href="#does-every-satisfies-name-a-skill-that-exists"><b>99</b><span>skills satisfied</span></a>
+<a class="tg-stat" href="#how-they-are-invoked-and-installed"><b>187</b><span>invoked as a shell command</span></a>
 <a class="tg-stat" href="#how-they-are-invoked-and-installed"><b>30</b><span>reachable over MCP</span></a>
 </div>
 
@@ -351,7 +351,7 @@ to do that</em>, never <em>this skill is a tool</em>.</p>
   <tbody>
     <tr>
       <td><a href="who-iris/">who-iris</a></td>
-      <td>2</td>
+      <td>4</td>
     </tr>
     <tr>
       <td><a href="https://litlfred.github.io/folio-assistant/en/cat-harness/tools/cat-harness/">cat-harness</a></td>
@@ -388,7 +388,7 @@ to do that</em>, never <em>this skill is a tool</em>.</p>
   <tbody>
     <tr>
       <td><span class="tg-tag tg-shell" data-surface="shell">cli</span></td>
-      <td>185</td>
+      <td>187</td>
     </tr>
     <tr>
       <td><span class="tg-tag tg-inproc" data-surface="inProcess">inProcess</span></td>
@@ -419,7 +419,7 @@ to do that</em>, never <em>this skill is a tool</em>.</p>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">cli</code></td>
-      <td>24</td>
+      <td>26</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">service</code></td>
@@ -436,7 +436,7 @@ to do that</em>, never <em>this skill is a tool</em>.</p>
 </h2>
     
 
-<p>Yes — all <strong>97</strong> skills named across <strong>216</strong> tools resolve to a
+<p>Yes — all <strong>99</strong> skills named across <strong>218</strong> tools resolve to a
 skill document in this checkout. A <code class="language-plaintext highlighter-rouge">satisfies</code> pointing at nothing would be a
 tool advertising a capability the graph cannot locate.</p>
 <h2 id="every-tool">
@@ -448,7 +448,7 @@ tool advertising a capability the graph cannot locate.</p>
 </h2>
     
 
-<div class="tg-filter" id="tg-filter" role="group" aria-label="Filter by how a tool is reached"><span>Reached as:</span><button type="button" aria-pressed="true" data-surface="">all</button><button type="button" aria-pressed="false" data-surface="action">github action (7)</button><button type="button" aria-pressed="false" data-surface="inProcess">inProcess (35)</button><button type="button" aria-pressed="false" data-surface="manual">manual (9)</button><button type="button" aria-pressed="false" data-surface="mcp">mcp (30)</button><button type="button" aria-pressed="false" data-surface="shell">cli (185)</button><span><span id="tg-shown">216</span> of 216 shown</span></div>
+<div class="tg-filter" id="tg-filter" role="group" aria-label="Filter by how a tool is reached"><span>Reached as:</span><button type="button" aria-pressed="true" data-surface="">all</button><button type="button" aria-pressed="false" data-surface="action">github action (7)</button><button type="button" aria-pressed="false" data-surface="inProcess">inProcess (35)</button><button type="button" aria-pressed="false" data-surface="manual">manual (9)</button><button type="button" aria-pressed="false" data-surface="mcp">mcp (30)</button><button type="button" aria-pressed="false" data-surface="shell">cli (187)</button><span><span id="tg-shown">218</span> of 218 shown</span></div>
 
 <div class="table-wrapper"><table>
   <thead>
@@ -716,6 +716,22 @@ tool advertising a capability the graph cannot locate.</p>
       <td><span class="tg-tag tg-shell" data-surface="shell">cli</span></td>
       <td><code class="language-plaintext highlighter-rouge">ci-health</code></td>
       <td>3 in / 1 out</td>
+      <td><a href="https://github.com/litlfred/who-iris/blob/cat/cat-harness/qa-reports/index.json"><code class="language-plaintext highlighter-rouge">qa-reports</code></a></td>
+    </tr>
+    <tr>
+      <td><a id="ci-iris-cdn"></a><a href="who-iris/ci-iris-cdn/"><code class="language-plaintext highlighter-rouge">ci-iris-cdn</code></a> · <a href="https://litlfred.github.io/folio-assistant/who-iris/tools/ci-iris-cdn.jsonld">JSON-LD</a><br />Run the IRIS CDN export</td>
+      <td>Dispatch <code class="language-plaintext highlighter-rouge">iris-cdn.yml</code>: the nightly change ingest or the weekly reconciliation of the IRIS CDN (<code class="language-plaintext highlighter-rouge">scripts/iris-cdn/run.ts</code>), then verify the signed release. Started with the standard GitHub CLI; the run is watched with <code class="language-plaintext highlighter-rouge">gh run watch</code>.</td>
+      <td><span class="tg-tag tg-shell" data-surface="shell">cli</span></td>
+      <td><code class="language-plaintext highlighter-rouge">iris-cdn-exporter</code></td>
+      <td>2 in / 1 out</td>
+      <td><a href="https://github.com/litlfred/who-iris/blob/cat/cat-harness/qa-reports/index.json"><code class="language-plaintext highlighter-rouge">qa-reports</code></a></td>
+    </tr>
+    <tr>
+      <td><a id="ci-iris-cover-pdfs"></a><a href="who-iris/ci-iris-cover-pdfs/"><code class="language-plaintext highlighter-rouge">ci-iris-cover-pdfs</code></a> · <a href="https://litlfred.github.io/folio-assistant/who-iris/tools/ci-iris-cover-pdfs.jsonld">JSON-LD</a><br />Fetch IRIS cover PDFs</td>
+      <td>Dispatch <code class="language-plaintext highlighter-rouge">iris-cover-pdfs.yml</code>: fetch the PDFs the replica’s home page references (<code class="language-plaintext highlighter-rouge">scripts/iris-covers/fetch-referenced-pdfs.py</code>) and render their cover previews (<code class="language-plaintext highlighter-rouge">scripts/iris-covers/render-previews.py</code>). Started with the standard GitHub CLI; the run is watched with <code class="language-plaintext highlighter-rouge">gh run watch</code>.</td>
+      <td><span class="tg-tag tg-shell" data-surface="shell">cli</span></td>
+      <td><code class="language-plaintext highlighter-rouge">iris-dspace</code></td>
+      <td>2 in / 1 out</td>
       <td><a href="https://github.com/litlfred/who-iris/blob/cat/cat-harness/qa-reports/index.json"><code class="language-plaintext highlighter-rouge">qa-reports</code></a></td>
     </tr>
     <tr>

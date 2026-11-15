@@ -122,6 +122,12 @@
       "name": "initialization-steps"
     },
     {
+      "name": "iris-cdn-exporter"
+    },
+    {
+      "name": "iris-dspace"
+    },
+    {
       "name": "journey-maps"
     },
     {
@@ -2847,6 +2853,154 @@
           "when": "Before trusting ANY workflow's outcome, and at session start: a workflow's result is invisible from a checkout.",
           "limits": "It reads the DEFAULT BRANCH, so on a PR it describes `main` and not the diff — which is why it is deliberately not one of the `gates`. `GITHUB_TOKEN`/`GH_TOKEN` is used when present; without one a public repo still works and a private one fails. A REFUSED OR FAILING API CALL EXITS 2 AND IS NEVER GREEN: could-not-look must stay distinguishable from looked-and-it-was-fine.",
           "cost": "One HTTP request; fast enough for the session-start sweep, which is why it makes a single call."
+        }
+      }
+    },
+    "/tools/ci-iris-cdn": {
+      "post": {
+        "operationId": "ci-iris-cdn",
+        "summary": "Run the IRIS CDN export",
+        "description": "Dispatch `iris-cdn.yml`: the nightly change ingest or the weekly reconciliation of the IRIS CDN (`scripts/iris-cdn/run.ts`), then verify the signed release. Started with the standard GitHub CLI; the run is watched with `gh run watch`.",
+        "tags": [
+          "iris-cdn-exporter"
+        ],
+        "externalDocs": {
+          "description": "The Tool's page",
+          "url": "who-iris/ci-iris-cdn/"
+        },
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "repo": {
+                    "$ref": "#/components/schemas/RepoFullName",
+                    "description": "The repository whose workflow is run. Default: the current one."
+                  },
+                  "ref": {
+                    "$ref": "#/components/schemas/Branch",
+                    "description": "The branch to run it on. Default: the default branch."
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The Tool's declared outputs.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "run": {
+                      "$ref": "#/components/schemas/Text",
+                      "description": "The dispatched run; its outcome is read with `gh run watch` or `gh run view`."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-tool-iri": "https://litlfred.github.io/folio-assistant/who-iris/tools/ci-iris-cdn.jsonld",
+        "x-invoke": {
+          "shell": "gh workflow run iris-cdn.yml"
+        },
+        "x-install": {
+          "cli": "gh"
+        },
+        "x-requires": {
+          "runtime": [
+            "gh"
+          ],
+          "network": true
+        },
+        "x-satisfies": [
+          "iris-cdn-exporter"
+        ],
+        "x-selection": {
+          "when": "Running the IRIS CDN nightly ingest or reconciliation on demand instead of waiting for its schedule. Pass the mode with `-f mode=nightly` or `-f mode=reconcile`.",
+          "limits": "Needs a token that may dispatch workflows (actions: write) on the repository.",
+          "cost": "A CI run on GitHub's runners."
+        }
+      }
+    },
+    "/tools/ci-iris-cover-pdfs": {
+      "post": {
+        "operationId": "ci-iris-cover-pdfs",
+        "summary": "Fetch IRIS cover PDFs",
+        "description": "Dispatch `iris-cover-pdfs.yml`: fetch the PDFs the replica's home page references (`scripts/iris-covers/fetch-referenced-pdfs.py`) and render their cover previews (`scripts/iris-covers/render-previews.py`). Started with the standard GitHub CLI; the run is watched with `gh run watch`.",
+        "tags": [
+          "iris-dspace"
+        ],
+        "externalDocs": {
+          "description": "The Tool's page",
+          "url": "who-iris/ci-iris-cover-pdfs/"
+        },
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "repo": {
+                    "$ref": "#/components/schemas/RepoFullName",
+                    "description": "The repository whose workflow is run. Default: the current one."
+                  },
+                  "ref": {
+                    "$ref": "#/components/schemas/Branch",
+                    "description": "The branch to run it on. Default: the default branch."
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The Tool's declared outputs.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "run": {
+                      "$ref": "#/components/schemas/Text",
+                      "description": "The dispatched run; its outcome is read with `gh run watch` or `gh run view`."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-tool-iri": "https://litlfred.github.io/folio-assistant/who-iris/tools/ci-iris-cover-pdfs.jsonld",
+        "x-invoke": {
+          "shell": "gh workflow run iris-cover-pdfs.yml"
+        },
+        "x-install": {
+          "cli": "gh"
+        },
+        "x-requires": {
+          "runtime": [
+            "gh"
+          ],
+          "network": true
+        },
+        "x-satisfies": [
+          "iris-dspace"
+        ],
+        "x-selection": {
+          "when": "Refreshing the replica's cover previews on demand. Pass `-f only=<slugs>` to limit it to some items.",
+          "limits": "Needs a token that may dispatch workflows (actions: write) on the repository.",
+          "cost": "A CI run on GitHub's runners."
         }
       }
     },

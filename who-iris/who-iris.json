@@ -371,10 +371,10 @@
     "registry",
     "packages"
   ],
-  "sourceCommit": "https://github.com/litlfred/who-iris/commit/914723bc595a5786b4340549819658c5c0af1bbb",
-  "sourceCommitSha": "914723bc595a5786b4340549819658c5c0af1bbb",
-  "sourceTree": "c49856aedec536a9bc95d9c45ebcfd7d7c227a75",
-  "sourceCommitAt": "2026-11-15T12:42:03+01:00",
+  "sourceCommit": "https://github.com/litlfred/who-iris/commit/b6403fad91f29efc855cd932b956b0e556e22e37",
+  "sourceCommitSha": "b6403fad91f29efc855cd932b956b0e556e22e37",
+  "sourceTree": "181e3440dd428fc18f2153e5100f78a22c0ac41e",
+  "sourceCommitAt": "2026-11-15T14:13:41+01:00",
   "sourceTreeDirty": true,
   "dependsOnUnavailable": "this instance declares no `canonicalUrl`, and §3.4's record is `{packageId, version, uri}` — `canonicalUrl` is what plays `uri`, so the record cannot be expressed rather than being withheld on purpose",
   "counts": {
@@ -387,7 +387,7 @@
     "Role": 6,
     "Subgraph": 20,
     "Asset": 2,
-    "Tool": 2
+    "Tool": 4
   },
   "@graph": [
     {
@@ -2821,7 +2821,7 @@
       ],
       "description": "who-iris's Tool nodes: `iris-pages`, the generator that renders the catalogue visualiser (its `renderedBy`), and `translation-qa-prune`, which drops the round-trip rulings of removed strings. Discovered by graph typology, never imported by name.",
       "readmePath": "tools/README.md",
-      "fileCount": 4,
+      "fileCount": 6,
       "inSubgraph": "https://litlfred.github.io/who-iris/who-iris/directory/who-iris-tools",
       "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/directory/who-iris-tools"
     },
@@ -2882,6 +2882,110 @@
       "title": "who-iris",
       "description": "What is here, what is only referenced, and how to tell.",
       "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/asset/readme"
+    },
+    {
+      "@id": "https://litlfred.github.io/who-iris/who-iris/tools/ci-iris-cdn.jsonld",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
+      "name": "ci-iris-cdn",
+      "title": "Run the IRIS CDN export",
+      "description": "Dispatch `iris-cdn.yml`: the nightly change ingest or the weekly reconciliation of the IRIS CDN (`scripts/iris-cdn/run.ts`), then verify the signed release. Started with the standard GitHub CLI; the run is watched with `gh run watch`.",
+      "install": {
+        "cli": "gh"
+      },
+      "invoke": {
+        "shell": "gh workflow run iris-cdn.yml"
+      },
+      "io": {
+        "inputs": [
+          {
+            "name": "repo",
+            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoFullName",
+            "description": "The repository whose workflow is run. Default: the current one.",
+            "required": false,
+            "arg": {
+              "flag": "--repo"
+            }
+          },
+          {
+            "name": "ref",
+            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
+            "description": "The branch to run it on. Default: the default branch.",
+            "required": false,
+            "arg": {
+              "flag": "--ref"
+            }
+          }
+        ],
+        "outputs": [
+          {
+            "name": "run",
+            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "description": "The dispatched run; its outcome is read with `gh run watch` or `gh run view`."
+          }
+        ]
+      },
+      "requirements": {
+        "runtime": [
+          "gh"
+        ],
+        "network": true
+      },
+      "satisfies": [
+        "https://litlfred.github.io/who-iris/who-iris/skill/iris-cdn-exporter"
+      ],
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/tools/ci-iris-cdn.jsonld"
+    },
+    {
+      "@id": "https://litlfred.github.io/who-iris/who-iris/tools/ci-iris-cover-pdfs.jsonld",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
+      "name": "ci-iris-cover-pdfs",
+      "title": "Fetch IRIS cover PDFs",
+      "description": "Dispatch `iris-cover-pdfs.yml`: fetch the PDFs the replica's home page references (`scripts/iris-covers/fetch-referenced-pdfs.py`) and render their cover previews (`scripts/iris-covers/render-previews.py`). Started with the standard GitHub CLI; the run is watched with `gh run watch`.",
+      "install": {
+        "cli": "gh"
+      },
+      "invoke": {
+        "shell": "gh workflow run iris-cover-pdfs.yml"
+      },
+      "io": {
+        "inputs": [
+          {
+            "name": "repo",
+            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/RepoFullName",
+            "description": "The repository whose workflow is run. Default: the current one.",
+            "required": false,
+            "arg": {
+              "flag": "--repo"
+            }
+          },
+          {
+            "name": "ref",
+            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
+            "description": "The branch to run it on. Default: the default branch.",
+            "required": false,
+            "arg": {
+              "flag": "--ref"
+            }
+          }
+        ],
+        "outputs": [
+          {
+            "name": "run",
+            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "description": "The dispatched run; its outcome is read with `gh run watch` or `gh run view`."
+          }
+        ]
+      },
+      "requirements": {
+        "runtime": [
+          "gh"
+        ],
+        "network": true
+      },
+      "satisfies": [
+        "https://litlfred.github.io/who-iris/who-iris/skill/iris-dspace"
+      ],
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/tools/ci-iris-cover-pdfs.jsonld"
     },
     {
       "@id": "https://litlfred.github.io/who-iris/who-iris/tools/iris-pages.jsonld",
