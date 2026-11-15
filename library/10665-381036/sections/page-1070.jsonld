@@ -13,7 +13,9 @@
   "pageStart": 1070,
   "pageEnd": 1070,
   "contains": [
-    "library/10665-381036/blocks/prose-page-1070"
+    "library/10665-381036/blocks/prose-page-1070",
+    "library/10665-381036/blocks/table-050",
+    "library/10665-381036/blocks/table-051"
   ],
   "derivedFrom": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/10665-381036",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/10665-381036",
