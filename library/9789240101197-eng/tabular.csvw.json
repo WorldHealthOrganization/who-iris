@@ -26,201 +26,6 @@
       "tableSchema": {
         "columns": [
           {
-            "name": "digital-transformation-handboo",
-            "titles": "Digital transformation handboo",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "k-for-health-su",
-            "titles": "k for health su",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "pply-chain-archite",
-            "titles": "pply chain archite",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "cture",
-            "titles": "cture",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-5",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-6",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          }
-        ]
-      },
-      "fac:anchor": null,
-      "fac:headerRow": 1,
-      "fac:extent": {
-        "rows": 68,
-        "columns": 6,
-        "source": "measured"
-      },
-      "fac:label": "Table 1",
-      "fac:pages": [
-        4
-      ],
-      "fac:extracted": {
-        "tool": "pdf-tables.py",
-        "version": "b3b9e4012c21",
-        "backend": "pdfplumber",
-        "backendVersion": "0.11.10",
-        "confidence": null,
-        "id": "tab-p004-003",
-        "at": "2026-11-14"
-      }
-    },
-    {
-      "url": "tables/table-2.csv",
-      "tableSchema": {
-        "columns": [
-          {
-            "name": "i",
-            "titles": "I",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "ntroduction",
-            "titles": "NTRODUCTION",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-3",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "strategy",
-            "titles": "STRATEGY",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "architecture-implementation-traceability-country",
-            "titles": "ARCHITECTURE IMPLEMENTATION TRACEABILITY COUNTRY EXAMPLES ANN",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "exe",
-            "titles": "EXE",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          }
-        ]
-      },
-      "fac:anchor": null,
-      "fac:headerRow": 1,
-      "fac:extent": {
-        "rows": 80,
-        "columns": 6,
-        "source": "measured"
-      },
-      "fac:label": "Table 2",
-      "fac:pages": [
-        5
-      ],
-      "fac:extracted": {
-        "tool": "pdf-tables.py",
-        "version": "b3b9e4012c21",
-        "backend": "pdfplumber",
-        "backendVersion": "0.11.10",
-        "confidence": null,
-        "id": "tab-p005-004",
-        "at": "2026-11-14"
-      }
-    },
-    {
-      "url": "tables/table-3.csv",
-      "tableSchema": {
-        "columns": [
-          {
-            "name": "introduction-strategy-architecture",
-            "titles": "INTRODUCTION STRATEGY ARCHITECTURE",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "implement",
-            "titles": "IMPLEMENT",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "ation",
-            "titles": "ATION",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "traceability",
-            "titles": "TRACEABILITY",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "country-exa",
-            "titles": "COUNTRY EXA",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "mples",
-            "titles": "MPLES",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "annexes",
-            "titles": "ANNEXES",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          }
-        ]
-      },
-      "fac:anchor": null,
-      "fac:headerRow": 1,
-      "fac:extent": {
-        "rows": 55,
-        "columns": 7,
-        "source": "measured"
-      },
-      "fac:label": "Table 3",
-      "fac:pages": [
-        6
-      ],
-      "fac:extracted": {
-        "tool": "pdf-tables.py",
-        "version": "b3b9e4012c21",
-        "backend": "pdfplumber",
-        "backendVersion": "0.11.10",
-        "confidence": null,
-        "id": "tab-p006-005",
-        "at": "2026-11-14"
-      }
-    },
-    {
-      "url": "tables/table-4.csv",
-      "tableSchema": {
-        "columns": [
-          {
             "name": "dh-i-wg",
             "titles": "DH&I WG",
             "datatype": "any",
@@ -241,7 +46,7 @@
         "columns": 2,
         "source": "measured"
       },
-      "fac:label": "Table 4",
+      "fac:label": "Table 1",
       "fac:pages": [
         7
       ],
@@ -252,306 +57,11 @@
         "backendVersion": "0.11.10",
         "confidence": null,
         "id": "tab-p007-006",
-        "at": "2026-11-14"
+        "at": "2026-11-15"
       }
     },
     {
-      "url": "tables/table-5.csv",
-      "tableSchema": {
-        "columns": [
-          {
-            "name": "introduction-stra",
-            "titles": "INTRODUCTION STRA",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "tegy-arc",
-            "titles": "TEGY ARC",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "hitecture-im",
-            "titles": "HITECTURE IM",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "plementation",
-            "titles": "PLEMENTATION",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "traceabil",
-            "titles": "TRACEABIL",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "ity",
-            "titles": "ITY",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "country-examples",
-            "titles": "COUNTRY EXAMPLES",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "annex",
-            "titles": "ANNEX",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          }
-        ]
-      },
-      "fac:anchor": null,
-      "fac:headerRow": 1,
-      "fac:extent": {
-        "rows": 92,
-        "columns": 8,
-        "source": "measured"
-      },
-      "fac:label": "Table 5",
-      "fac:pages": [
-        8
-      ],
-      "fac:extracted": {
-        "tool": "pdf-tables.py",
-        "version": "b3b9e4012c21",
-        "backend": "pdfplumber",
-        "backendVersion": "0.11.10",
-        "confidence": null,
-        "id": "tab-p008-007",
-        "at": "2026-11-14"
-      }
-    },
-    {
-      "url": "tables/table-6.csv",
-      "tableSchema": {
-        "columns": [
-          {
-            "name": "introduction-stra",
-            "titles": "INTRODUCTION STRA",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "tegy-architectu",
-            "titles": "TEGY ARCHITECTU",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "re",
-            "titles": "RE",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "implementation",
-            "titles": "IMPLEMENTATION",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "tra",
-            "titles": "TRA",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "ceability",
-            "titles": "CEABILITY",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "country",
-            "titles": "COUNTRY",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "examples",
-            "titles": "EXAMPLES",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "anne",
-            "titles": "ANNE",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          }
-        ]
-      },
-      "fac:anchor": null,
-      "fac:headerRow": 1,
-      "fac:extent": {
-        "rows": 63,
-        "columns": 9,
-        "source": "measured"
-      },
-      "fac:label": "Table 6",
-      "fac:pages": [
-        9
-      ],
-      "fac:extracted": {
-        "tool": "pdf-tables.py",
-        "version": "b3b9e4012c21",
-        "backend": "pdfplumber",
-        "backendVersion": "0.11.10",
-        "confidence": null,
-        "id": "tab-p009-008",
-        "at": "2026-11-14"
-      }
-    },
-    {
-      "url": "tables/table-7.csv",
-      "tableSchema": {
-        "columns": [
-          {
-            "name": "introduction-strategy",
-            "titles": "INTRODUCTION STRATEGY",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "architecture-impl",
-            "titles": "ARCHITECTURE IMPL",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "ementation-traceability",
-            "titles": "EMENTATION TRACEABILITY",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "country-examples",
-            "titles": "COUNTRY EXAMPLES",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "annexes",
-            "titles": "ANNEXES",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          }
-        ]
-      },
-      "fac:anchor": null,
-      "fac:headerRow": 1,
-      "fac:extent": {
-        "rows": 61,
-        "columns": 5,
-        "source": "measured"
-      },
-      "fac:label": "Table 7",
-      "fac:pages": [
-        11
-      ],
-      "fac:extracted": {
-        "tool": "pdf-tables.py",
-        "version": "b3b9e4012c21",
-        "backend": "pdfplumber",
-        "backendVersion": "0.11.10",
-        "confidence": null,
-        "id": "tab-p011-009",
-        "at": "2026-11-14"
-      }
-    },
-    {
-      "url": "tables/table-8.csv",
-      "tableSchema": {
-        "columns": [
-          {
-            "name": "fig-3-digital-heal",
-            "titles": "Fig 3. Digital heal",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "th-supp",
-            "titles": "th supp",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "ly-chain",
-            "titles": "ly chain",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-4",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-5",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-6",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-7",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-8",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-9",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          }
-        ]
-      },
-      "fac:anchor": null,
-      "fac:headerRow": 1,
-      "fac:extent": {
-        "rows": 80,
-        "columns": 9,
-        "source": "measured"
-      },
-      "fac:label": "Table 8",
-      "fac:caption": "Fig.",
-      "fac:pages": [
-        13
-      ],
-      "fac:extracted": {
-        "tool": "pdf-tables.py",
-        "version": "b3b9e4012c21",
-        "backend": "pdfplumber",
-        "backendVersion": "0.11.10",
-        "confidence": null,
-        "id": "tab-p013-010",
-        "at": "2026-11-14"
-      }
-    },
-    {
-      "url": "tables/table-9.csv",
+      "url": "tables/table-2.csv",
       "tableSchema": {
         "columns": [
           {
@@ -665,7 +175,7 @@
         "columns": 17,
         "source": "measured"
       },
-      "fac:label": "Table 9",
+      "fac:label": "Table 2",
       "fac:caption": "Fig 7. Sample workflow for an antenatal care business, with connections to the supply chain",
       "fac:pages": [
         17
@@ -677,179 +187,11 @@
         "backendVersion": "0.11.10",
         "confidence": null,
         "id": "tab-p017-026",
-        "at": "2026-11-14"
+        "at": "2026-11-15"
       }
     },
     {
-      "url": "tables/table-10.csv",
-      "tableSchema": {
-        "columns": [
-          {
-            "name": "int",
-            "titles": "INT",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "rod",
-            "titles": "ROD",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "uction-strate",
-            "titles": "UCTION STRATE",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "gy",
-            "titles": "GY",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "architecture",
-            "titles": "ARCHITECTURE",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "implementation",
-            "titles": "IMPLEMENTATION",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "traceability",
-            "titles": "TRACEABILITY",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "country-examp",
-            "titles": "COUNTRY EXAMP",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "les-anne",
-            "titles": "LES ANNE",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          }
-        ]
-      },
-      "fac:anchor": null,
-      "fac:headerRow": 1,
-      "fac:extent": {
-        "rows": 53,
-        "columns": 9,
-        "source": "measured"
-      },
-      "fac:label": "Table 10",
-      "fac:pages": [
-        19
-      ],
-      "fac:extracted": {
-        "tool": "pdf-tables.py",
-        "version": "b3b9e4012c21",
-        "backend": "pdfplumber",
-        "backendVersion": "0.11.10",
-        "confidence": null,
-        "id": "tab-p019-028",
-        "at": "2026-11-14"
-      }
-    },
-    {
-      "url": "tables/table-11.csv",
-      "tableSchema": {
-        "columns": [
-          {
-            "name": "introd",
-            "titles": "INTROD",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "uction",
-            "titles": "UCTION",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "strategy-a",
-            "titles": "STRATEGY A",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "rchitecture-impl",
-            "titles": "RCHITECTURE IMPL",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "ementat",
-            "titles": "EMENTAT",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "ion",
-            "titles": "ION",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "traceability",
-            "titles": "TRACEABILITY",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "country-ex",
-            "titles": "COUNTRY EX",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "amples",
-            "titles": "AMPLES",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "ann",
-            "titles": "ANN",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          }
-        ]
-      },
-      "fac:anchor": null,
-      "fac:headerRow": 1,
-      "fac:extent": {
-        "rows": 79,
-        "columns": 10,
-        "source": "measured"
-      },
-      "fac:label": "Table 11",
-      "fac:pages": [
-        20
-      ],
-      "fac:extracted": {
-        "tool": "pdf-tables.py",
-        "version": "b3b9e4012c21",
-        "backend": "pdfplumber",
-        "backendVersion": "0.11.10",
-        "confidence": null,
-        "id": "tab-p020-029",
-        "at": "2026-11-14"
-      }
-    },
-    {
-      "url": "tables/table-12.csv",
+      "url": "tables/table-3.csv",
       "tableSchema": {
         "columns": [
           {
@@ -873,7 +215,7 @@
         "columns": 2,
         "source": "measured"
       },
-      "fac:label": "Table 12",
+      "fac:label": "Table 3",
       "fac:pages": [
         22
       ],
@@ -884,11 +226,11 @@
         "backendVersion": "0.11.10",
         "confidence": null,
         "id": "tab-p022-038",
-        "at": "2026-11-14"
+        "at": "2026-11-15"
       }
     },
     {
-      "url": "tables/table-13.csv",
+      "url": "tables/table-4.csv",
       "tableSchema": {
         "columns": [
           {
@@ -912,7 +254,7 @@
         "columns": 2,
         "source": "measured"
       },
-      "fac:label": "Table 13",
+      "fac:label": "Table 4",
       "fac:pages": [
         23
       ],
@@ -923,11 +265,11 @@
         "backendVersion": "0.11.10",
         "confidence": null,
         "id": "tab-p023-043",
-        "at": "2026-11-14"
+        "at": "2026-11-15"
       }
     },
     {
-      "url": "tables/table-14.csv",
+      "url": "tables/table-5.csv",
       "tableSchema": {
         "columns": [
           {
@@ -951,7 +293,7 @@
         "columns": 2,
         "source": "measured"
       },
-      "fac:label": "Table 14",
+      "fac:label": "Table 5",
       "fac:pages": [
         24
       ],
@@ -962,11 +304,11 @@
         "backendVersion": "0.11.10",
         "confidence": null,
         "id": "tab-p024-048",
-        "at": "2026-11-14"
+        "at": "2026-11-15"
       }
     },
     {
-      "url": "tables/table-15.csv",
+      "url": "tables/table-6.csv",
       "tableSchema": {
         "columns": [
           {
@@ -990,7 +332,7 @@
         "columns": 2,
         "source": "measured"
       },
-      "fac:label": "Table 15",
+      "fac:label": "Table 6",
       "fac:pages": [
         25
       ],
@@ -1001,11 +343,11 @@
         "backendVersion": "0.11.10",
         "confidence": null,
         "id": "tab-p025-053",
-        "at": "2026-11-14"
+        "at": "2026-11-15"
       }
     },
     {
-      "url": "tables/table-16.csv",
+      "url": "tables/table-7.csv",
       "tableSchema": {
         "columns": [
           {
@@ -1053,7 +395,7 @@
         "columns": 6,
         "source": "measured"
       },
-      "fac:label": "Table 16",
+      "fac:label": "Table 7",
       "fac:caption": "Fig 10. Example of outputs from this chapter",
       "fac:pages": [
         26
@@ -1065,98 +407,11 @@
         "backendVersion": "0.11.10",
         "confidence": null,
         "id": "tab-p026-054",
-        "at": "2026-11-14"
+        "at": "2026-11-15"
       }
     },
     {
-      "url": "tables/table-17.csv",
-      "tableSchema": {
-        "columns": [
-          {
-            "name": "introduction",
-            "titles": "INTRODUCTION",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "strateg",
-            "titles": "STRATEG",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "y-archite",
-            "titles": "Y ARCHITE",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "cture-impl",
-            "titles": "CTURE IMPL",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "emen",
-            "titles": "EMEN",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "tat",
-            "titles": "TAT",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "ion-trace",
-            "titles": "ION TRACE",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "ability",
-            "titles": "ABILITY",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "country-examples",
-            "titles": "COUNTRY EXAMPLES",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "annex",
-            "titles": "ANNEX",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          }
-        ]
-      },
-      "fac:anchor": null,
-      "fac:headerRow": 1,
-      "fac:extent": {
-        "rows": 89,
-        "columns": 10,
-        "source": "measured"
-      },
-      "fac:label": "Table 17",
-      "fac:pages": [
-        28
-      ],
-      "fac:extracted": {
-        "tool": "pdf-tables.py",
-        "version": "b3b9e4012c21",
-        "backend": "pdfplumber",
-        "backendVersion": "0.11.10",
-        "confidence": null,
-        "id": "tab-p028-056",
-        "at": "2026-11-14"
-      }
-    },
-    {
-      "url": "tables/table-18.csv",
+      "url": "tables/table-8.csv",
       "tableSchema": {
         "columns": [
           {
@@ -1180,7 +435,7 @@
         "columns": 2,
         "source": "measured"
       },
-      "fac:label": "Table 18",
+      "fac:label": "Table 8",
       "fac:pages": [
         30
       ],
@@ -1191,11 +446,11 @@
         "backendVersion": "0.11.10",
         "confidence": null,
         "id": "tab-p030-065",
-        "at": "2026-11-14"
+        "at": "2026-11-15"
       }
     },
     {
-      "url": "tables/table-19.csv",
+      "url": "tables/table-9.csv",
       "tableSchema": {
         "columns": [
           {
@@ -1219,7 +474,7 @@
         "columns": 2,
         "source": "measured"
       },
-      "fac:label": "Table 19",
+      "fac:label": "Table 9",
       "fac:caption": "Fig 12. SCISMM maturity levels for HSCISs",
       "fac:pages": [
         31
@@ -1231,11 +486,11 @@
         "backendVersion": "0.11.10",
         "confidence": null,
         "id": "tab-p031-066",
-        "at": "2026-11-14"
+        "at": "2026-11-15"
       }
     },
     {
-      "url": "tables/table-20.csv",
+      "url": "tables/table-10.csv",
       "tableSchema": {
         "columns": [
           {
@@ -1259,7 +514,7 @@
         "columns": 2,
         "source": "measured"
       },
-      "fac:label": "Table 20",
+      "fac:label": "Table 10",
       "fac:pages": [
         32
       ],
@@ -1270,542 +525,11 @@
         "backendVersion": "0.11.10",
         "confidence": null,
         "id": "tab-p032-071",
-        "at": "2026-11-14"
+        "at": "2026-11-15"
       }
     },
     {
-      "url": "tables/table-21.csv",
-      "tableSchema": {
-        "columns": [
-          {
-            "name": "digital-and-nondigital-data-sets-sourced-fro-pro",
-            "titles": "Digital and nondigital data sets sourced fro processes that systematically record informat within health institutions and facilities (e.g., Service Availabi and Readiness Assessment)",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "m-io-li",
-            "titles": "m io li",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "t",
-            "titles": "t",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "n-y",
-            "titles": "n y",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-5",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "data-tools-that-are-used-to-facilitate-decision-",
-            "titles": "Data tools that are used to facilitate decision- making",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          }
-        ]
-      },
-      "fac:anchor": null,
-      "fac:headerRow": 1,
-      "fac:extent": {
-        "rows": 3,
-        "columns": 6,
-        "source": "measured"
-      },
-      "fac:label": "Table 21",
-      "fac:pages": [
-        33
-      ],
-      "fac:extracted": {
-        "tool": "pdf-tables.py",
-        "version": "b3b9e4012c21",
-        "backend": "pdfplumber",
-        "backendVersion": "0.11.10",
-        "confidence": null,
-        "id": "tab-p033-073",
-        "at": "2026-11-14"
-      }
-    },
-    {
-      "url": "tables/table-22.csv",
-      "tableSchema": {
-        "columns": [
-          {
-            "name": "hat-are-reused-wit-ea",
-            "titles": "hat are reused wit ea",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "hi",
-            "titles": "hi",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "n-m",
-            "titles": "n m",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "ore-than-one-us",
-            "titles": "ore than one us",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "e-c",
-            "titles": "e c",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "as",
-            "titles": "as",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          }
-        ]
-      },
-      "fac:anchor": null,
-      "fac:headerRow": 1,
-      "fac:extent": {
-        "rows": 3,
-        "columns": 6,
-        "source": "measured"
-      },
-      "fac:label": "Table 22",
-      "fac:pages": [
-        33
-      ],
-      "fac:extracted": {
-        "tool": "pdf-tables.py",
-        "version": "b3b9e4012c21",
-        "backend": "pdfplumber",
-        "backendVersion": "0.11.10",
-        "confidence": null,
-        "id": "tab-p033-077",
-        "at": "2026-11-14"
-      }
-    },
-    {
-      "url": "tables/table-23.csv",
-      "tableSchema": {
-        "columns": [
-          {
-            "name": "int",
-            "titles": "INT",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "roduction",
-            "titles": "RODUCTION",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "strategy-a",
-            "titles": "STRATEGY A",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "rchitecture-impl",
-            "titles": "RCHITECTURE IMPL",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "emen",
-            "titles": "EMEN",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "tation-tra",
-            "titles": "TATION TRA",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "ceability",
-            "titles": "CEABILITY",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "country-e",
-            "titles": "COUNTRY E",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "xamples-an",
-            "titles": "XAMPLES AN",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          }
-        ]
-      },
-      "fac:anchor": null,
-      "fac:headerRow": 1,
-      "fac:extent": {
-        "rows": 80,
-        "columns": 9,
-        "source": "measured"
-      },
-      "fac:label": "Table 23",
-      "fac:pages": [
-        35
-      ],
-      "fac:extracted": {
-        "tool": "pdf-tables.py",
-        "version": "b3b9e4012c21",
-        "backend": "pdfplumber",
-        "backendVersion": "0.11.10",
-        "confidence": null,
-        "id": "tab-p035-079",
-        "at": "2026-11-14"
-      }
-    },
-    {
-      "url": "tables/table-24.csv",
-      "tableSchema": {
-        "columns": [
-          {
-            "name": "maturity-based",
-            "titles": "Maturity-based",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "architecture-moving-f",
-            "titles": "architecture: moving f",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "rom-scismm",
-            "titles": "rom SCISMM",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-4",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "digitalizing-key",
-            "titles": "digitalizing key",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "health",
-            "titles": "health",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "supply-c",
-            "titles": "supply c",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          }
-        ]
-      },
-      "fac:anchor": null,
-      "fac:headerRow": 1,
-      "fac:extent": {
-        "rows": 40,
-        "columns": 7,
-        "source": "measured"
-      },
-      "fac:label": "Table 24",
-      "fac:pages": [
-        36
-      ],
-      "fac:extracted": {
-        "tool": "pdf-tables.py",
-        "version": "b3b9e4012c21",
-        "backend": "pdfplumber",
-        "backendVersion": "0.11.10",
-        "confidence": null,
-        "id": "tab-p036-080",
-        "at": "2026-11-14"
-      }
-    },
-    {
-      "url": "tables/table-25.csv",
-      "tableSchema": {
-        "columns": [
-          {
-            "name": "oducti",
-            "titles": "ODUCTI",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "on",
-            "titles": "ON",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "strategy",
-            "titles": "STRATEGY",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "architecture",
-            "titles": "ARCHITECTURE",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "implementat",
-            "titles": "IMPLEMENTAT",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "ion-traceability",
-            "titles": "ION TRACEABILITY",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "country-exampl",
-            "titles": "COUNTRY EXAMPL",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "es",
-            "titles": "ES",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          }
-        ]
-      },
-      "fac:anchor": null,
-      "fac:headerRow": 1,
-      "fac:extent": {
-        "rows": 45,
-        "columns": 8,
-        "source": "measured"
-      },
-      "fac:label": "Table 25",
-      "fac:pages": [
-        37
-      ],
-      "fac:extracted": {
-        "tool": "pdf-tables.py",
-        "version": "b3b9e4012c21",
-        "backend": "pdfplumber",
-        "backendVersion": "0.11.10",
-        "confidence": null,
-        "id": "tab-p037-081",
-        "at": "2026-11-14"
-      }
-    },
-    {
-      "url": "tables/table-26.csv",
-      "tableSchema": {
-        "columns": [
-          {
-            "name": "e-follow",
-            "titles": "e follow",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "ing-governance",
-            "titles": "ing governance",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "options-for-an-archite",
-            "titles": "options for an archite",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "cture-th",
-            "titles": "cture th",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "at",
-            "titles": "at",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-6",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "appr",
-            "titles": "appr",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "oach-which-resembles",
-            "titles": "oach, which resembles",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "the-gener",
-            "titles": "the gener",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          }
-        ]
-      },
-      "fac:anchor": null,
-      "fac:headerRow": 1,
-      "fac:extent": {
-        "rows": 44,
-        "columns": 9,
-        "source": "measured"
-      },
-      "fac:label": "Table 26",
-      "fac:pages": [
-        38
-      ],
-      "fac:extracted": {
-        "tool": "pdf-tables.py",
-        "version": "b3b9e4012c21",
-        "backend": "pdfplumber",
-        "backendVersion": "0.11.10",
-        "confidence": null,
-        "id": "tab-p038-082",
-        "at": "2026-11-14"
-      }
-    },
-    {
-      "url": "tables/table-27.csv",
-      "tableSchema": {
-        "columns": [
-          {
-            "name": "oduction",
-            "titles": "ODUCTION",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "strategy",
-            "titles": "STRATEGY",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-3",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-4",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "architecture",
-            "titles": "ARCHITECTURE",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-6",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "implementat",
-            "titles": "IMPLEMENTAT",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "ion",
-            "titles": "ION",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "traceability-co",
-            "titles": "TRACEABILITY CO",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "untry",
-            "titles": "UNTRY",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "examples",
-            "titles": "EXAMPLES",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "annexe",
-            "titles": "ANNEXE",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          }
-        ]
-      },
-      "fac:anchor": null,
-      "fac:headerRow": 1,
-      "fac:extent": {
-        "rows": 48,
-        "columns": 12,
-        "source": "measured"
-      },
-      "fac:label": "Table 27",
-      "fac:pages": [
-        39
-      ],
-      "fac:extracted": {
-        "tool": "pdf-tables.py",
-        "version": "b3b9e4012c21",
-        "backend": "pdfplumber",
-        "backendVersion": "0.11.10",
-        "confidence": null,
-        "id": "tab-p039-083",
-        "at": "2026-11-14"
-      }
-    },
-    {
-      "url": "tables/table-28.csv",
+      "url": "tables/table-11.csv",
       "tableSchema": {
         "columns": [
           {
@@ -1829,7 +553,7 @@
         "columns": 2,
         "source": "measured"
       },
-      "fac:label": "Table 28",
+      "fac:label": "Table 11",
       "fac:pages": [
         42
       ],
@@ -1840,11 +564,11 @@
         "backendVersion": "0.11.10",
         "confidence": null,
         "id": "tab-p042-088",
-        "at": "2026-11-14"
+        "at": "2026-11-15"
       }
     },
     {
-      "url": "tables/table-29.csv",
+      "url": "tables/table-12.csv",
       "tableSchema": {
         "columns": [
           {
@@ -1910,7 +634,7 @@
         "columns": 9,
         "source": "measured"
       },
-      "fac:label": "Table 29",
+      "fac:label": "Table 12",
       "fac:pages": [
         43
       ],
@@ -1921,74 +645,11 @@
         "backendVersion": "0.11.10",
         "confidence": null,
         "id": "tab-p043-089",
-        "at": "2026-11-14"
+        "at": "2026-11-15"
       }
     },
     {
-      "url": "tables/table-30.csv",
-      "tableSchema": {
-        "columns": [
-          {
-            "name": "roduction-strategy",
-            "titles": "RODUCTION STRATEGY",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "architecture",
-            "titles": "ARCHITECTURE",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-3",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "implementation",
-            "titles": "IMPLEMENTATION",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "traceability",
-            "titles": "TRACEABILITY",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "country-exa",
-            "titles": "COUNTRY EXA",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          }
-        ]
-      },
-      "fac:anchor": null,
-      "fac:headerRow": 1,
-      "fac:extent": {
-        "rows": 53,
-        "columns": 6,
-        "source": "measured"
-      },
-      "fac:label": "Table 30",
-      "fac:pages": [
-        44
-      ],
-      "fac:extracted": {
-        "tool": "pdf-tables.py",
-        "version": "b3b9e4012c21",
-        "backend": "pdfplumber",
-        "backendVersion": "0.11.10",
-        "confidence": null,
-        "id": "tab-p044-090",
-        "at": "2026-11-14"
-      }
-    },
-    {
-      "url": "tables/table-31.csv",
+      "url": "tables/table-13.csv",
       "tableSchema": {
         "columns": [
           {
@@ -2036,11 +697,11 @@
         "backendVersion": "0.11.10",
         "confidence": null,
         "id": "tab-p045-091",
-        "at": "2026-11-14"
+        "at": "2026-11-15"
       }
     },
     {
-      "url": "tables/table-32.csv",
+      "url": "tables/table-14.csv",
       "tableSchema": {
         "columns": [
           {
@@ -2088,11 +749,11 @@
         "backendVersion": "0.11.10",
         "confidence": null,
         "id": "tab-p046-092",
-        "at": "2026-11-14"
+        "at": "2026-11-15"
       }
     },
     {
-      "url": "tables/table-33.csv",
+      "url": "tables/table-15.csv",
       "tableSchema": {
         "columns": [
           {
@@ -2134,11 +795,11 @@
         "backendVersion": "0.11.10",
         "confidence": null,
         "id": "tab-p050-103",
-        "at": "2026-11-14"
+        "at": "2026-11-15"
       }
     },
     {
-      "url": "tables/table-34.csv",
+      "url": "tables/table-16.csv",
       "tableSchema": {
         "columns": [
           {
@@ -2162,7 +823,7 @@
         "columns": 2,
         "source": "measured"
       },
-      "fac:label": "Table 34",
+      "fac:label": "Table 16",
       "fac:pages": [
         51,
         52
@@ -2174,284 +835,11 @@
         "backendVersion": "0.11.10",
         "confidence": null,
         "id": "tab-p051-107",
-        "at": "2026-11-14"
+        "at": "2026-11-15"
       }
     },
     {
-      "url": "tables/table-35.csv",
-      "tableSchema": {
-        "columns": [
-          {
-            "name": "using-th",
-            "titles": "Using th",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "e-dhs",
-            "titles": "e DHS",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "c-to-im",
-            "titles": "C to im",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "pl",
-            "titles": "pl",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "eme",
-            "titles": "eme",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "nt-traceab",
-            "titles": "nt traceab",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "ility",
-            "titles": "ility",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-8",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-9",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          }
-        ]
-      },
-      "fac:anchor": null,
-      "fac:headerRow": 1,
-      "fac:extent": {
-        "rows": 78,
-        "columns": 9,
-        "source": "measured"
-      },
-      "fac:label": "Table 35",
-      "fac:pages": [
-        54
-      ],
-      "fac:extracted": {
-        "tool": "pdf-tables.py",
-        "version": "b3b9e4012c21",
-        "backend": "pdfplumber",
-        "backendVersion": "0.11.10",
-        "confidence": null,
-        "id": "tab-p054-110",
-        "at": "2026-11-14"
-      }
-    },
-    {
-      "url": "tables/table-36.csv",
-      "tableSchema": {
-        "columns": [
-          {
-            "name": "col-1",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-2",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-3",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-4",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-5",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-6",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-7",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-8",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-9",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-10",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "fig",
-            "titles": "Fig.",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          }
-        ]
-      },
-      "fac:anchor": null,
-      "fac:headerRow": 1,
-      "fac:extent": {
-        "rows": 93,
-        "columns": 11,
-        "source": "measured"
-      },
-      "fac:label": "Table 36",
-      "fac:pages": [
-        59
-      ],
-      "fac:extracted": {
-        "tool": "pdf-tables.py",
-        "version": "b3b9e4012c21",
-        "backend": "pdfplumber",
-        "backendVersion": "0.11.10",
-        "confidence": null,
-        "id": "tab-p059-117",
-        "at": "2026-11-14"
-      }
-    },
-    {
-      "url": "tables/table-37.csv",
-      "tableSchema": {
-        "columns": [
-          {
-            "name": "col-1",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-2",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-3",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-4",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-5",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-6",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-7",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-8",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-9",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-10",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-11",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "fig",
-            "titles": "Fig.",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          }
-        ]
-      },
-      "fac:anchor": null,
-      "fac:headerRow": 1,
-      "fac:extent": {
-        "rows": 86,
-        "columns": 12,
-        "source": "measured"
-      },
-      "fac:label": "Table 37",
-      "fac:pages": [
-        61
-      ],
-      "fac:extracted": {
-        "tool": "pdf-tables.py",
-        "version": "b3b9e4012c21",
-        "backend": "pdfplumber",
-        "backendVersion": "0.11.10",
-        "confidence": null,
-        "id": "tab-p061-118",
-        "at": "2026-11-14"
-      }
-    },
-    {
-      "url": "tables/table-38.csv",
+      "url": "tables/table-17.csv",
       "tableSchema": {
         "columns": [
           {
@@ -2481,7 +869,7 @@
         "columns": 3,
         "source": "measured"
       },
-      "fac:label": "Table 38",
+      "fac:label": "Table 17",
       "fac:pages": [
         62
       ],
@@ -2492,86 +880,11 @@
         "backendVersion": "0.11.10",
         "confidence": null,
         "id": "tab-p062-124",
-        "at": "2026-11-14"
+        "at": "2026-11-15"
       }
     },
     {
-      "url": "tables/table-39.csv",
-      "tableSchema": {
-        "columns": [
-          {
-            "name": "introduction",
-            "titles": "INTRODUCTION",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "col-2",
-            "titles": "",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "strategy",
-            "titles": "STRATEGY",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "architecture",
-            "titles": "ARCHITECTURE",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "implementation",
-            "titles": "IMPLEMENTATION",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "traceability-count",
-            "titles": "TRACEABILITY COUNT",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "ry-examples-annex",
-            "titles": "RY EXAMPLES ANNEX",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "es",
-            "titles": "ES",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          }
-        ]
-      },
-      "fac:anchor": null,
-      "fac:headerRow": 1,
-      "fac:extent": {
-        "rows": 86,
-        "columns": 8,
-        "source": "measured"
-      },
-      "fac:label": "Table 39",
-      "fac:pages": [
-        64
-      ],
-      "fac:extracted": {
-        "tool": "pdf-tables.py",
-        "version": "b3b9e4012c21",
-        "backend": "pdfplumber",
-        "backendVersion": "0.11.10",
-        "confidence": null,
-        "id": "tab-p064-131",
-        "at": "2026-11-14"
-      }
-    },
-    {
-      "url": "tables/table-40.csv",
+      "url": "tables/table-18.csv",
       "tableSchema": {
         "columns": [
           {
@@ -2595,7 +908,7 @@
         "columns": 2,
         "source": "measured"
       },
-      "fac:label": "Table 40",
+      "fac:label": "Table 18",
       "fac:pages": [
         65
       ],
@@ -2606,86 +919,11 @@
         "backendVersion": "0.11.10",
         "confidence": null,
         "id": "tab-p065-132",
-        "at": "2026-11-14"
+        "at": "2026-11-15"
       }
     },
     {
-      "url": "tables/table-41.csv",
-      "tableSchema": {
-        "columns": [
-          {
-            "name": "strategy",
-            "titles": "STRATEGY",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "architecture",
-            "titles": "ARCHITECTURE",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "implementation",
-            "titles": "IMPLEMENTATION",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "t",
-            "titles": "T",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "raceability",
-            "titles": "RACEABILITY",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "country-examp",
-            "titles": "COUNTRY EXAMP",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "les",
-            "titles": "LES",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          },
-          {
-            "name": "annexes",
-            "titles": "ANNEXES",
-            "datatype": "any",
-            "datatypeSource": "undetermined"
-          }
-        ]
-      },
-      "fac:anchor": null,
-      "fac:headerRow": 1,
-      "fac:extent": {
-        "rows": 55,
-        "columns": 8,
-        "source": "measured"
-      },
-      "fac:label": "Table 41",
-      "fac:pages": [
-        66
-      ],
-      "fac:extracted": {
-        "tool": "pdf-tables.py",
-        "version": "b3b9e4012c21",
-        "backend": "pdfplumber",
-        "backendVersion": "0.11.10",
-        "confidence": null,
-        "id": "tab-p066-133",
-        "at": "2026-11-14"
-      }
-    },
-    {
-      "url": "tables/table-42.csv",
+      "url": "tables/table-19.csv",
       "tableSchema": {
         "columns": [
           {
@@ -2733,7 +971,7 @@
         "columns": 6,
         "source": "measured"
       },
-      "fac:label": "Table 42",
+      "fac:label": "Table 19",
       "fac:pages": [
         68
       ],
@@ -2744,11 +982,11 @@
         "backendVersion": "0.11.10",
         "confidence": null,
         "id": "tab-p068-135",
-        "at": "2026-11-14"
+        "at": "2026-11-15"
       }
     },
     {
-      "url": "tables/table-43.csv",
+      "url": "tables/table-20.csv",
       "tableSchema": {
         "columns": [
           {
@@ -2808,7 +1046,7 @@
         "columns": 8,
         "source": "measured"
       },
-      "fac:label": "Table 43",
+      "fac:label": "Table 20",
       "fac:pages": [
         70
       ],
@@ -2819,11 +1057,11 @@
         "backendVersion": "0.11.10",
         "confidence": null,
         "id": "tab-p070-142",
-        "at": "2026-11-14"
+        "at": "2026-11-15"
       }
     },
     {
-      "url": "tables/table-44.csv",
+      "url": "tables/table-21.csv",
       "tableSchema": {
         "columns": [
           {
@@ -2907,7 +1145,7 @@
         "columns": 12,
         "source": "measured"
       },
-      "fac:label": "Table 44",
+      "fac:label": "Table 21",
       "fac:pages": [
         71
       ],
@@ -2918,11 +1156,11 @@
         "backendVersion": "0.11.10",
         "confidence": null,
         "id": "tab-p071-143",
-        "at": "2026-11-14"
+        "at": "2026-11-15"
       }
     },
     {
-      "url": "tables/table-45.csv",
+      "url": "tables/table-22.csv",
       "tableSchema": {
         "columns": [
           {
@@ -2976,7 +1214,7 @@
         "columns": 7,
         "source": "measured"
       },
-      "fac:label": "Table 45",
+      "fac:label": "Table 22",
       "fac:pages": [
         72,
         73,
@@ -2991,7 +1229,7 @@
         "backendVersion": "0.11.10",
         "confidence": null,
         "id": "tab-p072-144",
-        "at": "2026-11-14"
+        "at": "2026-11-15"
       }
     }
   ]

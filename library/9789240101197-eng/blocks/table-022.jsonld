@@ -15,16 +15,17 @@
   "label": "Table 22",
   "file": "../tables/table-22.csv",
   "headers": [
-    "hat are reused wit ea",
-    "hi",
-    "n m",
-    "ore than one us",
-    "e c",
-    "as"
+    "Role category",
+    "Role",
+    "Phase(s) in which it is required",
+    "",
+    "Position type",
+    "Skill sets",
+    "Responsibilities"
   ],
-  "pageStart": 33,
-  "pageEnd": 33,
-  "derivedFrom": "library/9789240101197-eng/sections/sec-015",
+  "pageStart": 72,
+  "pageEnd": 76,
+  "derivedFrom": "library/9789240101197-eng/sections/sec-037",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/9789240101197-eng",
   "provenance": "ingested"
 }
