@@ -102,6 +102,105 @@ export interface BuildIrisOptions {
    * byte-identical manifests.
    */
   generatedAt?: string;
+  /**
+   * Directory of `folio-reference/v1` nodes: the reference lists extracted
+   * from the library's documents (`references/`). When omitted, this
+   * repository's `references/` is read for a local build, and none for a
+   * `recordsDir` build.
+   */
+  referencesDir?: string;
+}
+
+/**
+ * The KG IRI of a reference: core's `referenceIri(key)` (`references/<key>`)
+ * resolved against cat-harness's `FOLIO_BASE`, the IRI every `\cite{key}` and
+ * every bibliography page already names. Written out here so this build
+ * needs no mounted layer.
+ */
+export const REFERENCE_BASE = 'https://litlfred.github.io/folio/references/';
+const CITO_CITES = 'http://purl.org/spar/cito/cites';
+const FABIO_WORK = 'http://purl.org/spar/fabio/Work';
+const BIBO_DOI = 'http://purl.org/ontology/bibo/doi';
+
+interface ReferenceFile {
+  id?: string;
+  title?: string;
+  printed?: string;
+  derivedFrom?: string;
+  heldAt?: string;
+  DOI?: string;
+  URL?: string;
+  issued?: { 'date-parts'?: unknown[][]; raw?: string };
+}
+
+/**
+ * The Handle of a library document from its path: the catalogue node whose
+ * `libraryId` is its slug says it (`library/9789241549912-eng/…` →
+ * `10665/250796`); a slug that IS a Handle says it too
+ * (`library/10665-117378/…` → `10665/117378`).
+ */
+export function handleOfLibraryPath(p: string | undefined, bySlug: ReadonlyMap<string, string> = new Map()): string | undefined {
+  const slug = p ? /^library\/([^/]+)/.exec(p)?.[1] : undefined;
+  if (!slug) return undefined;
+  const known = bySlug.get(slug);
+  if (known) return known;
+  const m = /^(\d+)-(\d+)$/.exec(slug);
+  return m ? `${m[1]}/${m[2]}` : undefined;
+}
+
+/** Library slug → Handle, from the catalogue nodes that name both (`libraryId`, `handle`). */
+export function libraryHandles(nodesDir: string): Map<string, string> {
+  const out = new Map<string, string>();
+  if (!fs.existsSync(nodesDir)) return out;
+  for (const f of fs.readdirSync(nodesDir).filter((n) => n.endsWith('.json')).sort()) {
+    const n = JSON.parse(fs.readFileSync(path.join(nodesDir, f), 'utf8')) as { libraryId?: unknown; handle?: unknown };
+    if (typeof n.libraryId === 'string' && typeof n.handle === 'string') out.set(n.libraryId, n.handle);
+  }
+  return out;
+}
+
+/**
+ * The reference lists extracted from IRIS documents, as quads (owner,
+ * 2026-11-15, card Q-BIBSCALE-1: "A. Oxigraph + sharded text index"):
+ * - in the spine, the citation edges — the document `cito:cites` the
+ *   reference, and the IRIS item the library holds a copy of, when the
+ *   reference is one (`heldAt`);
+ * - in the metadata graph and the citing document's community partition,
+ *   what the reference says: `fabio:Work`, its title or its citation as
+ *   printed (`dcterms:bibliographicCitation`), year, DOI and URL.
+ */
+export function referenceQuads(
+  dir: string,
+  handleToCommunity: Readonly<Record<string, string>>,
+  bySlug: ReadonlyMap<string, string> = new Map(),
+): { spine: string[]; byGraph: Record<string, string[]> } {
+  const spine: string[] = [];
+  const byGraph: Record<string, string[]> = {};
+  if (!fs.existsSync(dir)) return { spine, byGraph };
+  for (const f of fs.readdirSync(dir).filter((n) => n.endsWith('.json')).sort()) {
+    const r = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')) as ReferenceFile;
+    if (!r.id) continue;
+    const doc = handleOfLibraryPath(r.derivedFrom, bySlug);
+    const ref = `<${REFERENCE_BASE}${encodeURIComponent(r.id)}>`;
+    if (doc) {
+      spine.push(`<https://hdl.handle.net/${doc}> <${CITO_CITES}> ${ref} <${GRAPH_IRIS_SPINE}> .`);
+      const held = handleOfLibraryPath(r.heldAt, bySlug);
+      if (held) spine.push(`<https://hdl.handle.net/${doc}> <${CITO_CITES}> <https://hdl.handle.net/${held}> <${GRAPH_IRIS_SPINE}> .`);
+    }
+    const comm = doc ? handleToCommunity[doc] : undefined;
+    const g = comm ? `${GRAPH_PREFIX_COMMUNITY}${comm}` : GRAPH_IRIS_METADATA;
+    const triples = [`${ref} <${RDF_NS}type> <${FABIO_WORK}>`];
+    if (r.title) triples.push(`${ref} <${DCTERMS_NS}title> ${JSON.stringify(r.title)}`);
+    if (r.printed) triples.push(`${ref} <${DCTERMS_NS}bibliographicCitation> ${JSON.stringify(r.printed)}`);
+    const year = r.issued?.['date-parts']?.[0]?.[0];
+    if (typeof year === 'number') triples.push(`${ref} <${DCTERMS_NS}issued> "${year}"^^<http://www.w3.org/2001/XMLSchema#gYear>`);
+    if (r.DOI) triples.push(`${ref} <${BIBO_DOI}> ${JSON.stringify(r.DOI)}`);
+    // A URL is an IRI only when every character of it may stand in one unescaped; else it is kept as text.
+    if (r.URL) triples.push(/^https?:\/\/[A-Za-z0-9\-._~:/?#@!$&'()*+,;=%]+$/.test(r.URL) ? `${ref} <${DCTERMS_NS}identifier> <${r.URL}>` : `${ref} <${DCTERMS_NS}identifier> ${JSON.stringify(r.URL)}`);
+    // As the Dublin Core is: in the metadata graph, and in the community's partition.
+    for (const gr of g === GRAPH_IRIS_METADATA ? [g] : [GRAPH_IRIS_METADATA, g]) (byGraph[gr] ??= []).push(...triples.map((t) => `${t} <${gr}> .`));
+  }
+  return { spine, byGraph };
 }
 
 /**
@@ -694,6 +793,15 @@ export async function buildIrisDataset(outDir: string = DIST_DIR, opts: BuildIri
         }
       }
     }
+  }
+
+  // The documents' reference lists: citation edges in the spine, the
+  // references themselves beside their citing document's metadata.
+  const refsDir = opts.referencesDir ?? (opts.recordsDir ? undefined : path.join(WHO_IRIS_ROOT, 'references'));
+  if (refsDir) {
+    const rq = referenceQuads(refsDir, handleToCommunity, opts.recordsDir ? new Map() : libraryHandles(NODES_DIR));
+    spineQuadsRaw.push(...rq.spine);
+    for (const [g, qs] of Object.entries(rq.byGraph)) (subgraphQuads[g] ??= []).push(...qs);
   }
 
   // Sort and deduplicate every subgraph's quads so unchanged partitions are byte-identical
