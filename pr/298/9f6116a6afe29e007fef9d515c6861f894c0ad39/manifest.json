@@ -1,0 +1,16 @@
+{
+  "$schema": "qa-reports-manifest/v1",
+  "key": "pr/298/9f6116a6afe29e007fef9d515c6861f894c0ad39",
+  "source": "9f6116a6afe29e007fef9d515c6861f894c0ad39",
+  "pr": 298,
+  "written_at": "2026-11-15T19:14:59.067Z",
+  "producer": {
+    "run": "https://github.com/litlfred/who-iris/actions/runs/43751121869"
+  },
+  "roots": [
+    "who-iris/test/results"
+  ],
+  "payloadTree": "127226fbe9c1b42036ccebf7fac5d771a4abc183",
+  "files": 27,
+  "bytes": 2447883
+}
