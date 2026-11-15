@@ -5,8 +5,82 @@
     {
       "block": "library/10665-192500/blocks/prose-page-001",
       "source": "sections/page-001.md",
-      "source_hash": "ad73bfe472117dc84167452fe0fdcbdadeffe0a4723646ece6e000fd2ef66bbf",
+      "source_hash": "0f8fd4a84d74ecc07aeb9f5fb188dbc979f84608450df37153fba494c7f3fade",
       "narrative": [
+        {
+          "text": "The opening page of World Health Assembly document A42/10, a progress and evaluation report on the Expanded Programme on Immunization, explains that it was updated after discussion at the Executive Board in January 1989 and reviewed by the programme's Global Advisory Group, which endorsed the activities proposed for the 1990s, including a plan to eradicate poliomyelitis by 2000. It also points to annexes on immunization coverage and on estimated deaths and cases prevented, mentions a recommended resolution, and gives a contents list, parts of which are garbled in the OCR.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "تبيّن الصفحة الافتتاحية لوثيقة جمعية الصحة العالمية ج42/10، وهي تقرير مرحلي وتقييمي عن البرنامج الموسع للتمنيع، أن التقرير حُدّث بعد مناقشته في المجلس التنفيذي في كانون الثاني/يناير 1989 واستعرضته المجموعة الاستشارية العالمية للبرنامج التي أيدت الأنشطة المقترحة لفترة التسعينات، بما فيها خطة لاستئصال شلل الأطفال بحلول عام 2000. وتشير الصفحة أيضاً إلى ملاحق عن التغطية بالتمنيع وعن التقديرات للوفيات والحالات التي تم اتقاؤها، وتذكر قراراً موصى به، وتتضمن قائمة محتويات جاء بعضها مشوهاً في النص المستخرج آلياً.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "世界卫生大会A42/10号文件是关于扩大免疫规划的进展和评价报告，其首页说明，该报告在1989年1月执行委员会讨论后作了更新，并经该规划全球咨询小组审查，该小组赞同为20世纪90年代提出的各项活动，包括到2000年根除脊髓灰质炎的计划。该页还提及关于免疫接种覆盖率以及估计避免的死亡和病例数的附件、一项建议的决议，并列出目录，其中部分内容在光学字符识别文本中出现乱码。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "La página inicial del documento A42/10 de la Asamblea Mundial de la Salud, un informe sobre los progresos y la evaluación del Programa Ampliado de Inmunización, explica que se actualizó tras su examen por el Consejo Ejecutivo en enero de 1989 y que lo revisó el Grupo Consultivo Mundial del programa, que respaldó las actividades propuestas para el decenio de 1990, entre ellas un plan para erradicar la poliomielitis para el año 2000. También remite a anexos sobre la cobertura de inmunización y las defunciones y casos evitados estimados, menciona una resolución recomendada e incluye un índice, parte del cual aparece ilegible en el texto OCR.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "La page d'ouverture du document A42/10 de l'Assemblée mondiale de la Santé, rapport de situation et d'évaluation sur le Programme élargi de vaccination, explique qu'il a été mis à jour après un débat au Conseil exécutif en janvier 1989 et examiné par le Groupe consultatif mondial du programme, qui a approuvé les activités proposées pour les années 1990, dont un plan d'éradication de la poliomyélite d'ici l'an 2000. Elle renvoie aussi à des annexes sur la couverture vaccinale et sur les décès et cas évités estimés, mentionne une résolution recommandée et présente une table des matières, en partie illisible dans le texte OCR.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "На первой странице документа Всемирной ассамблеи здравоохранения A42/10 — доклада о ходе работы и оценке Расширенной программы иммунизации — поясняется, что доклад был обновлён после обсуждения на Исполнительном комитете в январе 1989 г. и рассмотрен Глобальной консультативной группой программы, которая одобрила мероприятия, предложенные на 1990-е годы, включая план ликвидации полиомиелита к 2000 г. Здесь же упоминаются приложения об охвате иммунизацией и о расчётном числе предотвращённых смертей и случаев заболевания, рекомендуемая резолюция и приводится оглавление, частично искажённое при распознавании текста.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        }
+      ],
+      "superseded": [
         {
           "text": "The cover page and opening note of a progress and evaluation report on the Expanded Programme on Immunization (EPI) for the World Health Assembly, explaining that it was updated after Executive Board discussion and that the programme's Global Advisory Group endorsed its proposed targets for the coming decade, including a plan of action to eradicate poliomyelitis. It also mentions an annex of tables on immunization coverage and on deaths and cases prevented, and lists the report's contents, though much of the Arabic OCR on this page is garbled.",
           "lang": "en",
@@ -84,8 +158,82 @@
     {
       "block": "library/10665-192500/blocks/prose-page-002",
       "source": "sections/page-002.md",
-      "source_hash": "e8a7f52fb47ec233d5cf339325f748593637f8fb7a328ba532f28d4da2cace62",
+      "source_hash": "444d926aaec7f4bdfa95a7908d412b803ce33ffacf84a0e1e9a353e80e8c8e87",
       "narrative": [
+        {
+          "text": "Opens the introduction by describing a quiet revolution in public health over fifteen years, in which immunization services in developing countries now reach about half of the world's children with measles vaccine and larger shares with BCG and third doses of DTP or polio vaccine. It estimates the deaths from measles, pertussis and neonatal tetanus and the poliomyelitis cases prevented each year, and introduces Figure 1 on coverage of infants and pregnant women by WHO region as of December 1988, with several figures illegible in the OCR.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "يفتتح المقدمة بوصف ثورة هادئة في مجال الصحة العمومية على مدى خمسة عشر عاماً، أصبحت خلالها خدمات التمنيع في البلدان النامية توفر لقاح الحصبة لنحو نصف أطفال العالم، وتصل بنسب أعلى إلى لقاح بي سي جي والجرعة الثالثة من اللقاح الثلاثي أو لقاح شلل الأطفال. ويقدّر عدد الوفيات الناجمة عن الحصبة والشاهوق والكزاز الوليدي وحالات شلل الأطفال التي يتم اتقاؤها سنوياً، ويعرض الشكل 1 عن تغطية الرضّع والحوامل حسب أقاليم المنظمة حتى كانون الأول/ديسمبر 1988، مع عدة أرقام غير مقروءة في النص المستخرج آلياً.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "引言开篇描述了十五年来公共卫生领域的一场静悄悄的革命：发展中国家的免疫服务如今已为全世界约一半儿童接种麻疹疫苗，卡介苗和第三剂百白破或脊灰疫苗的覆盖比例更高。该页估算了每年避免的麻疹、百日咳和新生儿破伤风死亡人数以及脊髓灰质炎病例数，并介绍了图1，按世卫组织区域显示截至1988年12月婴儿和孕妇的免疫覆盖率，其中若干数字在光学字符识别文本中无法辨认。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Abre la introducción describiendo una revolución silenciosa en la salud pública a lo largo de quince años, en la que los servicios de inmunización de los países en desarrollo llegan ahora a cerca de la mitad de los niños del mundo con la vacuna antisarampionosa y a proporciones mayores con la BCG y la tercera dosis de DTP o de vacuna antipoliomielítica. Estima las defunciones por sarampión, tos ferina y tétanos neonatal y los casos de poliomielitis que se evitan cada año, y presenta la figura 1 sobre la cobertura de lactantes y embarazadas por región de la OMS a diciembre de 1988, con varias cifras ilegibles en el texto OCR.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Ouvre l'introduction en décrivant une révolution silencieuse de la santé publique en quinze ans, au cours de laquelle les services de vaccination des pays en développement atteignent désormais environ la moitié des enfants du monde avec le vaccin antirougeoleux et des proportions plus élevées avec le BCG et la troisième dose de DTC ou de vaccin antipoliomyélitique. Elle estime les décès par rougeole, coqueluche et tétanos néonatal et les cas de poliomyélite évités chaque année, et présente la figure 1 sur la couverture des nourrissons et des femmes enceintes par Région de l'OMS en décembre 1988, plusieurs chiffres étant illisibles dans le texte OCR.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Открывает введение описанием «тихой революции» в общественном здравоохранении за пятнадцать лет, в результате которой службы иммунизации в развивающихся странах теперь охватывают коревой вакциной около половины детей мира, а БЦЖ и третьей дозой АКДС или полиовакцины — ещё большую долю. Приводится оценка ежегодно предотвращаемых смертей от кори, коклюша и столбняка новорождённых и случаев полиомиелита, а также рисунок 1 об охвате иммунизацией детей грудного возраста и беременных женщин по регионам ВОЗ на декабрь 1988 г.; ряд цифр при распознавании текста неразборчив.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        }
+      ],
+      "superseded": [
         {
           "text": "Opens the introduction by describing a quiet revolution in public health over the past fifteen years, as immunization services in developing countries grew from almost nothing to reach a large share of the world's children with measles, polio, DPT and BCG vaccines, preventing over a million deaths a year from measles, whooping cough and neonatal tetanus as well as many polio cases. A figure shows estimated immunization coverage of infants, and of pregnant women against tetanus, by WHO region.",
           "lang": "en",
@@ -242,8 +390,82 @@
     {
       "block": "library/10665-192500/blocks/prose-page-004",
       "source": "sections/page-004.md",
-      "source_hash": "ff600927d03192fe835e50f73ee9e529b83eefe619bea61745f721565d1915be",
+      "source_hash": "f2e7fce29633e5e21ec48b18ba5070c1d6efc25512b4cd702dcf9e927cde0839",
       "narrative": [
+        {
+          "text": "Carries the caption of a figure mapping countries and areas where coverage with the third dose of polio or DTP vaccine by 12 months of age is above or below a threshold, with the map itself unreadable in the extracted text.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "يتضمن عنوان شكل يبيّن على خريطة البلدان والمناطق التي تزيد فيها التغطية بالجرعة الثالثة من لقاح شلل الأطفال أو اللقاح الثلاثي حتى عمر 12 شهراً عن عتبة معينة أو تقل عنها، أما الخريطة نفسها فغير مقروءة في النص المستخرج.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "载有一幅地图的图题，该图显示12月龄前第三剂脊灰疫苗或百白破疫苗覆盖率高于或低于某一阈值的国家和地区，地图本身在提取文本中无法辨认。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Contiene el título de una figura que representa en un mapa los países y zonas donde la cobertura con la tercera dosis de vacuna antipoliomielítica o DTP a los 12 meses de edad está por encima o por debajo de un umbral; el mapa en sí resulta ilegible en el texto extraído.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Contient la légende d'une figure cartographiant les pays et zones où la couverture par la troisième dose de vaccin antipoliomyélitique ou de DTC à 12 mois est supérieure ou inférieure à un seuil, la carte elle-même étant illisible dans le texte extrait.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Содержит подпись к рисунку-карте, на которой показаны страны и территории с охватом третьей дозой полиовакцины или АКДС к 12 месяцам выше или ниже определённого порога; сама карта в извлечённом тексте неразборчива.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        }
+      ],
+      "superseded": [
         {
           "text": "A figure page showing countries and areas with immunization coverage above or below a set level for the third dose of polio or DTP vaccine in children up to 12 months old in 1988, with the map itself lost in the OCR text.",
           "lang": "en",
@@ -795,8 +1017,82 @@
     {
       "block": "library/10665-192500/blocks/prose-page-011",
       "source": "sections/page-011.md",
-      "source_hash": "d907f845457d28a1ea7171f97a8130638539361e302bc3bb0e60dd00f1602a21",
+      "source_hash": "3a0e17481da679c2a406948f6be00216d95f45e93de4bc8d9da59c4260b833de",
       "narrative": [
+        {
+          "text": "Reviews progress in the Eastern Mediterranean Region, where immunization was accelerated through better intersectoral cooperation, social mobilization and the commitment of political and religious leaders, while five slower-progressing countries received special attention, a meeting in Cairo addressed neonatal tetanus, and the Regional Committee endorsed a regional poliomyelitis eradication plan in October 1988. It then turns to the Western Pacific Region, describing progress in all countries, China's coverage targets and survey results at provincial and county level, and a campaign that raised coverage in Vientiane in the Lao People's Democratic Republic.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "يستعرض التقدم المحرز في إقليم شرق المتوسط، حيث جرى التعجيل بالتمنيع عبر تعاون أفضل بين القطاعات والتعبئة الاجتماعية والتزام القادة السياسيين والدينيين، بينما حظيت خمسة بلدان كان تقدمها أبطأ باهتمام خاص، وتناول اجتماع في القاهرة الكزاز الوليدي، وأقرت اللجنة الإقليمية في تشرين الأول/أكتوبر 1988 خطة إقليمية لاستئصال شلل الأطفال. ثم ينتقل إلى إقليم غرب المحيط الهادئ، فيصف التقدم في جميع البلدان، وأهداف الصين للتغطية ونتائج المسوح على مستوى المقاطعات والدوائر، وحملة رفعت التغطية في فينتيان في جمهورية لاو الديمقراطية الشعبية.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "回顾了东地中海区域的进展：通过改善部门间合作、社会动员以及政治和宗教领袖的承诺加快了免疫工作，五个进展较慢的国家受到特别关注，在开罗举行的会议讨论了新生儿破伤风问题，区域委员会于1988年10月核可了区域根除脊髓灰质炎计划。随后转向西太平洋区域，介绍了所有国家取得的进展、中国在省和县两级的覆盖率目标及调查结果，以及老挝人民民主共和国万象一次提高覆盖率的运动。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Examina los progresos en la Región del Mediterráneo Oriental, donde la inmunización se aceleró gracias a una mejor cooperación intersectorial, la movilización social y el compromiso de los dirigentes políticos y religiosos, mientras que cinco países con avances más lentos recibieron atención especial, una reunión en El Cairo abordó el tétanos neonatal y el Comité Regional respaldó en octubre de 1988 un plan regional de erradicación de la poliomielitis. A continuación pasa a la Región del Pacífico Occidental y describe los avances en todos los países, las metas de cobertura de China y los resultados de encuestas a nivel provincial y de condado, y una campaña que elevó la cobertura en Vientiane, en la República Democrática Popular Lao.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Passe en revue les progrès de la Région de la Méditerranée orientale, où la vaccination a été accélérée grâce à une meilleure coopération intersectorielle, à la mobilisation sociale et à l'engagement des dirigeants politiques et religieux, tandis que cinq pays progressant plus lentement ont fait l'objet d'une attention particulière, qu'une réunion au Caire a traité du tétanos néonatal et que le Comité régional a approuvé en octobre 1988 un plan régional d'éradication de la poliomyélite. Elle aborde ensuite la Région du Pacifique occidental, décrivant les progrès dans tous les pays, les objectifs de couverture de la Chine et les résultats d'enquêtes au niveau des provinces et des districts, ainsi qu'une campagne ayant relevé la couverture à Vientiane, en République démocratique populaire lao.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Рассматривается прогресс в Регионе Восточного Средиземноморья, где иммунизация была ускорена благодаря улучшению межсекторального сотрудничества, социальной мобилизации и приверженности политических и религиозных лидеров; пяти странам с более медленным прогрессом уделялось особое внимание, совещание в Каире было посвящено столбняку новорождённых, а Региональный комитет в октябре 1988 г. одобрил региональный план ликвидации полиомиелита. Далее речь идёт о Регионе Западной части Тихого океана: о прогрессе во всех странах, о целевых показателях охвата в Китае и результатах обследований на уровне провинций и уездов, а также о кампании, повысившей охват во Вьентьяне (Лаосская Народно-Демократическая Республика).",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        }
+      ],
+      "superseded": [
         {
           "text": "Describes progress in the Eastern Mediterranean Region through integration with primary health care, intersectoral cooperation and social mobilization, special help for the slowest-progressing countries affected by conflict and economic hardship (Afghanistan, Sudan, Somalia and the two Yemens), the continuing heavy toll of neonatal tetanus, and a regional poliomyelitis eradication plan endorsed by the regional committee. It then reports progress in the Western Pacific Region, including China's provincial and county coverage targets being met early in most surveyed provinces and higher coverage in the Lao People's Democratic Republic after an intensive campaign in Vientiane.",
           "lang": "en",
@@ -874,8 +1170,82 @@
     {
       "block": "library/10665-192500/blocks/prose-page-012",
       "source": "sections/page-012.md",
-      "source_hash": "36b5297412ac3594156ed5478b535cc54b53a13640cfdf719f713c449e5b59b4",
+      "source_hash": "b03b55b84891617776e3de789fef589c2cbf52afd7231bb4fe4566ad6ca37e11",
       "narrative": [
+        {
+          "text": "Continues the Western Pacific review with gains in fully immunized children and in disease surveillance in the Philippines, vaccine production in China, Viet Nam and the Philippines, and WHO-supported transfer of hepatitis B vaccine production technology from Japan to China, along with plasma-based hepatitis B vaccine work with Tonga, Samoa and Fiji. It reports the Regional Committee's September 1988 resolution to eradicate poliomyelitis from the region, noting many countries without cases for years and marked declines in others. A new section on obstacles to reaching 1990 argues that, although the 1987 coverage figures seem discouraging, prospects are good because slow early growth followed by rapid gains had been expected, and recalls that the programme began with training, sound national plans and gradual geographic expansion.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "يواصل استعراض إقليم غرب المحيط الهادئ بذكر الزيادة في نسبة الأطفال المستكملين للتمنيع وتحسين ترصد الأمراض في الفلبين، وإنتاج اللقاحات في الصين وفييت نام والفلبين، ونقل تكنولوجيا إنتاج لقاح التهاب الكبد «ب» من اليابان إلى الصين بدعم من المنظمة، إلى جانب العمل مع تونغا وساموا وفيجي على لقاح التهاب الكبد «ب» المستخلص من البلازما. ويورد قرار اللجنة الإقليمية في أيلول/سبتمبر 1988 باستئصال شلل الأطفال من الإقليم، مشيراً إلى بلدان كثيرة خلت من الحالات لسنوات وإلى انخفاضات ملموسة في بلدان أخرى. ويرى قسم جديد عن العوائق المتبقية أمام بلوغ عام 1990 أن التوقعات مشجعة رغم أن أرقام التغطية لعام 1987 تبدو محبطة، لأن النمو البطيء في البداية ثم السريع كان متوقعاً، ويذكّر بأن البرنامج بدأ بالتدريب ووضع خطط وطنية سليمة والتوسع الجغرافي التدريجي.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "继续回顾西太平洋区域的情况：菲律宾全程免疫儿童比例和疾病监测有所改善，中国、越南和菲律宾生产疫苗，世卫组织支持将乙型肝炎疫苗生产技术从日本转让给中国，并与汤加、萨摩亚和斐济开展以血浆为基础的乙肝疫苗工作。该页报告了区域委员会1988年9月关于在本区域根除脊髓灰质炎的决议，指出许多国家多年无病例，其他国家病例明显下降。新的一节论述实现1990年目标尚存的障碍，认为尽管1987年的覆盖率数字看似令人沮丧，但前景良好，因为原本就预期初期增长缓慢、随后迅速提高，并回顾该规划起步时侧重培训、制定完善的国家计划和逐步扩大地理范围。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Continúa el examen del Pacífico Occidental con los avances en la proporción de niños completamente inmunizados y en la vigilancia de enfermedades en Filipinas, la producción de vacunas en China, Viet Nam y Filipinas, y la transferencia, con apoyo de la OMS, de la tecnología de producción de la vacuna contra la hepatitis B del Japón a China, además de trabajos sobre vacuna contra la hepatitis B obtenida de plasma con Tonga, Samoa y Fiji. Informa de la resolución del Comité Regional de septiembre de 1988 de erradicar la poliomielitis en la región, señalando que muchos países llevan años sin casos y que en otros hubo descensos notables. Una nueva sección sobre los obstáculos para llegar a 1990 sostiene que, aunque las cifras de cobertura de 1987 parezcan desalentadoras, las perspectivas son buenas porque se esperaba un crecimiento inicial lento seguido de avances rápidos, y recuerda que el programa empezó por la formación, planes nacionales sólidos y una expansión geográfica gradual.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Poursuit l'examen du Pacifique occidental avec les progrès de la proportion d'enfants complètement vaccinés et de la surveillance des maladies aux Philippines, la production de vaccins en Chine, au Viet Nam et aux Philippines, et le transfert, avec l'appui de l'OMS, de la technologie de production du vaccin contre l'hépatite B du Japon vers la Chine, ainsi que des travaux sur un vaccin contre l'hépatite B dérivé du plasma avec les Tonga, le Samoa et les Fidji. Elle rapporte la résolution du Comité régional de septembre 1988 visant à éradiquer la poliomyélite dans la Région, en relevant que de nombreux pays n'ont pas eu de cas depuis des années et que d'autres ont connu de nettes baisses. Une nouvelle section sur les obstacles restant à franchir d'ici 1990 soutient que, si les chiffres de couverture de 1987 semblent décourageants, les perspectives sont bonnes car une croissance d'abord lente puis rapide était attendue, et rappelle que le programme a commencé par la formation, des plans nationaux solides et une extension géographique progressive.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Продолжается обзор Западной части Тихого океана: рост доли полностью иммунизированных детей и улучшение эпиднадзора на Филиппинах, производство вакцин в Китае, Вьетнаме и на Филиппинах, передача при поддержке ВОЗ технологии производства вакцины против гепатита B из Японии в Китай, а также работа с Тонга, Самоа и Фиджи над вакциной против гепатита B на основе плазмы. Сообщается о резолюции Регионального комитета от сентября 1988 г. о ликвидации полиомиелита в регионе; отмечается, что во многих странах случаев не было годами, а в других произошло заметное снижение. В новом разделе о препятствиях на пути к 1990 г. утверждается, что, хотя показатели охвата за 1987 г. выглядят обескураживающе, перспективы хорошие, поскольку изначально ожидался медленный рост с последующим быстрым подъёмом; напоминается, что программа начиналась с подготовки кадров, разработки обоснованных национальных планов и постепенного географического расширения.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        }
+      ],
+      "superseded": [
         {
           "text": "Reports gains in fully immunized children and disease surveillance in the Philippines, and describes vaccine supply in the Western Pacific Region, with China producing all EPI vaccines, Viet Nam producing some vaccines below WHO standards or in insufficient quantity, and the Philippines self-sufficient in BCG and tetanus toxoid. It notes the transfer of hepatitis B vaccine technology from Japan to China, plasma-derived vaccine work for Tonga, Samoa and Fiji, and a regional resolution to eradicate poliomyelitis, with many countries reporting no cases for years. It then begins a section on remaining obstacles to the 1990 goal, arguing that the outlook is encouraging because coverage now rests on infrastructure built through an early focus on training and step-by-step expansion.",
           "lang": "en",
@@ -1032,8 +1402,82 @@
     {
       "block": "library/10665-192500/blocks/prose-page-014",
       "source": "sections/page-014.md",
-      "source_hash": "f7236b8b7a988d648a082403c920d16f87a83174c69011bfb26ba6161acc5f27",
+      "source_hash": "be8b2cfa0044964e47276583a37071d9e7e096a1734412e2e2b55cba0695253f",
       "narrative": [
+        {
+          "text": "Presents Figure 6, comparing the highest coverage reported in 1988 with that projected for the end of 1990 for the third dose of oral polio or DTP vaccine in developing countries, grouped as the five largest, the next largest and all others. It lists the assumed coverage increases for each group behind these projections.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "يعرض الشكل 6 الذي يقارن أعلى تغطية أُبلغ عنها في عام 1988 بالتغطية المتوقعة بنهاية عام 1990 بالجرعة الثالثة من لقاح شلل الأطفال الفموي أو اللقاح الثلاثي في البلدان النامية، مصنفةً إلى أكبر خمسة بلدان والبلدان الكبيرة التالية وسائر البلدان. ويسرد الزيادات المفترضة في التغطية لكل فئة والتي تستند إليها هذه الإسقاطات.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "展示图6，对比发展中国家第三剂口服脊灰疫苗或百白破疫苗在1988年报告的最高覆盖率与预计到1990年底的覆盖率，国家分为五个最大国家、其次的较大国家和所有其他国家三组。该页列出了这些预测所依据的各组覆盖率假定增幅。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Presenta la figura 6, que compara la cobertura más alta notificada en 1988 con la prevista para finales de 1990 con la tercera dosis de vacuna antipoliomielítica oral o DTP en los países en desarrollo, agrupados en los cinco más grandes, los siguientes más grandes y todos los demás. Enumera los aumentos de cobertura supuestos para cada grupo en que se basan estas proyecciones.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Présente la figure 6, qui compare la couverture la plus élevée notifiée en 1988 à celle prévue pour fin 1990 pour la troisième dose de vaccin antipoliomyélitique oral ou de DTC dans les pays en développement, regroupés entre les cinq plus grands, les suivants par la taille et tous les autres. Elle énumère les hausses de couverture supposées pour chaque groupe qui fondent ces projections.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Приводится рисунок 6, сравнивающий наивысший охват, зарегистрированный в 1988 г., с прогнозируемым на конец 1990 г. охватом третьей дозой оральной полиовакцины или АКДС в развивающихся странах, сгруппированных на пять крупнейших, следующие по величине и все остальные. Перечисляется предполагаемый прирост охвата для каждой группы, лежащий в основе этих прогнозов.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        }
+      ],
+      "superseded": [
         {
           "text": "Presents a figure comparing the highest reported coverage with a third dose of oral polio vaccine or DPT in developing countries with the coverage projected for the end of 1990. It sets out the assumed increases behind these projections for the five largest developing countries, the next group of large countries, and all other developing countries.",
           "lang": "en",
@@ -1348,8 +1792,82 @@
     {
       "block": "library/10665-192500/blocks/prose-page-018",
       "source": "sections/page-018.md",
-      "source_hash": "2324351366abb7f4fc75b9cc21c75da0dfaca54e6d24c935a6a91ccf60416d62",
+      "source_hash": "ddc5d7bc1cfe02f5235c77505e8f2e1b0f1d468d029fe9230451fab02df2ca4c",
       "narrative": [
+        {
+          "text": "Describes the consultations behind the plan of action for poliomyelitis eradication, including an informal meeting of experts in Geneva and a review by the EPI Global Advisory Group in October 1988, and notes that the plan already frames eradication planning in five WHO regions. It lists the plan's strategies, from high immunization coverage and better surveillance to laboratory capacity, public awareness, rehabilitation and research, and gives the external resources needed, comparing the likely total cost with that of smallpox eradication.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "يصف المشاورات التي استندت إليها خطة العمل لاستئصال شلل الأطفال، بما فيها مشاورة غير رسمية للخبراء في جنيف واستعراض أجرته المجموعة الاستشارية العالمية للبرنامج الموسع للتمنيع في تشرين الأول/أكتوبر 1988، ويشير إلى أن الخطة تُستخدم بالفعل إطاراً لتخطيط الاستئصال في خمسة من أقاليم المنظمة. ويسرد استراتيجيات الخطة، من رفع التغطية بالتمنيع وتحسين الترصد إلى القدرات المختبرية والتوعية العامة والتأهيل والبحوث، ويبيّن الموارد الخارجية المطلوبة، مقارناً التكلفة الإجمالية المرجحة بتكلفة استئصال الجدري.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "介绍了根除脊髓灰质炎行动计划所依据的磋商过程，包括在日内瓦举行的非正式专家会议以及扩大免疫规划全球咨询小组于1988年10月进行的审查，并指出该计划已成为世卫组织五个区域制定根除计划的框架。该页列出计划的各项战略，从提高免疫覆盖率、改进监测到加强实验室能力、提高公众意识、康复和研究，并给出所需外部资源，将可能的总费用与根除天花的费用进行比较。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Describe las consultas en que se basa el plan de acción para la erradicación de la poliomielitis, entre ellas una reunión oficiosa de expertos en Ginebra y un examen del Grupo Consultivo Mundial del PAI en octubre de 1988, y señala que el plan ya sirve de marco para la planificación de la erradicación en cinco regiones de la OMS. Enumera las estrategias del plan, desde una alta cobertura de inmunización y una mejor vigilancia hasta la capacidad de laboratorio, la sensibilización pública, la rehabilitación y la investigación, e indica los recursos externos necesarios, comparando el costo total probable con el de la erradicación de la viruela.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Décrit les consultations à l'origine du plan d'action pour l'éradication de la poliomyélite, notamment une réunion informelle d'experts à Genève et un examen par le Groupe consultatif mondial du PEV en octobre 1988, et indique que le plan sert déjà de cadre à la planification de l'éradication dans cinq Régions de l'OMS. Elle énumère les stratégies du plan, d'une forte couverture vaccinale et d'une meilleure surveillance aux capacités de laboratoire, à la sensibilisation du public, à la réadaptation et à la recherche, et indique les ressources extérieures nécessaires, en comparant le coût total probable à celui de l'éradication de la variole.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Описываются консультации, на которых основан план действий по ликвидации полиомиелита, включая неофициальное совещание экспертов в Женеве и рассмотрение плана Глобальной консультативной группой РПИ в октябре 1988 г.; отмечается, что план уже служит основой для планирования ликвидации в пяти регионах ВОЗ. Перечисляются стратегии плана — от высокого охвата иммунизацией и улучшения эпиднадзора до лабораторного потенциала, информирования общественности, реабилитации и научных исследований — и указываются необходимые внешние ресурсы с сопоставлением вероятной общей стоимости со стоимостью ликвидации оспы.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        }
+      ],
+      "superseded": [
         {
           "text": "Lists further consultations on the poliomyelitis eradication plan of action, notes that it has already served as a framework for regional eradication plans, and sets out its main strategies: high immunization coverage in every district, better surveillance and outbreak response, stronger laboratory capacity, public awareness, information for parents and communities, improved rehabilitation services and research. It gives the estimated external resources needed for eradication, compares them with the cost of smallpox eradication, and states that overall EPI external resources will have to rise during the 1990s.",
           "lang": "en",
@@ -1585,8 +2103,82 @@
     {
       "block": "library/10665-192500/blocks/prose-page-021",
       "source": "sections/page-021.md",
-      "source_hash": "e771995362738d034af3ffbc0ab251889b2bfd38c53d1b3ccda3020c8f93e7d7",
+      "source_hash": "948b6d55478f67cebfa9745d6af1d6ff72fac4b945f837c04216f554bf84425b",
       "narrative": [
+        {
+          "text": "Annex 1, Table 1 gives estimated immunization coverage with BCG, DTP, polio, measles and tetanus toxoid as of December 1988 for the largest developing countries, ranked by number of surviving infants, with subtotals for developing countries, China, industrialized countries and the world. Footnotes give the year of each country's coverage data, and much of the numerical content is garbled in the OCR.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "يعرض الجدول 1 من الملحق 1 التقديرات للتغطية بالتمنيع بلقاح بي سي جي واللقاح الثلاثي ولقاح شلل الأطفال ولقاح الحصبة وذوفان الكزاز حتى كانون الأول/ديسمبر 1988 لأكبر البلدان النامية مرتبةً حسب عدد الرضّع الباقين على قيد الحياة، مع مجاميع فرعية للبلدان النامية والصين والبلدان الصناعية والعالم. وتبيّن الحواشي سنة بيانات التغطية لكل بلد، وجاء كثير من الأرقام مشوهاً في النص المستخرج آلياً.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "附件1表1列出截至1988年12月按存活婴儿数排序的最大发展中国家的卡介苗、百白破、脊灰、麻疹疫苗和破伤风类毒素估计免疫覆盖率，并给出发展中国家、中国、工业化国家和全世界的小计。脚注注明各国覆盖率数据的年份，表中大部分数字在光学字符识别文本中出现乱码。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "El cuadro 1 del anexo 1 presenta la cobertura de inmunización estimada con BCG, DTP, vacuna antipoliomielítica, antisarampionosa y toxoide tetánico a diciembre de 1988 para los mayores países en desarrollo, ordenados por número de lactantes supervivientes, con subtotales para los países en desarrollo, China, los países industrializados y el mundo. Las notas indican el año de los datos de cobertura de cada país, y gran parte de las cifras aparecen ilegibles en el texto OCR.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Le tableau 1 de l'annexe 1 donne la couverture vaccinale estimée par le BCG, le DTC, le vaccin antipoliomyélitique, le vaccin antirougeoleux et l'anatoxine tétanique en décembre 1988 pour les plus grands pays en développement, classés selon le nombre de nourrissons survivants, avec des sous-totaux pour les pays en développement, la Chine, les pays industrialisés et le monde. Les notes indiquent l'année des données de couverture de chaque pays, et une grande partie des chiffres est illisible dans le texte OCR.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "В таблице 1 приложения 1 приводится расчётный охват иммунизацией БЦЖ, АКДС, полиовакциной, коревой вакциной и столбнячным анатоксином на декабрь 1988 г. для крупнейших развивающихся стран, ранжированных по числу выживших младенцев, с промежуточными итогами по развивающимся странам, Китаю, промышленно развитым странам и миру в целом. В сносках указан год данных об охвате для каждой страны; значительная часть цифр при распознавании текста искажена.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        }
+      ],
+      "superseded": [
         {
           "text": "Annex table giving estimated immunization coverage with BCG, DPT, polio, measles and tetanus vaccines as of December 1988 for developing countries ranked by number of surviving infants, with subtotals and world totals. Much of the OCR of the figures and country names in this table is garbled.",
           "lang": "en",
@@ -1664,8 +2256,82 @@
     {
       "block": "library/10665-192500/blocks/prose-page-022",
       "source": "sections/page-022.md",
-      "source_hash": "513ac984459e230430b78d2cbb760269e5872685ebd8353ff60fcdf45d4cb904",
+      "source_hash": "0a83bb07eb0efd3637359e62125fb01d2eae4c3065abb7e5d72660e0d9db0380",
       "narrative": [
+        {
+          "text": "Annex 1, Table 2 estimates the yearly number of deaths from neonatal tetanus, pertussis and measles and of pertussis, measles and poliomyelitis cases prevented in developing countries other than China, as of December 1988. Its footnotes set out the assumptions used, such as population and birth rates, vaccine efficacy, reported coverage and incidence or case-fatality rates, while the table figures themselves are largely illegible in the OCR.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "يقدّر الجدول 2 من الملحق 1 العدد السنوي للوفيات الناجمة عن الكزاز الوليدي والشاهوق والحصبة ولحالات الشاهوق والحصبة وشلل الأطفال التي يتم اتقاؤها في البلدان النامية باستثناء الصين، حتى كانون الأول/ديسمبر 1988. وتوضح حواشيه الافتراضات المستخدمة، مثل عدد السكان ومعدلات المواليد ونجاعة اللقاح والتغطية المبلغ عنها ومعدلات الحدوث أو الإماتة، أما أرقام الجدول نفسها فمعظمها غير مقروء في النص المستخرج آلياً.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "附件1表2估算了截至1988年12月，除中国以外的发展中国家每年避免的新生儿破伤风、百日咳和麻疹死亡数以及百日咳、麻疹和脊髓灰质炎病例数。脚注说明了所用假设，如人口和出生率、疫苗效力、报告的覆盖率以及发病率或病死率，而表中数字本身在光学字符识别文本中大多无法辨认。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "El cuadro 2 del anexo 1 estima el número anual de defunciones por tétanos neonatal, tos ferina y sarampión y de casos de tos ferina, sarampión y poliomielitis evitados en los países en desarrollo excepto China, a diciembre de 1988. Sus notas exponen los supuestos utilizados, como la población y las tasas de natalidad, la eficacia de las vacunas, la cobertura notificada y las tasas de incidencia o de letalidad, mientras que las cifras del cuadro son en gran parte ilegibles en el texto OCR.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Le tableau 2 de l'annexe 1 estime le nombre annuel de décès par tétanos néonatal, coqueluche et rougeole et de cas de coqueluche, de rougeole et de poliomyélite évités dans les pays en développement hors Chine, en décembre 1988. Ses notes exposent les hypothèses retenues, comme la population et les taux de natalité, l'efficacité vaccinale, la couverture notifiée et les taux d'incidence ou de létalité, tandis que les chiffres du tableau sont en grande partie illisibles dans le texte OCR.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "В таблице 2 приложения 1 оценивается ежегодное число предотвращённых смертей от столбняка новорождённых, коклюша и кори и случаев коклюша, кори и полиомиелита в развивающихся странах, кроме Китая, на декабрь 1988 г. В сносках изложены использованные допущения — численность населения и рождаемость, эффективность вакцин, сообщённый охват, заболеваемость или летальность, — тогда как сами цифры таблицы при распознавании текста в основном неразборчивы.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        }
+      ],
+      "superseded": [
         {
           "text": "Annex table estimating the annual number of newborns saved from death from neonatal tetanus and of whooping cough, measles and poliomyelitis cases and deaths prevented in developing countries excluding China, for the largest countries, other developing countries and in total. Footnotes explain the assumptions on population, birth rates, vaccine efficacy and reported coverage behind the calculations, while the table's figures are largely garbled in the OCR.",
           "lang": "en",
@@ -1743,8 +2409,82 @@
     {
       "block": "library/10665-192500/blocks/prose-page-023",
       "source": "sections/page-023.md",
-      "source_hash": "615d32ea64ee26e62df469a1e31afdd211e16f1873577a5f3f1c38dd06b2a59b",
+      "source_hash": "8866e71c04f196a37269e8ff19e16742bd8945648716c84299045537746eacf3",
       "narrative": [
+        {
+          "text": "Annex 1, Table 3 estimates annual deaths from neonatal tetanus, measles and pertussis and annual poliomyelitis cases in developing countries excluding China, as of December 1988, with cumulative percentages. Footnotes explain the assumptions for each disease, including vaccine efficacy and zero coverage where no data were available, and the table layout is scrambled in the OCR.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "يقدّر الجدول 3 من الملحق 1 العدد السنوي للوفيات الناجمة عن الكزاز الوليدي والحصبة والشاهوق والعدد السنوي لحالات شلل الأطفال في البلدان النامية باستثناء الصين، حتى كانون الأول/ديسمبر 1988، مع النسب المئوية التراكمية. وتشرح الحواشي الافتراضات الخاصة بكل مرض، ومنها نجاعة اللقاح واعتبار التغطية صفراً حيث لا تتوافر بيانات، وجاء ترتيب الجدول مضطرباً في النص المستخرج آلياً.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "附件1表3估算了截至1988年12月，除中国以外的发展中国家每年新生儿破伤风、麻疹和百日咳死亡数以及每年脊髓灰质炎病例数，并给出累计百分比。脚注解释了每种疾病的假设，包括疫苗效力以及在无数据时将覆盖率视为零，表格布局在光学字符识别文本中较为混乱。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "El cuadro 3 del anexo 1 estima las defunciones anuales por tétanos neonatal, sarampión y tos ferina y los casos anuales de poliomielitis en los países en desarrollo excepto China, a diciembre de 1988, con porcentajes acumulados. Las notas explican los supuestos para cada enfermedad, como la eficacia de la vacuna y una cobertura nula cuando no había datos, y la disposición del cuadro aparece desordenada en el texto OCR.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Le tableau 3 de l'annexe 1 estime les décès annuels par tétanos néonatal, rougeole et coqueluche et les cas annuels de poliomyélite dans les pays en développement hors Chine, en décembre 1988, avec des pourcentages cumulés. Les notes expliquent les hypothèses retenues pour chaque maladie, dont l'efficacité vaccinale et une couverture nulle en l'absence de données, et la mise en page du tableau est désordonnée dans le texte OCR.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "В таблице 3 приложения 1 оцениваются ежегодное число смертей от столбняка новорождённых, кори и коклюша и ежегодное число случаев полиомиелита в развивающихся странах, кроме Китая, на декабрь 1988 г., с накопленными процентами. В сносках поясняются допущения по каждой болезни, включая эффективность вакцины и нулевой охват при отсутствии данных; структура таблицы при распознавании текста нарушена.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        }
+      ],
+      "superseded": [
         {
           "text": "Annex table estimating annual deaths of newborns and children from neonatal tetanus, measles and whooping cough, and annual poliomyelitis cases, in developing countries excluding China, with cumulative percentages. Notes set out the assumptions used, such as survey data, vaccine efficacy and treating coverage as zero where no data exist, though the extracted table layout is fragmented.",
           "lang": "en",
@@ -1901,8 +2641,82 @@
     {
       "block": "library/10665-192500/blocks/prose-page-025",
       "source": "sections/page-025.md",
-      "source_hash": "b2d2c696215f863a8630874cf69d85123df78cddf45be24b109c8cd32259a4ad",
+      "source_hash": "aa0b9791868b32adeae12b1b5d5f73ca0a4dca02e9e0091f742b2df7bdafef13",
       "narrative": [
+        {
+          "text": "Annex 2 opens the plan of action for global poliomyelitis eradication by 2000, grounding its optimism in EPI coverage gains and the goal of universal childhood immunization by 1990, and stressing better surveillance, the role of large cities in spreading the virus and the prospect of ending endemic transmission in groups of countries. It warns that reported cases may seem to rise as surveillance improves, keeps strategies and budget estimates flexible, and sets targets for 2000: no clinical cases, no wild poliovirus found anywhere, and the start of independent certification of eradication.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "يفتتح الملحق 2 خطة العمل لاستئصال شلل الأطفال من العالم بحلول عام 2000، مستنداً في تفاؤله إلى ما تحقق من تغطية في البرنامج الموسع للتمنيع وإلى هدف تمنيع جميع الأطفال بحلول عام 1990، ومؤكداً أهمية تحسين الترصد ودور المدن الكبيرة في نشر الفيروس وإمكانية القضاء على السراية المتوطنة في مجموعات من البلدان. وينبّه إلى أن الحالات المبلغ عنها قد تبدو متزايدة مع تحسن الترصد، ويُبقي الاستراتيجيات وتقديرات الميزانية مرنة، ويحدد أهدافاً لعام 2000: عدم وجود حالات سريرية، وعدم اكتشاف أي فيروس بري لشلل الأطفال في أي مكان، وبدء الإشهاد المستقل على الاستئصال.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "附件2开篇提出到2000年全球根除脊髓灰质炎的行动计划，其乐观依据是扩大免疫规划覆盖率的提高和到1990年实现儿童普遍免疫的目标，并强调改进监测、大城市在病毒传播中的作用以及在国家群组中阻断地方性传播的可能。该页提醒，随着监测改善，报告病例可能看似增加；它保持战略和预算估计的灵活性，并确定2000年的目标：无临床病例、任何地方均未发现野生脊灰病毒、启动根除的独立证实工作。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "El anexo 2 inicia el plan de acción para la erradicación mundial de la poliomielitis para el año 2000, basando su optimismo en los aumentos de cobertura del PAI y en la meta de inmunización infantil universal para 1990, y destacando la mejora de la vigilancia, el papel de las grandes ciudades en la propagación del virus y la posibilidad de interrumpir la transmisión endémica en grupos de países. Advierte que los casos notificados pueden parecer en aumento a medida que mejora la vigilancia, mantiene flexibles las estrategias y las estimaciones presupuestarias y fija metas para 2000: ningún caso clínico, ningún poliovirus salvaje detectado en ningún lugar y el inicio de la certificación independiente de la erradicación.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "L'annexe 2 ouvre le plan d'action pour l'éradication mondiale de la poliomyélite d'ici l'an 2000, fondant son optimisme sur les progrès de couverture du PEV et sur l'objectif de vaccination universelle des enfants d'ici 1990, et soulignant l'amélioration de la surveillance, le rôle des grandes villes dans la propagation du virus et la possibilité d'interrompre la transmission endémique dans des groupes de pays. Elle avertit que les cas notifiés pourraient sembler augmenter à mesure que la surveillance s'améliore, garde les stratégies et les estimations budgétaires souples et fixe des cibles pour 2000 : aucun cas clinique, aucun poliovirus sauvage détecté où que ce soit et le début de la certification indépendante de l'éradication.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Приложение 2 открывает план действий по глобальной ликвидации полиомиелита к 2000 г.; его оптимизм основан на росте охвата в рамках РПИ и цели всеобщей иммунизации детей к 1990 г., а особое внимание уделяется улучшению эпиднадзора, роли крупных городов в распространении вируса и возможности прервать эндемичную передачу в группах стран. Отмечается, что по мере улучшения эпиднадзора число зарегистрированных случаев может казаться растущим; стратегии и бюджетные оценки остаются гибкими, а на 2000 г. ставятся цели: отсутствие клинических случаев, необнаружение дикого полиовируса где-либо в мире и начало независимой сертификации ликвидации.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        }
+      ],
+      "superseded": [
         {
           "text": "Explains the grounds for optimism about poliomyelitis eradication, including rising immunization coverage, the need for better surveillance, the role of dense urban areas in spreading wild poliovirus, a possibly lower risk of re-established transmission in freed areas, and the fact that only a small share of estimated cases is reported, so improved surveillance may make incidence seem to rise. It stresses that strategies and budget estimates must stay flexible and sets the targets for 2000: no clinical polio associated with wild virus, no wild poliovirus found anywhere in community or environmental samples, and the start of independent certification of global eradication.",
           "lang": "en",
@@ -2217,8 +3031,82 @@
     {
       "block": "library/10665-192500/blocks/prose-page-029",
       "source": "sections/page-029.md",
-      "source_hash": "ea2e9104f3e68b1df811f3744567b41d272eec085efede27db4d75a9ad199fe5",
+      "source_hash": "19879319e7f290fe2128c220824b1f67c377e94bd039a11ff9b55e02dac52d57",
       "narrative": [
+        {
+          "text": "Covers further components of the eradication plan: strengthening laboratory networks to isolate and type polioviruses, ensuring vaccine quality and cold chain management, and revising EPI training materials for health workers and laboratory staff. It also describes social mobilization through the media and political, religious and community leaders to sustain commitment, and the expected boost to rehabilitation services for people affected by poliomyelitis.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "يتناول مكونات أخرى لخطة الاستئصال: تعزيز شبكات المختبرات لعزل فيروسات شلل الأطفال وتصنيفها، وضمان جودة اللقاحات وإدارة سلسلة التبريد، وتنقيح مواد التدريب في البرنامج الموسع للتمنيع للعاملين الصحيين وموظفي المختبرات. ويصف أيضاً التعبئة الاجتماعية عبر وسائل الإعلام والقيادات السياسية والدينية والمجتمعية للحفاظ على الالتزام، والدفعة المتوقعة لخدمات التأهيل للمصابين بشلل الأطفال.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "阐述根除计划的其他组成部分：加强实验室网络以分离脊灰病毒并进行分型，确保疫苗质量和冷链管理，以及为卫生工作者和实验室人员修订扩大免疫规划培训材料。该页还介绍了通过媒体以及政治、宗教和社区领袖开展社会动员以维持承诺，以及预期对脊髓灰质炎患者康复服务的推动。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Aborda otros componentes del plan de erradicación: el fortalecimiento de las redes de laboratorios para aislar y tipificar los poliovirus, la garantía de la calidad de las vacunas y la gestión de la cadena de frío, y la revisión de los materiales de formación del PAI para el personal sanitario y de laboratorio. También describe la movilización social a través de los medios de comunicación y de los dirigentes políticos, religiosos y comunitarios para mantener el compromiso, así como el impulso previsto a los servicios de rehabilitación para las personas afectadas por la poliomielitis.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Traite d'autres volets du plan d'éradication : le renforcement des réseaux de laboratoires pour isoler et typer les poliovirus, la garantie de la qualité des vaccins et la gestion de la chaîne du froid, et la révision des matériels de formation du PEV destinés aux agents de santé et au personnel de laboratoire. Elle décrit aussi la mobilisation sociale par les médias et les responsables politiques, religieux et communautaires pour maintenir l'engagement, ainsi que l'élan attendu pour les services de réadaptation des personnes atteintes de poliomyélite.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Рассматриваются другие компоненты плана ликвидации: укрепление лабораторных сетей для выделения и типирования полиовирусов, обеспечение качества вакцин и управление «холодовой цепью», а также пересмотр учебных материалов РПИ для медицинских работников и сотрудников лабораторий. Описывается также социальная мобилизация через средства массовой информации и политических, религиозных и общинных лидеров для поддержания приверженности и ожидаемое развитие служб реабилитации для лиц, перенёсших полиомиелит.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        }
+      ],
+      "superseded": [
         {
           "text": "Describes strategies to strengthen laboratory capacity through an expanded network of reference laboratories and specimen exchange, to ensure all programmes use vaccines meeting WHO requirements with good cold-chain management, and to revise training materials for health workers and laboratory staff. It also covers social mobilization to sustain political and financial commitment through media messages, educational materials and political, religious and community leaders, and the use of the eradication effort to strengthen rehabilitation services in developing countries.",
           "lang": "en",
@@ -2928,8 +3816,82 @@
     {
       "block": "library/10665-192500/blocks/prose-page-038",
       "source": "sections/page-038.md",
-      "source_hash": "4adeeffe520a615219d21833aa1f23a590cdf4316c160122bcb02abb17efb95b",
+      "source_hash": "6a7e8c0f0f118a78f182c27155cdf2b1343e543d674736644b51a3beab073fbe",
       "narrative": [
+        {
+          "text": "Sets out the costs of the plan's monitoring and surveillance component, including simplified computerized national management information systems and further software development, and of preparing training materials and running national, intercountry and laboratory training courses. It also costs the setting up of poliomyelitis reference laboratories, through meetings to agree on standard test methods and additional staff, supplies and equipment.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "يبيّن تكاليف عنصر الرصد والترصد في الخطة، بما فيها النظم الوطنية المبسطة المحوسبة للمعلومات الإدارية ومواصلة تطوير برامج الحواسيب، وتكاليف إعداد مواد التدريب وتنظيم الدورات التدريبية الوطنية والمشتركة بين البلدان والمختبرية. كما يحدد تكاليف إنشاء المختبرات المرجعية لشلل الأطفال، من خلال اجتماعات للاتفاق على طرق اختبار موحدة وتوفير موظفين وإمدادات ومعدات إضافية.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "列出计划中监测和监督部分的费用，包括简化的国家计算机化管理信息系统和进一步的软件开发，以及编写培训材料和举办国家、国家间和实验室培训班的费用。该页还核算了建立脊髓灰质炎参比实验室的费用，包括为商定标准检测方法召开的会议以及增加的人员、物资和设备。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Expone los costos del componente de seguimiento y vigilancia del plan, incluidos sistemas nacionales simplificados e informatizados de información para la gestión y el desarrollo continuado de programas informáticos, así como los de preparar materiales de formación y organizar cursos nacionales, interpaíses y de laboratorio. También calcula el costo de establecer laboratorios de referencia de la poliomielitis, mediante reuniones para acordar métodos de prueba normalizados y personal, suministros y equipo adicionales.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Expose les coûts du volet suivi et surveillance du plan, notamment des systèmes nationaux simplifiés et informatisés d'information pour la gestion et la poursuite du développement de logiciels, ainsi que ceux de la préparation des matériels de formation et de l'organisation de cours nationaux, interpays et de laboratoire. Elle chiffre aussi la mise en place de laboratoires de référence pour la poliomyélite, au moyen de réunions visant à harmoniser les méthodes d'analyse et de personnel, de fournitures et d'équipement supplémentaires.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Излагаются расходы на компонент мониторинга и эпиднадзора плана, включая упрощённые компьютеризированные национальные системы управленческой информации и дальнейшую разработку программного обеспечения, а также на подготовку учебных материалов и проведение национальных, межстрановых и лабораторных учебных курсов. Рассчитаны и расходы на создание референс-лабораторий по полиомиелиту — на совещания по согласованию стандартных методов тестирования и дополнительный персонал, материалы и оборудование.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        }
+      ],
+      "superseded": [
         {
           "text": "Describes the need for simplified computerized management information systems at national level linked to district systems, with software installed and national staff trained in about fifteen countries a year, and gives the associated costs. It also budgets the preparation of training materials and courses for programme managers, surveillance supervisors and laboratory staff, as well as meetings, staff, supplies and equipment for poliomyelitis reference laboratories.",
           "lang": "en",
@@ -3007,8 +3969,82 @@
     {
       "block": "library/10665-192500/blocks/prose-page-039",
       "source": "sections/page-039.md",
-      "source_hash": "24afec718a8440125b198275e8ca9e5666d196ae8bf8ebe287c67c3da71ac83c",
+      "source_hash": "b998cb97dbf269fde8c8aee70f85a091c092a8a136eb9f21272ddf977614706f",
       "narrative": [
+        {
+          "text": "Costs research and development on improved laboratory diagnostic tests, operational research on interrupting wild poliovirus transmission, studies of oral polio vaccine formulation and new vaccines, and gives the total resources required for the first period. It then describes how needs will change in 1991–1995, with rising travel, laboratory and research costs, and in 1996–2000, when intensive country-level strategies are expected to raise personnel costs, giving an estimated total for each period.",
+          "lang": "en",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "يحدد تكاليف البحث والتطوير في مجالات اختبارات التشخيص المختبرية المحسنة والبحوث التنفيذية لوقف سراية فيروس شلل الأطفال البري ودراسات تركيب لقاح شلل الأطفال الفموي واللقاحات الجديدة، ويبيّن مجموع الموارد المطلوبة للفترة الأولى. ثم يصف تغير الاحتياجات في الفترة 1991-1995 مع ارتفاع تكاليف السفر والمختبرات والبحوث، وفي الفترة 1996-2000 حين يُتوقع أن ترفع الاستراتيجيات القُطرية المكثفة تكاليف العاملين، مع تقدير المجموع لكل فترة.",
+          "lang": "ar",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "核算了改进实验室诊断检测、阻断野生脊灰病毒传播的业务研究、口服脊灰疫苗配方研究和新疫苗方面的研究与开发费用，并给出第一阶段所需资源总额。随后说明1991–1995年的需求变化，即差旅、实验室和研究费用上升，以及1996–2000年预计因国家层面的强化战略而增加人员费用，并给出各阶段的估计总额。",
+          "lang": "zh",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Calcula los costos de investigación y desarrollo en pruebas diagnósticas de laboratorio mejoradas, investigación operativa para interrumpir la transmisión del poliovirus salvaje, estudios sobre la formulación de la vacuna antipoliomielítica oral y nuevas vacunas, e indica los recursos totales necesarios para el primer período. Luego describe cómo cambiarán las necesidades en 1991–1995, con mayores costos de viajes, laboratorios e investigación, y en 1996–2000, cuando se prevé que estrategias intensivas en los países aumenten los costos de personal, con un total estimado para cada período.",
+          "lang": "es",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Chiffre la recherche-développement sur des tests diagnostiques de laboratoire améliorés, la recherche opérationnelle visant à interrompre la transmission du poliovirus sauvage, les études sur la formulation du vaccin antipoliomyélitique oral et de nouveaux vaccins, et donne le total des ressources nécessaires pour la première période. Elle décrit ensuite l'évolution des besoins en 1991–1995, avec la hausse des coûts de voyage, de laboratoire et de recherche, et en 1996–2000, lorsque des stratégies nationales intensives devraient accroître les coûts de personnel, avec un total estimé pour chaque période.",
+          "lang": "fr",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        },
+        {
+          "text": "Рассчитаны расходы на исследования и разработки в области усовершенствованных лабораторных диагностических тестов, операционные исследования по прерыванию передачи дикого полиовируса, изучение состава оральной полиовакцины и новых вакцин, а также указан общий объём ресурсов на первый период. Далее описывается, как изменятся потребности в 1991–1995 гг. с ростом расходов на поездки, лаборатории и исследования и в 1996–2000 гг., когда интенсивные страновые стратегии, как ожидается, увеличат расходы на персонал; для каждого периода приводится расчётная общая сумма.",
+          "lang": "ru",
+          "state": "draft",
+          "drafted_by": {
+            "kind": "agent",
+            "id": "claude-code",
+            "model": "not-disclosed",
+            "session": "https://claude.ai/code/session_01Qmmkt6Ag2x8GsfdRq4ALsz"
+          },
+          "drafted_at": "2026-11-14"
+        }
+      ],
+      "superseded": [
         {
           "text": "Budgets research and development for improved laboratory diagnostic tests, operational research on cost-effective ways to stop wild poliovirus transmission, field studies on the best oral polio vaccine formulation and development of improved vaccines, and gives the total resources needed for the first period. It then outlines how needs will change in 1991–1995, with more national evaluation, national staff, travel, laboratory and research support, and in 1996–2000, when intensive eradication strategies and personnel costs are expected to rise further.",
           "lang": "en",
