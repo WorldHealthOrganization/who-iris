@@ -371,10 +371,10 @@
     "registry",
     "packages"
   ],
-  "sourceCommit": "https://github.com/litlfred/who-iris/commit/94a15b9d29b817c9d59fd4d0cc2baff7f0286112",
-  "sourceCommitSha": "94a15b9d29b817c9d59fd4d0cc2baff7f0286112",
-  "sourceTree": "7a96d647430aefb71d618a00f745eb3e97b61166",
-  "sourceCommitAt": "2026-11-15T02:42:20+01:00",
+  "sourceCommit": "https://github.com/litlfred/who-iris/commit/62f92b098f287704c4506fafb57c1223b5be8616",
+  "sourceCommitSha": "62f92b098f287704c4506fafb57c1223b5be8616",
+  "sourceTree": "f9d8ed74711d3c613ac353a05fe759989219759e",
+  "sourceCommitAt": "2026-11-15T08:42:59+01:00",
   "sourceTreeDirty": true,
   "dependsOnUnavailable": "this instance declares no `canonicalUrl`, and §3.4's record is `{packageId, version, uri}` — `canonicalUrl` is what plays `uri`, so the record cannot be expressed rather than being withheld on purpose",
   "counts": {
@@ -1023,7 +1023,7 @@
       "title": "L1 document ingestion",
       "description": "The detailed method for turning a DOCUMENT in `uploads/` into a complete L1 entry in `library/<bib-slug>/` — which rung reads it and why, what a complete L1 entry holds, why an inferred structure is refused rather than guessed, and the archive, dataset, narrative, image and vector-label arms. Refines the harness's basic `library-ingestion` flow; one entry point: `bun run cat ingest`.",
       "instructionsPath": "skills/library/ingestion/l1-document-ingestion.md",
-      "instructionLines": 1202,
+      "instructionLines": 1203,
       "hasInstructions": true,
       "hasIOContract": false,
       "ambiguous": false,
@@ -16545,7 +16545,7 @@
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/Tool",
       "name": "glossary-table",
       "title": "Glossary and acronyms tables",
-      "description": "Rewrite the glossary and acronyms tables of a document from its folio-glossary/v1 schemes, as `glossary/glossary-tables.json` (folio-glossary-tables/v1) lists them: terms with their altLabels, definitions and editorial notes, or acronyms (notation and prefLabel). The block's caption and footnotes are left alone. `--check` writes nothing and fails when a table is stale.",
+      "description": "Rewrite the glossary and acronyms tables of a document from its folio-glossary/v1 schemes, as `glossary/glossary-tables.json` (folio-glossary-tables/v1) lists them: terms with their altLabels, definitions and editorial notes; acronyms (notation and prefLabel); or element types, the placeholder types an ArchiMate metamodel view shows, with each term's definition and skos:example. The block's caption and footnotes are left alone. `--check` writes nothing and fails when a table is stale.",
       "install": {
         "none": true
       },

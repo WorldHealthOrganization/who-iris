@@ -60,7 +60,14 @@ td .iri { font-size: 0.8em; }
 <tr><td><code>tables</code></td><td><code>array of object</code></td><td>yes</td><td></td></tr>
 <tr><td><code>tables[].glossary</code></td><td><code>string</code></td><td>yes</td><td></td></tr>
 <tr><td><code>tables[].block</code></td><td><code>string</code></td><td>yes</td><td></td></tr>
-<tr><td><code>tables[].kind</code></td><td><code>&quot;terms&quot; | &quot;acronyms&quot;</code></td><td>yes</td><td></td></tr>
+<tr><td><code>tables[].kind</code></td><td><code>&quot;terms&quot; | &quot;acronyms&quot; | &quot;element-types&quot;</code></td><td>yes</td><td></td></tr>
+<tr><td><code>tables[].archimate</code></td><td><code>object</code></td><td>no</td><td></td></tr>
+<tr><td><code>tables[].archimate.model</code></td><td><code>string</code></td><td>yes</td><td></td></tr>
+<tr><td><code>tables[].archimate.view</code></td><td><code>string</code></td><td>yes</td><td></td></tr>
+<tr><td><code>tables[].rows</code></td><td><code>array of object</code></td><td>no</td><td></td></tr>
+<tr><td><code>tables[].rows[].type</code></td><td><code>string (pattern)</code></td><td>yes</td><td></td></tr>
+<tr><td><code>tables[].rows[].term</code></td><td><code>string</code></td><td>no</td><td></td></tr>
+<tr><td><code>tables[].rows[].icon</code></td><td><code>string</code></td><td>no</td><td></td></tr>
 </tbody></table>
 </section>
 

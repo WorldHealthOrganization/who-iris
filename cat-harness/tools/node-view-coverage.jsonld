@@ -405,7 +405,7 @@
           },
           {
             "name": "against",
-            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Text",
+            "schema": "https://litlfred.github.io/who-iris/cat-harness/tool-types.schema.json#/$defs/Branch",
             "description": "`--against <ref>`: the `qa-reports` entry to judge against (`main`, `main/<sha>`, `pr/<n>/<sha>`). Absent, the working copy; a missing baseline is UNKNOWN and not gated.",
             "required": false,
             "arg": {
