@@ -1,0 +1,16 @@
+{
+  "$schema": "qa-reports-manifest/v1",
+  "key": "pr/300/cc74ab7f39561b797aa7998cfc67bf1d29f357cd",
+  "source": "cc74ab7f39561b797aa7998cfc67bf1d29f357cd",
+  "pr": 300,
+  "written_at": "2026-11-15T21:26:50.754Z",
+  "producer": {
+    "run": "https://github.com/WorldHealthOrganization/who-iris/actions/runs/43763605389"
+  },
+  "roots": [
+    "who-iris/test/results"
+  ],
+  "payloadTree": "fcbdf58a4efbda0144666acbc9e1d57375a027d6",
+  "files": 27,
+  "bytes": 2450695
+}
