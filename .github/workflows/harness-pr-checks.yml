@@ -25,9 +25,9 @@ jobs:
       # On a draft PR: prepare and typecheck only; the full tier runs on ready_for_review.
       draft-fast-tier: true
       # package.json lists @litlfred/folio-assistant-core, so `auto` takes core
-      # at main; take cat-harness and cat-harness-tools at main beside it so
-      # core's opt-in sub-graph skill packages (dsa, board, library-extras),
-      # cat-harness's library corpus JSON-LD, and reader tests stay in lockstep (#212).
+      # at main; take cat-harness-tools at main beside it so core's opt-in
+      # sub-graph skill packages (dsa, board, library-extras) and reader tests
+      # stay in lockstep (#212).
       layers-at-main: cat-harness cat-harness-tools folio-assistant-core
   # Post-merge QA of main (owner, 2026-10-30, "Both"): the push run above
   # judged main's whole gate set; this keeps one `main-red` issue open while
