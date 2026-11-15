@@ -15,13 +15,14 @@
   "label": "Table 3",
   "file": "../tables/table-3.csv",
   "headers": [
-    "Acknowledgements",
-    "",
-    ""
+    "HANDBOOK CHAPTERS",
+    "ILLUSTRATIVE TARGET ORGANIZATIONS",
+    "ILLUSTRATIVE TARGET USER TEAMS AND ROLES",
+    "PURPOSE OF THE CHAPTER"
   ],
-  "pageStart": 5,
-  "pageEnd": 5,
-  "derivedFrom": "library/9789240116191-eng/sections/sec-front-matter",
+  "pageStart": 18,
+  "pageEnd": 19,
+  "derivedFrom": "library/9789240116191-eng/sections/sec-003",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/9789240116191-eng",
   "provenance": "ingested"
 }

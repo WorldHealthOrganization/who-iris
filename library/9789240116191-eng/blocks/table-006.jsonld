@@ -15,18 +15,17 @@
   "label": "Table 6",
   "file": "../tables/table-6.csv",
   "headers": [
-    "Data element",
-    "A unit of data",
-    "that has",
-    "a specific and pre",
-    "cise meaning.",
+    "",
+    "",
+    "PHASE(S) IN WHICH IT IS REQUIRED",
+    "",
     "",
     "",
     ""
   ],
-  "pageStart": 8,
-  "pageEnd": 8,
-  "derivedFrom": "library/9789240116191-eng/sections/sec-001",
+  "pageStart": 57,
+  "pageEnd": 61,
+  "derivedFrom": "library/9789240116191-eng/sections/sec-030",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/9789240116191-eng",
   "provenance": "ingested"
 }

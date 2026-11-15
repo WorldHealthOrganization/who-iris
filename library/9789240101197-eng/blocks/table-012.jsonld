@@ -15,12 +15,19 @@
   "label": "Table 12",
   "file": "../tables/table-12.csv",
   "headers": [
-    "Potential risks",
-    "Mitigation strategies"
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "Fig. 21"
   ],
-  "pageStart": 22,
-  "pageEnd": 22,
-  "derivedFrom": "library/9789240101197-eng/sections/sec-005",
+  "pageStart": 43,
+  "pageEnd": 43,
+  "derivedFrom": "library/9789240101197-eng/sections/sec-017",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/9789240101197-eng",
   "provenance": "ingested"
 }

@@ -15,12 +15,12 @@
   "label": "Table 4",
   "file": "../tables/table-4.csv",
   "headers": [
-    "DH&I WG",
-    "Digital Health and Interoperability Working Group"
+    "Potential risks",
+    "Mitigation strategies"
   ],
-  "pageStart": 7,
-  "pageEnd": 7,
-  "derivedFrom": "library/9789240101197-eng/sections/sec-000",
+  "pageStart": 23,
+  "pageEnd": 23,
+  "derivedFrom": "library/9789240101197-eng/sections/sec-006",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/9789240101197-eng",
   "provenance": "ingested"
 }

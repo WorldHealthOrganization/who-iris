@@ -15,12 +15,16 @@
   "label": "Table 4",
   "file": "../tables/table-4.csv",
   "headers": [
-    "Abbreviations",
-    ""
+    "COUNTRY: RWANDA",
+    "REGULATORY",
+    "DATA",
+    "TECHNOLOGY",
+    "PEOPLE",
+    "CHANGE MANAGEMENT"
   ],
-  "pageStart": 6,
-  "pageEnd": 6,
-  "derivedFrom": "library/9789240116191-eng/sections/sec-000",
+  "pageStart": 52,
+  "pageEnd": 54,
+  "derivedFrom": "library/9789240116191-eng/sections/sec-028",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/9789240116191-eng",
   "provenance": "ingested"
 }

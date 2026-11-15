@@ -14,8 +14,7 @@
   "pageEnd": 60,
   "contains": [
     "library/9789240101197-eng/blocks/prose-sec-028",
-    "library/9789240101197-eng/blocks/figure-vfig-p059",
-    "library/9789240101197-eng/blocks/table-036"
+    "library/9789240101197-eng/blocks/figure-vfig-p059"
   ],
   "derivedFrom": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/9789240101197-eng",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/9789240101197-eng",

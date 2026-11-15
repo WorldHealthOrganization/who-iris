@@ -154,7 +154,7 @@
     "gates": {
       "size": {
         "verdict": "permitted",
-        "basis": "6,205,162 bytes of derived sections over 1 entry"
+        "basis": "6,204,099 bytes of derived sections over 1 entry"
       },
       "restrictions": {
         "verdict": "permitted",

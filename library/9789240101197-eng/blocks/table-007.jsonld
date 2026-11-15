@@ -13,17 +13,19 @@
   ],
   "kind": "table",
   "label": "Table 7",
+  "title": "Fig 10. Example of outputs from this chapter",
   "file": "../tables/table-7.csv",
   "headers": [
-    "INTRODUCTION STRATEGY",
-    "ARCHITECTURE IMPL",
-    "EMENTATION TRACEABILITY",
-    "COUNTRY EXAMPLES",
-    "ANNEXES"
+    "Consistent and timely access to quality medicines and medical products for the population, through seamless supply chain enabled by technologies that provide efficient tools for providers",
+    "",
+    "",
+    "",
+    "",
+    ""
   ],
-  "pageStart": 11,
-  "pageEnd": 11,
-  "derivedFrom": "library/9789240101197-eng/sections/sec-002",
+  "pageStart": 26,
+  "pageEnd": 26,
+  "derivedFrom": "library/9789240101197-eng/sections/sec-009",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/9789240101197-eng",
   "provenance": "ingested"
 }

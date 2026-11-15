@@ -15,16 +15,12 @@
   "label": "Table 1",
   "file": "../tables/table-1.csv",
   "headers": [
-    "Digital transformation handbook fo",
-    "r health produc",
-    "t catalogue",
-    "",
-    "",
-    ""
+    "PCMT",
+    "Product catalog m"
   ],
-  "pageStart": 3,
-  "pageEnd": 3,
-  "derivedFrom": "library/9789240116191-eng/sections/sec-front-matter",
+  "pageStart": 7,
+  "pageEnd": 7,
+  "derivedFrom": "library/9789240116191-eng/sections/sec-001",
   "sourceDocument": "https://litlfred.github.io/folio-assistant/assets/library/jsonld/who-iris/source/9789240116191-eng",
   "provenance": "ingested"
 }
