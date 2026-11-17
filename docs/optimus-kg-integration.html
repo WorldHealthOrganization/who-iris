@@ -564,9 +564,17 @@ exposure the statement is about. That missing layer is what an OptimusKG-style
 typed entity graph would add, which is why the two outputs are related but not
 redundant, and why aligning them is worth the effort.</p>
 <h2>3. OptimusKG: what is worth adapting</h2>
-<p>Read from the repository at commit <code>4fb3529</code> (2026-09-21) and its docs site
-source (<code>docs/content/docs/</code>). optimuskg.ai and arXiv could not be fetched from
-this session, so the paper's figures are not quoted here.</p>
+<p>Read from the repository at commit <code>4fb3529</code> (2026-09-21), its docs site
+source (<code>docs/content/docs/</code>), and the PyPI client
+<a href="https://pypi.org/project/optimuskg/"><code>optimuskg</code> 1.0.0</a> (MIT, Python ≥ 3.12).
+The client describes the graph as integrating 65 resources grounded with 18
+ontologies and vocabularies, with 190,531 nodes in 10 entity types and
+21,813,816 edges in 26 relation types. The repository README gives slightly
+different counts (192,813 nodes, 27 edge labels), so the figures depend on the
+release. The paper is cited as Vittor <em>et al.</em>, "OptimusKG: Unifying
+biomedical knowledge in a modern multimodal graph", <em>Nature Scientific Data</em>,
+2026. optimuskg.ai and arXiv could not be fetched from this session, so the
+paper's evaluation figures are not quoted here.</p>
 <table>
 <thead>
 <tr>
@@ -613,7 +621,7 @@ this session, so the paper's figures are not quoted here.</p>
 </tr>
 <tr>
 <td>outputs</td>
-<td>Parquet (<code>nodes/*.parquet</code>, <code>edges/*.parquet</code>), Neo4j export, PyPI client (Polars/NetworkX), MCP bundle on DuckDB; <strong>no RDF</strong></td>
+<td>Parquet gold layer (<code>nodes/*.parquet</code>, <code>edges/*.parquet</code>) on Harvard Dataverse; Neo4j export; the PyPI client <code>optimuskg</code> downloads and caches gold files (<code>get_file</code>, <code>load_parquet</code>, <code>load_graph(lcc=True)</code>, <code>load_networkx</code>), pinned to a release by <code>OPTIMUSKG_DOI</code>; MCP bundle on DuckDB; <strong>no RDF</strong></td>
 <td><strong>Parquet as the working form</strong>, then projected to N-Quads so the existing Oxigraph partitions (<a href="https://github.com/litlfred/who-iris/blob/HEAD/skills/iris-oxigraph.md"><code>iris-oxigraph</code></a>) can query both graphs side by side</td>
 </tr>
 <tr>
@@ -666,7 +674,7 @@ same CDN contract. They differ in where Tool B runs and where its output lives.<
 <tr>
 <td><strong>D</strong></td>
 <td>Import OptimusKG's own graph as an external library KG</td>
-<td>subscribe to the Dataverse release as a remote KG; no extraction</td>
+<td>subscribe to one Dataverse release as a remote KG, read through the <code>optimuskg</code> client pinned by <code>OPTIMUSKG_DOI</code>; only the node and edge files a scope needs (e.g. <code>nodes/drug.parquet</code>, <code>nodes/disease.parquet</code> and the DRG–DIS edges) are fetched, and their metadata is held under <code>library/optimuskg/</code>; no extraction</td>
 <td>Gives drug–disease grounding at once</td>
 <td>Biomedical-database facts, not WHO guidance. Licences vary per source. Useful only as a <strong>grounding and comparison reference</strong> for section 8's agentic review, never as Tool B</td>
 </tr>
@@ -1500,9 +1508,9 @@ thresholds should wait for a baseline (bean 9).</li>
 <li><strong>The examples.</strong> The request said "see examples below", but none were
 attached. Please send the scope-of-interest examples you had in mind; the
 measles and contraception scopes in section 8 are placeholders.</li>
-<li><strong>Network.</strong> optimuskg.ai and arxiv.org are blocked from these sessions. To
-quote the paper's evaluation figures, allow them in the environment's
-network settings or attach the PDF.</li>
+<li><strong>Network.</strong> optimuskg.ai and arxiv.org are blocked from these sessions
+(pypi.org is reachable). To quote the paper's evaluation figures, allow
+them in the environment's network settings or attach the PDF.</li>
 </ol>
 
 </main>

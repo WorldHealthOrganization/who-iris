@@ -107,9 +107,17 @@ redundant, and why aligning them is worth the effort.
 
 ## 3. OptimusKG: what is worth adapting
 
-Read from the repository at commit `4fb3529` (2026-09-21) and its docs site
-source (`docs/content/docs/`). optimuskg.ai and arXiv could not be fetched from
-this session, so the paper's figures are not quoted here.
+Read from the repository at commit `4fb3529` (2026-09-21), its docs site
+source (`docs/content/docs/`), and the PyPI client
+[`optimuskg` 1.0.0](https://pypi.org/project/optimuskg/) (MIT, Python ≥ 3.12).
+The client describes the graph as integrating 65 resources grounded with 18
+ontologies and vocabularies, with 190,531 nodes in 10 entity types and
+21,813,816 edges in 26 relation types. The repository README gives slightly
+different counts (192,813 nodes, 27 edge labels), so the figures depend on the
+release. The paper is cited as Vittor *et al.*, "OptimusKG: Unifying
+biomedical knowledge in a modern multimodal graph", *Nature Scientific Data*,
+2026. optimuskg.ai and arXiv could not be fetched from this session, so the
+paper's evaluation figures are not quoted here.
 
 | aspect | OptimusKG | adopt for the WHO path? |
 |---|---|---|
@@ -120,7 +128,7 @@ this session, so the paper's figures are not quoted here.
 | edge shape | `from, to, label, relation, undirected, properties`; at most one edge per `(from, to, label)` | **Yes**, plus a mandatory evidence locator (section 6) |
 | provenance | `sources{direct[], indirect[]}` on every node and edge; `evidence_score/count/index` on associations | **Yes**, with `direct` = the IRIS handle + section + page + quote |
 | conflict model | `relation_assertions` keeps every `{source, relation}`; `relation_conflict` flags mutually exclusive ones (339 drug–disease pairs are both INDICATION and CONTRAINDICATION) | **Yes. This is the seed of the adjudication input.** It records disagreement *inside* one tool; section 7 extends it to disagreement *between* tools |
-| outputs | Parquet (`nodes/*.parquet`, `edges/*.parquet`), Neo4j export, PyPI client (Polars/NetworkX), MCP bundle on DuckDB; **no RDF** | **Parquet as the working form**, then projected to N-Quads so the existing Oxigraph partitions ([`iris-oxigraph`](../skills/iris-oxigraph.md)) can query both graphs side by side |
+| outputs | Parquet gold layer (`nodes/*.parquet`, `edges/*.parquet`) on Harvard Dataverse; Neo4j export; the PyPI client `optimuskg` downloads and caches gold files (`get_file`, `load_parquet`, `load_graph(lcc=True)`, `load_networkx`), pinned to a release by `OPTIMUSKG_DOI`; MCP bundle on DuckDB; **no RDF** | **Parquet as the working form**, then projected to N-Quads so the existing Oxigraph partitions ([`iris-oxigraph`](../skills/iris-oxigraph.md)) can query both graphs side by side |
 | evaluation | PaperQA3 checks sampled edges (100 per node type by centrality, true and false neighbours, a power analysis at α = 0.05) | **Yes, as the sampling plan** for the agentic adjudication in section 7 |
 | licence | code MIT (© 2025 Zitnik Lab); data keeps each source's licence, some academic or non-commercial only; distributed on Harvard Dataverse `doi:10.7910/DVN/IYNGEV` | Adapting the **code patterns** is clear under MIT. Importing the **OptimusKG data** as an external library KG is a separate question, gated by `copyright` and `restrictions` (section 12) |
 
@@ -134,7 +142,7 @@ same CDN contract. They differ in where Tool B runs and where its output lives.
 | **A** | Sibling pipeline in who-iris | IRIS-specific scripts in `scripts/optimus/`; outputs under a new declared directory, e.g. `kg-optimus/<slug>/{bronze,silver,gold}/` | One repository, same CI, same mounts | who-iris is `separation: content` and tolerates IRIS-specific code only with a QA warning. A Kedro/Python extractor is far more than "a small number of tools" (owner, 2026-10-01) |
 | **B** | A step inside `ingest-build-l1-kg` | a new task after `Task_Link` | No new process | **Rejected.** It is not parallel: it changes the process the owner said must remain, and it couples Tool B's failures to L1 completeness |
 | **C** | External extractor, referenced KG | Tool B and the medallion pipeline run in their own repository or service, pinned by version. who-iris holds only orchestration, the crosswalk and adjudication records, and references the gold output by digest | Clean split: code where code belongs; the gold output is a **remote KG** in the materialisation sense, so its subgraph metadata sits under `library/<source>/` | Two release trains to pin and keep in step |
-| **D** | Import OptimusKG's own graph as an external library KG | subscribe to the Dataverse release as a remote KG; no extraction | Gives drug–disease grounding at once | Biomedical-database facts, not WHO guidance. Licences vary per source. Useful only as a **grounding and comparison reference** for section 8's agentic review, never as Tool B |
+| **D** | Import OptimusKG's own graph as an external library KG | subscribe to one Dataverse release as a remote KG, read through the `optimuskg` client pinned by `OPTIMUSKG_DOI`; only the node and edge files a scope needs (e.g. `nodes/drug.parquet`, `nodes/disease.parquet` and the DRG–DIS edges) are fetched, and their metadata is held under `library/optimuskg/`; no extraction | Gives drug–disease grounding at once | Biomedical-database facts, not WHO guidance. Licences vary per source. Useful only as a **grounding and comparison reference** for section 8's agentic review, never as Tool B |
 
 **Recommendation: C for the extractor runtime, with A's thin orchestration
 layer in who-iris.** The parts are placed in section 10.
@@ -548,6 +556,6 @@ the live work plan for the same terms.
 8. **The examples.** The request said "see examples below", but none were
    attached. Please send the scope-of-interest examples you had in mind; the
    measles and contraception scopes in section 8 are placeholders.
-9. **Network.** optimuskg.ai and arxiv.org are blocked from these sessions. To
-   quote the paper's evaluation figures, allow them in the environment's
-   network settings or attach the PDF.
+9. **Network.** optimuskg.ai and arxiv.org are blocked from these sessions
+   (pypi.org is reachable). To quote the paper's evaluation figures, allow
+   them in the environment's network settings or attach the PDF.
