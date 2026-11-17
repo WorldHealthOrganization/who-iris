@@ -488,6 +488,11 @@ document creation. That review criteria should be actively used by the
 agents as it tries to identify evidence in the knowledge graphs and assess
 it." See section 8.</li>
 <li><strong>Examples:</strong> keep the placeholders for now.</li>
+<li><strong>Level 1 is run by the Harvard lab, in GuidelineKG</strong>, on the same keys.</li>
+<li><strong>The DAK target is smart-base <code>main</code> pinned at <code>781a8b9</code></strong>, re-pinned on
+each release.</li>
+<li><strong>Trust in GuidelineKG output:</strong> pin a GuidelineKG commit now, and move to
+lab-signed (<code>did:web</code>) releases later.</li>
 </ul>
 <p>The owner's request, 2026-11-17 (relayed, lightly edited for typos):</p>
 <blockquote>
@@ -835,7 +840,7 @@ boundary decides the interfaces:</p>
 <tr>
 <td><strong>the result release</strong></td>
 <td>—</td>
-<td><code>guideline_kg.jsonl</code> plus a manifest of SHA-256 digests, naming the work order, the CDN release and the GuidelineKG commit it was computed from. It should be signed with a lab key published as the lab's own <code>did:web</code>, so who-iris checks it the way anyone checks a WHO release</td>
+<td><code>guideline_kg.jsonl</code> plus a manifest of SHA-256 digests, naming the work order, the CDN release and the GuidelineKG commit it was computed from. <strong>For now who-iris trusts it by the pinned GuidelineKG commit and the digests</strong> (owner, decided). Later the lab signs it with a key published as its own <code>did:web</code>, so who-iris checks it the way anyone checks a WHO release</td>
 </tr>
 </tbody>
 </table>
@@ -1118,7 +1123,7 @@ would make "the licence terms" checkable.</p>
 </tr>
 <tr>
 <td>runs</td>
-<td><strong>open: who runs it</strong> (section 12)</td>
+<td><strong>the Harvard lab, in GuidelineKG</strong> (owner, decided): a cheap first-pages pass, Reducto Classify plus a short LLM summary</td>
 <td>the Zitnik lab (GuidelineKG), and the existing L1 path in parallel</td>
 </tr>
 </tbody>
@@ -1807,7 +1812,7 @@ published</em>), <code>adjudicator</code> (agent, untainted), <code>reviewer</co
 <td><code>Task_VerifyResult</code></td>
 <td>build-pipeline</td>
 <td><code>optimus-kg-feed</code></td>
-<td>verify the result release signature (lab <code>did:web</code>), its digests, and that it names this work order and CDN release</td>
+<td>verify the result release: its digests, the pinned GuidelineKG commit, and that it names this work order and CDN release. Once the lab signs releases, also its signature (lab <code>did:web</code>)</td>
 </tr>
 <tr>
 <td><code>Call_Classify</code></td>
@@ -2163,9 +2168,10 @@ cite it? Who answers the <code>copyright</code> gate for IRIS bitstreams fed to 
 external tool?</li>
 <li><strong>DAK targets.</strong> Which smart-base version and logical models are the
 alignment targets? Should the typed entity nodes (condition, product,
-finding) be proposed to smart-base's <code>kg/l1</code> ontology? Asked by card (recommended:
-pin smart-base <code>main</code> at <code>781a8b9</code> and re-pin on each release); no answer
-yet.</li>
+finding) be proposed to smart-base's <code>kg/l1</code> ontology? <strong>Version decided</strong>:
+smart-base <code>main</code> pinned at <code>781a8b9</code>, re-pinned on each release. Which
+logical models to target, and the typed-entity proposal, follow from that
+pin.</li>
 <li><del>Adjudication policy</del> <strong>Decided</strong>: both graphs stay present and authors
 select between them; the pipeline adds a derived graph; GuidelineKG is
 maintained and published by the Harvard team (section 7). <em>Original
@@ -2200,13 +2206,9 @@ smart-base, refined (not replaced) by each editor, together with the
 document's own evidence review criteria (section 8). <em>Original question:</em> GuidelineKG's classifier leaves
 <code>keep_categories</code> undecided. Should each L1 scope decide it (section 8,
 recommended), or should one WHO-wide default be set?</li>
-<li><strong>Who runs level 1</strong> (summary and keywords for every IRIS item): the
-Harvard lab with GuidelineKG, a who-iris job, or metadata only with no
-LLM? Asked by card; no answer yet.</li>
-<li><strong>Signing GuidelineKG releases.</strong> Now that GuidelineKG is published in the
-lab's repositories, does who-iris pin a commit only, or should the lab
-also sign releases with its own <code>did:web</code> key? Asked by card; no answer
-yet.</li>
+<li><del>Who runs level 1</del> <strong>Decided</strong>: the Harvard lab, in GuidelineKG.</li>
+<li><del>Signing GuidelineKG releases</del> <strong>Decided</strong>: pin a GuidelineKG commit now;
+lab-signed <code>did:web</code> releases later.</li>
 </ol>
 
 </main>

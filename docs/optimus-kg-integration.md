@@ -63,6 +63,11 @@ licence-compatibility points they leave open.
   agents as it tries to identify evidence in the knowledge graphs and assess
   it." See section 8.
 - **Examples:** keep the placeholders for now.
+- **Level 1 is run by the Harvard lab, in GuidelineKG**, on the same keys.
+- **The DAK target is smart-base `main` pinned at `781a8b9`**, re-pinned on
+  each release.
+- **Trust in GuidelineKG output:** pin a GuidelineKG commit now, and move to
+  lab-signed (`did:web`) releases later.
 
 The owner's request, 2026-11-17 (relayed, lightly edited for typos):
 
@@ -283,7 +288,7 @@ boundary decides the interfaces:
 |---|---|---|
 | **who-iris** (WHO) | no Reducto, OpenAI or Azure key, ever | publishes the signed CDN release (as today); publishes a **work order** per night: the scope-selected handles with their bitstream digests and `dc.language.iso`; verifies and adjudicates what comes back |
 | **GuidelineKG** (Zitnik lab) | the Reducto and Azure OpenAI keys, in the lab's own secret store | reads the work order and the public CDN release, **verifies the release JWS against WHO's `did:web` key before reading a byte**, runs classify → parse → integrate, and publishes a **result release** |
-| **the result release** | — | `guideline_kg.jsonl` plus a manifest of SHA-256 digests, naming the work order, the CDN release and the GuidelineKG commit it was computed from. It should be signed with a lab key published as the lab's own `did:web`, so who-iris checks it the way anyone checks a WHO release |
+| **the result release** | — | `guideline_kg.jsonl` plus a manifest of SHA-256 digests, naming the work order, the CDN release and the GuidelineKG commit it was computed from. **For now who-iris trusts it by the pinned GuidelineKG commit and the digests** (owner, decided). Later the lab signs it with a key published as its own `did:web`, so who-iris checks it the way anyone checks a WHO release |
 
 who-iris never calls Reducto or OpenAI and never needs network access to them.
 The `extractor` lane in section 9 becomes an **external participant** (a
@@ -454,7 +459,7 @@ These are points for WHO's legal office, not for this design to settle.
 | produces | a short summary of what the item is about, plus keywords | a knowledge-graph extraction that **populates the L1 schema** (smart-base `kg/l1`: publication, section, recommendation and the typed entities of section 6) **or the L2 schema** (the DAK components and logical models) |
 | input | IRIS metadata (`dc.description.abstract`, `dc.subject`, `dc.subject.mesh`), plus the first pages when the abstract is missing | the full document (GuidelineKG classify → parse → claims → linking), plus the existing L1 path |
 | size held | small per item: a summary, a keyword list and their provenance. Held as a catalogue-level annotation, so the corpus **shape** gains a description without the corpus being held | as before: by reference, `materialized` only for scoped items that pass the five gates |
-| runs | **open: who runs it** (section 12) | the Zitnik lab (GuidelineKG), and the existing L1 path in parallel |
+| runs | **the Harvard lab, in GuidelineKG** (owner, decided): a cheap first-pages pass, Reducto Classify plus a short LLM summary | the Zitnik lab (GuidelineKG), and the existing L1 path in parallel |
 
 Level 1 does not contradict "the gap is the point". It adds a description
 to every node the catalogue models. It does not hold the items. Its keywords
@@ -863,7 +868,7 @@ published*), `adjudicator` (agent, untainted), `reviewer`
 | `Task_Gates` | optimus-kg-agent | `materialize-remote` | the five gates per bitstream; `unknown` is not `permitted` |
 | `Task_WorkOrder` | build-pipeline | `optimus-kg-feed` | write `state/guidelinekg/work-order.json`: the selected handles, bitstream digests and `dc.language.iso`; message flow to the lab pool |
 | `Catch_Result` | — | — | message: the lab's result release is published; a timer boundary records `awaiting-extractor` and ends the night without failing |
-| `Task_VerifyResult` | build-pipeline | `optimus-kg-feed` | verify the result release signature (lab `did:web`), its digests, and that it names this work order and CDN release |
+| `Task_VerifyResult` | build-pipeline | `optimus-kg-feed` | verify the result release: its digests, the pinned GuidelineKG commit, and that it names this work order and CDN release. Once the lab signs releases, also its signature (lab `did:web`) |
 | `Call_Classify` | extractor (lab pool) | `guidelinekg-run` | GuidelineKG `classifier classify` (Reducto Classify) on the scope's candidates |
 | `GW_Keep` | — | — | the class is in the scope's `keep_categories`; otherwise recorded and stopped |
 | `Call_Extract` | extractor (lab pool) | `guidelinekg-run` | GuidelineKG `parser parse` then `integration build`, keyed by (bitstream sha, GuidelineKG commit) |
@@ -967,9 +972,10 @@ the live work plan for the same terms.
    external tool?
 6. **DAK targets.** Which smart-base version and logical models are the
    alignment targets? Should the typed entity nodes (condition, product,
-   finding) be proposed to smart-base's `kg/l1` ontology? Asked by card (recommended:
-   pin smart-base `main` at `781a8b9` and re-pin on each release); no answer
-   yet.
+   finding) be proposed to smart-base's `kg/l1` ontology? **Version decided**:
+   smart-base `main` pinned at `781a8b9`, re-pinned on each release. Which
+   logical models to target, and the typed-entity proposal, follow from that
+   pin.
 7. ~~Adjudication policy~~ **Decided**: both graphs stay present and authors
    select between them; the pipeline adds a derived graph; GuidelineKG is
    maintained and published by the Harvard team (section 7). *Original
@@ -1004,10 +1010,6 @@ the live work plan for the same terms.
     document's own evidence review criteria (section 8). *Original question:* GuidelineKG's classifier leaves
     `keep_categories` undecided. Should each L1 scope decide it (section 8,
     recommended), or should one WHO-wide default be set?
-14. **Who runs level 1** (summary and keywords for every IRIS item): the
-    Harvard lab with GuidelineKG, a who-iris job, or metadata only with no
-    LLM? Asked by card; no answer yet.
-15. **Signing GuidelineKG releases.** Now that GuidelineKG is published in the
-    lab's repositories, does who-iris pin a commit only, or should the lab
-    also sign releases with its own `did:web` key? Asked by card; no answer
-    yet.
+14. ~~Who runs level 1~~ **Decided**: the Harvard lab, in GuidelineKG.
+15. ~~Signing GuidelineKG releases~~ **Decided**: pin a GuidelineKG commit now;
+    lab-signed `did:web` releases later.
