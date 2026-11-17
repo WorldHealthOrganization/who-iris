@@ -441,6 +441,15 @@ that uses it is <strong>GuidelineKG</strong>
 private, MIT, from the same lab as OptimusKG). The owner: "That's what we will
 use over Optimus." GuidelineKG is Tool B throughout this document, and its own
 section is <a href="#3b-guidelinekg-tool-b">3b</a>.</p>
+<p><strong>Owner answers, 2026-11-17 17:29Z</strong> (relayed by the merge manager):</p>
+<ul>
+<li><strong>The Zitnik lab at Harvard runs GuidelineKG and supplies the Reducto and
+Azure OpenAI keys.</strong> No key goes into a WHO repository, and the run happens
+on the lab's side.</li>
+<li><strong>Extraction covers all six WHO languages</strong> (ar, en, es, fr, ru, zh), not
+English only.</li>
+</ul>
+<p>Section <a href="#3c-run-by-the-lab-in-six-languages">3c</a> is the design for both.</p>
 <p>The owner's request, 2026-11-17 (relayed, lightly edited for typos):</p>
 <blockquote>
 <p>need to update who-iris KG to include a new parallel KG process/tooling/skill
@@ -463,6 +472,7 @@ agentic review of a library KG (who-iris or external).</p>
 <li><a href="#3-optimuskg-what-is-worth-adapting">OptimusKG: what is worth adapting</a>
 <ul>
 <li><a href="#3b-guidelinekg-tool-b">3b. GuidelineKG: Tool B</a></li>
+<li><a href="#3c-run-by-the-lab-in-six-languages">3c. Run by the lab, in six languages</a></li>
 </ul>
 </li>
 <li><a href="#4-integration-options-and-the-recommendation">Integration options and the recommendation</a></li>
@@ -758,6 +768,189 @@ L1 path, and comparison is limited to recommendations (section 7).</li>
 <li><strong>Its document classifier is a ready vocabulary for the L1 editor's
 "evidence types" and "guideline of interest"</strong> (section 8).</li>
 </ol>
+<h2>3c. Run by the lab, in six languages</h2>
+<h3>Who runs what, and where the keys are</h3>
+<p>The owner's ruling puts the boundary between the two organisations, and that
+boundary decides the interfaces:</p>
+<table>
+<thead>
+<tr>
+<th>side</th>
+<th>holds</th>
+<th>does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>who-iris</strong> (WHO)</td>
+<td>no Reducto, OpenAI or Azure key, ever</td>
+<td>publishes the signed CDN release (as today); publishes a <strong>work order</strong> per night: the scope-selected handles with their bitstream digests and <code>dc.language.iso</code>; verifies and adjudicates what comes back</td>
+</tr>
+<tr>
+<td><strong>GuidelineKG</strong> (Zitnik lab)</td>
+<td>the Reducto and Azure OpenAI keys, in the lab's own secret store</td>
+<td>reads the work order and the public CDN release, <strong>verifies the release JWS against WHO's <code>did:web</code> key before reading a byte</strong>, runs classify → parse → integrate, and publishes a <strong>result release</strong></td>
+</tr>
+<tr>
+<td><strong>the result release</strong></td>
+<td>—</td>
+<td><code>guideline_kg.jsonl</code> plus a manifest of SHA-256 digests, naming the work order, the CDN release and the GuidelineKG commit it was computed from. It should be signed with a lab key published as the lab's own <code>did:web</code>, so who-iris checks it the way anyone checks a WHO release</td>
+</tr>
+</tbody>
+</table>
+<p>who-iris never calls Reducto or OpenAI and never needs network access to them.
+The <code>extractor</code> lane in section 9 becomes an <strong>external participant</strong> (a
+separate BPMN pool) reached by message flows: <em>work order published</em> → <em>result
+release published</em>. A night on which the lab publishes nothing is a state the
+run report shows (<code>awaiting-extractor</code>). It is not a failure, and it never
+blocks the CDN release.</p>
+<p>The <strong>work order</strong> is the only new public artefact on the WHO side. It goes in
+the CDN release history as <code>state/guidelinekg/work-order.json</code> beside
+<code>state/cursor.json</code>. It is canonical JSON and changes only when the selection
+changes, which keeps the no-churn rule.</p>
+<h3>Six languages</h3>
+<p>IRIS publishes most translations <strong>as separate items</strong>, each with its own
+<code>dc.language.iso</code>, ISBN and Handle. GuidelineKG's own <code>who.py</code> says so. Some
+items instead carry several language bitstreams. The design treats a
+<em>language version</em> as the unit and links versions into one <em>work</em>:</p>
+<ol>
+<li>
+<p><strong>Language comes from the record, and detection checks it.</strong>
+<code>dc.language.iso</code> from <code>records/&#x3C;handle>.json</code> is authoritative. Script
+detection on the parsed text, like GuidelineKG's <code>relang</code>, only checks it.
+A mismatch is a finding, never a silent relabel. A multi-language item is
+split per bitstream, and each bitstream's language comes from its file name
+or its detected script, recorded as <code>inferred</code>.</p>
+</li>
+<li>
+<p><strong>Parse per language.</strong> Reducto parses each language version on its own,
+with the language passed as a hint where its API takes one. Whether Reducto's
+OCR and layout quality holds for Arabic (right-to-left) and Chinese is
+<strong>not verified</strong>. The baseline (bean 9) must measure it per language before
+any threshold is set.</p>
+</li>
+<li>
+<p><strong>Extract claims in the source language.</strong> The claim prompt is run on the
+paragraph in its own language. <code>optimus_relation</code> is a controlled,
+language-free vocabulary, so the <em>assertion</em> is comparable across
+languages, while <code>text</code>, <code>subject</code>, <code>object</code> and <code>population</code> stay
+verbatim in the source language. No machine translation sits in the
+evidence chain. A translated gloss, if one is added, is a separate field
+marked <code>inferred</code>.</p>
+</li>
+<li>
+<p><strong>Link entities across languages.</strong> The linker's index embeds OptimusKG
+names and synonyms, which are almost all English. A multilingual embedding
+gives some cross-lingual recall, but it is not enough to rely on. Add
+<strong>WHO's own multilingual labels</strong> to the index:</p>
+<ul>
+<li>ICD-11 titles, which ICD-11 publishes in the UN languages;</li>
+<li>INN names;</li>
+<li>the who-iris glossary's translations (<code>translations/</code>).</li>
+</ul>
+<p>Each label is attached to the OptimusKG CURIE it maps to through the
+crosswalk. Every grounding records the label language it matched on, and a
+cross-language match carries a lower prior confidence until the baseline
+calibrates it.</p>
+</li>
+<li>
+<p><strong>Match the same guideline across languages.</strong> The match uses, in order of
+evidence:</p>
+<ol>
+<li>an IRIS relation field linking the items (<code>dc.relation.*</code>, if IRIS fills
+it; <strong>not verified</strong>);</li>
+<li>a shared govdoc number or series identifier (<code>dc.identifier.govdoc</code>);</li>
+<li>the who-iris catalogue's own grouping, if it records one;</li>
+<li>last, a high overlap of language-free assertion keys
+<code>(subject CURIE, relation, object CURIE)</code> between two items, recorded as
+<code>inferred</code>.</li>
+</ol>
+<p>The result is a <code>work</code> node with <code>hasTranslation</code> edges, owned by who-iris
+rather than GuidelineKG, because it is a fact about the IRIS corpus.</p>
+</li>
+<li>
+<p><strong>Adjudicate like with like.</strong> Tool comparison (section 7) always compares
+L1 KG and GuidelineKG on the <strong>same language version</strong>. Comparing claims
+across languages is a <strong>different check</strong>: a claim present in the English
+version and missing from the French one is a translation-consistency
+finding. It goes to the existing round-trip translation QA lane
+(<code>ingest-l1-completeness-gate</code> <code>Task_RoundTrip</code> / <code>Task_FlagDrift</code>), not to
+tool adjudication. It is a disagreement between documents, not between
+tools.</p>
+</li>
+<li>
+<p><strong>Population becomes part of the language-free key.</strong> GuidelineKG puts
+free-text <code>population</code> into the claim id, so "pregnant women" and
+"femmes enceintes" would mint two different claims. The comparison form
+normalises population to a code where one exists, for example an age, sex
+or pregnancy category from the DAK's core data elements, and keeps the
+verbatim text beside it. Only the code enters the cross-language key.</p>
+</li>
+</ol>
+<h3>What GuidelineKG would need to change</h3>
+<p>Read at <code>159514a</code>. Each item is a proposal for the lab, and none is a change
+who-iris makes:</p>
+<table>
+<thead>
+<tr>
+<th>where</th>
+<th>today</th>
+<th>needed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>src/scraper/sources/who.py</code></td>
+<td>skips any item whose <code>dc.language.iso</code> is not English</td>
+<td>the <code>who-iris-cdn</code> source takes all six languages and records <code>language</code> from the record</td>
+</tr>
+<tr>
+<td><code>src/scraper/prune.py</code>, <code>cli scraper prune-non-english</code></td>
+<td>enforces "English-only corpus by policy"</td>
+<td>do not run it on WHO sources; or make the policy a per-source setting</td>
+</tr>
+<tr>
+<td><code>src/scraper/figures.py</code>, <code>--english-only</code></td>
+<td>English is the headline language</td>
+<td>report per language (needed for the per-language baseline)</td>
+</tr>
+<tr>
+<td><code>conf/who_iris_seeds.json</code> (1,161 seeds)</td>
+<td>ISBN/title seeds from an English <code>-eng.pdf</code> archive; title matching is ASCII-normalised</td>
+<td>seeds come from the who-iris work order by Handle/UUID; no title matching needed</td>
+</tr>
+<tr>
+<td><code>src/scraper/utils.py</code> <code>slugify</code></td>
+<td>NFKD → ASCII, so Arabic, Chinese and Russian titles all slug to <code>guideline</code></td>
+<td>harmless for file names, which also carry the hex id. Do not use the title slug as an identity anywhere</td>
+</tr>
+<tr>
+<td><code>src/integration/schema.py</code> <code>slugify</code> (<code>[^a-z0-9]</code>)</td>
+<td>the ad-hoc path (<code>pipeline.py</code> without a slug) turns a non-Latin title into <code>untitled</code>, so <code>guideline:untitled</code> would collide</td>
+<td>always pass the record's hex id or the IRIS Handle as the slug. The batch runner already passes <code>record.guideline_id</code></td>
+</tr>
+<tr>
+<td><code>src/integration/claims.py</code> prompt</td>
+<td>English instructions, English examples, and an English guideline subject</td>
+<td>state that the paragraph may be in any of the six languages; extract verbatim in the source language; keep <code>optimus_relation</code> from the fixed list</td>
+</tr>
+<tr>
+<td><code>src/linker/*</code> index</td>
+<td>OptimusKG names and synonyms (English)</td>
+<td>add the WHO multilingual labels (ICD-11, INN, glossary translations) per CURIE, and record the matched label's language</td>
+</tr>
+<tr>
+<td><code>src/integration/schema.py</code> claim id</td>
+<td>hashes free-text <code>population</code></td>
+<td>add a normalised population code, and use it in the key when present</td>
+</tr>
+<tr>
+<td>claim provenance</td>
+<td>no language field on <code>Claim</code> / <code>Paragraph</code></td>
+<td>add <code>language</code> (from the record) on <code>Guideline</code> and propagate it to <code>Paragraph</code> and <code>Claim</code></td>
+</tr>
+</tbody>
+</table>
 <h2>4. Integration options and the recommendation</h2>
 <p>All four options keep the existing path untouched, and all four consume the
 same CDN contract. They differ in where Tool B runs and where its output lives.</p>
@@ -809,9 +1002,11 @@ layer in who-iris.</strong> The parts are placed in section 10.</p>
 <strong>skills</strong> and the <strong>crosswalk data</strong>. These are small and IRIS-specific, so
 they fit the owner's 2026-10-09 ruling: "iris specific tools need to be in
 litlfred/who-iris".</li>
-<li><strong>GuidelineKG</strong> stays in <code>mims-harvard/guideline-kg</code>, pinned by commit.
-It needs one addition there: a <code>who-iris-cdn</code> source beside its <code>who</code>
-scraper. The source writes the same <code>data/guidelines/who/metadata.json</code>
+<li><strong>GuidelineKG</strong> stays in <code>mims-harvard/guideline-kg</code>, pinned by commit, and
+<strong>the lab runs it with its own keys</strong> (section 3c). who-iris publishes a
+work order and verifies a signed result release. It needs one addition
+there: a <code>who-iris-cdn</code> source beside its <code>who</code> scraper, which reads the
+work order, plus the multilingual changes listed in 3c. The source writes the same <code>data/guidelines/who/metadata.json</code>
 records from a verified CDN release instead of crawling IRIS, putting the
 IRIS Handle and UUID in <code>extra</code>. <code>classifier</code>, <code>parser</code>, <code>linker</code> and
 <code>integration</code> then run unchanged. That is a PR to a repository who-iris
@@ -866,15 +1061,18 @@ and the run report counts it. The gap is the point.</li>
 <li><strong>Gate.</strong> Check <code>materialize-remote</code>'s five gates (size, restrictions,
 retention, sourceLoss, copyright) for each selected bitstream.
 <code>restrictions: unknown</code> stays <code>unknown</code> and is never <code>permitted</code>.</li>
-<li><strong>Run GuidelineKG over the landing bytes</strong>, fetched from R2 by digest and
-checked against the digest. Its <code>who-iris-cdn</code> source writes the scraper
+<li><strong>Publish the work order; the lab runs GuidelineKG over the landing
+bytes</strong> (section 3c). The lab fetches them from R2 by digest and checks
+them against the digest. Its <code>who-iris-cdn</code> source writes the scraper
 record, and then <code>classifier classify</code>, <code>parser parse</code> and
 <code>integration build</code> run as they do today. The work is keyed by <strong>bitstream
 SHA-256 plus GuidelineKG commit plus crosswalk version</strong>. GuidelineKG
 already skips any PDF whose hash has an <code>ok</code> record, so Reducto is never
 billed twice for the same bytes. Classification runs <strong>before</strong> parsing:
 a document the scope does not count as a guideline of interest is
-never parsed.</li>
+never parsed. who-iris then <strong>verifies the lab's result release</strong>
+(signature, digests, and that it names this night's work order and CDN
+release) before reading it.</li>
 <li><strong>Project <code>guideline_kg.jsonl</code> through the crosswalk</strong> (section 6) into the
 comparison form, then into N-Quads in its own named-graph partition, e.g.
 <code>graph/guidelinekg/&#x3C;handle></code>, beside the existing partitions.</li>
@@ -1090,7 +1288,9 @@ comparison covers the L1 KG's <code>recommendation</code> nodes and GuidelineKG'
 <code>Claim</code>s and assertion edges, and nothing else. They are matched on
 <strong>(publication by UUID, section by heading and page, grounded subject,
 grounded object, population)</strong>. GuidelineKG's own claim id hashes the same
-fields, so its side of the match key already exists.</p>
+fields, so its side of the match key already exists. Both sides are always
+the <strong>same language version</strong> of the publication. Cross-language consistency
+is a separate check (section 3c, item 6).</p>
 <h3>Agreement metrics (per document, per node/edge type, per night)</h3>
 <table>
 <thead>
@@ -1281,7 +1481,9 @@ is specified here at the level the BPMN will encode, with activity ids, lanes
 and skills. Writing the BPMN is the first task of the matching bean.</p>
 <p><strong>Lanes used across all three:</strong> <code>build-pipeline</code> (the scripts, unattended),
 <code>optimus-kg-agent</code> (plans, reviews, opens beans; holds no keys), <code>extractor</code>
-(Tool B, external, pinned), <code>adjudicator</code> (agent, untainted), <code>reviewer</code>
+(GuidelineKG, run by the Zitnik lab with its own keys: a <strong>separate pool</strong>,
+reached by the message flows <em>work order published</em> and <em>result release
+published</em>), <code>adjudicator</code> (agent, untainted), <code>reviewer</code>
 (SME/editor, human), <code>l1-editor</code> (human).</p>
 <h3><code>optimus-kg-nightly</code> (who-iris)</h3>
 <table>
@@ -1343,8 +1545,26 @@ and skills. Writing the BPMN is the first task of the matching bean.</p>
 <td>the five gates per bitstream; <code>unknown</code> is not <code>permitted</code></td>
 </tr>
 <tr>
+<td><code>Task_WorkOrder</code></td>
+<td>build-pipeline</td>
+<td><code>optimus-kg-feed</code></td>
+<td>write <code>state/guidelinekg/work-order.json</code>: the selected handles, bitstream digests and <code>dc.language.iso</code>; message flow to the lab pool</td>
+</tr>
+<tr>
+<td><code>Catch_Result</code></td>
+<td>—</td>
+<td>—</td>
+<td>message: the lab's result release is published; a timer boundary records <code>awaiting-extractor</code> and ends the night without failing</td>
+</tr>
+<tr>
+<td><code>Task_VerifyResult</code></td>
+<td>build-pipeline</td>
+<td><code>optimus-kg-feed</code></td>
+<td>verify the result release signature (lab <code>did:web</code>), its digests, and that it names this work order and CDN release</td>
+</tr>
+<tr>
 <td><code>Call_Classify</code></td>
-<td>extractor</td>
+<td>extractor (lab pool)</td>
 <td><code>guidelinekg-run</code></td>
 <td>GuidelineKG <code>classifier classify</code> (Reducto Classify) on the scope's candidates</td>
 </tr>
@@ -1356,7 +1576,7 @@ and skills. Writing the BPMN is the first task of the matching bean.</p>
 </tr>
 <tr>
 <td><code>Call_Extract</code></td>
-<td>extractor</td>
+<td>extractor (lab pool)</td>
 <td><code>guidelinekg-run</code></td>
 <td>GuidelineKG <code>parser parse</code> then <code>integration build</code>, keyed by (bitstream sha, GuidelineKG commit)</td>
 </tr>
@@ -1565,9 +1785,14 @@ in the platform.</p>
 <td>it owns the L1 ontology and DAK models; proposed here, not changed here</td>
 </tr>
 <tr>
-<td>GuidelineKG (Reducto parse, LLM claims, OptimusKG linking) and its <code>who-iris-cdn</code> source</td>
-<td><strong>mims-harvard/guideline-kg</strong>, pinned by commit (option C)</td>
-<td>not content, not ours, and a Python application that who-iris could not tolerate</td>
+<td>GuidelineKG (Reducto parse, LLM claims, OptimusKG linking), its <code>who-iris-cdn</code> source and the multilingual changes</td>
+<td><strong>mims-harvard/guideline-kg</strong>, pinned by commit, <strong>run by the Zitnik lab on its own keys</strong></td>
+<td>not content, not ours, and a Python application that who-iris could not tolerate; the keys stay with the party that pays for them</td>
+</tr>
+<tr>
+<td>the work order, the result-release verifier, the cross-language <code>work</code> grouping</td>
+<td><strong>who-iris</strong></td>
+<td>facts about the IRIS corpus and checks on what comes back</td>
 </tr>
 </tbody>
 </table>
@@ -1649,6 +1874,24 @@ the live work plan for the same terms.</p>
 <td>who-iris</td>
 <td>licence Q5</td>
 </tr>
+<tr>
+<td>11</td>
+<td>Work order + result-release contract (format, lab <code>did:web</code> signing, verification); <code>awaiting-extractor</code> state</td>
+<td>who-iris + the lab</td>
+<td>Q11</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Multilingual GuidelineKG: the changes in section 3c's table</td>
+<td>mims-harvard/guideline-kg</td>
+<td>Q11</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Cross-language <code>work</code> grouping (relations, govdoc, catalogue, assertion overlap) and routing cross-language gaps to translation QA</td>
+<td>who-iris</td>
+<td>4</td>
+</tr>
 </tbody>
 </table>
 <h2>12. Open questions for the owner</h2>
@@ -1657,9 +1900,8 @@ the live work plan for the same terms.</p>
 <li><del>What does "adapt OptimusKG" mean?</del> <strong>Answered by the choice of
 GuidelineKG</strong>: OptimusKG is the reference graph GuidelineKG links to, not
 something who-iris rebuilds.</li>
-<li><strong>Where does GuidelineKG run, and on whose account?</strong> In the lab's
-infrastructure, or in a WHO-run job pinned to a commit? Whose Reducto and
-Azure OpenAI keys does it use?</li>
+<li><del>Where does GuidelineKG run, and on whose keys?</del> <strong>Answered</strong>: the
+Zitnik lab runs it and supplies the keys; no keys in WHO repos (section 3c).</li>
 <li><strong>Volume.</strong> Should the nightly path process only items selected by an
 active scope (recommended, because the gap is the point), or every new IRIS
 item?</li>
@@ -1688,11 +1930,11 @@ cleared, and under what terms (retention, training use)? The same
 question applies to paragraphs sent to Azure OpenAI and OpenAI
 embeddings.</li>
 <li><strong>Contributing to GuidelineKG.</strong> The <code>who-iris-cdn</code> source is a change to
-a private repository who-iris does not own. Who agrees it with the lab,
-and does WHO get read access for pinning and CI?</li>
-<li><strong>Languages.</strong> GuidelineKG is English only by policy; who-iris holds six
-UN languages. Is English-only acceptable for the parallel path, with the
-other languages left to the existing L1 path?</li>
+a private repository who-iris does not own, as are the multilingual
+changes (section 3c). Who agrees them with the lab? Does WHO get read
+access for pinning? Will the lab sign its result releases with a key
+published as its own <code>did:web</code>?</li>
+<li><del>Languages</del> <strong>Answered</strong>: all six WHO languages (section 3c).</li>
 <li><strong>What counts as a guideline.</strong> GuidelineKG's classifier leaves
 <code>keep_categories</code> undecided. Should each L1 scope decide it (section 8,
 recommended), or should one WHO-wide default be set?</li>

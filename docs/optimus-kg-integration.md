@@ -14,6 +14,16 @@ private, MIT, from the same lab as OptimusKG). The owner: "That's what we will
 use over Optimus." GuidelineKG is Tool B throughout this document, and its own
 section is [3b](#3b-guidelinekg-tool-b).
 
+**Owner answers, 2026-11-17 17:29Z** (relayed by the merge manager):
+
+- **The Zitnik lab at Harvard runs GuidelineKG and supplies the Reducto and
+  Azure OpenAI keys.** No key goes into a WHO repository, and the run happens
+  on the lab's side.
+- **Extraction covers all six WHO languages** (ar, en, es, fr, ru, zh), not
+  English only.
+
+Section [3c](#3c-run-by-the-lab-in-six-languages) is the design for both.
+
 The owner's request, 2026-11-17 (relayed, lightly edited for typos):
 
 > need to update who-iris KG to include a new parallel KG process/tooling/skill
@@ -35,6 +45,7 @@ The owner's request, 2026-11-17 (relayed, lightly edited for typos):
 2. [The existing L1 → KG ingestion, which stays](#2-the-existing-l1--kg-ingestion-which-stays)
 3. [OptimusKG: what is worth adapting](#3-optimuskg-what-is-worth-adapting)
    - [3b. GuidelineKG: Tool B](#3b-guidelinekg-tool-b)
+   - [3c. Run by the lab, in six languages](#3c-run-by-the-lab-in-six-languages)
 4. [Integration options and the recommendation](#4-integration-options-and-the-recommendation)
 5. [Consuming the nightly CDN feed](#5-consuming-the-nightly-cdn-feed)
 6. [Schema alignment: the crosswalk](#6-schema-alignment-the-crosswalk)
@@ -219,6 +230,113 @@ design:
 5. **Its document classifier is a ready vocabulary for the L1 editor's
    "evidence types" and "guideline of interest"** (section 8).
 
+## 3c. Run by the lab, in six languages
+
+### Who runs what, and where the keys are
+
+The owner's ruling puts the boundary between the two organisations, and that
+boundary decides the interfaces:
+
+| side | holds | does |
+|---|---|---|
+| **who-iris** (WHO) | no Reducto, OpenAI or Azure key, ever | publishes the signed CDN release (as today); publishes a **work order** per night: the scope-selected handles with their bitstream digests and `dc.language.iso`; verifies and adjudicates what comes back |
+| **GuidelineKG** (Zitnik lab) | the Reducto and Azure OpenAI keys, in the lab's own secret store | reads the work order and the public CDN release, **verifies the release JWS against WHO's `did:web` key before reading a byte**, runs classify → parse → integrate, and publishes a **result release** |
+| **the result release** | — | `guideline_kg.jsonl` plus a manifest of SHA-256 digests, naming the work order, the CDN release and the GuidelineKG commit it was computed from. It should be signed with a lab key published as the lab's own `did:web`, so who-iris checks it the way anyone checks a WHO release |
+
+who-iris never calls Reducto or OpenAI and never needs network access to them.
+The `extractor` lane in section 9 becomes an **external participant** (a
+separate BPMN pool) reached by message flows: *work order published* → *result
+release published*. A night on which the lab publishes nothing is a state the
+run report shows (`awaiting-extractor`). It is not a failure, and it never
+blocks the CDN release.
+
+The **work order** is the only new public artefact on the WHO side. It goes in
+the CDN release history as `state/guidelinekg/work-order.json` beside
+`state/cursor.json`. It is canonical JSON and changes only when the selection
+changes, which keeps the no-churn rule.
+
+### Six languages
+
+IRIS publishes most translations **as separate items**, each with its own
+`dc.language.iso`, ISBN and Handle. GuidelineKG's own `who.py` says so. Some
+items instead carry several language bitstreams. The design treats a
+*language version* as the unit and links versions into one *work*:
+
+1. **Language comes from the record, and detection checks it.**
+   `dc.language.iso` from `records/<handle>.json` is authoritative. Script
+   detection on the parsed text, like GuidelineKG's `relang`, only checks it.
+   A mismatch is a finding, never a silent relabel. A multi-language item is
+   split per bitstream, and each bitstream's language comes from its file name
+   or its detected script, recorded as `inferred`.
+2. **Parse per language.** Reducto parses each language version on its own,
+   with the language passed as a hint where its API takes one. Whether Reducto's
+   OCR and layout quality holds for Arabic (right-to-left) and Chinese is
+   **not verified**. The baseline (bean 9) must measure it per language before
+   any threshold is set.
+3. **Extract claims in the source language.** The claim prompt is run on the
+   paragraph in its own language. `optimus_relation` is a controlled,
+   language-free vocabulary, so the *assertion* is comparable across
+   languages, while `text`, `subject`, `object` and `population` stay
+   verbatim in the source language. No machine translation sits in the
+   evidence chain. A translated gloss, if one is added, is a separate field
+   marked `inferred`.
+4. **Link entities across languages.** The linker's index embeds OptimusKG
+   names and synonyms, which are almost all English. A multilingual embedding
+   gives some cross-lingual recall, but it is not enough to rely on. Add
+   **WHO's own multilingual labels** to the index:
+   - ICD-11 titles, which ICD-11 publishes in the UN languages;
+   - INN names;
+   - the who-iris glossary's translations (`translations/`).
+
+   Each label is attached to the OptimusKG CURIE it maps to through the
+   crosswalk. Every grounding records the label language it matched on, and a
+   cross-language match carries a lower prior confidence until the baseline
+   calibrates it.
+5. **Match the same guideline across languages.** The match uses, in order of
+   evidence:
+   1. an IRIS relation field linking the items (`dc.relation.*`, if IRIS fills
+      it; **not verified**);
+   2. a shared govdoc number or series identifier (`dc.identifier.govdoc`);
+   3. the who-iris catalogue's own grouping, if it records one;
+   4. last, a high overlap of language-free assertion keys
+      `(subject CURIE, relation, object CURIE)` between two items, recorded as
+      `inferred`.
+
+   The result is a `work` node with `hasTranslation` edges, owned by who-iris
+   rather than GuidelineKG, because it is a fact about the IRIS corpus.
+6. **Adjudicate like with like.** Tool comparison (section 7) always compares
+   L1 KG and GuidelineKG on the **same language version**. Comparing claims
+   across languages is a **different check**: a claim present in the English
+   version and missing from the French one is a translation-consistency
+   finding. It goes to the existing round-trip translation QA lane
+   (`ingest-l1-completeness-gate` `Task_RoundTrip` / `Task_FlagDrift`), not to
+   tool adjudication. It is a disagreement between documents, not between
+   tools.
+7. **Population becomes part of the language-free key.** GuidelineKG puts
+   free-text `population` into the claim id, so "pregnant women" and
+   "femmes enceintes" would mint two different claims. The comparison form
+   normalises population to a code where one exists, for example an age, sex
+   or pregnancy category from the DAK's core data elements, and keeps the
+   verbatim text beside it. Only the code enters the cross-language key.
+
+### What GuidelineKG would need to change
+
+Read at `159514a`. Each item is a proposal for the lab, and none is a change
+who-iris makes:
+
+| where | today | needed |
+|---|---|---|
+| `src/scraper/sources/who.py` | skips any item whose `dc.language.iso` is not English | the `who-iris-cdn` source takes all six languages and records `language` from the record |
+| `src/scraper/prune.py`, `cli scraper prune-non-english` | enforces "English-only corpus by policy" | do not run it on WHO sources; or make the policy a per-source setting |
+| `src/scraper/figures.py`, `--english-only` | English is the headline language | report per language (needed for the per-language baseline) |
+| `conf/who_iris_seeds.json` (1,161 seeds) | ISBN/title seeds from an English `-eng.pdf` archive; title matching is ASCII-normalised | seeds come from the who-iris work order by Handle/UUID; no title matching needed |
+| `src/scraper/utils.py` `slugify` | NFKD → ASCII, so Arabic, Chinese and Russian titles all slug to `guideline` | harmless for file names, which also carry the hex id. Do not use the title slug as an identity anywhere |
+| `src/integration/schema.py` `slugify` (`[^a-z0-9]`) | the ad-hoc path (`pipeline.py` without a slug) turns a non-Latin title into `untitled`, so `guideline:untitled` would collide | always pass the record's hex id or the IRIS Handle as the slug. The batch runner already passes `record.guideline_id` |
+| `src/integration/claims.py` prompt | English instructions, English examples, and an English guideline subject | state that the paragraph may be in any of the six languages; extract verbatim in the source language; keep `optimus_relation` from the fixed list |
+| `src/linker/*` index | OptimusKG names and synonyms (English) | add the WHO multilingual labels (ICD-11, INN, glossary translations) per CURIE, and record the matched label's language |
+| `src/integration/schema.py` claim id | hashes free-text `population` | add a normalised population code, and use it in the key when present |
+| claim provenance | no language field on `Claim` / `Paragraph` | add `language` (from the record) on `Guideline` and propagate it to `Paragraph` and `Claim` |
+
 ## 4. Integration options and the recommendation
 
 All four options keep the existing path untouched, and all four consume the
@@ -238,9 +356,11 @@ layer in who-iris.** The parts are placed in section 10.
   **skills** and the **crosswalk data**. These are small and IRIS-specific, so
   they fit the owner's 2026-10-09 ruling: "iris specific tools need to be in
   litlfred/who-iris".
-- **GuidelineKG** stays in `mims-harvard/guideline-kg`, pinned by commit.
-  It needs one addition there: a `who-iris-cdn` source beside its `who`
-  scraper. The source writes the same `data/guidelines/who/metadata.json`
+- **GuidelineKG** stays in `mims-harvard/guideline-kg`, pinned by commit, and
+  **the lab runs it with its own keys** (section 3c). who-iris publishes a
+  work order and verifies a signed result release. It needs one addition
+  there: a `who-iris-cdn` source beside its `who` scraper, which reads the
+  work order, plus the multilingual changes listed in 3c. The source writes the same `data/guidelines/who/metadata.json`
   records from a verified CDN release instead of crawling IRIS, putting the
   IRIS Handle and UUID in `extra`. `classifier`, `parser`, `linker` and
   `integration` then run unchanged. That is a PR to a repository who-iris
@@ -293,15 +413,18 @@ How the new path consumes it, as process `optimus-kg-nightly` (section 9):
 6. **Gate.** Check `materialize-remote`'s five gates (size, restrictions,
    retention, sourceLoss, copyright) for each selected bitstream.
    `restrictions: unknown` stays `unknown` and is never `permitted`.
-7. **Run GuidelineKG over the landing bytes**, fetched from R2 by digest and
-   checked against the digest. Its `who-iris-cdn` source writes the scraper
+7. **Publish the work order; the lab runs GuidelineKG over the landing
+   bytes** (section 3c). The lab fetches them from R2 by digest and checks
+   them against the digest. Its `who-iris-cdn` source writes the scraper
    record, and then `classifier classify`, `parser parse` and
    `integration build` run as they do today. The work is keyed by **bitstream
    SHA-256 plus GuidelineKG commit plus crosswalk version**. GuidelineKG
    already skips any PDF whose hash has an `ok` record, so Reducto is never
    billed twice for the same bytes. Classification runs **before** parsing:
    a document the scope does not count as a guideline of interest is
-   never parsed.
+   never parsed. who-iris then **verifies the lab's result release**
+   (signature, digests, and that it names this night's work order and CDN
+   release) before reading it.
 8. **Project `guideline_kg.jsonl` through the crosswalk** (section 6) into the
    comparison form, then into N-Quads in its own named-graph partition, e.g.
    `graph/guidelinekg/<handle>`, beside the existing partitions.
@@ -400,7 +523,9 @@ comparison covers the L1 KG's `recommendation` nodes and GuidelineKG's
 `Claim`s and assertion edges, and nothing else. They are matched on
 **(publication by UUID, section by heading and page, grounded subject,
 grounded object, population)**. GuidelineKG's own claim id hashes the same
-fields, so its side of the match key already exists.
+fields, so its side of the match key already exists. Both sides are always
+the **same language version** of the publication. Cross-language consistency
+is a separate check (section 3c, item 6).
 
 ### Agreement metrics (per document, per node/edge type, per night)
 
@@ -548,7 +673,9 @@ and skills. Writing the BPMN is the first task of the matching bean.
 
 **Lanes used across all three:** `build-pipeline` (the scripts, unattended),
 `optimus-kg-agent` (plans, reviews, opens beans; holds no keys), `extractor`
-(Tool B, external, pinned), `adjudicator` (agent, untainted), `reviewer`
+(GuidelineKG, run by the Zitnik lab with its own keys: a **separate pool**,
+reached by the message flows *work order published* and *result release
+published*), `adjudicator` (agent, untainted), `reviewer`
 (SME/editor, human), `l1-editor` (human).
 
 ### `optimus-kg-nightly` (who-iris)
@@ -563,9 +690,12 @@ and skills. Writing the BPMN is the first task of the matching bean.
 | `Task_Withdraw` | build-pipeline | `optimus-kg-feed` | mark derived claims withdrawn, keep them addressable |
 | `Task_SelectByScope` | build-pipeline | `l1-scope-of-interest` | apply every active scope's selection predicate |
 | `Task_Gates` | optimus-kg-agent | `materialize-remote` | the five gates per bitstream; `unknown` is not `permitted` |
-| `Call_Classify` | extractor | `guidelinekg-run` | GuidelineKG `classifier classify` (Reducto Classify) on the scope's candidates |
+| `Task_WorkOrder` | build-pipeline | `optimus-kg-feed` | write `state/guidelinekg/work-order.json`: the selected handles, bitstream digests and `dc.language.iso`; message flow to the lab pool |
+| `Catch_Result` | — | — | message: the lab's result release is published; a timer boundary records `awaiting-extractor` and ends the night without failing |
+| `Task_VerifyResult` | build-pipeline | `optimus-kg-feed` | verify the result release signature (lab `did:web`), its digests, and that it names this work order and CDN release |
+| `Call_Classify` | extractor (lab pool) | `guidelinekg-run` | GuidelineKG `classifier classify` (Reducto Classify) on the scope's candidates |
 | `GW_Keep` | — | — | the class is in the scope's `keep_categories`; otherwise recorded and stopped |
-| `Call_Extract` | extractor | `guidelinekg-run` | GuidelineKG `parser parse` then `integration build`, keyed by (bitstream sha, GuidelineKG commit) |
+| `Call_Extract` | extractor (lab pool) | `guidelinekg-run` | GuidelineKG `parser parse` then `integration build`, keyed by (bitstream sha, GuidelineKG commit) |
 | `Task_Ground` | build-pipeline | `kg-crosswalk` | OptimusKG CURIEs → WHO schemes through their xrefs (MONDO → ICD-10 → ICD-11; DrugBank → ATC/INN; CTD MeSH → `dc.subject.mesh`); an unmapped CURIE stays `unknown` |
 | `Task_Align` | build-pipeline | `kg-crosswalk` | silver → gold through the versioned crosswalk; reject edges without a locator |
 | `Call_Partition` | build-pipeline | `nquads-distribution` | project gold to its named-graph partition (platform process, called) |
@@ -615,7 +745,8 @@ in the platform.
 | matching and metrics code | **cat-harness-tools** | code; the general catalogue tools live with the platform (owner, 2026-10-09) |
 | `Process_Adjudication`, `untainted-verification`, attestation storage | **cat-harness** (existing, reused) | no change expected; a new `codes` set is declared by the caller |
 | typed entity nodes in `kg/l1` (condition, product, finding); `l1-scope-and-review` in the L1 guideline-development process; DAK logical-model targets | **smart-base** | it owns the L1 ontology and DAK models; proposed here, not changed here |
-| GuidelineKG (Reducto parse, LLM claims, OptimusKG linking) and its `who-iris-cdn` source | **mims-harvard/guideline-kg**, pinned by commit (option C) | not content, not ours, and a Python application that who-iris could not tolerate |
+| GuidelineKG (Reducto parse, LLM claims, OptimusKG linking), its `who-iris-cdn` source and the multilingual changes | **mims-harvard/guideline-kg**, pinned by commit, **run by the Zitnik lab on its own keys** | not content, not ours, and a Python application that who-iris could not tolerate; the keys stay with the party that pays for them |
+| the work order, the result-release verifier, the cross-language `work` grouping | **who-iris** | facts about the IRIS corpus and checks on what comes back |
 
 ## 11. Proposed work items (beans)
 
@@ -639,6 +770,9 @@ the live work plan for the same terms.
 | 8 | `optimus-kg-nightly.bpmn` + checklist + SVG; declare `kg-optimus/` in `who-iris.json` | who-iris | 3, 5, 6, 7 |
 | 9 | Baseline run on the held library entries with an L1 KG; propose thresholds | who-iris | 8 |
 | 10 | (optional) OptimusKG as an external library KG for agentic review | who-iris | licence Q5 |
+| 11 | Work order + result-release contract (format, lab `did:web` signing, verification); `awaiting-extractor` state | who-iris + the lab | Q11 |
+| 12 | Multilingual GuidelineKG: the changes in section 3c's table | mims-harvard/guideline-kg | Q11 |
+| 13 | Cross-language `work` grouping (relations, govdoc, catalogue, assertion overlap) and routing cross-language gaps to translation QA | who-iris | 4 |
 
 ## 12. Open questions for the owner
 
@@ -646,9 +780,8 @@ the live work plan for the same terms.
 2. ~~What does "adapt OptimusKG" mean?~~ **Answered by the choice of
    GuidelineKG**: OptimusKG is the reference graph GuidelineKG links to, not
    something who-iris rebuilds.
-3. **Where does GuidelineKG run, and on whose account?** In the lab's
-   infrastructure, or in a WHO-run job pinned to a commit? Whose Reducto and
-   Azure OpenAI keys does it use?
+3. ~~Where does GuidelineKG run, and on whose keys?~~ **Answered**: the
+   Zitnik lab runs it and supplies the keys; no keys in WHO repos (section 3c).
 4. **Volume.** Should the nightly path process only items selected by an
    active scope (recommended, because the gap is the point), or every new IRIS
    item?
@@ -677,11 +810,11 @@ the live work plan for the same terms.
     question applies to paragraphs sent to Azure OpenAI and OpenAI
     embeddings.
 11. **Contributing to GuidelineKG.** The `who-iris-cdn` source is a change to
-    a private repository who-iris does not own. Who agrees it with the lab,
-    and does WHO get read access for pinning and CI?
-12. **Languages.** GuidelineKG is English only by policy; who-iris holds six
-    UN languages. Is English-only acceptable for the parallel path, with the
-    other languages left to the existing L1 path?
+    a private repository who-iris does not own, as are the multilingual
+    changes (section 3c). Who agrees them with the lab? Does WHO get read
+    access for pinning? Will the lab sign its result releases with a key
+    published as its own `did:web`?
+12. ~~Languages~~ **Answered**: all six WHO languages (section 3c).
 13. **What counts as a guideline.** GuidelineKG's classifier leaves
     `keep_categories` undecided. Should each L1 scope decide it (section 8,
     recommended), or should one WHO-wide default be set?
