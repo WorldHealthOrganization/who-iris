@@ -465,6 +465,30 @@ the adapter to the lab's private repository is therefore fine.</li>
 </ul>
 <p>Section <a href="#3d-licensing-and-data-use">3d</a> records these, and the
 licence-compatibility points they leave open.</p>
+<p><strong>Owner decisions, 2026-11-17 (answer cards and a follow-up message):</strong></p>
+<ul>
+<li><strong>Two levels of ingestion.</strong> "One should be basic for everything. Summary of
+what the article or PDF is about, some basic keyword extraction. Then for
+things that are L1 or L2 source documents, a deeper knowledge graph
+extraction should take place that tries to … populate what's in the L1 or
+L2 schema." See section <a href="#3e-two-levels-of-ingestion">3e</a>.</li>
+<li><strong>The default scope lives in smart-base.</strong> "There should be in smart-base a
+default scope and guidance and prompting. It should be a skill there. Then
+part of creating a new document as an editor is refining scope (not
+replacing)." See section 8.</li>
+<li><strong>Both graphs stay available.</strong> "Pipeline can produce a derived graph.
+Both are present. The GuidelineKG will be managed and maintained by the
+Harvard team and published under their repos, at least for now. Both should
+be available (selectivity) for authors of L1, L2, DAK or DTH content." See
+section 7.</li>
+<li><strong>Evidence review criteria belong to the document.</strong> "The author/editor of
+an L1 or an L2 document should provide the review criteria for the evidence
+that went into their document, and that should be documented as part of the
+document creation. That review criteria should be actively used by the
+agents as it tries to identify evidence in the knowledge graphs and assess
+it." See section 8.</li>
+<li><strong>Examples:</strong> keep the placeholders for now.</li>
+</ul>
 <p>The owner's request, 2026-11-17 (relayed, lightly edited for typos):</p>
 <blockquote>
 <p>need to update who-iris KG to include a new parallel KG process/tooling/skill
@@ -489,6 +513,7 @@ agentic review of a library KG (who-iris or external).</p>
 <li><a href="#3b-guidelinekg-tool-b">3b. GuidelineKG: Tool B</a></li>
 <li><a href="#3c-run-by-the-lab-in-six-languages">3c. Run by the lab, in six languages</a></li>
 <li><a href="#3d-licensing-and-data-use">3d. Licensing and data use</a></li>
+<li><a href="#3e-two-levels-of-ingestion">3e. Two levels of ingestion</a></li>
 </ul>
 </li>
 <li><a href="#4-integration-options-and-the-recommendation">Integration options and the recommendation</a></li>
@@ -1061,6 +1086,52 @@ the adapter and for the CDN's derived files such as the catalogue records,
 would make "the licence terms" checkable.</p>
 </li>
 </ol>
+<h2>3e. Two levels of ingestion</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Level 1, basic</strong></th>
+<th><strong>Level 2, deep</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>applies to</td>
+<td><strong>every</strong> IRIS item the nightly feed reports, in all six languages</td>
+<td>items that are <strong>L1 or L2 source documents</strong>, as selected by an editor's scope (section 8)</td>
+</tr>
+<tr>
+<td>produces</td>
+<td>a short summary of what the item is about, plus keywords</td>
+<td>a knowledge-graph extraction that <strong>populates the L1 schema</strong> (smart-base <code>kg/l1</code>: publication, section, recommendation and the typed entities of section 6) <strong>or the L2 schema</strong> (the DAK components and logical models)</td>
+</tr>
+<tr>
+<td>input</td>
+<td>IRIS metadata (<code>dc.description.abstract</code>, <code>dc.subject</code>, <code>dc.subject.mesh</code>), plus the first pages when the abstract is missing</td>
+<td>the full document (GuidelineKG classify → parse → claims → linking), plus the existing L1 path</td>
+</tr>
+<tr>
+<td>size held</td>
+<td>small per item: a summary, a keyword list and their provenance. Held as a catalogue-level annotation, so the corpus <strong>shape</strong> gains a description without the corpus being held</td>
+<td>as before: by reference, <code>materialized</code> only for scoped items that pass the five gates</td>
+</tr>
+<tr>
+<td>runs</td>
+<td><strong>open: who runs it</strong> (section 12)</td>
+<td>the Zitnik lab (GuidelineKG), and the existing L1 path in parallel</td>
+</tr>
+</tbody>
+</table>
+<p>Level 1 does not contradict "the gap is the point". It adds a description
+to every node the catalogue models. It does not hold the items. Its keywords
+also feed level 2's selection: an item whose summary or keywords match an
+active scope becomes a candidate for deep extraction.</p>
+<p>Level 1 must declare its own provenance. A summary is a claim by someone
+(<code>ingest-derive-content</code> <code>Task_Provenance</code>), so each summary records the
+model, prompt version, input pages and language. who-iris's existing
+<code>summaries.json</code> for held entries is the same kind of artefact, and the two
+must not overwrite each other.</p>
 <h2>4. Integration options and the recommendation</h2>
 <p>All four options keep the existing path untouched, and all four consume the
 same CDN contract. They differ in where Tool B runs and where its output lives.</p>
@@ -1165,9 +1236,11 @@ derived nodes and edges <code>withdrawn</code>. Keep them addressable and never
 delete them, mirroring the reconciliation.</li>
 </ul>
 </li>
-<li><strong>Select by scope.</strong> Test each candidate record's DC fields against every
-<em>active</em> scope of interest (section 8). Out of scope means not processed,
-and the run report counts it. The gap is the point.</li>
+<li><strong>Level 1 for every changed item; select for level 2.</strong> Every changed
+item gets the basic summary and keywords (section 3e). Then each record's
+DC fields, summary and keywords are tested against every <em>active</em> scope of
+interest (section 8). Only an L1 or L2 source document that a scope
+selects goes on to deep extraction, and the run report counts the rest.</li>
 <li><strong>Gate.</strong> Check <code>materialize-remote</code>'s five gates (size, restrictions,
 retention, sourceLoss, copyright) for each selected bitstream.
 <code>restrictions: unknown</code> stays <code>unknown</code> and is never <code>permitted</code>.</li>
@@ -1372,6 +1445,41 @@ not extend smart-base's ontology on its own.</strong></p>
 not code. Its version is part of the derivation key (section 5, step 7), so a
 crosswalk change re-projects gold without re-running Tool B.</p>
 <h2>7. Adjudication between the two tools</h2>
+<p><strong>Decided by the owner: both graphs are present, and the pipeline also
+produces a derived graph.</strong></p>
+<table>
+<thead>
+<tr>
+<th>graph</th>
+<th>maintained by</th>
+<th>where it lives</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>the L1 KG (existing path)</td>
+<td>who-iris and smart-base</td>
+<td><code>library/&#x3C;slug>/smart-kg-l1*.json*</code></td>
+</tr>
+<tr>
+<td>GuidelineKG</td>
+<td><strong>the Harvard team</strong>, "at least for now"</td>
+<td><strong>published in the lab's own repositories</strong>; who-iris references a pinned release, never a copy</td>
+</tr>
+<tr>
+<td>the <strong>derived graph</strong></td>
+<td>who-iris</td>
+<td>the comparison form of section 6, with every claim annotated with <strong>which graphs assert it, how far they agree, and any ruling</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Authors of L1, L2, DAK and DTH content <strong>select</strong> from these: one graph, the
+other, or the derived graph filtered by agreement level ("selectivity"). So
+the aim is <strong>not</strong> to pick a single winner and delete the loser. Comparison
+annotates, and a ruling records a judgement <em>for</em> an author's use without
+removing either source. The adjudication below is the mechanism for those
+judgements. It runs where an author or reviewer needs a disputed claim
+settled, and as the sampled quality measure described below.</p>
 <p>This reuses the harness's adjudication and does not invent another.</p>
 <ul>
 <li><strong>The entry condition is the harness's own</strong>
@@ -1447,17 +1555,17 @@ and are the owner's to set (section 12, Q7).</p>
 <thead>
 <tr>
 <th>outcome</th>
-<th>effect on gold</th>
+<th>effect on the derived graph (both source graphs are never changed)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>x-right</code> / <code>y-right</code></td>
-<td>the winning claim is promoted to <code>adjudicated</code>; the other is kept and marked <code>rejected</code> with the ruling</td>
+<td>the supported claim is annotated <code>adjudicated</code>, and the other is annotated <code>not-supported</code> with the ruling. An author can still select either</td>
 </tr>
 <tr>
 <td><code>both-wrong</code></td>
-<td>both kept, marked <code>rejected</code>; a bean opens if it repeats for one tool</td>
+<td>both annotated <code>not-supported</code>; a bean opens if it repeats for one tool</td>
 </tr>
 <tr>
 <td><code>both-defensible</code></td>
@@ -1477,10 +1585,39 @@ overwritten (<code>human_adjudicated</code> alongside <code>assessed_by</code>).
 adjudicable recommendation-class claim is ruled on. Other types are sampled with
 OptimusKG's evaluation plan (stratified by node type, true and false
 neighbours, sample size from a power analysis), so cost is bounded per night.</p>
-<h2>8. The L1 editor's scope of interest</h2>
+<h2>8. The editor's scope of interest and evidence review criteria</h2>
 <p><strong>The owner wrote "see examples below", but no examples were attached.</strong> The
-examples here are illustrative only and must be replaced with the owner's
-(section 12, Q8).</p>
+examples here are illustrative placeholders, which the owner has asked to keep
+for now.</p>
+<p><strong>Decided by the owner:</strong></p>
+<ul>
+<li>
+<p><strong>A default scope, its guidance and its prompting are a skill in
+smart-base.</strong> That skill is the baseline every new L1 or L2 document starts
+from.</p>
+</li>
+<li>
+<p><strong>Creating a new document includes refining that scope, not replacing it.</strong>
+An editor's scope <em>extends</em> the default: it narrows populations, adds
+evidence types, adds seeds and exclusions. A field the editor does not set
+inherits the default. A refinement that would delete a default criterion is
+refused, and the editor must state it as an explicit, reasoned exception.</p>
+</li>
+<li>
+<p><strong>The evidence review criteria are part of the document.</strong> The author or
+editor of an L1 or L2 document provides the criteria for reviewing the
+evidence that went into it. These are documented <strong>as part of creating the
+document</strong>: they are recorded with the document's own record and cited from
+it, not kept in a side file an agent might miss. The criteria are then
+<strong>actively used by the agents</strong> at both stages:</p>
+<ul>
+<li><strong>identifying</strong> evidence in the knowledge graphs (who-iris, GuidelineKG,
+or an external library KG);</li>
+<li><strong>assessing</strong> each piece of evidence found.</li>
+</ul>
+<p>Each agent ruling cites the criterion it applied.</p>
+</li>
+</ul>
 <h3>What the editor writes</h3>
 <p>A new document kind, <code>l1-scope-of-interest/v1</code>. It is authored once per L1
 document as the first step of the L1 guideline-development process, and it
@@ -1890,7 +2027,7 @@ in the platform.</p>
 <td>no change expected; a new <code>codes</code> set is declared by the caller</td>
 </tr>
 <tr>
-<td>typed entity nodes in <code>kg/l1</code> (condition, product, finding); <code>l1-scope-and-review</code> in the L1 guideline-development process; DAK logical-model targets</td>
+<td>the <strong>default scope, guidance and prompting skill</strong> (owner, decided); typed entity nodes in <code>kg/l1</code> (condition, product, finding); <code>l1-scope-and-review</code> in the L1 guideline-development process; DAK logical-model targets</td>
 <td><strong>smart-base</strong></td>
 <td>it owns the L1 ontology and DAK models; proposed here, not changed here</td>
 </tr>
@@ -2012,9 +2149,9 @@ GuidelineKG</strong>: OptimusKG is the reference graph GuidelineKG links to, not
 something who-iris rebuilds.</li>
 <li><del>Where does GuidelineKG run, and on whose keys?</del> <strong>Answered</strong>: the
 Zitnik lab runs it and supplies the keys; no keys in WHO repos (section 3c).</li>
-<li><strong>Volume.</strong> Should the nightly path process only items selected by an
-active scope (recommended, because the gap is the point), or every new IRIS
-item?</li>
+<li><del>Volume</del> <strong>Decided</strong>: two levels. A basic summary and keywords for
+every item, and deep L1/L2 extraction for L1 and L2 source documents
+(section 3e).</li>
 <li><del>Licences</del> <strong>Decided</strong>: outputs are CC BY 3.0 IGO (smart-base's licence).
 The compatibility points that remain are listed in section 3d.
 <em>Original question:</em> The OptimusKG graph is <strong>CC BY-NC-SA 4.0</strong>, and some of its
@@ -2026,11 +2163,17 @@ cite it? Who answers the <code>copyright</code> gate for IRIS bitstreams fed to 
 external tool?</li>
 <li><strong>DAK targets.</strong> Which smart-base version and logical models are the
 alignment targets? Should the typed entity nodes (condition, product,
-finding) be proposed to smart-base's <code>kg/l1</code> ontology?</li>
-<li><strong>Adjudication policy.</strong> Who sits in the human reviewer lane, and is
+finding) be proposed to smart-base's <code>kg/l1</code> ontology? Asked by card (recommended:
+pin smart-base <code>main</code> at <code>781a8b9</code> and re-pin on each release); no answer
+yet.</li>
+<li><del>Adjudication policy</del> <strong>Decided</strong>: both graphs stay present and authors
+select between them; the pipeline adds a derived graph; GuidelineKG is
+maintained and published by the Harvard team (section 7). <em>Original
+question:</em> Who sits in the human reviewer lane, and is
 "every recommendation-class disagreement goes to a human" right? The metric
 thresholds should wait for a baseline (bean 9).</li>
-<li><strong>The examples.</strong> The request said "see examples below", but none were
+<li><del>The examples</del> <strong>Decided</strong>: keep the placeholders for now. <em>Original
+question:</em> The request said "see examples below", but none were
 attached. Please send the scope-of-interest examples you had in mind; the
 measles and contraception scopes in section 8 are placeholders.</li>
 <li><strong>Network.</strong> optimuskg.ai and arxiv.org are blocked from these sessions.
@@ -2052,9 +2195,18 @@ changes (section 3c). Who agrees them with the lab? Does WHO get read
 access for pinning? Will the lab sign its result releases with a key
 published as its own <code>did:web</code>?</li>
 <li><del>Languages</del> <strong>Answered</strong>: all six WHO languages (section 3c).</li>
-<li><strong>What counts as a guideline.</strong> GuidelineKG's classifier leaves
+<li><del>What counts as a guideline</del> <strong>Decided</strong>: a default scope skill in
+smart-base, refined (not replaced) by each editor, together with the
+document's own evidence review criteria (section 8). <em>Original question:</em> GuidelineKG's classifier leaves
 <code>keep_categories</code> undecided. Should each L1 scope decide it (section 8,
 recommended), or should one WHO-wide default be set?</li>
+<li><strong>Who runs level 1</strong> (summary and keywords for every IRIS item): the
+Harvard lab with GuidelineKG, a who-iris job, or metadata only with no
+LLM? Asked by card; no answer yet.</li>
+<li><strong>Signing GuidelineKG releases.</strong> Now that GuidelineKG is published in the
+lab's repositories, does who-iris pin a commit only, or should the lab
+also sign releases with its own <code>did:web</code> key? Asked by card; no answer
+yet.</li>
 </ol>
 
 </main>
