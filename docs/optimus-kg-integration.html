@@ -573,8 +573,17 @@ ontologies and vocabularies, with 190,531 nodes in 10 entity types and
 different counts (192,813 nodes, 27 edge labels), so the figures depend on the
 release. The paper is cited as Vittor <em>et al.</em>, "OptimusKG: Unifying
 biomedical knowledge in a modern multimodal graph", <em>Nature Scientific Data</em>,
-2026. optimuskg.ai and arXiv could not be fetched from this session, so the
-paper's evaluation figures are not quoted here.</p>
+2026, and is on arXiv as
+<a href="https://arxiv.org/abs/2604.27269">2604.27269</a> (v3, 2026-09-01), read through
+<code>export.arxiv.org</code>. The optimuskg.ai pages on the client, MCP bundle, nodes and
+edges were supplied as PDFs (captured 2026-11-17). The counts differ a little
+between sources: the paper's v3 gives 190,939 nodes, 21,818,752 edges in 27
+edge types and 145 property keys.</p>
+<p>The paper states the design choice this whole document turns on: "many [KGs]
+are derived from unstructured documents and therefore lack schema-level
+constraints". OptimusKG is built from structured and semi-structured resources
+<em>instead</em>, so its schema discipline is what to adopt for a WHO extractor. It is
+not a model of how to extract.</p>
 <table>
 <thead>
 <tr>
@@ -601,7 +610,7 @@ paper's evaluation figures are not quoted here.</p>
 </tr>
 <tr>
 <td>node types</td>
-<td>10: Gene, Drug, Disease, Phenotype, Anatomy, Pathway, Biological Process, Cellular Component, Molecular Function, Exposure</td>
+<td>10, each a 3-letter label: GEN 61,306, DIS 36,753, BPO 25,754, PHE 19,341, DRG 18,640, ANA 13,120, MFN 10,161, CCO 4,052, PWY 2,805, EXP 881. Ids are CURIEs: Disease <code>MONDO:</code>, Drug DrugBank <code>DB…</code>, Exposure <code>CTD:D…</code> (a MeSH descriptor), Gene Ensembl</td>
 <td><strong>Subset.</strong> Drug, Disease, Phenotype, Exposure and Anatomy matter for WHO guidance. The molecular types are out of scope unless a scope of interest asks for them</td>
 </tr>
 <tr>
@@ -616,23 +625,23 @@ paper's evaluation figures are not quoted here.</p>
 </tr>
 <tr>
 <td>conflict model</td>
-<td><code>relation_assertions</code> keeps every <code>{source, relation}</code>; <code>relation_conflict</code> flags mutually exclusive ones (339 drug–disease pairs are both INDICATION and CONTRAINDICATION)</td>
+<td><code>relation_assertions</code> keeps every <code>{source, relation}</code>; <code>relation_conflict</code> flags mutually exclusive ones. The current release keeps 3,826 source assertions that a priority-only collapse would drop, including 339 drug–disease pairs that are both INDICATION and CONTRAINDICATION. Its own docs warn: "For clinical or safety-sensitive analyses, read <code>relation_assertions</code> rather than <code>relation</code> alone, and treat <code>relation_conflict = true</code> edges as requiring source-level review"</td>
 <td><strong>Yes. This is the seed of the adjudication input.</strong> It records disagreement <em>inside</em> one tool; section 7 extends it to disagreement <em>between</em> tools</td>
 </tr>
 <tr>
 <td>outputs</td>
-<td>Parquet gold layer (<code>nodes/*.parquet</code>, <code>edges/*.parquet</code>) on Harvard Dataverse; Neo4j export; the PyPI client <code>optimuskg</code> downloads and caches gold files (<code>get_file</code>, <code>load_parquet</code>, <code>load_graph(lcc=True)</code>, <code>load_networkx</code>), pinned to a release by <code>OPTIMUSKG_DOI</code>; MCP bundle on DuckDB; <strong>no RDF</strong></td>
+<td>The Parquet gold layer on Harvard Dataverse (about 280 MB): <code>nodes.parquet</code>, <code>edges.parquet</code>, the largest-connected-component versions, and per-type <code>nodes/&#x3C;type>.parquet</code> and <code>edges/&#x3C;label>.parquet</code>. There is also a Neo4j export. The PyPI client <code>optimuskg</code> downloads and caches gold files (<code>get_file</code>, <code>load_parquet</code>, <code>load_graph(lcc=True)</code>, <code>load_networkx</code>). Its cache is keyed <code>&#x3C;doi_slug>/&#x3C;dataset_version>/&#x3C;path></code> and it is pinned by <code>OPTIMUSKG_DOI</code> / <code>OPTIMUSKG_SERVER</code>. An <code>.mcpb</code> MCP bundle builds a 2.54 GB local DuckDB and exposes <code>list_schema</code>, <code>search_entities</code>, <code>get_entity</code>, <code>get_neighbors</code>, <code>count_neighbors</code>, <code>find_connection</code> and a read-only <code>run_sql</code>. An agent skill is published (<code>npx skills add https://github.com/mims-harvard/optimuskg --skill optimuskg</code>). There is <strong>no RDF</strong></td>
 <td><strong>Parquet as the working form</strong>, then projected to N-Quads so the existing Oxigraph partitions (<a href="https://github.com/litlfred/who-iris/blob/HEAD/skills/iris-oxigraph.md"><code>iris-oxigraph</code></a>) can query both graphs side by side</td>
 </tr>
 <tr>
 <td>evaluation</td>
-<td>PaperQA3 checks sampled edges (100 per node type by centrality, true and false neighbours, a power analysis at α = 0.05)</td>
+<td>PaperQA3 scored literature support from 1 to 5 for 4,708 true edges and 1,000 false edges. The edges came from 100 seed nodes per type, with the top and bottom 10% by degree left out and up to 10 neighbours per seed. 70.0% of true edges had literature support and 83.4% of false edges had none. Unsupported true edges were mostly ANA–GEN, DIS–GEN and DRG–DRG, which come from primary experimental data</td>
 <td><strong>Yes, as the sampling plan</strong> for the agentic adjudication in section 7</td>
 </tr>
 <tr>
 <td>licence</td>
-<td>code MIT (© 2025 Zitnik Lab); data keeps each source's licence, some academic or non-commercial only; distributed on Harvard Dataverse <code>doi:10.7910/DVN/IYNGEV</code></td>
-<td>Adapting the <strong>code patterns</strong> is clear under MIT. Importing the <strong>OptimusKG data</strong> as an external library KG is a separate question, gated by <code>copyright</code> and <code>restrictions</code> (section 12)</td>
+<td>code and client MIT (© 2025 Zitnik Lab). The <strong>graph is CC BY-NC-SA 4.0</strong> on Harvard Dataverse (<code>doi:10.7910/DVN/IYNGEV</code>), per the paper's data-availability statement. On top of that, each source keeps its own licence: Open Targets CC0, DrugCentral CC BY-SA 4.0, CTD non-commercial</td>
+<td>Adapting the <strong>code patterns</strong> is clear under MIT. <strong>Using the data is not</strong>: NonCommercial and ShareAlike both apply to anything derived from it, so option D needs a legal ruling (section 12, Q5)</td>
 </tr>
 </tbody>
 </table>
@@ -675,8 +684,8 @@ same CDN contract. They differ in where Tool B runs and where its output lives.<
 <td><strong>D</strong></td>
 <td>Import OptimusKG's own graph as an external library KG</td>
 <td>subscribe to one Dataverse release as a remote KG, read through the <code>optimuskg</code> client pinned by <code>OPTIMUSKG_DOI</code>; only the node and edge files a scope needs (e.g. <code>nodes/drug.parquet</code>, <code>nodes/disease.parquet</code> and the DRG–DIS edges) are fetched, and their metadata is held under <code>library/optimuskg/</code>; no extraction</td>
-<td>Gives drug–disease grounding at once</td>
-<td>Biomedical-database facts, not WHO guidance. Licences vary per source. Useful only as a <strong>grounding and comparison reference</strong> for section 8's agentic review, never as Tool B</td>
+<td>Gives drug–disease grounding at once. The published MCP bundle (<code>search_entities</code>, <code>get_neighbors</code>, <code>find_connection</code>) is a ready-made interface for section 8's agentic review of an external library KG</td>
+<td>Biomedical-database facts, not WHO guidance. <strong>The data is CC BY-NC-SA 4.0</strong>, and some sources carry stricter terms. Useful only as a <strong>grounding and comparison reference</strong> for agentic review, never as Tool B, and only after the licence ruling</td>
 </tr>
 </tbody>
 </table>
@@ -809,7 +818,7 @@ not verified against its pinned version (section 12, Q6).</p>
 <td>— <em>(gap: propose <code>condition</code>)</em></td>
 <td>Component 2 (condition targeted); Component 5 decision-support logic inputs</td>
 <td><strong>ICD-11 MMS</strong> URI</td>
-<td>MONDO, UMLS CUI, MeSH</td>
+<td>id <code>MONDO:</code>; <code>xrefs</code> carry <strong>ICD-10</strong> (not ICD-11), OMIM and others, plus <code>umls_cui</code>. ICD-11 is reached through WHO's ICD-10→ICD-11 mapping tables, and an unmapped code stays <code>unknown</code></td>
 </tr>
 <tr>
 <td>Phenotype (PHE)</td>
@@ -823,14 +832,14 @@ not verified against its pinned version (section 12, Q6).</p>
 <td>— <em>(gap: propose <code>product</code>)</em></td>
 <td>Component 5 data elements (medication); WHO <strong>EML</strong></td>
 <td><strong>ATC</strong> code + <strong>INN</strong></td>
-<td>DrugBank, RxNorm</td>
+<td>id DrugBank <code>DB…</code>. The node schema has <strong>no ATC or INN field</strong> (it has synonyms, trade names, UNII, CAS and a MeSH <code>mrdef</code>), but the DRG–DIS edges list ATC and INN among their indirect sources. Mapping to ATC/INN is a separate grounding step</td>
 </tr>
 <tr>
 <td>Exposure (EXP)</td>
 <td>— <em>(gap)</em></td>
 <td>Component 5 data elements (risk factor)</td>
 <td>ICD-11 extension codes where one exists</td>
-<td>CTD, ExO</td>
+<td>id <code>CTD:D…</code> <strong>is a MeSH descriptor</strong>, so it joins directly to IRIS's <code>dc.subject.mesh</code>. That is the cheapest bridge between the two graphs</td>
 </tr>
 <tr>
 <td>Anatomy (ANA)</td>
@@ -1496,9 +1505,11 @@ C, recommended), or tolerated inside who-iris (option A)?</li>
 <li><strong>Volume.</strong> Should the nightly path process only items selected by an
 active scope (recommended, because the gap is the point), or every new IRIS
 item?</li>
-<li><strong>Licences.</strong> OptimusKG's data keeps each source's licence, some of them
-academic or non-commercial only. May WHO use it for comparison? Who answers
-the <code>copyright</code> gate for IRIS bitstreams fed to an external tool?</li>
+<li><strong>Licences.</strong> The OptimusKG graph is <strong>CC BY-NC-SA 4.0</strong>, and some of its
+sources carry stricter terms (CTD is non-commercial). May WHO use it, even
+only for comparison? Would ShareAlike attach to adjudicated outputs that
+cite it? Who answers the <code>copyright</code> gate for IRIS bitstreams fed to an
+external tool?</li>
 <li><strong>DAK targets.</strong> Which smart-base version and logical models are the
 alignment targets? Should the typed entity nodes (condition, product,
 finding) be proposed to smart-base's <code>kg/l1</code> ontology?</li>
@@ -1508,9 +1519,9 @@ thresholds should wait for a baseline (bean 9).</li>
 <li><strong>The examples.</strong> The request said "see examples below", but none were
 attached. Please send the scope-of-interest examples you had in mind; the
 measles and contraception scopes in section 8 are placeholders.</li>
-<li><strong>Network.</strong> optimuskg.ai and arxiv.org are blocked from these sessions
-(pypi.org is reachable). To quote the paper's evaluation figures, allow
-them in the environment's network settings or attach the PDF.</li>
+<li><strong>Network.</strong> optimuskg.ai and arxiv.org are blocked from these sessions.
+pypi.org and export.arxiv.org are reachable, and the paper was read through
+the latter. For a pipeline that reads Dataverse, allow dataverse.harvard.edu.</li>
 </ol>
 
 </main>
