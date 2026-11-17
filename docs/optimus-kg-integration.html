@@ -450,6 +450,21 @@ on the lab's side.</li>
 English only.</li>
 </ul>
 <p>Section <a href="#3c-run-by-the-lab-in-six-languages">3c</a> is the design for both.</p>
+<p><strong>Owner decisions, 2026-11-17 17:31Z and 17:33Z:</strong></p>
+<ul>
+<li><strong>Sending content is cleared.</strong> "Ok to send content to Reducto and
+OpenAI": WHO IRIS PDFs may go to Reducto and text to Azure OpenAI, on the
+lab's keys. The provider terms and retention settings are the operator's
+(the lab's) to configure.</li>
+<li><strong>Licence.</strong> "We will use smart-base license." This pipeline's outputs
+held by who-iris (the GuidelineKG extract, the crosswalk and the
+adjudication results) are licensed under smart-base's licence.</li>
+<li><strong>The CDN source is public.</strong> The Zitnik lab may use it however it likes,
+including privately, provided it follows the licence terms. Contributing
+the adapter to the lab's private repository is therefore fine.</li>
+</ul>
+<p>Section <a href="#3d-licensing-and-data-use">3d</a> records these, and the
+licence-compatibility points they leave open.</p>
 <p>The owner's request, 2026-11-17 (relayed, lightly edited for typos):</p>
 <blockquote>
 <p>need to update who-iris KG to include a new parallel KG process/tooling/skill
@@ -473,6 +488,7 @@ agentic review of a library KG (who-iris or external).</p>
 <ul>
 <li><a href="#3b-guidelinekg-tool-b">3b. GuidelineKG: Tool B</a></li>
 <li><a href="#3c-run-by-the-lab-in-six-languages">3c. Run by the lab, in six languages</a></li>
+<li><a href="#3d-licensing-and-data-use">3d. Licensing and data use</a></li>
 </ul>
 </li>
 <li><a href="#4-integration-options-and-the-recommendation">Integration options and the recommendation</a></li>
@@ -951,6 +967,100 @@ who-iris makes:</p>
 </tr>
 </tbody>
 </table>
+<h2>3d. Licensing and data use</h2>
+<h3>Decided</h3>
+<table>
+<thead>
+<tr>
+<th>what</th>
+<th>decision</th>
+<th>basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sending IRIS PDFs to Reducto, and text to Azure OpenAI / OpenAI embeddings</td>
+<td><strong>permitted</strong>, on the lab's keys</td>
+<td>owner, 17:31Z. <strong>The lab, as operator, configures the provider terms and retention</strong> (for example zero-retention or no-training settings). who-iris records which settings applied to a run only if the result release declares them</td>
+</tr>
+<tr>
+<td>licence of this pipeline's outputs held by who-iris</td>
+<td><strong>smart-base's licence</strong></td>
+<td>owner, 17:33Z</td>
+</tr>
+<tr>
+<td>the CDN source adapter</td>
+<td>public; the lab may use it however it likes, including privately, provided it follows the licence terms</td>
+<td>owner, 17:33Z</td>
+</tr>
+</tbody>
+</table>
+<p>smart-base's licence, quoted exactly from <code>LICENSE.md</code> at
+<code>WorldHealthOrganization/smart-base@781a8b9</code> (2026-10-20), first line:</p>
+<blockquote>
+<h1>Creative Commons Attribution 3.0 IGO (CC-BY-3.0-IGO)</h1>
+</blockquote>
+<p>and its licence-text paragraph:</p>
+<blockquote>
+<p>This work is licensed under the <a href="https://creativecommons.org/licenses/by/3.0/igo/">Creative Commons Attribution 3.0 IGO (CC-BY-3.0-IGO) License</a>.</p>
+</blockquote>
+<p>So "cc-igo" is <strong>CC BY 3.0 IGO</strong>. It is the attribution-only variant, with no
+NonCommercial and no ShareAlike. Its summary says it permits adaptation "for
+any purpose, even commercially".</p>
+<h3>Licence-compatibility points that remain (flagged, not resolved)</h3>
+<p>These are points for WHO's legal office, not for this design to settle.</p>
+<ol>
+<li>
+<p><strong>OptimusKG inputs are CC BY-NC-SA 4.0.</strong> Both NonCommercial and
+ShareAlike conflict with relicensing anything <em>adapted from</em> OptimusKG
+under CC BY 3.0 IGO. The question is what in the outputs is adapted from
+OptimusKG:</p>
+<ul>
+<li>GuidelineKG's assertion edges are extracted from <strong>WHO text</strong>. They
+carry OptimusKG <strong>CURIEs</strong> (identifiers) as endpoints, and are grounded
+with an index built from OptimusKG names and synonyms.</li>
+<li><strong>Proposed handling, pending a ruling:</strong> who-iris outputs carry only
+the CURIEs plus WHO-derived content (claims, quotes, locators,
+adjudication). They never copy OptimusKG labels, synonyms, properties or
+edges. Anything taken from OptimusKG itself stays <code>referenced</code>, under
+its own licence, and is never materialised into a CC BY 3.0 IGO output.
+Whether a CURIE plus the act of linking is an adaptation is the legal
+question.</li>
+<li>This also bears on option D. Using OptimusKG's own edges as a
+comparison reference is fine as long as they are <strong>not copied</strong> into an
+output.</li>
+</ul>
+</li>
+<li>
+<p><strong>Many IRIS items are themselves CC BY-NC-SA 3.0 IGO.</strong> Of the 222
+catalogue records here, 78 carry <code>dc.rights</code> =
+<code>CC BY-NC-SA 3.0 IGO</code> with <code>dc.rights.holder</code> = <code>World Health Organization</code>.
+The rest record no <code>dc.rights</code>, which is <code>unknown</code>, not permitted.</p>
+<ul>
+<li>Verbatim claim text, quotes and section text extracted from those
+items are adaptations of NC-SA works.</li>
+<li><strong>WHO is the rights holder</strong>, so WHO can license its own adaptations
+differently, but only for material WHO holds the rights to. That covers
+neither a co-published item with a different holder, nor the lab's own
+contribution as the party that made the extract.</li>
+<li><strong>The point to confirm:</strong> whether the lab's outputs are produced for
+WHO, or assigned or licensed to WHO, so that WHO can license them under
+CC BY 3.0 IGO.</li>
+</ul>
+</li>
+<li>
+<p><strong>Which licence the lab must follow when it uses the CDN source.</strong> The
+owner says the lab may use the CDN source "as long as they follow the
+licence terms". Two licences are in play:</p>
+<ul>
+<li>the adapter <strong>code</strong> lands in GuidelineKG, which is MIT;</li>
+<li>the CDN <strong>content</strong> carries each IRIS item's own <code>dc.rights</code>.</li>
+</ul>
+<p>who-iris itself has <strong>no LICENSE file</strong>. Stating the who-iris licence, for
+the adapter and for the CDN's derived files such as the catalogue records,
+would make "the licence terms" checkable.</p>
+</li>
+</ol>
 <h2>4. Integration options and the recommendation</h2>
 <p>All four options keep the existing path untouched, and all four consume the
 same CDN contract. They differ in where Tool B runs and where its output lives.</p>
@@ -1905,7 +2015,9 @@ Zitnik lab runs it and supplies the keys; no keys in WHO repos (section 3c).</li
 <li><strong>Volume.</strong> Should the nightly path process only items selected by an
 active scope (recommended, because the gap is the point), or every new IRIS
 item?</li>
-<li><strong>Licences.</strong> The OptimusKG graph is <strong>CC BY-NC-SA 4.0</strong>, and some of its
+<li><del>Licences</del> <strong>Decided</strong>: outputs are CC BY 3.0 IGO (smart-base's licence).
+The compatibility points that remain are listed in section 3d.
+<em>Original question:</em> The OptimusKG graph is <strong>CC BY-NC-SA 4.0</strong>, and some of its
 sources carry stricter terms (CTD is non-commercial). GuidelineKG's linker
 index is built from it, and every grounded GuidelineKG edge points into
 it. May WHO use that, and is the GuidelineKG output a derivative under
@@ -1924,12 +2036,17 @@ measles and contraception scopes in section 8 are placeholders.</li>
 <li><strong>Network.</strong> optimuskg.ai and arxiv.org are blocked from these sessions.
 pypi.org and export.arxiv.org are reachable, and the paper was read through
 the latter. For a pipeline that reads Dataverse, allow dataverse.harvard.edu.</li>
-<li><strong>Sending WHO PDFs to Reducto.</strong> IRIS publications are public, but each
+<li><del>Sending WHO PDFs to Reducto</del> <strong>Decided</strong>: permitted on the lab's keys;
+the lab configures provider terms and retention (section 3d).
+<em>Original question:</em> IRIS publications are public, but each
 one is uploaded to a commercial service and billed per page. Is that
 cleared, and under what terms (retention, training use)? The same
 question applies to paragraphs sent to Azure OpenAI and OpenAI
 embeddings.</li>
-<li><strong>Contributing to GuidelineKG.</strong> The <code>who-iris-cdn</code> source is a change to
+<li><del>Contributing to GuidelineKG</del> <strong>Decided</strong>: the CDN source is public,
+and the lab may use it privately under the licence terms (section 3d).
+Still to agree with the lab: signing result releases with a lab
+<code>did:web</code> key. <em>Original question:</em> The <code>who-iris-cdn</code> source is a change to
 a private repository who-iris does not own, as are the multilingual
 changes (section 3c). Who agrees them with the lab? Does WHO get read
 access for pinning? Will the lab sign its result releases with a key
