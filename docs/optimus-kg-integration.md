@@ -1,10 +1,18 @@
-# A parallel OptimusKG-style KG path for who-iris: design and integration options
+# A parallel GuidelineKG path for who-iris (Reducto + OptimusKG): design and integration options
 
 **Status: exploration and design only.** This document adds no code, no
 process files and no beans. It sets out the integration options, a
 recommendation, and the questions the owner needs to answer before the work
 items are opened. The existing L1 → KG ingestion is left exactly as it is: the
 new path runs **beside** it and never writes the files it writes.
+
+**Revised 2026-11-17, after the owner named the tool.** "redacto" is
+**[Reducto](https://reducto.ai)**, a hosted document-parsing API. The pipeline
+that uses it is **GuidelineKG**
+([mims-harvard/guideline-kg](https://github.com/mims-harvard/guideline-kg),
+private, MIT, from the same lab as OptimusKG). The owner: "That's what we will
+use over Optimus." GuidelineKG is Tool B throughout this document, and its own
+section is [3b](#3b-guidelinekg-tool-b).
 
 The owner's request, 2026-11-17 (relayed, lightly edited for typos):
 
@@ -26,6 +34,7 @@ The owner's request, 2026-11-17 (relayed, lightly edited for typos):
 1. [Findings that shape the design](#1-findings-that-shape-the-design)
 2. [The existing L1 → KG ingestion, which stays](#2-the-existing-l1--kg-ingestion-which-stays)
 3. [OptimusKG: what is worth adapting](#3-optimuskg-what-is-worth-adapting)
+   - [3b. GuidelineKG: Tool B](#3b-guidelinekg-tool-b)
 4. [Integration options and the recommendation](#4-integration-options-and-the-recommendation)
 5. [Consuming the nightly CDN feed](#5-consuming-the-nightly-cdn-feed)
 6. [Schema alignment: the crosswalk](#6-schema-alignment-the-crosswalk)
@@ -52,19 +61,19 @@ because the rest of the design depends on it.
    [the lab announced it in April 2026](https://zitniklab.hms.harvard.edu/2026/04/25/OptimusKG/).
    So "adapt OptimusKG" for WHO IRIS PDFs can only mean adopting its
    **architecture, schema shape and provenance model**, with a text-extraction
-   front end that OptimusKG does not have. Section 3 lists what carries over.
-2. **"redacto" could not be identified.** A code search of the `litlfred`
-   organisation found only a local `class Redactor` that scrubs e-mail
-   addresses in `litlfred/ihris`. Searches of issues in `litlfred` and
-   `WorldHealthOrganization` found nothing. Several unrelated public
-   repositories have the name; the closest is
-   [FredHutch/RedactO](https://github.com/FredHutch/RedactO), which OCRs PDFs and
-   redacts them. Nothing links any of them to OptimusKG. **This design does not
-   guess what redacto does.** It leaves a slot for it, `Tool B`, and section 12
-   asks the owner for the repository or package. The slot is shaped to accept
-   either an extractor (text → candidate nodes and edges) or a pre-extraction
-   redaction step (PDF → PDF or text with personal data removed). Section 4
-   shows how each reading changes the plan.
+   front end that OptimusKG does not have. **GuidelineKG is that front end.**
+   It parses guideline PDFs with Reducto, extracts recommendation claims with
+   an LLM, and writes them as an OptimusKG-shaped layer whose entities are
+   OptimusKG nodes (section 3b).
+2. **"redacto" is Reducto, and Tool B is GuidelineKG.** The first searches of
+   the `litlfred` and `WorldHealthOrganization` organisations found nothing,
+   because the tool is spelled Reducto. The owner then pointed to
+   GuidelineKG, whose `src/parser/_reducto.py` wraps Reducto's **Parse**,
+   **Extract** and **Classify** APIs. Reducto is a commercial cloud service, so
+   every PDF it reads is sent to a third party and billed per page. The
+   pipeline is idempotent per PDF hash, so a re-run is not billed again.
+   Section 3b describes GuidelineKG; questions 1 and 10–13 in section 12 cover
+   what using it implies.
 3. **The nightly CDN feed is designed and coded, but it is not consumable
    yet.** [`processes/iris-cdn-nightly.bpmn`](../processes/iris-cdn-nightly.bpmn)
    and `scripts/iris-cdn/run.ts nightly` produce a signed BagIt release in a git
@@ -142,6 +151,74 @@ not a model of how to extract.
 | evaluation | PaperQA3 scored literature support from 1 to 5 for 4,708 true edges and 1,000 false edges. The edges came from 100 seed nodes per type, with the top and bottom 10% by degree left out and up to 10 neighbours per seed. 70.0% of true edges had literature support and 83.4% of false edges had none. Unsupported true edges were mostly ANA–GEN, DIS–GEN and DRG–DRG, which come from primary experimental data | **Yes, as the sampling plan** for the agentic adjudication in section 7 |
 | licence | code and client MIT (© 2025 Zitnik Lab). The **graph is CC BY-NC-SA 4.0** on Harvard Dataverse (`doi:10.7910/DVN/IYNGEV`), per the paper's data-availability statement. On top of that, each source keeps its own licence: Open Targets CC0, DrugCentral CC BY-SA 4.0, CTD non-commercial | Adapting the **code patterns** is clear under MIT. **Using the data is not**: NonCommercial and ShareAlike both apply to anything derived from it, so option D needs a legal ruling (section 12, Q5) |
 
+## 3b. GuidelineKG: Tool B
+
+Read from `mims-harvard/guideline-kg` at `159514a` (2026-07-09; the repository
+was last pushed 2026-08-28). The repository is private, licensed MIT, version
+`0.0.1`, Python 3.13. Its README describes it as "a multimodal biomedical
+knowledge graph enriched with clinical guidelines".
+
+**The pipeline is five CLI stages, joined by `id` / `version` / `sha256`:**
+
+| stage | what it does | external service | output |
+|---|---|---|---|
+| `scraper` | 25 sources, `who` among them. The `who` scraper calls the IRIS DSpace 7 REST API (`/server/api/discover/search/objects`, `embed=bundles/bitstreams`, newest first, at most 200 × 25 items). `who-seed` targets a list of **1,161 WHO IRIS seeds** (ISBN or title) taken from an earlier "PV database". **English only**: an item whose `dc.language.iso` is not English is skipped | IRIS | `data/guidelines/who/*.pdf` + `metadata.json`: `id`, `version`, `supersedes`, `sha256`, `source_url`, `page_count`, `title`, `publication_date`, `topic`, `language`, `extra{iris_item_uuid, bitstream_uuid}` |
+| `classifier` | single-label document type from the first ≤ 10 pages, in three groups. **A**, guideline family: clinical practice guideline, consensus statement, recommendation statement, guidance/advisory, guideline derivative, evidence report. **B**, other normative documents. **C**, informational. Which classes to keep is deliberately left undecided (`keep_categories: null`) | Reducto Classify | `data/classified/who/classify_index.json` |
+| `parser` | a typed block tree (`heading`, `paragraph`, `list_item`, `table`, `figure`), each block with page, bbox and OCR confidence, plus guideline metadata (title, date, organisation, region, description) | Reducto Parse + Extract | `data/parsed/who/<slug>/{parse.json, document.md, metadata.json}` |
+| `linker` | grounds a mention to an OptimusKG CURIE: embed it with `text-embedding-3-large`, take the cosine top *j* over a prebuilt index of about 190k OptimusKG nodes, and let an LLM choose | OpenAI embeddings, Azure OpenAI, the `optimuskg` client | the vector index |
+| `integration` | an LLM extracts the guideline's **own recommendations** per paragraph as `(subject, predicate, object, optimus_relation, population, action)`. The prompt excludes evidence descriptions, economics, committee process and implementation logistics. Each entity is linked, and the result is written as a layer over OptimusKG | Azure OpenAI (JSON mode) | `data/graph/guideline_kg.jsonl` |
+
+**Its schema** (`src/integration/schema.py`) is the important part for this
+design:
+
+- **Content tree.** Every id is minted under `guideline:`:
+  `Guideline -HAS_SECTION-> Section -HAS_PARAGRAPH-> Paragraph -HAS_CLAIM-> Claim`,
+  and `Guideline -HAS_FIGURE/HAS_TABLE->`.
+  - `Guideline` carries name, publication_date, organization, region, description and length.
+  - `Section` carries heading and page_range.
+  - `Paragraph` carries text, page, bbox and ocr_confidence.
+  - `Claim` carries text, subject, predicate, object, status, asserted_in, last_affirmed and retracted_in.
+- **Grounding edges.** `MENTIONS`, `DEPICTS` and `TABULATES` run from a
+  content node to an OptimusKG CURIE. Each has text_span, char_start/char_end,
+  page, section_id, ocr_confidence and entity_linking_confidence.
+- **Assertion edges.** These run from one OptimusKG CURIE to another and are
+  shaped exactly like an OptimusKG edge: `label` is the node pair (`DRG-DIS`)
+  and `relation` is the native relation (`INDICATION`, `CONTRAINDICATION`,
+  `OFF_LABEL_USE`, `ADVERSE_DRUG_REACTION`, `ASSOCIATED_WITH`,
+  `SYNERGISTIC_INTERACTION`, `LINKED_TO`). Their properties are nature,
+  population, claim_id, status, asserted_in, last_affirmed and retracted_in.
+- **Ids are content-addressed.** A claim's id hashes its grounded
+  `(subject CURIE, relation, object CURIE, population)`, so it is stable when
+  the text is reworded and across guideline versions. The store keys edges by
+  `(from, to, relation)`, so an INDICATION and a CONTRAINDICATION on the same
+  pair stay separate. **Retraction and supersession are modelled.**
+- **Validation.** `integration validate --check-references` checks every
+  CURIE endpoint against the OptimusKG node set.
+
+**What this changes in the design:**
+
+1. **The two outputs line up structurally.** `Guideline / Section / Claim`
+   maps almost one for one onto the L1 KG's
+   `publication / publication-section / recommendation`. GuidelineKG adds what
+   the L1 KG lacks: grounded entities and typed assertions. The crosswalk in
+   section 6 now has a concrete source schema.
+2. **It already reads WHO IRIS, but by crawling it.** The `who` scraper is a
+   second, unsigned and English-only route into IRIS. The integration point is
+   to **replace that discovery with the verified CDN feed** (section 5). All
+   downstream stages key on the PDF's `sha256`, and so does the CDN, so
+   nothing else changes. `extra.iris_item_uuid` is the DSpace UUID, which
+   joins GuidelineKG records to the who-iris catalogue.
+3. **OptimusKG becomes a dependency, not an option.** The linker's index is
+   built from OptimusKG nodes, and every grounded edge points at an OptimusKG
+   CURIE. OptimusKG's data licence (CC BY-NC-SA 4.0) therefore bears on
+   GuidelineKG's output (section 12, Q5).
+4. **Its scope is narrower than an L1 document's.** The claim prompt keeps
+   recommendations and drops descriptions of the evidence. A WHO L1 also needs
+   the evidence and its certainty (GRADE). That part stays with the existing
+   L1 path, and comparison is limited to recommendations (section 7).
+5. **Its document classifier is a ready vocabulary for the L1 editor's
+   "evidence types" and "guideline of interest"** (section 8).
+
 ## 4. Integration options and the recommendation
 
 All four options keep the existing path untouched, and all four consume the
@@ -151,8 +228,8 @@ same CDN contract. They differ in where Tool B runs and where its output lives.
 |---|---|---|---|---|
 | **A** | Sibling pipeline in who-iris | IRIS-specific scripts in `scripts/optimus/`; outputs under a new declared directory, e.g. `kg-optimus/<slug>/{bronze,silver,gold}/` | One repository, same CI, same mounts | who-iris is `separation: content` and tolerates IRIS-specific code only with a QA warning. A Kedro/Python extractor is far more than "a small number of tools" (owner, 2026-10-01) |
 | **B** | A step inside `ingest-build-l1-kg` | a new task after `Task_Link` | No new process | **Rejected.** It is not parallel: it changes the process the owner said must remain, and it couples Tool B's failures to L1 completeness |
-| **C** | External extractor, referenced KG | Tool B and the medallion pipeline run in their own repository or service, pinned by version. who-iris holds only orchestration, the crosswalk and adjudication records, and references the gold output by digest | Clean split: code where code belongs; the gold output is a **remote KG** in the materialisation sense, so its subgraph metadata sits under `library/<source>/` | Two release trains to pin and keep in step |
-| **D** | Import OptimusKG's own graph as an external library KG | subscribe to one Dataverse release as a remote KG, read through the `optimuskg` client pinned by `OPTIMUSKG_DOI`; only the node and edge files a scope needs (e.g. `nodes/drug.parquet`, `nodes/disease.parquet` and the DRG–DIS edges) are fetched, and their metadata is held under `library/optimuskg/`; no extraction | Gives drug–disease grounding at once. The published MCP bundle (`search_entities`, `get_neighbors`, `find_connection`) is a ready-made interface for section 8's agentic review of an external library KG | Biomedical-database facts, not WHO guidance. **The data is CC BY-NC-SA 4.0**, and some sources carry stricter terms. Useful only as a **grounding and comparison reference** for agentic review, never as Tool B, and only after the licence ruling |
+| **C** | External extractor, referenced KG | GuidelineKG runs from its own repository, pinned by commit. A small **CDN source** in GuidelineKG replaces its IRIS crawl for WHO items. who-iris holds only orchestration, the crosswalk and adjudication records, and references `guideline_kg.jsonl` by digest | Clean split: code where code belongs; the gold output is a **remote KG** in the materialisation sense, so its subgraph metadata sits under `library/<source>/` | Two release trains to pin and keep in step |
+| **D** | Import OptimusKG's own graph as an external library KG | subscribe to one Dataverse release as a remote KG, read through the `optimuskg` client pinned by `OPTIMUSKG_DOI`; only the node and edge files a scope needs (e.g. `nodes/drug.parquet`, `nodes/disease.parquet` and the DRG–DIS edges) are fetched, and their metadata is held under `library/optimuskg/`; no extraction | Gives drug–disease grounding at once. The published MCP bundle (`search_entities`, `get_neighbors`, `find_connection`) is a ready-made interface for section 8's agentic review of an external library KG | Biomedical-database facts, not WHO guidance. **The data is CC BY-NC-SA 4.0**, and some sources carry stricter terms. GuidelineKG's linker needs OptimusKG regardless (section 3b), so the licence ruling is needed either way |
 
 **Recommendation: C for the extractor runtime, with A's thin orchestration
 layer in who-iris.** The parts are placed in section 10.
@@ -161,21 +238,19 @@ layer in who-iris.** The parts are placed in section 10.
   **skills** and the **crosswalk data**. These are small and IRIS-specific, so
   they fit the owner's 2026-10-09 ruling: "iris specific tools need to be in
   litlfred/who-iris".
-- **Tool B (redacto) and the medallion pipeline** live in their own
-  repository, pinned in `index.lock.json` like the other layers, or called as
-  a pinned container.
-- The **gold output** is held by reference, `referenced` by default. A
-  document's gold graph is `materialized` only where a scope of interest
-  selected it and the five gates passed.
-- **D is optional and later.** It serves as a comparison reference in agentic
-  review, after the licence question is answered.
-
-**If redacto turns out to be a redaction step** rather than an extractor, the
-recommendation keeps its shape. Redacto becomes a `landing → bronze`
-pre-processor, run before Tool B *and* before the existing
-`ingest-extract-structure` on the same bytes, so both tools read the same
-redacted text and the comparison stays fair. A third "Tool B" extractor then
-still has to be chosen (section 12, Q1).
+- **GuidelineKG** stays in `mims-harvard/guideline-kg`, pinned by commit.
+  It needs one addition there: a `who-iris-cdn` source beside its `who`
+  scraper. The source writes the same `data/guidelines/who/metadata.json`
+  records from a verified CDN release instead of crawling IRIS, putting the
+  IRIS Handle and UUID in `extra`. `classifier`, `parser`, `linker` and
+  `integration` then run unchanged. That is a PR to a repository who-iris
+  does not own (section 12, Q11).
+- The **graph output** (`guideline_kg.jsonl`) is held by reference,
+  `referenced` by default. A document's slice is `materialized` only where a
+  scope of interest selected it and the five gates passed.
+- **D is no longer optional in substance.** GuidelineKG cannot link without
+  OptimusKG. What stays optional is using OptimusKG's own edges as a
+  *comparison* reference in agentic review.
 
 ## 5. Consuming the nightly CDN feed
 
@@ -218,13 +293,18 @@ How the new path consumes it, as process `optimus-kg-nightly` (section 9):
 6. **Gate.** Check `materialize-remote`'s five gates (size, restrictions,
    retention, sourceLoss, copyright) for each selected bitstream.
    `restrictions: unknown` stays `unknown` and is never `permitted`.
-7. **Run Tool B over the landing bytes**, fetched from R2 by digest and
-   checked against the digest. The work is keyed by **bitstream SHA-256 plus
-   Tool B version plus crosswalk version**, so an unchanged triple is never
-   re-run. That is the no-churn rule applied to derivations.
-8. **bronze → silver → gold**, then project the gold output to N-Quads in its
-   own named graph partition, e.g. `graph/optimus/<handle>`, beside the
-   existing partitions.
+7. **Run GuidelineKG over the landing bytes**, fetched from R2 by digest and
+   checked against the digest. Its `who-iris-cdn` source writes the scraper
+   record, and then `classifier classify`, `parser parse` and
+   `integration build` run as they do today. The work is keyed by **bitstream
+   SHA-256 plus GuidelineKG commit plus crosswalk version**. GuidelineKG
+   already skips any PDF whose hash has an `ok` record, so Reducto is never
+   billed twice for the same bytes. Classification runs **before** parsing:
+   a document the scope does not count as a guideline of interest is
+   never parsed.
+8. **Project `guideline_kg.jsonl` through the crosswalk** (section 6) into the
+   comparison form, then into N-Quads in its own named-graph partition, e.g.
+   `graph/guidelinekg/<handle>`, beside the existing partitions.
 9. **Hand off to adjudication** (section 7) for every document that also has
    an L1 KG.
 10. **Advance the cursor only when the run completes.** Review the run report
@@ -252,11 +332,11 @@ Digital Adaptation Kit. The smart-base **logical-model names** are given as
 *targets to confirm*: smart-base is not mounted in this checkout, so they are
 not verified against its pinned version (section 12, Q6).
 
-| OptimusKG-style (Tool B) | existing L1 KG (smart-base `kg/l1`) | DAK component / WHO schema target | WHO grounding (primary) | bridge |
+| GuidelineKG (Tool B) | existing L1 KG (smart-base `kg/l1`) | DAK component / WHO schema target | WHO grounding (primary) | bridge |
 |---|---|---|---|---|
-| — (no publication node) | `publication` | DAK L1 source; IRIS DC record | Handle, DSpace UUID, ISBN (from `records/<handle>.json`) | `dcterms:` |
-| — | `publication-section`, `publication-element` | location in L1 | section id + page range | — |
-| — | `recommendation` | **Component 2 — Health interventions and recommendations** (smart-base recommendation / health-intervention model) | the recommendation's own IRI | GRADE certainty and strength as properties |
+| `Guideline` (`guideline:<slug>`; `extra.iris_item_uuid`) | `publication` | DAK L1 source; IRIS DC record | Handle, DSpace UUID, ISBN (from `records/<handle>.json`). The join is on the **DSpace UUID**, never the slug | `dcterms:` |
+| `Section` (heading, page_range), `Paragraph` (text, page, bbox), `Figure`, `Table` | `publication-section`, `publication-element` | location in L1 | section id + page range. Sections are matched by normalised heading and page overlap, because the two tools split sections differently | — |
+| `Claim` (+ its assertion edge) | `recommendation` | **Component 2 — Health interventions and recommendations** (smart-base recommendation / health-intervention model) | the recommendation's own IRI | GRADE certainty and strength as properties |
 | Disease (DIS) | — *(gap: propose `condition`)* | Component 2 (condition targeted); Component 5 decision-support logic inputs | **ICD-11 MMS** URI | id `MONDO:`; `xrefs` carry **ICD-10** (not ICD-11), OMIM and others, plus `umls_cui`. ICD-11 is reached through WHO's ICD-10→ICD-11 mapping tables, and an unmapped code stays `unknown` |
 | Phenotype (PHE) | — *(gap: propose `finding`)* | **Component 5 — Core data elements** (observation) | ICD-11 signs/symptoms chapter | HPO |
 | Drug (DRG) | — *(gap: propose `product`)* | Component 5 data elements (medication); WHO **EML** | **ATC** code + **INN** | id DrugBank `DB…`. The node schema has **no ATC or INN field** (it has synonyms, trade names, UNII, CAS and a MeSH `mrdef`), but the DRG–DIS edges list ATC and INN among their indirect sources. Mapping to ATC/INN is a separate grounding step |
@@ -274,8 +354,11 @@ not extend smart-base's ontology on its own.**
 
 ### Edges and properties
 
-| OptimusKG-style | L1 KG / DAK target | note |
+| GuidelineKG / OptimusKG | L1 KG / DAK target | note |
 |---|---|---|
+| `MENTIONS` / `DEPICTS` / `TABULATES` (text_span, char offsets, page, section_id, entity_linking_confidence) | `evidence{location, quote}` on the entity | the locator the gold layer requires. A grounding below a confidence floor is kept and marked `unknown`, never dropped |
+| assertion `population` | the recommendation's population (PICO P) | **part of the claim's identity** in GuidelineKG, so it must be part of the match key in section 7 |
+| `Claim.status` / `retracted_in` / `asserted_in` / `last_affirmed` | `dc.relation.isreplacedby` chain; catalogue `withdrawn` | across versions, a retraction in GuidelineKG and a supersession in IRIS should agree; a disagreement is a finding |
 | DRG–DIS `INDICATION` | `recommendation` `recommends` (intervention for condition), strength and certainty if stated | a guideline's recommendation is not a database indication: same pair, different claim. The comparison matches the **pair**, and the predicate difference is a *kind* finding, not a conflict |
 | DRG–DIS `CONTRAINDICATION` | `recommendation` with negative direction ("do not use") | |
 | DRG–DIS `OFF_LABEL_USE` | no target | WHO guidance seldom states it; record and do not compare |
@@ -311,6 +394,13 @@ This reuses the harness's adjudication and does not invent another.
   hashes of the two claims and the source passage, and stored on a state
   branch (`cat/who-iris/attestations`, a new `kg-adjudication/` subtree). A
   re-run that reorders or drops claims needs no re-adjudication.
+
+**What is compared.** GuidelineKG extracts only recommendations, so the
+comparison covers the L1 KG's `recommendation` nodes and GuidelineKG's
+`Claim`s and assertion edges, and nothing else. They are matched on
+**(publication by UUID, section by heading and page, grounded subject,
+grounded object, population)**. GuidelineKG's own claim id hashes the same
+fields, so its side of the match key already exists.
 
 ### Agreement metrics (per document, per node/edge type, per night)
 
@@ -373,9 +463,10 @@ grounding:                              # WHO schemes first
   icd11: ["1F03"]                       # Measles
   mesh: ["Measles", "Measles Vaccine", "Vitamin A"]
   atc: ["J07BD"]                        # measles vaccines
-evidenceTypes:                          # what counts as evidence for this L1
-  include: [guideline, position paper, systematic review, GRADE evidence profile, technical document]
-  exclude: [meeting report, press material, newsletter]
+evidenceTypes:                          # GuidelineKG classifier categories (src/classifier/schema.py)
+  include: [clinical practice guideline, recommendation statement, consensus statement,
+            guidance/advisory, evidence report]
+  exclude: [meeting report, news/announcement, infographic, administrative]
 guidelineOfInterest:                    # what makes an item a "guideline of interest"
   - GRC-approved WHO guideline, or WHO position paper published in the WER
   - contains at least one recommendation on the PICO above
@@ -413,10 +504,15 @@ exclusions: ["10665/…"]
    catalogued (`dcterms:subject`, `dcterms:type`, `dcterms:issued`). It is the
    same query in the browser and at build time
    ([`iris-oxigraph`](../skills/iris-oxigraph.md)).
-4. **The selection predicate** that section 5, step 5 applies to each nightly
+4. **GuidelineKG's `keep_categories` and seeds.** `evidenceTypes.include`
+   becomes the classifier's `keep_categories` for this scope, and `seeds`
+   become a seed file in GuidelineKG's `who_iris_seeds.json` shape
+   (`{query, by: isbn|title, isbn, title}`). The editor's description then
+   drives Tool B directly, not only the IRIS queries.
+5. **The selection predicate** that section 5, step 5 applies to each nightly
    record. It is the same filter run locally over `records/<handle>.json`, so a
    new item that matches an active scope is picked up the next night.
-5. **Guidance for agentic review of a library KG** (who-iris or external). This
+6. **Guidance for agentic review of a library KG** (who-iris or external). This
    is a generated checklist that the `deep-document-research` process
    (folio-assistant-core) runs, with the scope as the Planner's filter:
    - for each candidate, rule `include`, `exclude` or `uncertain` against the
@@ -467,8 +563,10 @@ and skills. Writing the BPMN is the first task of the matching bean.
 | `Task_Withdraw` | build-pipeline | `optimus-kg-feed` | mark derived claims withdrawn, keep them addressable |
 | `Task_SelectByScope` | build-pipeline | `l1-scope-of-interest` | apply every active scope's selection predicate |
 | `Task_Gates` | optimus-kg-agent | `materialize-remote` | the five gates per bitstream; `unknown` is not `permitted` |
-| `Call_Extract` | extractor | `optimus-kg-extract` | Tool B: landing → bronze, keyed by (bitstream sha, tool version) |
-| `Task_Ground` | build-pipeline | `optimus-kg-extract` | bronze → silver: ground to WHO schemes |
+| `Call_Classify` | extractor | `guidelinekg-run` | GuidelineKG `classifier classify` (Reducto Classify) on the scope's candidates |
+| `GW_Keep` | — | — | the class is in the scope's `keep_categories`; otherwise recorded and stopped |
+| `Call_Extract` | extractor | `guidelinekg-run` | GuidelineKG `parser parse` then `integration build`, keyed by (bitstream sha, GuidelineKG commit) |
+| `Task_Ground` | build-pipeline | `kg-crosswalk` | OptimusKG CURIEs → WHO schemes through their xrefs (MONDO → ICD-10 → ICD-11; DrugBank → ATC/INN; CTD MeSH → `dc.subject.mesh`); an unmapped CURIE stays `unknown` |
 | `Task_Align` | build-pipeline | `kg-crosswalk` | silver → gold through the versioned crosswalk; reject edges without a locator |
 | `Call_Partition` | build-pipeline | `nquads-distribution` | project gold to its named-graph partition (platform process, called) |
 | `Call_Adjudicate` | — | `kg-tool-adjudication` | the process below, for documents with an L1 KG |
@@ -517,7 +615,7 @@ in the platform.
 | matching and metrics code | **cat-harness-tools** | code; the general catalogue tools live with the platform (owner, 2026-10-09) |
 | `Process_Adjudication`, `untainted-verification`, attestation storage | **cat-harness** (existing, reused) | no change expected; a new `codes` set is declared by the caller |
 | typed entity nodes in `kg/l1` (condition, product, finding); `l1-scope-and-review` in the L1 guideline-development process; DAK logical-model targets | **smart-base** | it owns the L1 ontology and DAK models; proposed here, not changed here |
-| Tool B (redacto) and the medallion pipeline | **its own repository**, pinned (option C) | not content, and too large to be tolerated in who-iris |
+| GuidelineKG (Reducto parse, LLM claims, OptimusKG linking) and its `who-iris-cdn` source | **mims-harvard/guideline-kg**, pinned by commit (option C) | not content, not ours, and a Python application that who-iris could not tolerate |
 
 ## 11. Proposed work items (beans)
 
@@ -531,12 +629,12 @@ the live work plan for the same terms.
 
 | # | title | home | blocked by |
 |---|---|---|---|
-| 1 | Identify redacto and choose Tool B; record its licence and pin | owner | — |
+| 1 | ~~Identify redacto and choose Tool B~~ **done**: Reducto, used by GuidelineKG. Record the GuidelineKG pin, Reducto terms and LLM tenant | owner | Q10–Q13 |
 | 2 | `l1-scope-of-interest/v1` schema + skill; owner's examples as fixtures | folio-assistant-core | Q8 |
 | 3 | `iris-scope-queries`: scope → Discovery/OAI/SPARQL; read IRIS facets first | who-iris | 2 |
 | 4 | Comparison form + crosswalk v0 (section 6) and proposal to smart-base for typed L1 entity nodes | who-iris + smart-base | Q6 |
 | 5 | `optimus-kg-feed`: verified-release diff consumer with its own cursor, tested against a local release | who-iris | CDN contract (exists) |
-| 6 | Tool B adapter: landing → bronze → silver → gold, derivation-keyed | Tool B's repository | 1, 4 |
+| 6 | `who-iris-cdn` source in GuidelineKG: verified release → `metadata.json` records with Handle/UUID in `extra`; run classify → parse → integrate, keyed by sha256 | mims-harvard/guideline-kg | Q11, 5 |
 | 7 | `kg-tool-adjudication` process + skill + metrics; codes declared for `Process_Adjudication` | folio-assistant-core + cat-harness-tools | 4 |
 | 8 | `optimus-kg-nightly.bpmn` + checklist + SVG; declare `kg-optimus/` in `who-iris.json` | who-iris | 3, 5, 6, 7 |
 | 9 | Baseline run on the held library entries with an L1 KG; propose thresholds | who-iris | 8 |
@@ -544,19 +642,21 @@ the live work plan for the same terms.
 
 ## 12. Open questions for the owner
 
-1. **What is redacto?** The repository, package or URL, and whether it is an
-   extractor or a redaction step. If it redacts, which tool extracts?
-2. **What does "adapt OptimusKG" mean here?** Its architecture, schema and
-   provenance model (what section 3 assumes), or also its **data**, as an
-   external library KG (option D)?
-3. **Where may Python/Kedro run?** In a new repository under `litlfred` (option
-   C, recommended), or tolerated inside who-iris (option A)?
+1. ~~What is redacto?~~ **Answered**: Reducto, through GuidelineKG.
+2. ~~What does "adapt OptimusKG" mean?~~ **Answered by the choice of
+   GuidelineKG**: OptimusKG is the reference graph GuidelineKG links to, not
+   something who-iris rebuilds.
+3. **Where does GuidelineKG run, and on whose account?** In the lab's
+   infrastructure, or in a WHO-run job pinned to a commit? Whose Reducto and
+   Azure OpenAI keys does it use?
 4. **Volume.** Should the nightly path process only items selected by an
    active scope (recommended, because the gap is the point), or every new IRIS
    item?
 5. **Licences.** The OptimusKG graph is **CC BY-NC-SA 4.0**, and some of its
-   sources carry stricter terms (CTD is non-commercial). May WHO use it, even
-   only for comparison? Would ShareAlike attach to adjudicated outputs that
+   sources carry stricter terms (CTD is non-commercial). GuidelineKG's linker
+   index is built from it, and every grounded GuidelineKG edge points into
+   it. May WHO use that, and is the GuidelineKG output a derivative under
+   ShareAlike? Would ShareAlike attach to adjudicated outputs that
    cite it? Who answers the `copyright` gate for IRIS bitstreams fed to an
    external tool?
 6. **DAK targets.** Which smart-base version and logical models are the
@@ -571,3 +671,17 @@ the live work plan for the same terms.
 9. **Network.** optimuskg.ai and arxiv.org are blocked from these sessions.
    pypi.org and export.arxiv.org are reachable, and the paper was read through
    the latter. For a pipeline that reads Dataverse, allow dataverse.harvard.edu.
+10. **Sending WHO PDFs to Reducto.** IRIS publications are public, but each
+    one is uploaded to a commercial service and billed per page. Is that
+    cleared, and under what terms (retention, training use)? The same
+    question applies to paragraphs sent to Azure OpenAI and OpenAI
+    embeddings.
+11. **Contributing to GuidelineKG.** The `who-iris-cdn` source is a change to
+    a private repository who-iris does not own. Who agrees it with the lab,
+    and does WHO get read access for pinning and CI?
+12. **Languages.** GuidelineKG is English only by policy; who-iris holds six
+    UN languages. Is English-only acceptable for the parallel path, with the
+    other languages left to the existing L1 path?
+13. **What counts as a guideline.** GuidelineKG's classifier leaves
+    `keep_categories` undecided. Should each L1 scope decide it (section 8,
+    recommended), or should one WHO-wide default be set?
