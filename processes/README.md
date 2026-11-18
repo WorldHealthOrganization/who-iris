@@ -7,15 +7,35 @@ generated: "scripts/subgraph-readmes.ts of the bootstrap toolset (https://github
 
 # who-iris-processes
 
-The IRIS CDN Exporter's BPMN processes: initial load, nightly change ingest over DSpace REST, weekly reconciliation, and sign-and-publish. Cloudflare git (Artifacts) and Cloudflare R2 + CDN are lanes: exports live on Cloudflare, and GitHub Pages only previews. Each activity names the skill that carries it out; the platform's nquads-distribution process is called, not copied. Rendered drawings: docs/assets/img/processes/.
+The IRIS CDN Exporter's BPMN processes: initial load, nightly change ingest over DSpace REST, weekly reconciliation, and sign-and-publish; and the proposed GuidelineKG path (optimus-kg-nightly and its two phases, kg-tool-adjudication; docs/optimus-kg-integration.md), whose unbuilt steps say so with no-skill. Cloudflare git (Artifacts) and Cloudflare R2 + CDN are lanes: exports live on Cloudflare, and GitHub Pages only previews. Each activity names the skill that carries it out; the platform's nquads-distribution process is called, not copied. Rendered drawings: docs/assets/img/processes/.
 
 Part of [WHO IRIS](../README.md) 0.1.0, declared as `who-iris-processes`, holding `processes`.
 
 | file | what it is | used by |
 |---|---|---|
 | [`iris-cdn-initial-load.bpmn`](iris-cdn-initial-load.bpmn) | a [Process](https://litlfred.github.io/bootstrap/schemas/#process): IRIS CDN initial load |  |
+| [`iris-cdn-initial-load.checklist.md`](iris-cdn-initial-load.checklist.md) | Checklist — IRIS CDN initial load |  |
+| [`iris-cdn-initial-load.svg`](iris-cdn-initial-load.svg) | the picture of `iris-cdn-initial-load.bpmn`, generated from it |  |
 | [`iris-cdn-nightly.bpmn`](iris-cdn-nightly.bpmn) | a [Process](https://litlfred.github.io/bootstrap/schemas/#process): IRIS CDN nightly change ingest |  |
+| [`iris-cdn-nightly.checklist.md`](iris-cdn-nightly.checklist.md) | Checklist — IRIS CDN nightly change ingest |  |
+| [`iris-cdn-nightly.svg`](iris-cdn-nightly.svg) | the picture of `iris-cdn-nightly.bpmn`, generated from it |  |
 | [`iris-cdn-reconcile.bpmn`](iris-cdn-reconcile.bpmn) | a [Process](https://litlfred.github.io/bootstrap/schemas/#process): IRIS CDN weekly reconciliation |  |
+| [`iris-cdn-reconcile.checklist.md`](iris-cdn-reconcile.checklist.md) | Checklist — IRIS CDN weekly reconciliation |  |
+| [`iris-cdn-reconcile.svg`](iris-cdn-reconcile.svg) | the picture of `iris-cdn-reconcile.bpmn`, generated from it |  |
 | [`iris-cdn-sign-publish.bpmn`](iris-cdn-sign-publish.bpmn) | a [Process](https://litlfred.github.io/bootstrap/schemas/#process): Sign and publish an IRIS CDN release | "IRIS CDN initial load", "IRIS CDN nightly change ingest", "IRIS CDN weekly reconciliation" |
+| [`iris-cdn-sign-publish.checklist.md`](iris-cdn-sign-publish.checklist.md) | Checklist — Sign and publish an IRIS CDN release |  |
+| [`iris-cdn-sign-publish.svg`](iris-cdn-sign-publish.svg) | the picture of `iris-cdn-sign-publish.bpmn`, generated from it |  |
+| [`kg-tool-adjudication.bpmn`](kg-tool-adjudication.bpmn) | a [Process](https://litlfred.github.io/bootstrap/schemas/#process): Adjudicate two KG extractors | "GuidelineKG nightly path: verify and adjudicate the result" |
+| [`kg-tool-adjudication.checklist.md`](kg-tool-adjudication.checklist.md) | Checklist — Adjudicate two KG extractors |  |
+| [`kg-tool-adjudication.svg`](kg-tool-adjudication.svg) | the picture of `kg-tool-adjudication.bpmn`, generated from it |  |
+| [`optimus-kg-nightly-ingest.bpmn`](optimus-kg-nightly-ingest.bpmn) | a [Process](https://litlfred.github.io/bootstrap/schemas/#process): GuidelineKG nightly path: verify and adjudicate the result | "GuidelineKG nightly path" |
+| [`optimus-kg-nightly-ingest.checklist.md`](optimus-kg-nightly-ingest.checklist.md) | Checklist — GuidelineKG nightly path: verify and adjudicate the result |  |
+| [`optimus-kg-nightly-ingest.svg`](optimus-kg-nightly-ingest.svg) | the picture of `optimus-kg-nightly-ingest.bpmn`, generated from it |  |
+| [`optimus-kg-nightly-work-order.bpmn`](optimus-kg-nightly-work-order.bpmn) | a [Process](https://litlfred.github.io/bootstrap/schemas/#process): GuidelineKG nightly path: prepare the work order | "GuidelineKG nightly path" |
+| [`optimus-kg-nightly-work-order.checklist.md`](optimus-kg-nightly-work-order.checklist.md) | Checklist — GuidelineKG nightly path: prepare the work order |  |
+| [`optimus-kg-nightly-work-order.svg`](optimus-kg-nightly-work-order.svg) | the picture of `optimus-kg-nightly-work-order.bpmn`, generated from it |  |
+| [`optimus-kg-nightly.bpmn`](optimus-kg-nightly.bpmn) | a [Process](https://litlfred.github.io/bootstrap/schemas/#process): GuidelineKG nightly path |  |
+| [`optimus-kg-nightly.checklist.md`](optimus-kg-nightly.checklist.md) | Checklist — GuidelineKG nightly path |  |
+| [`optimus-kg-nightly.svg`](optimus-kg-nightly.svg) | the picture of `optimus-kg-nightly.bpmn`, generated from it |  |
 
 <!-- kg:subgraph:end -->

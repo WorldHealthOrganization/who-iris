@@ -845,9 +845,10 @@ boundary decides the interfaces:</p>
 </tbody>
 </table>
 <p>who-iris never calls Reducto or OpenAI and never needs network access to them.
-The <code>extractor</code> lane in section 9 becomes an <strong>external participant</strong> (a
-separate BPMN pool) reached by message flows: <em>work order published</em> → <em>result
-release published</em>. A night on which the lab publishes nothing is a state the
+The lab is its own lane in section 9, <strong>Zitnik lab (GuidelineKG)</strong>, bound to
+an <code>external</code> role, and the only things that cross into it are two data
+stores: the <em>work order</em> who-iris writes and the <em>result release</em> the lab
+writes. A night on which the lab publishes nothing is a state the
 run report shows (<code>awaiting-extractor</code>). It is not a failure, and it never
 blocks the CDN release.</p>
 <p>The <strong>work order</strong> is the only new public artefact on the WHO side. It goes in
@@ -1725,19 +1726,29 @@ fills that field is <strong>not verified</strong>.</p>
 <h2>9. The processes, as the harness expects them</h2>
 <p>Processes in this repository are BPMN files in <a href="https://github.com/litlfred/who-iris/tree/HEAD/processes/"><code>processes/</code></a>.
 Each activity names its skill (<code>&#x3C;bootstrap.processes:skill></code>), with a generated
-checklist (<code>bun run cat bpmn:checklist</code>) and SVG (<code>bun run cat render:bpmn</code>).
-<strong>The <code>.bpmn</code> files are not drafted in this change.</strong> Every activity must name a
-skill that resolves, and the skills below do not exist yet, so drafting them
-now would fail <code>check:workflow-refs</code> and the checklist generator. Each process
-is specified here at the level the BPMN will encode, with activity ids, lanes
-and skills. Writing the BPMN is the first task of the matching bean.</p>
-<p><strong>Lanes used across all three:</strong> <code>build-pipeline</code> (the scripts, unattended),
-<code>optimus-kg-agent</code> (plans, reviews, opens beans; holds no keys), <code>extractor</code>
-(GuidelineKG, run by the Zitnik lab with its own keys: a <strong>separate pool</strong>,
-reached by the message flows <em>work order published</em> and <em>result release
-published</em>), <code>adjudicator</code> (agent, untainted), <code>reviewer</code>
-(SME/editor, human), <code>l1-editor</code> (human).</p>
-<h3><code>optimus-kg-nightly</code> (who-iris)</h3>
+checklist (<code>bun run cat bpmn:checklist</code>) and SVG (<code>bun run cat render:bpmn</code>).</p>
+<p><strong>The nightly path and the adjudication are drawn; most of their skills are
+not written yet.</strong> A step whose skill does not exist carries
+<code>&#x3C;cat-harness.processes:no-skill reason="Unbuilt: …"></code> naming the skill this
+design assigns, and its documentation opens with <em>Unbuilt (skill … not written
+yet)</em>, so <code>check:workflow-refs</code> finds no dangling reference and the checklist
+says which steps are not built. A step that is built names its skill as usual.
+<code>l1-scope-and-review</code> is still a table only: it belongs in smart-base
+(section 10).</p>
+<p><strong>Lanes.</strong> <strong>who-iris</strong> (role <code>guidelinekg-path</code>: the scripts and the agent;
+holds no keys), <strong>Zitnik lab (GuidelineKG)</strong> (role <code>guidelinekg-lab</code>, an
+<code>external</code> actor: GuidelineKG on the lab's own keys) and <strong>Human reviewer</strong>
+(role <code>guidelinekg-reviewer</code>, a person). The roles are in
+<a href="https://github.com/litlfred/who-iris/blob/HEAD/scenarios/roles.json"><code>scenarios/roles.json</code></a>. <strong>Data stores:</strong> the
+<strong>CDN release (signed)</strong> and the <strong>work order</strong> (both in the Cloudflare
+release history) and the lab's <strong>result release</strong>.</p>
+<p>Following the harness's rule for diagrams past about 20 steps (<code>bpmn-authoring</code>,
+"Split by phase"), the nightly path is a top-level diagram that shows the
+hand-off between who-iris and the lab, and calls two who-iris phases.</p>
+<h3><code>optimus-kg-nightly</code> (who-iris): the night, and the hand-off to the lab</h3>
+<p><a href="https://github.com/litlfred/who-iris/blob/HEAD/processes/optimus-kg-nightly.bpmn"><code>processes/optimus-kg-nightly.bpmn</code></a> ·
+<a href="https://github.com/litlfred/who-iris/blob/HEAD/processes/optimus-kg-nightly.checklist.md">checklist</a></p>
+<img src="assets/img/processes/optimus-kg-nightly.svg" alt="BPMN: GuidelineKG nightly path, with a who-iris lane and a Zitnik lab lane" style="max-width:100%">
 <table>
 <thead>
 <tr>
@@ -1750,127 +1761,170 @@ published</em>), <code>adjudicator</code> (agent, untainted), <code>reviewer</co
 <tbody>
 <tr>
 <td><code>Start_AfterExport</code></td>
+<td>who-iris</td>
+<td>—</td>
+<td>message: the exporter's <code>End_Done</code>; timer fallback at 04:00 UTC</td>
+</tr>
+<tr>
+<td><code>Call_PrepareWorkOrder</code></td>
+<td>who-iris</td>
+<td>phase <code>Process_OptimusKgNightlyWorkOrder</code></td>
+<td>reads the CDN release, writes the work order</td>
+</tr>
+<tr>
+<td><code>GW_Published</code></td>
 <td>—</td>
 <td>—</td>
-<td>message: the exporter's <code>End_Done</code>; timer fallback</td>
+<td>refused release → <code>End_Refused</code></td>
 </tr>
 <tr>
-<td><code>Task_VerifyRelease</code></td>
-<td>build-pipeline</td>
-<td><code>iris-cdn-signing</code></td>
-<td>verify the tag-manifest JWS through did:web; an unverified release ends the run as <code>refused</code></td>
-</tr>
-<tr>
-<td><code>Task_Diff</code></td>
-<td>build-pipeline</td>
-<td><code>optimus-kg-feed</code></td>
-<td>diff payload manifests since <code>state/optimus-cursor.json</code></td>
-</tr>
-<tr>
-<td><code>GW_Kind</code></td>
-<td>—</td>
-<td>—</td>
-<td>metadata-only / bitstream / withdrawn</td>
-</tr>
-<tr>
-<td><code>Task_Reground</code></td>
-<td>build-pipeline</td>
-<td><code>optimus-kg-feed</code></td>
-<td>metadata-only: re-ground the publication node</td>
-</tr>
-<tr>
-<td><code>Task_Withdraw</code></td>
-<td>build-pipeline</td>
-<td><code>optimus-kg-feed</code></td>
-<td>mark derived claims withdrawn, keep them addressable</td>
-</tr>
-<tr>
-<td><code>Task_SelectByScope</code></td>
-<td>build-pipeline</td>
-<td><code>l1-scope-of-interest</code></td>
-<td>apply every active scope's selection predicate</td>
-</tr>
-<tr>
-<td><code>Task_Gates</code></td>
-<td>optimus-kg-agent</td>
-<td><code>materialize-remote</code></td>
-<td>the five gates per bitstream; <code>unknown</code> is not <code>permitted</code></td>
-</tr>
-<tr>
-<td><code>Task_WorkOrder</code></td>
-<td>build-pipeline</td>
-<td><code>optimus-kg-feed</code></td>
-<td>write <code>state/guidelinekg/work-order.json</code>: the selected handles, bitstream digests and <code>dc.language.iso</code>; message flow to the lab pool</td>
-</tr>
-<tr>
-<td><code>Catch_Result</code></td>
-<td>—</td>
-<td>—</td>
-<td>message: the lab's result release is published; a timer boundary records <code>awaiting-extractor</code> and ends the night without failing</td>
-</tr>
-<tr>
-<td><code>Task_VerifyResult</code></td>
-<td>build-pipeline</td>
-<td><code>optimus-kg-feed</code></td>
-<td>verify the result release: its digests, the pinned GuidelineKG commit, and that it names this work order and CDN release. Once the lab signs releases, also its signature (lab <code>did:web</code>)</td>
-</tr>
-<tr>
-<td><code>Call_Classify</code></td>
-<td>extractor (lab pool)</td>
-<td><code>guidelinekg-run</code></td>
-<td>GuidelineKG <code>classifier classify</code> (Reducto Classify) on the scope's candidates</td>
+<td><code>Task_Classify</code></td>
+<td>Zitnik lab</td>
+<td><code>guidelinekg-run</code> (<strong>unbuilt</strong>, the lab's)</td>
+<td>GuidelineKG <code>classifier classify</code> (Reducto Classify) on the work order's documents, after verifying the release JWS against WHO's <code>did:web</code> key</td>
 </tr>
 <tr>
 <td><code>GW_Keep</code></td>
 <td>—</td>
 <td>—</td>
-<td>the class is in the scope's <code>keep_categories</code>; otherwise recorded and stopped</td>
+<td>the class is in the scope's <code>keep_categories</code>; otherwise recorded, not parsed</td>
 </tr>
 <tr>
-<td><code>Call_Extract</code></td>
-<td>extractor (lab pool)</td>
-<td><code>guidelinekg-run</code></td>
-<td>GuidelineKG <code>parser parse</code> then <code>integration build</code>, keyed by (bitstream sha, GuidelineKG commit)</td>
+<td><code>Task_Extract</code></td>
+<td>Zitnik lab</td>
+<td><code>guidelinekg-run</code> (<strong>unbuilt</strong>)</td>
+<td><code>parser parse</code> then <code>integration build</code>, keyed by (bitstream sha, GuidelineKG commit, crosswalk version)</td>
 </tr>
 <tr>
-<td><code>Task_Ground</code></td>
-<td>build-pipeline</td>
-<td><code>kg-crosswalk</code></td>
-<td>OptimusKG CURIEs → WHO schemes through their xrefs (MONDO → ICD-10 → ICD-11; DrugBank → ATC/INN; CTD MeSH → <code>dc.subject.mesh</code>); an unmapped CURIE stays <code>unknown</code></td>
+<td><code>Task_PublishResult</code></td>
+<td>Zitnik lab</td>
+<td><code>guidelinekg-run</code> (<strong>unbuilt</strong>)</td>
+<td>writes the result release</td>
 </tr>
 <tr>
-<td><code>Task_Align</code></td>
-<td>build-pipeline</td>
-<td><code>kg-crosswalk</code></td>
-<td>silver → gold through the versioned crosswalk; reject edges without a locator</td>
+<td><code>Call_IngestResult</code></td>
+<td>who-iris</td>
+<td>phase <code>Process_OptimusKgNightlyIngest</code></td>
+<td>reads the result release; ends as <em>awaiting the lab</em> or <em>ingested</em></td>
+</tr>
+<tr>
+<td><code>End_Done</code></td>
+<td>—</td>
+<td>—</td>
+<td>night finished</td>
+</tr>
+</tbody>
+</table>
+<h3><code>optimus-kg-nightly-work-order</code> (phase 1): prepare the work order</h3>
+<p><a href="https://github.com/litlfred/who-iris/blob/HEAD/processes/optimus-kg-nightly-work-order.bpmn"><code>processes/optimus-kg-nightly-work-order.bpmn</code></a> ·
+<a href="https://github.com/litlfred/who-iris/blob/HEAD/processes/optimus-kg-nightly-work-order.checklist.md">checklist</a></p>
+<img src="assets/img/processes/optimus-kg-nightly-work-order.svg" alt="BPMN: GuidelineKG nightly path, phase 1: prepare the work order" style="max-width:100%">
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>lane</th>
+<th>skill</th>
+<th>what</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Task_VerifyRelease</code></td>
+<td>who-iris</td>
+<td><code>iris-cdn-signing</code></td>
+<td>verify the tag-manifest JWS through <code>did:web</code>; an unverified release ends the phase as <code>End_Refused</code></td>
+</tr>
+<tr>
+<td><code>Task_Diff</code></td>
+<td>who-iris</td>
+<td><code>optimus-kg-feed</code> (<strong>unbuilt</strong>)</td>
+<td>diff payload manifests since <code>state/optimus-cursor.json</code></td>
+</tr>
+<tr>
+<td><code>Task_ApplyMetadata</code></td>
+<td>who-iris</td>
+<td><code>optimus-kg-feed</code> (<strong>unbuilt</strong>)</td>
+<td>metadata-only: re-ground the publication node, no re-extraction; removed or withdrawn: mark derived claims withdrawn, keep them addressable</td>
+</tr>
+<tr>
+<td><code>Task_SelectByScope</code></td>
+<td>who-iris</td>
+<td><code>l1-scope-of-interest</code> (<strong>unbuilt</strong>)</td>
+<td>level 1 for every changed item; apply every active scope's selection predicate for level 2</td>
+</tr>
+<tr>
+<td><code>Task_Gates</code></td>
+<td>who-iris</td>
+<td><code>materialize-remote</code></td>
+<td>the five gates per bitstream; <code>unknown</code> is not <code>permitted</code></td>
+</tr>
+<tr>
+<td><code>Task_WorkOrder</code></td>
+<td>who-iris</td>
+<td><code>optimus-kg-feed</code> (<strong>unbuilt</strong>)</td>
+<td>write <code>state/guidelinekg/work-order.json</code>: the selected handles, bitstream digests and <code>dc.language.iso</code></td>
+</tr>
+</tbody>
+</table>
+<h3><code>optimus-kg-nightly-ingest</code> (phase 2): verify and adjudicate the result</h3>
+<p><a href="https://github.com/litlfred/who-iris/blob/HEAD/processes/optimus-kg-nightly-ingest.bpmn"><code>processes/optimus-kg-nightly-ingest.bpmn</code></a> ·
+<a href="https://github.com/litlfred/who-iris/blob/HEAD/processes/optimus-kg-nightly-ingest.checklist.md">checklist</a></p>
+<img src="assets/img/processes/optimus-kg-nightly-ingest.svg" alt="BPMN: GuidelineKG nightly path, phase 2: verify and adjudicate the result" style="max-width:100%">
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>lane</th>
+<th>skill</th>
+<th>what</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Task_VerifyResult</code></td>
+<td>who-iris</td>
+<td><code>optimus-kg-feed</code> (<strong>unbuilt</strong>)</td>
+<td>the result release's digests, the pinned GuidelineKG commit, and that it names this work order and CDN release; later its signature (lab <code>did:web</code>). Not verified, or not there: <code>End_Awaiting</code> (<code>awaiting-extractor</code>), never a failure</td>
+</tr>
+<tr>
+<td><code>Task_Crosswalk</code></td>
+<td>who-iris</td>
+<td><code>kg-crosswalk</code> (<strong>unbuilt</strong>)</td>
+<td>OptimusKG CURIEs → WHO schemes through their xrefs (MONDO → ICD-10 → ICD-11; DrugBank → ATC/INN; CTD MeSH → <code>dc.subject.mesh</code>), then silver → gold through the versioned crosswalk; an unmapped CURIE stays <code>unknown</code>, an edge without a locator is rejected</td>
 </tr>
 <tr>
 <td><code>Call_Partition</code></td>
-<td>build-pipeline</td>
-<td><code>nquads-distribution</code></td>
+<td>who-iris</td>
+<td><code>iris-oxigraph</code>, <code>nquads-distribution</code></td>
 <td>project gold to its named-graph partition (platform process, called)</td>
 </tr>
 <tr>
 <td><code>Call_Adjudicate</code></td>
-<td>—</td>
-<td><code>kg-tool-adjudication</code></td>
+<td>who-iris</td>
+<td><code>kg-tool-adjudication</code> (<strong>unbuilt</strong>)</td>
 <td>the process below, for documents with an L1 KG</td>
 </tr>
 <tr>
 <td><code>Task_AdvanceCursor</code></td>
-<td>build-pipeline</td>
-<td><code>optimus-kg-feed</code></td>
+<td>who-iris</td>
+<td><code>optimus-kg-feed</code> (<strong>unbuilt</strong>)</td>
 <td>only after a complete run</td>
 </tr>
 <tr>
 <td><code>Task_Review</code></td>
-<td>optimus-kg-agent</td>
-<td><code>optimus-kg-feed</code></td>
+<td>who-iris</td>
+<td><code>optimus-kg-feed</code> (<strong>unbuilt</strong>)</td>
 <td>run report; beans for anomalies (yield far from median, adjudication rate jump, gate <code>unknown</code> spike)</td>
 </tr>
 </tbody>
 </table>
-<h3><code>kg-tool-adjudication</code> (folio-assistant-core; generic over any two extractors)</h3>
+<h3><code>kg-tool-adjudication</code> (generic over any two extractors)</h3>
+<p><a href="https://github.com/litlfred/who-iris/blob/HEAD/processes/kg-tool-adjudication.bpmn"><code>processes/kg-tool-adjudication.bpmn</code></a> ·
+<a href="https://github.com/litlfred/who-iris/blob/HEAD/processes/kg-tool-adjudication.checklist.md">checklist</a>. Its home is
+folio-assistant-core (section 10); it is drawn here, beside its only caller,
+until its skill is written.</p>
+<img src="assets/img/processes/kg-tool-adjudication.svg" alt="BPMN: adjudicate two KG extractors, with a who-iris lane and a human reviewer lane" style="max-width:100%">
 <table>
 <thead>
 <tr>
@@ -1883,57 +1937,57 @@ published</em>), <code>adjudicator</code> (agent, untainted), <code>reviewer</co
 <tbody>
 <tr>
 <td><code>Task_Project</code></td>
-<td>build-pipeline</td>
-<td><code>kg-crosswalk</code></td>
+<td>who-iris</td>
+<td><code>kg-crosswalk</code> (<strong>unbuilt</strong>)</td>
 <td>both outputs → comparison form</td>
 </tr>
 <tr>
 <td><code>Task_Match</code></td>
-<td>build-pipeline</td>
-<td><code>kg-tool-adjudication</code></td>
-<td>match entities, pairs, predicates and locators; compute the metrics in section 7</td>
-</tr>
-<tr>
-<td><code>GW_State</code></td>
-<td>—</td>
-<td>—</td>
-<td>agree / only-one / conflict</td>
+<td>who-iris</td>
+<td><code>kg-tool-adjudication</code> (<strong>unbuilt</strong>)</td>
+<td>match entities, pairs, predicates and locators; write the agreement level onto the derived graph; compute the metrics in section 7</td>
 </tr>
 <tr>
 <td><code>Task_Coverage</code></td>
-<td>build-pipeline</td>
-<td><code>kg-tool-adjudication</code></td>
-<td>only-one: record coverage; <strong>not</strong> adjudicated</td>
+<td>who-iris</td>
+<td><code>kg-tool-adjudication</code> (<strong>unbuilt</strong>)</td>
+<td>claims only one tool made: record coverage; <strong>not</strong> adjudicated</td>
+</tr>
+<tr>
+<td><code>GW_Conflict</code></td>
+<td>—</td>
+<td>—</td>
+<td>no claim in conflict → <code>End_NoConflict</code></td>
 </tr>
 <tr>
 <td><code>Call_Adjudication</code></td>
-<td>adjudicator</td>
+<td>who-iris (untainted agent)</td>
 <td><code>adjudication</code>, <code>untainted-verification</code></td>
 <td><code>Process_Adjudication</code>, codes <code>x-right y-right both-wrong both-defensible undecidable</code></td>
 </tr>
 <tr>
-<td><code>GW_HumanRequired</code></td>
+<td><code>GW_Human</code></td>
 <td>—</td>
 <td>—</td>
 <td>recommendation-class, contraindication, or <code>undecidable</code></td>
 </tr>
 <tr>
 <td><code>Task_HumanRuling</code></td>
-<td>reviewer</td>
+<td>Human reviewer</td>
 <td><code>adjudication</code></td>
 <td>the human ruling, kept beside the agent's</td>
 </tr>
 <tr>
 <td><code>A_RecordEntry</code></td>
-<td>build-pipeline</td>
+<td>who-iris</td>
 <td><code>adjudication</code></td>
 <td>attestation keyed by content hashes; <code>relaxable="false"</code></td>
 </tr>
 <tr>
-<td><code>Task_PromoteGold</code></td>
-<td>build-pipeline</td>
-<td><code>kg-tool-adjudication</code></td>
-<td>write the adjudicated status onto gold claims</td>
+<td><code>Task_Annotate</code></td>
+<td>who-iris</td>
+<td><code>kg-tool-adjudication</code> (<strong>unbuilt</strong>)</td>
+<td>write the ruling onto the derived graph; neither source graph changes</td>
 </tr>
 </tbody>
 </table>
@@ -2110,7 +2164,7 @@ the live work plan for the same terms.</p>
 </tr>
 <tr>
 <td>8</td>
-<td><code>optimus-kg-nightly.bpmn</code> + checklist + SVG; declare <code>kg-optimus/</code> in <code>who-iris.json</code></td>
+<td><del><code>optimus-kg-nightly.bpmn</code> + checklist + SVG</del> <strong>drawn</strong> (section 9); bind each unbuilt step to its skill as the skill lands, and declare <code>kg-optimus/</code> in <code>who-iris.json</code></td>
 <td>who-iris</td>
 <td>3, 5, 6, 7</td>
 </tr>

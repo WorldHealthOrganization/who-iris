@@ -142,7 +142,7 @@
       "graphTypologies": [
         "processes"
       ],
-      "description": "The IRIS CDN Exporter's BPMN processes: initial load, nightly change ingest over DSpace REST, weekly reconciliation, and sign-and-publish. Cloudflare git (Artifacts) and Cloudflare R2 + CDN are lanes: exports live on Cloudflare, and GitHub Pages only previews. Each activity names the skill that carries it out; the platform's nquads-distribution process is called, not copied. Rendered drawings: docs/assets/img/processes/."
+      "description": "The IRIS CDN Exporter's BPMN processes: initial load, nightly change ingest over DSpace REST, weekly reconciliation, and sign-and-publish; and the proposed GuidelineKG path (optimus-kg-nightly and its two phases, kg-tool-adjudication; docs/optimus-kg-integration.md), whose unbuilt steps say so with no-skill. Cloudflare git (Artifacts) and Cloudflare R2 + CDN are lanes: exports live on Cloudflare, and GitHub Pages only previews. Each activity names the skill that carries it out; the platform's nquads-distribution process is called, not copied. Rendered drawings: docs/assets/img/processes/."
     },
     {
       "id": "who-iris-scenarios",
@@ -150,7 +150,7 @@
       "graphTypologies": [
         "scenarios"
       ],
-      "description": "`scenarios/roles.json`: the roles the IRIS CDN export processes' lanes bind (owner, exporter agent, Cloudflare R2 and CDN, Cloudflare git, release signer, verifier). Each mechanical role inherits the harness role it specialises. Declared so the lanes resolve and the checkout's role graph sees them (folio-assistant#2781)."
+      "description": "`scenarios/roles.json`: the roles the IRIS CDN export processes' lanes bind (owner, exporter agent, Cloudflare R2 and CDN, Cloudflare git, release signer, verifier), and the GuidelineKG path's lanes and stores (who-iris path, Zitnik lab, human reviewer, result release). Each mechanical role inherits the harness role it specialises. Declared so the lanes resolve and the checkout's role graph sees them (folio-assistant#2781)."
     },
     {
       "id": "who-iris-scripts",

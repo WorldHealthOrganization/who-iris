@@ -291,9 +291,10 @@ boundary decides the interfaces:
 | **the result release** | — | `guideline_kg.jsonl` plus a manifest of SHA-256 digests, naming the work order, the CDN release and the GuidelineKG commit it was computed from. **For now who-iris trusts it by the pinned GuidelineKG commit and the digests** (owner, decided). Later the lab signs it with a key published as its own `did:web`, so who-iris checks it the way anyone checks a WHO release |
 
 who-iris never calls Reducto or OpenAI and never needs network access to them.
-The `extractor` lane in section 9 becomes an **external participant** (a
-separate BPMN pool) reached by message flows: *work order published* → *result
-release published*. A night on which the lab publishes nothing is a state the
+The lab is its own lane in section 9, **Zitnik lab (GuidelineKG)**, bound to
+an `external` role, and the only things that cross into it are two data
+stores: the *work order* who-iris writes and the *result release* the lab
+writes. A night on which the lab publishes nothing is a state the
 run report shows (`awaiting-extractor`). It is not a failure, and it never
 blocks the CDN release.
 
@@ -841,57 +842,99 @@ fills that field is **not verified**.
 Processes in this repository are BPMN files in [`processes/`](../processes/).
 Each activity names its skill (`<bootstrap.processes:skill>`), with a generated
 checklist (`bun run cat bpmn:checklist`) and SVG (`bun run cat render:bpmn`).
-**The `.bpmn` files are not drafted in this change.** Every activity must name a
-skill that resolves, and the skills below do not exist yet, so drafting them
-now would fail `check:workflow-refs` and the checklist generator. Each process
-is specified here at the level the BPMN will encode, with activity ids, lanes
-and skills. Writing the BPMN is the first task of the matching bean.
 
-**Lanes used across all three:** `build-pipeline` (the scripts, unattended),
-`optimus-kg-agent` (plans, reviews, opens beans; holds no keys), `extractor`
-(GuidelineKG, run by the Zitnik lab with its own keys: a **separate pool**,
-reached by the message flows *work order published* and *result release
-published*), `adjudicator` (agent, untainted), `reviewer`
-(SME/editor, human), `l1-editor` (human).
+**The nightly path and the adjudication are drawn; most of their skills are
+not written yet.** A step whose skill does not exist carries
+`<cat-harness.processes:no-skill reason="Unbuilt: …">` naming the skill this
+design assigns, and its documentation opens with *Unbuilt (skill … not written
+yet)*, so `check:workflow-refs` finds no dangling reference and the checklist
+says which steps are not built. A step that is built names its skill as usual.
+`l1-scope-and-review` is still a table only: it belongs in smart-base
+(section 10).
 
-### `optimus-kg-nightly` (who-iris)
+**Lanes.** **who-iris** (role `guidelinekg-path`: the scripts and the agent;
+holds no keys), **Zitnik lab (GuidelineKG)** (role `guidelinekg-lab`, an
+`external` actor: GuidelineKG on the lab's own keys) and **Human reviewer**
+(role `guidelinekg-reviewer`, a person). The roles are in
+[`scenarios/roles.json`](../scenarios/roles.json). **Data stores:** the
+**CDN release (signed)** and the **work order** (both in the Cloudflare
+release history) and the lab's **result release**.
 
-| id | lane | skill | what |
-|---|---|---|---|
-| `Start_AfterExport` | — | — | message: the exporter's `End_Done`; timer fallback |
-| `Task_VerifyRelease` | build-pipeline | `iris-cdn-signing` | verify the tag-manifest JWS through did:web; an unverified release ends the run as `refused` |
-| `Task_Diff` | build-pipeline | `optimus-kg-feed` | diff payload manifests since `state/optimus-cursor.json` |
-| `GW_Kind` | — | — | metadata-only / bitstream / withdrawn |
-| `Task_Reground` | build-pipeline | `optimus-kg-feed` | metadata-only: re-ground the publication node |
-| `Task_Withdraw` | build-pipeline | `optimus-kg-feed` | mark derived claims withdrawn, keep them addressable |
-| `Task_SelectByScope` | build-pipeline | `l1-scope-of-interest` | apply every active scope's selection predicate |
-| `Task_Gates` | optimus-kg-agent | `materialize-remote` | the five gates per bitstream; `unknown` is not `permitted` |
-| `Task_WorkOrder` | build-pipeline | `optimus-kg-feed` | write `state/guidelinekg/work-order.json`: the selected handles, bitstream digests and `dc.language.iso`; message flow to the lab pool |
-| `Catch_Result` | — | — | message: the lab's result release is published; a timer boundary records `awaiting-extractor` and ends the night without failing |
-| `Task_VerifyResult` | build-pipeline | `optimus-kg-feed` | verify the result release: its digests, the pinned GuidelineKG commit, and that it names this work order and CDN release. Once the lab signs releases, also its signature (lab `did:web`) |
-| `Call_Classify` | extractor (lab pool) | `guidelinekg-run` | GuidelineKG `classifier classify` (Reducto Classify) on the scope's candidates |
-| `GW_Keep` | — | — | the class is in the scope's `keep_categories`; otherwise recorded and stopped |
-| `Call_Extract` | extractor (lab pool) | `guidelinekg-run` | GuidelineKG `parser parse` then `integration build`, keyed by (bitstream sha, GuidelineKG commit) |
-| `Task_Ground` | build-pipeline | `kg-crosswalk` | OptimusKG CURIEs → WHO schemes through their xrefs (MONDO → ICD-10 → ICD-11; DrugBank → ATC/INN; CTD MeSH → `dc.subject.mesh`); an unmapped CURIE stays `unknown` |
-| `Task_Align` | build-pipeline | `kg-crosswalk` | silver → gold through the versioned crosswalk; reject edges without a locator |
-| `Call_Partition` | build-pipeline | `nquads-distribution` | project gold to its named-graph partition (platform process, called) |
-| `Call_Adjudicate` | — | `kg-tool-adjudication` | the process below, for documents with an L1 KG |
-| `Task_AdvanceCursor` | build-pipeline | `optimus-kg-feed` | only after a complete run |
-| `Task_Review` | optimus-kg-agent | `optimus-kg-feed` | run report; beans for anomalies (yield far from median, adjudication rate jump, gate `unknown` spike) |
+Following the harness's rule for diagrams past about 20 steps (`bpmn-authoring`,
+"Split by phase"), the nightly path is a top-level diagram that shows the
+hand-off between who-iris and the lab, and calls two who-iris phases.
 
-### `kg-tool-adjudication` (folio-assistant-core; generic over any two extractors)
+### `optimus-kg-nightly` (who-iris): the night, and the hand-off to the lab
+
+[`processes/optimus-kg-nightly.bpmn`](../processes/optimus-kg-nightly.bpmn) ·
+[checklist](../processes/optimus-kg-nightly.checklist.md)
+
+<img src="assets/img/processes/optimus-kg-nightly.svg" alt="BPMN: GuidelineKG nightly path, with a who-iris lane and a Zitnik lab lane" style="max-width:100%">
 
 | id | lane | skill | what |
 |---|---|---|---|
-| `Task_Project` | build-pipeline | `kg-crosswalk` | both outputs → comparison form |
-| `Task_Match` | build-pipeline | `kg-tool-adjudication` | match entities, pairs, predicates and locators; compute the metrics in section 7 |
-| `GW_State` | — | — | agree / only-one / conflict |
-| `Task_Coverage` | build-pipeline | `kg-tool-adjudication` | only-one: record coverage; **not** adjudicated |
-| `Call_Adjudication` | adjudicator | `adjudication`, `untainted-verification` | `Process_Adjudication`, codes `x-right y-right both-wrong both-defensible undecidable` |
-| `GW_HumanRequired` | — | — | recommendation-class, contraindication, or `undecidable` |
-| `Task_HumanRuling` | reviewer | `adjudication` | the human ruling, kept beside the agent's |
-| `A_RecordEntry` | build-pipeline | `adjudication` | attestation keyed by content hashes; `relaxable="false"` |
-| `Task_PromoteGold` | build-pipeline | `kg-tool-adjudication` | write the adjudicated status onto gold claims |
+| `Start_AfterExport` | who-iris | — | message: the exporter's `End_Done`; timer fallback at 04:00 UTC |
+| `Call_PrepareWorkOrder` | who-iris | phase `Process_OptimusKgNightlyWorkOrder` | reads the CDN release, writes the work order |
+| `GW_Published` | — | — | refused release → `End_Refused` |
+| `Task_Classify` | Zitnik lab | `guidelinekg-run` (**unbuilt**, the lab's) | GuidelineKG `classifier classify` (Reducto Classify) on the work order's documents, after verifying the release JWS against WHO's `did:web` key |
+| `GW_Keep` | — | — | the class is in the scope's `keep_categories`; otherwise recorded, not parsed |
+| `Task_Extract` | Zitnik lab | `guidelinekg-run` (**unbuilt**) | `parser parse` then `integration build`, keyed by (bitstream sha, GuidelineKG commit, crosswalk version) |
+| `Task_PublishResult` | Zitnik lab | `guidelinekg-run` (**unbuilt**) | writes the result release |
+| `Call_IngestResult` | who-iris | phase `Process_OptimusKgNightlyIngest` | reads the result release; ends as *awaiting the lab* or *ingested* |
+| `End_Done` | — | — | night finished |
+
+### `optimus-kg-nightly-work-order` (phase 1): prepare the work order
+
+[`processes/optimus-kg-nightly-work-order.bpmn`](../processes/optimus-kg-nightly-work-order.bpmn) ·
+[checklist](../processes/optimus-kg-nightly-work-order.checklist.md)
+
+<img src="assets/img/processes/optimus-kg-nightly-work-order.svg" alt="BPMN: GuidelineKG nightly path, phase 1: prepare the work order" style="max-width:100%">
+
+| id | lane | skill | what |
+|---|---|---|---|
+| `Task_VerifyRelease` | who-iris | `iris-cdn-signing` | verify the tag-manifest JWS through `did:web`; an unverified release ends the phase as `End_Refused` |
+| `Task_Diff` | who-iris | `optimus-kg-feed` (**unbuilt**) | diff payload manifests since `state/optimus-cursor.json` |
+| `Task_ApplyMetadata` | who-iris | `optimus-kg-feed` (**unbuilt**) | metadata-only: re-ground the publication node, no re-extraction; removed or withdrawn: mark derived claims withdrawn, keep them addressable |
+| `Task_SelectByScope` | who-iris | `l1-scope-of-interest` (**unbuilt**) | level 1 for every changed item; apply every active scope's selection predicate for level 2 |
+| `Task_Gates` | who-iris | `materialize-remote` | the five gates per bitstream; `unknown` is not `permitted` |
+| `Task_WorkOrder` | who-iris | `optimus-kg-feed` (**unbuilt**) | write `state/guidelinekg/work-order.json`: the selected handles, bitstream digests and `dc.language.iso` |
+
+### `optimus-kg-nightly-ingest` (phase 2): verify and adjudicate the result
+
+[`processes/optimus-kg-nightly-ingest.bpmn`](../processes/optimus-kg-nightly-ingest.bpmn) ·
+[checklist](../processes/optimus-kg-nightly-ingest.checklist.md)
+
+<img src="assets/img/processes/optimus-kg-nightly-ingest.svg" alt="BPMN: GuidelineKG nightly path, phase 2: verify and adjudicate the result" style="max-width:100%">
+
+| id | lane | skill | what |
+|---|---|---|---|
+| `Task_VerifyResult` | who-iris | `optimus-kg-feed` (**unbuilt**) | the result release's digests, the pinned GuidelineKG commit, and that it names this work order and CDN release; later its signature (lab `did:web`). Not verified, or not there: `End_Awaiting` (`awaiting-extractor`), never a failure |
+| `Task_Crosswalk` | who-iris | `kg-crosswalk` (**unbuilt**) | OptimusKG CURIEs → WHO schemes through their xrefs (MONDO → ICD-10 → ICD-11; DrugBank → ATC/INN; CTD MeSH → `dc.subject.mesh`), then silver → gold through the versioned crosswalk; an unmapped CURIE stays `unknown`, an edge without a locator is rejected |
+| `Call_Partition` | who-iris | `iris-oxigraph`, `nquads-distribution` | project gold to its named-graph partition (platform process, called) |
+| `Call_Adjudicate` | who-iris | `kg-tool-adjudication` (**unbuilt**) | the process below, for documents with an L1 KG |
+| `Task_AdvanceCursor` | who-iris | `optimus-kg-feed` (**unbuilt**) | only after a complete run |
+| `Task_Review` | who-iris | `optimus-kg-feed` (**unbuilt**) | run report; beans for anomalies (yield far from median, adjudication rate jump, gate `unknown` spike) |
+
+### `kg-tool-adjudication` (generic over any two extractors)
+
+[`processes/kg-tool-adjudication.bpmn`](../processes/kg-tool-adjudication.bpmn) ·
+[checklist](../processes/kg-tool-adjudication.checklist.md). Its home is
+folio-assistant-core (section 10); it is drawn here, beside its only caller,
+until its skill is written.
+
+<img src="assets/img/processes/kg-tool-adjudication.svg" alt="BPMN: adjudicate two KG extractors, with a who-iris lane and a human reviewer lane" style="max-width:100%">
+
+| id | lane | skill | what |
+|---|---|---|---|
+| `Task_Project` | who-iris | `kg-crosswalk` (**unbuilt**) | both outputs → comparison form |
+| `Task_Match` | who-iris | `kg-tool-adjudication` (**unbuilt**) | match entities, pairs, predicates and locators; write the agreement level onto the derived graph; compute the metrics in section 7 |
+| `Task_Coverage` | who-iris | `kg-tool-adjudication` (**unbuilt**) | claims only one tool made: record coverage; **not** adjudicated |
+| `GW_Conflict` | — | — | no claim in conflict → `End_NoConflict` |
+| `Call_Adjudication` | who-iris (untainted agent) | `adjudication`, `untainted-verification` | `Process_Adjudication`, codes `x-right y-right both-wrong both-defensible undecidable` |
+| `GW_Human` | — | — | recommendation-class, contraindication, or `undecidable` |
+| `Task_HumanRuling` | Human reviewer | `adjudication` | the human ruling, kept beside the agent's |
+| `A_RecordEntry` | who-iris | `adjudication` | attestation keyed by content hashes; `relaxable="false"` |
+| `Task_Annotate` | who-iris | `kg-tool-adjudication` (**unbuilt**) | write the ruling onto the derived graph; neither source graph changes |
 
 ### `l1-scope-and-review` (L1 guideline development; see section 10 for where)
 
@@ -943,7 +986,7 @@ the live work plan for the same terms.
 | 5 | `optimus-kg-feed`: verified-release diff consumer with its own cursor, tested against a local release | who-iris | CDN contract (exists) |
 | 6 | `who-iris-cdn` source in GuidelineKG: verified release → `metadata.json` records with Handle/UUID in `extra`; run classify → parse → integrate, keyed by sha256 | mims-harvard/guideline-kg | Q11, 5 |
 | 7 | `kg-tool-adjudication` process + skill + metrics; codes declared for `Process_Adjudication` | folio-assistant-core + cat-harness-tools | 4 |
-| 8 | `optimus-kg-nightly.bpmn` + checklist + SVG; declare `kg-optimus/` in `who-iris.json` | who-iris | 3, 5, 6, 7 |
+| 8 | ~~`optimus-kg-nightly.bpmn` + checklist + SVG~~ **drawn** (section 9); bind each unbuilt step to its skill as the skill lands, and declare `kg-optimus/` in `who-iris.json` | who-iris | 3, 5, 6, 7 |
 | 9 | Baseline run on the held library entries with an L1 KG; propose thresholds | who-iris | 8 |
 | 10 | (optional) OptimusKG as an external library KG for agentic review | who-iris | licence Q5 |
 | 11 | Work order + result-release contract (format, lab `did:web` signing, verification); `awaiting-extractor` state | who-iris + the lab | Q11 |

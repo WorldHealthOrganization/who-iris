@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  who-iris — GuidelineKG nightly path (top level).
+
+  Source of truth: this file; open it in any BPMN 2.0 tool. Prose and the
+  reasons behind every step: docs/optimus-kg-integration.md (sections 3c, 5, 7
+  and 9). A DESIGN, NOT YET RUNNING: steps whose skill is not written yet carry
+  cat-harness.processes:no-skill with the reason "Unbuilt: ...", naming the
+  skill the design assigns, so no reference dangles and nothing pretends to be
+  built.
+
+  The boundary the owner set: the Zitnik lab runs GuidelineKG (Reducto and
+  Azure OpenAI) on its own keys; who-iris holds no such key, publishes a work
+  order beside the signed CDN release, and verifies what the lab publishes
+  back before reading it.
+-->
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+                  xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+                  xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+                  xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+                  xmlns:bootstrap.processes="https://litlfred.github.io/bootstrap/v0/processes/ns/"
+                  xmlns:cat-harness.processes="https://litlfred.github.io/cat-harness/v0/processes/ns/"
+                  id="Definitions_OptimusKgNightly"
+                  targetNamespace="https://litlfred.github.io/folio-assistant/workflows">
+  <bpmn:import namespace="https://litlfred.github.io/bootstrap/v0/processes/ns/" location="https://litlfred.github.io/bootstrap/v0/processes/ns.jsonld" importType="http://www.w3.org/ns/json-ld"/>
+  <bpmn:resource id="guidelinekg-path" name="who-iris GuidelineKG path"/>
+  <bpmn:resource id="guidelinekg-lab" name="Zitnik lab (GuidelineKG)"/>
+  <bpmn:resource id="cloudflare-git" name="Cloudflare git (Artifacts)"/>
+  <bpmn:resource id="guidelinekg-release" name="GuidelineKG result release"/>
+  <bpmn:process id="Process_OptimusKgNightly" name="GuidelineKG nightly path" isExecutable="false">
+    <bpmn:documentation>Every night after the IRIS CDN release is published: select the changed items an editor's scope of interest asks for, publish a work order for the Zitnik lab, which runs GuidelineKG on its own keys, then verify the lab's result release, project it through the crosswalk and adjudicate it against the L1 KG. The existing L1 ingestion is unchanged; this path runs beside it. A night on which the lab publishes nothing ends as awaiting-extractor, never as a failure, and never blocks the CDN release.</bpmn:documentation>
+    <bpmn:extensionElements><cat-harness.processes:policy enforcement="strict"/></bpmn:extensionElements>
+    <bpmn:laneSet id="LaneSet_OptimusKgNightly">
+      <bpmn:lane id="Lane_WhoIris" name="who-iris" partitionElementRef="guidelinekg-path">
+        <bpmn:documentation>who-iris's side of the GuidelineKG path: deterministic scripts beside scripts/iris-cdn/, and the agent that plans, reviews and opens beans. Holds no Reducto, OpenAI or Azure key.</bpmn:documentation>
+        <bpmn:flowNodeRef>Start_AfterExport</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Call_PrepareWorkOrder</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>GW_Published</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>End_Refused</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Call_IngestResult</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>End_Done</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_Lab" name="Zitnik lab (GuidelineKG)" partitionElementRef="guidelinekg-lab">
+        <bpmn:documentation>The Zitnik lab at Harvard runs GuidelineKG (mims-harvard/guideline-kg, pinned by commit) on its own Reducto and Azure OpenAI keys, and publishes its results in its own repositories. An external party: who-iris instructs nothing here; the work order and the result release are the whole interface.</bpmn:documentation>
+        <bpmn:flowNodeRef>Task_Classify</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>GW_Keep</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Extract</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_PublishResult</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="Start_AfterExport" name="CDN release&#10;published">
+      <bpmn:documentation>Message: the IRIS CDN nightly process reached End_Done (Process_IrisCdnNightly). A scheduled timer at 04:00 UTC is the fallback. A night that ends End_NoChange never starts this path.</bpmn:documentation>
+      <bpmn:messageEventDefinition id="MED_Start_AfterExport"/>
+    </bpmn:startEvent>
+    <bpmn:callActivity id="Call_PrepareWorkOrder" name="Prepare the&#10;work order" calledElement="Process_OptimusKgNightlyWorkOrder">
+      <bpmn:documentation>Phase: verify the release, diff it against this path's own cursor, apply metadata edits and withdrawals, select by scope, check the gates, and publish the work order.</bpmn:documentation>
+      <bpmn:extensionElements><bootstrap.processes:skill ref="iris-cdn-signing"/></bpmn:extensionElements>
+      <bpmn:dataInputAssociation id="DIA_Call_PrepareWorkOrder_DSR_CdnRelease"><bpmn:sourceRef>DSR_CdnRelease</bpmn:sourceRef></bpmn:dataInputAssociation>
+      <bpmn:dataOutputAssociation id="DOA_Call_PrepareWorkOrder_DSR_WorkOrder"><bpmn:targetRef>DSR_WorkOrder</bpmn:targetRef></bpmn:dataOutputAssociation>
+    </bpmn:callActivity>
+    <bpmn:exclusiveGateway id="GW_Published" name="Work order&#10;published?"/>
+    <bpmn:endEvent id="End_Refused" name="Release refused">
+      <bpmn:documentation>The CDN release did not verify against WHO's did:web key. A state shown in the run report, not an error to retry.</bpmn:documentation>
+    </bpmn:endEvent>
+    <bpmn:task id="Task_Classify" name="Classify the&#10;candidates">
+      <bpmn:documentation>Unbuilt (skill guidelinekg-run not written yet): GuidelineKG classifier classify (Reducto Classify) on the work order's documents, after the lab verifies the CDN release JWS against WHO's did:web key and each byte range against its digest. Classification runs before parsing, so a document the scope does not count is never parsed.</bpmn:documentation>
+      <bpmn:extensionElements><cat-harness.processes:no-skill reason="Unbuilt: the skill guidelinekg-run does not exist yet; it is proposed in docs/optimus-kg-integration.md section 9, run by the Zitnik lab, not by who-iris. Bind it with bootstrap.processes:skill once the skill is written."/></bpmn:extensionElements>
+      <bpmn:dataInputAssociation id="DIA_Task_Classify_DSR_WorkOrder"><bpmn:sourceRef>DSR_WorkOrder</bpmn:sourceRef></bpmn:dataInputAssociation>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="GW_Keep" name="Guideline of&#10;interest?">
+      <bpmn:documentation>The class is in the scope's keep_categories.</bpmn:documentation>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="Task_Extract" name="Parse and&#10;extract claims">
+      <bpmn:documentation>Unbuilt (skill guidelinekg-run not written yet): GuidelineKG parser parse, then integration build: recommendation claims linked to OptimusKG nodes. Keyed by bitstream SHA-256, GuidelineKG commit and crosswalk version, so Reducto is never billed twice for the same bytes. Per language: the language comes from the IRIS record.</bpmn:documentation>
+      <bpmn:extensionElements><cat-harness.processes:no-skill reason="Unbuilt: the skill guidelinekg-run does not exist yet; it is proposed in docs/optimus-kg-integration.md section 9, run by the Zitnik lab, not by who-iris. Bind it with bootstrap.processes:skill once the skill is written."/></bpmn:extensionElements>
+    </bpmn:task>
+    <bpmn:task id="Task_PublishResult" name="Publish the&#10;result release">
+      <bpmn:documentation>Unbuilt (skill guidelinekg-run not written yet): guideline_kg.jsonl and its SHA-256 manifest, naming the work order, the CDN release and the GuidelineKG commit. A document classified out is recorded with its class and not extracted.</bpmn:documentation>
+      <bpmn:extensionElements><cat-harness.processes:no-skill reason="Unbuilt: the skill guidelinekg-run does not exist yet; it is proposed in docs/optimus-kg-integration.md section 9, run by the Zitnik lab, not by who-iris. Bind it with bootstrap.processes:skill once the skill is written."/></bpmn:extensionElements>
+      <bpmn:dataOutputAssociation id="DOA_Task_PublishResult_DSR_ResultRelease"><bpmn:targetRef>DSR_ResultRelease</bpmn:targetRef></bpmn:dataOutputAssociation>
+    </bpmn:task>
+    <bpmn:callActivity id="Call_IngestResult" name="Verify and&#10;adjudicate the result" calledElement="Process_OptimusKgNightlyIngest">
+      <bpmn:documentation>Phase: verify the result release, project it through the crosswalk into its own graph partition, adjudicate it against the L1 KG, advance the cursor and review the run report. It ends as awaiting the lab (no verified result names tonight's work order: awaiting-extractor, not a failure, and the cursor stays) or as ingested; nothing differs after it, so no gateway reads which.</bpmn:documentation>
+      <bpmn:extensionElements><cat-harness.processes:no-skill reason="A phase call: each step of Process_OptimusKgNightlyIngest names its own skill, or says it is unbuilt."/></bpmn:extensionElements>
+      <bpmn:dataInputAssociation id="DIA_Call_IngestResult_DSR_ResultRelease"><bpmn:sourceRef>DSR_ResultRelease</bpmn:sourceRef></bpmn:dataInputAssociation>
+    </bpmn:callActivity>
+    <bpmn:endEvent id="End_Done" name="Night&#10;finished"/>
+    <bpmn:sequenceFlow id="T1" sourceRef="Start_AfterExport" targetRef="Call_PrepareWorkOrder"/>
+    <bpmn:sequenceFlow id="T2" sourceRef="Call_PrepareWorkOrder" targetRef="GW_Published"/>
+    <bpmn:sequenceFlow id="T3" name="no" sourceRef="GW_Published" targetRef="End_Refused"/>
+    <bpmn:sequenceFlow id="T4" name="yes" sourceRef="GW_Published" targetRef="Task_Classify"/>
+    <bpmn:sequenceFlow id="T5" sourceRef="Task_Classify" targetRef="GW_Keep"/>
+    <bpmn:sequenceFlow id="T6" name="yes" sourceRef="GW_Keep" targetRef="Task_Extract"/>
+    <bpmn:sequenceFlow id="T7" name="no" sourceRef="GW_Keep" targetRef="Task_PublishResult"/>
+    <bpmn:sequenceFlow id="T8" sourceRef="Task_Extract" targetRef="Task_PublishResult"/>
+    <bpmn:sequenceFlow id="T9" sourceRef="Task_PublishResult" targetRef="Call_IngestResult"/>
+    <bpmn:sequenceFlow id="T10" sourceRef="Call_IngestResult" targetRef="End_Done"/>
+    <bpmn:dataStoreReference id="DSR_CdnRelease" name="CDN release (signed)" dataStoreRef="cloudflare-git"><bpmn:documentation>The nightly IRIS CDN release: a BagIt bag in the release-history git repository on Cloudflare Artifacts, its tag manifest signed (JWS, key from did:web); bytes in R2 by SHA-256.</bpmn:documentation></bpmn:dataStoreReference>
+    <bpmn:dataStoreReference id="DSR_WorkOrder" name="Work order" dataStoreRef="cloudflare-git"><bpmn:documentation>state/guidelinekg/work-order.json in the CDN release history: the scope-selected handles, their bitstream SHA-256 digests and dc.language.iso. Canonical JSON; changes only when the selection changes.</bpmn:documentation></bpmn:dataStoreReference>
+    <bpmn:dataStoreReference id="DSR_ResultRelease" name="Result release (lab)" dataStoreRef="guidelinekg-release"><bpmn:documentation>Published by the lab in its own repositories: guideline_kg.jsonl plus a SHA-256 manifest naming the work order, the CDN release and the GuidelineKG commit. Trusted for now by the pinned commit and the digests; later signed under the lab's own did:web.</bpmn:documentation></bpmn:dataStoreReference>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="Diagram_OptimusKgNightly">
+    <bpmndi:BPMNPlane id="Plane_OptimusKgNightly" bpmnElement="Process_OptimusKgNightly">
+      <bpmndi:BPMNShape id="S_Lane_WhoIris" bpmnElement="Lane_WhoIris" isHorizontal="true"><dc:Bounds x="160" y="60" width="1300" height="365"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Lane_Lab" bpmnElement="Lane_Lab" isHorizontal="true"><dc:Bounds x="160" y="425" width="1300" height="365"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Start_AfterExport" bpmnElement="Start_AfterExport"><dc:Bounds x="242" y="139.5" width="36" height="36"/><bpmndi:BPMNLabel><dc:Bounds x="215" y="181.5" width="90" height="40"/></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Call_PrepareWorkOrder" bpmnElement="Call_PrepareWorkOrder"><dc:Bounds x="335" y="97.5" width="120" height="120"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_GW_Published" bpmnElement="GW_Published" isMarkerVisible="true"><dc:Bounds x="505" y="132.5" width="50" height="50"/><bpmndi:BPMNLabel><dc:Bounds x="470" y="86.5" width="120" height="40"/></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_End_Refused" bpmnElement="End_Refused"><dc:Bounds x="512" y="309.5" width="36" height="36"/><bpmndi:BPMNLabel><dc:Bounds x="485" y="351.5" width="90" height="40"/></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Task_Classify" bpmnElement="Task_Classify"><dc:Bounds x="605" y="462.5" width="120" height="120"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_GW_Keep" bpmnElement="GW_Keep" isMarkerVisible="true"><dc:Bounds x="775" y="497.5" width="50" height="50"/><bpmndi:BPMNLabel><dc:Bounds x="740" y="451.5" width="120" height="40"/></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Task_Extract" bpmnElement="Task_Extract"><dc:Bounds x="875" y="462.5" width="120" height="120"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Task_PublishResult" bpmnElement="Task_PublishResult"><dc:Bounds x="1025" y="462.5" width="120" height="120"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Call_IngestResult" bpmnElement="Call_IngestResult"><dc:Bounds x="1175" y="97.5" width="120" height="120"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_End_Done" bpmnElement="End_Done"><dc:Bounds x="1352" y="139.5" width="36" height="36"/><bpmndi:BPMNLabel><dc:Bounds x="1325" y="181.5" width="90" height="40"/></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="E_T1" bpmnElement="T1"><di:waypoint x="278" y="157.5"/><di:waypoint x="335" y="157.5"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_T2" bpmnElement="T2"><di:waypoint x="455" y="157.5"/><di:waypoint x="505" y="157.5"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_T3" bpmnElement="T3"><di:waypoint x="530" y="182.5"/><di:waypoint x="530" y="309.5"/><bpmndi:BPMNLabel><dc:Bounds x="536" y="188.5" width="24" height="18"/></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_T4" bpmnElement="T4"><di:waypoint x="555" y="157.5"/><di:waypoint x="580" y="157.5"/><di:waypoint x="580" y="522.5"/><di:waypoint x="605" y="522.5"/><bpmndi:BPMNLabel><dc:Bounds x="561" y="133.5" width="24" height="18"/></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_T5" bpmnElement="T5"><di:waypoint x="725" y="522.5"/><di:waypoint x="775" y="522.5"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_T6" bpmnElement="T6"><di:waypoint x="825" y="522.5"/><di:waypoint x="875" y="522.5"/><bpmndi:BPMNLabel><dc:Bounds x="831" y="498.5" width="24" height="18"/></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_T7" bpmnElement="T7"><di:waypoint x="800" y="547.5"/><di:waypoint x="800" y="692.5"/><di:waypoint x="1085" y="692.5"/><di:waypoint x="1085" y="582.5"/><bpmndi:BPMNLabel><dc:Bounds x="806" y="553.5" width="24" height="18"/></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_T8" bpmnElement="T8"><di:waypoint x="995" y="522.5"/><di:waypoint x="1025" y="522.5"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_T9" bpmnElement="T9"><di:waypoint x="1145" y="522.5"/><di:waypoint x="1160" y="522.5"/><di:waypoint x="1160" y="157.5"/><di:waypoint x="1175" y="157.5"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_T10" bpmnElement="T10"><di:waypoint x="1295" y="157.5"/><di:waypoint x="1352" y="157.5"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="S_DSR_CdnRelease" bpmnElement="DSR_CdnRelease"><dc:Bounds x="235" y="302.5" width="50" height="50"/><bpmndi:BPMNLabel><dc:Bounds x="200" y="356.5" width="120" height="36"/></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_DSR_WorkOrder" bpmnElement="DSR_WorkOrder"><dc:Bounds x="640" y="667.5" width="50" height="50"/><bpmndi:BPMNLabel><dc:Bounds x="605" y="721.5" width="120" height="36"/></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_DSR_ResultRelease" bpmnElement="DSR_ResultRelease"><dc:Bounds x="1210" y="667.5" width="50" height="50"/><bpmndi:BPMNLabel><dc:Bounds x="1175" y="721.5" width="120" height="36"/></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="E_DIA_Call_PrepareWorkOrder_DSR_CdnRelease" bpmnElement="DIA_Call_PrepareWorkOrder_DSR_CdnRelease"><di:waypoint x="285" y="327.5"/><di:waypoint x="365" y="327.5"/><di:waypoint x="365" y="217.5"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_DOA_Call_PrepareWorkOrder_DSR_WorkOrder" bpmnElement="DOA_Call_PrepareWorkOrder_DSR_WorkOrder"><di:waypoint x="425" y="217.5"/><di:waypoint x="425" y="692.5"/><di:waypoint x="640" y="692.5"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_DIA_Task_Classify_DSR_WorkOrder" bpmnElement="DIA_Task_Classify_DSR_WorkOrder"><di:waypoint x="665" y="667.5"/><di:waypoint x="665" y="582.5"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_DOA_Task_PublishResult_DSR_ResultRelease" bpmnElement="DOA_Task_PublishResult_DSR_ResultRelease"><di:waypoint x="1115" y="582.5"/><di:waypoint x="1115" y="692.5"/><di:waypoint x="1210" y="692.5"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_DIA_Call_IngestResult_DSR_ResultRelease" bpmnElement="DIA_Call_IngestResult_DSR_ResultRelease"><di:waypoint x="1235" y="667.5"/><di:waypoint x="1235" y="217.5"/></bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

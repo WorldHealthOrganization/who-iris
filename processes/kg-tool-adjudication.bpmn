@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  who-iris — adjudication between two KG extractors (GuidelineKG and the L1 KG).
+
+  Source of truth: this file; open it in any BPMN 2.0 tool. Prose and the
+  reasons behind every step: docs/optimus-kg-integration.md (sections 3c, 5, 7
+  and 9). A DESIGN, NOT YET RUNNING: steps whose skill is not written yet carry
+  cat-harness.processes:no-skill with the reason "Unbuilt: ...", naming the
+  skill the design assigns, so no reference dangles and nothing pretends to be
+  built.
+
+  The boundary the owner set: the Zitnik lab runs GuidelineKG (Reducto and
+  Azure OpenAI) on its own keys; who-iris holds no such key, publishes a work
+  order beside the signed CDN release, and verifies what the lab publishes
+  back before reading it.
+
+  Home: the design puts this process and its skill in folio-assistant-core,
+  generic over any two extractors. It is drawn here, beside its only caller,
+  until that skill exists; it moves when the skill is written.
+-->
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+                  xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+                  xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+                  xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+                  xmlns:bootstrap.processes="https://litlfred.github.io/bootstrap/v0/processes/ns/"
+                  xmlns:cat-harness.processes="https://litlfred.github.io/cat-harness/v0/processes/ns/"
+                  id="Definitions_KgToolAdjudication"
+                  targetNamespace="https://litlfred.github.io/folio-assistant/workflows">
+  <bpmn:import namespace="https://litlfred.github.io/bootstrap/v0/processes/ns/" location="https://litlfred.github.io/bootstrap/v0/processes/ns.jsonld" importType="http://www.w3.org/ns/json-ld"/>
+  <bpmn:resource id="guidelinekg-path" name="who-iris GuidelineKG path"/>
+  <bpmn:resource id="guidelinekg-reviewer" name="Human reviewer (SME or editor)"/>
+  <bpmn:process id="Process_KgToolAdjudication" name="Adjudicate two KG extractors" isExecutable="false">
+    <bpmn:documentation>Compare the claims two KG extractors made from the same language version of a publication, record what only one of them found as coverage, settle each single-claim disagreement through untainted adjudication with a human ruling where required, and annotate the derived graph without changing either source graph.</bpmn:documentation>
+    <bpmn:extensionElements><cat-harness.processes:policy enforcement="strict"/></bpmn:extensionElements>
+    <bpmn:laneSet id="LaneSet_KgToolAdjudication">
+      <bpmn:lane id="Lane_WhoIris" name="who-iris" partitionElementRef="guidelinekg-path">
+        <bpmn:documentation>who-iris's side of the GuidelineKG path: deterministic scripts beside scripts/iris-cdn/, and the agent that plans, reviews and opens beans. Holds no Reducto, OpenAI or Azure key.</bpmn:documentation>
+        <bpmn:flowNodeRef>Start_Compare</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Project</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Match</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Coverage</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>GW_Conflict</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>End_NoConflict</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Call_Adjudication</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>GW_Human</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>A_RecordEntry</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Annotate</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>End_Annotated</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_Reviewer" name="Human reviewer" partitionElementRef="guidelinekg-reviewer">
+        <bpmn:documentation>An SME or editor. Rules on every recommendation-class or contraindication claim and on anything the agent found undecidable. The ruling is kept beside the agent's, never over it.</bpmn:documentation>
+        <bpmn:flowNodeRef>Task_HumanRuling</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="Start_Compare" name="Two graphs&#10;to compare"/>
+    <bpmn:task id="Task_Project" name="Project both&#10;graphs">
+      <bpmn:documentation>Unbuilt (skill kg-crosswalk not written yet): Both outputs into the comparison form (section 6): the L1 KG's recommendation nodes, and GuidelineKG's Claims and assertion edges. Both sides are the same language version of the publication.</bpmn:documentation>
+      <bpmn:extensionElements><cat-harness.processes:no-skill reason="Unbuilt: the skill kg-crosswalk does not exist yet; it is proposed in docs/optimus-kg-integration.md section 9. Bind it with bootstrap.processes:skill once the skill is written."/></bpmn:extensionElements>
+    </bpmn:task>
+    <bpmn:task id="Task_Match" name="Match claims;&#10;record agreement">
+      <bpmn:documentation>Unbuilt (skill kg-tool-adjudication not written yet): Match on publication UUID, section by heading and page, grounded subject, grounded object and population. Write onto the derived graph which graphs assert each claim and how far they agree; compute entity grounding agreement, pair Jaccard with each tool's precision and recall against the other, Cohen's kappa on predicates and evidence-locator agreement.</bpmn:documentation>
+      <bpmn:extensionElements><cat-harness.processes:no-skill reason="Unbuilt: the skill kg-tool-adjudication does not exist yet; it is proposed in docs/optimus-kg-integration.md section 9. Bind it with bootstrap.processes:skill once the skill is written."/></bpmn:extensionElements>
+    </bpmn:task>
+    <bpmn:task id="Task_Coverage" name="Record the&#10;coverage">
+      <bpmn:documentation>Unbuilt (skill kg-tool-adjudication not written yet): A claim only one tool made is not a disagreement: a coverage finding, reported and tracked over time by type, never adjudicated.</bpmn:documentation>
+      <bpmn:extensionElements><cat-harness.processes:no-skill reason="Unbuilt: the skill kg-tool-adjudication does not exist yet; it is proposed in docs/optimus-kg-integration.md section 9. Bind it with bootstrap.processes:skill once the skill is written."/></bpmn:extensionElements>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="GW_Conflict" name="Any claim&#10;in conflict?">
+      <bpmn:documentation>Adjudicable: the two tools disagree on one claim. Mechanical agreement and consensus need no ruling.</bpmn:documentation>
+    </bpmn:exclusiveGateway>
+    <bpmn:endEvent id="End_NoConflict" name="Agreement and&#10;coverage recorded"/>
+    <bpmn:callActivity id="Call_Adjudication" name="Adjudicate&#10;X against Y" calledElement="Process_Adjudication">
+      <bpmn:documentation>Once per claim in conflict. The adjudicator sees the source passage and the two claims anonymised as X and Y, never which tool made which; it uses no tools and says so (tools_used). Recommendation-class claims are all ruled on; other types are sampled (stratified by node type, sample size from a power analysis).</bpmn:documentation>
+      <bpmn:extensionElements><bootstrap.processes:skill ref="adjudication"/><bootstrap.processes:skill ref="untainted-verification"/><cat-harness.processes:adjudication codes="x-right y-right both-wrong both-defensible undecidable"/><cat-harness.processes:fulfilment kinds="agent person" reason="An untainted agent rules first; a ruling is a judgement, never a merge rule, so no system or external actor may take this step."/></bpmn:extensionElements>
+    </bpmn:callActivity>
+    <bpmn:exclusiveGateway id="GW_Human" name="Human ruling&#10;required?">
+      <bpmn:documentation>Yes for every recommendation-class claim, any claim about a contraindication, and every undecidable.</bpmn:documentation>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="Task_HumanRuling" name="Rule on&#10;the claim">
+      <bpmn:documentation>The human ruling, recorded as human_adjudicated beside the agent's assessed_by, never over it.</bpmn:documentation>
+      <bpmn:extensionElements><bootstrap.processes:skill ref="adjudication"/></bpmn:extensionElements>
+    </bpmn:task>
+    <bpmn:task id="A_RecordEntry" name="Record the&#10;ruling">
+      <bpmn:documentation>An attestation keyed by the hashes of the two claims and the source passage, on cat/who-iris/attestations under kg-adjudication/. A re-run that reorders or drops claims needs no re-adjudication.</bpmn:documentation>
+      <bpmn:extensionElements><bootstrap.processes:skill ref="adjudication"/><cat-harness.processes:policy relaxable="false"/></bpmn:extensionElements>
+    </bpmn:task>
+    <bpmn:task id="Task_Annotate" name="Annotate the&#10;derived graph">
+      <bpmn:documentation>Unbuilt (skill kg-tool-adjudication not written yet): Write the ruling onto the derived graph: x-right or y-right marks one claim adjudicated and the other not-supported; both-wrong marks both not-supported; both-defensible keeps both. Neither source graph is changed; an author can still select either.</bpmn:documentation>
+      <bpmn:extensionElements><cat-harness.processes:no-skill reason="Unbuilt: the skill kg-tool-adjudication does not exist yet; it is proposed in docs/optimus-kg-integration.md section 9. Bind it with bootstrap.processes:skill once the skill is written."/></bpmn:extensionElements>
+    </bpmn:task>
+    <bpmn:endEvent id="End_Annotated" name="Rulings&#10;annotated"/>
+    <bpmn:sequenceFlow id="A1" sourceRef="Start_Compare" targetRef="Task_Project"/>
+    <bpmn:sequenceFlow id="A2" sourceRef="Task_Project" targetRef="Task_Match"/>
+    <bpmn:sequenceFlow id="A3" sourceRef="Task_Match" targetRef="Task_Coverage"/>
+    <bpmn:sequenceFlow id="A4" sourceRef="Task_Coverage" targetRef="GW_Conflict"/>
+    <bpmn:sequenceFlow id="A5" name="yes" sourceRef="GW_Conflict" targetRef="Call_Adjudication"/>
+    <bpmn:sequenceFlow id="A6" name="no" sourceRef="GW_Conflict" targetRef="End_NoConflict"/>
+    <bpmn:sequenceFlow id="A8" sourceRef="Call_Adjudication" targetRef="GW_Human"/>
+    <bpmn:sequenceFlow id="A9" name="yes" sourceRef="GW_Human" targetRef="Task_HumanRuling"/>
+    <bpmn:sequenceFlow id="A10" name="no" sourceRef="GW_Human" targetRef="A_RecordEntry"/>
+    <bpmn:sequenceFlow id="A11" sourceRef="Task_HumanRuling" targetRef="A_RecordEntry"/>
+    <bpmn:sequenceFlow id="A12" sourceRef="A_RecordEntry" targetRef="Task_Annotate"/>
+    <bpmn:sequenceFlow id="A13" sourceRef="Task_Annotate" targetRef="End_Annotated"/>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="Diagram_KgToolAdjudication">
+    <bpmndi:BPMNPlane id="Plane_KgToolAdjudication" bpmnElement="Process_KgToolAdjudication">
+      <bpmndi:BPMNShape id="S_Lane_WhoIris" bpmnElement="Lane_WhoIris" isHorizontal="true"><dc:Bounds x="160" y="60" width="1379" height="365"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Lane_Reviewer" bpmnElement="Lane_Reviewer" isHorizontal="true"><dc:Bounds x="160" y="425" width="1379" height="195"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Start_Compare" bpmnElement="Start_Compare"><dc:Bounds x="242" y="139.5" width="36" height="36"/><bpmndi:BPMNLabel><dc:Bounds x="215" y="181.5" width="90" height="40"/></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Task_Project" bpmnElement="Task_Project"><dc:Bounds x="316" y="97.5" width="120" height="120"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Task_Match" bpmnElement="Task_Match"><dc:Bounds x="461" y="97.5" width="120" height="120"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Task_Coverage" bpmnElement="Task_Coverage"><dc:Bounds x="606" y="97.5" width="120" height="120"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_GW_Conflict" bpmnElement="GW_Conflict" isMarkerVisible="true"><dc:Bounds x="771.5" y="132.5" width="50" height="50"/><bpmndi:BPMNLabel><dc:Bounds x="736.5" y="86.5" width="120" height="40"/></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_End_NoConflict" bpmnElement="End_NoConflict"><dc:Bounds x="778.5" y="309.5" width="36" height="36"/><bpmndi:BPMNLabel><dc:Bounds x="751.5" y="351.5" width="90" height="40"/></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Call_Adjudication" bpmnElement="Call_Adjudication"><dc:Bounds x="867" y="97.5" width="120" height="120"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_GW_Human" bpmnElement="GW_Human" isMarkerVisible="true"><dc:Bounds x="1032.5" y="132.5" width="50" height="50"/><bpmndi:BPMNLabel><dc:Bounds x="997.5" y="86.5" width="120" height="40"/></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Task_HumanRuling" bpmnElement="Task_HumanRuling"><dc:Bounds x="997.5" y="462.5" width="120" height="120"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_A_RecordEntry" bpmnElement="A_RecordEntry"><dc:Bounds x="1128" y="97.5" width="120" height="120"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Task_Annotate" bpmnElement="Task_Annotate"><dc:Bounds x="1273" y="97.5" width="120" height="120"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_End_Annotated" bpmnElement="End_Annotated"><dc:Bounds x="1431" y="139.5" width="36" height="36"/><bpmndi:BPMNLabel><dc:Bounds x="1404" y="181.5" width="90" height="40"/></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="E_A1" bpmnElement="A1"><di:waypoint x="278" y="157.5"/><di:waypoint x="316" y="157.5"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_A2" bpmnElement="A2"><di:waypoint x="436" y="157.5"/><di:waypoint x="461" y="157.5"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_A3" bpmnElement="A3"><di:waypoint x="581" y="157.5"/><di:waypoint x="606" y="157.5"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_A4" bpmnElement="A4"><di:waypoint x="726" y="157.5"/><di:waypoint x="771.5" y="157.5"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_A5" bpmnElement="A5"><di:waypoint x="821.5" y="157.5"/><di:waypoint x="867" y="157.5"/><bpmndi:BPMNLabel><dc:Bounds x="827.5" y="133.5" width="24" height="18"/></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_A6" bpmnElement="A6"><di:waypoint x="796.5" y="182.5"/><di:waypoint x="796.5" y="309.5"/><bpmndi:BPMNLabel><dc:Bounds x="802.5" y="188.5" width="24" height="18"/></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_A8" bpmnElement="A8"><di:waypoint x="987" y="157.5"/><di:waypoint x="1032.5" y="157.5"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_A9" bpmnElement="A9"><di:waypoint x="1057.5" y="182.5"/><di:waypoint x="1057.5" y="462.5"/><bpmndi:BPMNLabel><dc:Bounds x="1063.5" y="188.5" width="24" height="18"/></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_A10" bpmnElement="A10"><di:waypoint x="1082.5" y="157.5"/><di:waypoint x="1128" y="157.5"/><bpmndi:BPMNLabel><dc:Bounds x="1088.5" y="133.5" width="24" height="18"/></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_A11" bpmnElement="A11"><di:waypoint x="1117.5" y="522.5"/><di:waypoint x="1188" y="522.5"/><di:waypoint x="1188" y="217.5"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_A12" bpmnElement="A12"><di:waypoint x="1248" y="157.5"/><di:waypoint x="1273" y="157.5"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_A13" bpmnElement="A13"><di:waypoint x="1393" y="157.5"/><di:waypoint x="1431" y="157.5"/></bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  who-iris — GuidelineKG nightly path, phase 2: verify and adjudicate the result.
+
+  Source of truth: this file; open it in any BPMN 2.0 tool. Prose and the
+  reasons behind every step: docs/optimus-kg-integration.md (sections 3c, 5, 7
+  and 9). A DESIGN, NOT YET RUNNING: steps whose skill is not written yet carry
+  cat-harness.processes:no-skill with the reason "Unbuilt: ...", naming the
+  skill the design assigns, so no reference dangles and nothing pretends to be
+  built.
+
+  The boundary the owner set: the Zitnik lab runs GuidelineKG (Reducto and
+  Azure OpenAI) on its own keys; who-iris holds no such key, publishes a work
+  order beside the signed CDN release, and verifies what the lab publishes
+  back before reading it.
+-->
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+                  xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+                  xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+                  xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+                  xmlns:bootstrap.processes="https://litlfred.github.io/bootstrap/v0/processes/ns/"
+                  xmlns:cat-harness.processes="https://litlfred.github.io/cat-harness/v0/processes/ns/"
+                  id="Definitions_OptimusKgNightlyIngest"
+                  targetNamespace="https://litlfred.github.io/folio-assistant/workflows">
+  <bpmn:import namespace="https://litlfred.github.io/bootstrap/v0/processes/ns/" location="https://litlfred.github.io/bootstrap/v0/processes/ns.jsonld" importType="http://www.w3.org/ns/json-ld"/>
+  <bpmn:resource id="guidelinekg-path" name="who-iris GuidelineKG path"/>
+  <bpmn:resource id="guidelinekg-release" name="GuidelineKG result release"/>
+  <bpmn:process id="Process_OptimusKgNightlyIngest" name="GuidelineKG nightly path: verify and adjudicate the result" isExecutable="false">
+    <bpmn:documentation>Verify the Zitnik lab's result release, project its claims through the crosswalk into their own graph partition, adjudicate them against the L1 KG, and only then advance the cursor and review the run. Called by Process_OptimusKgNightly; it ends as awaiting the lab or as ingested.</bpmn:documentation>
+    <bpmn:extensionElements><cat-harness.processes:policy enforcement="strict"/></bpmn:extensionElements>
+    <bpmn:laneSet id="LaneSet_OptimusKgNightlyIngest">
+      <bpmn:lane id="Lane_WhoIris" name="who-iris" partitionElementRef="guidelinekg-path">
+        <bpmn:documentation>who-iris's side of the GuidelineKG path: deterministic scripts beside scripts/iris-cdn/, and the agent that plans, reviews and opens beans. Holds no Reducto, OpenAI or Azure key.</bpmn:documentation>
+        <bpmn:flowNodeRef>Start_Ingest</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_VerifyResult</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>GW_ResultOk</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>End_Awaiting</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Crosswalk</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Call_Partition</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Call_Adjudicate</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_AdvanceCursor</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_Review</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>End_Ingested</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="Start_Ingest" name="Result to&#10;ingest"/>
+    <bpmn:task id="Task_VerifyResult" name="Verify the&#10;result release">
+      <bpmn:documentation>Unbuilt (skill optimus-kg-feed not written yet): Its digests, the pinned GuidelineKG commit, and that it names tonight's work order and CDN release. Once the lab signs its releases, also the signature under the lab's did:web.</bpmn:documentation>
+      <bpmn:extensionElements><cat-harness.processes:no-skill reason="Unbuilt: the skill optimus-kg-feed does not exist yet; it is proposed in docs/optimus-kg-integration.md section 9. Bind it with bootstrap.processes:skill once the skill is written."/></bpmn:extensionElements>
+      <bpmn:dataInputAssociation id="DIA_Task_VerifyResult_DSR_ResultRelease"><bpmn:sourceRef>DSR_ResultRelease</bpmn:sourceRef></bpmn:dataInputAssociation>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="GW_ResultOk" name="Result&#10;verified?"/>
+    <bpmn:endEvent id="End_Awaiting" name="Awaiting&#10;the lab">
+      <bpmn:documentation>awaiting-extractor, or a result release that did not verify. Not a failure; the cursor does not move, and the next night re-offers the same work.</bpmn:documentation>
+    </bpmn:endEvent>
+    <bpmn:task id="Task_Crosswalk" name="Project through&#10;the crosswalk">
+      <bpmn:documentation>Unbuilt (skill kg-crosswalk not written yet): Ground OptimusKG CURIEs to WHO schemes through their xrefs (MONDO to ICD-10 to ICD-11; DrugBank to ATC/INN; CTD MeSH to dc.subject.mesh), then silver to gold through crosswalk/optimus-l1-dak.json. An unmapped CURIE stays unknown; an edge without a locator is rejected.</bpmn:documentation>
+      <bpmn:extensionElements><cat-harness.processes:no-skill reason="Unbuilt: the skill kg-crosswalk does not exist yet; it is proposed in docs/optimus-kg-integration.md section 9. Bind it with bootstrap.processes:skill once the skill is written."/></bpmn:extensionElements>
+    </bpmn:task>
+    <bpmn:callActivity id="Call_Partition" name="Write the&#10;graph partition" calledElement="Process_NQuadsDistribution">
+      <bpmn:documentation>Gold claims to N-Quads in their own named-graph partition, graph/guidelinekg/&lt;handle&gt;, beside the existing partitions. The platform process, called, not copied.</bpmn:documentation>
+      <bpmn:extensionElements><bootstrap.processes:skill ref="iris-oxigraph"/><bootstrap.processes:skill ref="nquads-distribution"/></bpmn:extensionElements>
+    </bpmn:callActivity>
+    <bpmn:callActivity id="Call_Adjudicate" name="Adjudicate&#10;against the L1 KG" calledElement="Process_KgToolAdjudication">
+      <bpmn:documentation>Unbuilt (skill kg-tool-adjudication not written yet): For every document that also has an L1 KG, same language version on both sides. Both graphs stay; the derived graph records which graphs assert each claim and how far they agree.</bpmn:documentation>
+      <bpmn:extensionElements><cat-harness.processes:no-skill reason="Unbuilt: the skill kg-tool-adjudication does not exist yet; it is proposed in docs/optimus-kg-integration.md section 9, its process is drawn as processes/kg-tool-adjudication.bpmn. Bind it with bootstrap.processes:skill once the skill is written."/></bpmn:extensionElements>
+    </bpmn:callActivity>
+    <bpmn:task id="Task_AdvanceCursor" name="Advance&#10;the cursor">
+      <bpmn:documentation>Unbuilt (skill optimus-kg-feed not written yet): state/optimus-cursor.json: the release commit and tag-manifest digest this path finished. Only after a complete run.</bpmn:documentation>
+      <bpmn:extensionElements><cat-harness.processes:no-skill reason="Unbuilt: the skill optimus-kg-feed does not exist yet; it is proposed in docs/optimus-kg-integration.md section 9. Bind it with bootstrap.processes:skill once the skill is written."/></bpmn:extensionElements>
+    </bpmn:task>
+    <bpmn:task id="Task_Review" name="Review the&#10;run report">
+      <bpmn:documentation>Unbuilt (skill optimus-kg-feed not written yet): Open beans for anomalies: a claim yield far from the recent median, a jump in the adjudication rate, a spike of gate results that are unknown.</bpmn:documentation>
+      <bpmn:extensionElements><cat-harness.processes:no-skill reason="Unbuilt: the skill optimus-kg-feed does not exist yet; it is proposed in docs/optimus-kg-integration.md section 9. Bind it with bootstrap.processes:skill once the skill is written."/></bpmn:extensionElements>
+    </bpmn:task>
+    <bpmn:endEvent id="End_Ingested" name="Result ingested&#10;and reviewed"/>
+    <bpmn:sequenceFlow id="I1" sourceRef="Start_Ingest" targetRef="Task_VerifyResult"/>
+    <bpmn:sequenceFlow id="I2" sourceRef="Task_VerifyResult" targetRef="GW_ResultOk"/>
+    <bpmn:sequenceFlow id="I3" name="no" sourceRef="GW_ResultOk" targetRef="End_Awaiting"/>
+    <bpmn:sequenceFlow id="I4" name="yes" sourceRef="GW_ResultOk" targetRef="Task_Crosswalk"/>
+    <bpmn:sequenceFlow id="I5" sourceRef="Task_Crosswalk" targetRef="Call_Partition"/>
+    <bpmn:sequenceFlow id="I6" sourceRef="Call_Partition" targetRef="Call_Adjudicate"/>
+    <bpmn:sequenceFlow id="I7" sourceRef="Call_Adjudicate" targetRef="Task_AdvanceCursor"/>
+    <bpmn:sequenceFlow id="I8" sourceRef="Task_AdvanceCursor" targetRef="Task_Review"/>
+    <bpmn:sequenceFlow id="I9" sourceRef="Task_Review" targetRef="End_Ingested"/>
+    <bpmn:dataStoreReference id="DSR_ResultRelease" name="Result release (lab)" dataStoreRef="guidelinekg-release"><bpmn:documentation>Published by the lab in its own repositories: guideline_kg.jsonl plus a SHA-256 manifest naming the work order, the CDN release and the GuidelineKG commit. Trusted for now by the pinned commit and the digests; later signed under the lab's own did:web.</bpmn:documentation></bpmn:dataStoreReference>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="Diagram_OptimusKgNightlyIngest">
+    <bpmndi:BPMNPlane id="Plane_OptimusKgNightlyIngest" bpmnElement="Process_OptimusKgNightlyIngest">
+      <bpmndi:BPMNShape id="S_Lane_WhoIris" bpmnElement="Lane_WhoIris" isHorizontal="true"><dc:Bounds x="160" y="60" width="1330" height="365"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Start_Ingest" bpmnElement="Start_Ingest"><dc:Bounds x="242" y="139.5" width="36" height="36"/><bpmndi:BPMNLabel><dc:Bounds x="215" y="181.5" width="90" height="40"/></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Task_VerifyResult" bpmnElement="Task_VerifyResult"><dc:Bounds x="335" y="97.5" width="120" height="120"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_GW_ResultOk" bpmnElement="GW_ResultOk" isMarkerVisible="true"><dc:Bounds x="505" y="132.5" width="50" height="50"/><bpmndi:BPMNLabel><dc:Bounds x="470" y="86.5" width="120" height="40"/></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_End_Awaiting" bpmnElement="End_Awaiting"><dc:Bounds x="512" y="309.5" width="36" height="36"/><bpmndi:BPMNLabel><dc:Bounds x="485" y="351.5" width="90" height="40"/></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Task_Crosswalk" bpmnElement="Task_Crosswalk"><dc:Bounds x="605" y="97.5" width="120" height="120"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Call_Partition" bpmnElement="Call_Partition"><dc:Bounds x="755" y="97.5" width="120" height="120"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Call_Adjudicate" bpmnElement="Call_Adjudicate"><dc:Bounds x="905" y="97.5" width="120" height="120"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Task_AdvanceCursor" bpmnElement="Task_AdvanceCursor"><dc:Bounds x="1055" y="97.5" width="120" height="120"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_Task_Review" bpmnElement="Task_Review"><dc:Bounds x="1205" y="97.5" width="120" height="120"/></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_End_Ingested" bpmnElement="End_Ingested"><dc:Bounds x="1382" y="139.5" width="36" height="36"/><bpmndi:BPMNLabel><dc:Bounds x="1355" y="181.5" width="90" height="40"/></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="E_I1" bpmnElement="I1"><di:waypoint x="278" y="157.5"/><di:waypoint x="335" y="157.5"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_I2" bpmnElement="I2"><di:waypoint x="455" y="157.5"/><di:waypoint x="505" y="157.5"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_I3" bpmnElement="I3"><di:waypoint x="530" y="182.5"/><di:waypoint x="530" y="309.5"/><bpmndi:BPMNLabel><dc:Bounds x="536" y="188.5" width="24" height="18"/></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_I4" bpmnElement="I4"><di:waypoint x="555" y="157.5"/><di:waypoint x="605" y="157.5"/><bpmndi:BPMNLabel><dc:Bounds x="561" y="133.5" width="24" height="18"/></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_I5" bpmnElement="I5"><di:waypoint x="725" y="157.5"/><di:waypoint x="755" y="157.5"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_I6" bpmnElement="I6"><di:waypoint x="875" y="157.5"/><di:waypoint x="905" y="157.5"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_I7" bpmnElement="I7"><di:waypoint x="1025" y="157.5"/><di:waypoint x="1055" y="157.5"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_I8" bpmnElement="I8"><di:waypoint x="1175" y="157.5"/><di:waypoint x="1205" y="157.5"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="E_I9" bpmnElement="I9"><di:waypoint x="1325" y="157.5"/><di:waypoint x="1382" y="157.5"/></bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="S_DSR_ResultRelease" bpmnElement="DSR_ResultRelease"><dc:Bounds x="370" y="302.5" width="50" height="50"/><bpmndi:BPMNLabel><dc:Bounds x="335" y="356.5" width="120" height="36"/></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="E_DIA_Task_VerifyResult_DSR_ResultRelease" bpmnElement="DIA_Task_VerifyResult_DSR_ResultRelease"><di:waypoint x="395" y="302.5"/><di:waypoint x="395" y="217.5"/></bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

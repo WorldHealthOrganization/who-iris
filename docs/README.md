@@ -22,6 +22,8 @@ Part of [WHO IRIS](../README.md) 0.1.0, declared as `who-iris-docs`, holding `do
 | [`iris-cdn-signing-options.html`](iris-cdn-signing-options.html) | a file |  |
 | [`iris-cdn-signing-options.md`](iris-cdn-signing-options.md) | IRIS CDN Exporter: signing options |  |
 | [`kg-to-portal.html`](kg-to-portal.html) | a file |  |
+| [`optimus-kg-integration.html`](optimus-kg-integration.html) | a file |  |
+| [`optimus-kg-integration.md`](optimus-kg-integration.md) | A parallel GuidelineKG path for who-iris (Reducto + OptimusKG): design and integration options |  |
 | [`oxigraph-pipeline-requirements.html`](oxigraph-pipeline-requirements.html) | a file |  |
 | [`oxigraph-pipeline-requirements.md`](oxigraph-pipeline-requirements.md) | Oxigraph Static Pipeline & Search Requirements |  |
 | [`site-home.md`](site-home.md) | "WHO IRIS, catalogued by reference — an ingested copy, not WHO and not live." |  |
