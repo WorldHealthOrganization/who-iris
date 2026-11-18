@@ -855,6 +855,12 @@
     "zod/portfolio/ReposSourceSchema": {
       "$ref": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/portfolio/ReposSourceSchema.schema.json"
     },
+    "zod/publishing-profile/LayerPublishSchema": {
+      "$ref": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/publishing-profile/LayerPublishSchema.schema.json"
+    },
+    "zod/publishing-profile/PublishingProfileSchema": {
+      "$ref": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/publishing-profile/PublishingProfileSchema.schema.json"
+    },
     "zod/remote-mount/CommitShaSchema": {
       "$ref": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/remote-mount/CommitShaSchema.schema.json"
     },
@@ -881,6 +887,9 @@
     },
     "zod/remote-mount/RemoteMountsSchema": {
       "$ref": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/remote-mount/RemoteMountsSchema.schema.json"
+    },
+    "zod/remote-mount/SameOwnerNameSchema": {
+      "$ref": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/remote-mount/SameOwnerNameSchema.schema.json"
     },
     "zod/repo-full-name/RepoFullNameSchema": {
       "$ref": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/repo-full-name/RepoFullNameSchema.schema.json"
@@ -1473,11 +1482,26 @@
     "zod/user-story/UserStorySchema": {
       "$ref": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/user-story/UserStorySchema.schema.json"
     },
+    "zod/workshop/WorkshopCanvasFieldSchema": {
+      "$ref": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/workshop/WorkshopCanvasFieldSchema.schema.json"
+    },
+    "zod/workshop/WorkshopCanvasSchema": {
+      "$ref": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/workshop/WorkshopCanvasSchema.schema.json"
+    },
+    "zod/workshop/WorkshopCanvasSheetSchema": {
+      "$ref": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/workshop/WorkshopCanvasSheetSchema.schema.json"
+    },
     "zod/workshop/WorkshopLabSchema": {
       "$ref": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/workshop/WorkshopLabSchema.schema.json"
     },
     "zod/workshop/WorkshopLabStepSchema": {
       "$ref": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/workshop/WorkshopLabStepSchema.schema.json"
+    },
+    "zod/workshop/WorkshopMatrixCellSchema": {
+      "$ref": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/workshop/WorkshopMatrixCellSchema.schema.json"
+    },
+    "zod/workshop/WorkshopMatrixSchema": {
+      "$ref": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/workshop/WorkshopMatrixSchema.schema.json"
     },
     "zod/workshop/WorkshopModuleSchema": {
       "$ref": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/workshop/WorkshopModuleSchema.schema.json"
@@ -1488,11 +1512,23 @@
     "zod/workshop/WorkshopResourceSchema": {
       "$ref": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/workshop/WorkshopResourceSchema.schema.json"
     },
+    "zod/workshop/WorkshopScheduleSchema": {
+      "$ref": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/workshop/WorkshopScheduleSchema.schema.json"
+    },
+    "zod/workshop/WorkshopScheduleSlotSchema": {
+      "$ref": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/workshop/WorkshopScheduleSlotSchema.schema.json"
+    },
+    "zod/workshop/WorkshopScheduleTrackSchema": {
+      "$ref": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/workshop/WorkshopScheduleTrackSchema.schema.json"
+    },
     "zod/workshop/WorkshopSchema": {
       "$ref": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/workshop/WorkshopSchema.schema.json"
     },
     "zod/workshop/WorkshopSheetSchema": {
       "$ref": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/workshop/WorkshopSheetSchema.schema.json"
+    },
+    "zod/workshop/WorkshopSheetsSourceSchema": {
+      "$ref": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/workshop/WorkshopSheetsSourceSchema.schema.json"
     },
     "zod/workshop/WorkshopStepSchema": {
       "$ref": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/zod/workshop/WorkshopStepSchema.schema.json"

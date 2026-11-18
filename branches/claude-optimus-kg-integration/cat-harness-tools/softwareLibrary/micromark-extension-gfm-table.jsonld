@@ -1,0 +1,17 @@
+{
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness-tools/cat-harness-tools.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness-tools/softwareLibrary/micromark-extension-gfm-table.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness-tools/cat-harness-tools.jsonld",
+  "sameAs": "https://litlfred.github.io/folio-assistant/cat-harness-tools/softwareLibrary/micromark-extension-gfm-table.jsonld",
+  "@graph": [
+    {
+      "@id": "https://litlfred.github.io/folio-assistant/cat-harness-tools/softwareLibrary/micromark-extension-gfm-table",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/SoftwareLibrary",
+      "title": "micromark-extension-gfm-table@2.1.2",
+      "description": "The outside library micromark-extension-gfm-table 2.1.2, licensed MIT, as the layer's lockfile pins it.",
+      "sourceKind": "software-library",
+      "sourcePath": "libraries/micromark-extension-gfm-table.library.json",
+      "inSubgraph": "https://litlfred.github.io/folio-assistant/cat-harness-tools/directory/cat-harness-tools-libraries"
+    }
+  ]
+}

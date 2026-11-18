@@ -371,10 +371,10 @@
     "registry",
     "packages"
   ],
-  "sourceCommit": "https://github.com/WorldHealthOrganization/who-iris/commit/480d58ddd6bcffbe426f1f766bbaa8b610ce9e5d",
-  "sourceCommitSha": "480d58ddd6bcffbe426f1f766bbaa8b610ce9e5d",
-  "sourceTree": "48c4a5fc1682340a8f8360f6119af4434860dcca",
-  "sourceCommitAt": "2026-11-18T13:23:06+00:00",
+  "sourceCommit": "https://github.com/WorldHealthOrganization/who-iris/commit/a2fd09ce1c16714711c538ab6d946aa230fb7e9d",
+  "sourceCommitSha": "a2fd09ce1c16714711c538ab6d946aa230fb7e9d",
+  "sourceTree": "b5d99492d0770931ad85c4592c0674e716ec896f",
+  "sourceCommitAt": "2026-11-18T17:41:15+00:00",
   "sourceTreeDirty": true,
   "dependsOnUnavailable": "this instance declares no `canonicalUrl`, and §3.4's record is `{packageId, version, uri}` — `canonicalUrl` is what plays `uri`, so the record cannot be expressed rather than being withheld on purpose",
   "counts": {

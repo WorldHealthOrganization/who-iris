@@ -87,8 +87,8 @@
   "title": "Bootstrap",
   "description": "The graph an agent reads before it knows what this repository is.",
   "versionInfo": "0.1.1",
-  "generatedAtTime": "2026-11-18T13:28:12.686Z",
-  "wasDerivedFrom": "git:480d58ddd6bcffbe426f1f766bbaa8b610ce9e5d",
+  "generatedAtTime": "2026-11-18T17:46:41.245Z",
+  "wasDerivedFrom": "git:a2fd09ce1c16714711c538ab6d946aa230fb7e9d",
   "@graph": [
     {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/asset/agent-instructions",

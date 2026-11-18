@@ -164,7 +164,8 @@ s.onerror=function(){if(d)d.textContent='\u2014 build details unavailable';};
 </section>
 <section id="RemoteSourceSchema"><h3><code>RemoteSourceSchema</code></h3>
 <table class="fa-page-wide schema-fields"><thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr></thead><tbody>
-<tr><td><code>repository</code></td><td><code>string (pattern)</code></td><td>yes</td><td>A forge repository's full name, owner/name</td></tr>
+<tr><td><code>repository</code></td><td><code>string (pattern) | string</code></td><td>yes</td><td></td></tr>
+<tr><td><code>sameOwner</code></td><td><code>= true</code></td><td>no</td><td></td></tr>
 <tr><td><code>ref</code></td><td><code>string (pattern)</code></td><td>yes</td><td></td></tr>
 <tr><td><code>overrides</code></td><td><code>object</code></td><td>no</td><td></td></tr>
 <tr><td><code>hydrated</code></td><td><code>= true</code></td><td>no</td><td></td></tr>

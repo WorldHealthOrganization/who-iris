@@ -1,0 +1,41 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://worldhealthorganization.github.io/who-iris/branches/claude-optimus-kg-integration/en/cat-harness/harness/cat-harness/",
+  "url": "https://worldhealthorganization.github.io/who-iris/branches/claude-optimus-kg-integration/en/cat-harness/harness/cat-harness/",
+  "@type": "WebPage",
+  "name": "C@T Harness on WHO IRIS",
+  "about": {
+    "@id": "https://litlfred.github.io/cat-harness/",
+    "@type": "SoftwareSourceCode",
+    "identifier": "cat-harness",
+    "name": "C@T Harness",
+    "description": "computable adjudication and agentic test harness\n\ncaaat-harness\n\nca&at-harness\n\n.c&at-harness\n\n c@t-harness",
+    "version": "0.1.0",
+    "codeRepository": "https://github.com/litlfred/cat-harness",
+    "isBasedOn": [
+      {
+        "@id": "https://litlfred.github.io/bootstrap/"
+      }
+    ],
+    "additionalProperty": {
+      "@type": "PropertyValue",
+      "name": "pinnedCommit",
+      "value": "58d3f3eedf2fd1e38c36f81523936e635c782888"
+    },
+    "keywords": [
+      "docs"
+    ]
+  },
+  "isPartOf": {
+    "@id": "https://worldhealthorganization.github.io/who-iris/branches/claude-optimus-kg-integration/",
+    "name": "WHO IRIS"
+  },
+  "significantLink": [
+    "https://litlfred.github.io/folio-assistant/#harness-cat-harness",
+    "https://github.com/litlfred/cat-harness/tree/58d3f3eedf2fd1e38c36f81523936e635c782888",
+    "https://github.com/litlfred/cat-harness/blob/58d3f3eedf2fd1e38c36f81523936e635c782888/README.md",
+    "https://github.com/litlfred/cat-harness/blob/58d3f3eedf2fd1e38c36f81523936e635c782888/AGENTS.md"
+  ]
+}

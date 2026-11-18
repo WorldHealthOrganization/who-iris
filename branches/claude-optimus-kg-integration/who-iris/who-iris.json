@@ -371,10 +371,10 @@
     "registry",
     "packages"
   ],
-  "sourceCommit": "https://github.com/WorldHealthOrganization/who-iris/commit/480d58ddd6bcffbe426f1f766bbaa8b610ce9e5d",
-  "sourceCommitSha": "480d58ddd6bcffbe426f1f766bbaa8b610ce9e5d",
-  "sourceTree": "48c4a5fc1682340a8f8360f6119af4434860dcca",
-  "sourceCommitAt": "2026-11-18T13:23:06+00:00",
+  "sourceCommit": "https://github.com/WorldHealthOrganization/who-iris/commit/a2fd09ce1c16714711c538ab6d946aa230fb7e9d",
+  "sourceCommitSha": "a2fd09ce1c16714711c538ab6d946aa230fb7e9d",
+  "sourceTree": "b5d99492d0770931ad85c4592c0674e716ec896f",
+  "sourceCommitAt": "2026-11-18T17:41:15+00:00",
   "sourceTreeDirty": true,
   "dependsOnUnavailable": "this instance declares no `canonicalUrl`, and §3.4's record is `{packageId, version, uri}` — `canonicalUrl` is what plays `uri`, so the record cannot be expressed rather than being withheld on purpose",
   "counts": {
@@ -383,12 +383,16 @@
     "SequenceFlow": 91,
     "Lane": 16,
     "ProcessNode": 95,
+    "TranslationSource": 40,
     "GraphTypology": 19,
     "QaAttestation": 10,
+    "Voice": 3,
     "Role": 10,
     "Subgraph": 20,
+    "Theme": 3,
     "Asset": 2,
-    "Tool": 4
+    "Tool": 4,
+    "SoftwareLibrary": 5
   },
   "@graph": [
     {
@@ -3652,6 +3656,406 @@
       "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/process/Process_KgToolAdjudication/node/End_Annotated"
     },
     {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/ar/glossary/who-iris--who-terms.po",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "glossary/who-iris--who-terms (ar)",
+      "description": "The ar gettext catalogue of the strings glossary/who-iris--who-terms holds: what has been translated, and what is fuzzy.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/ar/glossary/who-iris--who-terms.po",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/ar/glossary/who-iris--who-terms.po"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/ar/glossary/who-iris--who-terms.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "glossary/who-iris--who-terms (ar, template)",
+      "description": "The gettext template of the strings glossary/who-iris--who-terms holds, extracted for the ar locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/ar/glossary/who-iris--who-terms.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/ar/glossary/who-iris--who-terms.pot"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/ar/processes/iris-cdn-initial-load.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "processes/iris-cdn-initial-load (ar, template)",
+      "description": "The gettext template of the strings processes/iris-cdn-initial-load holds, extracted for the ar locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/ar/processes/iris-cdn-initial-load.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/ar/processes/iris-cdn-initial-load.pot"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/ar/processes/iris-cdn-nightly.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "processes/iris-cdn-nightly (ar, template)",
+      "description": "The gettext template of the strings processes/iris-cdn-nightly holds, extracted for the ar locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/ar/processes/iris-cdn-nightly.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/ar/processes/iris-cdn-nightly.pot"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/ar/processes/iris-cdn-reconcile.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "processes/iris-cdn-reconcile (ar, template)",
+      "description": "The gettext template of the strings processes/iris-cdn-reconcile holds, extracted for the ar locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/ar/processes/iris-cdn-reconcile.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/ar/processes/iris-cdn-reconcile.pot"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/ar/processes/iris-cdn-sign-publish.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "processes/iris-cdn-sign-publish (ar, template)",
+      "description": "The gettext template of the strings processes/iris-cdn-sign-publish holds, extracted for the ar locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/ar/processes/iris-cdn-sign-publish.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/ar/processes/iris-cdn-sign-publish.pot"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/ar/site/iris-site.po",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "site/iris-site (ar)",
+      "description": "The ar gettext catalogue of the strings site/iris-site holds: what has been translated, and what is fuzzy.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/ar/site/iris-site.po",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/ar/site/iris-site.po"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/ar/site/iris-site.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "site/iris-site (ar, template)",
+      "description": "The gettext template of the strings site/iris-site holds, extracted for the ar locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/ar/site/iris-site.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/ar/site/iris-site.pot"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/es/glossary/who-iris--who-terms.po",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "glossary/who-iris--who-terms (es)",
+      "description": "The es gettext catalogue of the strings glossary/who-iris--who-terms holds: what has been translated, and what is fuzzy.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/es/glossary/who-iris--who-terms.po",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/es/glossary/who-iris--who-terms.po"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/es/glossary/who-iris--who-terms.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "glossary/who-iris--who-terms (es, template)",
+      "description": "The gettext template of the strings glossary/who-iris--who-terms holds, extracted for the es locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/es/glossary/who-iris--who-terms.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/es/glossary/who-iris--who-terms.pot"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/es/processes/iris-cdn-initial-load.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "processes/iris-cdn-initial-load (es, template)",
+      "description": "The gettext template of the strings processes/iris-cdn-initial-load holds, extracted for the es locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/es/processes/iris-cdn-initial-load.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/es/processes/iris-cdn-initial-load.pot"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/es/processes/iris-cdn-nightly.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "processes/iris-cdn-nightly (es, template)",
+      "description": "The gettext template of the strings processes/iris-cdn-nightly holds, extracted for the es locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/es/processes/iris-cdn-nightly.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/es/processes/iris-cdn-nightly.pot"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/es/processes/iris-cdn-reconcile.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "processes/iris-cdn-reconcile (es, template)",
+      "description": "The gettext template of the strings processes/iris-cdn-reconcile holds, extracted for the es locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/es/processes/iris-cdn-reconcile.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/es/processes/iris-cdn-reconcile.pot"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/es/processes/iris-cdn-sign-publish.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "processes/iris-cdn-sign-publish (es, template)",
+      "description": "The gettext template of the strings processes/iris-cdn-sign-publish holds, extracted for the es locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/es/processes/iris-cdn-sign-publish.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/es/processes/iris-cdn-sign-publish.pot"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/es/site/iris-site.po",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "site/iris-site (es)",
+      "description": "The es gettext catalogue of the strings site/iris-site holds: what has been translated, and what is fuzzy.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/es/site/iris-site.po",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/es/site/iris-site.po"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/es/site/iris-site.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "site/iris-site (es, template)",
+      "description": "The gettext template of the strings site/iris-site holds, extracted for the es locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/es/site/iris-site.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/es/site/iris-site.pot"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/fr/glossary/who-iris--who-terms.po",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "glossary/who-iris--who-terms (fr)",
+      "description": "The fr gettext catalogue of the strings glossary/who-iris--who-terms holds: what has been translated, and what is fuzzy.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/fr/glossary/who-iris--who-terms.po",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/fr/glossary/who-iris--who-terms.po"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/fr/glossary/who-iris--who-terms.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "glossary/who-iris--who-terms (fr, template)",
+      "description": "The gettext template of the strings glossary/who-iris--who-terms holds, extracted for the fr locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/fr/glossary/who-iris--who-terms.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/fr/glossary/who-iris--who-terms.pot"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/fr/processes/iris-cdn-initial-load.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "processes/iris-cdn-initial-load (fr, template)",
+      "description": "The gettext template of the strings processes/iris-cdn-initial-load holds, extracted for the fr locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/fr/processes/iris-cdn-initial-load.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/fr/processes/iris-cdn-initial-load.pot"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/fr/processes/iris-cdn-nightly.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "processes/iris-cdn-nightly (fr, template)",
+      "description": "The gettext template of the strings processes/iris-cdn-nightly holds, extracted for the fr locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/fr/processes/iris-cdn-nightly.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/fr/processes/iris-cdn-nightly.pot"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/fr/processes/iris-cdn-reconcile.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "processes/iris-cdn-reconcile (fr, template)",
+      "description": "The gettext template of the strings processes/iris-cdn-reconcile holds, extracted for the fr locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/fr/processes/iris-cdn-reconcile.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/fr/processes/iris-cdn-reconcile.pot"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/fr/processes/iris-cdn-sign-publish.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "processes/iris-cdn-sign-publish (fr, template)",
+      "description": "The gettext template of the strings processes/iris-cdn-sign-publish holds, extracted for the fr locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/fr/processes/iris-cdn-sign-publish.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/fr/processes/iris-cdn-sign-publish.pot"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/fr/site/iris-site.po",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "site/iris-site (fr)",
+      "description": "The fr gettext catalogue of the strings site/iris-site holds: what has been translated, and what is fuzzy.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/fr/site/iris-site.po",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/fr/site/iris-site.po"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/fr/site/iris-site.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "site/iris-site (fr, template)",
+      "description": "The gettext template of the strings site/iris-site holds, extracted for the fr locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/fr/site/iris-site.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/fr/site/iris-site.pot"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/ru/glossary/who-iris--who-terms.po",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "glossary/who-iris--who-terms (ru)",
+      "description": "The ru gettext catalogue of the strings glossary/who-iris--who-terms holds: what has been translated, and what is fuzzy.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/ru/glossary/who-iris--who-terms.po",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/ru/glossary/who-iris--who-terms.po"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/ru/glossary/who-iris--who-terms.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "glossary/who-iris--who-terms (ru, template)",
+      "description": "The gettext template of the strings glossary/who-iris--who-terms holds, extracted for the ru locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/ru/glossary/who-iris--who-terms.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/ru/glossary/who-iris--who-terms.pot"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/ru/processes/iris-cdn-initial-load.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "processes/iris-cdn-initial-load (ru, template)",
+      "description": "The gettext template of the strings processes/iris-cdn-initial-load holds, extracted for the ru locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/ru/processes/iris-cdn-initial-load.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/ru/processes/iris-cdn-initial-load.pot"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/ru/processes/iris-cdn-nightly.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "processes/iris-cdn-nightly (ru, template)",
+      "description": "The gettext template of the strings processes/iris-cdn-nightly holds, extracted for the ru locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/ru/processes/iris-cdn-nightly.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/ru/processes/iris-cdn-nightly.pot"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/ru/processes/iris-cdn-reconcile.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "processes/iris-cdn-reconcile (ru, template)",
+      "description": "The gettext template of the strings processes/iris-cdn-reconcile holds, extracted for the ru locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/ru/processes/iris-cdn-reconcile.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/ru/processes/iris-cdn-reconcile.pot"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/ru/processes/iris-cdn-sign-publish.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "processes/iris-cdn-sign-publish (ru, template)",
+      "description": "The gettext template of the strings processes/iris-cdn-sign-publish holds, extracted for the ru locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/ru/processes/iris-cdn-sign-publish.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/ru/processes/iris-cdn-sign-publish.pot"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/ru/site/iris-site.po",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "site/iris-site (ru)",
+      "description": "The ru gettext catalogue of the strings site/iris-site holds: what has been translated, and what is fuzzy.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/ru/site/iris-site.po",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/ru/site/iris-site.po"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/ru/site/iris-site.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "site/iris-site (ru, template)",
+      "description": "The gettext template of the strings site/iris-site holds, extracted for the ru locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/ru/site/iris-site.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/ru/site/iris-site.pot"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/zh/glossary/who-iris--who-terms.po",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "glossary/who-iris--who-terms (zh)",
+      "description": "The zh gettext catalogue of the strings glossary/who-iris--who-terms holds: what has been translated, and what is fuzzy.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/zh/glossary/who-iris--who-terms.po",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/zh/glossary/who-iris--who-terms.po"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/zh/glossary/who-iris--who-terms.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "glossary/who-iris--who-terms (zh, template)",
+      "description": "The gettext template of the strings glossary/who-iris--who-terms holds, extracted for the zh locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/zh/glossary/who-iris--who-terms.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/zh/glossary/who-iris--who-terms.pot"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/zh/processes/iris-cdn-initial-load.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "processes/iris-cdn-initial-load (zh, template)",
+      "description": "The gettext template of the strings processes/iris-cdn-initial-load holds, extracted for the zh locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/zh/processes/iris-cdn-initial-load.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/zh/processes/iris-cdn-initial-load.pot"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/zh/processes/iris-cdn-nightly.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "processes/iris-cdn-nightly (zh, template)",
+      "description": "The gettext template of the strings processes/iris-cdn-nightly holds, extracted for the zh locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/zh/processes/iris-cdn-nightly.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/zh/processes/iris-cdn-nightly.pot"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/zh/processes/iris-cdn-reconcile.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "processes/iris-cdn-reconcile (zh, template)",
+      "description": "The gettext template of the strings processes/iris-cdn-reconcile holds, extracted for the zh locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/zh/processes/iris-cdn-reconcile.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/zh/processes/iris-cdn-reconcile.pot"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/zh/processes/iris-cdn-sign-publish.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "processes/iris-cdn-sign-publish (zh, template)",
+      "description": "The gettext template of the strings processes/iris-cdn-sign-publish holds, extracted for the zh locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/zh/processes/iris-cdn-sign-publish.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/zh/processes/iris-cdn-sign-publish.pot"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/zh/site/iris-site.po",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "site/iris-site (zh)",
+      "description": "The zh gettext catalogue of the strings site/iris-site holds: what has been translated, and what is fuzzy.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/zh/site/iris-site.po",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/zh/site/iris-site.po"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/translationSource/zh/site/iris-site.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "site/iris-site (zh, template)",
+      "description": "The gettext template of the strings site/iris-site holds, extracted for the zh locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/zh/site/iris-site.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-translations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/translationSource/zh/site/iris-site.pot"
+    },
+    {
       "@id": "https://litlfred.github.io/cat-harness/v0/ns/graphTypology/tools",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/GraphTypology",
       "name": "tools",
@@ -3883,6 +4287,36 @@
       "sourcePath": "test/attestations/translation-qa/site/iris-site.po.zh.attestations.json",
       "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/attestations",
       "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/attestation/translation-qa/site/iris-site.po.zh"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/voice/who-editorial",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/Voice",
+      "title": "WHO editorial style",
+      "description": "The house editorial style of the World Health Organization: spelling, capitalization, eponym form, reference layout and non-discriminatory language, as set out in the WHO Editorial Style Manual. Derived rule by rule from the ingested manual; every rule cites the page it was read from.",
+      "sourceKind": "voices",
+      "sourcePath": "skills/voices/who-editorial/voice.json",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-skills",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/voice/who-editorial"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/voice/who-guideline-development",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/Voice",
+      "title": "WHO guideline development",
+      "description": "How a WHO recommendation is worded and what must travel with it: strength, certainty, justification, remarks and a link to the evidence. Derived from the WHO handbook for guideline development, 2nd edition. This voice governs the language of normative statements, not the process that produces them — the process is the handbook's subject and belongs in a workflow, not a style rule.",
+      "sourceKind": "voices",
+      "sourcePath": "skills/voices/who-guideline-development/voice.json",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-skills",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/voice/who-guideline-development"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/voice/who-publication-design",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/Voice",
+      "title": "WHO publication design (Western Pacific Region)",
+      "description": "The visual conventions around the prose rather than the prose itself: logo use, palette, typography, pagination and figure accessibility, as set out in the WHO Western Pacific Region publication and information products style guide. This is the one voice whose rules mostly do not touch a block's text, which is why it is a separate voice rather than more rules on who-editorial — a folio can want WHO's editorial register without WPRO's brand.",
+      "sourceKind": "voices",
+      "sourcePath": "skills/voices/who-publication-design/voice.json",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-skills",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/voice/who-publication-design"
     },
     {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/role/iris-cdn-owner",
@@ -4407,8 +4841,39 @@
         "https://litlfred.github.io/cat-harness/v0/ns/graphTypology/health"
       ],
       "description": "Repository health reports for THIS repository: the one `health-report/v1` document `bun run cat-harness-tools/test/health/run.ts --instance <this instance>` writes. Each repository the separation made is its own clone, with its own size, publish branch, branches and stores, so each carries its own report (owner, 2026-10-10: \"All repos need health check\"). The graph typology is cat-harness's; its `health` entry says what separates a health report (about the repository) from a `qa` verdict (about an artefact).",
+      "fileCount": 0,
       "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/health",
       "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/directory/health"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/theme/iris-web",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/Theme",
+      "title": "IRIS",
+      "description": "The WHO IRIS repository's own web theme, read off the captured DSpace stylesheet.",
+      "sourceKind": "themes",
+      "sourcePath": "themes/themes.ts",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-themes",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/theme/iris-web"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/theme/who-wpro-publication",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/Theme",
+      "title": "WHO Western Pacific publications",
+      "description": "The WPRO publication style, read off the style guide's own pages 6, 7, 12, 14 and 18.",
+      "sourceKind": "themes",
+      "sourcePath": "themes/themes.ts",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-themes",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/theme/who-wpro-publication"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/theme/iris-sticky",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/Theme",
+      "title": "IRIS note",
+      "description": "The IRIS palette on a sticky note — derived from iris-web, itself measured from the captured DSpace stylesheet.",
+      "sourceKind": "themes",
+      "sourcePath": "themes/themes.ts",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-themes",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/theme/iris-sticky"
     },
     {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/asset/agent-instructions",
@@ -4638,6 +5103,56 @@
         "https://litlfred.github.io/folio-assistant/cat-harness/skill/translation-manager"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/tools/translation-qa-prune.jsonld"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/softwareLibrary/jsonld",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/SoftwareLibrary",
+      "title": "jsonld@8.3.3",
+      "description": "The outside library jsonld 8.3.3, licensed BSD-3-Clause, as the layer's lockfile pins it.",
+      "sourceKind": "software-library",
+      "sourcePath": "libraries/jsonld.library.json",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-libraries",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/softwareLibrary/jsonld"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/softwareLibrary/oxigraph",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/SoftwareLibrary",
+      "title": "oxigraph@0.5.13",
+      "description": "The outside library oxigraph 0.5.13, licensed MIT OR Apache-2.0, as the layer's lockfile pins it.",
+      "sourceKind": "software-library",
+      "sourcePath": "libraries/oxigraph.library.json",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-libraries",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/softwareLibrary/oxigraph"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/softwareLibrary/remark-gfm",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/SoftwareLibrary",
+      "title": "remark-gfm@4.0.1",
+      "description": "The outside library remark-gfm 4.0.1, licensed MIT, as the layer's lockfile pins it.",
+      "sourceKind": "software-library",
+      "sourcePath": "libraries/remark-gfm.library.json",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-libraries",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/softwareLibrary/remark-gfm"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/softwareLibrary/remark-html",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/SoftwareLibrary",
+      "title": "remark-html@16.0.1",
+      "description": "The outside library remark-html 16.0.1, licensed MIT, as the layer's lockfile pins it.",
+      "sourceKind": "software-library",
+      "sourcePath": "libraries/remark-html.library.json",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-libraries",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/softwareLibrary/remark-html"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/softwareLibrary/remark",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/SoftwareLibrary",
+      "title": "remark@15.0.1",
+      "description": "The outside library remark 15.0.1, licensed MIT, as the layer's lockfile pins it.",
+      "sourceKind": "software-library",
+      "sourcePath": "libraries/remark.library.json",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-libraries",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/softwareLibrary/remark"
     }
   ]
 }

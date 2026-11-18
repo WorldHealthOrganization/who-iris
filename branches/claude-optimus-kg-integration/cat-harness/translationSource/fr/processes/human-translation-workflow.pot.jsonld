@@ -1,0 +1,17 @@
+{
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/translationSource/fr/processes/human-translation-workflow.pot.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/cat-harness.jsonld",
+  "@graph": [
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/translationSource/fr/processes/human-translation-workflow.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "processes/human-translation-workflow (fr, template)",
+      "description": "The gettext template of the strings processes/human-translation-workflow holds, extracted for the fr locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/fr/processes/human-translation-workflow.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/translation-sources",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/translationSource/fr/processes/human-translation-workflow.pot"
+    }
+  ]
+}

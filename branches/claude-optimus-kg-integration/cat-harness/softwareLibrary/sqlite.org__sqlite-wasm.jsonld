@@ -1,0 +1,17 @@
+{
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/softwareLibrary/sqlite.org__sqlite-wasm.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/cat-harness.jsonld",
+  "@graph": [
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/softwareLibrary/sqlite.org__sqlite-wasm",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/SoftwareLibrary",
+      "title": "@sqlite.org/sqlite-wasm@3.53.4-build2",
+      "description": "The outside library @sqlite.org/sqlite-wasm 3.53.4-build2 (a dev dependency), licensed Apache-2.0, as the layer's lockfile pins it.",
+      "sourceKind": "software-library",
+      "sourcePath": "libraries/sqlite.org__sqlite-wasm.library.json",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/cat-harness-libraries",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/softwareLibrary/sqlite.org__sqlite-wasm"
+    }
+  ]
+}

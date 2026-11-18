@@ -1,0 +1,17 @@
+{
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/translationSource/es/processes/mount-dependency.pot.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/cat-harness.jsonld",
+  "@graph": [
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/translationSource/es/processes/mount-dependency.pot",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/TranslationSource",
+      "title": "processes/mount-dependency (es, template)",
+      "description": "The gettext template of the strings processes/mount-dependency holds, extracted for the es locale: what can be translated.",
+      "sourceKind": "translation-sources",
+      "sourcePath": "translations/es/processes/mount-dependency.pot",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/translation-sources",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/translationSource/es/processes/mount-dependency.pot"
+    }
+  ]
+}

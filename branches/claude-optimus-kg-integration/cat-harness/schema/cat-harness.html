@@ -262,7 +262,8 @@ s.onerror=function(){if(d)d.textContent='\u2014 build details unavailable';};
 <tr><td><code>mountDefaults.whole</code></td><td><code>= true</code></td><td>no</td><td></td></tr>
 <tr><td><code>remoteMounts</code></td><td><code>array of object</code></td><td>no</td><td></td></tr>
 <tr><td><code>remoteMounts[].harness</code></td><td><code>string (pattern)</code></td><td>yes</td><td></td></tr>
-<tr><td><code>remoteMounts[].repository</code></td><td><code>string (pattern)</code></td><td>yes</td><td>A forge repository's full name, owner/name</td></tr>
+<tr><td><code>remoteMounts[].repository</code></td><td><code>string (pattern) | string</code></td><td>yes</td><td></td></tr>
+<tr><td><code>remoteMounts[].sameOwner</code></td><td><code>= true</code></td><td>no</td><td></td></tr>
 <tr><td><code>remoteMounts[].ref</code></td><td><code>string (pattern)</code></td><td>yes</td><td></td></tr>
 <tr><td><code>remoteMounts[].overrides</code></td><td><code>object</code></td><td>no</td><td></td></tr>
 <tr><td><code>remoteMounts[].hydrated</code></td><td><code>= true</code></td><td>no</td><td></td></tr>
