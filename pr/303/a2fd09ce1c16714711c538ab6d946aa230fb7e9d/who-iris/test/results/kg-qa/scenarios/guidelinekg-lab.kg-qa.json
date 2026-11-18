@@ -1,0 +1,59 @@
+{
+  "$schema": "kg-qa/v1",
+  "subject": {
+    "kind": "role",
+    "id": "guidelinekg-lab",
+    "path": "scenarios/roles.json"
+  },
+  "source_hash": "sha256:73f81107f42b1c3e84ce573ff8e06f4ce8a306ffd10f09f592eced3830120e52",
+  "criteria": {
+    "role-skills-resolve": {
+      "result": "pass",
+      "findings": []
+    },
+    "role-inherits-resolves": {
+      "result": "n/a",
+      "findings": []
+    },
+    "role-binds-a-lane": {
+      "result": "pass",
+      "findings": []
+    },
+    "mechanical-role-untested": {
+      "result": "fail",
+      "findings": [
+        {
+          "where": "guidelinekg-lab",
+          "detail": "role \"guidelinekg-lab\" is played only by external actors and lists no skill — it has no contract to test. Give it the skills the diagrams need of it, each naming its tests in `tested-by:`."
+        }
+      ]
+    },
+    "role-has-persona": {
+      "result": "n/a",
+      "findings": []
+    },
+    "role-has-story": {
+      "result": "n/a",
+      "findings": []
+    },
+    "role-has-actor": {
+      "result": "fail",
+      "findings": [
+        {
+          "where": "guidelinekg-lab",
+          "detail": "no declared actor lists role \"guidelinekg-lab\" as one it can take on."
+        }
+      ]
+    },
+    "actor-kind-fits-role": {
+      "result": "pass",
+      "findings": []
+    }
+  },
+  "totals": {
+    "pass": 3,
+    "fail": 2,
+    "n/a": 3,
+    "unknown": 0
+  }
+}

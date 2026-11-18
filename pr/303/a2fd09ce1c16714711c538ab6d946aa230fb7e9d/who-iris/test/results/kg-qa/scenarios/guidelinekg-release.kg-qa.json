@@ -1,0 +1,64 @@
+{
+  "$schema": "kg-qa/v1",
+  "subject": {
+    "kind": "role",
+    "id": "guidelinekg-release",
+    "path": "scenarios/roles.json"
+  },
+  "source_hash": "sha256:73f81107f42b1c3e84ce573ff8e06f4ce8a306ffd10f09f592eced3830120e52",
+  "criteria": {
+    "role-skills-resolve": {
+      "result": "pass",
+      "findings": []
+    },
+    "role-inherits-resolves": {
+      "result": "n/a",
+      "findings": []
+    },
+    "role-binds-a-lane": {
+      "result": "fail",
+      "findings": [
+        {
+          "where": "guidelinekg-release",
+          "detail": "role \"guidelinekg-release\" is named by no lane's partitionElementRef (or legacy <bootstrap.processes:role ref>) in any diagram — nothing can enter it. Either a lane lost its binding, or the role is dead."
+        }
+      ]
+    },
+    "mechanical-role-untested": {
+      "result": "fail",
+      "findings": [
+        {
+          "where": "guidelinekg-release",
+          "detail": "role \"guidelinekg-release\" is played only by external actors and lists no skill — it has no contract to test. Give it the skills the diagrams need of it, each naming its tests in `tested-by:`."
+        }
+      ]
+    },
+    "role-has-persona": {
+      "result": "n/a",
+      "findings": []
+    },
+    "role-has-story": {
+      "result": "n/a",
+      "findings": []
+    },
+    "role-has-actor": {
+      "result": "fail",
+      "findings": [
+        {
+          "where": "guidelinekg-release",
+          "detail": "no declared actor lists role \"guidelinekg-release\" as one it can take on."
+        }
+      ]
+    },
+    "actor-kind-fits-role": {
+      "result": "pass",
+      "findings": []
+    }
+  },
+  "totals": {
+    "pass": 2,
+    "fail": 3,
+    "n/a": 3,
+    "unknown": 0
+  }
+}
