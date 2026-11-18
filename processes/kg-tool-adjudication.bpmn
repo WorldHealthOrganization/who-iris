@@ -71,7 +71,7 @@
     <bpmn:endEvent id="End_NoConflict" name="Agreement and&#10;coverage recorded"/>
     <bpmn:callActivity id="Call_Adjudication" name="Adjudicate&#10;X against Y" calledElement="Process_Adjudication">
       <bpmn:documentation>Once per claim in conflict. The adjudicator sees the source passage and the two claims anonymised as X and Y, never which tool made which; it uses no tools and says so (tools_used). Recommendation-class claims are all ruled on; other types are sampled (stratified by node type, sample size from a power analysis).</bpmn:documentation>
-      <bpmn:extensionElements><bootstrap.processes:skill ref="adjudication"/><bootstrap.processes:skill ref="untainted-verification"/><cat-harness.processes:adjudication codes="x-right y-right both-wrong both-defensible undecidable"/><cat-harness.processes:fulfilment kinds="agent person" reason="An untainted agent rules first; a ruling is a judgement, never a merge rule, so no system or external actor may take this step."/></bpmn:extensionElements>
+      <bpmn:extensionElements><bootstrap.processes:skill ref="adjudication"/><bootstrap.processes:skill ref="untainted-verification"/><cat-harness.processes:adjudication codes="x-right y-right both-wrong both-defensible undecidable" list="adjudication-kg-tool"/><cat-harness.processes:fulfilment kinds="agent person" reason="An untainted agent rules first; a ruling is a judgement, never a merge rule, so no system or external actor may take this step."/></bpmn:extensionElements>
     </bpmn:callActivity>
     <bpmn:exclusiveGateway id="GW_Human" name="Human ruling&#10;required?">
       <bpmn:documentation>Yes for every recommendation-class claim, any claim about a contraindication, and every undecidable.</bpmn:documentation>

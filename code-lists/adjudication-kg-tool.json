@@ -1,0 +1,37 @@
+{
+  "$schema": "folio-code-list/v1",
+  "id": "adjudication-kg-tool",
+  "title": "KG extractor disagreement outcomes",
+  "description": "The answers an untainted adjudicator may give when two KG extractors (GuidelineKG and the L1 KG path) assert different claims from the same passage of the same language version of a publication. Shown claims X and Y, never which tool made which. A ruling annotates the derived graph; neither source graph is changed.",
+  "source": {
+    "href": "https://github.com/WorldHealthOrganization/who-iris/pull/303",
+    "note": "docs/optimus-kg-integration.md section 7, Outcomes; the owner's decision that both graphs stay present and adjudication annotates rather than deletes (2026-11-17)"
+  },
+  "codes": [
+    {
+      "code": "x-right",
+      "label": "X is supported",
+      "definition": "The passage supports claim X and not claim Y: X is annotated adjudicated, Y not-supported, with the ruling. An author can still select either."
+    },
+    {
+      "code": "y-right",
+      "label": "Y is supported",
+      "definition": "The passage supports claim Y and not claim X: Y is annotated adjudicated, X not-supported, with the ruling. An author can still select either."
+    },
+    {
+      "code": "both-wrong",
+      "label": "Neither is supported",
+      "definition": "The passage supports neither claim: both are annotated not-supported; a bean opens if it repeats for one tool."
+    },
+    {
+      "code": "both-defensible",
+      "label": "Both readings hold",
+      "definition": "The text supports two readings: both claims are kept, and the ambiguity is a finding for the L1 editor."
+    },
+    {
+      "code": "undecidable",
+      "label": "Not decidable from the passage",
+      "definition": "The adjudicator cannot rule from the passage it was shown: the claim goes to the human reviewer lane."
+    }
+  ]
+}
