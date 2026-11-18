@@ -83,7 +83,7 @@
       "source": {
         "remote": {
           "repository": "litlfred/cat-harness-tools",
-          "ref": "2d30ca6540e2587768323620735f4cfe90b57efc",
+          "ref": "81a12f4f959ab599b069e9bfbbf245e691d9f972",
           "overrides": {
             "cat-harness-tools": {
               "whole": true
@@ -95,9 +95,9 @@
           "trust": {
             "consent": {
               "by": "litlfred",
-              "on": "2026-11-15",
-              "ref": "2d30ca6540e2587768323620735f4cfe90b57efc",
-              "evidence": "owner litlfred, 2026-11-15 17:50Z, decision card 'Re-pin who-iris to current mains, merge on green and publish?' option A 'Re-pin, merge on green, publish' (project thread cmsg_017WNUkNK8kdDziPK58Pv6G92pvwMqVLKEkd1j4fMabEkn); brings cat-harness-tools#2301/#2314 and core#814 (bibliography on the who-iris site, generic reference pages off); after the transfer to WorldHealthOrganization/who-iris, owner litlfred 2026-11-15 19:34Z decision card 'Merge who-iris#298 on the WHO repo once fully green?' option A 'Yes, merge on green, publish' (project thread cmsg_017WNUkNK8kdDziPK58Pv6G91VwoCHQoCrzUShiRb2CFC5); re-seeded to mains at push time (core#818)"
+              "on": "2026-11-18",
+              "ref": "81a12f4f959ab599b069e9bfbbf245e691d9f972",
+              "evidence": "owner litlfred, 2026-11-18 ~17:36Z, relayed by the merge manager session (session_01EucfRnjwjC8CPYgVnsFuHS) while preparing who-iris#303 for the owner's merge decision (owner card option B, prepare it now): re-pin cat-harness-tools to >= 81a12f4f (cat-harness-tools#2450, the mobile BPMN pan/resize fix) and regenerate the process pages"
             }
           }
         }
