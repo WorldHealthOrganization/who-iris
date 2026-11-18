@@ -6,9 +6,9 @@
   },
   "subject": {
     "kind": "repository",
-    "id": "litlfred/who-iris"
+    "id": "WorldHealthOrganization/who-iris"
   },
-  "updated_at": "2026-11-15T14:45:02.171Z",
+  "updated_at": "2026-11-18T17:38:45.542Z",
   "verdict": "unknown",
   "checks": [
     {
@@ -27,13 +27,13 @@
       "measurements": [
         {
           "metric": "staging-total-bytes",
-          "value": 535166155,
+          "value": 940197185,
           "unit": "bytes",
           "command": "git ls-tree -r -l FETCH_HEAD:branches/<slug>"
         },
         {
           "metric": "staging-preview-count",
-          "value": 3,
+          "value": 4,
           "unit": "count",
           "command": "git ls-tree -r -l FETCH_HEAD:branches/<slug>"
         }
@@ -84,7 +84,7 @@
       "measurements": [
         {
           "metric": "special-branch-bytes:qa-reports",
-          "value": 471683,
+          "value": 48001302,
           "unit": "bytes",
           "command": "git ls-remote --heads origin; git fetch --depth=1 + git ls-tree -r -l <tip> per budgeted branch (unique blobs summed)"
         },
@@ -138,7 +138,7 @@
       ],
       "measurements": [],
       "findings": [],
-      "reason": "no pages-serving observation could be read: qa-reports:main/da02cdfd0156b084043e98aa46589a90ea279067 — miss: main/b6403fad91f29efc855cd932b956b0e556e22e37 has nothing under health"
+      "reason": "no pages-serving observation could be read: qa-reports:main/1f5da03a9d8b475a7307355ad604609ddc6ebcdf — miss: main/bc7e22c3f6ee56bcf59b4f9a24edfa34df8ab707 has nothing under health"
     },
     {
       "id": "remote-mounts",
@@ -237,7 +237,7 @@
     },
     {
       "id": "staging-preview-orphans",
-      "state": "unknown",
+      "state": "finding",
       "summary": "A `STAGING/` preview that no liveness signal claims — no open pull request, no branch carrying unmerged work, no recent commit. Retained by policy, not by mistake: this is the list a person needs in order to decide, never a list to act on unasked.",
       "thresholds": [
         {
@@ -248,9 +248,43 @@
           "severity": "minor"
         }
       ],
-      "measurements": [],
-      "findings": [],
-      "reason": "1 preview(s) could not be judged: `branches/claude-iris-subset-ingest` — `claude/iris-subset-ingest`: this clone's history of `main` is truncated at a graft boundary, so \"not an ancestor of main\" cannot be told from \"the merge point was never fetched\". Re-run with the full history (`fetch-depth: 0`).. A signal that cannot be evaluated sends that preview to `unknown`, never to the orphan list. Determined but NOT reported this run: `branches/claude-iris-derived-kg`, `branches/claude-iris-referenced-library-links` — named here so the measurement is not lost, but nothing should be acted on while a signal is unreadable."
+      "measurements": [
+        {
+          "metric": "staging-orphan-count",
+          "value": 3,
+          "unit": "count",
+          "command": "git ls-tree -r -l FETCH_HEAD:branches/<slug>"
+        },
+        {
+          "metric": "staging-orphan-bytes",
+          "value": 535166155,
+          "unit": "bytes",
+          "command": "git ls-tree -r -l FETCH_HEAD:branches/<slug>"
+        },
+        {
+          "metric": "staging-live-count",
+          "value": 1,
+          "unit": "count",
+          "command": "git ls-tree -r -l FETCH_HEAD:branches/<slug> + git ls-remote --heads origin, then merge-base --is-ancestor per matching branch"
+        }
+      ],
+      "findings": [
+        {
+          "summary": "`branches/claude-iris-derived-kg` (181.7 MB, 5166 files) — no open pull request; `claude/iris-derived-kg` is already in `main`, tip 8 days old.",
+          "severity": "minor",
+          "action": "Ask the owner whether the review of `claude-iris-derived-kg` is finished. Nothing here removes it. Removal is a `feature-staging.yml` `workflow_dispatch` with `cleanup_slug: claude-iris-derived-kg` and `cleanup_confirm: claude-iris-derived-kg`, which re-runs these same liveness signals and refuses if any of them has come back. THE `staging:cleanup` LABEL DOES NOT WORK HERE: `cleanup` reads labels from the `pull_request_target: closed` payload, and a preview is only findable as an orphan once that event has already fired — so labelling now fires nothing (bean `w2g5`). Leaving it is a valid answer."
+        },
+        {
+          "summary": "`branches/claude-iris-referenced-library-links` (166.6 MB, 4833 files) — no open pull request; `claude/iris-referenced-library-links` is already in `main`, tip 8 days old.",
+          "severity": "minor",
+          "action": "Ask the owner whether the review of `claude-iris-referenced-library-links` is finished. Nothing here removes it. Removal is a `feature-staging.yml` `workflow_dispatch` with `cleanup_slug: claude-iris-referenced-library-links` and `cleanup_confirm: claude-iris-referenced-library-links`, which re-runs these same liveness signals and refuses if any of them has come back. THE `staging:cleanup` LABEL DOES NOT WORK HERE: `cleanup` reads labels from the `pull_request_target: closed` payload, and a preview is only findable as an orphan once that event has already fired — so labelling now fires nothing (bean `w2g5`). Leaving it is a valid answer."
+        },
+        {
+          "summary": "`branches/claude-iris-subset-ingest` (162.0 MB, 4001 files) — no open pull request; `claude/iris-subset-ingest` is already in `main`, tip 8 days old.",
+          "severity": "minor",
+          "action": "Ask the owner whether the review of `claude-iris-subset-ingest` is finished. Nothing here removes it. Removal is a `feature-staging.yml` `workflow_dispatch` with `cleanup_slug: claude-iris-subset-ingest` and `cleanup_confirm: claude-iris-subset-ingest`, which re-runs these same liveness signals and refuses if any of them has come back. THE `staging:cleanup` LABEL DOES NOT WORK HERE: `cleanup` reads labels from the `pull_request_target: closed` payload, and a preview is only findable as an orphan once that event has already fired — so labelling now fires nothing (bean `w2g5`). Leaving it is a valid answer."
+        }
+      ]
     },
     {
       "id": "credentials",
@@ -302,13 +336,13 @@
       ],
       "findings": [
         {
-          "summary": "Declared needs: could not determine for litlfred/who-iris, litlfred/cat-harness, litlfred/cat-harness-tools, litlfred/bootstrap-tools, litlfred/folio-assistant-core, litlfred/bootstrap — no credentials/needs.json, so used-vs-declared is not judged.",
+          "summary": "Declared needs: could not determine for WorldHealthOrganization/who-iris, litlfred/cat-harness, litlfred/cat-harness-tools, litlfred/bootstrap-tools, litlfred/folio-assistant-core, litlfred/bootstrap — no credentials/needs.json, so used-vs-declared is not judged.",
           "metric": "secret-needs-undetermined",
           "severity": "major",
           "action": "Author `credentials/needs.json` per the credentials proposal §2.3 (bean 9hxd); until then this is not clean."
         },
         {
-          "summary": "Expiry: no credentials/registry.json records dates for litlfred/who-iris, litlfred/cat-harness, litlfred/cat-harness-tools, litlfred/folio-assistant-core, so no expiry can be warned of.",
+          "summary": "Expiry: no credentials/registry.json records dates for WorldHealthOrganization/who-iris, litlfred/cat-harness, litlfred/cat-harness-tools, litlfred/folio-assistant-core, so no expiry can be warned of.",
           "metric": "secret-expiry-days",
           "severity": "minor",
           "action": "Record issue and expiry dates as credentials are added or rotated (credentials proposal §2.3, registry.json)."
@@ -352,38 +386,38 @@
       "measurements": [
         {
           "metric": "tracked-tree-bytes",
-          "value": 406096639,
+          "value": 406896886,
           "unit": "bytes",
           "command": "git ls-tree -r -l HEAD (blob sizes summed)"
         },
         {
           "metric": "git-dir-bytes",
-          "value": 351044306,
+          "value": 403583944,
           "unit": "bytes",
           "command": "du -sb .git"
         },
         {
           "metric": "pack-bytes",
-          "value": 321984512,
+          "value": 396493824,
           "unit": "bytes",
           "command": "git count-objects -v"
         },
         {
           "metric": "pack-count",
-          "value": 11,
+          "value": 2,
           "unit": "count",
           "command": "git count-objects -v"
         },
         {
           "metric": "git-dir-to-tree-ratio",
-          "value": 0.86,
+          "value": 0.99,
           "unit": "ratio",
           "command": "git-dir-bytes / tracked-tree-bytes"
         }
       ],
       "findings": [
         {
-          "summary": "Tracked content at HEAD is 387.3 MB, past the 250 MB early-warning point.",
+          "summary": "Tracked content at HEAD is 388.0 MB, past the 250 MB early-warning point.",
           "metric": "tracked-tree-bytes",
           "severity": "minor",
           "action": "Note it and re-measure next sweep. No action is due until it approaches 1 GB; this exists so the approach is visible rather than sudden."
