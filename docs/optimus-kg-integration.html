@@ -456,9 +456,9 @@ English only.</li>
 OpenAI": WHO IRIS PDFs may go to Reducto and text to Azure OpenAI, on the
 lab's keys. The provider terms and retention settings are the operator's
 (the lab's) to configure.</li>
-<li><strong>Licence.</strong> "We will use smart-base license." This pipeline's outputs
+<li><strong>Licence.</strong> "We will use [the SMART base IG's] license." This pipeline's outputs
 held by who-iris (the GuidelineKG extract, the crosswalk and the
-adjudication results) are licensed under smart-base's licence.</li>
+adjudication results) are licensed under the licence of the SMART base IG (the WHO SMART Guidelines base implementation guide).</li>
 <li><strong>The CDN source is public.</strong> The Zitnik lab may use it however it likes,
 including privately, provided it follows the licence terms. Contributing
 the adapter to the lab's private repository is therefore fine.</li>
@@ -472,7 +472,7 @@ what the article or PDF is about, some basic keyword extraction. Then for
 things that are L1 or L2 source documents, a deeper knowledge graph
 extraction should take place that tries to … populate what's in the L1 or
 L2 schema." See section <a href="#3e-two-levels-of-ingestion">3e</a>.</li>
-<li><strong>The default scope lives in smart-base.</strong> "There should be in smart-base a
+<li><strong>The default scope lives in the SMART base IG.</strong> "There should be in [the SMART base IG] a
 default scope and guidance and prompting. It should be a skill there. Then
 part of creating a new document as an editor is refining scope (not
 replacing)." See section 8.</li>
@@ -489,7 +489,7 @@ agents as it tries to identify evidence in the knowledge graphs and assess
 it." See section 8.</li>
 <li><strong>Examples:</strong> keep the placeholders for now.</li>
 <li><strong>Level 1 is run by the Harvard lab, in GuidelineKG</strong>, on the same keys.</li>
-<li><strong>The DAK target is smart-base <code>main</code> pinned at <code>781a8b9</code></strong>, re-pinned on
+<li><strong>The DAK target is the SMART base IG's <code>main</code> pinned at <code>781a8b9</code></strong>, re-pinned on
 each release.</li>
 <li><strong>Trust in GuidelineKG output:</strong> pin a GuidelineKG commit now, and move to
 lab-signed (<code>did:web</code>) releases later.</li>
@@ -574,7 +574,7 @@ It processes an item only when an L1 editor's scope of interest (section 8)
 selects it, and only after the materialisation gates in
 <a href="https://github.com/litlfred/who-iris/blob/HEAD/folio-assistant-core/schemas/materialization.ts"><code>materialize-remote</code></a> pass.</p>
 <h2>2. The existing L1 → KG ingestion, which stays</h2>
-<p>The current path is folio-assistant-core's library-ingestion chain. smart-base
+<p>The current path is folio-assistant-core's library-ingestion chain. The SMART base IG
 skills then write the L1 knowledge graph from what it derives. Nothing in this
 design edits these processes or the files they own.</p>
 <table>
@@ -612,13 +612,13 @@ design edits these processes or the files they own.</p>
 <td>statement pages with source links</td>
 </tr>
 <tr>
-<td>L1 KG (smart-base)</td>
-<td>skill <code>smart-base/extract-smart-kg-l1</code></td>
+<td>L1 KG (the SMART base IG)</td>
+<td>skill <code>extract-smart-kg-l1</code> (SMART base IG)</td>
 <td><code>smart-kg-l1.json</code>, context <code>http://smart.who.int/kg/l1.context.jsonld</code>: nodes <code>publication</code>, <code>publication-section</code>, <code>recommendation</code>; edges are <code>Statement</code>s (<code>contains</code>), each node with <code>derivation</code> and <code>evidence{location, quote}</code></td>
 </tr>
 <tr>
-<td>L1 library KG (smart-base)</td>
-<td>skill <code>smart-base/dak-l1-library</code></td>
+<td>L1 library KG (the SMART base IG)</td>
+<td>skill <code>dak-l1-library</code> (SMART base IG)</td>
 <td><code>smart-kg-l1-library.jsonld</code>, ontology 3.0: <code>library-node</code>, <code>publication-section</code>, <code>publication-element</code>; edges <code>contains</code>, <code>specializationOf</code></td>
 </tr>
 </tbody>
@@ -1016,7 +1016,7 @@ who-iris makes:</p>
 </tr>
 <tr>
 <td>licence of this pipeline's outputs held by who-iris</td>
-<td><strong>smart-base's licence</strong></td>
+<td><strong>the SMART base IG's licence</strong></td>
 <td>owner, 17:33Z</td>
 </tr>
 <tr>
@@ -1026,8 +1026,8 @@ who-iris makes:</p>
 </tr>
 </tbody>
 </table>
-<p>smart-base's licence, quoted exactly from <code>LICENSE.md</code> at
-<code>WorldHealthOrganization/smart-base@781a8b9</code> (2026-10-20), first line:</p>
+<p>the SMART base IG's licence, quoted exactly from <code>LICENSE.md</code> at
+the SMART base IG's repository at <code>781a8b9</code> (2026-10-20), first line:</p>
 <blockquote>
 <h1>Creative Commons Attribution 3.0 IGO (CC-BY-3.0-IGO)</h1>
 </blockquote>
@@ -1110,7 +1110,7 @@ would make "the licence terms" checkable.</p>
 <tr>
 <td>produces</td>
 <td>a short summary of what the item is about, plus keywords</td>
-<td>a knowledge-graph extraction that <strong>populates the L1 schema</strong> (smart-base <code>kg/l1</code>: publication, section, recommendation and the typed entities of section 6) <strong>or the L2 schema</strong> (the DAK components and logical models)</td>
+<td>a knowledge-graph extraction that <strong>populates the L1 schema</strong> (the SMART base IG <code>kg/l1</code>: publication, section, recommendation and the typed entities of section 6) <strong>or the L2 schema</strong> (the DAK components and logical models)</td>
 </tr>
 <tr>
 <td>input</td>
@@ -1282,14 +1282,14 @@ or WHO-used scheme where one exists. Other schemes link by <code>skos:exactMatch
 or <code>skos:closeMatch</code>, never by replacing the WHO identifier.</p>
 <h3>Node types</h3>
 <p>The DAK component names below are the nine components of a SMART Guidelines
-Digital Adaptation Kit. The smart-base <strong>logical-model names</strong> are given as
-<em>targets to confirm</em>: smart-base is not mounted in this checkout, so they are
+Digital Adaptation Kit. The SMART base IG <strong>logical-model names</strong> are given as
+<em>targets to confirm</em>: the SMART base IG is not mounted in this checkout, so they are
 not verified against its pinned version (section 12, Q6).</p>
 <table>
 <thead>
 <tr>
 <th>GuidelineKG (Tool B)</th>
-<th>existing L1 KG (smart-base <code>kg/l1</code>)</th>
+<th>existing L1 KG (the SMART base IG <code>kg/l1</code>)</th>
 <th>DAK component / WHO schema target</th>
 <th>WHO grounding (primary)</th>
 <th>bridge</th>
@@ -1313,7 +1313,7 @@ not verified against its pinned version (section 12, Q6).</p>
 <tr>
 <td><code>Claim</code> (+ its assertion edge)</td>
 <td><code>recommendation</code></td>
-<td><strong>Component 2 — Health interventions and recommendations</strong> (smart-base recommendation / health-intervention model)</td>
+<td><strong>Component 2 — Health interventions and recommendations</strong> (the SMART base IG recommendation / health-intervention model)</td>
 <td>the recommendation's own IRI</td>
 <td>GRADE certainty and strength as properties</td>
 </tr>
@@ -1375,11 +1375,11 @@ not verified against its pinned version (section 12, Q6).</p>
 </tr>
 </tbody>
 </table>
-<p>The "gap" rows are a <strong>proposal to smart-base</strong>: add typed entity nodes to the
+<p>The "gap" rows are a <strong>proposal to the SMART base IG</strong>: add typed entity nodes to the
 <code>kg/l1</code> ontology so a recommendation can be <code>about</code> a condition, product or
-finding. Until smart-base adopts this, the gold output carries these as its own
+finding. Until the SMART base IG adopts this, the gold output carries these as its own
 <code>who-iris</code> types, with <code>skos:closeMatch</code> to the Biolink class. <strong>who-iris does
-not extend smart-base's ontology on its own.</strong></p>
+not extend the SMART base IG's ontology on its own.</strong></p>
 <h3>Edges and properties</h3>
 <table>
 <thead>
@@ -1464,7 +1464,7 @@ produces a derived graph.</strong></p>
 <tbody>
 <tr>
 <td>the L1 KG (existing path)</td>
-<td>who-iris and smart-base</td>
+<td>who-iris and the SMART base IG</td>
 <td><code>library/&#x3C;slug>/smart-kg-l1*.json*</code></td>
 </tr>
 <tr>
@@ -1599,7 +1599,7 @@ for now.</p>
 <ul>
 <li>
 <p><strong>A default scope, its guidance and its prompting are a skill in
-smart-base.</strong> That skill is the baseline every new L1 or L2 document starts
+the SMART base IG.</strong> That skill is the baseline every new L1 or L2 document starts
 from.</p>
 </li>
 <li>
@@ -1733,7 +1733,7 @@ not written yet.</strong> A step whose skill does not exist carries
 design assigns, and its documentation opens with <em>Unbuilt (skill … not written
 yet)</em>, so <code>check:workflow-refs</code> finds no dangling reference and the checklist
 says which steps are not built. A step that is built names its skill as usual.
-<code>l1-scope-and-review</code> is still a table only: it belongs in smart-base
+<code>l1-scope-and-review</code> is still a table only: it belongs in the SMART base IG
 (section 10).</p>
 <p><strong>Lanes.</strong> <strong>who-iris</strong> (role <code>guidelinekg-path</code>: the scripts and the agent;
 holds no keys), <strong>Zitnik lab (GuidelineKG)</strong> (role <code>guidelinekg-lab</code>, an
@@ -2067,7 +2067,7 @@ in the platform.</p>
 </tr>
 <tr>
 <td>crosswalk data <code>crosswalk/optimus-l1-dak.json</code></td>
-<td><strong>who-iris</strong> for the IRIS-specific mappings; WHO-scheme mappings that hold outside IRIS move to <strong>smart-base</strong> later</td>
+<td><strong>who-iris</strong> for the IRIS-specific mappings; WHO-scheme mappings that hold outside IRIS move to <strong>the SMART base IG</strong> later</td>
 <td>subject vocabulary stays out of the platform</td>
 </tr>
 <tr>
@@ -2087,7 +2087,7 @@ in the platform.</p>
 </tr>
 <tr>
 <td>the <strong>default scope, guidance and prompting skill</strong> (owner, decided); typed entity nodes in <code>kg/l1</code> (condition, product, finding); <code>l1-scope-and-review</code> in the L1 guideline-development process; DAK logical-model targets</td>
-<td><strong>smart-base</strong></td>
+<td><strong>the SMART base IG</strong></td>
 <td>it owns the L1 ontology and DAK models; proposed here, not changed here</td>
 </tr>
 <tr>
@@ -2140,8 +2140,8 @@ the live work plan for the same terms.</p>
 </tr>
 <tr>
 <td>4</td>
-<td>Comparison form + crosswalk v0 (section 6) and proposal to smart-base for typed L1 entity nodes</td>
-<td>who-iris + smart-base</td>
+<td>Comparison form + crosswalk v0 (section 6) and proposal to the SMART base IG for typed L1 entity nodes</td>
+<td>who-iris + the SMART base IG</td>
 <td>Q6</td>
 </tr>
 <tr>
@@ -2211,7 +2211,7 @@ Zitnik lab runs it and supplies the keys; no keys in WHO repos (section 3c).</li
 <li><del>Volume</del> <strong>Decided</strong>: two levels. A basic summary and keywords for
 every item, and deep L1/L2 extraction for L1 and L2 source documents
 (section 3e).</li>
-<li><del>Licences</del> <strong>Decided</strong>: outputs are CC BY 3.0 IGO (smart-base's licence).
+<li><del>Licences</del> <strong>Decided</strong>: outputs are CC BY 3.0 IGO (the SMART base IG's licence).
 The compatibility points that remain are listed in section 3d.
 <em>Original question:</em> The OptimusKG graph is <strong>CC BY-NC-SA 4.0</strong>, and some of its
 sources carry stricter terms (CTD is non-commercial). GuidelineKG's linker
@@ -2220,10 +2220,10 @@ it. May WHO use that, and is the GuidelineKG output a derivative under
 ShareAlike? Would ShareAlike attach to adjudicated outputs that
 cite it? Who answers the <code>copyright</code> gate for IRIS bitstreams fed to an
 external tool?</li>
-<li><strong>DAK targets.</strong> Which smart-base version and logical models are the
+<li><strong>DAK targets.</strong> Which version of the SMART base IG and logical models are the
 alignment targets? Should the typed entity nodes (condition, product,
-finding) be proposed to smart-base's <code>kg/l1</code> ontology? <strong>Version decided</strong>:
-smart-base <code>main</code> pinned at <code>781a8b9</code>, re-pinned on each release. Which
+finding) be proposed to the SMART base IG's <code>kg/l1</code> ontology? <strong>Version decided</strong>:
+the SMART base IG's <code>main</code> pinned at <code>781a8b9</code>, re-pinned on each release. Which
 logical models to target, and the typed-entity proposal, follow from that
 pin.</li>
 <li><del>Adjudication policy</del> <strong>Decided</strong>: both graphs stay present and authors
@@ -2256,7 +2256,7 @@ access for pinning? Will the lab sign its result releases with a key
 published as its own <code>did:web</code>?</li>
 <li><del>Languages</del> <strong>Answered</strong>: all six WHO languages (section 3c).</li>
 <li><del>What counts as a guideline</del> <strong>Decided</strong>: a default scope skill in
-smart-base, refined (not replaced) by each editor, together with the
+the SMART base IG, refined (not replaced) by each editor, together with the
 document's own evidence review criteria (section 8). <em>Original question:</em> GuidelineKG's classifier leaves
 <code>keep_categories</code> undecided. Should each L1 scope decide it (section 8,
 recommended), or should one WHO-wide default be set?</li>
