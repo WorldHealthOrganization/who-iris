@@ -1,0 +1,25 @@
+{
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap-tools/bootstrap-tools.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap-tools/schema/discussion.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap-tools/bootstrap-tools.jsonld",
+  "@graph": [
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap-tools/schema/discussion",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/Schema",
+      "name": "discussion",
+      "title": "discussion",
+      "summary": "The two documents the `discussion` process carries, as Zod.",
+      "module": "schemas/discussion.ts",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap-tools/directory/bootstrap-tools-schemas",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/bootstrap-tools/schema/discussion",
+      "jsonSchema": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap-tools/schema/zod/discussion/DiscussionInputSchema.schema.json",
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap-tools/schema/zod/discussion/DiscussionOutputObjectSchema.schema.json",
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap-tools/schema/zod/discussion/DiscussionOutputSchema.schema.json",
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap-tools/schema/zod/discussion/ExchangeEntrySchema.schema.json",
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap-tools/schema/zod/discussion/ParticipantSchema.schema.json",
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap-tools/schema/zod/discussion/RepositoryRefSchema.schema.json"
+      ]
+    }
+  ]
+}

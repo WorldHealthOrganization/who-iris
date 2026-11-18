@@ -1,0 +1,135 @@
+{
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/who-iris.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/who-iris.jsonld",
+  "@graph": [
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/Process",
+      "name": "IRIS CDN nightly change ingest",
+      "summary": "Every night: ask the IRIS DSpace REST API which items changed since the last published run, ingest only those, rebuild the whole graph (sorted output keeps unchanged partitions byte-identical), and publish a signed release.",
+      "description": "Every night: ask the IRIS DSpace REST API which items changed since the last published run, ingest only those, rebuild the whole graph (sorted output keeps unchanged partitions byte-identical), and publish a signed release. A night with no changes publishes nothing and commits nothing.",
+      "enforcement": "strict",
+      "sourcePath": "processes/iris-cdn-nightly.bpmn",
+      "sourceUrl": "https://github.com/litlfred/who-iris/blob/main/processes/iris-cdn-nightly.bpmn",
+      "depiction": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/assets/img/workflows/iris-cdn-nightly.svg",
+      "startNode": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly/node/Start_Nightly"
+      ],
+      "nodeCount": 13,
+      "flowCount": 12,
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-processes",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/process/Process_IrisCdnNightly"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly#flow/N1",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly/node/Start_Nightly",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly/node/Task_ReadCursor",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-processes",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/process/Process_IrisCdnNightly#flow/N1"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly#flow/N2",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly/node/Task_ReadCursor",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly/node/Task_ListChanged",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-processes",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/process/Process_IrisCdnNightly#flow/N2"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly#flow/N3",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly/node/Task_ListChanged",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly/node/GW_Any",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-processes",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/process/Process_IrisCdnNightly#flow/N3"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly#flow/N4",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
+      "name": "no",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly/node/GW_Any",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly/node/End_NoChange",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-processes",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/process/Process_IrisCdnNightly#flow/N4"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly#flow/N5",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
+      "name": "yes",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly/node/GW_Any",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly/node/Task_FetchChanged",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-processes",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/process/Process_IrisCdnNightly#flow/N5"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly#flow/N6",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly/node/Task_FetchChanged",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly/node/Task_FetchNewBytes",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-processes",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/process/Process_IrisCdnNightly#flow/N6"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly#flow/N7",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly/node/Task_FetchNewBytes",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly/node/Task_WriteRecords",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-processes",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/process/Process_IrisCdnNightly#flow/N7"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly#flow/N8",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly/node/Task_WriteRecords",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly/node/Call_Rebuild",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-processes",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/process/Process_IrisCdnNightly#flow/N8"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly#flow/N9",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly/node/Call_Rebuild",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly/node/Call_SignPublish",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-processes",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/process/Process_IrisCdnNightly#flow/N9"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly#flow/N10",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly/node/Call_SignPublish",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly/node/Task_AdvanceCursor",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-processes",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/process/Process_IrisCdnNightly#flow/N10"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly#flow/N11",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly/node/Task_AdvanceCursor",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly/node/Task_Review",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-processes",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/process/Process_IrisCdnNightly#flow/N11"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly#flow/N12",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly/node/Task_Review",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/process/Process_IrisCdnNightly/node/End_Done",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/directory/who-iris-processes",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/process/Process_IrisCdnNightly#flow/N12"
+    }
+  ]
+}

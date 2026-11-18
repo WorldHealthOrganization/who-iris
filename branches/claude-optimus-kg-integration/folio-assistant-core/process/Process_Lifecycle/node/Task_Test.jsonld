@@ -1,0 +1,30 @@
+{
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/folio-assistant-core.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/process/Process_Lifecycle/node/Task_Test.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/folio-assistant-core.jsonld",
+  "@graph": [
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/process/Process_Lifecycle/node/Task_Test",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
+      "name": "Integration test and QA sweep",
+      "nodeKind": "activity",
+      "bpmnType": "bpmn:ServiceTask",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/process/Process_Lifecycle",
+      "performedBy": "https://litlfred.github.io/folio-assistant/cat-harness/role/validation-pipeline",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/process/Process_Lifecycle/lane/Lane_Qa",
+      "requires": [
+        "https://litlfred.github.io/folio-assistant/cat-harness/skill/content-test"
+      ],
+      "touchesWorkPlan": false,
+      "relaxable": true,
+      "incoming": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/process/Process_Lifecycle#flow/H04"
+      ],
+      "outgoing": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/process/Process_Lifecycle#flow/H05"
+      ],
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/directory/collab",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/process/Process_Lifecycle/node/Task_Test"
+    }
+  ]
+}

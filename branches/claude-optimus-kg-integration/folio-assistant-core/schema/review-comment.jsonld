@@ -1,0 +1,22 @@
+{
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/folio-assistant-core.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/schema/review-comment.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/folio-assistant-core.jsonld",
+  "@graph": [
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/schema/review-comment",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/Schema",
+      "name": "review-comment",
+      "title": "review-comment",
+      "summary": "A reviewer's comment on one block of a folio: a todo with more structure",
+      "module": "schemas/review-comment.ts",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/directory/core-schemas",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/schema/review-comment",
+      "jsonSchema": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/schema/zod/review-comment/ReviewCommentSchema.schema.json",
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/schema/zod/review-comment/ReviewCommentsFileSchema.schema.json",
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/schema/zod/review-comment/ReviewFieldsSchema.schema.json"
+      ]
+    }
+  ]
+}

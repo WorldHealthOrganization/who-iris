@@ -1,0 +1,21 @@
+{
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/who-iris.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/role/guidelinekg-lab.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/who-iris.jsonld",
+  "@graph": [
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/role/guidelinekg-lab",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
+      "prefLabel": "Zitnik lab (GuidelineKG)",
+      "title": "Zitnik lab (GuidelineKG)",
+      "notation": "guidelinekg-lab",
+      "description": "The Zitnik lab at Harvard, which runs GuidelineKG (mims-harvard/guideline-kg, pinned by commit) on its own Reducto and Azure OpenAI keys and publishes its result releases in its own repositories. An external party: who-iris instructs nothing here; the work order and the result release are the whole interface.",
+      "sourceKind": "role-registry",
+      "actorKinds": [
+        "external"
+      ],
+      "hasSkill": [],
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/role/guidelinekg-lab"
+    }
+  ]
+}

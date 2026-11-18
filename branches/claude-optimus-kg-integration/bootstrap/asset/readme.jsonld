@@ -1,0 +1,16 @@
+{
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/bootstrap.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/asset/readme.jsonld",
+  "isPartOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/bootstrap.jsonld",
+  "@graph": [
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/asset/readme",
+      "@type": "bootstrap:Asset",
+      "label": "readme",
+      "title": "bootstrap",
+      "description": "The flow, with every term linked to the schema that defines it.",
+      "source": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/README.md",
+      "isPartOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/bootstrap.jsonld"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/bootstrap.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/process/Process_CompleteInitialization/node/A_Report.jsonld",
+  "isPartOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/bootstrap.jsonld",
+  "@graph": [
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/process/Process_CompleteInitialization/node/A_Report",
+      "@type": "bootstrap:ProcessNode",
+      "label": "Report every step",
+      "type": "bpmn:callActivity",
+      "isPartOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/process/Process_CompleteInitialization",
+      "requires": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/skill/log-message",
+      "calledElement": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/process/Process_LogMessage"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/bootstrap.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/directory/scenarios.jsonld",
+  "isPartOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/bootstrap.jsonld",
+  "@graph": [
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/directory/scenarios",
+      "@type": "bootstrap:Subgraph",
+      "label": "scenarios",
+      "description": "bootstrap's four Roles: Bootstrapping Agent, Requestor, Knowledge Graph Data Store and Logger.",
+      "type": [
+        "bootstrap:graphTypology/scenarios"
+      ],
+      "source": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/scenarios/",
+      "isPartOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/bootstrap.jsonld"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/schema/session-context.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/cat-harness.jsonld",
+  "@graph": [
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/schema/session-context",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/Schema",
+      "name": "session-context",
+      "title": "session-context",
+      "summary": "What a state machine tracks across a SESSION, as opposed to an instance.",
+      "module": "schemas/sdlc/session-context.ts",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/schemas",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/schema/session-context"
+    }
+  ]
+}

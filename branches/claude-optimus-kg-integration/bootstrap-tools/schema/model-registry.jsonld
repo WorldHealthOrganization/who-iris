@@ -1,0 +1,22 @@
+{
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap-tools/bootstrap-tools.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap-tools/schema/model-registry.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap-tools/bootstrap-tools.jsonld",
+  "@graph": [
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap-tools/schema/model-registry",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/Schema",
+      "name": "model-registry",
+      "title": "model-registry",
+      "summary": "Which languages a MODEL is good at, and whether anybody checked.",
+      "module": "schemas/model-registry.ts",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap-tools/directory/bootstrap-tools-schemas",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/bootstrap-tools/schema/model-registry",
+      "jsonSchema": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap-tools/schema/zod/model-registry/ModelEntrySchema.schema.json",
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap-tools/schema/zod/model-registry/ModelIdSchema.schema.json",
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap-tools/schema/zod/model-registry/ModelRegistrySchema.schema.json"
+      ]
+    }
+  ]
+}

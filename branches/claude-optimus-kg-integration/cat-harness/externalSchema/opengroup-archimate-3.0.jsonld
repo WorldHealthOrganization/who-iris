@@ -1,0 +1,21 @@
+{
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/externalSchema/opengroup-archimate-3.0.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/cat-harness.jsonld",
+  "@graph": [
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/externalSchema/opengroup-archimate-3.0",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/ExternalSchema",
+      "name": "opengroup-archimate-3.0",
+      "title": "ArchiMate® Model Exchange File Format",
+      "authority": "other",
+      "specVersion": "3.0",
+      "specUse": "reads",
+      "specUrl": "https://www.opengroup.org/xsd/archimate/",
+      "namespace": [
+        "http://www.opengroup.org/xsd/archimate/3.0/"
+      ],
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/externalSchema/opengroup-archimate-3.0"
+    }
+  ]
+}

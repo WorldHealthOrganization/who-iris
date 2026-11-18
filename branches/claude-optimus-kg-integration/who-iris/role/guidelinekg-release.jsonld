@@ -1,0 +1,21 @@
+{
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/who-iris.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/role/guidelinekg-release.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/who-iris.jsonld",
+  "@graph": [
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/role/guidelinekg-release",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
+      "prefLabel": "GuidelineKG result release",
+      "title": "GuidelineKG result release",
+      "notation": "guidelinekg-release",
+      "description": "What the lab publishes per work order: guideline_kg.jsonl and a SHA-256 manifest naming the work order, the CDN release and the GuidelineKG commit. A mechanical role, held outside who-iris: read and verified, never written by who-iris.",
+      "sourceKind": "role-registry",
+      "actorKinds": [
+        "external"
+      ],
+      "hasSkill": [],
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/role/guidelinekg-release"
+    }
+  ]
+}

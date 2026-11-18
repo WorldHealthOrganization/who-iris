@@ -1,0 +1,15 @@
+{
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/bootstrap.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/process/Process_HumanAgentDiscussion/node/A_LayOutOptions.jsonld",
+  "isPartOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/bootstrap.jsonld",
+  "@graph": [
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/process/Process_HumanAgentDiscussion/node/A_LayOutOptions",
+      "@type": "bootstrap:ProcessNode",
+      "label": "Lay out the options, with what each costs",
+      "type": "bpmn:task",
+      "isPartOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/process/Process_HumanAgentDiscussion",
+      "requires": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/skill/human-agent-discussion"
+    }
+  ]
+}

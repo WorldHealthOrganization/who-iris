@@ -1,0 +1,27 @@
+{
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/actor/ci-pipeline.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/cat-harness.jsonld",
+  "@graph": [
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/actor/ci-pipeline",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/Actor",
+      "localId": "ci-pipeline",
+      "actorKind": "system",
+      "title": "CI pipeline",
+      "description": "The build and validation system: validate, render, publish, and the mechanical half of the HCI gate. It runs a fixed program and exercises no judgement, so anything needing a decision belongs in another lane.",
+      "hasCapability": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/capability/jekyll"
+      ],
+      "mayTakeRole": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/role/build-pipeline",
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/role/tester",
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/role/validation-pipeline"
+      ],
+      "permissionName": [
+        "qa-reporting"
+      ],
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/actor/ci-pipeline"
+    }
+  ]
+}

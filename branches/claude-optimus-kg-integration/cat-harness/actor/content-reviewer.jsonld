@@ -1,0 +1,33 @@
+{
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/actor/content-reviewer.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/cat-harness.jsonld",
+  "@graph": [
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/actor/content-reviewer",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/Actor",
+      "localId": "content-reviewer",
+      "actorKind": "person",
+      "title": "Content Reviewer",
+      "description": "Formal approval and sign-off authority who gates phase transitions and ensures alignment with source guidelines.",
+      "meta": {
+        "smartBaseAnalog": "SGAuthoring.Persona.ContentReviewer",
+        "lifecycle": [
+          "review"
+        ]
+      },
+      "hasCapability": [],
+      "mayTakeRole": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/role/reviewer",
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/role/translation-adjudicator",
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/role/narrative-reviewer",
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/role/adjudicator"
+      ],
+      "permissionName": [
+        "approval-authority",
+        "adjudication"
+      ],
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/actor/content-reviewer"
+    }
+  ]
+}

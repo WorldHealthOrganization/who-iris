@@ -1,0 +1,23 @@
+{
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/who-iris.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/role/guidelinekg-reviewer.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/who-iris.jsonld",
+  "@graph": [
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/role/guidelinekg-reviewer",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
+      "prefLabel": "Human reviewer (SME or editor)",
+      "title": "Human reviewer (SME or editor)",
+      "notation": "guidelinekg-reviewer",
+      "description": "A person who rules on every recommendation-class or contraindication claim the two KG extractors disagree on, and on anything the agent found undecidable. The ruling is kept beside the agent's, never over it.",
+      "sourceKind": "role-registry",
+      "actorKinds": [
+        "person"
+      ],
+      "hasSkill": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/skill/adjudication"
+      ],
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/role/guidelinekg-reviewer"
+    }
+  ]
+}

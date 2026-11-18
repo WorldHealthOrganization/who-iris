@@ -1,0 +1,22 @@
+{
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/capability/pdfplumber.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/cat-harness.jsonld",
+  "@graph": [
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/capability/pdfplumber",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/Capability",
+      "localId": "pdfplumber",
+      "name": "pdfplumber (deterministic table extraction)",
+      "description": "Pure-Python PDF geometry reader, the default backend of scripts/pdf-tables.py. Extracts ruled and alignment-based tables with exact column edges and bounding boxes, which pdf-structure/v1 does not model. No model weights and no egress after install, so unlike Docling it runs in a sandboxed session. Install: pip install pdfplumber.",
+      "detection": {
+        "method": "command",
+        "command": "python3 -c 'import pdfplumber'"
+      },
+      "requiresCapability": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/capability/python3"
+      ],
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/capability/pdfplumber"
+    }
+  ]
+}

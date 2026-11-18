@@ -1,0 +1,14 @@
+{
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/bootstrap.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/process/Process_HumanAgentDiscussion/node/GW_DefaultAllowed.jsonld",
+  "isPartOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/bootstrap.jsonld",
+  "@graph": [
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/process/Process_HumanAgentDiscussion/node/GW_DefaultAllowed",
+      "@type": "bootstrap:ProcessNode",
+      "label": "Did the caller allow a default?",
+      "type": "bpmn:exclusiveGateway",
+      "isPartOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap/process/Process_HumanAgentDiscussion"
+    }
+  ]
+}

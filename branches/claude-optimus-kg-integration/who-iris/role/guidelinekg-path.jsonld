@@ -1,0 +1,25 @@
+{
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/who-iris.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/role/guidelinekg-path.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/who-iris.jsonld",
+  "@graph": [
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/role/guidelinekg-path",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/Role",
+      "prefLabel": "who-iris GuidelineKG path",
+      "title": "who-iris GuidelineKG path",
+      "notation": "guidelinekg-path",
+      "description": "who-iris's side of the parallel GuidelineKG path (docs/optimus-kg-integration.md): the deterministic scripts that verify, diff, select, publish the work order and project the result, and the agent that adjudicates first, reviews the run and opens beans. Holds no Reducto, OpenAI or Azure key, ever. Proposed: most of its skills are not written yet, and the diagrams say so step by step.",
+      "sourceKind": "role-registry",
+      "actorKinds": [
+        "system",
+        "agent"
+      ],
+      "hasSkill": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/skill/iris-cdn-signing",
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/skill/iris-oxigraph"
+      ],
+      "alternateOf": "https://litlfred.github.io/folio-assistant/who-iris/role/guidelinekg-path"
+    }
+  ]
+}

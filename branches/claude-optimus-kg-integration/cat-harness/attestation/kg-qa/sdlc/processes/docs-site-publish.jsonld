@@ -1,0 +1,17 @@
+{
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/attestation/kg-qa/sdlc/processes/docs-site-publish.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/cat-harness.jsonld",
+  "@graph": [
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/attestation/kg-qa/sdlc/processes/docs-site-publish",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/QaAttestation",
+      "title": "kg-qa attestation: process Process_DocsSite",
+      "description": "The kg-qa judgements recorded for process Process_DocsSite (sdlc/processes/docs-site-publish.bpmn), each pinned to the hash it attested.",
+      "sourceKind": "kg-qa",
+      "sourcePath": "test/attestations/kg-qa/sdlc/processes/docs-site-publish.attestations.json",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/attestations",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/attestation/kg-qa/sdlc/processes/docs-site-publish"
+    }
+  ]
+}

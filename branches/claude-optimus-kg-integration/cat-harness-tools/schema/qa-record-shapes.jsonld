@@ -1,0 +1,17 @@
+{
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness-tools/cat-harness-tools.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness-tools/schema/qa-record-shapes.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness-tools/cat-harness-tools.jsonld",
+  "sameAs": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/qa-record-shapes.jsonld",
+  "@graph": [
+    {
+      "@id": "https://litlfred.github.io/folio-assistant/cat-harness-tools/schema/qa-record-shapes",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/Schema",
+      "name": "qa-record-shapes",
+      "title": "qa-record-shapes",
+      "summary": "The SHAPES of the record families the harness's `qa` and `lsi` graphs hold —",
+      "module": "schemas/kg/qa-record-shapes.ts",
+      "inSubgraph": "https://litlfred.github.io/folio-assistant/cat-harness-tools/directory/cat-harness-tools-schemas"
+    }
+  ]
+}

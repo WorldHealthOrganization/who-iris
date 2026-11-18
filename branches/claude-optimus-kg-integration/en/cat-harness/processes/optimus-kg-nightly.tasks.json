@@ -1,0 +1,377 @@
+{
+ "$schema": "process-task-panel/v1",
+ "process": "Process_OptimusKgNightly",
+ "markers": [
+  {
+   "id": "Call_PrepareWorkOrder",
+   "name": "Prepare the work order",
+   "left": 22.9,
+   "top": 5.74,
+   "box": {
+    "left": 17.37,
+    "top": 18.58,
+    "width": 1.83,
+    "height": 3.24
+   }
+  },
+  {
+   "id": "Task_Classify",
+   "name": "Classify the candidates",
+   "left": 43.51,
+   "top": 55.07,
+   "box": {
+    "left": 37.98,
+    "top": 67.91,
+    "width": 1.83,
+    "height": 3.24
+   }
+  },
+  {
+   "id": "Task_Extract",
+   "name": "Parse and extract claims",
+   "left": 64.12,
+   "top": 55.07,
+   "box": {
+    "left": 58.59,
+    "top": 67.91,
+    "width": 1.83,
+    "height": 3.24
+   }
+  },
+  {
+   "id": "Task_PublishResult",
+   "name": "Publish the result release",
+   "left": 75.57,
+   "top": 55.07,
+   "box": {
+    "left": 70.04,
+    "top": 67.91,
+    "width": 1.83,
+    "height": 3.24
+   }
+  },
+  {
+   "id": "Call_IngestResult",
+   "name": "Verify and adjudicate the result",
+   "left": 87.02,
+   "top": 5.74,
+   "box": {
+    "left": 81.49,
+    "top": 18.58,
+    "width": 1.83,
+    "height": 3.24
+   }
+  }
+ ],
+ "processHref": "optimus-kg-nightly.html",
+ "tasks": {
+  "Call_PrepareWorkOrder": {
+   "id": "Call_PrepareWorkOrder",
+   "name": "Prepare the work order",
+   "type": "bpmn:CallActivity",
+   "stepHref": "optimus-kg-nightly.html#step-Call_PrepareWorkOrder",
+   "lane": "who-iris",
+   "laneHref": "optimus-kg-nightly.html#lane-Lane_WhoIris",
+   "skills": [
+    {
+     "name": "iris-cdn-signing",
+     "href": "../../../en/cat-harness/processes/skills/iris-cdn-signing.html"
+    }
+   ],
+   "calls": {
+    "name": "GuidelineKG nightly path: prepare the work order",
+    "href": "optimus-kg-nightly-work-order.html",
+    "diagram": "optimus-kg-nightly-work-order.html"
+   },
+   "role": {
+    "name": "guidelinekg-path",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-scenarios-roles-json-guidelinekg-path",
+    "title": "who-iris GuidelineKG path",
+    "skills": [
+     {
+      "name": "ci-health",
+      "href": "../../../en/cat-harness/processes/skills/ci-health.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "compiled-artefact-cache",
+      "href": "../../../en/cat-harness/processes/skills/compiled-artefact-cache.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "content-test",
+      "href": "../../../en/cat-harness/processes/skills/content-test.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "content-validate",
+      "href": "../../../en/cat-harness/processes/skills/content-validate.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "feature-staging",
+      "href": "../../../en/cat-harness/processes/skills/feature-staging.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "harness-projections",
+      "href": "../../../en/cat-harness/processes/skills/harness-projections.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "iris-cdn-signing",
+      "href": "../../../en/cat-harness/processes/skills/iris-cdn-signing.html"
+     },
+     {
+      "name": "iris-oxigraph",
+      "href": "../../../en/cat-harness/processes/skills/iris-oxigraph.html"
+     },
+     {
+      "name": "kg-separation",
+      "href": "../../../en/cat-harness/processes/skills/kg-separation.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "platform-gates",
+      "href": "../../../en/cat-harness/processes/skills/platform-gates.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "prepare-merge",
+      "href": "../../../en/cat-harness/processes/skills/prepare-merge.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "publish-verification",
+      "href": "../../../en/cat-harness/processes/skills/publish-verification.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "qa-reports",
+      "href": "../../../en/cat-harness/processes/skills/qa-reports.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "remote-mount",
+      "href": "../../../en/cat-harness/processes/skills/remote-mount.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "render-kg-to-cdn",
+      "href": "../../../en/cat-harness/processes/skills/render-kg-to-cdn.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "sub-kg-lifecycle",
+      "href": "../../../en/cat-harness/processes/skills/sub-kg-lifecycle.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "todo-manager",
+      "href": "../../../en/cat-harness/processes/skills/todo-manager.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "translation-adjudication",
+      "href": "../../../en/cat-harness/processes/skills/translation-adjudication.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "translation-candidate-source",
+      "href": "../../../en/cat-harness/processes/skills/translation-candidate-source.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "upstream-version-adoption",
+      "href": "../../../en/cat-harness/processes/skills/upstream-version-adoption.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "watch",
+      "href": "../../../en/cat-harness/processes/skills/watch.html",
+      "via": "build-pipeline"
+     }
+    ]
+   }
+  },
+  "Task_Classify": {
+   "id": "Task_Classify",
+   "name": "Classify the candidates",
+   "type": "bpmn:Task",
+   "stepHref": "optimus-kg-nightly.html#step-Task_Classify",
+   "lane": "Zitnik lab (GuidelineKG)",
+   "laneHref": "optimus-kg-nightly.html#lane-Lane_Lab",
+   "skills": [],
+   "role": {
+    "name": "guidelinekg-lab",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-scenarios-roles-json-guidelinekg-lab",
+    "title": "Zitnik lab (GuidelineKG)",
+    "skills": []
+   }
+  },
+  "Task_Extract": {
+   "id": "Task_Extract",
+   "name": "Parse and extract claims",
+   "type": "bpmn:Task",
+   "stepHref": "optimus-kg-nightly.html#step-Task_Extract",
+   "lane": "Zitnik lab (GuidelineKG)",
+   "laneHref": "optimus-kg-nightly.html#lane-Lane_Lab",
+   "skills": [],
+   "role": {
+    "name": "guidelinekg-lab",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-scenarios-roles-json-guidelinekg-lab",
+    "title": "Zitnik lab (GuidelineKG)",
+    "skills": []
+   }
+  },
+  "Task_PublishResult": {
+   "id": "Task_PublishResult",
+   "name": "Publish the result release",
+   "type": "bpmn:Task",
+   "stepHref": "optimus-kg-nightly.html#step-Task_PublishResult",
+   "lane": "Zitnik lab (GuidelineKG)",
+   "laneHref": "optimus-kg-nightly.html#lane-Lane_Lab",
+   "skills": [],
+   "role": {
+    "name": "guidelinekg-lab",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-scenarios-roles-json-guidelinekg-lab",
+    "title": "Zitnik lab (GuidelineKG)",
+    "skills": []
+   }
+  },
+  "Call_IngestResult": {
+   "id": "Call_IngestResult",
+   "name": "Verify and adjudicate the result",
+   "type": "bpmn:CallActivity",
+   "stepHref": "optimus-kg-nightly.html#step-Call_IngestResult",
+   "lane": "who-iris",
+   "laneHref": "optimus-kg-nightly.html#lane-Lane_WhoIris",
+   "skills": [],
+   "calls": {
+    "name": "GuidelineKG nightly path: verify and adjudicate the result",
+    "href": "optimus-kg-nightly-ingest.html",
+    "diagram": "optimus-kg-nightly-ingest.html"
+   },
+   "role": {
+    "name": "guidelinekg-path",
+    "href": "../../../cat-harness/auto-docs/index/roles/index.html#a-scenarios-roles-json-guidelinekg-path",
+    "title": "who-iris GuidelineKG path",
+    "skills": [
+     {
+      "name": "ci-health",
+      "href": "../../../en/cat-harness/processes/skills/ci-health.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "compiled-artefact-cache",
+      "href": "../../../en/cat-harness/processes/skills/compiled-artefact-cache.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "content-test",
+      "href": "../../../en/cat-harness/processes/skills/content-test.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "content-validate",
+      "href": "../../../en/cat-harness/processes/skills/content-validate.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "feature-staging",
+      "href": "../../../en/cat-harness/processes/skills/feature-staging.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "harness-projections",
+      "href": "../../../en/cat-harness/processes/skills/harness-projections.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "iris-cdn-signing",
+      "href": "../../../en/cat-harness/processes/skills/iris-cdn-signing.html"
+     },
+     {
+      "name": "iris-oxigraph",
+      "href": "../../../en/cat-harness/processes/skills/iris-oxigraph.html"
+     },
+     {
+      "name": "kg-separation",
+      "href": "../../../en/cat-harness/processes/skills/kg-separation.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "platform-gates",
+      "href": "../../../en/cat-harness/processes/skills/platform-gates.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "prepare-merge",
+      "href": "../../../en/cat-harness/processes/skills/prepare-merge.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "publish-verification",
+      "href": "../../../en/cat-harness/processes/skills/publish-verification.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "qa-reports",
+      "href": "../../../en/cat-harness/processes/skills/qa-reports.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "remote-mount",
+      "href": "../../../en/cat-harness/processes/skills/remote-mount.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "render-kg-to-cdn",
+      "href": "../../../en/cat-harness/processes/skills/render-kg-to-cdn.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "sub-kg-lifecycle",
+      "href": "../../../en/cat-harness/processes/skills/sub-kg-lifecycle.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "todo-manager",
+      "href": "../../../en/cat-harness/processes/skills/todo-manager.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "translation-adjudication",
+      "href": "../../../en/cat-harness/processes/skills/translation-adjudication.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "translation-candidate-source",
+      "href": "../../../en/cat-harness/processes/skills/translation-candidate-source.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "translation-manager",
+      "href": "../../../en/cat-harness/processes/skills/translation-manager.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "upstream-version-adoption",
+      "href": "../../../en/cat-harness/processes/skills/upstream-version-adoption.html",
+      "via": "build-pipeline"
+     },
+     {
+      "name": "watch",
+      "href": "../../../en/cat-harness/processes/skills/watch.html",
+      "via": "build-pipeline"
+     }
+    ]
+   }
+  }
+ }
+}

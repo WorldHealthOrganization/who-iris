@@ -1,0 +1,16 @@
+{
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/folio-assistant-core.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/decision/pages-live-gate/Decision_PagesLive.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/folio-assistant-core.jsonld",
+  "@graph": [
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/decision/pages-live-gate/Decision_PagesLive",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/Decision",
+      "name": "Is the published site answering?",
+      "hitPolicy": "FIRST",
+      "sourcePath": "collab/processes/conduct/decisions/pages-live-gate.dmn",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/directory/collab",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/decision/pages-live-gate/Decision_PagesLive"
+    }
+  ]
+}

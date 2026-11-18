@@ -1,0 +1,19 @@
+{
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/capability/graphviz.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/cat-harness.jsonld",
+  "@graph": [
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/capability/graphviz",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/Capability",
+      "localId": "graphviz",
+      "name": "Graphviz",
+      "description": "Graph visualization tool for generating diagrams.",
+      "detection": {
+        "method": "command",
+        "command": "dot -V"
+      },
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/capability/graphviz"
+    }
+  ]
+}
