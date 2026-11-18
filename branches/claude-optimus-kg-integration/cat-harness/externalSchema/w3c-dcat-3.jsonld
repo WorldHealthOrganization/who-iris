@@ -1,0 +1,21 @@
+{
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/externalSchema/w3c-dcat-3.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/cat-harness.jsonld",
+  "@graph": [
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/externalSchema/w3c-dcat-3",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/ExternalSchema",
+      "name": "w3c-dcat-3",
+      "title": "Data Catalog Vocabulary (DCAT) - Version 3",
+      "authority": "W3C",
+      "specVersion": "2024-08-22",
+      "specUse": "reads",
+      "specUrl": "https://www.w3.org/TR/2024/REC-vocab-dcat-3-20240822/",
+      "namespace": [
+        "http://www.w3.org/ns/dcat#"
+      ],
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/externalSchema/w3c-dcat-3"
+    }
+  ]
+}

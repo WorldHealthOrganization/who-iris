@@ -18,10 +18,10 @@
       "touchesWorkPlan": false,
       "relaxable": true,
       "incoming": [
-        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_5"
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_EntryPage"
       ],
       "outgoing": [
-        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_6"
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_PageDone"
       ],
       "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/library-graph",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_Review"

@@ -5,10 +5,10 @@
       "slice": "kg",
       "manifest": "kg.sqlite3.json",
       "title": "The whole knowledge graph",
-      "bytes": 5079040,
+      "bytes": 5103616,
       "rows": {
-        "nodes": 5391,
-        "edges": 17444,
+        "nodes": 5411,
+        "edges": 17520,
         "dangling": 21
       }
     }

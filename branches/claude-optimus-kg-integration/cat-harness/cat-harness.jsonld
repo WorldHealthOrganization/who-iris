@@ -367,10 +367,10 @@
   ],
   "canonicalDocument": "https://litlfred.github.io/folio-assistant/cat-harness/cat-harness.jsonld",
   "repository": "cat-harness",
-  "sourceCommit": "https://github.com/WorldHealthOrganization/who-iris/commit/a2fd09ce1c16714711c538ab6d946aa230fb7e9d",
-  "sourceCommitSha": "a2fd09ce1c16714711c538ab6d946aa230fb7e9d",
-  "sourceTree": "b5d99492d0770931ad85c4592c0674e716ec896f",
-  "sourceCommitAt": "2026-11-18T17:41:15+00:00",
+  "sourceCommit": "https://github.com/WorldHealthOrganization/who-iris/commit/703c6ee6f672454caab0e5a6145a2cd9c11dfe92",
+  "sourceCommitSha": "703c6ee6f672454caab0e5a6145a2cd9c11dfe92",
+  "sourceTree": "a4498363eae2c7ab201f6aaa67680954bbfb3932",
+  "sourceCommitAt": "2026-11-18T18:33:52+00:00",
   "sourceTreeDirty": true,
   "dependsOnUnavailable": "1 dependency edge(s), none expressible as a record — see gaps",
   "counts": {
@@ -381,13 +381,13 @@
     "Decision": 11,
     "Task": 12,
     "Process": 91,
-    "SequenceFlow": 1198,
+    "SequenceFlow": 1208,
     "Lane": 202,
-    "ProcessNode": 1153,
+    "ProcessNode": 1161,
     "Tool": 184,
     "Schema": 198,
     "TranslationSource": 636,
-    "ExternalSchema": 30,
+    "ExternalSchema": 32,
     "SoftwareLibrary": 11,
     "GraphTypology": 43,
     "QaAttestation": 21,
@@ -728,7 +728,7 @@
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/package/content-lifecycle"
       ],
       "instructionsPath": "skills/authoring/content-lifecycle/content-review.md",
-      "instructionLines": 54,
+      "instructionLines": 64,
       "inputSchema": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/skills/content-review/input.schema.json",
       "outputSchema": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/skills/content-review/output.schema.json",
       "hasInstructions": true,
@@ -1345,7 +1345,7 @@
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/package/kg-core"
       ],
       "instructionsPath": "skills/kg/kg-core/directory-conventions.md",
-      "instructionLines": 1477,
+      "instructionLines": 1497,
       "hasInstructions": true,
       "hasIOContract": false,
       "ambiguous": false,
@@ -1498,7 +1498,7 @@
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/package/kg-core"
       ],
       "instructionsPath": "skills/kg/kg-core/vocabulary-authority.md",
-      "instructionLines": 148,
+      "instructionLines": 154,
       "hasInstructions": true,
       "hasIOContract": false,
       "ambiguous": false,
@@ -1702,7 +1702,7 @@
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/package/kg-core"
       ],
       "instructionsPath": "skills/kg/kg-core/remote-mount.md",
-      "instructionLines": 569,
+      "instructionLines": 570,
       "hasInstructions": true,
       "hasIOContract": false,
       "ambiguous": false,
@@ -1736,7 +1736,7 @@
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/package/kg-core"
       ],
       "instructionsPath": "skills/kg/kg-core/folio-init.md",
-      "instructionLines": 110,
+      "instructionLines": 117,
       "hasInstructions": true,
       "hasIOContract": false,
       "ambiguous": false,
@@ -2211,7 +2211,7 @@
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/package/workflow"
       ],
       "instructionsPath": "skills/process/workflow/dmn-authoring.md",
-      "instructionLines": 68,
+      "instructionLines": 71,
       "inputSchema": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/skills/dmn-authoring/input.schema.json",
       "outputSchema": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/skills/dmn-authoring/output.schema.json",
       "hasInstructions": true,
@@ -2246,7 +2246,7 @@
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/package/workflow"
       ],
       "instructionsPath": "skills/process/workflow/bpmn-authoring.md",
-      "instructionLines": 246,
+      "instructionLines": 250,
       "inputSchema": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/skills/bpmn-authoring/input.schema.json",
       "outputSchema": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/skills/bpmn-authoring/output.schema.json",
       "hasInstructions": true,
@@ -3066,7 +3066,7 @@
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/package/library-core"
       ],
       "instructionsPath": "library/skills/library-core/translation-manager.md",
-      "instructionLines": 1045,
+      "instructionLines": 1061,
       "hasInstructions": true,
       "hasIOContract": false,
       "ambiguous": false,
@@ -3095,12 +3095,12 @@
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Skill",
       "name": "translation-adjudication",
       "title": "Translation adjudication — the review loop",
-      "description": "A person's verdict on a machine translation, carried from the translation review page to the record: the reviewer accepts a catalogue, or flags a mistranslation and picks a candidate or writes their own text; the verdict is filed as a `translation-adjudication/v1` issue; a workflow checks the author and the catalogue's hash, writes the records and opens a PR; a maintainer merges it. Use for \"review the translations\", \"this string is mistranslated\", \"why was my review not recorded\", and when wiring a layer for review. Locale sign-off is a separate act, not this one.",
+      "description": "A person's word on a translation, carried from the translation review page or a block's 🌐 pane to the record: anyone proposes text, which joins the ranked candidates; an owner, member or collaborator adjudicates, by accepting a catalogue or choosing one string's translation with a reason; it is filed as a `translation-adjudication/v1` issue; a workflow checks the author and the catalogue's hash, writes the records, re-runs the auto-pick and opens a PR; a maintainer merges it. Use for \"review the translations\", \"this string is mistranslated\", \"why was my review not recorded\", and when wiring a layer for review. Locale sign-off is a separate act, not this one.",
       "inPackage": [
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/package/library-core"
       ],
       "instructionsPath": "library/skills/library-core/translation-adjudication.md",
-      "instructionLines": 132,
+      "instructionLines": 201,
       "hasInstructions": true,
       "hasIOContract": false,
       "ambiguous": false,
@@ -3168,7 +3168,7 @@
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/package/library-core"
       ],
       "instructionsPath": "library/skills/library-core/translation-candidate-source.md",
-      "instructionLines": 76,
+      "instructionLines": 94,
       "hasInstructions": true,
       "hasIOContract": false,
       "ambiguous": false,
@@ -4337,7 +4337,7 @@
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/package/work-plan"
       ],
       "instructionsPath": "work-plan/skills/work-plan/work-plan-store-git-branch.md",
-      "instructionLines": 72,
+      "instructionLines": 79,
       "hasInstructions": true,
       "hasIOContract": false,
       "ambiguous": false,
@@ -20096,8 +20096,8 @@
       "startNode": [
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_MountSubgraph/node/Start_SubgraphWanted"
       ],
-      "nodeCount": 11,
-      "flowCount": 13,
+      "nodeCount": 12,
+      "flowCount": 14,
       "conformsTo": [
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/externalSchema/omg-bpmn-2.0",
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/externalSchema/omg-dd-1.0"
@@ -20139,9 +20139,18 @@
       "name": "branch",
       "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_MountSubgraph",
       "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_MountSubgraph/node/GW_SourceKind",
-      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_MountSubgraph/node/Task_MountBranchTip",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_MountSubgraph/node/Task_CreateStateBranch",
       "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/processes",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_MountSubgraph#flow/F_M4"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_MountSubgraph#flow/F_M14",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_MountSubgraph",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_MountSubgraph/node/Task_CreateStateBranch",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_MountSubgraph/node/Task_MountBranchTip",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/processes",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_MountSubgraph#flow/F_M14"
     },
     {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_MountSubgraph#flow/F_M5",
@@ -20327,6 +20336,29 @@
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_MountSubgraph/node/Task_UseCheckoutPath"
     },
     {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_MountSubgraph/node/Task_CreateStateBranch",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
+      "name": "Create the declared state branch if missing",
+      "nodeKind": "activity",
+      "bpmnType": "bpmn:Task",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_MountSubgraph",
+      "performedBy": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/role/build-pipeline",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_MountSubgraph/lane/Lane_MountPipeline",
+      "requires": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/skill/sub-kg-lifecycle"
+      ],
+      "touchesWorkPlan": false,
+      "relaxable": true,
+      "incoming": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_MountSubgraph#flow/F_M4"
+      ],
+      "outgoing": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_MountSubgraph#flow/F_M14"
+      ],
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/processes",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_MountSubgraph/node/Task_CreateStateBranch"
+    },
+    {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_MountSubgraph/node/Task_MountBranchTip",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "Mount the branch tip at the declared path",
@@ -20341,7 +20373,7 @@
       "touchesWorkPlan": false,
       "relaxable": true,
       "incoming": [
-        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_MountSubgraph#flow/F_M4"
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_MountSubgraph#flow/F_M14"
       ],
       "outgoing": [
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_MountSubgraph#flow/F_M7"
@@ -24850,8 +24882,8 @@
       "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/Process",
       "name": "Translation review and adjudication",
-      "summary": "A person's verdict on a machine translation, carried from the review page to the record.",
-      "description": "A person's verdict on a machine translation, carried from the review page to the record. Candidate translations come from any engine; a reviewer accepts what is there, or flags a mistranslation and picks a candidate or writes their own; the verdict travels as a GitHub issue; a workflow checks it and opens a pull request; a maintainer merges it.\n\nYou are in this process when a catalogue has a translation nobody has adjudicated: a `machine`, `flagged` or `stale` cell on the review page. `translation-workflow` produces the machine translation and `human-translation-workflow` makes a locale official; this process sits between them and does neither. What it records is that ONE catalogue was read by ONE person who could be held to it, against the exact bytes they saw.\n\nTwo rules hold throughout. Candidates are never a barrier to having a translation: an empty `msgstr` gets the first candidate, marked fuzzy, so the page always has something to show. And a suggestion is a person's text that nobody else has reviewed: it enters the catalogue fuzzy, flagging it for review, never accepting it. Locale sign-off (`X-Folio-Official`, the locale's `status.json`) is a separate, deliberate act that this process never performs.\n\nGitHub is one Tool here, not the process: the issue is the carrier of the verdict and the pull request the carrier of the record. Another forge carrying the same `translation-adjudication/v1` record would be another Tool satisfying the same skill.",
+      "summary": "A person's word on a translation, carried from the page they read it on to the record.",
+      "description": "A person's word on a translation, carried from the page they read it on to the record. Candidate translations come from any engine and from anyone; a reader opens the review page or a block's 🌐 pane, accepts what is there, or picks a ranked candidate or writes their own; that travels as a GitHub issue; a workflow checks it and opens a pull request; a maintainer merges it.\n\nYou are in this process when a catalogue has a translation nobody has adjudicated: a `machine`, `flagged` or `stale` cell on the review page, or a string a block's 🌐 pane shows as `proposed`, `agent`, `mt`, `missing` or `stale`. `translation-workflow` produces the machine translation and `human-translation-workflow` makes a locale official; this process sits between them and does neither. What it records is that ONE catalogue was read by ONE person who could be held to it, against the exact bytes they saw.\n\nTwo rules hold throughout. Candidates are never a barrier to having a translation: an empty `msgstr` gets the first candidate, marked fuzzy, so the page always has something to show. And a reader's text is a proposal until a collaborator chooses it: anyone may propose, and every proposal is appended to the candidates sidecar beside the others; only an owner, member or collaborator adjudicates, by choosing one text as the translation with a reason. A string nobody has adjudicated shows the best-ranked candidate, fuzzy and unofficial, unless an official source's English matches the msgid exactly. Locale sign-off (`X-Folio-Official`, the locale's `status.json`) is a separate, deliberate act that this process never performs.\n\nGitHub is one Tool here, not the process: the issue is the carrier of the verdict and the pull request the carrier of the record. Another forge carrying the same `translation-adjudication/v1` record would be another Tool satisfying the same skill.",
       "enforcement": "advisory",
       "sourcePath": "library/processes/translation-review-adjudication.bpmn",
       "sourceUrl": "https://github.com/litlfred/cat-harness/blob/main/library/processes/translation-review-adjudication.bpmn",
@@ -24859,8 +24891,8 @@
       "startNode": [
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Start_TRA"
       ],
-      "nodeCount": 27,
-      "flowCount": 29,
+      "nodeCount": 34,
+      "flowCount": 38,
       "conformsTo": [
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/externalSchema/omg-bpmn-2.0",
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/externalSchema/omg-dd-1.0",
@@ -24930,15 +24962,53 @@
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
       "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication",
       "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_ReviewPage",
-      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_Review",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_Entry",
       "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/library-graph",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_5"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_EntryPage",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
+      "name": "Review page",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_Entry",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_Review",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/library-graph",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_EntryPage"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_EntryPane",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
+      "name": "A block's 🌐",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_Entry",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_BlockPane",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/library-graph",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_EntryPane"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_PageDone",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_Review",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_EntryJoin",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/library-graph",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_PageDone"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_PaneDone",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_BlockPane",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_EntryJoin",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/library-graph",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_PaneDone"
     },
     {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_6",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
       "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication",
-      "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_Review",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_EntryJoin",
       "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_Verdict",
       "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/library-graph",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_6"
@@ -25026,17 +25096,26 @@
       "name": "Yes",
       "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication",
       "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_Determined",
-      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_Author",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_Propose",
       "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/library-graph",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_DetYes"
     },
     {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_Proposed",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_Propose",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_Author",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/library-graph",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_Proposed"
+    },
+    {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_AuthorNo",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
-      "name": "No",
+      "name": "No: proposals only",
       "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication",
       "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_Author",
-      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_Refuse",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_AutoPick",
       "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/library-graph",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_AuthorNo"
     },
@@ -25056,7 +25135,7 @@
       "name": "No",
       "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication",
       "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_Hash",
-      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_Refuse",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_AutoPick",
       "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/library-graph",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_HashNo"
     },
@@ -25084,9 +25163,38 @@
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
       "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication",
       "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_Write",
-      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_OpenPR",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_AutoPick",
       "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/library-graph",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_11"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_Picked",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_AutoPick",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_Anything",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/library-graph",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_Picked"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_NothingToRecord",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
+      "name": "No",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_Anything",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_Refuse",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/library-graph",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_NothingToRecord"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_SomethingToRecord",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
+      "name": "Yes",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_Anything",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_OpenPR",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/library-graph",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_SomethingToRecord"
     },
     {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_12",
@@ -25137,9 +25245,19 @@
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_Accepted"
     },
     {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_Chosen",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
+      "name": "Chosen",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_PerCatalogue",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/End_TRA_Adjudicated",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/library-graph",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_Chosen"
+    },
+    {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_Suggested",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
-      "name": "Suggestion applied",
+      "name": "Proposed",
       "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication",
       "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_PerCatalogue",
       "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/End_TRA_Flagged",
@@ -25306,6 +25424,28 @@
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_ReviewPage"
     },
     {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_Entry",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
+      "name": "Where does the reader start?",
+      "nodeKind": "exclusive",
+      "bpmnType": "bpmn:ExclusiveGateway",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication",
+      "performedBy": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/role/translation-adjudicator",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/lane/Lane_TRA_Reviewer",
+      "requires": [],
+      "touchesWorkPlan": false,
+      "relaxable": true,
+      "incoming": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_5"
+      ],
+      "outgoing": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_EntryPage",
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_EntryPane"
+      ],
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/library-graph",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_Entry"
+    },
+    {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_Review",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "Read the catalogue on the review page",
@@ -25320,13 +25460,58 @@
       "touchesWorkPlan": false,
       "relaxable": true,
       "incoming": [
-        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_5"
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_EntryPage"
+      ],
+      "outgoing": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_PageDone"
+      ],
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/library-graph",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_Review"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_BlockPane",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
+      "name": "Open a block's 🌐 translation pane",
+      "nodeKind": "activity",
+      "bpmnType": "bpmn:UserTask",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication",
+      "performedBy": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/role/translation-adjudicator",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/lane/Lane_TRA_Reviewer",
+      "requires": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/skill/translation-adjudication"
+      ],
+      "touchesWorkPlan": false,
+      "relaxable": true,
+      "incoming": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_EntryPane"
+      ],
+      "outgoing": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_PaneDone"
+      ],
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/library-graph",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_BlockPane"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_EntryJoin",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
+      "name": "Gateway_TRA_EntryJoin",
+      "nodeKind": "exclusive",
+      "bpmnType": "bpmn:ExclusiveGateway",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication",
+      "performedBy": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/role/translation-adjudicator",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/lane/Lane_TRA_Reviewer",
+      "requires": [],
+      "touchesWorkPlan": false,
+      "relaxable": true,
+      "incoming": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_PageDone",
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_PaneDone"
       ],
       "outgoing": [
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_6"
       ],
       "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/library-graph",
-      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_Review"
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_EntryJoin"
     },
     {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_Verdict",
@@ -25503,6 +25688,29 @@
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication/node/End_TRA_CouldNotDetermine"
     },
     {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_Propose",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
+      "name": "Append every suggestion as a human candidate",
+      "nodeKind": "activity",
+      "bpmnType": "bpmn:ServiceTask",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication",
+      "performedBy": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/role/build-pipeline",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/lane/Lane_TRA_Pipeline",
+      "requires": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/skill/translation-adjudication"
+      ],
+      "touchesWorkPlan": false,
+      "relaxable": true,
+      "incoming": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_DetYes"
+      ],
+      "outgoing": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_Proposed"
+      ],
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/library-graph",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_Propose"
+    },
+    {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_Author",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "Author an owner, member or collaborator?",
@@ -25515,7 +25723,7 @@
       "touchesWorkPlan": false,
       "relaxable": true,
       "incoming": [
-        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_DetYes"
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_Proposed"
       ],
       "outgoing": [
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_AuthorNo",
@@ -25527,7 +25735,7 @@
     {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_Hash",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
-      "name": "Any catalogue unchanged?",
+      "name": "Any choice against an unchanged catalogue?",
       "nodeKind": "exclusive",
       "bpmnType": "bpmn:ExclusiveGateway",
       "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication",
@@ -25561,8 +25769,7 @@
       "touchesWorkPlan": false,
       "relaxable": true,
       "incoming": [
-        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_AuthorNo",
-        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_HashNo"
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_NothingToRecord"
       ],
       "outgoing": [
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_10"
@@ -25592,7 +25799,7 @@
     {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_Write",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
-      "name": "Write the records",
+      "name": "Write the choices and sign-offs",
       "nodeKind": "activity",
       "bpmnType": "bpmn:ServiceTask",
       "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication",
@@ -25613,6 +25820,53 @@
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_Write"
     },
     {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_AutoPick",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
+      "name": "Auto-pick by rank",
+      "nodeKind": "activity",
+      "bpmnType": "bpmn:ServiceTask",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication",
+      "performedBy": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/role/build-pipeline",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/lane/Lane_TRA_Pipeline",
+      "requires": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/skill/translation-adjudication"
+      ],
+      "touchesWorkPlan": false,
+      "relaxable": true,
+      "incoming": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_AuthorNo",
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_HashNo",
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_11"
+      ],
+      "outgoing": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_Picked"
+      ],
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/library-graph",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_AutoPick"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_Anything",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
+      "name": "Anything to record?",
+      "nodeKind": "exclusive",
+      "bpmnType": "bpmn:ExclusiveGateway",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication",
+      "performedBy": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/role/build-pipeline",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/lane/Lane_TRA_Pipeline",
+      "requires": [],
+      "touchesWorkPlan": false,
+      "relaxable": true,
+      "incoming": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_Picked"
+      ],
+      "outgoing": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_NothingToRecord",
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_SomethingToRecord"
+      ],
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/library-graph",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_Anything"
+    },
+    {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Task_TRA_OpenPR",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
       "name": "Open a ready PR and comment",
@@ -25627,7 +25881,7 @@
       "touchesWorkPlan": false,
       "relaxable": true,
       "incoming": [
-        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_11"
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_SomethingToRecord"
       ],
       "outgoing": [
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_12"
@@ -25716,6 +25970,7 @@
       ],
       "outgoing": [
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_Accepted",
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_Chosen",
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_Suggested"
       ],
       "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/library-graph",
@@ -25741,9 +25996,28 @@
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication/node/End_TRA_Reviewed"
     },
     {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/End_TRA_Adjudicated",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
+      "name": "String adjudicated (not official)",
+      "nodeKind": "end",
+      "bpmnType": "bpmn:EndEvent",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication",
+      "performedBy": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/role/editor",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/lane/Lane_TRA_Maintainer",
+      "requires": [],
+      "touchesWorkPlan": false,
+      "relaxable": true,
+      "incoming": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_Chosen"
+      ],
+      "outgoing": [],
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/library-graph",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication/node/End_TRA_Adjudicated"
+    },
+    {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/End_TRA_Flagged",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
-      "name": "Catalogue flagged for review",
+      "name": "Proposal recorded (fuzzy until chosen)",
       "nodeKind": "end",
       "bpmnType": "bpmn:EndEvent",
       "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication",
@@ -66089,6 +66363,21 @@
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/translationSource/zh/start/installation.pot"
     },
     {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/externalSchema/bpmn-io-di",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/ExternalSchema",
+      "name": "bpmn-io-di",
+      "title": "bpmn.io Diagram Interchange Extensions (bioc 1.0, biodi 2.0)",
+      "authority": "other",
+      "specVersion": "1.0 / 2.0",
+      "specUse": "reads",
+      "specUrl": "https://github.com/bpmn-io/bpmn-moddle",
+      "namespace": [
+        "http://bpmn.io/schema/bpmn/biocolor/1.0",
+        "http://bpmn.io/schema/dmn/biodi/2.0"
+      ],
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/externalSchema/bpmn-io-di"
+    },
+    {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/externalSchema/dcmi-terms",
       "@type": "https://litlfred.github.io/cat-harness/v0/ns/ExternalSchema",
       "name": "dcmi-terms",
@@ -66188,7 +66477,9 @@
       "specUrl": "https://www.omg.org/spec/DMN/1.3/",
       "namespace": [
         "https://www.omg.org/spec/DMN/20191111/MODEL/",
-        "https://www.omg.org/spec/DMN/20191111/DMNDI/"
+        "https://www.omg.org/spec/DMN/20191111/DMNDI/",
+        "http://www.omg.org/spec/DMN/20180521/DC/",
+        "http://www.omg.org/spec/DMN/20180521/DI/"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/externalSchema/omg-dmn-1.3"
     },
@@ -66291,6 +66582,20 @@
         "http://www.w3.org/ns/csvw#"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/externalSchema/w3c-csvw"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/externalSchema/w3c-dcat-3",
+      "@type": "https://litlfred.github.io/cat-harness/v0/ns/ExternalSchema",
+      "name": "w3c-dcat-3",
+      "title": "Data Catalog Vocabulary (DCAT) - Version 3",
+      "authority": "W3C",
+      "specVersion": "2024-08-22",
+      "specUse": "reads",
+      "specUrl": "https://www.w3.org/TR/2024/REC-vocab-dcat-3-20240822/",
+      "namespace": [
+        "http://www.w3.org/ns/dcat#"
+      ],
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/externalSchema/w3c-dcat-3"
     },
     {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/externalSchema/w3c-hydra",
@@ -66400,7 +66705,8 @@
       "specUse": "conforms",
       "specUrl": "https://www.w3.org/TR/rdfcal/",
       "namespace": [
-        "http://www.w3.org/2002/12/cal/ical#"
+        "http://www.w3.org/2002/12/cal/ical#",
+        "http://www.w3.org/2002/12/cal/icaltzd#"
       ],
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/externalSchema/w3c-rdf-calendar"
     },

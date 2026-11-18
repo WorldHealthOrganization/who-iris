@@ -12,7 +12,7 @@
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/package/workflow"
       ],
       "instructionsPath": "skills/process/workflow/dmn-authoring.md",
-      "instructionLines": 68,
+      "instructionLines": 71,
       "inputSchema": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/skills/dmn-authoring/input.schema.json",
       "outputSchema": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/skills/dmn-authoring/output.schema.json",
       "hasInstructions": true,

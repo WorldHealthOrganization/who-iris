@@ -12,7 +12,7 @@
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/package/content-lifecycle"
       ],
       "instructionsPath": "skills/authoring/content-lifecycle/content-review.md",
-      "instructionLines": 54,
+      "instructionLines": 64,
       "inputSchema": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/skills/content-review/input.schema.json",
       "outputSchema": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/skills/content-review/output.schema.json",
       "hasInstructions": true,

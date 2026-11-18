@@ -13,7 +13,7 @@
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/package/work-plan"
       ],
       "instructionsPath": "work-plan/skills/work-plan/work-plan-store-git-branch.md",
-      "instructionLines": 72,
+      "instructionLines": 79,
       "hasInstructions": true,
       "hasIOContract": false,
       "ambiguous": false,

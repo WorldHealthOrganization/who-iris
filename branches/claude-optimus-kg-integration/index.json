@@ -87,7 +87,7 @@
       "subgraph": "https://litlfred.github.io/bootstrap/subgraph/",
       "nodes": 170,
       "bytes": 130439,
-      "sha256": "babb4421d4655372c975df07512e67d770db57bf5cc06a49025cd85c06d5381d"
+      "sha256": "0d69d2378b3ab289344f02ba70f04de1b508e3b326e976a740d18a544be2eb93"
     },
     {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/bootstrap-tools/bootstrap-tools.jsonld",
@@ -141,7 +141,7 @@
       "subgraph": "https://litlfred.github.io/bootstrap-tools/subgraph/",
       "nodes": 50,
       "bytes": 78611,
-      "sha256": "92f73353181b37ebc2f0db9e47744cc56ff6af8e000900ba480d881f3f28a0bd"
+      "sha256": "52bb3002659e39fabdb4fb60d2dffaa449774a2d5bfb7e26844823178c4a7fd4"
     },
     {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/cat-harness.jsonld",
@@ -491,9 +491,9 @@
         }
       ],
       "subgraph": "https://litlfred.github.io/folio-assistant/subgraph/cat-harness/",
-      "nodes": 4210,
-      "bytes": 5484722,
-      "sha256": "1bb508c11871297644179fe38f08c324f34965f15a49bbf584b674f17fdeb13f"
+      "nodes": 4230,
+      "bytes": 5512757,
+      "sha256": "65be3637c37ad8f3eb83457c31c69a42be99b5970a8b2e9889872d4e6ab10bb9"
     },
     {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness-tools.jsonld",
@@ -692,7 +692,7 @@
       "subgraph": "https://litlfred.github.io/folio-assistant/subgraph/cat-harness-tools/",
       "nodes": 302,
       "bytes": 309162,
-      "sha256": "8c259914324a3a6f397e7108aff7c3c19bfbcbd293862a918a43a2244d0a3f9a"
+      "sha256": "b4303b267677865afa242726e8221be6bde2512b7be1a2c1639d4f95af8b0ae6"
     },
     {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/folio-assistant-core.jsonld",
@@ -935,9 +935,9 @@
         }
       ],
       "subgraph": "https://litlfred.github.io/folio-assistant/subgraph/folio-assistant-core/",
-      "nodes": 1318,
-      "bytes": 1717684,
-      "sha256": "16e5727d9f0624c2f550a3ca43f8490f888f0bf745846d956a6bf0f40fe4eb08"
+      "nodes": 1319,
+      "bytes": 1721892,
+      "sha256": "d95cb2e4f84364bfe4957db1f27ac52e2008fb59c8f2daf16593d3aba6a1a407"
     },
     {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/who-iris/who-iris.jsonld",
@@ -1096,7 +1096,7 @@
       "subgraph": "https://litlfred.github.io/folio-assistant/subgraph/who-iris/",
       "nodes": 331,
       "bytes": 403151,
-      "sha256": "c22681f6f0cced9c4bad5e6e34b663b59fb2f050087dfbfae09ab391b25eca74"
+      "sha256": "645f379f0a872e42af380aeac91e65a6709448423e485ab42f7463c7a63d847e"
     }
   ]
 }

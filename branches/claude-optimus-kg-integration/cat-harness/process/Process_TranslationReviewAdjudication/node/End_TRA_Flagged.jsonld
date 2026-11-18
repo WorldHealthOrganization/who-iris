@@ -6,7 +6,7 @@
     {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/End_TRA_Flagged",
       "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
-      "name": "Catalogue flagged for review",
+      "name": "Proposal recorded (fuzzy until chosen)",
       "nodeKind": "end",
       "bpmnType": "bpmn:EndEvent",
       "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication",

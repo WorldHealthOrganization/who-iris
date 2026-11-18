@@ -1,0 +1,29 @@
+{
+  "@context": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/cat-harness.context.jsonld",
+  "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_Entry.jsonld",
+  "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/cat-harness.jsonld",
+  "@graph": [
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_Entry",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/ProcessNode",
+      "name": "Where does the reader start?",
+      "nodeKind": "exclusive",
+      "bpmnType": "bpmn:ExclusiveGateway",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication",
+      "performedBy": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/role/translation-adjudicator",
+      "inLane": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication/lane/Lane_TRA_Reviewer",
+      "requires": [],
+      "touchesWorkPlan": false,
+      "relaxable": true,
+      "incoming": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_5"
+      ],
+      "outgoing": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_EntryPage",
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_EntryPane"
+      ],
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/library-graph",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_TranslationReviewAdjudication/node/Gateway_TRA_Entry"
+    }
+  ]
+}

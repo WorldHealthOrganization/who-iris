@@ -367,10 +367,10 @@
     "registry",
     "packages"
   ],
-  "sourceCommit": "https://github.com/WorldHealthOrganization/who-iris/commit/a2fd09ce1c16714711c538ab6d946aa230fb7e9d",
-  "sourceCommitSha": "a2fd09ce1c16714711c538ab6d946aa230fb7e9d",
-  "sourceTree": "b5d99492d0770931ad85c4592c0674e716ec896f",
-  "sourceCommitAt": "2026-11-18T17:41:15+00:00",
+  "sourceCommit": "https://github.com/WorldHealthOrganization/who-iris/commit/703c6ee6f672454caab0e5a6145a2cd9c11dfe92",
+  "sourceCommitSha": "703c6ee6f672454caab0e5a6145a2cd9c11dfe92",
+  "sourceTree": "a4498363eae2c7ab201f6aaa67680954bbfb3932",
+  "sourceCommitAt": "2026-11-18T18:33:52+00:00",
   "sourceTreeDirty": true,
   "dependsOnUnavailable": "2 dependency edge(s), none expressible as a record — see gaps",
   "counts": {

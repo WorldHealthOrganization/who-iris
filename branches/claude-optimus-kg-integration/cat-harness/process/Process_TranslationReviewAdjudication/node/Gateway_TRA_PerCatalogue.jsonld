@@ -20,6 +20,7 @@
       ],
       "outgoing": [
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_Accepted",
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_Chosen",
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_TranslationReviewAdjudication#flow/Flow_TRA_Suggested"
       ],
       "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/library-graph",

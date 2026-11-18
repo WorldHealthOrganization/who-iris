@@ -15,8 +15,8 @@
       "startNode": [
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_MountSubgraph/node/Start_SubgraphWanted"
       ],
-      "nodeCount": 11,
-      "flowCount": 13,
+      "nodeCount": 12,
+      "flowCount": 14,
       "conformsTo": [
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/externalSchema/omg-bpmn-2.0",
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/externalSchema/omg-dd-1.0"
@@ -58,9 +58,18 @@
       "name": "branch",
       "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_MountSubgraph",
       "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_MountSubgraph/node/GW_SourceKind",
-      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_MountSubgraph/node/Task_MountBranchTip",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_MountSubgraph/node/Task_CreateStateBranch",
       "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/processes",
       "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_MountSubgraph#flow/F_M4"
+    },
+    {
+      "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_MountSubgraph#flow/F_M14",
+      "@type": "https://litlfred.github.io/bootstrap/v0/ns/SequenceFlow",
+      "partOf": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_MountSubgraph",
+      "from": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_MountSubgraph/node/Task_CreateStateBranch",
+      "to": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_MountSubgraph/node/Task_MountBranchTip",
+      "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/directory/processes",
+      "alternateOf": "https://litlfred.github.io/folio-assistant/cat-harness/process/Process_MountSubgraph#flow/F_M14"
     },
     {
       "@id": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/process/Process_MountSubgraph#flow/F_M5",

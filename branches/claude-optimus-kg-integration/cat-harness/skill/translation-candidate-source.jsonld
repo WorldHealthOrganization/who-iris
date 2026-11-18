@@ -13,7 +13,7 @@
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/cat-harness/package/library-core"
       ],
       "instructionsPath": "library/skills/library-core/translation-candidate-source.md",
-      "instructionLines": 76,
+      "instructionLines": 94,
       "hasInstructions": true,
       "hasIOContract": false,
       "ambiguous": false,

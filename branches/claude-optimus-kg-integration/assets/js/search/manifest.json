@@ -2,20 +2,20 @@
   "$schema": "folio-search-manifest/v1",
   "source": {
     "path": "assets/js/search-data.json",
-    "sha256": "f5d9937beca1c67d1688cf6b3f95fb7dc61e17e72445090ecd5d9503fe28b5c6",
-    "entries": 2389,
-    "bytes": 2646680
+    "sha256": "884d9cdc43e4c43ba9eaae175c6b8aee08d05314c4a0506eea8bb6bbe1930224",
+    "entries": 3988,
+    "bytes": 3561655
   },
   "scopes": [
     {
       "id": "_platform",
       "kind": "platform",
       "path": "assets/js/search/_platform.json",
-      "entries": 2389,
-      "bytes": 2668832,
+      "entries": 3988,
+      "bytes": 3598191,
       "index": {
         "path": "assets/js/search/_platform.idx.json",
-        "bytes": 8027813
+        "bytes": 10704740
       }
     }
   ],

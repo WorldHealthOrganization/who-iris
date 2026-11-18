@@ -1,5 +1,6 @@
 {
  "$schema": "folio-translation-review/v1",
+ "reviewPage": "en/cat-harness/translation-status/review.html",
  "issue": {
   "schema": "translation-adjudication/v1",
   "label": "translation-adjudication",

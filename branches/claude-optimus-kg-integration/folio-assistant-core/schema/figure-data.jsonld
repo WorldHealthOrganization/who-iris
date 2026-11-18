@@ -13,6 +13,10 @@
       "inSubgraph": "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/directory/core-schemas",
       "alternateOf": "https://litlfred.github.io/folio-assistant/folio-assistant-core/schema/figure-data",
       "jsonSchema": [
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/schema/zod/figure-data/AsDrawnFigureSchema.schema.json",
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/schema/zod/figure-data/AsDrawnImageSchema.schema.json",
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/schema/zod/figure-data/AsDrawnShapeSchema.schema.json",
+        "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/schema/zod/figure-data/AsDrawnTextSchema.schema.json",
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/schema/zod/figure-data/DiigPhasesAdaptationSchema.schema.json",
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/schema/zod/figure-data/DiigPhasesFigureSchema.schema.json",
         "https://WorldHealthOrganization.github.io/who-iris/branches/claude-optimus-kg-integration/folio-assistant-core/schema/zod/figure-data/SmartGuidelinesApproachFigureSchema.schema.json"
