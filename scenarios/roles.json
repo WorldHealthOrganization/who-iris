@@ -1,5 +1,5 @@
 {
-  "_comment": "The roles who-iris's own processes bind: the lanes of the four IRIS CDN export diagrams (processes/iris-cdn-*.bpmn, who-iris#103). Each inherits the harness role it specialises, so it carries that role's skills too. Schema: cat-harness-tools/schemas/process/role-graph.ts.",
+  "_comment": "The roles who-iris's own processes bind: the lanes of the four IRIS CDN export diagrams (processes/iris-cdn-*.bpmn, who-iris#103). Each inherits the harness role it specialises, so it carries that role's skills too. Schema: cat-harness-tools/schemas/process/role-graph.ts; and the lanes and stores of the proposed GuidelineKG path (processes/optimus-kg-nightly*.bpmn, processes/kg-tool-adjudication.bpmn, who-iris#303).",
   "name": "who-iris",
   "roles": [
     {
@@ -84,6 +84,54 @@
       "skills": [
         "iris-cdn-signing"
       ]
+    },
+    {
+      "id": "guidelinekg-path",
+      "title": "who-iris GuidelineKG path",
+      "description": "who-iris's side of the parallel GuidelineKG path (docs/optimus-kg-integration.md): the deterministic scripts that verify, diff, select, publish the work order and project the result, and the agent that adjudicates first, reviews the run and opens beans. Holds no Reducto, OpenAI or Azure key, ever. Proposed: most of its skills are not written yet, and the diagrams say so step by step.",
+      "actorKinds": [
+        "system",
+        "agent"
+      ],
+      "inherits": [
+        "build-pipeline"
+      ],
+      "skills": [
+        "iris-cdn-signing",
+        "iris-oxigraph"
+      ]
+    },
+    {
+      "id": "guidelinekg-lab",
+      "title": "Zitnik lab (GuidelineKG)",
+      "description": "The Zitnik lab at Harvard, which runs GuidelineKG (mims-harvard/guideline-kg, pinned by commit) on its own Reducto and Azure OpenAI keys and publishes its result releases in its own repositories. An external party: who-iris instructs nothing here; the work order and the result release are the whole interface.",
+      "actorKinds": [
+        "external"
+      ],
+      "skills": []
+    },
+    {
+      "id": "guidelinekg-reviewer",
+      "title": "Human reviewer (SME or editor)",
+      "description": "A person who rules on every recommendation-class or contraindication claim the two KG extractors disagree on, and on anything the agent found undecidable. The ruling is kept beside the agent's, never over it.",
+      "actorKinds": [
+        "person"
+      ],
+      "inherits": [
+        "reviewer"
+      ],
+      "skills": [
+        "adjudication"
+      ]
+    },
+    {
+      "id": "guidelinekg-release",
+      "title": "GuidelineKG result release",
+      "description": "What the lab publishes per work order: guideline_kg.jsonl and a SHA-256 manifest naming the work order, the CDN release and the GuidelineKG commit. A mechanical role, held outside who-iris: read and verified, never written by who-iris.",
+      "actorKinds": [
+        "external"
+      ],
+      "skills": []
     }
   ]
 }
