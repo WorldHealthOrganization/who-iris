@@ -8,7 +8,7 @@
  *
  * ```sh
  * bun run translation-qa:prune                 # dry run against origin/main: print what would change
- * bun run translation-qa:prune --write         # apply it to test/attestations/translation-qa/
+ * bun run translation-qa:prune --write         # apply it to the mounted translation-qa attestations
  * bun run translation-qa:prune --ref <ref>     # judge "removed" against another ref's catalogues
  * ```
  *
